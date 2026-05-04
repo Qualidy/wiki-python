@@ -1,0 +1,9 @@
+Planet,Durchmesser (km),Masse (kg),Entfernung zur Sonne (AE),Orbitzeit (Tage),Anzahl Monde
+Merkur,4879,3.30E+23,0.39,88,0
+Venus,12104,4.87E+24,0.72,225,0
+Erde,12756,5.97E+24,1.00,365,1
+Mars,6792,6.42E+23,1.52,687,2
+Jupiter,142984,1.90E+27,5.20,4333,79
+Saturn,120536,5.68E+26,9.58,10759,82
+Uranus,51118,8.68E+25,19.22,30689,27
+Neptun,49528,1.02E+26,30.05,60182,14

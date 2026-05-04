@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokemondisplayer</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <div class="search-container">
+        <div class="search-item">
+            <input type="text" id="pokemonInput" name="Pokemon" placeholder="Gib ein Pokemon ein">
+            <button id="pokebutton">First Pokemon</button>
+            <p id="linkContainer"></p>
+        </div>
+        <div class="details" id="pokemonDetails"></div>
+
+    
+    <script>
+        document.getElementById('pokebutton').addEventListener('click', function() {
+            getPokemon();
+        });
+    
+        async function getPokemon() {
+            var input = document.getElementById('pokemonInput').value.toLowerCase();
+            var response = await fetch(`https://pokeapi.co/api/v2/pokemon/${input}`);
+            if (response.ok) { 
+                var payload = await response.json();
+                var imageUrl = payload['sprites']['front_default'];
+                var pokemonName = payload.name;
+                const pokemonTypes = payload.types.map(typeInfo => typeInfo['type']['name']).join(', ');
+                const pokemonStats = payload.stats.map(statInfo => `${statInfo['stat']['name']}: ${statInfo['base_stat']}`).join('<br>');
+    
+                document.getElementById('pokemonDetails').innerHTML = `
+                    <img src="${imageUrl}" alt="${pokemonName}" style="height:300px;">
+                    <p><strong>${pokemonName}</strong></p>
+                    <p>Type: ${pokemonTypes}</p>
+                    <div class="stats-block">
+                        <p>${pokemonName}'s Stats:</p>
+                        <p>${pokemonStats}</p>
+                    </div>
+                `;
+            } else {
+                document.getElementById('linkContainer').innerText = 'Pokemon nicht gefunden';
+            }
+        }
+    
+    </script>
+    </body>
+    </html>
+    

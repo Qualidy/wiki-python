@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <div>
+        <p>Gib den Namen eines Pokémons ein und klicke auf den Button, um das Pokémon anzuzeigen.</p>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <input type="text" id="pokemon-name" placeholder="Pokémon eingeben...">
+        <button id="show-pokemon-button">Zeige Pokémon</button>
+        <div id="pokemon-display">
+            <h2 id="pokemon-title"></h2>
+            <img id="pokemon-image" src="" style="width: 200px; height: auto;">
+        </div>
+    </div>
+    <script>
+        document.getElementById("show-pokemon-button").addEventListener("click", function() {
+            const pokemonName = document.getElementById("pokemon-name").value.toLowerCase();
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Pokémon nicht gefunden");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("pokemon-title").innerText = data.name.charAt(0).toUpperCase() + data.name.slice(1);
+                    document.getElementById("pokemon-image").src = data.sprites.front_default;
+                })
+                .catch(error => {
+                    console.error("Fehler:", error);
+                    alert("Pokémon nicht gefunden. Bitte überprüfe die Eingabe.");
+                });
+        });
+    </script>
+</body>
+</html>
+

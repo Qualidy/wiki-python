@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <p></p>
+    <input type="text" id="search-pokemon">
+    <button type="submit" id="submit-search-pokemon" onclick="searchPokemon()">Suchen</button>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <p></p>
+    <img src="" alt="pokemon picture" id="pokemon">
+</body>
+<script>
+async function searchPokemon(){
+    const name = document.getElementById("search-pokemon").value;
+    let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+
+    const body = await data.json();
+    const pic = body.sprites.front_default
+
+    let image = document.getElementById("pokemon")
+    image.src = pic
+}
+</script>
+</html>

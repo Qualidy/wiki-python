@@ -1,0 +1,81 @@
+{
+	"id": "a5e0f252-581f-4659-80e9-4a694fa2b561",
+	"name": "New Collection",
+	"timestamp": "2024-05-14T13:37:07.796Z",
+	"collection_id": "7362946-02cf7c21-0384-4e04-b9df-a170dc18eed0",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 1,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-05-14T13:37:07.575Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "28a3ab1a-ed2c-477e-b1d1-d631496023d4",
+			"name": "USERS",
+			"url": "http://127.0.0.1:5000/users",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Statuscode ist 200": true,
+				"Response JSON not None": false
+			},
+			"testPassFailCounts": {
+				"Statuscode ist 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response JSON not None": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Statuscode ist 200": true,
+					"Response JSON not None": false
+				}
+			]
+		},
+		{
+			"id": "66a2d8d0-9844-4769-91f1-dc0e62db4f61",
+			"name": "USERS",
+			"url": "http://127.0.0.1:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6,
+	"collection": {
+		"requests": [
+			{
+				"id": "28a3ab1a-ed2c-477e-b1d1-d631496023d4",
+				"method": "GET"
+			},
+			{
+				"id": "66a2d8d0-9844-4769-91f1-dc0e62db4f61",
+				"method": "POST"
+			}
+		]
+	}
+}

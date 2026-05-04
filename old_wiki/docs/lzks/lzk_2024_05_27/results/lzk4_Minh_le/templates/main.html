@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <div>
+        <h1>Pokemondisplayer</h1>
+        <input type="text" placeholder="Pokemon Name eingeben" id="txt_input">
+        <button type="button" id="btn_input">Show Picture</button>
+
+
+    </div>
+    <div style="margin:10px">
+        <img src="" alt="No Image" id="img_pokemon">
+    </div>
+
+<!-- Javascript-->
+    <script>
+        var url = `https://pokeapi.co/api/v2/pokemon/`
+        var translate_url = `http://127.0.0.1:5000/translate/`
+
+        async function fetchPokeData(name) {
+            try {
+                let response = await fetch(url + name);
+                let data = await response.json();
+                console.log('Geladene Poke-Daten:', data);
+                console.log('IMG URL: ', data.sprites.front_default)
+                return data.sprites.front_default;
+            } catch (error) {
+                console.error('Fehler:', error);
+            }
+        }
+
+        async function translateRequest(name) {
+            try {
+                console.log("TRANSLATEREQ NAME", name);
+                console.log(translate_url + name);
+                let response = await fetch(translate_url + name);
+                let data = await response.json();
+                console.log('Geladen Übersetzungsdaten:', data);
+                console.log('Eng-Name: ', data.eng_name);
+                return data.eng_name || data.name;
+            } catch (error) {
+                console.error('Fehler:', error);
+                return name;
+            }
+        }
+
+        let btn_input = document.getElementById("btn_input");
+        btn_input.addEventListener("click", async function() {
+             let txt_input = document.getElementById("txt_input").value.toLowerCase();
+                //console.log(txt_input);
+
+            // Translate
+            //let eng_name =
+            //await
+            var eng_name = await translateRequest(txt_input);
+            console.log("ENG AWAIT BUTTON", eng_name);
+            //console.log('ENG Übersetzung', eng_name);
+            var search_name = eng_name || txt_input;
+
+            // FETCH
+            let img_url = await fetchPokeData(search_name.toLowerCase());
+            console.log("HERE:", img_url);
+            // Change Image:
+            document.getElementById("img_pokemon").src = img_url;
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>

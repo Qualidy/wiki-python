@@ -1,0 +1,14 @@
+h1 {
+    color: #A00000
+}
+
+img {
+    border: 10px solid green
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+body {
+    background-color: rgb(136, 231, 182);
+}

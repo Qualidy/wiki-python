@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemondisplayer</title>
+        <link rel="stylesheet" href="/Users/vw4j0nr/Library/CloudStorage/OneDrive-VolkswagenAG/F73/Python/WEB/lzk_27_mai/lzk4/static/css/style.css">
+    </head>
+    <body> 
+        <h1 >Pokemondisplayer</h1> 
+        <input id="inputPokemon" value = "ditto">
+        <button id="showPicture">Show Picture
+
+        </button>
+        <br>
+        <img id="bildPokemon" src="">
+        <script>
+            let showPicture = document.getElementById("showPicture")
+            showPicture.addEventListener('click', function(){
+                let inputPokemon = document.getElementById("inputPokemon")
+                fetch(`https://pokeapi.co/api/v2/pokemon/${inputPokemon.value.toLowerCase()}`)
+                .then(response => response.json())
+                .then(data=> {let bildPokemon = document.getElementById("bildPokemon")
+                bildPokemon.src = data["sprites"]["front_default"]})
+
+            })
+        </script>
+    </body>
+</html>

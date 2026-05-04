@@ -1,0 +1,81 @@
+CREATE TABLE IF NOT EXISTS "fach"(
+   "id" int(11) not null check(round("id") = "id"),
+   "name" varchar(100) not null check(length("name") <= 100),
+   "kuerzel" varchar(10) not null check(length("kuerzel") <= 10),
+   "ist_kernfach" tinyint(1) not null check(round("ist_kernfach") = "ist_kernfach"),
+   "ist_vorrueckungsfach" tinyint(1) not null check(round("ist_vorrueckungsfach") = "ist_vorrueckungsfach"),
+   primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "klasse"(
+   "id" int(11) not null check(round("id") = "id"),
+   "name" varchar(20) not null check(length("name") <= 20),
+   "jahrgangsstufe" int(11) not null check(round("jahrgangsstufe") = "jahrgangsstufe"),
+   "klassenleitung_id" int(11) default NULL check(round("klassenleitung_id") = "klassenleitung_id"),
+   foreign key ("klassenleitung_id") references "lehrkraft"("id"),
+   primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "lehrbefaehigung"(
+   "lehrkraft_id" int(11) not null check(round("lehrkraft_id") = "lehrkraft_id"),
+   "fach_id" int(11) not null check(round("fach_id") = "fach_id"),
+   foreign key ("lehrkraft_id") references "lehrkraft"("id"),
+   foreign key ("fach_id") references "fach"("id"),
+   primary key("lehrkraft_id", "fach_id")
+);
+CREATE TABLE IF NOT EXISTS "lehrkraft"(
+   "id" int(11) not null check(round("id") = "id"),
+   "familienname" varchar(100) not null check(length("familienname") <= 100),
+   "rufname" varchar(50) not null check(length("rusKfname") <= 50),
+   "geburtsdatum" date not null check(isDate("geburtsdatum")),
+   "geschlecht" varchar(1) not null check(length("geschlecht") <= 1),
+   primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "note"(
+   "id" int(11) not null check(round("id") = "id"),
+   "wert" int(11) not null check(round("wert") = "wert"),
+   "datum" date default NULL check(isDate("datum")),
+   "gewicht" int(11) default 1 check(round("gewicht") = "gewicht"),
+   "schueler_id" int(11) not null check(round("schueler_id") = "schueler_id"),
+   "lehrkraft_id" int(11) not null check(round("lehrkraft_id") = "lehrkraft_id"),
+   "fach_id" int(11) not null check(round("fach_id") = "fach_id"),
+   "pruefung_id" int(11) default NULL check(round("pruefung_id") = "pruefung_id"),
+   foreign key ("schueler_id") references "schuelerin"("id"),
+   foreign key ("lehrkraft_id") references "lehrkraft"("id"),
+   foreign key ("fach_id") references "fach"("id"),
+   foreign key ("pruefung_id") references "pruefung"("id"),
+   primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "pruefung"(
+   "id" int(11) not null check(round("id") = "id"),
+   "typ" varchar(50) default NULL check(length("typ") <= 50),
+   "laufende_nr" int(11) not null check(round("laufende_nr") = "laufende_nr"),
+   "klasse" int(11) default NULL check(round("klasse") = "klasse"),
+   "datum" date default NULL check(isDate("datum")),
+   "fach_id" int(11) default NULL check(round("fach_id") = "fach_id"),
+   "lehrkraft_id" int(11) default NULL check(round("lehrkraft_id") = "lehrkraft_id"),
+   foreign key ("klasse") references "klasse"("id"),
+   foreign key ("fach_id") references "fach"("id"),
+   foreign key ("lehrkraft_id") references "lehrkraft"("id"),
+   primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "schuelerin"(
+   "id" int(11) not null check(round("id") = "id"),
+   "familienname" varchar(100) not null check(length("familienname") <= 100),
+   "rufname" varchar(50) not null check(length("rufname") <= 50),
+   "geburtsdatum" date not null check(isDate("geburtsdatum")),
+   "geschlecht" varchar(1) not null check(length("geschlecht") <= 1),
+   "ist_klassensprecher" tinyint(1) not null default 0 check(round("ist_klassensprecher") = "ist_klassensprecher"),
+   "klasse_id" int(11) default NULL check(round("klasse_id") = "klasse_id"),
+   foreign key ("klasse_id") references "klasse"("id"),
+   primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "unterrichtet"(
+   "lehrkraft_id" int(11) not null check(round("lehrkraft_id") = "lehrkraft_id"),
+   "fach_id" int(11) not null check(round("fach_id") = "fach_id"),
+   "klasse_id" int(11) not null check(round("klasse_id") = "klasse_id"),
+   foreign key ("lehrkraft_id") references "lehrkraft"("id"),
+   foreign key ("fach_id") references "fach"("id"),
+   foreign key ("klasse_id") references "klasse"("id"),
+   primary key("lehrkraft_id", "fach_id", "klasse_id")
+);
+CREATE INDEX klassenlehrkraft on klasse(klassenleitung_id);
+CREATE INDEX schueler on note(schueler_id);

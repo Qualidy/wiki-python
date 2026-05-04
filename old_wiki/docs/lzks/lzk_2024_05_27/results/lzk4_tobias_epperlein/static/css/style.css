@@ -1,0 +1,9 @@
+h1 {
+    color: #A00000
+}
+
+#img {
+    margin: 10px 0;
+    border: 10px solid green;
+    max-width: 100px;
+}

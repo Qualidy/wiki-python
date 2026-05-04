@@ -1,0 +1,15 @@
+.venv
+.DS_Store
+site
+.idea
+venv
+__pycache__
+.firebase
+*/.DS_Store
+*.db
+something.py
+otherthing.py
+*/.venv
+test_something.py
+docs/lzks/lzk_2024_02_21/results/.ipynb_checkpoints
+docs/lzks/lzk_2024_02_21/results/Nachschreiber/.ipynb_checkpoints

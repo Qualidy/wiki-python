@@ -1,0 +1,20 @@
+h1 {
+    color: #A00000
+    
+    
+}
+
+button{
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: xx-large;
+}
+input{
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: xx-large;
+}
+img{
+    border: 10px solid green;
+    font-size: xx-large;
+}

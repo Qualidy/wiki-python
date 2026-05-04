@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pokemondisplayer</title>
+<link rel="stylesheet" href="/Users/aschmid/python_f73/lzk4/static/css/style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<h1>Pokemondisplayer</h1>
+    <input type="text" class="form-control" id="pokemonname" placeholder="Pokemon Namen eingeben" required>
+<button id="pokebutton">Pokemonbutton</button>
+<br>Dein gewünschten Pokemon Informationen:<span id="Pokemoninfos"></span>
+<img src= = "pokebild" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
+
+
+
+</body>
+<script>
+
+
+    document.getElementById("pokebutton").addEventListener("click",function(){
+        promise=fetch(`https://pokeapi.co/api/v2/pokemon/ditto`)
+        .then(response => response.json())
+        .then (data => {
+            document.getElementById("Pokemoninfos").innerText=JSON.stringify(data,null,2);
+        })
+
+
+
+    })
+</script>
+
+
+</html>

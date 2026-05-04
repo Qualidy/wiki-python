@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+        <input type="text" id="eingabe">
+        <button onclick="zeige()"> Show Picture</button>
+
+    <br>
+    <br>
+    <img id="Pokemon" >
+    <script>
+            function zeige(){
+                eingabe = document.getElementById("eingabe");
+                bild = document.getElementById("Pokemon");
+                let wert = eingabe.value
+                let test =""
+
+                fetch(`http://127.0.0.1:5001/translate/${wert}`)
+                .then(response =>{response.json()})
+                .then(data =>{test=data.uebersetzt;
+                })
+
+                fetch(`https://pokeapi.co/api/v2/pokemon/${test.toLowerCase()}`)
+                .then(response => response.json())
+                .then(data=>
+                {let link = data.sprites.front_default;
+                    bild.src=link
+                    });
+                
+                eingabe.value="";
+
+            }
+    </script>
+    
+</body>
+</html>

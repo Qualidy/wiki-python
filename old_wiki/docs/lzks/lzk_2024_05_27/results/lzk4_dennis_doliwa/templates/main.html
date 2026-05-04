@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <h2></h2>
+
+    <label for="search-pokemon-by-name">Suche Pokemon nach Namen:</label>
+    <input type="text" id="search-pokemon-by-name">
+    <button type="submit" id="submit-search-pokemon-by-name" onclick="searchPokemonByName()">Show Picture</button>
+    <p></p>
+    
+    
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="pokemon pic" id="pokemon-pic">
+</body>
+<script>
+
+
+    async function searchPokemonByName(){
+        const name = document.getElementById("search-pokemon-by-name").value;
+        let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+        const body = await data.json();
+        let paragraph_pokemon = document.getElementById("responst-paragraph-pokemon");
+
+        let message = document.getElementById("message");
+        message.innerHTML = Object.keys(body.message);
+
+        let image = document.getElementById("pokemon-pic");
+        image.src = body.message; 
+    }
+    
+    async function showPokemon(){
+            let response = await fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png`);
+            const body = await response.json();
+            
+            let image = document.getElementById("random-pokemon");
+            image.src = body.message;
+        }
+    
+    <span style="color:red">**Hinweis:**</span> 
+
+
+
+   
+
+</script>
+</html>

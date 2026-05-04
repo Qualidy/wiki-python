@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">`
+
+
+   
+</head>
+<body>
+    <h1 style="color:darkred" >Pokemondisplayer</h1>
+    
+    <label for="search-pokemon"></label>
+    <input type="text" id="search-pokemon">
+    <button type="submit" id="submit-search-pokemon" onclick="getPokemonByName()">Show Picture</button>
+
+    <h2>Das ist das Bild zu deiner Suche</h2>
+    <p id="response-paragraph"></p>
+    <img src="/ditto.jpeg" alt="Ditto">
+    
+    <ul>
+    
+        <li id="sprites"></li>
+    </ul>
+    
+    
+</body>
+<script>
+    async function getPokemonByName(){
+        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/ditto`);
+        const body = await response.json();
+        let paragraph = document.getElementById("response-paragraph")
+        let sprites = document.getElementById("sprites");
+        sprites.innerHTML = Object.keys(body.sprites)
+    }   
+    
+    
+    
+</script>
+
+
+    
+</html>

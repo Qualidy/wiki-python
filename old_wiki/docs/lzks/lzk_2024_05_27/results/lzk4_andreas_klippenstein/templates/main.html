@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <br>
+    <input type="text" name="inputPokemon" id="inp_Pokemon">
+    <button id="btn_Pokemon">Show Picture</button>
+    <br>
+    <div class="pct_Pokemon">
+        <img src="*" id="displayPokemon" class="imgPokemon">
+    </div>
+    <br>
+    <p id="trs_text"></p>
+    <script>
+        document.getElementById('btn_Pokemon').addEventListener('click', async function() {
+            searchPokemon = document.getElementById('inp_Pokemon').value;
+            await fetch(`https://pokeapi.co/api/v2/pokemon/${searchPokemon.toLowerCase()}`)
+            .then(value => value.json())
+            .then(data => {
+                document.getElementById('displayPokemon').src = data['sprites']['front_default'];
+            })
+        });
+    </script>
+</body>
+</html>
+

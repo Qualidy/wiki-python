@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemondisplayer</title>
+        <!-- <link rel="stylesheet" href="/Users/vw4j0nr/Library/CloudStorage/OneDrive-VolkswagenAG/F73/Python/WEB/lzk_27_mai/lzk4/static/css/style.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body> 
+        <h1 >Pokemondisplayer</h1> 
+        <input id="inputPokemon" value = "Bisasam">
+        <button id="showPicture">Show Picture
+
+        </button>
+        <br>
+        <p id = "eingabe"></p>
+        <img id="bildPokemon" src="">
+        <script>
+            let showPicture = document.getElementById("showPicture")
+            showPicture.addEventListener('click', async function(){
+                let inputPokemon = document.getElementById("inputPokemon")
+                await fetch(`http://127.0.0.1:5000/translate/${inputPokemon.value.toLowerCase()}`)
+                .then(response=> response.json())
+                .then(data=> {let pokemonNameEng = document.getElementById("eingabe")
+                pokemonNameEng = data
+                 
+                fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonNameEng.toLowerCase()}`)
+                .then(response => response.json())
+                .then(data=> {let bildPokemon = document.getElementById("bildPokemon")
+                bildPokemon.src = data["sprites"]["front_default"]
+                })})})
+                
+                
+        
+                
+                
+
+                
+
+            
+        </script>
+    </body>
+</html>

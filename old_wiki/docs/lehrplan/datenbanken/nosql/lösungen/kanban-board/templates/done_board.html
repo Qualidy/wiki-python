@@ -1,0 +1,27 @@
+<!-- templates/done_board.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done Board</title>
+</head>
+<body>
+    <h1>Done Board</h1>
+
+    <ul>
+        {% for task in tasks %}
+            {% if task.status == 'done' %}
+                <li>
+                    <strong>{{ task.title }}</strong> - {{ task.description }}
+                    <a href="{{ url_for('update_task_route', task_id=task._id) }}">Edit</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+</body>
+</html>

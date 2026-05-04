@@ -1,0 +1,101 @@
+#,Name,Typ 1,Typ 2,Gesamt,KP,Angriff,Verteidigung,Spez. Angr,Spez. Vert,Tempo,Generation,Legendär,Beschreibung,Vorherige Evolution
+152,Endivie,Gras,,318,45,49,65,49,65,45,2,Nein,"Sanft und schüchtern, benutzt seine Blätter, um sich zu verstecken.",Keine
+153,Lorblatt,Gras,,405,60,62,80,63,80,60,2,Nein,"Seine Blätter entwickeln einen süßlichen Duft, der die Luft reinigt.",Endivie
+154,Meganie,Gras,,525,80,82,100,83,100,80,2,Nein,"Ruhig und weise, nutzt Sonnenlicht, um Energie zu gewinnen.",Lorblatt
+155,Feurigel,Feuer,,309,39,52,43,60,50,65,2,Nein,"Klein, aber mutig, schießt Feuerbälle aus seinem Rücken.",Keine
+156,Igelavar,Feuer,,405,58,64,58,80,65,80,2,Nein,"Ist hitziger und agiler, kann Feinde mit intensiven Flammen abwehren.",Feurigel
+157,Tornupto,Feuer,,534,78,84,78,109,85,100,2,Nein,"Erzeugt Hitzewellen, die seine Gegner in die Flucht schlagen können.",Igelavar
+158,Karnimani,Wasser,,314,50,65,64,44,48,43,2,Nein,"Stark und robust, beißt mit seinen kräftigen Kiefern.",Keine
+159,Tyracroc,Wasser,,405,65,80,80,59,63,58,2,Nein,"Schützt sein Territorium vehement und greift ohne Warnung an.",Karnimani
+160,Impergator,Wasser,,530,85,105,100,79,83,78,2,Nein,"Intimidierend und kräftig, jagt Beute im Wasser.",Tyracroc
+161,Wiesor,Normal,,215,35,46,34,35,45,20,2,Nein,"Sehr neugierig, verwendet seinen buschigen Schweif zur Balance.",Keine
+162,Wiesenior,Normal,,415,85,76,64,45,55,90,2,Nein,"Schnell und wendig, kann sich leise und unbemerkt bewegen.",Wiesor
+163,Hoothoot,Normal,Flug,262,60,30,30,36,56,50,2,Nein,"Steht auf einem Bein und hat ein präzises inneres Uhrwerk.",Keine
+164,Noctuh,Normal,Flug,442,100,50,50,76,96,70,2,Nein,"Fliegt lautlos und hat außergewöhnlich gute Nachtsicht.",Hoothoot
+165,Ledyba,Käfer,Flug,265,40,20,30,40,80,55,2,Nein,"Sozial und schüchtern, sammelt sich in Gruppen, um Wärme zu teilen.",Keine
+166,Ledian,Käfer,Flug,390,55,35,50,55,110,85,2,Nein,"Beschützt sein Revier energisch und nutzt Lichtsignale zur Kommunikation.",Ledyba
+167,Webarak,Käfer,Gift,250,40,60,40,40,40,30,2,Nein,"Erstellt komplexe Netze, die auch als sein Zuhause dienen.",Keine
+168,Ariados,Käfer,Gift,390,70,90,70,60,60,40,2,Nein,"Jagt aktiv nachts und ist sehr territorial.",Webarak
+169,Iksbat,Gift,Flug,535,85,90,80,70,80,130,2,Nein,"Fliegt schnell und leise, kann sich in der Dunkelheit verstecken.",Golbat
+170,Lampi,Wasser,Elektro,330,75,38,38,56,56,67,2,Nein,"Erzeugt Lichtblitze, um Beute anzulocken und zu betäuben.",Keine
+171,Lanturn,Wasser,Elektro,460,125,58,58,76,76,67,2,Nein,"Kann tief unter Wasser leuchten, um seine Umgebung zu erkunden.",Lampi
+172,Pichu,Elektro,,205,20,40,15,35,35,60,2,Nein,"Sehr klein, muss vorsichtig sein, um sich nicht selbst zu schocken.",Keine
+173,Pii,Fee,,218,50,25,28,45,55,15,2,Nein,"Noch sehr jung, entwickelt seine Fähigkeiten durch Spielen und Lachen.",Keine
+174,Fluffeluff,Normal,Fee,210,90,30,15,40,20,15,2,Nein,"Weich und kuschelig, nutzt seine Niedlichkeit, um Feinde zu verwirren.",Keine
+175,Togepi,Fee,,245,35,20,65,40,65,20,2,Nein,"Trägt ein schützendes Schalengehäuse und sammelt Glück.",Keine
+176,Togetic,Fee,Flug,405,55,40,85,80,105,40,2,Nein,"Freundlich und hilfsbereit, verteilt Glück, wo es geht.",Togepi
+177,Natu,Psycho,Flug,320,40,50,45,70,45,70,2,Nein,"Klein, kann aber kurze Distanzen teleportieren.",Keine
+178,Xatu,Psycho,Flug,470,65,75,70,95,70,95,2,Nein,"Steht oft regungslos und starrt in die Sonne, kann die Zukunft sehen.",Natu
+179,Voltilamm,Elektro,,280,55,40,40,65,45,35,2,Nein,"Erzeugt statische Elektrizität mit seiner flauschigen Wolle.",Keine
+180,Waaty,Elektro,,365,70,55,55,80,60,45,2,Nein,"Mehr Kontrolle über seine elektrischen Ladungen, schützt sich mit isolierender Wolle.",Voltilamm
+181,Ampharos,Elektro,,510,90,75,85,115,90,55,2,Nein,"Sein Schwanz leuchtet so hell, dass es als Leuchtturm verwendet werden kann.",Waaty
+182,Blubella,Gras,,490,75,80,95,90,100,50,2,Nein,"Tanzt im Wind, dessen Blätter beruhigende Melodien erzeugen.",Giflor
+183,Marill,Wasser,Fee,250,70,20,50,20,50,40,2,Nein,"Sein Schweif dient als Schwimmhilfe, während es im Wasser spielt.",Keine
+184,Azumarill,Wasser,Fee,420,100,50,80,60,80,50,2,Nein,"Stark und robust, kann mit seinen kräftigen Armen Gegner schleudern.",Marill
+185,Mogelbaum,Gestein,,410,70,100,115,30,65,30,2,Nein,"Sieht aus wie ein Baum, bleibt regungslos, um Feinde zu täuschen.",Keine
+186,Quaxo,Wasser,,500,90,75,75,90,100,70,2,Nein,"Hat einen entspannten Charakter, aber seine Gesänge sind mächtig.",Quaputzi
+187,Hoppspross,Gras,Flug,250,35,35,40,35,55,50,2,Nein,"Sehr leicht, kann vom Wind getragen werden.",Keine
+188,Hubelupf,Gras,Flug,340,55,45,50,45,65,80,2,Nein,"Springt und schwebt mit seinen Blättern, nutzt Windströmungen.",Hoppspross
+189,Papungha,Gras,Flug,460,75,55,70,55,95,110,2,Nein,"Verwendet seine Blütenblätter zum Gleiten und kann Stürme auslösen.",Hubelupf
+190,Griffel,Normal,,360,55,70,55,40,55,85,2,Nein,"Sehr geschickt und kann mit seinem Schweif Objekte greifen.",Keine
+191,Sonnkern,Gras,,180,30,30,30,30,30,30,2,Nein,"Eines der schwächsten Pokémon, nutzt Sonnenlicht zur Energiegewinnung.",Keine
+192,Sonnflora,Gras,,425,75,75,55,105,85,30,2,Nein,"Blüht in der Sonne auf und kann sehr große Mengen an Sonnenenergie aufnehmen.",Sonnkern
+193,Yanma,Käfer,Flug,390,65,65,45,75,45,95,2,Nein,"Schnell und wendig, kann abrupte Richtungswechsel vornehmen.",Keine
+194,Felino,Wasser,Boden,210,55,45,45,25,25,15,2,Nein,"Lebt im Schlamm und ist schwer zu fangen, da es leicht untertaucht.",Keine
+195,Morlord,Wasser,Boden,430,95,85,85,65,65,35,2,Nein,"Entspannt und langsam, aber im Wasser überraschend wendig.",Felino
+196,Psiana,Psycho,,525,65,65,60,130,95,110,2,Nein,"Entwickelt aus Evoli, wenn es starke Bindungen zu seinem Trainer hat.",Evoli
+197,Nachtara,Unlicht,,525,95,65,110,60,130,65,2,Nein,"Entwickelt aus Evoli während der Nacht, versteckt sich im Schatten.",Evoli
+198,Kramurx,Unlicht,Flug,405,60,85,42,85,42,91,2,Nein,"Clever und schlau, stiehlt glänzende Objekte, um sein Nest zu schmücken.",Keine
+199,Laschoking,Wasser,Psycho,490,95,75,80,100,110,30,2,Nein,"Hat einen entspannten Charakter, aber seine Gesänge sind mächtig.",Lahmus
+200,Misdreavus,Geist,,435,60,60,60,85,85,85,2,Nein,"Schwebt leise und erschreckt Menschen und Pokémon mit gruseligen Schreien.",Keine
+201,Icognito,Psycho,,336,48,72,48,72,48,48,2,Nein,"Kommuniziert über geheimnisvolle Formen und Bewegungen.",Keine
+202,Woingenau,Psycho,,405,190,33,58,33,58,33,2,Nein,"Kann starke Angriffe absorbieren und mit doppelter Kraft zurückgeben.",Keine
+203,Girafarig,Normal,Psycho,455,70,80,65,90,65,85,2,Nein,"Sein hinterer Kopf kann unabhängig angreifen, während der vordere isst.",Keine
+204,Tannza,Käfer,,290,50,65,90,35,35,15,2,Nein,"Verbirgt sich in seiner harten Schale, um sich vor Feinden zu schützen.",Keine
+205,Forstellka,Käfer,Stahl,465,75,90,140,60,60,40,2,Nein,"Sehr stark gepanzert und fast unzerstörbar.",Tannza
+206,Dummisel,Normal,,415,100,70,70,65,65,45,2,Nein,"Sein gedrungener Körper ermöglicht es ihm, schnell zu graben und sich zu verstecken.",Keine
+207,Skorgla,Boden,Flug,430,65,75,105,35,65,85,2,Nein,"Klettert mit seinen Klauen Wände hoch und greift Beute aus der Luft an.",Keine
+208,Stahlos,Stahl,Boden,510,75,85,200,55,65,30,2,Nein,"Sein Körper ist härter als jede Rüstung und kann Tunnel graben.",Onix
+209,Snubbull,Fee,,300,60,80,50,40,40,30,2,Nein,"Sieht furchterregend aus, ist aber sehr furchtsam und anhänglich.",Keine
+210,Granbull,Fee,,450,90,120,75,60,60,45,2,Nein,"Hat einen starken Biss und schützt sein Territorium energisch.",Snubbull
+211,Baldorfish,Wasser,Gift,430,65,95,75,55,55,85,2,Nein,"Stößt bei Bedrohung Giftstacheln aus seinem Körper aus.",Keine
+212,Scherox,Käfer,Stahl,500,70,130,100,55,80,65,2,Nein,"Seine Stahlkrallen können fast alles durchschneiden.",Sichlor
+213,Pottrott,Käfer,Gestein,505,20,10,230,10,230,5,2,Nein,"Hat die härteste Verteidigung aller Pokémon und bewegt sich kaum.",Keine
+214,Skaraborn,Käfer,Kampf,500,80,125,75,40,95,85,2,Nein,"Sehr kämpferisch, greift mit seinen großen Hörnern an.",Keine
+215,Sniebel,Unlicht,Eis,430,55,95,55,35,75,115,2,Nein,"Schnell und gerissen, nutzt seine Klauen, um auf Eis zu jagen.",Keine
+216,Teddiursa,Normal,,330,60,80,50,50,50,40,2,Nein,"Sammelt Essen für den Winterschlaf, sehr süß, aber zäh.",Keine
+217,Ursaring,Normal,,500,90,130,75,75,75,55,2,Nein,"Extrem stark, wenn es wütend wird, fürchtet es nichts und niemanden.",Teddiursa
+218,Schneckmag,Feuer,,250,40,40,40,70,40,20,2,Nein,"Sein Körper besteht aus glühendem Magma, das ständig brennt.",Keine
+219,Magcargo,Feuer,Gestein,410,50,50,120,80,80,30,2,Nein,"Sein Schneckenhaus enthält Lava, die bei Kontakt schwer verbrennt.",Schneckmag
+220,Quiekel,Eis,Boden,250,50,50,40,30,30,50,2,Nein,"Klein und robust, rollt sich zu einem Ball, um Feinde abzuwehren.",Keine
+221,Keifel,Eis,Boden,450,100,100,80,60,60,50,2,Nein,"Stark und belastbar, kann Felsen und Eis mit seinem Kopf zertrümmern.",Quiekel
+222,Corasonn,Wasser,Gestein,380,55,55,85,65,85,35,2,Nein,"Lebt in tropischen Korallenriffen und kann Farben wechseln.",Keine
+223,Remoraid,Wasser,,300,35,65,35,65,35,65,2,Nein,"Imitiert ein Maschinengewehr, wenn es Wasserstrahlen abfeuert.",Keine
+224,Octillery,Wasser,,480,75,105,75,105,75,45,2,Nein,"Kann Tinte spritzen und hat sehr präzise Schussfähigkeiten.",Remoraid
+225,Botogel,Eis,Flug,330,45,55,45,65,45,75,2,Nein,"Bringt in der Weihnachtszeit Geschenke und fliegt durch kalte Lüfte.",Keine
+226,Mantax,Wasser,Flug,465,65,40,70,80,140,70,2,Nein,"Schwimmt elegant im Wasser und gleitet durch Wellen.",Keine
+227,Panzaeron,Stahl,Flug,465,65,80,140,40,70,70,2,Nein,"Fast undurchdringlich, kann mit scharfen Flügeln angreifen.",Keine
+228,Hunduster,Unlicht,Feuer,330,45,60,30,80,50,65,2,Nein,"Klein, aber furchterregend, nutzt Flammen, um seine Feinde einzuschüchtern.",Keine
+229,Hundemon,Unlicht,Feuer,500,75,90,50,110,80,95,2,Nein,"Stolz und unabhängig, sehr loyal gegenüber seinem Trainer.",Hunduster
+230,Seedraking,Wasser,Drache,540,75,95,95,95,95,85,2,Nein,"Hat sich vollständig entwickelt, kann Stürme auf dem Meer auslösen.",Seemon
+231,Phanpy,Boden,,330,90,60,60,40,40,40,2,Nein,"Sehr stark für seine Größe, kann größere Felsen tragen.",Keine
+232,Donphan,Boden,,500,90,120,120,60,60,50,2,Nein,"Rollt sich zu einem Rad und stürzt sich auf seine Feinde.",Phanpy
+233,Porygon2,Normal,,515,85,80,90,105,95,60,2,Nein,"Eine Weiterentwicklung von Porygon, kann in virtuellen Welten existieren.",Porygon
+234,Damhirplex,Normal,,465,73,95,62,85,65,85,2,Nein,"Hat einen großen, prächtigen Geweih und ist sehr schnell.",Keine
+235,Farbeagle,Normal,,250,55,20,35,20,45,75,2,Nein,"Kann jede Attacke malen und nachahmen, sehr kreativ.",Keine
+236,Rabauz,Kampf,,210,35,35,35,35,35,35,2,Nein,"Sehr kämpferisch, trainiert hart, um stärker zu werden.",Keine
+237,Kapoera,Kampf,,455,50,95,95,35,110,70,2,Nein,"Nutzt akrobatische Tritte, um seine Gegner zu überwältigen.",Rabauz
+238,Kussilla,Eis,Psycho,305,45,30,15,85,65,65,2,Nein,"Liebt es zu küssen, seine Küsse können einfrieren.",Keine
+239,Elekid,Elektro,,360,45,63,37,65,55,95,2,Nein,"Stößt Stromstöße aus, wenn es aufgeregt ist.",Keine
+240,Magby,Feuer,,365,45,75,37,70,55,83,2,Nein,"Sein Körper glüht heißer, wenn es sich aufregt.",Keine
+241,Miltank,Normal,,490,95,80,105,40,70,100,2,Nein,"Kann schnell laufen und produziert sehr nahrhafte Milch.",Keine
+242,Heiteira,Normal,,540,255,10,10,75,135,55,2,Nein,"Hat viel Gesundheit und kann mit Heilfähigkeiten andere unterstützen.",Chaneira
+243,Raikou,Elektro,,580,90,85,75,115,100,115,2,Wahr,"Eines der legendären Bestien, erzeugt Stürme und Blitze.",Keine
+244,Entei,Feuer,,580,115,115,85,90,75,100,2,Wahr,"Legende besagt, dass jedes Mal ein neues Entei geboren wird, wenn ein neuer Vulkan entsteht.",Keine
+245,Suicune,Wasser,,580,100,75,115,90,115,85,2,Wahr,"Kann reines Wasser erschaffen und reinigt verschmutzte Gewässer.",Keine
+246,Larvitar,Gestein,Boden,300,50,64,50,45,50,41,2,Nein,"Isst Erde, bis es sich verpuppt. Sehr einsam und schüchtern.",Keine
+247,Pupitar,Gestein,Boden,410,70,84,70,65,70,51,2,Nein,"Sehr aggressiv, bewegt sich unter der Erde schneller als an der Oberfläche.",Larvitar
+248,Despotar,Gestein,Unlicht,600,100,134,110,95,100,61,2,Nein,"Hat genug Kraft, um Berge zu zerstören und Landschaften zu verändern.",Pupitar
+249,Lugia,Psycho,Flug,680,106,90,130,90,154,110,2,Wahr,"Als Hüter der Meere bekannt, hat Flügel, die Stürme beruhigen können.",Keine
+250,Ho-Oh,Feuer,Flug,680,106,130,90,110,154,90,2,Wahr,"Als Regenbogen-Pokémon bekannt, seine Schwingen bringen Leben und Hoffnung.",Keine
+251,Celebi,Psycho,Gras,600,100,100,100,100,100,100,2,Nein,"Bekannt als Stimme des Waldes, kann durch die Zeit reisen und Natur wiederherstellen.",Keine

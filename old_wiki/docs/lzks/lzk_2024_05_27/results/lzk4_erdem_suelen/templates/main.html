@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> <title> Pokemondisplayer </title>
+        <link rel="stylesheet" href="sytle.css">
+    </head>
+    <body>
+        <header>
+            <h1> Pokemondisplayer <h1>
+        </header>
+        <input id="inputName">
+        <button id="pokeButton"> Show Picture </button> <br>
+        <img src="" id="ImageContainer" width=200px height=auto>
+
+        <script>
+            async function getPokemon() {
+                pokemonName = document.getElementById('inputName').value
+                url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+                responseHeader = await fetch(url);
+                json = await responseHeader.json();
+                console.log(json)
+
+                imageUrl = json.sprites['front_default'];
+                console.log(imageUrl);
+                document.getElementById('ImageContainer').src = imageUrl
+            };
+
+            document.getElementById('pokeButton').addEventListener('click', function() {
+                getPokemon()
+            });
+        </script>
+
+    </body>
+</html>

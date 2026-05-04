@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>Pokemondisplayer</title>
+  </head>
+  <body>
+    <h1>Pokemondisplayer</h1>
+
+    <form action="">
+      <input type="text" id="name" placeholder="Glumanda" />
+      <input type="button" value="Show Picture" onclick="get_pokemon()" />
+    </form>
+    <div id= "pokemon_bild"></div>
+    
+  </body>
+
+  <script>
+    async function get_pokemon() {
+      var name = document.getElementById("name").value.toLowerCase();
+      name_english = await fetch(`http://127.0.0.1:5000/translate/${name}`);
+      var url = "https://pokeapi.co/api/v2/pokemon/" + name_english;
+      fetch(url).then((response) =>
+        response
+          .json()
+          .then( data => 
+            (
+                document.getElementById("pokemon_bild").innerHTML =`<img id="pokemon_bild" src="${data.sprites.front_default}" alt="" />`
+              )
+          )
+      );
+    }
+
+    async function convert_birthyear(bby_yr){
+    try {
+        name_english = await fetch(`http://127.0.0.1:5000/translate/${name}`)
+        poke_json = await name_english.json()
+    } catch (error) {
+        console.error(error)
+    }
+    return poke_json.name
+}
+  </script>
+</html>

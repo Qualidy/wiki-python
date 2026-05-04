@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="/Users/vwiz5bs/Library/CloudStorage/OneDrive-VolkswagenAG/Desktop/Fakultät/Python_Kurs/Python_Lehrgang/Python_2024/lzk4/static/css/style.css">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <input id="pokemon_name" type="text" placeholder="Gib den Namen des Pokemon ein!" style="width: 215px;">
+    <button id="get_pokemon">Show Picture</button><br>
+    <img id="pokemon_image" src="" alt="Pokemon Bild" style="max-width: 300px; margin-left: 50px; margin-top: 10px;">
+
+    <script>
+        document.getElementById('get_pokemon').addEventListener('click', function() {
+            const pokemonName = document.getElementById('pokemon_name').value.toLowerCase();
+
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+                .then(response => response.json())
+                .then(data => {
+                    const imageUrl = data.sprites.front_default;
+                    const imgElement = document.getElementById('pokemon_image');
+                    imgElement.src = imageUrl;
+                    imgElement.alt = `${pokemonName} Bild`;
+                })
+                .catch(error => {
+                    console.error('Error fetching the Pokemon data:', error);
+                    document.getElementById('pokemon_image').alt = 'Bild konnte nicht geladen werden';
+                });
+        })
+    </script>
+</body>
+</html>

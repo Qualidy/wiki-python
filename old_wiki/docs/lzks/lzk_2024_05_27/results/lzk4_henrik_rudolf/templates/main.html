@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <form action="/poke" method="get"></form>
+    <input id="poke-name" type="text">
+    <button onclick="getPokemon()">Show Picture</button>
+    <div id="poke-img"></div>
+<script>
+    async function getPokemon() {
+        pokeName = document.querySelector("#poke-name").value.toLowerCase()
+        response = await fetch(`http://127.0.0.1:5000/translate?name=${pokeName}`)
+        json = await response.json()
+        engPokeName = json.eng_name
+        console.log(engPokeName)
+        response = await fetch(`https://pokeapi.co/api/v2/pokemon/${engPokeName}`)
+        poke = await response.json()
+        pokeImg = poke.sprites.front_default
+        document.querySelector("#poke-img").innerHTML = `<img src="${pokeImg}" alt="Pokemon">`
+    }
+</script>    
+</body>
+</html>

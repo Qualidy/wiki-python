@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<h1>Pokemondisplayer</h1>
+    <input type="text" id="pokemonname">
+    <button type="button" id="pictureButton">Show picture</button>
+    <div id='pokemonResult'><img src="pokemonResult"></div>
+
+    <script>
+        document.getElementById('pictureButton').addEventListener('click', function() {
+            let pokemonname = document.getElementById('pokemonname').value.toLowerCase();
+
+<!--            fetch(`/translate/${pokemonname}`)-->
+<!--                .then(response => response.json())-->
+<!--                .then(data => {-->
+<!--                    let translated_name = translated_name})-->
+<!--                .catch(error => console.error('Fetch-Fehler:', error));-->
+
+<!--            fetch(`https://pokeapi.co/api/v2/pokemon/${translated_name}`)-->
+                fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonname}`)
+                .then(response => response.json())
+                .then(data => {
+                    let pic_url = data.sprites.front_default
+                    document.getElementById('pokemonResult').innerHTML = pic_url;
+                })
+                .catch(error => console.error('Fetch-Fehler:', error));
+
+         });
+    </script>
+</body>
+</html>

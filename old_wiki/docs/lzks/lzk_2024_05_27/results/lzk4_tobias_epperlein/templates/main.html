@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemondisplayer</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <h1>Pokemondisplayer</h1>
+  <form>
+    <input type="text" id="input">
+    <button id="show">Show Picture</button>
+  </form>
+  <div id="img"></div>
+  <script>
+    document.getElementById("show").addEventListener("click", async function (event){
+      event.preventDefault();
+      let input = document.getElementById("input");
+      let name = input.value.toLowerCase();
+      try{
+        let response = await fetch(`/translate/${name}`);
+        var eng_name = await response.json();
+        eng_name = eng_name.toLowerCase();
+      } catch (error) {
+        console.error(error);
+      }
+      try {
+        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${eng_name}`);
+        let data = await response.json();
+        var img_link = data.sprites.front_default;
+      }catch (error) {
+        console.error(error);
+      }
+      let img = document.getElementById("img");
+      img.innerHTML = `<img src=${img_link}>`;
+    })
+
+  </script>
+</body>
+</html>

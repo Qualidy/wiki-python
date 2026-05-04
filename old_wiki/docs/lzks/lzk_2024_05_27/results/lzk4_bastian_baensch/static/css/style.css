@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+#pokemonDisplay img {
+    border: 10px solid green;
+    display: block;
+    margin-top: 10px;
+}

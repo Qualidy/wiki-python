@@ -1,0 +1,106 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.35061246243022115 0.31600220527534345 0.8815971344382516 1.7987566188055881
+  position 1.3206046808027603 -2.5862132851821706 2.3775449240436446
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.0511043 0.430258 4.44089e-16
+  floorSize 2 2
+}
+E-puck {
+  hidden translation_1 0 0.025999999999999995 0.02
+  hidden rotation_1 0 1 0 6.0627298816471695
+  hidden translation_2 0 -0.026 0.02
+  hidden rotation_2 0 -1 0 5.904070398850581
+  translation 0.12463425341376767 0.013010023737217363 -6.432734813615129e-05
+  rotation 0.0004933954713308296 0.0005742900539732586 0.9999997133758803 0.20863105809151078
+}
+CardboardBox {
+  translation 0.395829 -0.258475 0.05
+  rotation 0 0 1 1.6
+  size 0.5 0.1 0.1
+}
+CardboardBox {
+  translation -0.660562 0.632941 0.05
+  rotation 0 0 1 1.6
+  name "cardboard box(6)"
+  size 0.5 0.1 0.1
+}
+CardboardBox {
+  translation 0.768281 0.32615 0.05
+  name "cardboard box(5)"
+  size 0.5 0.1 0.1
+}
+CardboardBox {
+  translation 0.608549 0.655277 0.05
+  name "cardboard box(7)"
+  size 0.5 0.1 0.1
+}
+CardboardBox {
+  translation -0.152839 0.797203 0.05
+  name "cardboard box(8)"
+  size 0.5 0.1 0.1
+}
+CardboardBox {
+  translation -0.362836 0.263605 0.05
+  name "cardboard box(4)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.473643 -0.393684 0.05
+  name "cardboard box(10)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.619549 1.16433 0.05
+  name "cardboard box(1)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation 0.44696 1.15364 0.05
+  name "cardboard box(13)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.110081 -0.149644 0.05
+  name "cardboard box(14)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation 0.787441 1.05879 0.05
+  name "cardboard box(12)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.0871183 0.288327 0.05
+  name "cardboard box(11)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.496684 0.0321442 0.05
+  name "cardboard box(9)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation 0.0500964 0.280503 0.05
+  name "cardboard box(3)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.228013 0.272113 0.05
+  name "cardboard box(2)"
+  size 0.1 0.1 0.1
+}

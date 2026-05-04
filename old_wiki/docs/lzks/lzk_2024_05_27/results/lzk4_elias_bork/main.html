@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <label for="search-pokemon"></label>
+    <input type="text" id="search-pokemon" placeholder="Pokemon Name">
+    <button type="submit" id="submit-search-pokemon" onclick="pokemonAnzeigen()">Show Picture</button>
+
+    <h2>Bild des Pokemons:</h2>
+    <div id="pokemon-container"></div>
+    <p id="message"></p>
+
+    <script>
+        async function pokemonAnzeigen() {
+            let pokemonName = document.getElementById('search-pokemon').value.toLowerCase();
+            let pokemonContainer = document.getElementById('pokemon-container');
+            let message = document.getElementById('message');
+            
+
+            try {
+                let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+                if (!response.ok) {
+                    throw new Error('Falsch geschrieben?');
+                }
+                const data = await response.json();
+                console.log(data);
+                pokemonContainer.innerHTML = `<img src="${data.sprites.front_default}" alt="${pokemonName}">`;
+            } catch (error) {
+                message.textContent = error.message;
+            }
+        }
+    </script>
+</body>
+</html>
+

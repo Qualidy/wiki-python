@@ -1,0 +1,8 @@
+h1 {
+    color: #A00000
+}
+
+#Pokemon{
+    max-height: 100%;
+    border: 10px solid green;
+}

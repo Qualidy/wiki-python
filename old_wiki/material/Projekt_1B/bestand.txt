@@ -1,0 +1,6 @@
+bestand_A = 5 
+bestand_B = 3 
+bestand_C = 7 
+bestand_D = 1 
+bestand_E = 200 
+bestand_F = 7000

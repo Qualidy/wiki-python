@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <input type="text" name="eingabefenster" id="eingabefenster">
+    <button id="eingabe" onclick="searchByNamePokemon()"  >Show Picture </button>
+    <p id="response_paragraph">Here is the picture of your Pokemon:</p>
+    </p>
+    <ul>
+        <li id="abilities"></li>
+        <li id="cries"></li>
+        <li id="moves"></li>
+        <li id="sprites"></li>
+    </ul>
+    <img id="show_pokemon">
+    <script>
+        async function searchByNamePokemon() {
+            const name=document.getElementById("eingabefenster").value
+            let data= await fetch (`https://pokeapi.co/${name}`)
+            const body = await data.json();
+            let abilities= document.getElementById("abilities");;
+            let moves=document.getElementById("moves");
+            let cries= document.getElementById("cries");
+            let sprites = document.getElementById("sprites");
+
+
+            abilities.innerHTML= body.abilities;
+            moves.innerHTML= body.moves;
+            cries.innerHTML= body.cries;
+            sprites.innerHTML=body.sprites;
+
+        
+        
+            
+        }
+        
+    </script>
+    
+</body>
+</html>

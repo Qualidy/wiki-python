@@ -1,0 +1,14 @@
+h1 {
+    color: #A00000;
+    font-family: 'Copperplate', sans-serif;
+    border-bottom: 2px solid #A00000;
+    text-align: center;
+}
+
+div {
+    padding: 10px;
+}
+
+#pkmn_previewer {
+    border: 10px solid #12a75c;
+}

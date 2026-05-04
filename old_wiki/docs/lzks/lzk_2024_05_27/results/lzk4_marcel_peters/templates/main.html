@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <h1>Pokemondisplayer</h1>
+    <input type="text" name="pokemon" placeholder="Gebe ein Pokemon ein!">
+    <button type="button" id="Show-Pokemon" onclick="ShowPokemon" >Show Picture</button>
+    <h2 id="pokemonTitle"></h2>
+        <img id="pokemonImage" src="" alt="Pokemon Bild">
+    <h3>Hier ist dein Foto:</h3>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="">
+
+
+    <script>
+        async function ShowPokemon(){
+            const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+            const data = await response.json();
+            const pokemonTitle = data.name;
+            const pokemonImage = data.sprites.front_default;
+            
+            document.getElementById('pokemonTitle').textContent = pokemonTitle;
+            document.getElementById('pokemonImage').src = pokemonImage;
+            document.getElementById('pokemonImage').alt = pokemonTitle;}
+
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<head>
+    <title>Pokemondisplayer</title>
+    <style></style>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <input id="pokemon_eingabe" type="text" >
+    <button id="meinButton" >Klick mich!</button><br><br>
+    <img id = "pokemon_img" src="" width="300" height="200" alt="">
+    <div id="pokemon_ergebnis"></div>
+    <script>
+        document.getElementById("meinButton").addEventListener('click' , 
+        async function() {
+            var pokemon = document.getElementById('pokemon_eingabe').value;
+            
+            response_translate = await fetch(`/translate/${pokemon}`)
+            data = await response_translate.json()
+            console.log(data)
+
+            var apiUrl = (`https://pokeapi.co/api/v2/pokemon/${data}`)
+            try {const response = await fetch(apiUrl);
+            const data_2 = await response.json();
+            document.getElementById("pokemon_img").src = data_2.sprites.front_default;}
+            catch (error) {
+            console.error("Fehler beim Abrufen des Pokemon", error);
+    }
+    
+    
+        })
+    </script>
+
+</body>

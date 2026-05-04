@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+</html>
+
+<head>
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" type="text/css" href="/Users/vwheqeb/Desktop/lzk4/static/css/style.css">
+  </head>
+
+  <body>
+
+    <h1>Pokemondisplayer</h1>
+
+    <input id = "pokemon_name" type="text" name="pokemon_name" placeholder="Gib den namen des Pokemon ein">
+    <button id ="pokemon_button" type="button">show picture</button>
+    <br> </br>
+    <img id = "pokemon_picture">
+
+
+
+  </body>
+
+
+<script>
+    document.getElementById('pokemon_button').addEventListener('click', function() {
+            promise=fetch(`https://pokeapi.co/api/v2/pokemon/${"pokemon_name"}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('pokemon_picture')
+                .src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png";
+            })
+            .catch(error => console.error('Fehler:', error));
+    });
+</script>

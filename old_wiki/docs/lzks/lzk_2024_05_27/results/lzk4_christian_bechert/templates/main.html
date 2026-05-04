@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1><br>
+    <input id="pokeminInput" type="text" value="ditto">
+    <button id="pictureButton">Show Picture</button><br>
+    <img id="pokemonPicture" style="height: 100px;">
+
+    <script>
+        async function get_image(){
+            let input = document.getElementById("pokeminInput").value.toLowerCase()
+            let url = `https://pokeapi.co/api/v2/pokemon/${input}`
+            let response = await fetch(url)
+            let data = await response.json()
+            document.getElementById("pokemonPicture").src = data["sprites"]["front_default"]
+        }
+
+        async function get_translation(){
+            let input = document.getElementById("pokeminInput").value.toLowerCase()
+            let response = await fetch('/translate/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({translation: input})
+            })
+            let data = await response.json()
+            
+        }
+
+        document.getElementById("pictureButton").addEventListener('click', function(){
+            get_image()
+        })
+
+
+    </script>
+</body>
+</html>

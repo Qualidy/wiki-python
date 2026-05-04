@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Displayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<body>
+<p class="h1"> Pokémon Displayer</p>
+<div class="box">
+    <input type="text" name="name" id="name" placeholder="Gib ein Pokemon ein..">
+    <button type="button" onclick="display_poke()">Show Pokemon</button>
+    </div>
+    <div class="box">
+    <img src="" id="picture" alt="Pokemon Bild">
+    </div>
+
+<script>
+    async function display_poke(){
+        var name = document.getElementById('name').value
+        var response_translator = await fetch(`http://127.0.0.1:5000/translate/${name}`)
+        var data_translator = await response_translator.json()
+        var name_in_eng = data_translator.name
+        var name_in_eng = name_in_eng.toLowerCase()
+        var response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name_in_eng}`)
+        var data = await response.json()
+        var img_link = data.sprites.front_default
+        document.getElementById('picture').src = img_link
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+image: python:3.11.7-bullseye
+
+before_script:
+  - git remote remove origin
+  - git config user.email "software@co-dex.de"
+  - git config user.name "Software-Bot"
+  - git remote add origin https://oauth2:$GITLAB_TOKEN@git.qualidy.de/fakultaet73/python/wiki.git
+  - pip install -r requirements.txt
+
+#test:
+#  stage: test
+#  script:
+#  - mkdocs build --strict --verbose --site-dir test
+#  artifacts:
+#    paths:
+#    - test
+#  rules:
+#    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+
+pages:
+  stage: deploy
+  script:
+    #- git checkout deployment
+    #- git pull origin main
+    - mkdocs gh-deploy --site-dir public
+    - git checkout gh-pages
+    - git add .
+    - git commit -m "Deployment commit"
+    - git push origin gh-pages --force
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

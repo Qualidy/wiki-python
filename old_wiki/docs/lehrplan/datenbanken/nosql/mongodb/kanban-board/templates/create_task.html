@@ -1,0 +1,43 @@
+<!-- templates/create_task.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="{{ url_for('static', filename='css/create_task_style.css') }}" rel="stylesheet">
+    <title>Create Task</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Task</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        {{ form.hidden_tag() }}
+        <form method="post" action="{{ url_for('create_task_route') }}">
+            {{ form.csrf_token }}
+            <label for="title">Title:</label>
+            {{ form.title }}
+            <label for="description">Description:</label>
+            {{ form.description }}
+            <label for="status">Status:</label>
+            {{ form.status }}
+            <button type="submit" class="btn btn-success">Create Task</button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+    </div>
+
+</body>
+</html>

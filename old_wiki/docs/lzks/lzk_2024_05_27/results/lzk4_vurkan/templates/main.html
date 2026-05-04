@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2 id="titel">Pokemondisplayer</h2>
+
+    <input id="char_name" type="text" name="pokemon" placeholder="Name of Pokemon">
+    <button id="getPokemon" onclick="getPokemon()">Show Picture</button>
+    <div id="bildrahmen">
+    <img src="bild.jpg" alt="Pokemon" id="pokemon_bild"></div>
+    <p id="textfeld"></p>
+    
+    <script>
+    async function getPokemon() {
+    let char_name = document.getElementById("char_name").value.trim().toLowerCase();
+    let translatedName = await translatePokemonName(char_name);
+    translatedName = translatedName.toLowerCase();
+    let get_url = `https://pokeapi.co/api/v2/pokemon/${translatedName}`;
+    let response = await fetch(get_url);
+    let data = await response.json();
+    console.log(data)
+    displayData(data);
+}
+
+async function translatePokemonName(name) {
+    let response = await fetch(`http://127.0.0.1:5500/translate/${name}`);
+    let data = await response.json();
+    console.log(data)
+    return data.translated_name;
+}
+
+function displayData(data) {
+    let textfeld = document.getElementById("textfeld");
+    let htmlContent = ``;
+    textfeld.innerHTML = htmlContent;
+    document.getElementById("pokemon_bild").src = data.sprites.front_default;
+}
+    </script>
+</body>
+
+<style>
+
+</style>
+</html>

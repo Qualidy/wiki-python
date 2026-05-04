@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemondisplayer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <input type="text" id="pokemon-name" placeholder="Gib den Pokemon-Namen ein">
+    <button onclick="displayPokemon()">Anzeigen</button>
+    <img id="pokemon-image" src="" alt="Pokemon Bild">
+
+    <script>
+        function displayPokemon() {
+            const name = document.getElementById('pokemon-name').value.toLowerCase();
+            const imageUrl = `https://pokeapi.co/api/v2/pokemon/${name}`;
+            document.getElementById('pokemon-image').src = imageUrl;
+        }
+    </script>
+</body>
+</html>

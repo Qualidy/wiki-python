@@ -1,0 +1,16 @@
+[
+    {
+        "titel": "Python Programmierung",
+        "autor": "Max Muster",
+        "jahr": 2020,
+        "seitenzahl": 300,
+        "lesezeit": 600
+    },
+    {
+        "titel": "Datenanalyse mit Python",
+        "autor": "Erika Beispiel",
+        "jahr": 2018,
+        "seitenzahl": 250,
+        "lesezeit": 500
+    }
+]

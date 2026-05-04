@@ -1,0 +1,38 @@
+name: second-db
+networks:
+  mongodb_network:
+    name: mongodb_network_localhost
+
+services:
+  mongodb:
+    image: mongodb/mongodb-enterprise-server:latest
+    env_file:
+      - .env
+    volumes:
+      - ./mongod.conf:/etc/mongod.conf
+      - ./mongodb-logs:/var/log/mongodb
+      - my_volume:/data/db
+    ports:
+      - ${MONGODB_PORT}:${MONGODB_PORT} # HOST_PORT : CONTAINER_PORT
+    networks:
+      - mongodb_network
+    #environment:
+    #  - MONGO_INITDB_ROOT_USERNAME=value
+    #  - MONGO_INITDB_ROOT_PASSWORD=pass12345
+    command:
+        - '-f'
+        - '/etc/mongod.conf'
+  mongo-express:
+      image: mongo-express
+      ports:
+        - ${ME_LOCALHOST_PORT}:${ME_PORT}
+      env_file:
+        - .env
+      depends_on:
+        - mongodb
+      networks:
+        - mongodb_network
+
+volumes:
+  my_volume:
+    name: my_local_volume_mdb2

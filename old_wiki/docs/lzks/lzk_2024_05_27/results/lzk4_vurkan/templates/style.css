@@ -1,0 +1,14 @@
+h2 {
+    color: #A00000
+}
+
+.bildrahmen{
+    border: 2px solid black;
+}
+
+#pokemon_bild {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    border: 10px solid green;
+}

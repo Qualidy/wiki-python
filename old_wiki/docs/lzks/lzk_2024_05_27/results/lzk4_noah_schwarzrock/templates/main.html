@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <title> Pokemondisplayer </title>
+    </head>
+    <body>
+        <h1> Pokemondisplayer </h1>
+        <input type="text" id="user_input">
+        <button id="input_button"> Show Picture </button>
+        <p>
+            <img src="" alt="" id="poke_image">
+        </p>
+    </body>
+    <script>
+        document.getElementById("input_button").addEventListener("click", function() {
+            pokemonName = document.getElementById("user_input").value
+            translatePokemon(pokemonName)
+    })
+        async function getPokeInfo(pokemon) {
+        var pokeInfoUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+        let response = await fetch(pokeInfoUrl)
+        let data = await response.json()
+        console.log(data['sprites']['back_default'])
+        document.getElementById("poke_image").src = data['sprites']['back_default']
+    }
+
+        async function translatePokemon(pokemon) {
+            var pokeTranslateUrl = `/translate/${pokemon}`
+            let response = await fetch(pokeTranslateUrl)
+            let data = await response.json()
+            pokemonName = data.toLowerCase()
+            getPokeInfo(pokemonName)
+        }
+    </script>
+</html>

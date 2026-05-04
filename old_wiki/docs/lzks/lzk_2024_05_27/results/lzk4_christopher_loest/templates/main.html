@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">`
+
+    <title>Pokemondisplayer</title>
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <h1>Alle Pokemon die du dir vorstellen kannst 😄</h1>
+    <button type="submit" id="show-all-pokemon" onclick="getAllPokemonFromApi()">alle Pokemon anzeigen</button>
+    <br>
+    <br>
+    <input type="text" id="show-pokemon">
+    <button type="submit" id="submit-show-pokemon" onclick="getPokemonPicture()">Show Picture</button>
+    <img src="img-pokemon" alt="">
+
+    <h3>Hier sind deine Pokemon:</h3>
+    <p id="response-pokemon"></p>
+    <ul>
+        <li id="name"></li>
+    </ul>
+</body>
+<script>
+    async function getAllPokemonFromApi(){
+        const id = document.getElementById("show-all-pokemon").value;
+        console.log(id)
+        let response = await fetch(`https://pokeapi.co/api/v2/pokemon`);
+        const body = await response.json();
+        let paragraph = document.getElementById("response-pokemon")
+        let name = document.getElementById("name");
+        name.innerHTML = Object.keys(body.results)
+    }
+    async function getPokemonPicture(){
+        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/ditto`);
+        console.log(response)
+        const body = await response.json()
+        let image = document.getElementById("img-pokemon");
+        image.src = body.sprites;
+    }
+</script>
+</html>

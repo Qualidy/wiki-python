@@ -1,0 +1,12 @@
+.h1 {
+    color: #A00000;
+    font-size: 30px;
+}
+
+img {
+    border: 10px solid green;
+}
+
+.box{
+    display: flex;
+}

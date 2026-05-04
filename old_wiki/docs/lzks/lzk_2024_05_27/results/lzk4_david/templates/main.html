@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--<link rel="stylesheet" href="../static/css/style.css">-->
+    <title>Pokemon searcher</title>
+</head>
+<body>
+    <h1>Die ultimative Pokemon-Datenbank für den Trainer von morgen!</h1>
+    <div>
+        <input type="text" name="pkmn_name" id="input_name" placeholder="The name of the Pokemon">
+    </div>
+    <div>
+        <button type="button" id="pkmn_button">Search</button>
+    </div>
+    <div>
+        <img src="" alt="An image of a pokemon" id="pkmn_previewer">
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!--<script src="../static/js/main.js"></script>-->
+</body>
+</html>

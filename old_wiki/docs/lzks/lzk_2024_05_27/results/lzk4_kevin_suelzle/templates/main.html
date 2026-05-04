@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Pokemondisplayer</title>
+</head>
+<body>
+    <h1>Pokemondisplayer</h1>
+    <input id="inputName">
+    <button id="submitName"> Show Picture</button>
+    <br>
+    <img id="pokeImg" src="">
+    <script>
+        let button = document.getElementById("submitName");
+        let name = document.getElementById("inputName");
+        let bildspot = document.getElementById("pokeImg");
+    
+        button.addEventListener("click", function() {
+            pokename = name.value
+            pokename = pokename.toLowerCase()
+            console.log(pokename)
+            let url = `https://pokeapi.co/api/v2/pokemon/${pokename}`
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let bild = data.sprites.front_default
+                bildspot.src = bild
+            })
+        })
+    </script>
+</body>
+</html>

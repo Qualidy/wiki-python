@@ -1,0 +1,31 @@
+title: "3: Einfacher Zahlenraten"
+difficulty: 2
+question: |
+  Erstelle ein Spiel, bei dem der Benutzer versuchen muss, eine zufällig generierte Zahl zwischen 1 und 100 zu erraten.
+  Nach jeder Eingabe gibt das Programm an, ob die geratene Zahl zu hoch oder zu niedrig ist. Der Benutzer hat eine
+  begrenzte Anzahl von Versuchen (z.B. 10). Nach dem Spiel gibt das Programm an, ob der Benutzer gewonnen hat und wie
+  viele Versuche benötigt wurden.
+solution: |
+  ```python
+  import random
+  
+  zahl = random.randint(1, 100)
+  
+  versuch = 1
+  max_versuche = 10
+  
+  while versuch < max_versuche:
+      raten = int(input("Rate die Zahl: "))
+  
+      if raten == zahl:
+          print(f"Richtig! Du hast die Zahl in {versuch} Versuchen erraten.")
+          break
+      elif raten < zahl:
+          print("Die gesuchte Zahl ist höher.")
+      else:
+          print("Die gesuchte Zahl ist niedriger.")
+          
+      versuch += 1
+  else:
+      print(f"Leider falsch. Die gesuchte Zahl war {zahl}.")
+  ```

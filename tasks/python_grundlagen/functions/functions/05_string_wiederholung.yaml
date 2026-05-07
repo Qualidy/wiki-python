@@ -1,0 +1,11 @@
+title: "String-Wiederholung"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `wiederhole_string(str, n)`, die einen String `str` und eine Zahl `n`
+     nimmt und den String `n`-mal wiederholt.
+solution: |
+  ```python
+  def wiederhole_string(str, n):
+    return str * n
+  print(wiederhole_string("Hallo", 3))
+  ```

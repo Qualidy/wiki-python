@@ -4,28 +4,10 @@ Programmcode kann auf verschiedene Art in tatsächlich ausführbaren Maschinenco
 Maschinencode ist die niedrigste Ebene der Code-Darstellung, die direkt von der CPU eines Computers verstanden und
 ausgeführt werden kann.
 
-### Aufgabe: Compiler und Interpreter 🌶🌶
-
-Das folgende Video aus den Jahr 1983 erklärt anschaulich, was ein **Compiler** und was ein **Interpreter** ist.
-
-Schau dir das Video an und beantworte die folgenden Fragen:
-
-* Wie übersetzen Compiler und Interpreter jeweils Programmcode zu Maschinencode?
-* Was sind die Vor- unt Nachteile von Code, der mit einem Compiler oder einem Interpreter übersetzt wurde?
-* Wie kann man sich die Namen "Compiler" und "Interpreter" gut merken?
-
-[🎦Link zum Video](https://www.youtube.com/embed/_C5AHaS1mOA?si=uPm5tJnESr4ZuemF)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_C5AHaS1mOA?si=uPm5tJnESr4ZuemF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+{{ task(file="tasks/python_grundlagen/bytecode/bytecode/01_compiler_und_interpreter.yaml") }}
 # Von .py zu ausführbaren Maschinencode
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DoVfMGwo3cs?si=gofPR6owXxHn5EHb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/DoVfMGwo3cs?si=gofPR6owXxHn5EHb") }}
 
 Wir haben gelernt, dass der Compiler und der Interpreter Programme sind, die Quellcode in ausführbaren Maschinencode
 übersetzen. Wie ist es nun bei Python?
@@ -56,7 +38,6 @@ Da der Bytecode von der PVM und nicht direkt von der Hardware ausgeführt wird, 
 Python plattformunabhängig. Der gleiche Python-Code kann auf verschiedenen Betriebssystemen laufen, solange eine
 passende PVM vorhanden ist.
 
-
 ## Beispiel für Bytecode
 
 Angenommen, wir haben ein einfaches Python-Skript:
@@ -73,12 +54,10 @@ dem `dis`-Modul anzeigen. Zum Beispiel:
 ```python
 import dis
 
-
 def smaller(a, b):
     if a < b:
         return "a ist kleiner"
     return "b ist kleiner"
-
 
 dis.dis(smaller)
 ```
@@ -114,20 +93,6 @@ und im Code mit dem `POP_JUMP_IF_FALSE` im Code gesprungen wird.
 Es ist an dieser Stelle nicht wichtig, diesen Bytecode im kleinsten Detail zu verstehen. 
 Wichtig ist, dass du weißt, dass es diese Zwischenstruktur gibt.
 
-### Aufgabe: Fehlerstelle🌶🌶
-Starte eine **Pythonkonsole** und gib zunächst `import dis` ein. Als Nächstes führe die Zeile `i = i + 1` aus.
-Dies führt zu einem `NameError`. Was erscheint, wenn du nun `dis.dis()` ausführst? Bei welchem Befehl kam es zum
-Absturz?
-
-### Aufgabe: Verschiedene Interpreter 🌶️
-️
-Schaue dir das folgende Video von GK TechFlex an:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vKmtwQt2uLs?si=is1Xs1t2tht_Z4Sa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-Welche Pythonübersetzer gibt es und welche Vorteile haben sie bzw. warum werden sie genutzt?
-
-### Aufgabe: Aktuellen Interpreter herausfinden 🌶 
-Wie kannst du herausfinden, welchen Interpreter du aktuell benutzt?
-
-[Lösung](solution.md)
+{{ task(file="tasks/python_grundlagen/bytecode/bytecode/02_fehlerstelle.yaml") }}
+{{ task(file="tasks/python_grundlagen/bytecode/bytecode/03_verschiedene_interpreter.yaml") }}
+{{ task(file="tasks/python_grundlagen/bytecode/bytecode/04_aktuellen_interpreter_herausfinden.yaml") }}

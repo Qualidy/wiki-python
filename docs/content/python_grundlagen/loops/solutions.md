@@ -102,9 +102,7 @@ list(range(0)) # []
 list(range(1, 0)) # []
 ```
 
-
 # while-Schleifen
-
 
 ### 1. Summe von 1 bis 100
 

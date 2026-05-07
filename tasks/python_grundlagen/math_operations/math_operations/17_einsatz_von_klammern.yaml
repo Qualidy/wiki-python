@@ -1,0 +1,7 @@
+title: "Einsatz von Klammern"
+difficulty: 1
+question: |
+  Ändere den Ausdruck `2 + 3 * 5` so ab, dass zuerst die Addition und dann die 
+  Multiplikation ausgeführt wird.
+solution: |
+  `print((2 + 3) * 5)  # 25, da die Klammer zuerst ausgewertet wird`

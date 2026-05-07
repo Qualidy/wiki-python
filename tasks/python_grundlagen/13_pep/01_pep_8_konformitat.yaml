@@ -1,0 +1,18 @@
+title: "PEP 8-Konformität"
+difficulty: 2
+question: |
+  Überprüfe das folgende Python-Skript auf PEP 8-Konformität. Finde und behebe Verstöße gegen die Richtlinien. Achte besonders auf Einrückungen, Zeilenlängen, Importe und Namenskonventionen.
+
+  ```python
+  # Beispiel-Skript
+
+  def benutzerEingabe():
+      benutzerEingabe = input("Gib eine Zahl ein: ")
+      return int(benutzerEingabe)
+
+  def quadratBerechnung(zahl):
+      return zahl**2
+
+  ergebnis = quadratBerechnung(benutzerEingabe())
+  print("Ergebnis:", ergebnis)
+  ```

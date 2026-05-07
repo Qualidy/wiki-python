@@ -1,0 +1,62 @@
+title: "CSV als Speicherformat nutzen"
+difficulty: 3
+question: |
+  Erweitere die folgende Klasse um zwei Methoden:
+
+  * `create_persons_from_csv(cls, file_path)` ist eine Klassenmethode, die aus einer csv-Datei Personen ausließt und
+    erstellt.
+  * `def save_to_csv(self, file_path, mode='a')` speichert die `Person`-Instanz in einer CSV.
+
+  ```python
+  class Person:
+      def __init__(self, name, age):
+          self.name = name
+          self.age = age
+
+      def __eq__(self, other):
+          return isinstance(other, Person) and self.name == other.name and self.age == other.age
+  ```
+
+  CSV-Datei:
+
+  ```text
+  Swantje,32
+  Maja,12
+  Niko,31
+  Sven,38
+
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>from csv import reader, writer
+
+  class Person:
+  def __init__(self, name, age):
+  self.name = name
+  self.age = age
+
+      def __str__(self):
+          return f"Person: {self.name}, {self.age}"
+
+      @classmethod
+      def create_persons_from_csv(cls, file_path):
+          result = list()
+          with open(file_path) as csv_file:
+              for zeile in reader(csv_file):
+                  name, age = zeile
+                  result.append(cls(name, age))
+
+          return result
+
+      def save_to_csv(self, file_path, mode="a"):
+          with open(file_path, mode, newline="") as csv_file:
+              writer(csv_file).writerow([self.name, self.age])
+
+  csv_file_path = "persons.csv"
+  persons = Person.create_persons_from_csv(csv_file_path)
+
+  for person in persons:
+  print(person)
+
+  Person("Gustav", 32).save_to_csv(csv_file_path)
+  </code></pre></details>

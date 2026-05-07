@@ -1,0 +1,9 @@
+title: "Erster und letzter Buchstabe eines Strings"
+difficulty: 1
+question: |
+  Schreibe einen Python-Code, um den ersten und den letzten Buchstaben eines Strings auszugeben.
+solution: |
+  ```python
+  text = "Python"
+  print(f"Erster Buchstabe: {text[0]}, Letzter Buchstabe: {text[-1]}")
+  ```

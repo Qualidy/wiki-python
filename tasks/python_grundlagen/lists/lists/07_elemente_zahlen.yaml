@@ -1,0 +1,8 @@
+title: "Elemente zählen"
+difficulty: 2
+question: |
+  Zähle, wie oft die Zahl 2 in der Liste `zahlen` vorkommt.
+solution: |
+  ```python
+  anzahl_zwei = zahlen.count(2)
+  ```

@@ -1,0 +1,36 @@
+title: "CSV-Datei filtern"
+difficulty: 3
+question: |
+  Erweitere die Funktion `create_persons_from_csv` um einen Parameter
+  `csv_filter`, mit dem man einen Teil der Elemente aus der CSV herausgefiltert wird.
+  Achte darauf, dass die Funktion auch noch funktioniert, wenn kein `csv_filter` gesetzt ist.
+
+  ```python
+  def no_underaged(name, age):
+      return age >= 18
+
+  persons = Person.create_persons_from_csv("persons.csv", no_underaged)
+
+  for person in persons:
+      print(person)
+  # Swantje,32
+  # Niko,31
+  # Sven,38
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>    @classmethod
+      def create_persons_from_csv(cls, file_path, csv_filter=None):
+          result = list()
+          with open(file_path) as csv_file:
+              for zeile in reader(csv_file):
+                  name, age = zeile
+                  if not csv_filter or csv_filter(name, age):
+                      result.append(cls(name, age))
+
+          return result
+
+  </code></pre></details>
+tip: |
+  Erinnere dich, wie man Funktionen als Parameter übergeben hat
+  und diese dann ausgeführt hat.

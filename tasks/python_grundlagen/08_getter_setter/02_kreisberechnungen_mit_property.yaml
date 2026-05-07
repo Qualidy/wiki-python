@@ -1,0 +1,4 @@
+title: "Kreisberechnungen mit @property"
+difficulty: 3
+question: |
+  Erstelle eine Klasse `Kreis` mit einem privaten Attribut `radius`. Implementiere Getter- und Setter-Funktionen für das Attribut und zeige dann, wie @property verwendet werden kann, um den Zugriff auf das Attribut zu steuern.

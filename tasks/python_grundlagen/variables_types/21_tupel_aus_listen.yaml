@@ -1,0 +1,8 @@
+title: Tupel aus Listen
+difficulty: 1
+question: |
+  Erstelle ein Tupel aus den ersten drei Elementen der Liste von Aufgabe 1.
+solution: |
+  ```python
+  tupel = tuple(liste[:3])
+  ```

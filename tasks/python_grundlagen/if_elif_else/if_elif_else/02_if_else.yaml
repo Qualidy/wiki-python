@@ -1,0 +1,4 @@
+title: "if-else"
+difficulty: 1
+question: |
+  Überprüfe, ob eine Variable `zahl` gerade ist. Verwende dazu den Modulo-Operator `%`.

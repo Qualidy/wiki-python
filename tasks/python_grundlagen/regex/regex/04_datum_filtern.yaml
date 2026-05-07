@@ -1,0 +1,21 @@
+title: "Datum filtern"
+difficulty: 2
+question: |
+  Finde alle Datums im folgenden Text:
+
+  ```python
+  text = "Ein Beispieltext mit dem Datum 27.01.2024 und einem weiteren Datum 01.12.2023."
+  ```
+solution: |
+  Finde alle Datums im folgenden Text:
+  
+  ```python
+  import re
+  
+  text = "Ein Beispieltext mit dem Datum 27.01.2024 und einem weiteren Datum 01.12.2023."
+  
+  date_pattern = r'\b(\d{2}\.\d{2}.\d{4})\b'
+  
+  matches = re.findall(date_pattern, text)
+  print(matches)
+  ```

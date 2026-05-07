@@ -1,0 +1,4 @@
+title: "Musikbibliothek"
+difficulty: 3
+question: |
+  Entwickle ein System für die Verwaltung einer Musikbibliothek. Erstelle Klassen für Songs, Künstler und Alben. Die Songklasse sollte Attribute wie Titel, Dauer und Genre haben. Die Künstlerklasse sollte Informationen wie Name und Genre enthalten. Die Albumklasse sollte Methoden zum Hinzufügen von Songs und Anzeigen der Songliste haben.

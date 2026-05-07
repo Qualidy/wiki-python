@@ -1,0 +1,10 @@
+title: "Leerzeichen entfernen"
+difficulty: 1
+question: |
+  Erstelle einen String und entferne alle Leerzeichen daraus.
+solution: |
+  ```python
+  text = " Text mit Leerzeichen "
+  ohne_leerzeichen = text.strip()
+  print(ohne_leerzeichen)
+  ```

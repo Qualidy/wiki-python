@@ -1,0 +1,4 @@
+title: "Jahreszeiten"
+difficulty: 2
+question: |
+  Schreibe ein Programm, das den Namen einer Jahreszeit ausgibt, basierend auf einer Monatsnummer (1 bis 12).

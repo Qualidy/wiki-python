@@ -4,41 +4,68 @@ hide:
   - toc
 ---
 
-
-
-<div class="grid" markdown style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-
-<div markdown>
-
 # Basis Wiki
 
-<div class="grid cards fancy grid--cols-1" markdown >
-- [:material-call-split: **Topic 1**](content/1.md)
-- [:material-call-split: **Topic 1**](content/1.md)
-- [:material-call-split: **Topic 1**](content/1.md)
-- [:material-call-split: **Topic 1**](content/1.md)
-</div>
+<div class="grid cards" markdown>
+
+-   :material-language-python: **Python Grundlagen**
+
+    Einstieg, Aufgaben und Referenzen für den Python-Grundlagenkurs.
+
+    [Zum Kurs](content/python_grundlagen/python_grundlagen/python_grundlagen.md){ .md-button .md-button--primary }
+
+-   :material-calendar-week: **Bonusweek**
+
+    Projektwoche mit Tagesprojekten, Aufgaben und eingebetteten Lösungen.
+
+    [Tag 1 öffnen](content/bonusweek/tag_1.md){ .md-button .md-button--primary }
+
+-   :material-format-list-checks: **Checklisten**
+
+    Kompakte Lernziel-Checks für die einzelnen Themenbereiche.
+
+    [Checklisten öffnen](content/checklists/checklist_1.md){ .md-button }
+
+-   :material-book-open-page-variant: **Begriffssammlung**
+
+    Begriffe, Kurzdefinitionen und Referenzlinks nach Themen sortiert.
+
+    [Begriffe öffnen](content/begriffe/begriffe_1.md){ .md-button }
 
 </div>
 
-<div style="margin-left: 15px" markdown>
+## Direktzugriff
 
-![](assets/logo.png)
+<div class="grid cards" markdown>
 
-Hier können weitere Inhalte rein.
+-   :material-code-braces: **Web**
 
-{{ link("externer Link", "https://google.com") }}
+    [Checklist](content/checklists/checklist_web.md) · [Begriffe](content/begriffe/begriffe_web.md)
 
-{{ youtube_video("https://www.youtube.com/embed/chPCpYNJe_Q?si=frU_Z_VwSGnPWEPF") }}
+-   :material-database: **Datenbanken**
 
-!!! tip "Schneller Navigieren"
+    [SQL-Checklist](content/checklists/checklist_db1.md) · [NoSQL-Checklist](content/checklists/checklist_db2.md)
 
-    ++p++ oder ++comma++ : Zur vorherigen Seite gehen (**P**revious)
+-   :material-docker: **Docker**
 
-    ++n++ oder ++period++ : Zur nächsten Seite gehen (**N**ext)
-    
+    [Checklist](content/checklists/checklist_docker.md) · [Begriffe](content/begriffe/begriffe_docker.md)
+
+-   :material-source-branch: **Git**
+
+    [Checklist](content/checklists/checklist_git.md) · [Begriffe](content/begriffe/begriffe_git.md)
+
+-   :material-broom: **Clean Code**
+
+    [Checklist](content/checklists/checklist_clean_code.md) · [Begriffe](content/begriffe/begriffe_clean_code.md)
+
+-   :material-chart-line: **Data Science**
+
+    [Checklist](content/checklists/checklist_data_science.md) · [Begriffe](content/begriffe/begriffe_data_science.md)
+
 </div>
-[Subscribe to our newsletter](#){ .md-button }
 
-[Subscribe to our newsletter](#){ .md-button .md-button--primary }
-</div>
+!!! tip "Schneller navigieren"
+
+    ++p++ oder ++comma++: zur vorherigen Seite
+
+    ++n++ oder ++period++: zur nächsten Seite

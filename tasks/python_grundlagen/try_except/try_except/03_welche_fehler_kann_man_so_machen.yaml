@@ -1,0 +1,57 @@
+title: "Welche Fehler kann man so machen"
+difficulty: 2
+question: |
+  Baue für die folgenden Fehler ein Beispiel, in dem sie geworfen werden.
+  Hier ist die [Liste aller in Python vorimplementierten Exceptions](https://docs.python.org/3/library/exceptions.html).
+
+  * IndexError
+  * OverflowError
+  * StopIteration
+  * ValueError
+  * ZeroDivisionsError
+  * KeyboardInterrupt
+solution: |
+  Baue für die folgenden Fehler ein Beispiel, in dem sie geworfen werden.
+  Hier ist die [Liste aller in Python vorimplementierten Exceptions](https://docs.python.org/3/library/exceptions.html).
+  
+  **IndexError**
+  
+  ```python
+  my_list = [1,2,3,4]
+  my_list[10]
+  ```
+  
+  **OverflowError**
+  
+  ```python
+  2.0 ** 10000 
+  ```
+  
+  **StopIteration**
+  
+  ```python
+  z = zip([1], [1])
+  next(z)
+  next(z)
+  ```
+  
+  **ValueError**
+  
+  ```python
+  int("Hallo")
+  ```
+  
+  **ZeroDivisionsError**
+  
+  ```python
+  10 / 0
+  ```
+  
+  **KeyboardInterrupt**
+  
+  Entsteht z. B. wenn ein laufendes Programm abgebrochen wird, dass auf eine Nutzereingabe wartet:
+  
+  ```python
+  while True:
+      print(input("Gib was ein: "))
+  ```

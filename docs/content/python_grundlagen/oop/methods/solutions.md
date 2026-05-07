@@ -10,7 +10,6 @@ class Car:
     def change_speed(self, change):
         self.speed += change
 
-
 a = Car(50)
 print(f"Marke: {a.marke}")
 

@@ -1,0 +1,6 @@
+title: "Verschiedene Operationen"
+difficulty: 1
+question: |
+  Berechne das Ergebnis von `2 + 3 * 5`.
+solution: |
+  `print(2 + 3 * 5)  # 17, da die Multiplikation zuerst ausgeführt wird`

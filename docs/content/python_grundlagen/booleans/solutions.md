@@ -12,12 +12,7 @@ if x <= 5 and y >= 10:
 
 ### Aufgabe: Was ist eigentlich noch wahr heut zu Tage?
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YCJ8sEm6JaU?si=eVkgPu459ywplJaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/YCJ8sEm6JaU?si=eVkgPu459ywplJaP") }}
 
 ```python
 a = [] # False
@@ -38,12 +33,7 @@ n = None # False
 
 ### Aufgabe: Bedingungen kürzen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R1BGjaviHbc?si=iSW6y1BEFb1UIs_V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/R1BGjaviHbc?si=iSW6y1BEFb1UIs_V") }}
 
 Kürze den folgenden Code in den if-Bedingungen.
 
@@ -82,12 +72,7 @@ def func(var):
 
 ### Aufgabe: Es steckt mehr dahinter
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8DB1M9Q-vOk?si=LIsZbCJMVJnRdaQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/8DB1M9Q-vOk?si=LIsZbCJMVJnRdaQC") }}
 
 ```python
 print(True + 3) # 4
@@ -162,13 +147,11 @@ Es soll eine Liste einzelner Wörter zurückgegeben werden.
 ```python
 my_text = "Python macht Spaß und wer das nicht glaubt der programmiert wohl Java oder C++"
 
-
 def star_text(text, m=4, symbol='*'):
     result = []
     for word in text.split():
         result.append(len(word) * symbol if len(word) < m else word)
     return result
-
 
 print(star_text(my_text))
 # ['Python', 'macht', 'Spaß', '***', '***', '***', 'nicht', 'glaubt', '***', 'programmiert', 'wohl', 'Java', 'oder', '***']

@@ -1,0 +1,14 @@
+title: "Benutzeranmeldungssystem"
+difficulty: 2
+question: |
+  ### Teilschritte:
+
+  a. Erstelle eine Klasse `AuthenticationStrategy` als abstrakte Klasse mit einer Methode `authenticate`, die die Benutzeranmeldung behandelt.
+
+  b. Implementiere konkrete Authentifizierungsstrategien, die von `AuthenticationStrategy` erben, z. B. `UsernamePasswordAuthentication` und `TwoFactorAuthentication`.
+
+  c. Entwickle eine Klasse `UserAuthentication`, die eine Instanz von `AuthenticationStrategy` als Attribut enthält.
+
+  d. Die Methode `authenticate_user` der Klasse `UserAuthentication` sollte die Authentifizierung unter Verwendung der übergebenen Authentifizierungsstrategie durchführen.
+
+  e. Zeige die Anwendung, indem du einen Benutzer authentifizierst und verschiedene Authentifizierungsstrategien ausprobierst.

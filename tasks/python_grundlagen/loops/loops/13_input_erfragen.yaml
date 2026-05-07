@@ -1,0 +1,13 @@
+title: "Input erfragen"
+difficulty: 2
+question: |
+  Schreibe ein Programm, dass den Nutzer immer wieder nach Zahlen fragt. Es soll nach jeder Eingabe 
+  die Summe aller bisher erfragen Zahlen zurückgeben.
+solution: |
+  ```python
+  summe = 0
+  while True:
+      next = input("Bitte gib eine Zahl ein: ")
+      summe += next
+      print(f"In der Summe bisher insgesamt: {summe}")
+  ```

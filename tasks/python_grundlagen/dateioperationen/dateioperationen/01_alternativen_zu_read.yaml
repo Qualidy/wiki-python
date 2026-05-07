@@ -1,0 +1,12 @@
+title: "Alternativen zu read"
+difficulty: 1
+question: |
+  Ändere das obige Beispiel ab, sodass statt `read` die Methode `readline` und `readlines`
+  verwendet werden. Was liefern diese Methoden und wie kann man sie nutzen? Was passiert, wenn man `readline`
+  mehrfach hintereinander ausführt?
+
+  <details><summary>Lösung</summary>
+  <code>read</code>gibt einen String mit der gesamten Datei zurück.<br>
+  <code>readline</code> gibt die erste Zeile der Datei zurück. Beim zweiten Aufruf wird die zweite Zeile gelesen usw.
+  Wenn es keine Zeile mehr zu lesen gibt, werden leere Zeilen zurückgegeben.<br>
+  <code>readlines</code> gibt eine Liste mit den Zeilen der Datei zurück.</details>

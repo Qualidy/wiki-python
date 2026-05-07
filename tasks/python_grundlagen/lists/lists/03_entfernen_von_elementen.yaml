@@ -1,0 +1,8 @@
+title: "Entfernen von Elementen"
+difficulty: 1
+question: |
+  Entferne die Zahl 3 aus der Liste `zahlen`.
+solution: |
+  ```python
+  zahlen.remove(3)
+  ```

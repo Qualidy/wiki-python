@@ -1,0 +1,20 @@
+title: "HTML-Tags entfernen"
+difficulty: 3
+question: |
+  Entferne aus dem folgenden Text die HTML-Tags:
+
+  ```python
+  html_text = "<p>Dies ist ein <strong>Beispiel</strong> HTML-Text.</p>"
+  ```
+solution: |
+  Entferne aus dem folgenden Text die HTML-Tags:
+  
+  ```python
+  import re
+  html_text = "<p>Dies ist ein <strong>Beispiel</strong> HTML-Text.</p>"
+  
+  html_pattern = re.compile(r'<[^>]+>')
+  
+  clean_text = re.sub(html_pattern, '', html_text)
+  print(clean_text)
+  ```

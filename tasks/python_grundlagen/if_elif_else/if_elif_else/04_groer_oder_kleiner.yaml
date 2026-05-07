@@ -1,0 +1,4 @@
+title: "Größer oder kleiner"
+difficulty: 1
+question: |
+  Überprüfe, ob eine Variable `a` größer, kleiner oder gleich einer anderen Variable `b` ist.

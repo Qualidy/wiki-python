@@ -1,0 +1,4 @@
+title: "Umsetzung des \"Zen of Python\""
+difficulty: 1
+question: |
+  Wähle einen Grundsatz aus dem "Zen of Python" und integriere ihn in das obige Python-Skript. Erläutere im Code-Kommentar, wie diese Umsetzung sich auf den Code auswirkt.

@@ -1,0 +1,16 @@
+title: "Benutzerdefinierte Ausnahme"
+difficulty: 2
+question: |
+  Erstelle eine benutzerdefinierte Ausnahme mit dem Namen `NegativeZahlFehler`.
+  Schreibe eine Funktion, die eine Liste von Zahlen durchläuft und wenn eine Zahl negativ ist,
+  einen `NegativeZahlFehler` wirft.
+solution: |
+  ```python
+  class NegativeNumberError(Exception):
+      pass
+  
+  for number in [1, 2, 0, -2, 3]:
+      if number < 0:
+          raise NegativeNumberError(f"Zahl {number} ist negativ")
+      print(f"Zahl {number}")
+  ```

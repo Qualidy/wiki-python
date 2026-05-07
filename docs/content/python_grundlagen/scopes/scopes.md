@@ -15,10 +15,8 @@ zugänglich. Bisher haben wir alle Variablen global definiert, da wir Funktionen
 ```python
 globale_variable = "Ich bin global!"
 
-
 def meine_funktion():
     print(globale_variable)  # Zugriff auf die globale Variable ist möglich
-
 
 meine_funktion()  # Gibt "Ich bin global!" aus
 print(globale_variable)  # Gibt ebenfalls "Ich bin global!" aus
@@ -41,7 +39,6 @@ def eine_andere_funktion():
     lokale_variable = "Ich bin lokal!"
     print(lokale_variable)  # Gültig innerhalb dieser Funktion
 
-
 eine_andere_funktion()  # Gibt "Ich bin lokal!" aus
 # print(lokale_variable)  # Fehler: lokale_variable ist außerhalb ihrer Funktion nicht definiert
 ```
@@ -58,11 +55,9 @@ Funktion "verdeckt" oder "überschattet":
 ```python
 variable = "Ich bin global!"
 
-
 def schatten_funktion():
     variable = "Ich bin lokal!"
     print(variable)  # Gibt die lokale Variable aus
-
 
 schatten_funktion()  # Gibt "Ich bin lokal!" aus
 print(variable)  # Gibt die globale Variable aus, also "Ich bin global!"
@@ -87,30 +82,12 @@ Programm gespeichert und zugänglich gemacht werden. Es hilft auch dabei, Fehler
 
 ## Übungsaufgaben zum Thema Scopes in Python
 [60min]
-### 1. **Globale Variable**: 🌶️️
-Definiere eine globale Variable und gib sie innerhalb einer Funktion aus.
-### 2. **Lokale Variable**: 🌶️️
-Definiere eine lokale Variable innerhalb einer Funktion und gib sie innerhalb dieser Funktion
-   aus.
-### 3. **Globale und lokale Variable mit demselben Namen**: 🌶️️
-Definiere eine globale und eine lokale Variable mit demselben
-   Namen und gib beide innerhalb der Funktion aus.
-### 4. **Änderung einer globalen Variable**: 🌶️️
-Versuche, eine globale Variable innerhalb einer
-   Funktion zu ändern, ohne das `global`-Keyword zu verwenden.
-### 5. **Verwenden des `global`-Keywords**: 🌶️️
-Ändere eine globale Variable innerhalb einer Funktion mit Hilfe des `global`
-   -Keywords.
-### 6. **Nested Functions Scope**: 🌶️️
-Definiere eine verschachtelte Funktion und greife auf eine Variable aus der umgebenden
-   Funktion zu.
-### 7. **Lokale Variable in einer Schleife**: 🌶️️
-Definiere eine lokale Variable innerhalb einer for-Schleife in einer Funktion
-   und gib sie aus.
-### 8. **Funktionsargument Scope**: 🌶️️
-Übergebe eine Variable als Argument an eine Funktion und ändere sie innerhalb der
-   Funktion.
-### 9. **Rückgabewerte und Scope**: 🌶️️
-Gib einen Wert aus einer Funktion zurück und weise ihn einer globalen Variable zu.
-
-[Lösungen](solutions.md#scopes)
+{{ task(file="tasks/python_grundlagen/scopes/scopes/01_globale_variable.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/02_lokale_variable.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/03_globale_und_lokale_variable_mit_demselben_namen.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/04_anderung_einer_globalen_variable.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/05_verwenden_des_global_keywords.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/06_nested_functions_scope.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/07_lokale_variable_in_einer_schleife.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/08_funktionsargument_scope.yaml") }}
+{{ task(file="tasks/python_grundlagen/scopes/scopes/09_ruckgabewerte_und_scope.yaml") }}

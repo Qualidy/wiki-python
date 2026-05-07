@@ -1,0 +1,38 @@
+title: "Wie viele Tests"
+question: |
+  Wie viele Tests sind im folgenden Programmcode notwendig,
+  um alle Fälle zu testen? Schreibe die dazugehörigen Tests.
+
+  ```python
+  def get_price(age, is_weekend):
+      if is_weekend:
+          if age < 12:
+              return 0
+          else:
+              return 5
+      else:
+          if age < 12:
+              return 2
+          else:
+              return 7
+  ```
+
+  <details>
+  <summary>Lösung</summary>
+
+  <pre><code>import unittest
+
+  class PriceTest(unittest.TestCase):
+      def test_get_price_0(self):
+          self.assertEqual(get_price(11, True), 0)
+
+      def test_get_price_1(self):
+          self.assertEqual(get_price(12, True), 5)
+
+      def test_get_price_2(self):
+          self.assertEqual(get_price(11, False), 2)
+
+      def test_get_price_3(self):
+          self.assertEqual(get_price(12, False), 7)
+  </code></pre>
+  </details>

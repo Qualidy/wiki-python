@@ -1,0 +1,4 @@
+title: "Logik mit statischer Methode"
+difficulty: 2
+question: |
+  Erstelle eine Klasse `Calculator`, die eine statische Methode `is_prime` enthält. Die Methode soll überprüfen, ob eine übergebene Zahl eine Primzahl ist, und `True` oder `False` zurückgeben. Demonstriere den Einsatz dieser statischen Methode, indem du einige Zahlen auf ihre Primzahl-Eigenschaft prüfst.

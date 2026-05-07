@@ -1,0 +1,5 @@
+title: "Einfache Rechnung"
+difficulty: 2
+question: |
+  Schreibe ein Programm, das eine einfache mathematische Operation (Addition, Subtraktion, 
+  Multiplikation, Division) basierend auf Benutzereingaben ausführt.

@@ -1,0 +1,14 @@
+title: "Summe von 1 bis 100"
+difficulty: 2
+question: |
+  Nutze eine while-Schleife, die die Zahlen 1, 2, 3, ... usw. so lange addiert, bis die Summe größer als 100 ist.
+  Bis zu welcher Zahl muss addiert werden? Wie groß ist die erste Summe über 100?
+solution: |
+  ```python
+  summe = 0
+  i = 1
+  while i <= 100:
+      summe += i
+      i += 1
+  print(f"Die Summe von 1 bis {i} ist {summe}")
+  ```

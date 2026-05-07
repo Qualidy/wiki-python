@@ -57,7 +57,6 @@ def addiere_positive_liste(liste):
             
     return summe
 
-
 print(addiere_positive_liste([1, -2, 3, -4, 5])) # 9
 ```
 
@@ -71,7 +70,6 @@ def addiere_positive_liste(liste):
             summe += i
             
     return summe
-
 
 print(addiere_positive_liste([1, -2, 3, -4, -5.1, "keine Zahl"])) # -11.1
 ```
@@ -128,7 +126,6 @@ multiplikationstabelle(3)
 def ist_palindrom(my_str):
     return my_str == my_str[::-1]
 
-
 print(ist_palindrom("radar"))
 ```
 
@@ -150,7 +147,6 @@ def biggest_and_smallest_word(text):
 
     return shortest, longest
 ```
-
 
 # Funktionsstack
 
@@ -184,7 +180,6 @@ die Zeile:
 ```python
 number_of_entries = len(smss_per_month)
 ```
-
 
 ## Funktionen als First Class Citizens
 
@@ -230,7 +225,6 @@ def new_bigger_dict(my_dict):
     new_dict = my_dict.copy()
     new_dict["new"] = "entry"
     return new_dict
-
 
 dic = {'old': 'somethin'}
 

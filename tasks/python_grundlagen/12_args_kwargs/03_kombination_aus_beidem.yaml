@@ -1,0 +1,4 @@
+title: "Kombination aus beidem"
+difficulty: 2
+question: |
+  Erstelle eine Funktion, die sowohl `*args` als auch `**kwargs` verwendet. Die Funktion sollte die Summe der Zahlen aus `*args` berechnen und zusätzlich alle Informationen aus `**kwargs` ausdrucken.

@@ -1,0 +1,10 @@
+title: "Check Gerade Zahl"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `ist_gerade()`, die prüft, ob eine übergebene Zahl gerade ist.
+solution: |
+  ```python
+  def ist_gerade(zahl):
+    return zahl % 2 == 0
+  print(ist_gerade(4))
+  ```

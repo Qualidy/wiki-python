@@ -1,0 +1,4 @@
+title: "Bibliotheksverwaltungssystem"
+difficulty: 3
+question: |
+  Entwickle ein einfaches System zur Verwaltung von Büchern in einer Bibliothek. Erstelle Klassen für Bücher und Bibliotheken. Die Bücherklasse sollte Attribute wie Titel, Autor und Verfügbarkeit haben. Die Bibliotheksklasse sollte Methoden zum Ausleihen und Zurückgeben von Büchern enthalten.

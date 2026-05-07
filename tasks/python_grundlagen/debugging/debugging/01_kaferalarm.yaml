@@ -1,0 +1,8 @@
+title: "Käferalarm🐞"
+question: |
+  Schau dir deises [🎦Video](https://youtube.com/shorts/P9ZkTIgsByk?si=FtUJerw9KcRIy9Tx) an und erkläre,
+  wie der Begriff "Bug" für Fehler in der Informatik entstanden ist. Warum heißt das Entfernen von Fehlern dann "Debugging"?
+solution: |
+  Der Begriff "Bug" wurde durch eine echte Motte bekannt, die 1947 in einem Relais des Mark-II-Computers gefunden wurde. Das Team klebte sie ins Logbuch und notierte sinngem??, dass der erste tats?chliche Fehler entfernt wurde.
+  
+  "Debugging" bedeutet deshalb, Fehler in einem Programm oder System zu finden, zu verstehen und zu entfernen.

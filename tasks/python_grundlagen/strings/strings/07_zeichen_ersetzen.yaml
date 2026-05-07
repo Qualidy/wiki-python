@@ -1,0 +1,10 @@
+title: "Zeichen ersetzen"
+difficulty: 1
+question: |
+  Erstelle einen String und ersetze ein bestimmtes Zeichen darin durch ein anderes.
+solution: |
+  ```python
+  text = "Python ist großartig."
+  neuer_text = text.replace("groß", "super")
+  print(neuer_text)
+  ```

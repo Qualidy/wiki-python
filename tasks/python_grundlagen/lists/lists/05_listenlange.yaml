@@ -1,0 +1,8 @@
+title: "Listenlänge"
+difficulty: 1
+question: |
+  Finde heraus, wie lang die Liste `zahlen` ist.
+solution: |
+  ```python
+  laenge = len(zahlen)
+  ```

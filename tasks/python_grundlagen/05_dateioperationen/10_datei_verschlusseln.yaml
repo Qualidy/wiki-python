@@ -1,0 +1,4 @@
+title: "Datei verschlüsseln"
+difficulty: 4
+question: |
+  Implementiere eine einfache Verschlüsselungsfunktion, die den Inhalt einer Datei verschlüsselt und in eine neue Datei schreibt. Verwende dazu eine geeignete Verschlüsselungsmethode deiner Wahl.

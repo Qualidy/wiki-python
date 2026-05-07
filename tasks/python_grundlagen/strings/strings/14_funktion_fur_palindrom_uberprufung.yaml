@@ -1,0 +1,14 @@
+title: "Funktion für Palindrom-Überprüfung"
+difficulty: 2
+question: |
+  Schreibe Code, die überprüft, ob ein String ein Palindrom ist (d.h. rückwärts gelesen dasselbe wie
+  vorwärts).
+solution: |
+  ```python
+  text = 'Anna'
+  text = text.lower()  # Um Groß-/Kleinschreibung zu ignorieren
+  if text == text[::-1]:
+     print(f"{text} ist ein Palindrom")
+  else:
+     print(f"{text} ist KEIN Palindrom")
+  ```

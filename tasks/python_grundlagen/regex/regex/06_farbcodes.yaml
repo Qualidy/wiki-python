@@ -1,0 +1,20 @@
+title: "Farbcodes"
+difficulty: 2
+question: |
+  Filtere alle Hexadezimalen Farbcodes mit 6 Ziffern heraus:
+
+  ```python
+  text = "Farbcodes: #FF0000, #00FF00, #0000FF."
+  ```
+solution: |
+  Filtere alle Hexadezimalen Farbcodes mit 6 Ziffern heraus:
+  
+  ```python
+  import re
+  text = "Farbcodes: #FF0000, #00FF00, #0000FF."
+  
+  color_pattern = r'#[0-9A-Fa-f]{6}'
+  
+  matches = re.findall(color_pattern, text)
+  print(matches)
+  ```

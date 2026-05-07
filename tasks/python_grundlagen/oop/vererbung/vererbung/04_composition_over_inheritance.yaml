@@ -1,0 +1,115 @@
+title: "Composition over Inheritance"
+difficulty: 2
+question: |
+  Betrachte das folgende Beispiel vom gefärbten Formen:
+
+  ```python
+  class Shape:
+      pass
+
+  class RedCircle(Shape):
+      pass
+
+  class RedSquare(Shape):
+      pass
+
+  class BlueCircle(Shape):
+      pass
+
+  class BlueSquare(Shape):
+      pass
+  ```
+
+  ![img_1.png](img_1.png)
+
+  Angenommen eine neue Farbe wird hinzugefügt, welche neuen Klassen würde das erzeugen?
+  Angenommen es wird dann noch eine neue Farbe hinzugefügt, wie viele neue Klassen müssen dann erzeugt werden?
+
+  Betrachte nun diesen Code:
+
+  ```python
+  class Shape:
+      def __init__(self, color):
+          self.color = color
+          
+  class Circle(Shape):
+      pass
+
+  class Square(Shape):
+      pass
+      
+  class Color:
+      pass
+
+  class Red(Color):
+      pass
+
+  class Blue(Color):
+      pass
+  ```
+
+  ![img_2.png](img_2.png)
+
+  Wir stellen nun dieselben Fragen erneut:
+  Angenommen eine neue Farbe wird hinzugefügt, welche neuen Klassen würde das erzeugen?
+  Angenommen es wird dann noch eine neue Farbe hinzugefügt, wie viele neue Klassen müssen dann erzeugt werden?
+
+  <details>
+  <summary>Lösung</summary>
+  Im ersten Fall müssen bei einer neuen Farbe zwei neue Klassen erstellt werden.
+  z.B. <code>GreenCircle</code> und <code>GreenSquare</code>. Danach muss man, um eine neue
+  Shape hinzuzufügen schon drei Klassen hinzufügen, z.B. <code>RedTriangle</code>, <code>BlueTriangle</code>
+  und <code>GreenTriangle</code>.
+
+  Wir erkennen, dass die Anzahl an neuen Klassen immer größer und größer wird.
+  Insbesondere erzeugen wir auch viele Klassen, von denen wir gar nicht wissen, ob wir sie je wirklich brauchen.
+
+  Besser ist es den Code, wie im zweiten Beispiel zu strukturieren. Hier wird bei einem
+  neuen Shape bzw. neuen Farbe jeweils nur eine Klasse erzeugt, z.B. einfach <code>Triangle</code> und
+  <code>Green</code>.
+
+  Welche Farbe ein Shape hat, wird dann einfach über das Attribut `self.color` gesteuert.
+
+  Man sollte also immer überlegen, ob Vererbung tatsächlich notwendig ist.
+  </details>
+
+  Untersuche den folgenden Code. Teile die Klassen analog zum letzten Beispiel auf:
+
+  ```python
+  class Sportler:
+      pass
+
+  class DeutscherHandballer(Sportler):
+      pass
+
+  class DeutscherFussballer(Sportler):
+      pass
+
+  class EnglischerHandballer(Sportler):
+      pass
+
+  class EnglischerHandballer(Sportler):
+      pass
+  ```
+
+  <details>
+  <summary>Lösung</summary>
+  <pre><code>class Sportler:
+      def __init__(self, nation):
+          self.nation = nation
+
+  class Handballer(Sportler):
+      pass
+
+  class Fussballer(Sportler):
+      pass
+
+  class Nation:
+      pass
+
+  class Deutsch(Nation):
+      pass
+
+  class Englisch(Nation):
+      pass
+  </code></pre></details>

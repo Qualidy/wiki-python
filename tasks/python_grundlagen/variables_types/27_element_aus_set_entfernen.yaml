@@ -1,0 +1,8 @@
+title: Element aus Set entfernen
+difficulty: 1
+question: |
+  Entferne ein beliebiges Element aus dem Set von Aufgabe 1.
+solution: |
+  ```python
+  s.remove(4)  # Entfernt die Zahl 4 aus dem Set
+  ```

@@ -1,0 +1,16 @@
+title: "Länge eines Strings"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `laenge_string()`, die die Länge eines übergebenen Strings
+  zurückgibt. Nutze dabei keine bestehende Funktion in Python,
+  sondern implementiere dies über eine Schleife.
+solution: |
+  ```python
+  def laenge_string(my_str):
+      length = 0
+      for _ in my_str:
+          length += 1
+      return length
+  
+  print(laenge_string("Python"))
+  ```

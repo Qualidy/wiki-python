@@ -15,14 +15,12 @@ def multiply_up(box_or_value):
 
     return product
 
-
 all_multiplied_up = multiply_up([[1, 2, 3], [4, 5, [6, 7, 8]]])
 print(all_multiplied_up)
 ```
 ### Aufgabe: umständlich?
 Sie summiert die Elemente einer Liste/Tupel... auf. Also wäre auch hier `sum_up`
 oder `sigma` ein schöner Name😉
-
 
 ### Aufgabe: Fakultät berechnen
    
@@ -32,7 +30,6 @@ def fak(n):
         return 1
     return n * fak(n-1)
 ```
-
 
 ### Aufgabe: Binäre Suche
 
@@ -50,7 +47,6 @@ def binary_search(my_list, element):
         return binary_search(my_list[:mid_index], element)
     else:
         return True
-
 
 print(binary_search([1, 2, 3, 5, 6, 9, 10], 9))  # True
 print(binary_search([1, 2, 3, 5, 6, 9, 10], 8))  # False

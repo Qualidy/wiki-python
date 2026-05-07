@@ -1,0 +1,12 @@
+title: "Auto und Elektroauto"
+difficulty: 2
+question: |
+  Erstelle die Klassen `Auto` und `Elektroauto` mit entsprechenden Attributen. Die `Elektroauto`-Klasse erbt von der `Auto`-Klasse.
+
+  - **Methodenüberschreibung:** Überschreibe die `starten`-Methode in der `Elektroauto`-Klasse, um den Elektromotor zu aktivieren.
+
+  -  **Instanzen erstellen und Methoden aufrufen:** Erzeuge Instanzen beider Klassen und rufe ihre Methoden auf.
+
+  - **Polymorphismus:** Erkläre, wie Polymorphismus durch Vererbung in diesem Beispiel umgesetzt wird.
+
+  - **Weitere Attribute:** Füge den Klassen `Auto` und

@@ -1,0 +1,14 @@
+title: "Anhängen"
+difficulty: 1
+question: |
+  Was passiert, wenn du den Code mehrfach ausführst?
+  Wie muss das obige Beispiel geändert werden, damit bei jeder erneuten Ausführung ein neuer Absatz mit "Hallo"
+  hinzugefügt wird?
+
+  <details><summary>Lösung</summary>
+  <pre><code>with open("save_file", "a") as datei:
+      datei.write("Hallo\n")
+  </code></pre>
+  </details>
+tip: |
+  Schaue in die Modus-Tabelle.

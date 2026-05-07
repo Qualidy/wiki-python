@@ -1,0 +1,30 @@
+title: "Inhalte schreiben"
+difficulty: 1
+question: |
+  Schreibe ein Programm, dass den Nutzer um eine Eingabe bittet.
+  Diese Eingabe wird ein eine Datei gespeichert.
+  Das Programm fragt den Nutzer so lange nach einer Eingabe,
+  bis der Nutzer `quit` eingibt. Dann schließt das Programm.
+
+  Bonus: Öffne die Datei am Ende der Programmausführung. 🌶🌶
+
+  <details>
+  <summary>Lösung</summary>
+
+  <pre><code>
+  from os import system
+
+  path = "meintext.txt"
+  with open(path, "wt") as file:
+      while True:
+      user_input = input()
+
+      if user_input == "quit":
+          break
+      
+      file.write(user_input + "\n")
+
+  system("open -a TextEdit " + path) # MacOS
+  system("notepad.exe " + path) # Windows
+  </code></pre>
+  </details>

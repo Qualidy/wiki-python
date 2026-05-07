@@ -16,18 +16,12 @@ verwendet, wenn die Anzahl der Schleifendurchläufe im Voraus nicht bekannt ist.
 
 # Einführung in `for`-Schleifen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IZmCkNQb5v8?si=I4rS9cz-B1xrp0_6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/IZmCkNQb5v8?si=I4rS9cz-B1xrp0_6") }}
 
 Hier ist ein einfaches Beispiel für eine `for`-Schleife in Python (drücke auf "Next >" um den Code schrittweise 
 durchzuführen):
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=fruechte%20%3D%20%5B%22Apfel%22,%20%22Banane%22,%20%22Kirsche%22%5D%0Afor%20frucht%20in%20fruechte%3A%0A%20%20%20%20print%28frucht%29%0Aprint%28%22fertig%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 fruechte = ["Apfel", "Banane", "Kirsche"]
@@ -35,7 +29,6 @@ for frucht in fruechte:
     print(frucht)
 print("fertig")
 ```
-
 
 Diese Schleife iteriert über die Liste `fruechte` und gibt jede Frucht nacheinander aus. Für jeden Durchlauf der
 Schleife nimmt `frucht` ein anderes Element der Liste an und steht im Schleifenkörper zur Verfügung.
@@ -56,49 +49,19 @@ for element in sequenz:
 
 [//]: # ([35min])
 
-### 1. Zählen 🌶️
-Schreibe eine `for`-Schleife, die die Zahlen von 1 bis 10 ausgibt.
-### 2. Städtetrip 🌶️
-Erstelle eine Liste von Städten und verwenden Sie eine `for`-Schleife, um jede Stadt auszugeben.
-### 3. Summierung 🌶️🌶️
-Schreibe eine `for`-Schleife, die die Summe aller Zahlen von 1 bis 10 berechnet.
-### 4. Längster Name 🌶️🌶️🌶️
-Erstelle eine Liste von Namen und verwenden Sie eine `for`-Schleife, um den längsten Namen in der Liste zu finden.
-### 5. Quadratzahlen 🌶️
-Schreibe eine `for`-Schleife, die die Quadratzahlen von 1 bis 10 ausgibt.
-### 6. Verdreht 🌶️
-Schreibe eine `for`-Schleife, die die Buchstaben eines Wortes in umgekehrter Reihenfolge ausgibt.
-### 7. Fakultät 🌶️🌶️
-Schreibe eine `for`-Schleife, die die Fakultät (n!) einer gegebenen Zahl `n` berechnet. Zur Errinnerung:
-
-```commandline
-n! := n ⋅ (n-1) ⋅ (n-2) ⋅ ... ⋅ 2 ⋅ 1
-6! = 6⋅5⋅4⋅3⋅2⋅1 = 720 
-1! = 1
-0! = 1
-```
-
-### 8. Thermometer für Amerikaner 🌶️🌶️🌶️
-Erstelle eine Liste von Temperaturen in Celsius und verwenden Sie eine `for`-Schleife, um jede nacheinander in Fahrenheit
-umzuwandeln und auszugeben. Recherchiere die entsprechende Formel.
-### 9. Vokale 🌶️🌶️🌶️
-Schreibe eine `for`-Schleife, die die Anzahl der Vokale in einem gegebenen Wort zählt.
-### 10. Häufigkeit 🌶️🌶️🌶️
-Schreibe eine `for`-Schleife, die einen Text durchläuft und zählt, wie oft ein bestimmtes Wort in diesem Text
-vorkommt.
-
-[Lösungen](solutions.md#for-schleifen)
-
-
+{{ task(file="tasks/python_grundlagen/loops/loops/01_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/02_stadtetrip.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/03_summierung.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/04_langster_name.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/05_quadratzahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/06_verdreht.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/07_fakultat.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/08_thermometer_fur_amerikaner.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/09_vokale.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/10_haufigkeit.yaml") }}
 # Iteration über feste Zahlenbereiche mit `range`
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IQhjfZiCOro?si=47NPqX5Fn0SOri8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/IQhjfZiCOro?si=47NPqX5Fn0SOri8G") }}
 
 Möchte man über einen bestimmten Zahlenraum iterieren, so verwendet man in Python die `range`-Funktion. Es gibt drei 
 Möglichkeiten `range` aufzurufen:
@@ -109,21 +72,7 @@ Möglichkeiten `range` aufzurufen:
 | 2                 | `range(start, end)`            | Die Range enthält die Integer von `start` bis _ausschließlich_ `end`.                                                    | `range(12, 15)`   | `[12,13,14]`        |
 | 3                 | `range(start, end, step_size)` | Die Range enthält die Integer von `start` bis _ausschließlich_ `end`. und geht dabei in Schritten der Größe `step_size`. | `range(3, 10, 2)` | `[3,5,7,9]`         |
 
-### Aufgabe: Ranges vorhersagen🌶
-
-Welche listen werden in jeder Zeile jeweils erzeugt?
-
-```python
-list(range(10)) 
-list(range(1, 11))
-list(range(0, 30, 5))
-list(range(0, 10, 3))
-list(range(0, -10, -1))
-list(range(0)) 
-list(range(1, 0))
-```
-[Lösung](solutions.md#aufgabe-ranges-vorhersagen)
-
+{{ task(file="tasks/python_grundlagen/loops/loops/11_ranges_vorhersagen.yaml") }}
 ## Nutzen von Ranges
 
 Ranges wirken auf den ersten Blick sehr ähnlich zu Listen. Schaut man sie sich genauer an, stellt man sogar fest,
@@ -136,22 +85,14 @@ Wir können Ranges so einfach für Schleifeniterationen über einen Integer-Zahl
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=for%20i%20in%20range%285%29%3A%0A%20%20%20%20print%28i%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 for i in range(5):
     print(i)
 ```
 
-
 # Einführung in While-Schleifen in Python
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nqMMCr3juCE?si=RpI4n9QONgTR_Qz7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/nqMMCr3juCE?si=RpI4n9QONgTR_Qz7") }}
 
 [//]: # ([120min])
 While-Schleifen ermöglichen es einen Block von Anweisungen
@@ -164,7 +105,6 @@ Hier ist ein einfaches Beispiel für eine `while`-Schleife in Python:
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=zaehler%20%3D%200%0Awhile%20zaehler%20%3C%205%3A%0A%20%20%20%20print%28%22Schleife%20Nr.%22,%20zaehler%29%0A%20%20%20%20zaehler%20%2B%3D%201%0Aprint%28%22fertig%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 zaehler = 0
 while zaehler < 5:
@@ -173,12 +113,10 @@ while zaehler < 5:
 print("fertig")
 ```
 
-
 Hier sehen wir noch ein kompliziertes Beispiel, bei dem eine Zahl so lange von einer anderen Subtrahiert wird,
 bis eine Zahl negativ wird. Welcher Rechenoperation wird mit diesem Code umgesetzt?
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=zaehler%20%3D%2018%0Aoriginal_zaehler%20%3D%20zaehler%0Anenner%20%3D%205%0Aanzahl%20%3D%200%0Awhile%20zaehler%20-%20nenner%20%3E%200%3A%0A%20%20%20%20zaehler%20%3D%20zaehler%20-%20nenner%0A%20%20%20%20anzahl%20%3D%20anzahl%20%2B%201%0Aprint%28f%22%7Bnenner%7D%20passt%20%7Banzahl%7D%20mal%20in%20den%20%7Boriginal_zaehler%7D%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 zaehler = 18
@@ -191,12 +129,10 @@ while zaehler - nenner > 0:
 print(f"{nenner} passt {anzahl} mal in den {original_zaehler}")
 ```
 
-
 Natürlich können wir auch sehr einfach **Endlosschleifen** erzeugen in dem wir die Bedingung einfach immer auf `True`
 lassen:
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=while%20True%3A%0A%20%20%20%20eingabe%20%3D%20input%28%22Bitte%20gib%20etwas%20ein%3A%22%29%0A%20%20%20%20print%28f%22Deine%20Eingabe%20ist%3A%20%7Beingabe%7D%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%2212%22,%22asdfadsf%22%5D&textReferences=false)
-
 
 ```python
 while True:
@@ -204,53 +140,26 @@ while True:
     print(f"Deine Eingabe ist: {eingabe}")
 ```
 
-
 Wie wir die Endlosschleife doch verlassen können, lernen wir dann gleich.
 
 ## Aufgaben
 
 [//]: # ([35min])
 
-### 1. Summe von 1 bis 100 🌶️🌶️
-Nutze eine while-Schleife, die die Zahlen 1, 2, 3, ... usw. so lange addiert, bis die Summe größer als 100 ist.
-Bis zu welcher Zahl muss addiert werden? Wie groß ist die erste Summe über 100?
-
-### 2. Input erfragen🌶🌶
-Schreibe ein Programm, dass den Nutzer immer wieder nach Zahlen fragt. Es soll nach jeder Eingabe 
-die Summe aller bisher erfragen Zahlen zurückgeben.
-
-### 3. Fakultät 🌶️🌶️
-Verwende eine While-Schleife, um das kleinste `n` zu finden, sodass `n! > 100_000` ist.
-
-### 4. Fast endlose Schleife 🌶️🌶️🌶️ 
-Erstelle eine Schleife, die so lange Zufallszahlen zwischen 1 und 10 generiert und ausgibt, bis die Zahl 5 erscheint.
-Nutze dazu `random.randint(a,b)` ([Doku](https://docs.python.org/3/library/random.html#random.randint))
-
-### 5. Fibonacci 🌶️🌶️🌶️
-Nutze eine While-Schleife, um die erste Zahl in der Fibonaccifolge zu finden, die größer als 100 ist.
-Die Fibonaccifolge beginnt mit den beiden Zahlen `1` und `1`. Die nächste Zahl der Folge ist die Summe
-der beiden vorherigen. Der Anfang der Fibonaccifolge sieht also wie folgt aus:
-
-    1, 1, 2, 3, 5, 8, 13, 21, 34, ...
-
-[Lösungen](solutions.md#while-schleifen)
-
+{{ task(file="tasks/python_grundlagen/loops/loops/12_summe_von_1_bis_100.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/13_input_erfragen.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/14_fakultat_2.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/15_fast_endlose_schleife.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/16_fibonacci.yaml") }}
 # Vorzeitiges Abbrechen einer Schleife
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/suZrbAoSmr0?si=hloioyGs7h7phUNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/suZrbAoSmr0?si=hloioyGs7h7phUNw") }}
 
 [//]: # ([60min])
 In vielen Fällen sucht man einfach einen Wert in einem Bereich oder ein bestimmtes Element in einer List. Sobald man
 dieses gefunden hat, kann man die Schleife eigentlich abbrechen. Dafür nutzt man das Keyword `break`:
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=for%20i%20in%20range%280,%2010%29%3A%0A%20%20%20%20print%28i%29%0A%20%20%20%20if%20i%20%3D%3D%205%3A%0A%20%20%20%20%20%20%20%20break%0Aprint%28%22Ende%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 for i in range(0, 10):
@@ -260,7 +169,6 @@ for i in range(0, 10):
 print("Ende")
 ```
 
-
 Sobald die Bedingung `i == 5` wahr wird, sorgt `break` dafür, dass wir die Schleifen verlassen. Damit sparen wir uns 5
 weitere Durchläufe. Bei komplexen Problemstellungen kann man damit sehr viel Zeit sparen.
 
@@ -269,14 +177,12 @@ aktuellen Durchlauf. Dafür nutzt man das Keyword `continue`.
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=for%20i%20in%20range%280,%2010%29%3A%0A%20%20%20%20if%203%20%3C%3D%20i%20%3C%3D%205%3A%0A%20%20%20%20%20%20%20%20continue%0A%20%20%20%20print%28i%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 for i in range(0, 10):
     if 3 <= i <= 5:
         continue
     print(i)
 ```
-
 
 Wieso? Für jeder Zahl zwischen 0 und 10 wird überprüft, ob diese Zahl zwischen 3 und 5 liegt. Ist das der Fall, springt
 der Code direkt an den Schleifenanfang (wegen des `continue`), statt die Zeile 4 auszuführen.
@@ -304,13 +210,7 @@ den Befehl `break` verlassen und das Programm kann normal weiterlaufen.
 
 # Else-Zweig bei While- und For-Schleifen in Python
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_HQlJUAIuh8?si=N0iBJYNgI4g8MVpT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/_HQlJUAIuh8?si=N0iBJYNgI4g8MVpT") }}
 
 [//]: # ([30min])
 In Python können sowohl `while`- als auch `for`-Schleifen mit einem optionalen `else`-Zweig versehen werden. Dieser Teil
@@ -318,7 +218,6 @@ der Schleife wird ausgeführt, wenn die Schleife auf normale Weise beendet wird,
 unterbrochen wird**.
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=summe%20%3D%200%0Afor%20number%20in%20%5B%2243%22,%20%221234%22,%20%2233.4%22,%20%2210%22%5D%3A%0A%20%20%20%20if%20not%20number.isdigit%28%29%3A%0A%20%20%20%20%20%20%20%20print%28f%22%7Bnumber%7D%20is%20no%20integer!%20Abort%22%29%0A%20%20%20%20%20%20%20%20break%0A%20%20%20%20summe%20%2B%3D%20int%28number%29%0Aelse%3A%0A%20%20%20%20print%28f%22Die%20Summe%20aller%20Zahlen%20ist%20%7Bsumme%7D.%22%29%0Aprint%28%22Ende%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 summe = 0
@@ -332,21 +231,14 @@ else:
 print("Ende")
 ```
 
-
 # Verschachtelte Schleifen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eBdI_N7yK8A?si=rr9x0FQ3WyNqqyki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/eBdI_N7yK8A?si=rr9x0FQ3WyNqqyki") }}
 
 Es ist auch möglich Schleifen in Schleifen zu verwenden. Dies sieht man tatsächlich sehr häufig, da es oft
 verschachtelte Strukturen gibt, die durchlaufen werden sollen, z.B. Listen von Listen.
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=list_of_lists%20%3D%20%5B%5B1,2,3%5D,%20%5B40,50,60%5D,%20%5B700,800,900%5D%5D%0A%0Asumme%20%3D%200%0A%0Afor%20sub_list%20in%20list_of_lists%3A%0A%20%20%20%20for%20element%20in%20sub_list%3A%0A%20%20%20%20%20%20%20%20summe%20%2B%3D%20element%0A%20%20%20%20print%28f%22Zwischenergebnis%3A%20%7Bsumme%7D%22%29%20%20%20%20%20%20%20%20%0Aprint%28f%22Endergebnis%3A%20%7Bsumme%7D%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 list_of_lists = [[1,2,3], [40,50,60], [700,800,900]]
@@ -360,64 +252,13 @@ for sub_list in list_of_lists:
 print(f"Endergebnis: {summe}")
 ```
 
-
-
-### Aufgabe: Produktsummen🌶🌶
-
-Was ist das Ergebnis des folgenden Codes. Versuche in eigenen Worten zu beschreiben, was der Code tut.
-Tipp: Führe den Code mit dem Debugger aus.
-
-```python
-result = 1
-for sub_list in [[4,3,2], [5,6,7]]:
-    subsum = 0
-    for element in sub_list:
-        subsum += element
-    result *= subsum
-print(result)
-```
-
-### Aufgabe: Summenprodukt🌶🌶
-
-Schreibe Code, der die Liste `[[1,2,3], [-3, 4, 6, 9, 3], [0], [4,4], []]` durchläuft.
-Die Elemente jeder inneren Liste sollen multipliziert werden und diese Zwischenergebnisse dann addiert werden.
-
-[Lösung](solutions.md#verschachtelte-schleifen)
-
+{{ task(file="tasks/python_grundlagen/loops/loops/17_produktsummen.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/18_summenprodukt.yaml") }}
 # Anspruchsvolle Aufgaben
 
 [//]: # ([60min])
 
-### Aufgabe 1: Finden🌶
-
-Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt.
-Schreibe eine Antwort mit und eine ohne die Verwendung von `continue`.
-
-
-### Aufgabe 2: Benutzerdefinierte Passwortüberprüfung 🌶️🌶️🌶️
-
-Schreibe ein Programm, das den Benutzer zur Eingabe eines Passworts auffordert. Das Passwort muss bestimmte Kriterien
-erfüllen (z.B. mindestens 8 Zeichen lang, enthält sowohl Zahlen als auch Buchstaben). Das Programm soll dem Benutzer
-mitteilen, ob das eingegebene Passwort gültig ist oder nicht. Wenn das Passwort nicht gültig ist, soll das Programm
-spezifizieren, welche Kriterien nicht erfüllt wurden.
-
-
-### Aufgabe 3: Einfacher Zahlenraten 🌶️🌶️
-
-Erstelle ein Spiel, bei dem der Benutzer versuchen muss, eine zufällig generierte Zahl zwischen 1 und 100 zu erraten.
-Nach jeder Eingabe gibt das Programm an, ob die geratene Zahl zu hoch oder zu niedrig ist. Der Benutzer hat eine
-begrenzte Anzahl von Versuchen (z.B. 10). Nach dem Spiel gibt das Programm an, ob der Benutzer gewonnen hat und wie
-viele Versuche benötigt wurden.
-
-### Aufgabe 4: Bestellung in einem virtuellen Café 🌶️🌶️🌶️
-
-Simuliere ein einfaches Bestellsystem für ein Café. Das Programm listet verschiedene Getränke und Speisen mit ihren
-Preisen auf. Der Benutzer kann Artikel auswählen und die gewünschte Menge angeben. Das Programm führt eine laufende
-Summe der Bestellung. Nachdem der Benutzer seine Auswahl abgeschlossen hat, zeigt das Programm die Gesamtsumme der
-Bestellung an und fragt, ob der Benutzer bar oder mit Karte zahlen möchte.
-
-```python
-menu = {"Kaffee": 2.50, "Tee": 2.00, "Kuchen": 3.00}
-```
-
-[Lösungen](solutions.md#anspruchsvolle-aufgaben)
+{{ task(file="tasks/python_grundlagen/loops/loops/19_finden.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/20_benutzerdefinierte_passwortuberprufung.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/21_einfacher_zahlenraten.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/22_bestellung_in_einem_virtuellen_cafe.yaml") }}

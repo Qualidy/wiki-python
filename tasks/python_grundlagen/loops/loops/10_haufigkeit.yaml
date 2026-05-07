@@ -1,0 +1,16 @@
+title: "Häufigkeit"
+difficulty: 3
+question: |
+  Schreibe eine `for`-Schleife, die einen Text durchläuft und zählt, wie oft ein bestimmtes Wort in diesem Text
+  vorkommt.
+solution: |
+  ```python
+  text = "Python ist eine Programmiersprache, und Python ist großartig."
+  gesuchtes_wort = "Python"
+  anzahl = 0
+  woerter = text.split()
+  for wort in woerter:
+      if wort == gesuchtes_wort:
+          anzahl += 1
+  print(f"Anzahl von '{gesuchtes_wort}' im Text: {anzahl}")
+  ```

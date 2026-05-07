@@ -1,0 +1,8 @@
+title: "Zugreifen auf ein Listenelement"
+difficulty: 1
+question: |
+  Greife auf das dritte Element in der Liste `zahlen` zu.
+solution: |
+  ```python
+  drittes_element = zahlen[2]
+  ```

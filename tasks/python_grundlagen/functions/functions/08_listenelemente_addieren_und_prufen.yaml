@@ -1,0 +1,18 @@
+title: "Listenelemente addieren und prüfen"
+difficulty: 3
+question: |
+  Schreibe eine Funktion `addiere_negative_liste()`, die eine Liste von Zahlen 
+  nimmt und alle negativen Zahlen in der Liste addiert. Dabei soll zusätzlich 
+  geprüft werden, ob es sich bei dem Eintrag überhaupt um eine Zahl handelt.
+solution: |
+  ```python
+  def addiere_positive_liste(liste):
+      summe = 0
+      for i in liste:
+          if isinstance(i, (int, float)) and i < 0:
+              summe += i
+              
+      return summe
+  
+  print(addiere_positive_liste([1, -2, 3, -4, -5.1, "keine Zahl"])) # -11.1
+  ```

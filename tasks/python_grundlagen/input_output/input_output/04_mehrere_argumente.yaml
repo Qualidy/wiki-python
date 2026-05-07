@@ -1,0 +1,9 @@
+title: "Mehrere Argumente"
+difficulty: 3
+question: |
+  Rufe `print` mit _zwei_ Argumenten "Hallo" und "Welt" auf. Die Ausgabe soll `"Hallo Welt"` sein.
+  auszugeben.
+solution: |
+  ```python
+  print("Hallo", "Welt")
+  ```

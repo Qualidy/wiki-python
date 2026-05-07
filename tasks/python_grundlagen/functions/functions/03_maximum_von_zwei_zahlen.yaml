@@ -1,0 +1,13 @@
+title: "Maximum von zwei Zahlen"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `max_zwei()`, die zwei Zahlen als Argumente nimmt und die größere
+     Zahl zurückgibt.
+solution: |
+  ```python
+  def max_zwei(a, b):
+      if a > b:
+          return a
+      return b
+  print(max_zwei(3, 5))
+  ```

@@ -427,8 +427,6 @@ generierten sie keine Ausnahme, da ihre Ergebnisse ja korrekt sind:
         self.assertEqual(fib(5), 5)
 ```
 
-
-
 ### Methoden der Klasse TestCase
 
 Wir wollen nun näher auf die Klasse TestCase eingehen. Wir stellen dazu einige
@@ -584,23 +582,7 @@ Dieses Vorgehen ist eine Methode der Software-Entwicklung, die man als "Testgetr
 Aber wie so häufig in der Softwareentwicklungsbranche werden auch in diesem Fall die englischen
 Fachbegriffe benutzt, d.h. "test first development" oder noch geläufiger "test-driven development" (TDD).
 
-# Aufgabe
-[150min]
-
-1. Schreibe für das Codebeispiel `primzahlen.py` einen
-    1. Modultest
-    2. Unittest
-    3. Doctest
-2. Erstelle eine Klasse _Geo_ für geometrische Objekte (z.B. Rechteck, Quadrat, Kreis)
-mit Berechnungsfunktionen für Umfang und Fläche. 
-3. Teste die Korrektheit der _Geo_-Klasse mit Hilfe von doctests.
-4. Nutze TDD um ein Klasse zu entwickeln, die mathematische Grundoperationen
-ermöglicht, also z.B. `add()`, `sub()`, `mul()` und `div()`. Erstelle dazu das
-Klassengerüst mit "leeren" Funktionen und entwickle zuerst die (Unit-)Testmethoden nach
-dem Muster "Was muss das Ergebnis einer Addition, Subtraktion, etc sein".
-Ziel ist es eine möglichst hohe Testabdeckung zu erreichen!
-5. Welches Verhalten sollte bei der `div()` Methode umbedingt getestet werden? 
-
+{{ task(file="tasks/python_grundlagen/04_tdd/01_aufgabe.yaml") }}
 # Wichtige Begriffe zusammengefasst:
 
 - **Unittest**: Das `unittest`-Modul ist ein integriertes Testframework in Python, das Testfälle und Testsuiten bereitstellt. Es ermöglicht die Strukturierung von Tests und das Vergleichen von erwarteten und tatsächlichen Ergebnissen. Unittests können dazu verwendet werden, die Korrektheit von Funktionen, Klassen und Modulen sicherzustellen.
@@ -619,29 +601,6 @@ Schreibe erst einen Test, führe den Test aus (er sollte fehlschlagen), schreibe
 
 # Aufgaben
 
-## 1. Primzzahlenfunktion testen 🌶️️
-   - Modultest: Schreibe Tests für das Modul `primzahlen.py`, um sicherzustellen, dass die Primzahlberechnung korrekt funktioniert.
-   - Unittest: Erstelle Unittests für die Funktionen in `primzahlen.py` mit dem `unittest`-Framework.
-   - Doctest: Integriere Beispiele und Tests direkt in die Docstrings des Moduls.
-
-primzahlen.py: 
-
-```python
-def ist_primzahl(n):
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
-```
-
-## 2. Geo-Funktionssammlung: 🌶️️🌶️️
-   - Implementiere eine Funktionssammlung namens `Geo`, die geometrische Objekte berechnen kann (z.B., Rechteck, Quadrat, Kreis).
-   - Füge Berechnungsmethoden für Umfang und Fläche hinzu.
-   - Schreibe doctest-Tests, um die Korrektheit der Implementierung sicherzustellen.
-
-## 3. Mathe-Funktionssammlung (TDD): 🌶️️🌶️️
-   - Nutze TDD, um eine Funktionssammlung für mathematische Grundoperationen (`add()`, `sub()`, `mul()`, `div()`) zu entwickeln.
-   - Schreibe zuerst die Unit-Tests und dann die Implementierung.
-   - Achte auf eine hohe Testabdeckung.
-   - Beachte insbesondere die Testfälle für die `div()` Methode, um sicherzustellen, dass unerwartete Fehler oder Divisionen durch Null behandelt werden.
-   
+{{ task(file="tasks/python_grundlagen/04_tdd/02_primzzahlenfunktion_testen.yaml") }}
+{{ task(file="tasks/python_grundlagen/04_tdd/03_geo_funktionssammlung.yaml") }}
+{{ task(file="tasks/python_grundlagen/04_tdd/04_mathe_funktionssammlung_tdd.yaml") }}

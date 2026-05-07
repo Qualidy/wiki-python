@@ -7,12 +7,7 @@ die wir mit Ganzzahlen und Fließkommazahlen verwenden können.
 
 [//]: # ([30min])
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b62k5bR3fsY?si=zcEu6Ef2CEEP9jcS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/b62k5bR3fsY?si=zcEu6Ef2CEEP9jcS") }}
 
 **Addition (`+`)**: Addiert zwei Zahlen.
 ```python
@@ -58,12 +53,7 @@ potenz = 2 ** 3  # Ergibt 8
 
 [//]: # ([30min])
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZntIVAUqqII?si=Aw37qj3b9AnxH67D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/ZntIVAUqqII?si=Aw37qj3b9AnxH67D") }}
 
 Für komplexere mathematische Operationen wie Wurzeln oder trigonometrische Funktionen benötigst Du das `math`-Modul, 
 das viele nützliche Funktionen bietet. 
@@ -100,12 +90,7 @@ log_nat = math.log(8, 2)  # Berechnet den Logarithmus von 8 zur Basis 2
 
 [//]: # ([30min])
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dJh7L2rlYlE?si=jX4efDDlf8oEU1ST" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/dJh7L2rlYlE?si=jX4efDDlf8oEU1ST") }}
 
 In Python, wie in den meisten Programmiersprachen, ist die Reihenfolge der mathematischen Operationen wichtig und folgt 
 etablierten mathematischen Konventionen. Diese Reihenfolge bestimmt, in welcher Reihenfolge die Operationen in einem 
@@ -129,78 +114,31 @@ Mathematik kennen!
 
 Üben wir das Ganze:
 
-
 # Aufgaben
 [30min]
 
 Berechne und gib jeweils das Ergebnis aus:
 
-### 1. **Addition**🌶️️
-Addiere 5 und 3. 
-### 2. **Subtraktion**🌶️️
-Subtrahiere 2 von 10. 
-### 3. **Multiplikation**🌶️
-Multipliziere 4 mit 2. 
-### 4. **Division**🌶️
-Teile 16 durch 2. 
-### 5. **Ganzzahlige Division**🌶️
-Führe eine ganzzahlige Division von 17 durch 2 durch. 
-### 6. **Modulo**🌶️
-Finde den Rest der Division von 18 durch 10. 
-### 7. **Potenzierung**🌶️
-Erhebe 2 in die 3. Potenz. 
-### 8. **Quadratwurzel**🌶️🌶️
-Berechne die Quadratwurzel von 64. 
-### 9. **Exponentialfunktion**🌶️🌶️
-Berechne $e^3$ ($e$ ist die Basis des natürlichen Logarithmus). 
-### 10. **Natürlicher Logarithmus**🌶️🌶️
-Berechne den natürlichen Logarithmus von 8. 
-### 11. **Komplexe Rechnung**🌶️
-Berechne das Ergebnis von (3 + 4) * 5. 
-### 12. **Vergleich**: 🌶️
-Überprüfe, ob das Produkt von 2 und 3 gleich 6 ist. 
-### 13. **Runden**: 🌶️🌶️
-Runde die Zahl 2.7 auf die nächste ganze Zahl. 
-### 14. **Negative Zahlen**: 🌶️
-Berechne das Produkt von -3 und 3. 
-### 15. **Variable in Rechnung**: 🌶️
-Definiere eine Variable `x` mit dem Wert 5 und berechne `x * x`. 
-### 16. **Verschiedene Operationen**: 🌶️
-Berechne das Ergebnis von `2 + 3 * 5`.
-### 17. **Einsatz von Klammern**: 🌶️
-Ändere den Ausdruck `2 + 3 * 5` so ab, dass zuerst die Addition und dann die 
-Multiplikation ausgeführt wird.
-### 18. **Potenzierung und Division**: 🌶️
-Berechne das Ergebnis von `4 ** 2 / 8`.
-### 19. **Mehrere Operationen**: 🌶️
-Finde das Ergebnis von `3 + 4 * 2 - 1`.
-### 20. **Komplexer Ausdruck**: 🌶️
-Berechne den Wert von `(3 + 4) * (5 - 2) ** 2`.
-
-[Lösungen](solutions.md)
-
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/01_addition.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/02_subtraktion.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/03_multiplikation.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/04_division.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/05_ganzzahlige_division.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/06_modulo.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/07_potenzierung.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/08_quadratwurzel.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/09_exponentialfunktion.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/10_naturlicher_logarithmus.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/11_komplexe_rechnung.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/12_vergleich.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/13_runden.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/14_negative_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/15_variable_in_rechnung.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/16_verschiedene_operationen.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/17_einsatz_von_klammern.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/18_potenzierung_und_division.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/19_mehrere_operationen.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/20_komplexer_ausdruck.yaml") }}
 # Anspruchsvolle Aufgaben
-### **Zinsrechner**🌶️🌶️🌶️
-
-[40 min] 
-
-Aufgabenstellung:
-
-- Schreibe ein Python-Programm, das als einfacher Zinsrechner fungiert. 
-- Das Programm soll vom Benutzer das Anfangskapital (Hauptsumme), den Zinssatz (in Prozent) und die Anlagedauer in 
-Jahren abfragen. 
-- Berechne die Endsumme, die sich aus der Formel Endsumme = Anfangskapital * (1 + Zinssatz/100 * Jahre) ergibt. 
-- Gib das berechnete Ergebnis aus.
-
-### **Umrechner für Temperaturen**🌶️🌶️🌶️
-
-[40 min]
-
-Aufgabenstellung:
-
-- Erstelle ein Python-Programm zur Umrechnung von Temperaturen zwischen Celsius und Fahrenheit. 
-- Das Programm soll zuerst nach der Eingabetemperatur (als Zahl) fragen und dann, ob diese in Celsius oder Fahrenheit ist. 
-- Führe die entsprechende Umrechnung durch: Von Celsius nach Fahrenheit (`F = C * 9/5 + 32`) oder von Fahrenheit nach 
-- Celsius (`C = (F - 32) * 5/9`).
-- Gib das Ergebnis der Umrechnung aus.
-
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/21_zinsrechner.yaml") }}
+{{ task(file="tasks/python_grundlagen/math_operations/math_operations/22_umrechner_fur_temperaturen.yaml") }}

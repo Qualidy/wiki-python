@@ -1,0 +1,12 @@
+title: "Countdown"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `countdown()`, die eine Zahl nimmt und einen Countdown von dieser Zahl bis 0
+      ausgibt.
+solution: |
+  ```python
+  def countdown(zahl):
+     for i in range(zahl, -1, -1):
+         print(i)
+  countdown(5)
+  ```

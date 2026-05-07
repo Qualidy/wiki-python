@@ -1,0 +1,8 @@
+title: Vergleich von Floats
+difficulty: 1
+question: |
+  Vergleiche zwei Floats miteinander und gib das Ergebnis (True oder False) aus.
+solution: |
+  ```python
+  print(5.5 == 5.5)
+  ```

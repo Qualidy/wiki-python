@@ -1,0 +1,4 @@
+title: "Online-Shop mit Warenkorb"
+difficulty: 3
+question: |
+  Entwickle ein einfaches System für einen Online-Shop. Erstelle Klassen für Produkte und einen Warenkorb. Die Produkteklasse sollte Attribute wie Name, Preis und Lagerbestand haben. Die Warenkorbklasse sollte Methoden zum Hinzufügen von Produkten, Berechnen des Gesamtpreises und zum Abschließen des Kaufs haben.

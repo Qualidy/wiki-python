@@ -1,0 +1,12 @@
+title: "Rückgabewerte und Scope"
+difficulty: 1
+question: |
+  Gib einen Wert aus einer Funktion zurück und weise ihn einer globalen Variable zu.
+solution: |
+  ```python
+  def gib_zurueck():
+     return "Rückgabewert"
+  
+  global_var = gib_zurueck()
+  print(global_var)
+  ```

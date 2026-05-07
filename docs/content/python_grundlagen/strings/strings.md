@@ -1,11 +1,6 @@
 # Strings in Python
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EA_PBdovZBU?si=SCrNKqnhiAQVueYG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/EA_PBdovZBU?si=SCrNKqnhiAQVueYG") }}
 
 Um Zeichenketten in Python darzustellen, benötigt man sogenannte Strings. Strings werden in
 Python in einfachen oder doppelten Anführungszeichen eingeschlossen (`''` oder `""`). Mehrzeilige Strings können mit
@@ -31,12 +26,7 @@ f = '' # Leeres Wort
 ## Eigenschaften von Strings
 
 [//]: # ([60min])
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GPSkj72ziQI?si=B6ZZOH84q4qNLxcP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/GPSkj72ziQI?si=B6ZZOH84q4qNLxcP") }}
 
 **Sequenz von Zeichen:** Ein String ist eine geordnete Sequenz von Zeichen. Jedes Zeichen in einem String hat eine
 Position, die durch einen Index dargestellt wird.
@@ -151,47 +141,10 @@ wichtigen String Methoden gegeben. [Hier finden sie eine Auflistung aller String
 | `string.endswith(suffix)`   | Überprüft, ob der String mit einem bestimmten Suffix endet.                                                                    | `text = "Python"`<br>`ist_ende = text.endswith("on")`                              |
 | `string.count(substring)`   | Zählt die Anzahl der Vorkommnisse einer Teilzeichenkette im String.                                                            | `text = "Python ist toll, Python ist mächtig."`<br>`anzahl = text.count("Python")` |
 
-
-### Aufgabe: Benutzernamen🌶🌶
-
-[//]: # ([20min])
-
-Beschreiben Sie, was der folgende Code tut:
-
-```python
-benutzername = input("Bitte geben Sie Ihren Benutzernamen ein: ")
-
-if len(benutzername) > 10:
-    print("Der Benutzername ist zu lang.")
-elif len(benutzername) < 3:
-    print("Der Benutzername ist zu kurz.")
-else:
-    print(f"Willkommen, {benutzername}!")
-
-if benutzername.isupper():
-    print("Ihr Benutzername ist vollständig in Großbuchstaben geschrieben.")
-elif benutzername.islower():
-    print("Ihr Benutzername ist vollständig in Kleinbuchstaben geschrieben.")
-else:
-    print("Ihr Benutzername enthält sowohl Groß- als auch Kleinbuchstaben.")
-
-if "!" in benutzername:
-    print("Ihr Benutzername enthält ein Ausrufezeichen!")
-
-kleinbuchstaben_benutzername = benutzername.lower()
-print(f"Ihr Benutzername in Kleinbuchstaben: {kleinbuchstaben_benutzername}")
-```
-
-[Lösung](solutions.md#aufgabe-benutzernamen)
-
+{{ task(file="tasks/python_grundlagen/strings/strings/01_benutzernamen.yaml") }}
 ## f-Strings
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vQaCY_HT8mQ?si=4Nw7sjRehy9sd4PZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/vQaCY_HT8mQ?si=4Nw7sjRehy9sd4PZ") }}
 
 Um den Inhalt von Variablen einfach in Strings einzubetten, gibt es in Python sog. f-Strings
 (siehe [PEP 498](https://peps.python.org/pep-0498/).
@@ -212,49 +165,17 @@ print(f"I can also round my float to five places: {my_float:.5}")
 
 [//]: # ([40min])
 
-### 1. Länge eines Strings ermitteln: 🌶️️🌶️️
-Schreibe ein Programm, um die Länge eines Strings zu ermitteln.
-
-### 2. String rückwärts ausgeben: 🌶️️🌶️️
-Erstelle einen String und gib ihn rückwärts aus.
-
-### 3. String in Großbuchstaben konvertieren: 🌶️️🌶️️
-Erstelle einen String und konvertiere ihn in Großbuchstaben.
-
-### 4. Anzahl der Vokale zählen: 🌶️️🌶️️🌶️️
-Erstelle einen String und zähle die Anzahl der Vokale in ihm.
-
-### 5. Erster und letzter Buchstabe eines Strings: 🌶️️
-Schreibe einen Python-Code, um den ersten und den letzten Buchstaben eines Strings auszugeben.
-
-### 6. Zeichen ersetzen:  🌶️️
-Erstelle einen String und ersetze ein bestimmtes Zeichen darin durch ein anderes.
-
-### 7. Leerzeichen entfernen: 🌶️️
-Erstelle einen String und entferne alle Leerzeichen daraus.
-
-### 8. String in Wörter aufteilen: 🌶️️
-Erstelle einen String und teile ihn in Wörter auf.
-
-### 9. Überprüfung, ob ein String nur aus Zahlen besteht: 🌶️️🌶️️
-Erstelle einen String und überprüfe, ob er nur aus Zahlen besteht.
-
-### 10. Funktion zur Überprüfung von Anagrammen: 🌶️️🌶️️
-Schreibe eine Funktion, die zwei Strings nimmt und überprüft, ob sie Anagramme sind (dh dieselben Buchstaben in
-unterschiedlicher Reihenfolge).
-
-### 11. Anzahl der Wörter in einem String zählen: 🌶️️🌶️️
-Erstelle einen String und zähle die Anzahl der Wörter darin.
-
-### 12. String in Titel-Case umwandeln: 🌶️️
-Schreibe Code, die einen gegebenen String in einen Titel-Case-String umwandelt (jedes Wort beginnt mit
-einem Großbuchstaben).
-
-### 13. Funktion für Palindrom-Überprüfung: 🌶️️🌶️️
-Schreibe Code, die überprüft, ob ein String ein Palindrom ist (d.h. rückwärts gelesen dasselbe wie
-vorwärts).
-
-### 14. Vokale verboten: 🌶️️🌶️️🌶️️
-Schreibe Code, der alle Vokale in einem Satz durch das Symbol `*` ersetzt.
-
-[Lösung](solutions.md#1-länge-eines-strings-ermitteln)
+{{ task(file="tasks/python_grundlagen/strings/strings/02_lange_eines_strings_ermitteln.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/03_string_ruckwarts_ausgeben.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/04_string_in_grobuchstaben_konvertieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/05_anzahl_der_vokale_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/06_erster_und_letzter_buchstabe_eines_strings.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/07_zeichen_ersetzen.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/08_leerzeichen_entfernen.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/09_string_in_worter_aufteilen.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/10_uberprufung_ob_ein_string_nur_aus_zahlen_besteht.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/11_funktion_zur_uberprufung_von_anagrammen.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/12_anzahl_der_worter_in_einem_string_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/13_string_in_titel_case_umwandeln.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/14_funktion_fur_palindrom_uberprufung.yaml") }}
+{{ task(file="tasks/python_grundlagen/strings/strings/15_vokale_verboten.yaml") }}

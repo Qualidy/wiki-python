@@ -1,0 +1,17 @@
+title: "Verwenden des `global`-Keywords"
+difficulty: 1
+question: |
+  Ändere eine globale Variable innerhalb einer Funktion mit Hilfe des `global`
+     -Keywords.
+solution: |
+  ```python
+  global_var = "Ursprünglich global"
+  
+  def test_global_keyword():
+     global global_var
+     global_var = "Geändert global"
+     print(global_var)
+  
+  test_global_keyword()
+  print(global_var)  # Wird zu "Geändert global"
+  ```

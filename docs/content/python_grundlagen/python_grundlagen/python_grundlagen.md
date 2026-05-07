@@ -3,12 +3,7 @@
 # Was ist Programmierung?
 
 [//]: # ([20min])
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b36enU4v100?si=MYm-Jjwuk56bK0BE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/b36enU4v100?si=MYm-Jjwuk56bK0BE") }}
 
 Programmierung ist für uns der Prozess der Erstellung von Anweisungen, die von einem Computer ausgeführt werden, um
 bestimmte Aufgaben zu erfüllen oder Probleme zu lösen.
@@ -38,22 +33,10 @@ Probleme gelöst, die ein Unternehmen oder dessen Kunden haben.
 - **Benutzerinteraktion**: Viele Programme erfordern Interaktionen mit Benutzern. Das Design dieser Interaktionen ist
    ein wichtiger Teil der Entwicklung einer benutzerfreundlichen Software.
   
-### Aufgabe: 🌶️🌶️
-
-[//]: # ([15 Min + 20 Min])
-
-1. Diskutiert, die Wichtigkeit dieser Aspekte
-2. Ordnet sie entsprechend ihrer Wichtigkeit und begründet kurz wieso.
-
-
+{{ task(file="tasks/python_grundlagen/python_grundlagen/python_grundlagen/01_aufgabe.yaml") }}
 ## Die Rolle von Python in der Programmierung
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a3Hlq7iIr38?si=mJITc1AnwdWiPnEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/a3Hlq7iIr38?si=mJITc1AnwdWiPnEM") }}
 [//]: # ([20min])
 
 Python ist eine weit verbreitete und vielseitige Programmiersprache, die sich durch ihre klare Syntax und Lesbarkeit
@@ -153,12 +136,7 @@ da dieses speziell auf dieses Dateiformat ausgelegt ist.
 
 ### 4. Python-Interpreter als interaktive Umgebung
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U5syhPZgUvM?si=R_mRwMuO-KDGOLSF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/U5syhPZgUvM?si=R_mRwMuO-KDGOLSF") }}
 
 ![Python](../images/py_console.png)
 
@@ -168,20 +146,7 @@ Auch den Python-Interpreter selbst kann man als interaktive Programmierumgebung 
 Hier lassen sich kleine Dinge sehr einfach ausprobieren, aber es ist nicht empfehlenswert diese zur Programmierung zu 
 verwenden.
 
-### Aufgabe: Das erste Programm 🌶️
-
-
-[//]: # ([25min; bis es bei jedem klappt])
-
-1. Führe den folgenden Code mit der Python-Konsole aus
-2. Führe den folgenden Code in VSCode aus
-3. Führe den folgenden Code in PyCharm aus
-4. Führe den folgenden Code in einem Jupyter Notebook aus
-
-```python
-print("Hello Wolfsburg! Das ist mein erstes Programm!")
-```
-
+{{ task(file="tasks/python_grundlagen/python_grundlagen/python_grundlagen/02_das_erste_programm.yaml") }}
 ## Zusammenfassung
 
 IDEs sind ein wesentlicher Bestandteil des Werkzeugkastens eines jeden Entwicklers.

@@ -1,0 +1,103 @@
+title: "Den Wald vor lauter Bäumen"
+difficulty: 4
+question: |
+  Diese Aufgabe dient den Selbststudium zu Hause.
+
+  Wir wollen nun einen Suchbaum implementieren. Erstelle also eine Klasse `Suchbaum`.
+  Instanzen der Klasse haben drei Attribute:
+
+  * `value`, in dem der Wert des Knotens gespeichert wird.
+  * `left`, in dem ein anderer Suchbaum oder `None` gespeichert ist.
+  * `right`, in dem ein anderer Suchbaum oder `None` gespeichert ist.
+
+  Weiterhin soll es folgende Funktionen geben:
+
+  ```python
+  class Suchbaum:
+
+      def __init__(self, value):
+          self.value = value
+          self.left = None
+          self.right = None
+
+      def add(self, new_value):
+          """Fügt dem Suchbaum ein neues Element hinzu. Wenn *new_value* < *self.value* ist,
+          so wird es dem linken Teilbaum hinzugefügt. Andernfalls dem rechten.
+          
+          Wenn der jeweilige Teilbaum nicht existiert, wird er erstellt."""
+          ...
+
+      def contains(self, element):
+          """Prüft, ob das *element* im Suchbaum ist und gibt True zurück, wenn ja."""
+          ...
+
+  ```
+
+  Füllen die Funktionsrümpfe, sodass die folgenden Unit-Tests grün werden:
+
+  ```python
+  import unittest
+
+  class SuchbaumTest(unittest.TestCase):
+      def setUp(self):
+          self.tree = Suchbaum(3)
+          self.tree.add(4)
+          self.tree.add(2)
+          self.tree.add(1)
+          self.tree.add(5)
+
+      def test_contains_0(self):
+          self.assertTrue(self.tree.contains(3))
+
+      def test_contains_1(self):
+          self.assertTrue(self.tree.contains(1))
+
+      def test_contains_2(self):
+          self.assertTrue(self.tree.contains(5))
+
+      def test_contains_3(self):
+          self.assertFalse(self.tree.contains(7))
+
+      def test_contains_4(self):
+          self.assertTrue(Suchbaum(2).contains(2))
+
+      def test_contains_5(self):
+          self.assertFalse(Suchbaum(3).contains(2))
+
+  unittest.main()
+  ```
+
+  <details>
+  <summary>Lösung</summary>
+
+  <pre><code>class Suchbaum:
+
+      def __init__(self, value):
+          self.value = value
+          self.left = None
+          self.right = None
+
+      def add(self, new_value):
+          if new_value < self.value:
+              if self.left is None:
+                  self.left = Suchbaum(new_value)
+              else:
+                  self.left.add(new_value)
+          else:
+              if self.right is None:
+                  self.right = Suchbaum(new_value)
+              else:
+                  self.right.add(new_value)
+
+      def contains(self, value_to_find):
+          if self.value == value_to_find:
+              return True
+
+          if self.left is not None and value_to_find < self.value:
+              return self.left.contains(value_to_find)
+
+          if self.right is not None and self.value < value_to_find:
+              return self.right.contains(value_to_find)
+
+          return False</code></pre>
+  </details>

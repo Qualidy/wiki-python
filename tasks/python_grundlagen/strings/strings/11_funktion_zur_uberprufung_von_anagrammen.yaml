@@ -1,0 +1,13 @@
+title: "Funktion zur Überprüfung von Anagrammen"
+difficulty: 2
+question: |
+  Schreibe eine Funktion, die zwei Strings nimmt und überprüft, ob sie Anagramme sind (dh dieselben Buchstaben in
+  unterschiedlicher Reihenfolge).
+solution: |
+  ```python
+  s1, s2 = "listen", "silent" 
+  if sorted(s1.lower()) == sorted(s2.lower()):
+      print(f"{s1} ist Anagramm von {s2}")
+  else:
+      print("Kein Anagramm")
+  ```

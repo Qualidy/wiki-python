@@ -2,8 +2,6 @@
 
 ## Floats, Integers, Booleans
 
-
-
 ### 1. **Integer Addition**
 
 ```python

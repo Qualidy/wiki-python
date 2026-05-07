@@ -1,0 +1,15 @@
+title: "Dictionary verändern"
+difficulty: 2
+question: |
+  Schreibe eine Funktion, die ein Dictionary als Parameter erwartet und diesem
+  ein neues Schlüssel Value Pärchen hinzufügt.
+solution: |
+  ```python
+  def bigger_dict(my_dict):
+      my_dict["new"] = "entry"
+      
+  dic = {'old': 'somethin'}
+  bigger_dict(dic)
+  
+  print(dic) # {'old': 'somethin', 'new': 'entry'}
+  ```

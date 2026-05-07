@@ -1,0 +1,8 @@
+title: Schlüssel aus Dictionary entfernen
+difficulty: 1
+question: |
+  Entferne den Schlüssel "a" aus dem Dictionary von Aufgabe 2.
+solution: |
+  ```python
+  del dictionary["a"]
+  ```

@@ -1,0 +1,13 @@
+title: "Maximaler Wert pro Position"
+difficulty: 2
+question: |
+  Gegeben sind drei Listen von Zahlen `liste1`, `liste2` und `liste3`. Verwende `zip`, um eine Liste der maximalen Werte pro
+  Position zu erstellen.
+solution: |
+  ```python
+  liste1 = [5, 2, 8]
+  liste2 = [7, 1, 6]
+  liste3 = [3, 4, 0]
+  max_werte = [max(x, y, z) for x, y, z in zip(liste1, liste2, liste3)]
+  print(max_werte)
+  ```

@@ -1,0 +1,8 @@
+title: Duplikate aus Liste entfernen
+difficulty: 1
+question: |
+  Entferne alle Duplikate aus der Liste `[1, 2, 2, 3, 3, 4, 4, 5]`.
+solution: |
+  ```python
+  liste_ohne_duplikate = list(set([1, 2, 2, 3, 3, 4, 4, 5]))
+  ```

@@ -1,0 +1,6 @@
+title: "Runden"
+difficulty: 2
+question: |
+  Runde die Zahl 2.7 auf die nächste ganze Zahl.
+solution: |
+  `print(round(2.7))  # 3`

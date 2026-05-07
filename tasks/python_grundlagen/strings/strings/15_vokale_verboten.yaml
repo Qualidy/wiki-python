@@ -1,0 +1,11 @@
+title: "Vokale verboten"
+difficulty: 3
+question: |
+  Schreibe Code, der alle Vokale in einem Satz durch das Symbol `*` ersetzt.
+solution: |
+  ```python
+  text = "Bastian weiß Bescheid😲"
+  replace_symbol = "*"
+  text = text.lower().replace("a", replace_symbol).replace("e", replace_symbol).replace("i", replace_symbol).replace("o", replace_symbol).replace("u", replace_symbol)
+  print(f"Text ohne Vokale: {text}")
+  ```

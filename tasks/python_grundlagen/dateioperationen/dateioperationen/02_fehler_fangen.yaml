@@ -1,0 +1,20 @@
+title: "Fehler fangen"
+difficulty: 2
+question: |
+  Welcher Fehler wird geworfen, wenn es die Datei nicht existiert?
+  Schreibe Code, in denen du den Fehler bewusst auslöst und auffängst. Lass dir in
+  eine Nachricht auf der Konsole ausgeben und lese den Namen der Datei aus der Exception aus.
+
+  <details><summary>Lösung</summary>
+  <pre><code>try:
+      datei = open("not_existing", "r")
+      inhalt = datei.read()
+      print(inhalt)
+      datei.close()
+  except FileNotFoundError as e:
+      print(f"Datei existiert nicht: {e.filename}")
+  </code></pre></details>
+tip: |
+  ```
+  except ... as e:
+  ```

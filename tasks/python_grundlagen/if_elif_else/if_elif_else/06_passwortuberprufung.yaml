@@ -1,0 +1,5 @@
+title: "Passwortüberprüfung"
+difficulty: 2
+question: |
+  Erstelle ein Programm, das überprüft, ob ein eingegebenes Passwort mit einem gespeicherten 
+  Passwort übereinstimmt.

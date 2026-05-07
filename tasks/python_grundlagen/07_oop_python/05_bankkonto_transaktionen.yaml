@@ -1,0 +1,4 @@
+title: "Bankkonto-Transaktionen"
+difficulty: 2
+question: |
+  Implementiere ein einfaches System für Bankkonto-Transaktionen. Erstelle Klassen für Konten und Transaktionen. Die Kontenklasse sollte Informationen wie Kontostand und Kontoinhaber haben. Die Transaktionsklasse sollte Methoden zum Einzahlen, Abheben und Anzeigen von Transaktionen enthalten.

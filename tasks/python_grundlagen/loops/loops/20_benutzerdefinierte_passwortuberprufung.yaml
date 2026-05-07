@@ -1,0 +1,11 @@
+title: "2: Benutzerdefinierte Passwortüberprüfung"
+difficulty: 3
+question: |
+  Schreibe ein Programm, das den Benutzer zur Eingabe eines Passworts auffordert. Das Passwort muss bestimmte Kriterien
+  erfüllen (z.B. mindestens 8 Zeichen lang, enthält sowohl Zahlen als auch Buchstaben). Das Programm soll dem Benutzer
+  mitteilen, ob das eingegebene Passwort gültig ist oder nicht. Wenn das Passwort nicht gültig ist, soll das Programm
+  spezifizieren, welche Kriterien nicht erfüllt wurden.
+solution: |
+  ```python
+  
+  password = input("Bitte gib ein Passwort ein: ")

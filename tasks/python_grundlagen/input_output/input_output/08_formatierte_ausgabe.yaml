@@ -1,0 +1,11 @@
+title: "Formatierte Ausgabe"
+difficulty: 2
+question: |
+  Frage den Benutzer nach seinem Namen und Alter und gib beides formatiert mit einem
+  f-String aus.
+solution: |
+  ```python
+  name = input("Wie heißt du? ")
+  alter = input("Wie alt bist du? ")
+  print(f"Name: {name}, Alter: {alter}")
+  ```

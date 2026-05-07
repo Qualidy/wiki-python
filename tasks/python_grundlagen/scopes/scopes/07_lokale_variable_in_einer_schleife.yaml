@@ -1,0 +1,14 @@
+title: "Lokale Variable in einer Schleife"
+difficulty: 1
+question: |
+  Definiere eine lokale Variable innerhalb einer for-Schleife in einer Funktion
+     und gib sie aus.
+solution: |
+  ```python
+  def test_schleife():
+     for i in range(3):
+         schleifen_var = i
+     print(schleifen_var)
+  
+  test_schleife()
+  ```

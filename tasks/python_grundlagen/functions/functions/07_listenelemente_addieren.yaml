@@ -1,0 +1,17 @@
+title: "Listenelemente addieren"
+difficulty: 2
+question: |
+  Schreibe eine Funktion `addiere_positive_liste()`, die eine Liste von Zahlen 
+  nimmt und alle positiven Zahlen in der Liste addiert.
+solution: |
+  ```python
+  def addiere_positive_liste(liste):
+      summe = 0
+      for i in liste:
+          if i > 0:
+              summe += i
+              
+      return summe
+  
+  print(addiere_positive_liste([1, -2, 3, -4, 5])) # 9
+  ```

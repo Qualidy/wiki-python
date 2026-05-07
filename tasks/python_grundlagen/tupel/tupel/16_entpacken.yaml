@@ -1,0 +1,26 @@
+title: "Entpacken"
+difficulty: 2
+question: |
+  Was ist in den folgenden Fällen die Konsolenausgabe?
+
+  ```python
+  a, *b, c = ('first', 'second', 'third', 'forth')
+  print(a)
+  print(b)
+  print(c)
+  print(type(a))
+  print(type(b))
+  print(type(c))
+  ```
+solution: |
+  Was ist in den folgenden Fällen die Konsolenausgabe?
+  
+  ```python
+  a, *b, c = ('first', 'second', 'third', 'forth')
+  print(a) # first
+  print(b) # ['second', 'third']
+  print(c) # third
+  print(type(a)) # <class 'str'>
+  print(type(b)) # <class 'list'>
+  print(type(c)) # <class 'str'>
+  ```

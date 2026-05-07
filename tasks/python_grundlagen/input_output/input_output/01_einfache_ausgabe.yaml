@@ -1,0 +1,8 @@
+title: "Einfache Ausgabe"
+difficulty: 1
+question: |
+  Verwende `print`, um "Hallo Welt" auszugeben.
+solution: |
+  ```python
+  print("Hallo Welt")
+  ```

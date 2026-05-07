@@ -1,0 +1,4 @@
+title: "Umkehrung einer Datei"
+difficulty: 3
+question: |
+  Schreibe eine Funktion, die den Inhalt einer Textdatei umkehrt. Das heißt, die erste Zeile wird zur letzten, die zweite zur vorletzten, usw.

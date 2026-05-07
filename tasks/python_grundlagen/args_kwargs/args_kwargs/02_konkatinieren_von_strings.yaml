@@ -1,0 +1,21 @@
+title: "Konkatinieren von Strings"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `concat`, die eine beliebige Anzahl von String zu einem einzigen String
+  konkatiniert.
+
+  ```python
+  concat("Hallo", "Du", "wie", "geht") # "HalloDuwiegeht"
+  concat("Hallo", "Du") # "HalloDu"
+  concat() # ""
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>def concat(*strings):
+      result = ""
+      for string in strings:
+          result += string
+      return result</code></pre>
+  </details>
+tip: |
+  Strings können mit `+` konkatiniert werden.

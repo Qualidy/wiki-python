@@ -1,0 +1,12 @@
+title: "Zinsrechner"
+difficulty: 3
+question: |
+  [40 min] 
+
+  Aufgabenstellung:
+
+  - Schreibe ein Python-Programm, das als einfacher Zinsrechner fungiert. 
+  - Das Programm soll vom Benutzer das Anfangskapital (Hauptsumme), den Zinssatz (in Prozent) und die Anlagedauer in 
+  Jahren abfragen. 
+  - Berechne die Endsumme, die sich aus der Formel Endsumme = Anfangskapital * (1 + Zinssatz/100 * Jahre) ergibt. 
+  - Gib das berechnete Ergebnis aus.

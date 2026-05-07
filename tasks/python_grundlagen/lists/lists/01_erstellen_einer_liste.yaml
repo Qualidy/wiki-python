@@ -1,0 +1,8 @@
+title: "Erstellen einer Liste"
+difficulty: 1
+question: |
+  Erstelle eine Liste mit den Zahlen 1 bis 5.
+solution: |
+  ```python
+  zahlen = [1, 2, 3, 4, 5]
+  ```

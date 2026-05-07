@@ -1,0 +1,12 @@
+title: "Palindrome prüfen"
+difficulty: 2
+question: |
+  Schreibe eine Funktion `ist_palindrom()`, die einen String nimmt und prüft, ob es ein
+      Palindrom ist.
+solution: |
+  ```python
+  def ist_palindrom(my_str):
+      return my_str == my_str[::-1]
+  
+  print(ist_palindrom("radar"))
+  ```

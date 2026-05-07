@@ -1,0 +1,10 @@
+title: "Quadratzahlen"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `quadrat()`, die das Quadrat einer übergebenen Zahl zurückgibt.
+solution: |
+  ```python
+  def quadrat(zahl):
+      return zahl * zahl
+  print(quadrat(4))
+  ```

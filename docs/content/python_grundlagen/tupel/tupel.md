@@ -2,12 +2,7 @@
 
 [//]: # ([15min])
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Si2Rc2VeCDg?si=PhWoEfpzEclNC0Xx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/Si2Rc2VeCDg?si=PhWoEfpzEclNC0Xx") }}
 
 In Python ist ein Tupel eine grundlegende Datenstruktur, die einer Liste ähnlich ist, aber einen entscheidenden
 Unterschied aufweist: Sie ist **unveränderlich**. 
@@ -60,12 +55,7 @@ Hier sehen wir einige Code-Beispiele, die verschiedene Aspekte von Tupeln in Pyt
 [//]: # ([60min])
 ### Erstellung und Zugriff auf Elemente:
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H9D9uD16QPk?si=9U1zMCWWd2bPoEFf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/H9D9uD16QPk?si=9U1zMCWWd2bPoEFf") }}
 
 ```python
 # Ein Tupel erstellen
@@ -95,12 +85,7 @@ ob es sich um die Erstellung eines Tupels handeln würde, oder um die priorisier
 mathematischen Rechnung.
 
 ### Unveränderlichkeit von Tupeln
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LpxtHaf41Yk?si=TiG5RpPwMryrQ66L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/LpxtHaf41Yk?si=TiG5RpPwMryrQ66L") }}
 
 Versuch, ein Element zu auzutauschen (führt zu einem Fehler):
 
@@ -125,18 +110,9 @@ first_list[0] = 'tada'
 my_tuple[1][-1] = 1000
 ```
 
-
-
-
 ### Tupel-Operationen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QIPpHCfMjwo?si=m41D25i7OucNyLYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/QIPpHCfMjwo?si=m41D25i7OucNyLYY") }}
 
 Zur Verkettung und Wiederholung wird die selbe Syntax wie bei Listen verwendet:
 
@@ -162,15 +138,9 @@ gemischtes_tupel = ("Max", 28, 1.75, True)
 print(gemischtes_tupel)
 ```
 
-
 ### Tupel-Packen und -Entpacken
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BE861o0r5yc?si=krZx0AiApreRet_J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/BE861o0r5yc?si=krZx0AiApreRet_J") }}
 
 Im folgenden Beispiel wird jedes Element eines Tupels in eine Variable gespeichert. 
 Das nennt sich *entpacken*. Dabei müssen genau die richtige Anzahl an Variablen vorgegeben werden.
@@ -192,14 +162,8 @@ print(first) # 1
 print(rest) # (4, 9, 16, 25)
 ```
 
-
 ### Verwendung von Tupeln als Schlüssel in einem Dictionary
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ppSZtdwbIz8?si=XELGK8RvY9pDo6JI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/ppSZtdwbIz8?si=XELGK8RvY9pDo6JI") }}
 
 Tupel, deren Einträge unveränderlich sind, lassen sich als Schlüssel in Dictionaries verwenden.
 
@@ -211,12 +175,7 @@ print(orte[(52.5200, 13.4050)])  # Gibt 'Berlin' aus
 
 ## Häufige Funktionen und Methoden für Tupel in Python
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fUT0hwVX0gw?si=JgjWKzozhR4mLXS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/fUT0hwVX0gw?si=JgjWKzozhR4mLXS5") }}
 
 [//]: # ([30min])
 Hier ist eine Tabelle, die einige der häufigsten Funktionen und Methoden für Tupel in Python
@@ -241,72 +200,21 @@ zusammenfasst. Für jede Funktion/Methode gibt es eine kurze Beschreibung und ei
 
 [//]: # ([60min])
 
-### 1. Tupel erstellen 🌶️️
-Erstelle ein Tupel mit den Namen von fünf verschiedenen Früchten.
-### 2. Auf Tupelelemente zugreifen 🌶️️
-Zugriff auf das zweite Element im Tupel von Aufgabe 1.
-### 3.Tupelelemente ändern 🌶️️
-Ändere das zweite Element im Tupel von Aufgabe 1 auf "Erdbeere" (Trickfrage).
-### 4. Ist das Element im Tupel? 🌶️️
-Überprüfe, ob "Apfel" in dem Tupel von Aufgabe 1 enthalten ist.
-### 5. Zählen 🌶️️
-Zähle, wie oft die Frucht "Banane" im Tupel von Aufgabe 1 vorkommt.
-### 6. Umgekehrte Reihenfolge 🌶️️🌶️️
-Erstelle ein neues Tupel, das die Elemente des Originaltupels in umgekehrter Reihenfolge enthält.
-### 7. Tupel vom Tupel 🌶️️
-Erstelle ein Tupel aus den ersten drei Elementen des Tupels von Aufgabe 1.
-### 8. Tupel kombinieren 🌶️️🌶️️
-Kombiniere das Tupel von Aufgabe 1 mit einem neuen Tupel, das drei Gemüsesorten enthält.
-### 9. Multiplikation 🌶️️
-Multipliziere das Tupel von Aufgabe 1, um ein Tupel zu erstellen, das jedes Element dreimal enthält.
-### 10. Tupel verschachteln 🌶️️
-Erstelle ein verschachteltes Tupel, das das Originaltupel von Aufgabe 1 und das Gemüsetupel von Aufgabe 8 enthält.
-### 11. Index zum Element finden 🌶️️
-Finde den Index des Elements "Kirsche" im Tupel von Aufgabe 1.
-### 12. Summe der Tupelelemente 🌶️️🌶️️
-Erstelle ein Tupel mit Zahlen von 1 bis 5 und berechne die Summe der Zahlen.
-### 13. Sortieren 🌶️️🌶️️
-Sortiere das Tupel von Aufgabe 12 in absteigender Reihenfolge (Hinweis: Tupel können nicht sortiert werden, aber es
-gibt einen Workaround).
-### 14. Subtupel 🌶️️
-Überprüfe, ob das Tupel von Aufgabe 1 ein Subtupel von dem in Aufgabe 10 erstellten verschachtelten Tupel ist.
-### 15. Reingelegt 🌶️️
-Welchen Typ haben `a=(3,)` und `b=(3)`? 
-### 16. Entpacken🌶🌶
-Was ist in den folgenden Fällen die Konsolenausgabe?
-
-```python
-a, *b, c = ('first', 'second', 'third', 'forth')
-print(a)
-print(b)
-print(c)
-print(type(a))
-print(type(b))
-print(type(c))
-```
-
-### 17. Entpacken bei Listen🌶🌶
-Ändere den Code aus Aufgabe 16 so, dass in der ersten Zeile eine Liste, statt eines Tupels erstellt wird.
-Was ändert sich nun an der Ausgabe?
-
-### 18. Alles entpackbar?🌶🌶
-Welche der folgenden Zeilen sind erlaubt und welche führen zu einem Fehler? Was für ein Fehler tritt auf?
-
-```python
-my_tuple = ('first', 'second', 'third', 'forth', 'fifth')
-a, b, c, d, e = my_tuple
-
-f, *g = my_tuple
-
-*h, i = my_tuple
-
-k, *l, m, *n = my_tuple
-
-p, q, *r = my_tuple
-
-*s, *t = my_tuple
-
-u, v = my_tuple[:2]
-```
-
-[Lösung](solution_1.md)
+{{ task(file="tasks/python_grundlagen/tupel/tupel/01_tupel_erstellen.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/02_auf_tupelelemente_zugreifen.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/03_tupelelemente_andern.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/04_ist_das_element_im_tupel.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/05_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/06_umgekehrte_reihenfolge.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/07_tupel_vom_tupel.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/08_tupel_kombinieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/09_multiplikation.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/10_tupel_verschachteln.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/11_index_zum_element_finden.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/12_summe_der_tupelelemente.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/13_sortieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/14_subtupel.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/15_reingelegt.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/16_entpacken.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/17_entpacken_bei_listen.yaml") }}
+{{ task(file="tasks/python_grundlagen/tupel/tupel/18_alles_entpackbar.yaml") }}

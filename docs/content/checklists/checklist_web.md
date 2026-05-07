@@ -188,4 +188,3 @@
 - Ich verstehe das Konzept von Test Driven Development (TDD) und seine Bedeutung in der Softwareentwicklung.
 - Ich erkenne die Bedeutung des TDD-Zyklus "Red-Green-Refactor" und wie dieser Ansatz zur Entwicklung qualitativ hochwertiger Software beiträgt.
 - Ich kann die Vorteile von TDD einschätzen, darunter die Verbesserung der Codequalität und die Reduzierung von Fehlern.
-

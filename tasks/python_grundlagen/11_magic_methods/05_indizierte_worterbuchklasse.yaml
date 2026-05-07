@@ -1,0 +1,4 @@
+title: "Indizierte Wörterbuchklasse"
+difficulty: 4
+question: |
+  Erstelle eine Klasse `IndiziertesWörterbuch`, die wie ein Wörterbuch funktioniert, aber zusätzlich zur normalen Funktionalität auch den Zugriff auf Einträge über den Index ermöglicht. Implementiere die magischen Methoden `__getitem__` und `__setitem__` entsprechend.

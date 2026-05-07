@@ -1,0 +1,8 @@
+title: "Umgekehrte Reihenfolge"
+difficulty: 2
+question: |
+  Erstelle ein neues Tupel, das die Elemente des Originaltupels in umgekehrter Reihenfolge enthält.
+solution: |
+  ```python
+  umgekehrtes_tupel = fruechte[::-1]
+  ```

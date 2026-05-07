@@ -1,0 +1,21 @@
+title: "Dictionary erstellen"
+difficulty: 1
+question: |
+  Sage voraus, was der folgende Code tut und begründe warum.
+
+  ```python
+  schlüssel = ['A', 'B', 'C']
+  werte = [1, 2, 3]
+  ergebnis = dict(zip(schlüssel, werte))
+  print(ergebnis)
+  ```
+solution: |
+  Der folgende Code erstellt ein Dictionary. Dies ist möglich, da `zip(schlüssel, werte)`
+  einen generator von Paaren zurückgibt, die genau als als `(key, value)`-Paare interpretiert werden. 
+  
+  ```python
+  schlüssel = ['A', 'B', 'C']
+  werte = [1, 2, 3]
+  ergebnis = dict(zip(schlüssel, werte))
+  print(ergebnis) # {'A': 1, 'B': 2, 'C': 3}
+  ```

@@ -1,0 +1,24 @@
+title: "Mehrere Rückgabewerte"
+difficulty: 2
+question: |
+  Schreibe eine Funktion, die aus einem Text das längste und das kürzeste Wort
+  findet und diese zurückgibt. Wenn es mehrere Wörter gleicher länge gibt, soll
+  das Erste verwendet werden.
+solution: |
+  ```python
+  def biggest_and_smallest_word(text):
+      words = text.split()
+      
+      if len(words) == 0:
+          return "", ""
+  
+      longest = words[0]
+      shortest = words[0]
+      for word in words:
+          if len(word) < len(shortest):
+              shortest = word
+          if len(word) > len(shortest):
+              longest = word
+  
+      return shortest, longest
+  ```

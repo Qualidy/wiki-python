@@ -1,0 +1,8 @@
+title: Float Division
+difficulty: 1
+question: |
+  Dividiere zwei Floats und gib das Ergebnis aus.
+solution: |
+  ```python
+  print(7.5 / 2.5)
+  ```

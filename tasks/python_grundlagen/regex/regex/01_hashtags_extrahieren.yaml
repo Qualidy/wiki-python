@@ -1,0 +1,18 @@
+title: "Hashtags extrahieren"
+difficulty: 1
+question: |
+  Extrahiere alle Hashtags im folgenden Beispiel:
+
+  ```python
+  text = "Ein Text mit #Python und #Programmierung. #Regex Übungen sind auch dabei."
+  ```
+solution: |
+  Extrahiere alle Hashtags im folgenden Beispiel:
+  
+  ```python
+  import re
+  text = "Ein Text mit #Python und #Programmierung. #Regex ist cool."
+  hashtag_pattern = r'#\w+'
+  matches = re.findall(hashtag_pattern, text)
+  print(matches)
+  ```

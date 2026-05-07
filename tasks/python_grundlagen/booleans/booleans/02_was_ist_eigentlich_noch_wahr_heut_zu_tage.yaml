@@ -1,0 +1,40 @@
+title: "Was ist eigentlich noch wahr heut zu Tage"
+difficulty: 1
+question: |
+  Finde für die folgenden Werte heraus, zu welchen Boolschen Wert sie gecastet werden:
+
+  ```python
+  a = []
+  b = [1]
+  c = set()
+  d = {1,2,1}
+  e = 0
+  f = 1
+  g = -1
+  h = 0.0
+  i = 1.0
+  j = -1.0
+  k = ""
+  l = " "
+  m = "hallo"
+  n = None
+  ```
+solution: |
+  {{ youtube_video("https://www.youtube.com/embed/YCJ8sEm6JaU?si=eVkgPu459ywplJaP") }}
+  
+  ```python
+  a = [] # False
+  b = [1] # True
+  c = set() # False
+  d = {1,2,1} # True
+  e = 0 # False
+  f = 1 # True
+  g = -1 # True
+  h = 0.0 # False
+  i = 1.0 # True
+  j = -1.0 # True
+  k = "" # False
+  l = " " # True
+  m = "hallo" # True
+  n = None # False
+  ```

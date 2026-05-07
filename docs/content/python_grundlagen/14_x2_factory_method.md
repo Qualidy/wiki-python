@@ -48,30 +48,5 @@ Die Klasse `Car` dient als Schnittstelle, und die konkreten Klassen `CompactCar`
 # Aufgaben:
 [220min]
 
-## 1. Autorennen mit Factory Method Pattern 🌶️️🌶️️🌶️️
-
-### Teilschritte:
-
-a. Definiere eine Schnittstelle `Vehicle` mit einer Methode `start_engine`, die den Motor startet.
-
-b. Implementiere konkrete Fahrzeugtypen, die von `Vehicle` erben, z. B. `Car`, `Motorcycle`, und `Truck`.
-
-c. Erstelle eine abstrakte Klasse `RaceFactory` mit der Factory-Methode `create_vehicle`, die ein Fahrzeug erstellt.
-
-d. Implementiere konkrete Fabriken, die von `RaceFactory` erben, z. B. `CarFactory`, `MotorcycleFactory`, und `TruckFactory`.
-
-e. Demonstriere die Verwendung, indem du eine Rennsimulation erstellst und verschiedene Fahrzeugtypen erstellst.
-
-## 2. Kaffeemaschine 🌶️️🌶️️
-
-### Teilschritte:
-
-a. Definiere eine Schnittstelle `Beverage` mit einer Methode `brew`, die das Getränk zubereitet.
-
-b. Implementiere konkrete Getränketypen, die von `Beverage` erben, z. B. `Coffee`, `Tea`, und `HotChocolate`.
-
-c. Erstelle eine abstrakte Klasse `BeverageFactory` mit der Factory-Methode `create_beverage`, die ein Getränk erstellt.
-
-d. Implementiere konkrete Fabriken, die von `BeverageFactory` erben, z. B. `CoffeeFactory`, `TeaFactory`, und `HotChocolateFactory`.
-
-e. Zeige die Anwendung, indem du eine Kaffeemaschinen-Simulation erstellst und verschiedene Getränketypen zubereitest.
+{{ task(file="tasks/python_grundlagen/14_x2_factory_method/01_autorennen_mit_factory_method_pattern.yaml") }}
+{{ task(file="tasks/python_grundlagen/14_x2_factory_method/02_kaffeemaschine.yaml") }}

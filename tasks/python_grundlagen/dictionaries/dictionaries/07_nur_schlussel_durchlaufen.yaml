@@ -1,0 +1,9 @@
+title: "Nur Schlüssel durchlaufen"
+difficulty: 2
+question: |
+  Durchlaufe ein Dictionary und gib nur die Schlüssel aus.
+solution: |
+  ```python
+  for key in mein_dict.keys():
+     print(key)
+  ```

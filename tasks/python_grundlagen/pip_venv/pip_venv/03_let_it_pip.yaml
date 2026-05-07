@@ -1,0 +1,6 @@
+title: "Let it pip!"
+difficulty: 1
+question: |
+  1. Erstelle einen neuen Ordner für dein Projekt.
+  2. Erstelle und aktiviere ein Virtual Environment darin.
+  3. Installiere mehrere externe Pakete von PyPi, um mit deinem Projekt zu beginnen.

@@ -1,0 +1,24 @@
+title: "Fibonacci"
+difficulty: 3
+question: |
+  Nutze eine While-Schleife, um die erste Zahl in der Fibonaccifolge zu finden, die größer als 100 ist.
+  Die Fibonaccifolge beginnt mit den beiden Zahlen `1` und `1`. Die nächste Zahl der Folge ist die Summe
+  der beiden vorherigen. Der Anfang der Fibonaccifolge sieht also wie folgt aus:
+
+      1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+solution: |
+  ```python
+  f_1 = 1
+  f_2 = 1
+  at_least = 100
+  
+  while f_2 < at_least:
+      # Berechne die nächste Fibonaccizahl
+      f_3 = f_1 + f_2
+  
+      # Setze die aktuelle und letzte Fibonaccizahl fest.
+      f_1 = f_2
+      f_2 = f_3
+  
+  print(f"Die Zahl {f_3} ist die erste Fibonaccizahl, die größer als  {at_least}")
+  ```

@@ -1,0 +1,50 @@
+title: "Konkatenieren mit Trennzeichen"
+difficulty: 2
+question: |
+  Erweitere die Lösung der letzten Aufgabe, sodass ein Paremeter `seperator` mit angegeben werden kann.
+  Dieser ist per default auf den leeren String `''` gesetzt. Folgender Code ist dann **zusätzlich** möglich:
+
+  An welcher Stelle muss ein Defaultparameter eingefügt werden?
+
+  Wandle diese und die letzten Beispiele in Unittests um.
+
+  ```python
+  concat("Hallo", "Du", "wie", "geht", seperator=" ") # "Hallo Du wie geht"
+  concat("Hallo", "Du", seperator="~~") # "Hallo~~Du"
+  concat(seperator="*") # ""
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>def concat(*strings, seperator=""):
+      result = ""
+      for string in strings:
+          result += string + seperator
+      return result if not seperator else result[:-len(seperator)]
+
+  import unittest
+
+  class ConcatTest(unittest.TestCase):
+      def test_concat_0(self):
+          self.assertEqual(concat("Hallo", "Du", "wie", "geht"), "HalloDuwiegeht")
+
+      def test_concat_1(self):
+          self.assertEqual(concat("Hallo", "Du"), "HalloDu")
+
+      def test_concat_2(self):
+          self.assertEqual(concat(), "")
+
+      def test_concat_3(self):
+          self.assertEqual(concat("Hallo", "Du", "wie", "geht", seperator=" "), "Hallo Du wie geht")
+
+      def test_concat_4(self):
+          self.assertEqual(concat("Hallo", "Du", seperator="~~"), "Hallo~~Du")
+
+      def test_concat_5(self):
+          self.assertEqual(concat(seperator="*"), "")
+  </code></pre>
+  </details>
+tip: |
+  Der Methodenkopf muss wie folgt aussehen:
+  ```
+  def concat(*strings, seperator=""):
+  ```

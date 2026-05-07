@@ -1,0 +1,17 @@
+title: "Nested Functions Scope"
+difficulty: 1
+question: |
+  Definiere eine verschachtelte Funktion und greife auf eine Variable aus der umgebenden
+     Funktion zu.
+solution: |
+  ```python
+  def außen():
+     außen_var = "Variable von außen"
+  
+     def innen():
+         print(außen_var)
+  
+     innen()
+  
+  außen()
+  ```

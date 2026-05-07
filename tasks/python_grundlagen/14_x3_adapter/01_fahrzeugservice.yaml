@@ -1,0 +1,12 @@
+title: "Fahrzeugservice"
+difficulty: 3
+question: |
+  Angenommen, du hast eine Anwendung, die mit einem externen Fahrzeugservice kommuniziert. Der Service liefert Informationen über Fahrzeuge, jedoch nicht in dem Format, das deine Anwendung erwartet. Implementiere ein Adapter Pattern, um die Schnittstelle des Fahrzeugservices an die Anforderungen deiner Anwendung anzupassen.
+
+  **Teilschritte:**
+
+  a. Definiere eine Schnittstelle, die die erwarteten Funktionen für die Zusammenarbeit mit dem Fahrzeugservice festlegt.
+
+  b. Erstelle eine Klasse `FahrzeugAdapter`, die die Schnittstelle implementiert und den externen Fahrzeugservice integriert.
+
+  c. Integriere den `FahrzeugAdapter` in deine Anwendung und zeige, dass die Anwendung erfolgreich mit dem Fahrzeugservice zusammenarbeitet.

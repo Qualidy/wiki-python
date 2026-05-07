@@ -1,0 +1,9 @@
+title: Elemente zu Set hinzufügen
+difficulty: 1
+question: |
+  Füge die Zahlen 4, 5 und 6 zu einem Set `{1, 2, 3}` hinzu.
+solution: |
+  ```python
+  s = {1, 2, 3}
+  s.update([4, 5, 6])
+  ```

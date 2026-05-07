@@ -1,0 +1,6 @@
+title: "Reingelegt"
+difficulty: 1
+question: |
+  Welchen Typ haben `a=(3,)` und `b=(3)`?
+solution: |
+  Dies druckt jedes String-Element im Tupel in Großbuchstaben aus.

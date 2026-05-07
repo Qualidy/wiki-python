@@ -1,0 +1,38 @@
+title: "Auch Funktionen sind Instanzen"
+difficulty: 3
+question: |
+  Im Folgenden ist eine Funktion `say_hello` definiert. Führe den folgenden Code aus und erkläre das Verhalten.
+  Was ist der Typ von `say_hello`?
+
+  ```python
+  def say_hello():
+      if not hasattr(say_hello, "count"):
+          say_hello.count = 0
+      
+      say_hello.count += 1
+      
+      print(f"Hallo zum {say_hello.count}-ten Mal.")
+
+  say_hello()
+  say_hello()
+  say_hello()
+  ```
+
+  {{ youtube_video("https://www.youtube.com/embed/0JlOqTwW90g?si=s_5C7QW5Ib0Ox9Ue") }}
+
+  Innerhalb der Funktion, wird ein Attribut `count` von der Funktion (!) angelegt, beschrieben und ausgelesen.
+  Dann sehen wir immer wechselnden Output:
+
+  <pre><code>def say_hello():
+      if not hasattr(say_hello, "count"):
+          say_hello.count = 0
+
+      say_hello.count += 1
+
+      print(f"Hallo zum {say_hello.count}-ten Mal.")
+
+  say_hello() # Hallo zum 1-ten Mal.
+  say_hello() # Hallo zum 2-ten Mal.
+  say_hello() # Hallo zum 3-ten Mal.
+  </code></pre>
+  </details>

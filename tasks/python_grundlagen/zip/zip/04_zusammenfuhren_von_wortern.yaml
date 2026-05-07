@@ -1,0 +1,16 @@
+title: "Zusammenführen von Wörtern"
+difficulty: 2
+question: |
+  Gegeben sind zwei Listen von Strings `adjektive` und `nomen`.
+  Schreibe zwei list Comprehensions. Bei der ersten sollen alle möglichen Kombinationen aus 
+  Adjektiven und Nomen entstehen und bei der zweiten nur das erste Adjektiv mit dem ersten Nomen,
+  das zweite mit dem zweiten, usw.
+solution: |
+  ```python
+  adjektive = ['rot', 'schnell']
+  nomen = ['Auto', 'Hund']
+  
+  all_combinations = [adj + ' ' + nom for adj in adjektive for nom in nomen]
+  
+  zipped = [adj + ' ' + nom for adj, nom in zip(adjektive, nomen)]
+  ```

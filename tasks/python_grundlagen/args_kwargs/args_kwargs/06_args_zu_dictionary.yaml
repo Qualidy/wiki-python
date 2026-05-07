@@ -1,0 +1,16 @@
+title: "Args zu Dictionary"
+difficulty: 1
+question: |
+  Schreibe eine Funktion, welche `*args` als Dictionary returned. Da Dictionaries für jedes value einen Key brauchen, sollte die Funktion logischerweise bei einer ungeraden Anzahl von Parametern trotzdem noch funktionieren.
+
+  <details><summary>Lösung</summary>
+  <pre><code>def dictify(*strings):
+      thisdict = {}
+      for i in range(len(strings)//2):
+          thisdict.update({strings[i]:strings[i+1]})
+      return thisdict
+
+  print(dictify("a", "b", "c"))</code></pre>
+  </details>
+
+  Hinweis: Zur lösung dieser Aufgabe gibt es eine zweite Variante welche der `variadic_kebab` Funktion stark ähnelt.

@@ -1,0 +1,23 @@
+title: "Notendurchschnitt"
+difficulty: 1
+question: |
+  Erstelle eine Klasse `Student`, mit drei Attributen `mathe`, `python`, `englisch`.
+
+  Erstelle eine Methode `get_durchschnitt`, die den Durchschnitt der drei Attribute berechnet.
+
+  Erstelle eine Property `durchschnitt`, die nur einen Getter hat und zwar `get_durchschnitt`.
+
+  {{ youtube_video("https://www.youtube.com/embed/JY6vrxQnGAo?si=N5xboL9qcmP8cNHk") }}
+  <pre><code>class Student:
+      def __init__(self, mathe, python, englisch):
+          self.mathe = mathe
+          self.python = python
+          self.englisch = englisch
+
+      def get_durchschnitt(self):
+          return (self.mathe + self.python + self.englisch) / 3
+
+      durchschnitt = property(get_durchschnitt)
+
+  print(Student(1,2,1).durchschnitt) # 1.333333333
+  </code></pre></details>

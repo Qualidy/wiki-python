@@ -1,0 +1,8 @@
+title: "Subtupel"
+difficulty: 1
+question: |
+  Überprüfe, ob das Tupel von Aufgabe 1 ein Subtupel von dem in Aufgabe 10 erstellten verschachtelten Tupel ist.
+solution: |
+  ```python
+  print(fruechte in verschachtelt) # Gibt True aus, falls fruechte ein Subtupel ist
+  ```

@@ -1,0 +1,12 @@
+title: "Anzahl der Übereinstimmungen zählen"
+difficulty: 3
+question: |
+  Erstelle eine Funktion, die mithilfe von `zip` die Anzahl der Übereinstimmungen zwischen zwei Listen `liste1`
+  und `liste2` zählt. Das heißt. sie zählt, an wie vielen Stellen die beiden Listen den gleichen Eintrag haben.
+solution: |
+  ```python
+  liste1 = [1, 2, 3, 4, 5]
+  liste2 = [3, 2, 1, 4, 5]
+  anzahl_übereinstimmungen = sum(1 for x, y in zip(liste1, liste2) if x == y)
+  print(anzahl_übereinstimmungen)
+  ```

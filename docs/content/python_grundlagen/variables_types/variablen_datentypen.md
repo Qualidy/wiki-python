@@ -1,11 +1,6 @@
 # Variablen und Datentypen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4umrj_L6grQ?si=jTK_7DsrNdTpJirf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/4umrj_L6grQ?si=jTK_7DsrNdTpJirf") }}
 
 In diesem Abschnitt lernen wir die Grundlagen von Variablen und verschiedenen Datentypen in Python kennen. Variablen
 sind wie Behälter, in denen wir Daten speichern können, während Datentypen die Art der Daten bestimmen, die in diesen
@@ -63,12 +58,7 @@ Grundlage für fast alle Operationen und Logiken in der Programmierung.
 
 # Variablenbenennung
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vh9EhNoBbUg?si=00nEOu7edngNqrXx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/Vh9EhNoBbUg?si=00nEOu7edngNqrXx") }}
 
 [//]: # ([75min])
 
@@ -104,30 +94,21 @@ Eine Variable `a` könnte alles sein, während die Variable `zinssatz` recht sic
 
 ## Besonderheit bei Pythons `=`
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zNgZVTrWxng?si=BsjNS8CHHqBJ02KB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/zNgZVTrWxng?si=BsjNS8CHHqBJ02KB") }}
 
-In Python ist auch die folgende Syntax erlaubt, um mit weniger 
+In Python ist auch die folgende Syntax erlaubt, um mit weniger
 Codezeilen mehrere Variablen zuzuordnen:
 
 ```python
 a = b = c = 10  # a,b,c haben alle den Wert 10
-d, e = 15, 20   # d = 15 und e = 20 
+d, e = 15, 20   # d = 15 und e = 20
 ```
+
 ----
 
 # Datentypen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z85rA3SxHls?si=t8TWYWv5EtwUZtnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/Z85rA3SxHls?si=t8TWYWv5EtwUZtnG") }}
 
 [//]: # ([60min])
 In Python gibt es verschiedene Datentypen, aber hier konzentrieren wir uns auf die grundlegendsten.
@@ -186,71 +167,46 @@ Von Booleans werden wir um Laufe der Woche noch mehr hören und sie auch schon d
 
 [//]: # ([35min])
 
-### 1. **Integer Addition** 🌶️️: 
-Schreibe ein Programm, das zwei Integers addiert.
-### 2. **Integer Subtraktion** 🌶️️: 
-Subtrahiere einen Integer von einem anderen und gib das Ergebnis aus.
-### 3. **Float Division** 🌶️️: 
-Dividiere zwei Floats und gib das Ergebnis aus.
-### 4. **Multiplikation von Integers** 🌶️️: 
-Multipliziere zwei Integers und gib das Ergebnis aus.
-### 5. **Konvertierung von Float zu Integer** 🌶️️: 
-Konvertiere einen Float in einen Integer und gib das Ergebnis aus.
-### 6. **Vergleich von Integers** 🌶️️: 
-Was ist das Ergebnis von:
+{{ task(file="tasks/python_grundlagen/variables_types/01_integer_addition.yaml") }}
 
-* `1 < 3`
-* `10 > 11`
-* `22 != 23`
-* `567 <= 890`
-* `444 >= 444`
-* `42 =< 42`
+{{ task(file="tasks/python_grundlagen/variables_types/02_integer_subtraktion.yaml") }}
 
-### 7. **Booleansches AND** 🌶️️: 
-Was ist das Ergebnis von:
+{{ task(file="tasks/python_grundlagen/variables_types/03_float_division.yaml") }}
 
-`1 < 3 and 4 < 3`
+{{ task(file="tasks/python_grundlagen/variables_types/04_multiplikation_von_integers.yaml") }}
 
-### 8. **Booleansches OR** 🌶️️: 
-Es gelte `a=1` und `b=2`. Was ist das Ergebnis?
+{{ task(file="tasks/python_grundlagen/variables_types/05_float_zu_integer.yaml") }}
 
-`a < 3 or b > 3`
+{{ task(file="tasks/python_grundlagen/variables_types/06_vergleich_von_integers.yaml") }}
 
-### 9. **Umwandlung von Integer in Boolean** 🌶️️: 
-Konvertiere einen Integer in einen Boolean und gib das Ergebnis aus.
-### 10. **Modulo-Operator mit Integers** 🌶️️: 
-Verwende den Modulo-Operator, um den Rest zweier Integers zu finden.
-### 11. **Potenzierung von Floats** 🌶️️: 
-Berechne die Potenz eines Floats (z.B. $5.5^3$) und gib das Ergebnis aus.
-### 12. **Vergleich von Floats** 🌶️️: 
-Vergleiche zwei Floats miteinander und gib das Ergebnis (True oder False) aus.
-### 13. **Integer in Float konvertieren** 🌶️️: 
-Konvertiere einen Integer in einen Float.
-### 14. **Negation eines Booleans** 🌶️️: 
-Negiere einen booleschen Wert und gib das Ergebnis aus.
-### 15. **Kombination von Booleans und Integers** 🌶️️: 
-Überprüfe, ob ein Integer positiv ist und gib das Ergebnis als Boolean
-    zurück.
-### 16. **Diskussion** 🌶️️: 
-Für welche Anwendungen float und integer jeweils besser geeignet sind und wo es keine Rolle spielt!
-### 17. **Diskussion** 🌶️️: 
-Kann man mit Fließkommazahlen jede Dezimalzahl darstellen? Begründet eure Antworten.
+{{ task(file="tasks/python_grundlagen/variables_types/07_booleansches_and.yaml") }}
 
-[Lösung](solution_1.md)
+{{ task(file="tasks/python_grundlagen/variables_types/08_booleansches_or.yaml") }}
 
-Natürlich, hier ist die Erläuterung zur Verwendung der `type()`-Funktion in Python in Markdown-Format:
+{{ task(file="tasks/python_grundlagen/variables_types/09_integer_in_boolean.yaml") }}
 
-## Die `type()`-Funktion 
+{{ task(file="tasks/python_grundlagen/variables_types/10_modulo_operator.yaml") }}
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pEWPaCG4dGI?si=gFzVAMYYYHuBSDJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ task(file="tasks/python_grundlagen/variables_types/11_potenzierung_von_floats.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/12_vergleich_von_floats.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/13_integer_in_float.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/14_negation_eines_booleans.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/15_booleans_und_integers.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/16_diskussion_float_integer.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/17_diskussion_fliesskommazahlen.yaml") }}
+
+## Die `type()`-Funktion
+
+{{ youtube_video("https://www.youtube.com/embed/pEWPaCG4dGI?si=gFzVAMYYYHuBSDJQ") }}
 
 Die `type()`-Funktion in Python sagt dir, was für eine Art
-von Sache eine Variable ist. Sie verrät dir, ob es sich um eine Zahl, einen Text oder etwas 
+von Sache eine Variable ist. Sie verrät dir, ob es sich um eine Zahl, einen Text oder etwas
 ganz anderes handelt.
 
 **Ein Beispiel:**
@@ -262,8 +218,8 @@ nummer = 42
 print(type(nummer))
 ```
 
-Wenn du diesen Code ausführst, wird Python dir sagen, dass `nummer` vom Typ "int" ist, was für "integer" steht. 
-So verwendest du die `type()`-Funktion , um den Typ von Variablen in Python herauszufinden. Du gibst ihr etwas und sie 
+Wenn du diesen Code ausführst, wird Python dir sagen, dass `nummer` vom Typ "int" ist, was für "integer" steht.
+So verwendest du die `type()`-Funktion , um den Typ von Variablen in Python herauszufinden. Du gibst ihr etwas und sie
 verrät dir, was es ist.
 
 **Wofür man die `type()`-Funktion verwenden kann:**
@@ -295,12 +251,7 @@ in Python arbeitest.
 
 ## Strings, List, Tupel, Set, Dictionary
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FaXcBl25hFQ?si=OOKZKs3NAauT4MAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/FaXcBl25hFQ?si=OOKZKs3NAauT4MAz") }}
 
 ### Strings (Zeichenketten):
 
@@ -374,7 +325,7 @@ koordinaten = (50.0, 20.1)
 rgb_farbe = (256, 128, 0)
 ```
 
-Ebenso wie Listen, sind Tupel wichtige Datenstrukturen. Auch hier lernen wir später noch mehr. Wir dürfen aber jetzt 
+Ebenso wie Listen, sind Tupel wichtige Datenstrukturen. Auch hier lernen wir später noch mehr. Wir dürfen aber jetzt
 schon verraten, dass wir Elemente eines Tupels genauso auslesen können, wie die Elemente einer Liste:
 
 ```python
@@ -395,30 +346,23 @@ IndexError: tuple index out of range
 
 Das sagt uns, dass wir "our of range" sind, also außerhalb der möglichen Elemente einen Zugriff durchführen wollen.
 
-
 ### Aufgaben
 
 [//]: # (Zeit: 20min)
 
-### 1. **Liste erstellen** 🌶️️:
-Erstelle eine Liste mit den Zahlen von 1 bis 10.
-### 2. **Tupel zu Liste** 🌶️️: 
-Konvertiere das Tupel `(1, 2, 3)` in eine Liste.
-### 3. **Liste invertieren**:
-Kehre die Reihenfolge der Elemente in der Liste von Aufgabe 1 um.
-<!-- wir hatten hier noch kein Slicing -->
+{{ task(file="tasks/python_grundlagen/variables_types/18_liste_erstellen.yaml") }}
 
-### 4. **Tupel aus Listen** 🌶️️:
-Erstelle ein Tupel aus den ersten drei Elementen der Liste von Aufgabe 1.
-### 5. **Liste von Tupeln** 🌶️️🌶️️: 
-Erstelle eine Liste von Tupeln, wobei jedes Tupel aus einer Zahl und ihrem Quadrat besteht (für
-   Zahlen von 1 bis 5).
-### 6. **Listenelemente filtern**: 🌶️️🌶️️ 
-Erstelle eine neue Liste aus der Liste von Aufgabe 1, die nur gerade Zahlen enthält.
-### 7. **Element in Tupel überprüfen** 🌶️️: 
-Überprüfe, ob die Zahl 3 im Tupel von Aufgabe 6 enthalten ist.
+{{ task(file="tasks/python_grundlagen/variables_types/19_tupel_zu_liste.yaml") }}
 
-[Lösungen](solution_2.md)
+{{ task(file="tasks/python_grundlagen/variables_types/20_liste_invertieren.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/21_tupel_aus_listen.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/22_liste_von_tupeln.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/23_listenelemente_filtern.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/24_element_in_tupel_ueberpruefen.yaml") }}
 
 ### Sets
 
@@ -463,25 +407,18 @@ print(name)  # Gibt "Max" aus
 Wenn ihr bei einer Aufgabe nicht wisst, wie es geht oder euch nicht sicher seit, versucht zuerst bei einer Suchmaschine
 eurer Wahl nach einem Lösungsweg zu suchen. Das Finden von Informationen ist ein wichtiger Skill als Software-Entwickler.
 
-### 1. **Elemente zu Set hinzufügen** 🌶️️: 
-Füge die Zahlen 4, 5 und 6 zu einem Set `{1, 2, 3}` hinzu.
-### 2. **Schlüssel-Wert-Paare in Dictionary** 🌶️️: 
-Erstelle ein Dictionary mit den Schlüsseln "a", "b", "c" und den Werten 1, 2, 3.
+{{ task(file="tasks/python_grundlagen/variables_types/25_elemente_zu_set_hinzufuegen.yaml") }}
 
-### 3. **Element aus Set entfernen** 🌶️️:
-Entferne ein beliebiges Element aus dem Set von Aufgabe 3.
-### 4. **Werte aus Dictionary abrufen** 🌶️️:
-Greife auf den Wert des Schlüssels "b" im Dictionary von Aufgabe 4 zu.
+{{ task(file="tasks/python_grundlagen/variables_types/26_schluessel_wert_paare_dictionary.yaml") }}
 
-### 5. **Dictionary Werte ändern** 🌶️️: 
-Ändere im Dictionary von Aufgabe 4 den Wert von "c" zu 4.
-### 6. **Set Operationen** 🌶️️🌶️️:
-Erstelle die Vereinigung und Schnittmenge zweier Sets `{1, 2, 3}` und `{3, 4, 5}`.
+{{ task(file="tasks/python_grundlagen/variables_types/27_element_aus_set_entfernen.yaml") }}
 
-### 7. **Schlüssel aus Dictionary entfernen** 🌶️️:
-Entferne den Schlüssel "a" aus dem Dictionary von Aufgabe 4.
+{{ task(file="tasks/python_grundlagen/variables_types/28_werte_aus_dictionary_abrufen.yaml") }}
 
-### 8. **Duplikate aus Liste entfernen** 🌶️️: 
-Entferne alle Duplikate aus der Liste `[1, 2, 2, 3, 3, 4, 4, 5]`.
+{{ task(file="tasks/python_grundlagen/variables_types/29_dictionary_werte_aendern.yaml") }}
 
-[Lösungen](solution_3.md)
+{{ task(file="tasks/python_grundlagen/variables_types/30_set_operationen.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/31_schluessel_aus_dictionary_entfernen.yaml") }}
+
+{{ task(file="tasks/python_grundlagen/variables_types/32_duplikate_aus_liste_entfernen.yaml") }}

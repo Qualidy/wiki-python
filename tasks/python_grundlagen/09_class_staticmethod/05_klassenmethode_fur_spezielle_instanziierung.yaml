@@ -1,0 +1,4 @@
+title: "Klassenmethode für spezielle Instanziierung"
+difficulty: 3
+question: |
+  Implementiere eine Klasse `Person`, die eine Klassenmethode `create_adult` enthält. Diese Methode soll eine Instanz der Person-Klasse zurückgeben, bei der das Alter auf 18 gesetzt ist. Erstelle anschließend eine Person-Instanz mithilfe dieser Klassenmethode.

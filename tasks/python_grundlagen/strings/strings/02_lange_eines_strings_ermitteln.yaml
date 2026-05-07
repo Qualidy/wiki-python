@@ -1,0 +1,9 @@
+title: "Länge eines Strings ermitteln"
+difficulty: 2
+question: |
+  Schreibe ein Programm, um die Länge eines Strings zu ermitteln.
+solution: |
+  ```python
+  text = "Dies ist ein Beispiel"
+  print(f"Länge des Strings: {len(text)}")
+  ```

@@ -1,0 +1,4 @@
+title: "`*args` Verwendung"
+difficulty: 1
+question: |
+  Schreibe eine Funktion, die eine beliebige Anzahl von Zahlen akzeptiert und ihre Summe zurückgibt. Verwende dabei `*args`.

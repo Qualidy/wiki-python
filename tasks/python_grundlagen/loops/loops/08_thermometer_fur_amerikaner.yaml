@@ -1,0 +1,12 @@
+title: "Thermometer für Amerikaner"
+difficulty: 3
+question: |
+  Erstelle eine Liste von Temperaturen in Celsius und verwenden Sie eine `for`-Schleife, um jede nacheinander in Fahrenheit
+  umzuwandeln und auszugeben. Recherchiere die entsprechende Formel.
+solution: |
+  ```python
+  temperaturen_celsius = [0, 10, 25, 32, 100]
+  for celsius in temperaturen_celsius:
+      fahrenheit = (celsius * 9/5) + 32
+      print(f"{celsius}°C entspricht {fahrenheit}°F")
+  ```

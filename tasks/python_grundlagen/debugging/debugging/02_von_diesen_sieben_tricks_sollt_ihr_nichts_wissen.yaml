@@ -1,0 +1,29 @@
+title: "Von diesen sieben Tricks sollt ihr nichts wissen"
+difficulty: 1
+question: |
+  {{ youtube_video("https://www.youtube.com/embed/X3jw1JVNdPE?si=I_RzovjKKbkQVRkC") }}
+
+  Schau dir das [Video von Fireship](https://youtu.be/X3jw1JVNdPE?si=qHCernkCvp5gb8dK) an und beantworte die folgenden
+  Fragen:
+
+  * Welche Gründe werden am Anfang des Videos als Gründe für das Auftreten von Fehlern beim Programmieren genannt.
+    Sortiere diese Fehler nach der Häufigkeit.
+  * Welche sieben Tipps gibt das Video, um Fehler zu vermeiden, finden und zu korrigieren?
+solution: |
+  **Gründe für Fehler:**
+  
+  * Eigener Code
+  * Fremder Code im eigenen Projekt
+  * Fehler in der genutzten Bibliothek
+  * Compiler hat einen Fehler
+  * Hardware hat einen Fehler
+  
+  **7 Tips:**
+  
+  * (Fremd-)Code und Fehlermeldungen lesen
+  * Nach Fehlermeldung in Internet suchen
+  * Logger nutzen
+  * Debugger nutzen
+  * Fehler repruduzieren
+  * Tests schreiben
+  * Statsiche Codechecker verwenden

@@ -1,0 +1,8 @@
+title: Konvertierung von Float zu Integer
+difficulty: 1
+question: |
+  Konvertiere einen Float in einen Integer und gib das Ergebnis aus.
+solution: |
+  ```python
+  print(int(7.8))
+  ```

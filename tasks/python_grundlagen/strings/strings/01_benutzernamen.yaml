@@ -1,0 +1,34 @@
+title: "Benutzernamen"
+difficulty: 2
+question: |
+  [//]: # ([20min])
+
+  Beschreiben Sie, was der folgende Code tut:
+
+  ```python
+  benutzername = input("Bitte geben Sie Ihren Benutzernamen ein: ")
+
+  if len(benutzername) > 10:
+      print("Der Benutzername ist zu lang.")
+  elif len(benutzername) < 3:
+      print("Der Benutzername ist zu kurz.")
+  else:
+      print(f"Willkommen, {benutzername}!")
+
+  if benutzername.isupper():
+      print("Ihr Benutzername ist vollständig in Großbuchstaben geschrieben.")
+  elif benutzername.islower():
+      print("Ihr Benutzername ist vollständig in Kleinbuchstaben geschrieben.")
+  else:
+      print("Ihr Benutzername enthält sowohl Groß- als auch Kleinbuchstaben.")
+
+  if "!" in benutzername:
+      print("Ihr Benutzername enthält ein Ausrufezeichen!")
+
+  kleinbuchstaben_benutzername = benutzername.lower()
+  print(f"Ihr Benutzername in Kleinbuchstaben: {kleinbuchstaben_benutzername}")
+  ```
+solution: |
+  {{ youtube_video("https://www.youtube.com/embed/eDZBJG3_Jec?si=zVdbTua2zIKLV5La") }}
+  
+  ```python

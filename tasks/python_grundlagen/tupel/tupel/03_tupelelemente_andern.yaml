@@ -1,0 +1,6 @@
+title: "Tupelelemente ändern"
+difficulty: 1
+question: |
+  Ändere das zweite Element im Tupel von Aufgabe 1 auf "Erdbeere" (Trickfrage).
+solution: |
+  Dies ist nicht möglich, da Tupel unveränderlich sind.

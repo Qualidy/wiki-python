@@ -1,0 +1,8 @@
+title: "Personen-Vererbung"
+difficulty: 3
+question: |
+  Implementiere eine Basisklasse `Person` mit grundlegenden Informationen wie Name und Alter. Leite dann zwei Klassen ab: `Teilnehmer` und `Dozent`. Jede dieser Klassen sollte zusätzliche Informationen und Methoden haben, die zu einem Teilnehmeren bzw. Dozent passen.
+
+     - Verwende in der `Person`-Klasse die Attribute `name` und `alter` sowie die Methode `geburtstag_feiern()`.
+     - Die `Teilnehmer`-Klasse sollte das Attribut `matrikelnummer` haben und eine Methode `prüfung_schreiben()` implementieren.
+     - Die `Dozent`-Klasse sollte das Attribut `fachgebiet` haben und eine Methode `prüfungen_korrigieren()` implementieren.

@@ -1,0 +1,27 @@
+title: "Beliebig viele Zeilen in Datei speichern"
+difficulty: 2
+question: |
+  Erstelle eine Funktion `save_lines_to_file`, die als ersten Parameter einen Speicherort
+  erwartet und dann eine beliebige Anzahl von Strings.
+  Diese Strings sollen jeweils als Zeilen in eine die vorgegebene Datei gespeichert werden.
+
+  ```python
+  save_lines_to_file("test.txt", "Hallo", "wie", "geht", "es" , "dir denn heute so?")
+  ```
+  Datei:
+  ```
+  Hallo
+  wie
+  geht
+  es
+  dir denn heute so?
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>def save_lines_to_file(loc, *lines):
+      with open(loc, "wt") as file:
+          for line in lines:
+              file.write(line+"\n")
+  </code></pre></details>
+tip: |
+  Das Symbol für einen Zeilenumbruch ist `\n`

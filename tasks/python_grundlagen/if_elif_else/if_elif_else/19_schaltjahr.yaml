@@ -1,0 +1,4 @@
+title: "Schaltjahr"
+difficulty: 3
+question: |
+  Schreibe ein Programm, das überprüft, ob ein gegebenes Jahr ein Schaltjahr ist oder nicht.

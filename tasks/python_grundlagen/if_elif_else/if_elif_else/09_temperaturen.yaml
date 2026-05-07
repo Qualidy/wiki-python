@@ -1,0 +1,5 @@
+title: "Temperaturen"
+difficulty: 2
+question: |
+  Schreibe ein Programm, das unterschiedliche Meldungen für verschiedene Temperaturbereiche ausgibt 
+  (z.B. kalt, warm, heiß).

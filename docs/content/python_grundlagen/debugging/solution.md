@@ -20,16 +20,9 @@
 * Tests schreiben
 * Statsiche Codechecker verwenden
 
-
 ### Aufgabe: Debugger bei verschachtelten if-Bedingunen 🌶🌶
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-HcRBSCWV-I?si=FFRzMtc-c7l3hZjZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/-HcRBSCWV-I?si=FFRzMtc-c7l3hZjZ") }}
 
 Bei der Belegungen `a = 25` und `b = 10` werden die Zeilen
 4, 11, 12, 15 und 16 durchlaufen.

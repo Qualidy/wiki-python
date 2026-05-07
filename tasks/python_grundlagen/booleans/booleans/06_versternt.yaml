@@ -1,0 +1,17 @@
+title: "Versternt"
+difficulty: 3
+question: |
+  Schreibe eine Funktion `star_text(text, m, symbol)`, die einen Text enthält.
+  Es sollen alle Wörter mit einem symbol ersetzt werden,
+  die `m` oder weniger Zeichen sind.
+  Die Anzahl der Symbole soll der ursprünglichen Wortlänge entsprechen.
+  Wenn `m` und `symbol` nicht angegeben sind, soll `m=4` und `symbol='*'` gelten.
+
+  ```python
+  my_text = "Python macht Spaß und wer das nicht glaubt der programmiert wohl Java oder C++"
+
+  def star_text(...):
+      ...
+
+  star_text(my_text)  # "Python macht *** *** *** *** nicht glaubt *** programmiert **** **** *** ***"
+  ```

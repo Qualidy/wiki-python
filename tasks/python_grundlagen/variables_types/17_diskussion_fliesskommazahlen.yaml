@@ -1,0 +1,9 @@
+title: Diskussion
+difficulty: 1
+question: |
+  Kann man mit Fließkommazahlen jede Dezimalzahl darstellen? Begründet eure Antworten.
+solution: |
+  Nein, Fließkommazahlen haben keine unendlich hohe Genauigkeit. Für viele Anwendungen reicht dies aus, aber
+  insbesondere wenn sehr viele Berechnungen durchgeführt werden, können diese Ungenauigkeiten zu signifikanten
+  Abweichungen führen. Deswegen verwendet man zum Beispiel für Geldbeträge häufig Integer und nutzt die kleinste
+  Währungseinheit. Erst zur Ausgabe wird umgerechnet.

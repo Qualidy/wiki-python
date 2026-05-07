@@ -1,0 +1,12 @@
+title: "Umrechner für Temperaturen"
+difficulty: 3
+question: |
+  [40 min]
+
+  Aufgabenstellung:
+
+  - Erstelle ein Python-Programm zur Umrechnung von Temperaturen zwischen Celsius und Fahrenheit. 
+  - Das Programm soll zuerst nach der Eingabetemperatur (als Zahl) fragen und dann, ob diese in Celsius oder Fahrenheit ist. 
+  - Führe die entsprechende Umrechnung durch: Von Celsius nach Fahrenheit (`F = C * 9/5 + 32`) oder von Fahrenheit nach 
+  - Celsius (`C = (F - 32) * 5/9`).
+  - Gib das Ergebnis der Umrechnung aus.

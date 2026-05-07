@@ -1,0 +1,9 @@
+title: "Entfernen eines Eintrags"
+difficulty: 2
+question: |
+  Entferne einen Eintrag aus einem Dictionary.
+solution: |
+  ```python
+  del mein_dict["Beruf"]
+  print(mein_dict)
+  ```

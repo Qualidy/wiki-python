@@ -1,0 +1,51 @@
+title: "Klassenattribute gelten für alle Instanzen"
+difficulty: 2
+question: |
+  Sage voraus, was bei folgendem Code auf der Konsole erscheint.
+
+  Führe den Code aus.
+
+  Begründe, die Ausgabe.
+
+  [Link zum Onlinecompiler💻](https://pythontutor.com/render.html#code=class%20Roboter%3A%0A%20%20%20%20marke%20%3D%20'VW'%0A%0Ax%20%3D%20Roboter%28%29%0Ay%20%3D%20Roboter%28%29%0A%0Aprint%28x.marke%29%0Aprint%28y.marke%29%0Aprint%28Roboter.marke%29%0A%0ARoboter.marke%20%3D%20'Porsche'%0A%0Aprint%28x.marke%29%20%0Aprint%28y.marke%29%0Aprint%28Roboter.marke%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+  ```python
+  class Roboter:
+      marke = 'VW'
+
+  x = Roboter()
+  y = Roboter()
+
+  print(x.marke)
+  print(y.marke)
+  print(Roboter.marke)
+
+  Roboter.marke = 'Porsche'
+
+  print(x.marke) 
+  print(y.marke)
+  print(Roboter.marke)
+  ```
+
+  {{ youtube_video("https://www.youtube.com/embed/A7N1sua2L7s?si=-dlmHpWy1n_eBTbS") }}
+
+  Ein Klassenattribut gilt für alle Instanzen einer Klasse.
+  Wenn man es ändert, ändert man es für alle, da sie alle das Attribut an einer Stelle nachlesen.
+
+  <pre><code>class Roboter:
+      marke = 'VW'
+
+  x = Roboter()
+  y = Roboter()
+
+  print(x.marke) # 'VW'
+  print(y.marke) # 'VW'
+  print(Roboter.marke) # 'VW'
+
+  Roboter.marke = 'Porsche'
+
+  print(x.marke) # 'Porsche'
+  print(y.marke) # 'Porsche'
+  print(Roboter.marke) # 'Porsche'
+  </code></pre>
+  </details>

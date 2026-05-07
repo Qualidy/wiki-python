@@ -1,0 +1,15 @@
+title: "Übertriebene Rekursion"
+difficulty: 3
+question: |
+  Zu welchem Fehler führt der folgende Code und warum?
+
+  ```python
+  def fak(n):
+      return 1 if n <= 1 else n * fak(n-1)
+
+  print(fak(1000))
+  ```
+solution: |
+  Die Funktions `fak` ruft sich immer wieder selbst auf (das nennt man eine rekursive Funktion).
+  Der Callstack wird damit immer größer, bis dieser irgendwann die maximale Größe überschreitet.
+  Dann wird ein `RekursionError` geworfen.

@@ -1,0 +1,6 @@
+title: "Potenzierung"
+difficulty: 1
+question: |
+  Erhebe 2 in die 3. Potenz.
+solution: |
+  `print(2 ** 3)  # 8`

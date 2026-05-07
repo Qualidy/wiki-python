@@ -1,0 +1,21 @@
+title: "Multiplizieren"
+difficulty: 1
+question: |
+  Wie muss der obige Code angepasst werden, damit die Zahlen nicht summiert, sondern multipliziert werden?
+solution: |
+  ```python
+  def multiply_up(box_or_value):
+      if isinstance(box_or_value, list):
+          product = 1 # Aus 0 eine 1
+  
+          for obj in box_or_value:
+              product *= multiply_up(obj) # Aus += ein *=
+  
+      else:
+          product = box_or_value
+  
+      return product
+  
+  all_multiplied_up = multiply_up([[1, 2, 3], [4, 5, [6, 7, 8]]])
+  print(all_multiplied_up)
+  ```

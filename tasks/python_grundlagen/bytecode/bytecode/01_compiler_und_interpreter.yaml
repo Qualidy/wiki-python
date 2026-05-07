@@ -1,0 +1,14 @@
+title: "Compiler und Interpreter"
+difficulty: 2
+question: |
+  Das folgende Video aus den Jahr 1983 erklärt anschaulich, was ein **Compiler** und was ein **Interpreter** ist.
+
+  Schau dir das Video an und beantworte die folgenden Fragen:
+
+  * Wie übersetzen Compiler und Interpreter jeweils Programmcode zu Maschinencode?
+  * Was sind die Vor- unt Nachteile von Code, der mit einem Compiler oder einem Interpreter übersetzt wurde?
+  * Wie kann man sich die Namen "Compiler" und "Interpreter" gut merken?
+
+  [🎦Link zum Video](https://www.youtube.com/embed/_C5AHaS1mOA?si=uPm5tJnESr4ZuemF)
+
+  {{ youtube_video("https://www.youtube.com/embed/_C5AHaS1mOA?si=uPm5tJnESr4ZuemF") }}

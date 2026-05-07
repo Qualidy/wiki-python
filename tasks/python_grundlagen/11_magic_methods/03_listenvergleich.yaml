@@ -1,0 +1,4 @@
+title: "Listenvergleich"
+difficulty: 3
+question: |
+  Implementiere eine Klasse `BenutzerListe`, die eine Liste von Benutzerobjekten speichert. Implementiere die magische Methode `__eq__`, um zwei `BenutzerListe`-Objekte zu vergleichen. Die Gleichheit soll bedeuten, dass beide Listen die gleichen Benutzerobjekte in der gleichen Reihenfolge enthalten.

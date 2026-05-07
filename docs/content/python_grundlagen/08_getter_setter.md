@@ -78,23 +78,10 @@ class Buch:
 # Aufgaben:
 [240min]
 
-## 1. **Buchverwaltung mit Getter, Setter und @property 🌶️️🌶️️**:
-   Erkläre, wie Sichtbarkeit und Getter/Setter zusammenarbeiten, um den Zugriff auf Attribute zu steuern. Erweitere die Klasse `Buch` um @property-Dekoratoren für die Attribute `titel` und `autor`. Zeige, wie @property Getter- und Setter-Funktionalität bereitstellt.
-
-## 2. **Kreisberechnungen mit @property 🌶️️🌶️️🌶️️**:
-   Erstelle eine Klasse `Kreis` mit einem privaten Attribut `radius`. Implementiere Getter- und Setter-Funktionen für das Attribut und zeige dann, wie @property verwendet werden kann, um den Zugriff auf das Attribut zu steuern.
-
-## 3. **Temperaturumrechner mit Eigenschaften 🌶️️🌶️️**:
-   Entwickle eine Klasse `Temperaturumrechner`, die private Attribute für Celsius und Fahrenheit hat. Implementiere @property-Dekoratoren, um den Zugriff auf diese Attribute zu ermöglichen. Füge außerdem Methoden hinzu, um von Celsius nach Fahrenheit und umgekehrt umzurechnen.
-
-## 4. **Benutzerkonto mit Guthaben und Transaktionen 🌶️️🌶️️🌶️️**:
-   Erstelle eine Klasse `Benutzerkonto`, die ein privates Attribut `guthaben` hat. Implementiere @property-Dekoratoren, um den Zugriff auf das Guthaben zu ermöglichen. Füge Methoden hinzu, um Einzahlungen und Abhebungen vorzunehmen, und zeige dies anhand von Transaktionen.
-
-## 5. **Autoverwaltung mit Kilometerstand 🌶️️🌶️️**:
-   Entwickle eine Klasse `Auto`, die private Attribute für Marke, Modell und Kilometerstand hat. Implementiere @property-Dekoratoren, um den Zugriff auf diese Attribute zu steuern. Füge Methoden hinzu, um den Kilometerstand zu erhöhen und anzuzeigen.
-
-## 6. **Warenkorb mit Produkten und Preisen 🌶️️🌶️️🌶️️**:
-   Erstelle eine Klasse `Warenkorb`, die private Attribute für Produkte und Preise enthält. Implementiere @property-Dekoratoren, um den Zugriff auf diese Attribute zu steuern. Füge Methoden hinzu, um Produkte hinzuzufügen, den Gesamtpreis zu berechnen und den Inhalt des Warenkorbs anzuzeigen.
-
-## 7. **Schülerverwaltung mit Noten 🌶️️🌶️️🌶️️🌶️️**:
-   Implementiere eine Klasse `Schüler`, die private Attribute für den Namen und die Noten eines Schülers enthält. Verwende @property-Dekoratoren, um den Zugriff auf diese Attribute zu steuern. Füge Methoden hinzu, um den Durchschnitt der Noten zu berechnen und die Noten anzuzeigen.
+{{ task(file="tasks/python_grundlagen/08_getter_setter/01_buchverwaltung_mit_getter_setter_und_property.yaml") }}
+{{ task(file="tasks/python_grundlagen/08_getter_setter/02_kreisberechnungen_mit_property.yaml") }}
+{{ task(file="tasks/python_grundlagen/08_getter_setter/03_temperaturumrechner_mit_eigenschaften.yaml") }}
+{{ task(file="tasks/python_grundlagen/08_getter_setter/04_benutzerkonto_mit_guthaben_und_transaktionen.yaml") }}
+{{ task(file="tasks/python_grundlagen/08_getter_setter/05_autoverwaltung_mit_kilometerstand.yaml") }}
+{{ task(file="tasks/python_grundlagen/08_getter_setter/06_warenkorb_mit_produkten_und_preisen.yaml") }}
+{{ task(file="tasks/python_grundlagen/08_getter_setter/07_schulerverwaltung_mit_noten.yaml") }}

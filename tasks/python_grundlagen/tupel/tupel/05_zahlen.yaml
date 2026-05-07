@@ -1,0 +1,8 @@
+title: "Zählen"
+difficulty: 1
+question: |
+  Zähle, wie oft die Frucht "Banane" im Tupel von Aufgabe 1 vorkommt.
+solution: |
+  ```python
+  print(fruechte.count("Banane")) # Gibt die Anzahl der 'Banane' aus
+  ```

@@ -1,0 +1,16 @@
+title: "Primzzahlenfunktion testen"
+difficulty: 1
+question: |
+  - Modultest: Schreibe Tests für das Modul `primzahlen.py`, um sicherzustellen, dass die Primzahlberechnung korrekt funktioniert.
+     - Unittest: Erstelle Unittests für die Funktionen in `primzahlen.py` mit dem `unittest`-Framework.
+     - Doctest: Integriere Beispiele und Tests direkt in die Docstrings des Moduls.
+
+  primzahlen.py: 
+
+  ```python
+  def ist_primzahl(n):
+      for i in range(2, n):
+          if n % i == 0:
+              return False
+      return True
+  ```

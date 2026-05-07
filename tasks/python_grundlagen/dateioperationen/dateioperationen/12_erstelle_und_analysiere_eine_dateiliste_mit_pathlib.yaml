@@ -1,0 +1,27 @@
+title: "Erstelle und analysiere eine Dateiliste mit pathlib"
+difficulty: 3
+question: |
+  Erstelle mit der pathlib-Bibliothek eine Liste aller Dateien in einem spezifischen Verzeichnis und analysiere diese. Iteriere durch die Verzeichnisse und sammle Informationen über die gefundenen Dateien.
+
+  | Ihr müsst in diesem Fall nach den richtigen Funktionen selber Googeln!
+
+  Importiere und erstelle ein `Path`-Objekt, das auf ein Verzeichnis deiner Wahl verweist. Dies kann z.B. ein Ordner sein, in dem du einige deiner Projekte oder Dokumente gespeichert hast.
+
+  Für jede gefundene Datei, sammle folgende Informationen:
+
+  * Dateiname
+  * Dateigröße in Kilobytes (KB)
+  * Dateierweiterung (z.B. `.txt`, `.py`, etc.)
+
+  Gib die gesammelten Informationen für jede Datei formatiert in der Konsole aus.
+
+  ```txt
+  Dateiname: report.txt, Größe: 120KB, Erweiterung: .txt
+  Dateiname: image.jpeg, Größe: 1024KB, Erweiterung: .jpeg
+  Dateiname: script.py, Größe: 4KB, Erweiterung: .py
+  ```
+
+  <details><summary>Lösung</summary>
+
+  <pre><code>
+  from pathlib import Path

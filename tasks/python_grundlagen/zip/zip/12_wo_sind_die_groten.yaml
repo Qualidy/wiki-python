@@ -1,0 +1,17 @@
+title: "Wo sind die größten"
+difficulty: 2
+question: |
+  Erstelle Code, der die Indizes aller größten Elemente in einer Liste von Zahlen ermittelt.
+
+  ```python
+  numbers = [1,3,5,3,5,1]
+  positions_of_maxima = [2, 4]
+  ```
+solution: |
+  ```python
+  numbers = [1,3,5,3,5,1]
+  
+  maximum = max(numbers)
+  
+  positions_of_maxima = [i for i, number in enumerate(numbers) if number == maximum]
+  ```

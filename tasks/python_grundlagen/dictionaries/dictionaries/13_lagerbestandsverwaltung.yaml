@@ -1,0 +1,38 @@
+title: "3: Lagerbestandsverwaltung"
+difficulty: 3
+question: |
+  Implementiere ein Lagerbestandsverwaltungssystem. Erstelle ein Dictionary, das Produkte und ihre Mengen enthält. Das
+  Programm soll es dem Benutzer ermöglichen, neue Produkte hinzuzufügen, vorhandene zu aktualisieren und Produkte zu
+  löschen. Zusätzlich soll das Programm eine Übersicht über alle Produkte und Mengen anzeigen können.
+solution: |
+  ```python
+  lager = {}
+  
+  while True:
+      aktion = input("Aktion w?hlen: hinzuf?gen, aktualisieren, l?schen, anzeigen, beenden: ")
+  
+      if aktion == "beenden":
+          break
+      elif aktion == "hinzuf?gen":
+          produkt = input("Produktname: ")
+          menge = int(input("Menge: "))
+          lager[produkt] = lager.get(produkt, 0) + menge
+      elif aktion == "aktualisieren":
+          produkt = input("Produktname: ")
+          if produkt in lager:
+              menge = int(input("Neue Menge: "))
+              lager[produkt] = menge
+          else:
+              print("Produkt nicht gefunden")
+      elif aktion == "l?schen":
+          produkt = input("Produktname: ")
+          if produkt in lager:
+              del lager[produkt]
+          else:
+              print("Produkt nicht gefunden")
+      elif aktion == "anzeigen":
+          for produkt, menge in lager.items():
+              print(f"{produkt}: {menge}")
+      else:
+          print("Unbekannte Aktion")
+  ```

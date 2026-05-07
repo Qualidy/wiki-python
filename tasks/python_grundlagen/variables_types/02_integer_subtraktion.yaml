@@ -1,0 +1,8 @@
+title: Integer Subtraktion
+difficulty: 1
+question: |
+  Subtrahiere einen Integer von einem anderen und gib das Ergebnis aus.
+solution: |
+  ```python
+  print(10 - 4)
+  ```

@@ -1,7 +1,6 @@
 # Strategy Pattern
 [120min]
 
-
 ## Erklärung:
 
 Das Strategy Pattern ist ein Verhaltensmuster, das es ermöglicht, eine Familie von Algorithmen zu definieren, sie zu kapseln und austauschbar zu machen. Es definiert eine Familie von Algorithmen, kapselt jeden Algorithmus und macht sie austauschbar. Das Muster ermöglicht es einem Client, den Algorithmus unabhängig von den Clients, die ihn verwenden, zu wählen und zu ändern.
@@ -43,30 +42,5 @@ cart2.checkout(150)
 
 # Aufgaben:
 
-## 1. Rabattberechnung 🌶️️🌶️️🌶️️
-
-### Teilschritte:
-
-a. Definiere eine Klasse `DiscountStrategy` als abstrakte Klasse mit einer Methode `calculate_discount`, die den Rabatt berechnet.
-
-b. Implementiere konkrete Rabattstrategien, die von `DiscountStrategy` erben, z. B. `PercentageDiscount` und `FixedAmountDiscount`.
-
-c. Erstelle eine Klasse `ShoppingCart`, die eine Instanz von `DiscountStrategy` als Attribut enthält.
-
-d. Die Methode `apply_discount` der Klasse `ShoppingCart` sollte die Rabattberechnung unter Verwendung der übergebenen Rabattstrategie durchführen.
-
-e. Demonstriere die Verwendung, indem du einen Einkaufswagen erstellst und verschiedene Rabattstrategien anwendest.
-
-## 2. Benutzeranmeldungssystem 🌶️️🌶️️
-
-### Teilschritte:
-
-a. Erstelle eine Klasse `AuthenticationStrategy` als abstrakte Klasse mit einer Methode `authenticate`, die die Benutzeranmeldung behandelt.
-
-b. Implementiere konkrete Authentifizierungsstrategien, die von `AuthenticationStrategy` erben, z. B. `UsernamePasswordAuthentication` und `TwoFactorAuthentication`.
-
-c. Entwickle eine Klasse `UserAuthentication`, die eine Instanz von `AuthenticationStrategy` als Attribut enthält.
-
-d. Die Methode `authenticate_user` der Klasse `UserAuthentication` sollte die Authentifizierung unter Verwendung der übergebenen Authentifizierungsstrategie durchführen.
-
-e. Zeige die Anwendung, indem du einen Benutzer authentifizierst und verschiedene Authentifizierungsstrategien ausprobierst.
+{{ task(file="tasks/python_grundlagen/14_x1_strategy/01_rabattberechnung.yaml") }}
+{{ task(file="tasks/python_grundlagen/14_x1_strategy/02_benutzeranmeldungssystem.yaml") }}

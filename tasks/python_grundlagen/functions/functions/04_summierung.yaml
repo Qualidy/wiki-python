@@ -1,0 +1,11 @@
+title: "Summierung"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `summiere()`, die die Summe von drei übergebenen Zahlen berechnet und
+     zurückgibt.
+solution: |
+  ```python
+  def summiere(a, b, c):
+    return a + b + c
+  print(summiere(1, 2, 3))
+  ```

@@ -1,0 +1,4 @@
+title: "Fehlerbehandlung bei Dateioperationen"
+difficulty: 3
+question: |
+  - Schreibe einen Code, der versucht, den Inhalt einer Datei zu lesen und in eine andere Datei zu schreiben. Behandle mögliche `FileNotFoundError` und `PermissionError`-Ausnahmen im `except`-Block und gib entsprechende Meldungen aus.

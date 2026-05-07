@@ -1,0 +1,4 @@
+title: "Schülerverwaltung mit Noten"
+difficulty: 4
+question: |
+  Implementiere eine Klasse `Schüler`, die private Attribute für den Namen und die Noten eines Schülers enthält. Verwende @property-Dekoratoren, um den Zugriff auf diese Attribute zu steuern. Füge Methoden hinzu, um den Durchschnitt der Noten zu berechnen und die Noten anzuzeigen.

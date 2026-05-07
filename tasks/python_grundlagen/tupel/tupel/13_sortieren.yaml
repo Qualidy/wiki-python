@@ -1,0 +1,9 @@
+title: "Sortieren"
+difficulty: 2
+question: |
+  Sortiere das Tupel von Aufgabe 12 in absteigender Reihenfolge (Hinweis: Tupel können nicht sortiert werden, aber es
+  gibt einen Workaround).
+solution: |
+  ```python
+  sortierte_zahlen = tuple(sorted(zahlen, reverse=True))
+  ```

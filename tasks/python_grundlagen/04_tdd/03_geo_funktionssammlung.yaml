@@ -1,0 +1,6 @@
+title: "Geo-Funktionssammlung"
+difficulty: 2
+question: |
+  - Implementiere eine Funktionssammlung namens `Geo`, die geometrische Objekte berechnen kann (z.B., Rechteck, Quadrat, Kreis).
+     - Füge Berechnungsmethoden für Umfang und Fläche hinzu.
+     - Schreibe doctest-Tests, um die Korrektheit der Implementierung sicherzustellen.

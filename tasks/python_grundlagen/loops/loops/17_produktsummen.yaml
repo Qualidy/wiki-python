@@ -1,0 +1,27 @@
+title: "Produktsummen"
+difficulty: 2
+question: |
+  Was ist das Ergebnis des folgenden Codes. Versuche in eigenen Worten zu beschreiben, was der Code tut.
+  Tipp: Führe den Code mit dem Debugger aus.
+
+  ```python
+  result = 1
+  for sub_list in [[4,3,2], [5,6,7]]:
+      subsum = 0
+      for element in sub_list:
+          subsum += element
+      result *= subsum
+  print(result)
+  ```
+solution: |
+  ```python
+  result = 1
+  for sub_list in [[4,3,2], [5,6,7]]:
+      subsum = 0
+      for element in sub_list:
+          subsum += element
+      result *= subsum
+  print(result)
+  ```
+  
+  $$1 ⋅ (4+3+2) ⋅ (5+6+7) = 1 ⋅ 9 ⋅ 18 = 162$$

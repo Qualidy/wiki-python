@@ -1,0 +1,6 @@
+title: "Multiplikation"
+difficulty: 1
+question: |
+  Multipliziere 4 mit 2.
+solution: |
+  `print(4 * 2)  # 8`

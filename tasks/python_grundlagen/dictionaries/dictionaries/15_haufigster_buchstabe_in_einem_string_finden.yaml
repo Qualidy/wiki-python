@@ -1,0 +1,7 @@
+title: "Häufigster Buchstabe in einem String finden"
+difficulty: 2
+question: |
+  Schreibe einen Python-Code, um den häufigsten Buchstaben in einem String zu finden.
+solution: |
+  ```python
+  text = "Mississippi"

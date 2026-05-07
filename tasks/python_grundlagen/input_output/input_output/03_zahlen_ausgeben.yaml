@@ -1,0 +1,8 @@
+title: "Zahlen ausgeben"
+difficulty: 1
+question: |
+  Gib mit `print` die Zahl 100 aus.
+solution: |
+  ```python
+  print(100)
+  ```

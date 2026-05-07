@@ -1,7 +1,6 @@
 
 ## Lösungen
 
-
 ### 1. **Einfache if-Abfrage**: 
 ```python
 if x > 10: 

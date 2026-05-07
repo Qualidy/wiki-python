@@ -1,0 +1,10 @@
+title: "String in Wörter aufteilen"
+difficulty: 1
+question: |
+  Erstelle einen String und teile ihn in Wörter auf.
+solution: |
+  ```python
+  text = "Dies ist ein Satz."
+  woerter = text.split()
+  print(woerter)
+  ```

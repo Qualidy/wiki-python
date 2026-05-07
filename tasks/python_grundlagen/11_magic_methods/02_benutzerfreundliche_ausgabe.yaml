@@ -1,0 +1,4 @@
+title: "Benutzerfreundliche Ausgabe"
+difficulty: 2
+question: |
+  Erstelle eine Klasse `Person` mit den Attributen `name` und `alter`. Implementiere die magische Methode `__str__`, um eine benutzerfreundliche Darstellung eines `Person`-Objekts zu ermöglichen, z.B., "Name: Max, Alter: 30".

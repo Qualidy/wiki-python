@@ -1,0 +1,20 @@
+title: "CSV-Zeile parsen"
+difficulty: 1
+question: |
+  Schreibe einen regulären Ausdruck, um Daten aus einer CSV-Zeile zu extrahieren. Die `,`-separierten Einträge
+  sollen dann in einer Liste erscheinen.
+
+  ```python
+  csv_line = "Alice,25,Female,Engineer"
+  ```
+solution: |
+  Schreibe einen regulären Ausdruck, um Daten aus einer CSV-Zeile zu extrahieren. Die `,`-separierten Einträge
+  sollen dann in einer Liste erscheinen.
+  
+  ```python
+  import re
+  csv_line = "Alice,25,Female,Engineer"
+  
+  fields = re.split(r',', csv_line)
+  print(fields)
+  ```

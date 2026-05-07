@@ -1,0 +1,35 @@
+title: "4: Bestellung in einem virtuellen Café"
+difficulty: 3
+question: |
+  Simuliere ein einfaches Bestellsystem für ein Café. Das Programm listet verschiedene Getränke und Speisen mit ihren
+  Preisen auf. Der Benutzer kann Artikel auswählen und die gewünschte Menge angeben. Das Programm führt eine laufende
+  Summe der Bestellung. Nachdem der Benutzer seine Auswahl abgeschlossen hat, zeigt das Programm die Gesamtsumme der
+  Bestellung an und fragt, ob der Benutzer bar oder mit Karte zahlen möchte.
+
+  ```python
+  menu = {"Kaffee": 2.50, "Tee": 2.00, "Kuchen": 3.00}
+  ```
+solution: |
+  ```python
+  menu = {"Kaffee": 2.50, "Tee": 2.00, "Kuchen": 3.00}
+  bestellung = []
+  summe = 0
+  
+  print("Menü:")
+  for artikel, preis in menu.items():
+      print(f"{artikel}: {preis} Euro")
+  
+  while True:
+      artikel = input("Wähle einen Artikel (oder 'fertig' zum Abschließen): ")
+      if artikel.lower() == "fertig":
+          break
+      elif artikel in menu:
+          menge = int(input(f"Wie viele von {artikel} möchtest du? "))
+          summe += menu[artikel] * menge
+      else:
+          print("Artikel nicht im Menü.")
+  
+  print(f"Gesamtsumme: {summe} Euro")
+  zahlung = input("Zahlst du bar oder mit Karte? ")
+  print(f"Bezahlt mit {zahlung}. Vielen Dank für deine Bestellung!")
+  ```

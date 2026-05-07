@@ -1,0 +1,8 @@
+title: "Index zum Element finden"
+difficulty: 1
+question: |
+  Finde den Index des Elements "Kirsche" im Tupel von Aufgabe 1.
+solution: |
+  ```python
+  print(fruechte.index("Kirsche")) # Gibt den Index von 'Kirsche' aus
+  ```

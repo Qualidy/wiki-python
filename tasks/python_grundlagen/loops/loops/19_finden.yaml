@@ -1,0 +1,26 @@
+title: "1: Finden"
+difficulty: 1
+question: |
+  Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt.
+  Schreibe eine Antwort mit und eine ohne die Verwendung von `continue`.
+solution: |
+  ```python
+  text = "Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt."
+  for word in text.split():
+      if len(word) > 8:
+          break
+  else:
+      word = ""
+  print(f"Erstes Wort mit mehr als 8 Buchstaben: {word}")
+  ```
+  
+  Code ohne  `continue`
+  ```python
+  text = "Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt."
+  first_word = ""
+  for word in text.split():
+      if not first_word and len(word) > 8:
+          first_word = word
+  
+  print(f"Erstes Wort mit mehr als 8 Buchstaben: {first_word}")
+  ```

@@ -1,0 +1,6 @@
+title: "Mehrere Operationen"
+difficulty: 1
+question: |
+  Finde das Ergebnis von `3 + 4 * 2 - 1`.
+solution: |
+  `print(3 + 4 * 2 - 1)  # 10, da Multiplikation vor Addition und Subtraktion ausgeführt wird`

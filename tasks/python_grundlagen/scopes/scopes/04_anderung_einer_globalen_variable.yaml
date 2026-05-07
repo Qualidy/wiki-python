@@ -1,0 +1,16 @@
+title: "Änderung einer globalen Variable"
+difficulty: 1
+question: |
+  Versuche, eine globale Variable innerhalb einer
+     Funktion zu ändern, ohne das `global`-Keyword zu verwenden.
+solution: |
+  ```python
+  global_var = "Urspr?nglich global"
+  
+  def test_aendern():
+     global_var = "Ge?ndert lokal"
+     print(global_var)
+  
+  test_aendern()
+  print(global_var)  # Bleibt unver?ndert "Urspr?nglich global"
+  ```

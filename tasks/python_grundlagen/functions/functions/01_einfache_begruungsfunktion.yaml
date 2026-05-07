@@ -1,0 +1,10 @@
+title: "Einfache Begrüßungsfunktion"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `begruesse()`, die "Hallo Welt!" ausgibt.
+solution: |
+  ```python
+  def begruesse():
+     print("Hallo Welt!")
+  begruesse()
+  ```

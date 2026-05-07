@@ -1,0 +1,8 @@
+title: "Ist das Element im Tupel"
+difficulty: 1
+question: |
+  Überprüfe, ob "Apfel" in dem Tupel von Aufgabe 1 enthalten ist.
+solution: |
+  ```python
+  print("Apfel" in fruechte) # Gibt True aus, falls Apfel enthalten ist
+  ```

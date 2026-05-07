@@ -1,0 +1,26 @@
+title: "Gepaarte Summen"
+difficulty: 2
+question: |
+  Erstelle eine Funktion `paired_sum`, die eine beliebige Anzahl von Parametern erlaubt.
+  Immer zwei Parameter werden addiert und zurückgegeben.
+  Die Rückgabe ist ein Tupel. 
+  Wenn eine ungerade Anzahl von Parametern übergeben wird,
+  dann wird eine Exception geworfen.
+
+  ```python
+  paired_sum(1, 2, 3, 4) # (3, 7)
+  paired_sum(1, 2, 3) # 
+  paired_sum() # (,) leeres Tupel
+
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>def paired_sum(*summands):
+      if len(summands) % 2:
+          raise Exception("Number of Arguments must be even.")
+
+      return tuple(a + b for a, b in zip(summands[::2], summands[1::2]))
+  </code></pre></details>
+tip: |
+  Wie kann man mit Slicing jedes zweite Element erreichen?
+  Wie kann man mit `zip` zwei Teillisten paralell durchlaufen?

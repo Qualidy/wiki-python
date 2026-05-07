@@ -1,0 +1,6 @@
+title: "Ganzzahlige Division"
+difficulty: 1
+question: |
+  Führe eine ganzzahlige Division von 17 durch 2 durch.
+solution: |
+  `print(17 // 2)  # 8`

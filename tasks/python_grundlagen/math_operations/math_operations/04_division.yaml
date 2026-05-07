@@ -1,0 +1,6 @@
+title: "Division"
+difficulty: 1
+question: |
+  Teile 16 durch 2.
+solution: |
+  `print(16 / 2)  # 8.0`

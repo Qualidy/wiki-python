@@ -1,0 +1,47 @@
+title: "Binäre Suche"
+difficulty: 3
+question: |
+  In dieser Aufgabe sollen sie die binäre Suche rekursiv implementieren.
+  Bei der binären Suche gehen hier davon aus, dass wir eine **sortierte** Liste haben.
+  In dieser Liste wird nach einem bestimmten Eintrag gesucht. Die Funktion `binary_search(my_list, element)` gibt also
+  `True` zurück, wenn der Eintrag in der Liste gefunden wurde und `False` anderfalls.
+
+  Ablauf der binären Suche: Man betrachtet zunächst das Element `m` genau in der Mitte der Liste.
+  Ist `m` bereits das gesuchte Element `e`, so sind wir fertig und können `True` zurückgeben.
+  Andernfalls suchen wir in der linken Teilliste von `m` weiter, wenn `m < e` ist.
+  Ist jedoch `m > e`, so suchen wir in der rechten Teilliste weiter. Die binäre Suche
+  beginnt also auf einem kleinen Problem immer wieder von vorn. Wenn wir jemals eine 
+  leere Liste durchsuchen sollen, wissen wir, dass `e` sich nicht in der Liste befindet
+  und wir können `False` zurückgeben.
+
+  ```mermaid
+  graph TD;
+      S(["Start<br/>Gesucht ist <b>e</b>"]) --> A{"Ist Liste leer?"}
+      A --Ja--> F([return False])
+      A --Nein--> M["Es sei <b>m</b> Element<br/>in der Mitte<br/>der Liste"]
+      M --> B{"m ? e"}
+      B --"m > e"--> C["Nehme die <br/>linke Teilliste"] --> A
+      B --"m < e"--> D["Nehme die <br/>rechte Teilliste"] --> A
+      B --"m == e"--> T(["return True"])
+  ```
+  ![](binary_sort_example.PNG)
+solution: |
+  ```python
+  def binary_search(my_list, element):
+      if len(my_list) == 0:
+          return False
+  
+      mid_index = len(my_list) // 2
+      mid_element = my_list[mid_index]
+  
+      if mid_element < element:
+          return binary_search(my_list[mid_index + 1:], element)
+      elif mid_element > element:
+          return binary_search(my_list[:mid_index], element)
+      else:
+          return True
+  
+  print(binary_search([1, 2, 3, 5, 6, 9, 10], 9))  # True
+  print(binary_search([1, 2, 3, 5, 6, 9, 10], 8))  # False
+  
+  ```

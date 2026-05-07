@@ -1,0 +1,7 @@
+title: "Wortliste sortieren"
+difficulty: 3
+question: |
+  Erstelle eine Liste von Wörtern und sortiere sie nach der Länge unter Verwendung der Funktionen `sorted` und `len` im funktionalen Stil. Teilschritte:
+     - Definiere eine Liste von Wörtern.
+     - Verwende die `sorted`-Funktion mit einer Lambda-Funktion als Schlüssel für die Sortierung. [Dokumentation](https://docs.python.org/3/howto/sorting.html#sorting-how-to)
+     - Gib die sortierte Liste aus.

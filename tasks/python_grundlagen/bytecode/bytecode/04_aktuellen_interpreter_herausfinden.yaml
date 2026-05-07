@@ -1,0 +1,10 @@
+title: "Aktuellen Interpreter herausfinden"
+difficulty: 1
+question: |
+  Wie kannst du herausfinden, welchen Interpreter du aktuell benutzt?
+solution: |
+  ```python
+  import platform
+  
+  print(platform.python_implementation())
+  ```

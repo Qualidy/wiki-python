@@ -1,0 +1,28 @@
+title: "Personalinformationen verarbeiten"
+difficulty: 3
+question: |
+  Schreibe eine Funktion namens `verarbeite_personalinformationen`, die personenbezogene Informationen entgegennimmt. Die Funktion sollte folgende Anforderungen erfüllen:
+
+  - Akzeptiere den Namen als Pflichtargument (`name`).
+  - Akzeptiere die E-Mail-Adresse, die Telefonnummer und das Geburtsdatum als optionale Argumente (`email`, `telefon`, `geburtsdatum`) mit Standardwerten `None`.
+  - Verarbeite die erhaltenen Informationen und gib einen formatierten Text aus, der alle Informationen enthält.
+
+  Beispielaufruf:
+
+  ```python
+  verarbeite_personalinformationen("Max Mustermann", email="max@example.com", telefon="123456789", geburtsdatum="01.01.1990")
+  ```
+
+  Erwartete Ausgabe:
+
+  ```
+  Name: Max Mustermann
+  E-Mail: max@example.com
+  Telefon: 123456789
+  Geburtsdatum: 01.01.1990
+  ```
+
+  Hinweise:
+  - Verwende `**kwargs` für die optionalen Argumente.
+  - Beachte die sinnvolle Verwendung von Standardwerten für die optionalen Argumente.
+  - Nutze die Funktion, um einen formatierten Text auszugeben, der alle erhaltenen Informationen enthält.

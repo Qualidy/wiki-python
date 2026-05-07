@@ -1,0 +1,8 @@
+title: Negation eines Booleans
+difficulty: 1
+question: |
+  Negiere einen booleschen Wert und gib das Ergebnis aus.
+solution: |
+  ```python
+  print(not True)
+  ```

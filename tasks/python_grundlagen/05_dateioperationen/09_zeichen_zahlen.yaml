@@ -1,0 +1,4 @@
+title: "Zeichen zählen"
+difficulty: 2
+question: |
+  Erstelle eine Funktion, die die Anzahl der Zeichen in einer Textdatei zählt und zurückgibt. Berücksichtige dabei auch Leerzeichen und Sonderzeichen.

@@ -1,11 +1,6 @@
 # Listen in Python
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5jd6BQPjiUY?si=4B9fwr7e_X3XhoVm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/5jd6BQPjiUY?si=4B9fwr7e_X3XhoVm") }}
 
 Listen in Python sind eine der grundlegendsten und nützlichsten Datentypen. Sie ermöglichen es uns, mehrere Elemente in
 einer einzigen Struktur zu speichern, auf die wir dann über ihre Indizes zugreifen können.
@@ -48,12 +43,7 @@ um eine Sammlung von Elementen zu speichern. Hier sind einige Schlüsseleigensch
   für einen immutablen Datentyp in Python ist ein Tupel, welches wir auch bald kennenlernen.
 
 ## Listenoperationen
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AyTdReLQ1lo?si=HGM6HhJ-8BvUe1BN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/AyTdReLQ1lo?si=HGM6HhJ-8BvUe1BN") }}
 
 [//]: # ([60min])
 
@@ -131,12 +121,7 @@ In diesem Beispiel:
 ### Slicing
 
 [//]: # ([45min])
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ukChKexq_BM?si=2p-zvDYEzwwJBhYN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/ukChKexq_BM?si=2p-zvDYEzwwJBhYN") }}
 
 Mit sogenannten Slices kann man auch direkt auf mehrere Elemente zugreifen:
 
@@ -166,33 +151,17 @@ finale_liste = liste1 + liste2
 print(finale_liste) # gibt [1,2,3,4,5,4,3,2,1] aus
 ```
 
-
 # Aufgaben
 
 [//]: # ([30min])
 
-### 1. **Erstellen einer Liste:** 🌶️️
-Erstelle eine Liste mit den Zahlen 1 bis 5.
-### 2. **Hinzufügen von Elementen:** 🌶️️
-Füge die Zahl 6 zur Liste `zahlen` hinzu.
-### 3. **Entfernen von Elementen:** 🌶️️
-Entferne die Zahl 3 aus der Liste `zahlen`.
-### 4. **Zugreifen auf ein Listenelement:** 🌶️️
-Greife auf das dritte Element in der Liste `zahlen` zu.
-### 5. **Listenlänge:** 🌶️️
-Finde heraus, wie lang die Liste `zahlen` ist.
-### 6. **Slicing:** 🌶️️🌶️️
-Erstelle eine neue Liste, die die ersten drei Elemente von `zahlen` enthält.
-### 7. **Elemente zählen:** 🌶️️🌶️️
-Zähle, wie oft die Zahl 2 in der Liste `zahlen` vorkommt.
-### 8. **Liste umkehren:** 🌶️️🌶️️
-Kehre die Reihenfolge der Elemente in der Liste `zahlen` um.
-### 9. **Liste sortieren:** 🌶️️🌶️️
-Sortiere die Liste `zahlen` in absteigender Reihenfolge.
-### 10. **Listen verschachteln:** 🌶️️🌶️️🌶️️
-Erstelle eine neue Liste `verschachtelt`, die zwei Listen enthält: die ursprüngliche
-    Liste `zahlen` und eine Liste mit den Buchstaben ['a', 'b', 'c'].
-
-[Lösungen](solutions.md)
-
-
+{{ task(file="tasks/python_grundlagen/lists/lists/01_erstellen_einer_liste.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/02_hinzufugen_von_elementen.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/03_entfernen_von_elementen.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/04_zugreifen_auf_ein_listenelement.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/05_listenlange.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/06_slicing.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/07_elemente_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/08_liste_umkehren.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/09_liste_sortieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/lists/lists/10_listen_verschachteln.yaml") }}

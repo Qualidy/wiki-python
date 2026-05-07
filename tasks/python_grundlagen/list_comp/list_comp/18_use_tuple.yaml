@@ -1,0 +1,8 @@
+title: "Use tuple"
+difficulty: 1
+question: |
+  Erstelle ein Tuple von Quadratzahlen mit Comprehension.
+solution: |
+  ```python
+  my_tuple = tuple(i ** 2 for i in range(11))
+  ```

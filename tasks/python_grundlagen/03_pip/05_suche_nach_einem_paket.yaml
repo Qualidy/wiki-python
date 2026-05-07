@@ -1,0 +1,4 @@
+title: "Suche nach einem Paket"
+difficulty: 1
+question: |
+  - Suche nach dem Paket "numpy" mit dem Befehl `pip search numpy`.

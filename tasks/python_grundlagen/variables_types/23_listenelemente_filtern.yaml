@@ -1,0 +1,8 @@
+title: Listenelemente filtern
+difficulty: 2
+question: |
+  Erstelle eine neue Liste aus der Liste von Aufgabe 1, die nur gerade Zahlen enthält.
+solution: |
+  ```python
+  gerade_zahlen = [i for i in liste if i % 2 == 0]
+  ```

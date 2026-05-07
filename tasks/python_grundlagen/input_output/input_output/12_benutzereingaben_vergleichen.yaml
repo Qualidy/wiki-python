@@ -1,0 +1,14 @@
+title: "Benutzereingaben vergleichen"
+difficulty: 3
+question: |
+  Frage den Benutzer zweimal nach einem Passwort. Gib eine Erfolgsmeldung aus, 
+  wenn beide Eingaben übereinstimmen, ansonsten eine Fehlermeldung.
+solution: |
+  ```python 
+  passwort1 = input("Passwort: ")
+  passwort2 = input("Passwort wiederholen: ")
+  if passwort1 == passwort2:
+      print("Erfolg")
+  else:
+      print("Die Passwörter stimmen nicht überein!")
+  ```

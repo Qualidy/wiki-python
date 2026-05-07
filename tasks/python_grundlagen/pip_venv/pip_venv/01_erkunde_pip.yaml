@@ -1,0 +1,19 @@
+title: "Erkunde `pip`"
+difficulty: 1
+question: |
+  1. **Überprüfung der Pip-Version**: Öffne ein Terminal und gib `pip --version` ein, um die installierte Pip-Version zu überprüfen.
+
+  2. **Auflistung installierter Pakete**: Mit dem Befehl `pip list` erhältst du eine Liste aller auf deinem System installierten Pakete.
+
+  3. **Suche nach Paketen**: Benutze `pip search PACKAGE_NAME`, um nach einem spezifischen Paket zu suchen. Ersetze `PACKAGE_NAME` mit dem Namen des gewünschten Pakets, wie z.B. `requests`.
+
+  4. **Paketinstallation**: Installiere ein Paket mit `pip install PACKAGE_NAME`, zum Beispiel `pip install requests`. Hinweis: In neueren Pip-Versionen (>3.10) könnte ein Fehler angezeigt werden, wenn versucht wird, ein Paket systemweit zu installieren.
+
+  <pre><code>
+  This environment is externally managed
+  ╰─> To install Python packages system-wide, try brew install
+      xyz, where xyz is the package you are trying to
+      install.
+
+  ...
+  </code></pre>

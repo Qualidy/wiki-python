@@ -1,0 +1,5 @@
+title: "Fahrzeugklasse"
+difficulty: 2
+question: |
+  Schreibe ein Programm, das basierend auf dem Gewicht eines Fahrzeugs eine Kategorie
+  (Leicht, Mittel, Schwer) zuweist.

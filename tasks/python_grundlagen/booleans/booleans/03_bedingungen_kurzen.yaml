@@ -1,0 +1,77 @@
+title: "Bedingungen kürzen"
+difficulty: 2
+question: |
+  Kürze den folgenden Code in den if-Bedingungen.
+
+  ```python
+  zahl = ...
+
+  if zahl % 2 == 0: 
+      print("Die Zahl ist gerade.") 
+  else:   
+      print("Die Zahl ist ungerade.")
+  ```
+
+  ```python
+  value = ...
+
+  if value == True: 
+      print("Case 1") 
+  else:   
+      print("Case 2")
+  ```
+
+  ```python
+  value = ...
+  my_list = ...
+
+  if False == value and len(my_list) > 0: 
+      print("Case 1") 
+  else:   
+      print("Case 2")
+  ```
+
+  ```python
+  def func(var):
+      if var > 5:
+          return True
+      else:
+          return False
+  ```
+solution: |
+  {{ youtube_video("https://www.youtube.com/embed/R1BGjaviHbc?si=iSW6y1BEFb1UIs_V") }}
+  
+  Kürze den folgenden Code in den if-Bedingungen.
+  
+  ```python
+  zahl = ...
+  
+  if not zahl % 2: 
+      print("Die Zahl ist gerade.") 
+  else:   
+      print("Die Zahl ist ungerade.")
+  ```
+  
+  ```python
+  value = ...
+  
+  if value: 
+      print("Case 1") 
+  else:   
+      print("Case 2")
+  ```
+  
+  ```python
+  value = ...
+  my_list = ...
+  
+  if not value and my_list: 
+      print("Case 1") 
+  else:   
+      print("Case 2")
+  ```
+  
+  ```python
+  def func(var):
+      return var > 5
+  ```

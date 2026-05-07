@@ -1,0 +1,85 @@
+title: "Es steckt mehr dahinter"
+difficulty: 2
+question: |
+  Sage voraus, was bei folgendem Code ausgegeben wird. Beantworte daraufhin folgende Fragen:
+
+  * Wie werden dei Booleans `True` und `False` bei `*`, `+`, `-` interpretiert?
+  * Wie funktioniert `and`?
+  * Wie funktioniert `or`?
+
+  ```python
+  print(True + 3)
+
+  print(True + True)
+  print(True + True + True)
+  print(True * True)
+  print(True * False)
+
+  print(True - True)
+
+  print(True and False)
+  print(True or False)
+
+  print(0 and 1)
+  print(1 and 2)
+  print(2 and 1)
+
+  print(0 or 1)
+  print([] or [1, 2, 3])
+  print(2 or 10)
+  print([1, 2, 3] or [4, 5, 6])
+  ```
+solution: |
+  {{ youtube_video("https://www.youtube.com/embed/8DB1M9Q-vOk?si=LIsZbCJMVJnRdaQC") }}
+  
+  ```python
+  print(True + 3) # 4
+  
+  print(True + True) # 2
+  print(True + True + True) # 3
+  print(True * True) # 1
+  print(True * False) # 0
+  
+  print(True - True) # 0
+  
+  print(True and False) # False
+  print(True or False) # True
+  
+  print(0 and 1) # 0
+  print(1 and 2) # 2
+  print(2 and 1) # 1
+  
+  print(0 or 1) # 
+  print([] or [1, 2, 3])
+  print(2 or 10)
+  print([1, 2, 3] or [4, 5, 6])
+  ```
+  **Wie werden dei Booleans `True` und `False` bei `*`, `+`, `-` interpretiert?**
+  
+  Booleans werden bei mathematische Operationen zu Integern übersetzt.
+  `True` zu `1` und `False` zu `0`.
+  
+  **Wie funktioniert `and`?**
+  
+  Wenn das erste Argument zu `True` auswertet, dann wird das zweite Argument
+  zurückgegeben, sonst das erste. `and` entspricht also folgendem Code:
+  
+  ```python
+  def my_and(a, b):
+      if a:
+          return b
+      else:
+          return a
+  ```
+  
+  **Wie funktioniert `and`?** Wenn das erste Argument zu `True` auswertet,
+  dann wird das zweite Argument zurückgegeben, sonst das erste.
+  `or` entspricht also folgendem Code:
+  
+  ```python
+  def my_or(a, b):
+      if a:
+          return a
+      else:
+          return b
+  ```

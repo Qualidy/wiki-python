@@ -1,0 +1,222 @@
+title: "Weiter mit Punkten"
+difficulty: 3
+question: |
+  Implementiere die passende Methode, sodass die Subraktion `A - B` zweier Punkte möglich ist.
+
+  Implementieren sie außerdem die passende Methode, um die Prüfung `A == B` durchzuführen,
+  mit der man zwei Punkte auf Gleichheit prüfen kann. Zwei Punkte sind gleich,
+  wenn alle Attribute (`x` und `y` übereinstimmen).
+
+  Wenn alles richtig eingestellt wurde, müsste dieser Test funktionieren:
+
+  ```python
+  from unittest import TestCase
+
+  class PunktTest(TestCase):
+
+      def test_equality_0(self):
+          self.assertEqual(Punkt(1, 2), Punkt(1, 2))
+
+      def test_equality_1(self):
+          self.assertNotEqual(Punkt(1, 2), Punkt(2, 1))
+
+      def test_equality_2(self):
+          self.assertNotEqual(Punkt(1, 2), (1, 2))
+
+      def test_sub_0(self):
+          a, b = Punkt(2, 1), Punkt(-1, 2)
+          self.assertEqual(a - b, Punkt(3, -1))
+
+      def test_sub_1(self):
+          a = Punkt(2, 1)
+          self.assertEqual(a - a, Punkt(0, 0))
+
+      def test_sub_2(self):
+          a = Punkt(2, 1)
+          a -= Punkt(-1, 2)
+          self.assertEqual(a, Punkt(3, -1))
+      
+      def test_sub_3(self):
+          with self.assertRaises(TypeError):
+              Punkt(3, 2) - 4
+  ```
+
+  {{ youtube_video("https://www.youtube.com/embed/Mk_lv8_puuE?si=qxUZPOy2Kb378q7-") }}
+  <pre><code>
+  class Punkt:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+
+      def __str__(self):
+          return f"({self.x}, {self.y})"
+
+      def __add__(self, other):
+          if isinstance(other, Punkt):
+              return Punkt(self.x + other.x, self.y + other.y)
+          else:
+              raise TypeError("Unsupported operand type. Use with another Punkt object.")
+
+      def __eq__(self, other):
+          return (isinstance(other, Punkt)
+                  and self.x == other.x
+                  and self.y == other.y)
+
+      def __sub__(self, other):
+          if other.isinstance(other, Punkt):
+              return Punkt(self.x - other.x, self.y - other.y)
+          else:
+              raise TypeError("Unsupported operand type. Use with another Punkt object.")
+  </code></pre>
+  </details>
+
+  **Multiplizieren von Rechts**
+
+  Implementieren Sie nun die Möglichkeit einen Punkt mit einer Zahl zu skalieren,
+  sodass z.B. `Punkt(1,2) * 4` als Ergebnis `Punkt(4,8)` ergibt.
+  Wenn mit einem anderen Typ als `int` oder `float` multipliziert wird,
+  so werfe einen `TypeError`.
+
+  Kannst du `__sub__` so anpassen, dass die 
+  Multiplikation und die Addition verwendet wird?
+
+  P - Q = P + Q * (-1)
+
+  Achte darauf, 
+  dass die bisherigen Tests funktionieren
+  und diese neuen:
+
+  ```python
+      def test_mul_0(self):
+          self.assertEqual(Punkt(1, 2) * 4, Punkt(4, 8))
+
+      def test_mul_1(self):
+          self.assertEqual(Punkt(0, 0) * 4, Punkt(0, 0))
+
+      def test_mul_2(self):
+          self.assertEqual(Punkt(1, 4) * 0, Punkt(0, 0))
+
+      def test_mul_3(self):
+          self.assertEqual(Punkt(3, -2) * -1, Punkt(-3, 2))
+
+      def test_mul_4(self):
+          self.assertEqual(Punkt(3.5, 0.5) * 2, Punkt(7, 1))
+
+      def test_mul_5(self):
+          self.assertEqual(Punkt(0.1, 0.2) * 1.5, Punkt(0.15, 0.3))
+
+      def test_mul_6(self):
+          a = Punkt(2, 1)
+          a *= 0.2
+          self.assertEqual(a, Punkt(0.4, 0.2))
+          
+      def test_mul_7(self):
+          with self.assertRaises(TypeError):
+              Punkt(2, 1) * "Hallo"
+              
+      def test_sub_3(self):
+          with self.assertRaises(TypeError):
+              Punkt(2, 1) - 1
+
+  ```
+
+  {{ youtube_video("https://www.youtube.com/embed/-_XeHICvLvM?si=vDo5yApVZ-ecgY9A") }}
+  <pre><code>def __eq__(self, other):
+          return (isinstance(other, Punkt) 
+                  and isclose(self.x, other.x) 
+                  and isclose(self.y, other.y))
+
+      def __sub__(self, other):
+          return self + other * (-1)
+
+      def __mul__(self, other):
+          if isinstance(other, int | float):
+              return Punkt(self.x * other, self.y * other)
+          else:
+              raise TypeError("Unsupported operand type. Use int or float")
+  </code></pre></details>
+
+  **Zugriff wie bei Listen**
+
+  Sorge nun mit den richtigen Methoden dafür, dass es möglich ist auf den `x`-Wert über den Index `0` oder `-2`
+  erreichbar ist und dass der `y`-Wert über den Index `1` oder `-1` erreichbar ist. Die folgenden Tests
+  sollen grün werden:
+
+  ```python
+      def test_read_0(self):
+          a = Punkt(2, 1)
+          self.assertEqual(2, a[0])
+
+      def test_read_1(self):
+          a = Punkt(2, 1)
+          self.assertEqual(1, a[1])
+
+      def test_read_2(self):
+          a = Punkt(2, 1)
+          with self.assertRaises(IndexError):
+              b = a[2]
+
+      def test_read_4(self):
+          a = Punkt(2, 1)
+          self.assertEqual(2, a[-2])
+
+      def test_read_5(self):
+          a = Punkt(2, 1)
+          self.assertEqual(1, a[-1])
+
+      def test_read_6(self):
+          a = Punkt(2, 1)
+          with self.assertRaises(IndexError):
+              b = a[-3]
+
+      def test_set_0(self):
+          a = Punkt(2, 1)
+          a[0] = 0
+          self.assertEqual(a, Punkt(0,1))
+
+      def test_set_1(self):
+          a = Punkt(2, 1)
+          a[1] = 0
+          self.assertEqual(a, Punkt(2,0))
+
+      def test_set_2(self):
+          a = Punkt(2, 1)
+          with self.assertRaises(IndexError):
+              a[3] = 4
+
+      def test_set_4(self):
+          a = Punkt(2, 1)
+          a[-1] = 0
+          self.assertEqual(a, Punkt(2, 0))
+
+      def test_set_5(self):
+          a = Punkt(2, 1)
+          a[-2] = 0
+          self.assertEqual(a, Punkt(0,1))
+
+      def test_set_6(self):
+          a = Punkt(2, 1)
+          with self.assertRaises(IndexError):
+              a[-3] = 4
+  ```
+
+  Ganz schön viele Tests, wa? 😉
+
+  {{ youtube_video("https://www.youtube.com/embed/9grwdOYmjSo?si=fkbyyrGxp4ANYy1z") }}
+  <pre><code>
+      def __getitem__(self, item):
+          if item in [0, -2]:
+              return self.x
+          elif item in [1, -1]:
+              return self.y
+          else:
+              raise IndexError("Index muss 0 für x oder 1 für y sein.")
+
+      def __setitem__(self, key, value):
+          if key in [0, -2]:
+              self.x = value
+          elif key in [1, -1]:
+              self.y = value
+          else:
+              raise IndexError("Index muss 0 für x oder 1 für y sein.")
+  </code></pre></details>

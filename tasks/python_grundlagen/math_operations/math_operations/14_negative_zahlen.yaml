@@ -1,0 +1,6 @@
+title: "Negative Zahlen"
+difficulty: 1
+question: |
+  Berechne das Produkt von -3 und 3.
+solution: |
+  `print(-3 * 3)  # -9`

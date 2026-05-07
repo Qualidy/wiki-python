@@ -36,29 +36,22 @@ o: type = int
 def get_rest(zaehler: int, nenner: int) -> int:
     return zaehler // nenner
 
-
 from typing import Optional
-
 
 def greeting(name: str, alter: Optional[int] = None):
     if alter is not None and alter > 60:
         return f"Einen wunderschönen Tag, {name}."
     return f"Was geht, {name}?"
 
-
 def calculate_average(list_of_ints: list[int]) -> float:
     return sum(list_of_ints) / len(list_of_ints)
 
-
 from typing import Tuple, List
-
 
 def min_max(list_of_floats: List[float]) -> Tuple[float, float]:
     return min(list_of_floats), max(list_of_floats)
 
-
 from typing import Any
-
 
 # def behave_different(value: tuple | int | Any) -> tuple | float | None:
 def behave_different(value: tuple | int | Any) -> Optional[tuple | float]:

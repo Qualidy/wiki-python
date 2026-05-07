@@ -1,0 +1,8 @@
+title: "Auf Tupelelemente zugreifen"
+difficulty: 1
+question: |
+  Zugriff auf das zweite Element im Tupel von Aufgabe 1.
+solution: |
+  ```python 
+  print(fruechte[1]) # Gibt 'Banane' aus
+  ```

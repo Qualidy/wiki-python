@@ -1,0 +1,4 @@
+title: "Restaurantreservierungssystem"
+difficulty: 4
+question: |
+  Baue ein System zur Reservierung von Restauranttischen. Erstelle Klassen für Restaurants, Tische und Reservierungen. Die Restaurantklasse sollte Informationen wie Name und verfügbare Tische haben. Die Tischklasse sollte Attribute wie Kapazität und Verfügbarkeit enthalten. Die Reservierungsklasse sollte Methoden zum Reservieren und Stornieren von Tischen haben.

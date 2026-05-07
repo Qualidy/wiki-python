@@ -1,0 +1,14 @@
+title: "1: Persönliche Statistik"
+difficulty: 3
+question: |
+  [45min]
+
+  Aufgabenstellung:
+
+  - Schreibe ein Python-Programm, das verschiedene persönliche Informationen von einem Benutzer erfragt: Name (String), Alter (Integer), Größe in Metern (Float) und Lieblingsfarben (Liste von Strings).
+  - Das Programm soll dann diese Informationen jeweils in einem formatierten String ausgeben.
+  - Für die Lieblingsfarben soll der Benutzer mehrere Farben eingeben können, getrennt durch Kommas.
+  - Wie können die Farben intern als eine Liste gespeichert werden?
+  - Das Programm soll die Anzahl der eingegebenen Lieblingsfarben berechnen und ausgeben.
+solution: |
+  ```python

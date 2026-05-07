@@ -1,0 +1,6 @@
+title: "Kombination von statischen und Klassenmethoden"
+difficulty: 4
+question: |
+  Entwickle eine Klasse `StringManipulator` mit einer statischen Methode `reverse_string`, die einen übergebenen String umkehrt, und einer Klassenmethode `capitalize_string`, die einen übergebenen String in Großbuchstaben umwandelt. Kombiniere beide Methoden, indem du einen String erst umkehrst und dann das Ergebnis großschreibst. Demonstriere die Anwendung dieser Methoden.
+
+  Diese praktischen Aufgaben sollen dir helfen, die Konzepte der statischen Methoden und Klassenmethoden in Python besser zu verstehen und in realen Situationen anzuwenden.

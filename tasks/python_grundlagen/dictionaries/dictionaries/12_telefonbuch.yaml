@@ -1,0 +1,62 @@
+title: "2: Telefonbuch"
+difficulty: 2
+question: |
+  Erstelle ein einfaches Telefonbuch-Programm, das es dem Benutzer ermöglicht, Namen und Telefonnummern hinzuzufügen, zu
+  suchen, zu ändern und zu löschen. Verwende ein Dictionary zur Speicherung der Daten. Das Programm soll fortlaufend
+  laufen, bis der Benutzer sich entscheidet, es zu beenden. Achte darauf, dass es nicht bei Fehleingaben abstürzt.
+
+  ```python
+  telefonbuch = {}
+
+  while True:
+      aktion = input("Wähle eine Aktion: anzeigen, hinzufügen, suchen, ändern, löschen, beenden: ")
+
+      if aktion == "beenden":
+          ...
+      elif aktion == "hinzufügen":
+          ...
+      elif aktion == "suchen":
+          ...
+      elif aktion == "ändern":
+          ...
+      elif aktion == "löschen":
+          ...
+      elif aktion == "anzeigen":
+          ...
+      else:
+          ...
+  ```
+solution: |
+  ```python
+  telefonbuch = {}
+  
+  while True:
+      aktion = input("W?hle eine Aktion: hinzuf?gen, suchen, ?ndern, l?schen, anzeigen, beenden: ")
+  
+      if aktion == "beenden":
+          break
+      elif aktion == "hinzuf?gen":
+          name = input("Name: ")
+          nummer = input("Telefonnummer: ")
+          telefonbuch[name] = nummer
+      elif aktion == "suchen":
+          name = input("Name: ")
+          print(telefonbuch.get(name, "Nicht gefunden"))
+      elif aktion == "?ndern":
+          name = input("Name: ")
+          if name in telefonbuch:
+              nummer = input("Neue Telefonnummer: ")
+              telefonbuch[name] = nummer
+          else:
+              print("Name nicht im Telefonbuch")
+      elif aktion == "l?schen":
+          name = input("Name: ")
+          if name in telefonbuch:
+              del telefonbuch[name]
+          else:
+              print("Name nicht im Telefonbuch")
+      elif aktion == "anzeigen":
+          print(telefonbuch)
+      else:
+          print("Unbekannte Aktion")
+  ```

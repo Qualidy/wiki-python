@@ -21,14 +21,12 @@ print(isinstance(s, Rectangle)) # True
 ```python
 from math import isclose
 
-
 class Form:
     def umfang(self):
         raise NotImplementedError("Kann nicht für diese Allgemeine Form bestimmt werden")
 
     def inhalt(self):
         raise NotImplementedError("Kann nicht für diese Allgemeine Form bestimmt werden")
-
 
 class Dreieck(Form):
     def __init__(self, size_a, size_b, size_c):
@@ -49,7 +47,6 @@ class Dreieck(Form):
         squared_sizes.sort()
         return isclose(squared_sizes[0] + squared_sizes[1], squared_sizes[2])
 
-
 class Kreis(Form):
     PI = 3.14159265358979323846
 
@@ -62,7 +59,6 @@ class Kreis(Form):
     def inhalt(self):
         return self.PI * self.radius ** 2
 
-
 class Viereck(Form):
     def __init__(self, size_a, size_b, size_c, size_d):
         self.size_a = size_a
@@ -72,7 +68,6 @@ class Viereck(Form):
 
     def umfang(self):
         return self.size_a + self.size_b + self.size_c + self.size_d
-
 
 class Parallelogramm(Viereck):
     def __init__(self, size_a, size_b):

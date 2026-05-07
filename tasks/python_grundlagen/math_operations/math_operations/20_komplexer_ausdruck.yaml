@@ -1,0 +1,6 @@
+title: "Komplexer Ausdruck"
+difficulty: 1
+question: |
+  Berechne den Wert von `(3 + 4) * (5 - 2) ** 2`.
+solution: |
+  `print((3 + 4) * (5 - 2) ** 2)  # 49, da zuerst die Klammern, dann die Potenzierung und zuletzt die Multiplikation ausgeführt wird`

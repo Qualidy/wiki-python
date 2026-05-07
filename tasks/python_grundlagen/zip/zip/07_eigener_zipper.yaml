@@ -1,0 +1,12 @@
+title: "Eigener Zipper"
+difficulty: 3
+question: |
+  Baue eine Funktion `my_zip(list1, list2)`, die die Funktionalität von `zip` für zwei Listen imitiert, ohne
+  die Funktion `zip` zu verwenden. Dabei muss kein Generator erstellt werden, sondern es genügt direkt die
+  Liste von Paaren zurückzugeben.
+solution: |
+  ```python
+  def my_zipper(list1, list2):
+      shortest_length = min(len(list1), len(list2))
+      return [(list1[i], list2[i]) for i in range(shortest_length)]
+  ```

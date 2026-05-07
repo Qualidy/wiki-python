@@ -1,0 +1,13 @@
+title: "Das erste Programm"
+difficulty: 1
+question: |
+  [//]: # ([25min; bis es bei jedem klappt])
+
+  1. Führe den folgenden Code mit der Python-Konsole aus
+  2. Führe den folgenden Code in VSCode aus
+  3. Führe den folgenden Code in PyCharm aus
+  4. Führe den folgenden Code in einem Jupyter Notebook aus
+
+  ```python
+  print("Hello Wolfsburg! Das ist mein erstes Programm!")
+  ```

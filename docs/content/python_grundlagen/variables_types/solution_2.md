@@ -2,7 +2,6 @@
 
 ## Lists, Tupels, Sets, Dictionaries
 
-
 ### 1. **Liste erstellen**
 
 ```python
@@ -18,7 +17,6 @@ tupel = (1, 2, 3)
 liste = list(tupel)
 ```
 
-
 ### 3. **Liste invertieren**
 
 ```python
@@ -30,7 +28,6 @@ liste = liste[::-1]
 ```python
 tupel = tuple(liste[:3])
 ```
-
 
 ### 5.. **Liste von Tupeln**
 

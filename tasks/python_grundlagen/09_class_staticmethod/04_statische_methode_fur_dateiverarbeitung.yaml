@@ -1,0 +1,4 @@
+title: "Statische Methode für Dateiverarbeitung"
+difficulty: 2
+question: |
+  Erstelle eine Klasse, die eine statische Methode `read_file` enthält. Die Methode soll den Inhalt einer Textdatei einlesen und zurückgeben. Demonstriere die Verwendung dieser Methode, indem du eine Textdatei liest und den Inhalt ausgibst.

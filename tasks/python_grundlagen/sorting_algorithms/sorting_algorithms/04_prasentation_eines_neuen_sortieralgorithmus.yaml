@@ -1,0 +1,31 @@
+title: "Präsentation eines neuen Sortieralgorithmus 👨‍🏫👩‍🏫"
+question: |
+  Auch als Informatiker ist es wichtig, sicher vor Menschen sprechen zu können und seine Ergebnisse
+  ansprechend und verständlich zu präsentieren. Daher sollen sie einen Vortag zu einem Sortieralgorithmus vorbereiten.
+
+  * Wählen Sie ein Sortierverfahren aus und sprechen Sie dieses mit ihrem Dozenten ab. Hier finden sie eine Liste von [vielen weiteren Sortierverfahren](https://de.wikipedia.org/wiki/Sortierverfahren).
+  * Implementieren Sie das Sortierverfahren. Sie müssen in der Lage sein, ihre Implementierung vollständig vor Publikum zu coden und live anzupassen. Von Null an.
+  * Wenn möglich, erstellen sie eine Visualisierung für das Verfahren. Sonst nutzen sie eine Bestehende.
+  * Bereiten Sie sich darauf vor die Funktionalität und die Eigenschaften des Sortierverfahrens zu erklären. Achtung: Es kommt überhaupt nicht gut, wenn man Eigenschaften nennt, die man nicht erklären kann. Wer also z.B. sagt, dass der Algorithmus "stabil" ist, der muss auch erklären können, was das bedeutet.
+  * Überlegen Sie sich auch Randbeispiele, das heißt, die Fälle, in denen Ihr Algorithmus besonders langsam oder schnell ist.
+  * Überlegen Sie sich, wie sie den Sortieralgorithmus ansprechend und verständlich präsentieren können. Ziel dabei ist des, einen fachfremden Zuhörer in die Lage zu versetzen, dass er diesen Sortieralgorithmus anzuwenden (z.B. mit ein gemischten Stapel Spielkarten) 
+  * Erstellen Sie eine ansprechende uns aussagekräftige Markdowndatei. Diese wird dann hier ins Wiki eingepflegt.
+  * Üben Sie die Präsentation und präsentieren sie diese.
+
+  Ziel der Präsentation:
+
+  * Die Zuhörer sollen in der Lage sein, den Sortieralgorithmus mit einem Stapel gemischter Spielkarten vor Ort durchzuführen.
+  * Die Zuhörer sollen in der Lage sein den Algorithmus zu implementieren (Wenn sie aus dem Kurs sind).
+
+  Wir werden auch die Mentoren als Zuhörer einladen 😉
+solution: |
+  Eine gute Abgabe enth?lt:
+  
+  - eine eigene, lauff?hige Implementierung des gew?hlten Sortieralgorithmus,
+  - eine kurze Erkl?rung der Grundidee in Alltagssprache,
+  - ein kleines Beispiel, das Schritt f?r Schritt sortiert wird,
+  - eine Einordnung von Laufzeit, Speicherbedarf und Stabilit?t,
+  - mindestens ein Randbeispiel, bei dem der Algorithmus besonders gut oder schlecht ist,
+  - eine kurze Markdown-Dokumentation mit Codebeispiel.
+  
+  F?r die Pr?sentation sollte der Algorithmus so erkl?rt werden, dass ihn jemand mit Spielkarten nachmachen kann.

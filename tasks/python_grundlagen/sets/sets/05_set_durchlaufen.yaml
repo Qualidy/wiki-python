@@ -1,0 +1,10 @@
+title: "Set Durchlaufen"
+difficulty: 1
+question: |
+  Durchlaufe ein Set in einer Schleife und drucke jedes Element aus.
+solution: |
+  ```python
+  mein_set = {1, 2, 3, 4, 5}
+  for element in mein_set:
+     print(element)
+  ```

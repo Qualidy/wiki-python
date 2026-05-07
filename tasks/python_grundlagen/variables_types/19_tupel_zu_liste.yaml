@@ -1,0 +1,9 @@
+title: Tupel zu Liste
+difficulty: 1
+question: |
+  Konvertiere das Tupel `(1, 2, 3)` in eine Liste.
+solution: |
+  ```python
+  tupel = (1, 2, 3)
+  liste = list(tupel)
+  ```

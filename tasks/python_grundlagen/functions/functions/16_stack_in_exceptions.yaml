@@ -1,0 +1,156 @@
+title: "Stack in Exceptions"
+difficulty: 2
+question: |
+  Nico hat sich ein Pythonprogramm geschrieben, um seine monatlichen Kosten
+  für SMSs zu berechnen. Dieses führt jedoch zu einem Fehler, wenn man es ausführt.
+
+  ```python
+  # Erstellt eine Liste mit den zu Zahlenden SMS's
+  def remove_free_sms(
+      smss_per_month,
+      free_sms_per_month):
+      
+      to_pay  = []
+      for smss in smss_per_month:
+          sms_to_pay = smss - free_sms_per_month
+          if sms_to_pay > 0:
+              to_pay.append(sms_to_pay)
+      return to_pay
+      
+      
+  # Berechnet den Durchschnittspreis basierend auf dem
+  # Gesamtpreis und der Anzahl der Einträge auf denen
+  # sich dieser aufteilt.
+  def calc_average_price(price, number_of_entries):
+      return price / number_of_entries
+
+  # Berechnet die Durchschnittlichen Kosten pro Monat
+  def calculate_average_cost_per_month(
+      smss_per_month, 
+      free_sms_per_month,
+      cost_per_sms):
+          
+      to_pay = remove_free_sms(smss_per_month, free_sms_per_month)
+      price = sum(to_pay) * cost_per_sms
+      number_of_entries = len(to_pay)
+      average_price = calc_average_price(price, number_of_entries)
+      return average_price
+
+  smss = [23,9,11,23,10,12]
+
+  average_price_A = calculate_average_cost_per_month(smss, 10, 0.04)
+  average_price_B = calculate_average_cost_per_month(smss, 30, 0.06)
+  ```
+
+  Auf der Konsole erscheint folgender Fehler:
+  ```commandline
+  Traceback (most recent call last):
+    File "C:\Users\Nico\myProject\sms_calculator.py", line 36, in <module>
+      average_price_B = calculate_average_cost_per_month(smss, 30, 0.06)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\Nico\myProject\sms_calculator.py", line 29, in calculate_average_cost_per_month
+      average_price = calc_average_price(price, number_of_entries)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\Nico\myProject\sms_calculator.py", line 18, in calc_average_price
+      return price / number_of_entries
+             ~~~~~~^~~~~~~~~~~~~~~~~~~
+  ZeroDivisionError: float division by zero
+  ```
+
+  * Welcher Fehler ist passiert?
+  * In welcher Methode ist der Fehler passiert?
+  * In welcher Methode wurde diese Methode aufgerufen?
+  * Wo wurde diese zweite Methode wiederum aufgerufen?
+
+  ### Aufgabe: Callstack im Debugger🌶
+  Kopiere den obigen Code in eine IDE deiner Wahl. Setze einen Breakpoint in Zeile 18.
+  Starte den Debugger.
+
+  Wo findest du den Callstack der Aufgerufenen Funktonen?
+  Was siehst du, wenn du durch diesen klickst?
+
+  ### Aufgabe: SMS-Calculator reparieren🌶🌶
+
+  Repariere das obige Programm von Nico.
+
+  ## Funktionen als First Class Citizens
+
+  {{ youtube_video("https://www.youtube.com/embed/WlEBj5i3Cpc?si=gDY8AS8z836GfM8V") }}
+
+  Funktionen sind in Python selbst auch Objekte. Das heißt sie können als Argumente übergeben werden.
+
+  Als beispiel sei im Folgenden eine Funktion definiert, die mit jeweils zwei Listenelementen eine Operation durchführt
+  und die Ergebnisse in einer neuen Liste speichert (wir gehen mal davon aus, dass die Liste immer eine gerade Anzahl
+  von Elementen enthält). Welche Operation das ist, wird auch über eine Parameter festgelegt.
+
+  [💻 Online Compiler](https://pythontutor.com/render.html#code=def%20combine2%28my_list,%20operation%29%3A%0A%20%20%20%20result%20%3D%20%5B%5D%0A%20%20%20%20for%20i%20in%20range%280,%20len%28my_list%29,2%29%3A%0A%20%20%20%20%20%20%20%20first%20%3D%20my_list%5Bi%5D%0A%20%20%20%20%20%20%20%20second%20%3D%20my_list%5Bi%2B1%5D%0A%20%20%20%20%20%20%20%20r%20%3D%20operation%28first,%20second%29%0A%20%20%20%20%20%20%20%20result.append%28r%29%0A%20%20%20%20return%20result%0A%20%20%20%20%0Adef%20add%28a,%20b%29%3A%0A%20%20%20%20return%20a%2Bb%0A%20%20%20%20%0Acombined_list%20%3D%20combine2%28%5B1,%202,%20True,%20False,%20%22hey%22,%20%22du%22%5D,%20add%29%0Aprint%28combined_list%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+  ```python
+  def combine2(my_list, operation):
+      result = []
+      for i in range(0, len(my_list),2):
+          first = my_list[i]
+          second = my_list[i+1]
+          r = operation(first, second)
+          result.append(r)
+      return result
+      
+  def add(a, b):
+      return a+b
+      
+  combined_list = combine2([1, 2, True, False, "hey", "du"], add)
+  print(combined_list)
+  ```
+
+  Beachte, dass hier in Zeile 13 nur der Funktionsname `add` als Argument übergeben wird, die runden Klammern fehlen
+  (nicht `add()`)! Denn wenn wir hinter einem Funktionsnamen Klammern schreiben, sagen wir damit, dass die Funktion
+  auch ausgeführt wird. Ohne Klammern meinen wir die Funktion als Objekt und können sie hier übergeben.
+
+  Man kann sich das so vorstellen: Eine **Frage** kann etwas sein, dass gestellt wird, um eine Antwort auf diese Frage
+  zu bekommen, oder ich kann die Frage auch jemanden mitgeben, dass er diese Frage zu einem späteren Zeitpunkt stellt.
+  In dem einen Fall, soll die Frage sofort beantwortet (ausgeführt) werden, im anderen Fall geben wir die Frage mit
+  und das Fragen stellen (die Ausführung) kommt später.
+
+  ![](comic.jpg)
+
+  ### Aufgabe: Multiplizieren statt addieren🌶
+  Füge beim obigen Code eine Funktion `multiply(a,b)` hinzu, die die beiden Parameter `a` und `b` miteinander
+  multipliziert. Die folgenden Outputs sollen dann erscheinen:
+
+  ```python
+  combine2([3,6,"Hallo",2], multiply) # [18, "HalloHallo"]
+  ```
+
+  ### Aufgabe: Filtern🌶🌶🌶
+
+  Definiere eine Funktion `smaller_than_5(n)`, die prüft, ob der Parameter `n` kleiner als 5 ist. Wenn ja, soll
+  `True` zurückgegeben werden, andernfalls `False`.
+
+  Definiere eine Funktion namens `my_filter(my_list, predicate)`, die eine Liste `my_list` und eine Methode 
+  `predicate` erwartet. Der Methode `predicate` liefert Boolean zurück (also `True` oder `False`) und soll
+  ein Kriterium sein, nach dem Elemente aus der Liste _herausgefiltert_ werden. Beispiel für dei Ausgabe:
+
+  ```python
+  my_filter([3, 10, -3, 5, 4, 22, 9, -5], smaller_than_5) # [3, -3, 4, -5]
+  my_filter([15, 29, 5], smaller_than_5) # []
+  ```
+
+  ## Parameterübergabe
+
+  {{ youtube_video("https://www.youtube.com/embed/9_PVRQknJ7M?si=r0qpc1aUbfuDuSmc") }}
+
+  Jetzt wird es noch einmal **wirklich wichtig**. Es geht darum, was eigentlich an die Funktionen
+  genau übergeben wird, wenn wir die Argumente festlegen.
+
+  Schau dir dazu den folgenden Code an und sage voraus, was der Output sein wird:
+
+  [💻 Online Compiler](https://pythontutor.com/render.html#code=%23%20Primitive%20Types%20as%20Arguments%0Adef%20change_number%28number%29%3A%0A%20%20%20%20number%20%3D%200%20%0A%0Amy_number%20%3D%2010%0Achange_number%28my_number%29%0Aprint%28my_number%29%0A%0A%0A%23%20Complex%20Types%20as%20Arguments%0Adef%20change_value%28sequence%29%3A%0A%20%20%20%20sequence%5B0%5D%20%3D%200%0A%0Amy_list%20%3D%20%5B1,2,3%5D%0Achange_value%28my_list%29%0Aprint%28my_list%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+  ```python
+solution: |
+  * Welcher Fehler ist passiert? `ZeroDivisionError`, weil durch `0` geteilt wurde.
+  * In welcher Methode ist der Fehler passiert? `calc_average_price`
+  * In welcher Methode wurde diese Methode aufgerufen? `calculate_average_cost_per_month`
+  * Wo wurde diese zweite Methode wiederum aufgerufen? Zeile 36
+  
+  Man kann also den Stack von unten nach oben einfach lesen.

@@ -1,0 +1,8 @@
+title: Dictionary Werte ändern
+difficulty: 1
+question: |
+  Ändere im Dictionary von Aufgabe 2 den Wert von "c" zu 4.
+solution: |
+  ```python
+  dictionary["c"] = 4
+  ```

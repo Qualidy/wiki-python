@@ -1,0 +1,21 @@
+title: "Zeilenweise lesen"
+difficulty: 2
+question: |
+  Erstelle ein Programm, dass eine Datei ausließt und die erste Zeile
+  der Datei ausgibt. Dann wartet das Programm auf eine Nutzereingabe (z.B.
+  das Drücken von `enter`) und gibt dann die nächste Zeile aus.
+  Dies wird so lange wiederholt, bis die ganze Datei gelesen wurde.
+  Das Programm endet dann.
+
+  <details><summary>Lösung</summary>
+  <pre><code>path = "beispiel.txt"
+  with open(path) as file:
+      while True:
+          line = file.readline()
+          if not line:
+              break
+          print(line)
+          input()
+  </code></pre></details>
+tip: |
+  Nutze wiederholt `read_line`

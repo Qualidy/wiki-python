@@ -1,0 +1,11 @@
+title: "String in Titel-Case umwandeln"
+difficulty: 1
+question: |
+  Schreibe Code, die einen gegebenen String in einen Titel-Case-String umwandelt (jedes Wort beginnt mit
+  einem Großbuchstaben).
+solution: |
+  ```python
+  text = "python ist großartig"
+  titel_case = text.title()
+  print(titel_case)
+  ```

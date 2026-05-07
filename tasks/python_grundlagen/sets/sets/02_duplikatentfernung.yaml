@@ -1,0 +1,10 @@
+title: "Duplikatentfernung"
+difficulty: 1
+question: |
+  Konvertiere die Liste `[1, 2, 2, 3, 4, 5, 5, 6]` in ein Set, um Duplikate zu entfernen.
+solution: |
+  ```python
+  meine_liste = [1, 2, 2, 3, 4, 5, 5, 6]
+  mein_set = set(meine_liste)
+  print(mein_set)
+  ```

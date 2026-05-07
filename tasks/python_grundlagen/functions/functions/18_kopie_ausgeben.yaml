@@ -1,0 +1,20 @@
+title: "Kopie ausgeben"
+difficulty: 3
+question: |
+  Schreibe eine Funktion, die ein Dictionary als Parameter erwartet und
+  eine Kopie des Dictionaries zurückgibt, das einen neuen Schlüssel besitzt.
+  Das Argument soll also unverändert bleiben.
+solution: |
+  ```python
+  def new_bigger_dict(my_dict):
+      new_dict = my_dict.copy()
+      new_dict["new"] = "entry"
+      return new_dict
+  
+  dic = {'old': 'somethin'}
+  
+  new_dic = new_bigger_dict(dic)
+  
+  print(dic) # {'old': 'somethin'}
+  print(new_dic) # {'old': 'somethin', 'new': 'entry'}
+  ```

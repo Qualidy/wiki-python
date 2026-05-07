@@ -1,0 +1,13 @@
+title: "Lokale Variable"
+difficulty: 1
+question: |
+  Definiere eine lokale Variable innerhalb einer Funktion und gib sie innerhalb dieser Funktion
+     aus.
+solution: |
+  ```python
+  def test_lokal():
+     lokal_var = "Ich bin lokal"
+     print(lokal_var)
+  
+  test_lokal()
+  ```

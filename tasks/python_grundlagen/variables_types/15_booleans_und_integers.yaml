@@ -1,0 +1,9 @@
+title: Kombination von Booleans und Integers
+difficulty: 1
+question: |
+  Überprüfe, ob ein Integer positiv ist und gib das Ergebnis als Boolean zurück.
+solution: |
+  ```python
+  num = 5
+  print(num > 0)
+  ```

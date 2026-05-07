@@ -1,0 +1,19 @@
+title: "Luftblasen"
+difficulty: 3
+question: |
+  Implementieren sie [Bubblesort](https://de.wikipedia.org/wiki/Bubblesort).
+solution: |
+  ```python
+  def bubble_sort(elements):
+      elements = elements.copy()
+      n = len(elements)
+  
+      for i in range(n):
+          for j in range(0, n - i - 1):
+              if elements[j] > elements[j + 1]:
+                  elements[j], elements[j + 1] = elements[j + 1], elements[j]
+  
+      return elements
+  
+  print(bubble_sort([5, 2, 8, 1, 3]))
+  ```

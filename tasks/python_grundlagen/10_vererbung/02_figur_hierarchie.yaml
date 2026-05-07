@@ -1,0 +1,8 @@
+title: "Figur-Hierarchie"
+difficulty: 3
+question: |
+  Erstelle eine Basisklasse `Figur`, die grundlegende Eigenschaften wie Farbe und Position enthält. Implementiere dann zwei abgeleitete Klassen: `Kreis` und `Rechteck`. Jede dieser Klassen sollte spezifische Eigenschaften und Methoden haben, die zur jeweiligen geometrischen Form passen.
+
+     - Verwende in der `Figur`-Klasse das Attribut `farbe` und die Methode `bewegen()`.
+     - Die `Kreis`-Klasse sollte das Attribut `radius` haben und eine Methode `fläche_berechnen()` implementieren.
+     - Die `Rechteck`-Klasse sollte die Attribute `länge` und `breite` haben und eine Methode `umfang_berechnen()` implementieren.

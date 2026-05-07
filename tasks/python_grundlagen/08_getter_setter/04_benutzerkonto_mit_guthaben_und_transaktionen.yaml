@@ -1,0 +1,4 @@
+title: "Benutzerkonto mit Guthaben und Transaktionen"
+difficulty: 3
+question: |
+  Erstelle eine Klasse `Benutzerkonto`, die ein privates Attribut `guthaben` hat. Implementiere @property-Dekoratoren, um den Zugriff auf das Guthaben zu ermöglichen. Füge Methoden hinzu, um Einzahlungen und Abhebungen vorzunehmen, und zeige dies anhand von Transaktionen.

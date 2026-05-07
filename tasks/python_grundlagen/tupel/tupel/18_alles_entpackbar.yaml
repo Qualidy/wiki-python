@@ -1,0 +1,38 @@
+title: "Alles entpackbar"
+difficulty: 2
+question: |
+  Welche der folgenden Zeilen sind erlaubt und welche führen zu einem Fehler? Was für ein Fehler tritt auf?
+
+  ```python
+  my_tuple = ('first', 'second', 'third', 'forth', 'fifth')
+  a, b, c, d, e = my_tuple
+
+  f, *g = my_tuple
+
+  *h, i = my_tuple
+
+  k, *l, m, *n = my_tuple
+
+  p, q, *r = my_tuple
+
+  *s, *t = my_tuple
+
+  u, v = my_tuple[:2]
+  ```
+solution: |
+  ```python
+  my_tuple = ('first', 'second', 'third', 'forth', 'fifth')
+  a, b, c, d, e = my_tuple
+  
+  f, *g = my_tuple # ok
+  
+  *h, i = my_tuple # ok
+  
+  k, *l, m, *n = my_tuple # SyntaxError: multiple starred expressions in assignment
+  
+  p, q, *r = my_tuple # ok
+  
+  *s, *t = my_tuple # SyntaxError: multiple starred expressions in assignment
+  
+  u, v = my_tuple[:2] # ok
+  ```

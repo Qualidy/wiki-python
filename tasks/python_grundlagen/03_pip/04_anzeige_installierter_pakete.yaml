@@ -1,0 +1,4 @@
+title: "Anzeige installierter Pakete"
+difficulty: 1
+question: |
+  - Zeige alle installierten Pakete mit dem Befehl `pip list`.

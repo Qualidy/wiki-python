@@ -1,0 +1,43 @@
+title: "Basistypen bestimmen"
+difficulty: 1
+question: |
+  Ergänze bei jeder Variable den passenden Typen. Mit welcher Funktion lässt sich der Typ einer Funktion
+  bestimmen?
+
+  ```python
+  a = 1
+  b = 2
+  c = -1
+  d = 1.0
+  e = 0
+  f = 0.0
+  g = 0.5
+  h = 3.3333
+  i = True
+  j = False
+  k = "hiho"
+  l = "0"
+  m = '1'
+  n = 1+3j
+  o = int
+  ```
+solution: |
+  Wir können `type` verwenden, um den Typ eines Objektes zu bestimmen.
+  
+  ```python
+  a: int = 1
+  b: int = 2
+  c: int = -1
+  d: float = 1.0
+  e: int = 0
+  f: float = 0.0
+  g: float = 0.5
+  h: float = 3.3333
+  i: bool = True
+  j: bool = False
+  k: str = "hiho"
+  l: str = "0"
+  m: str = '1'
+  n: complex = 1+3j
+  o: type = int
+  ```

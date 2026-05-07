@@ -1,0 +1,14 @@
+title: "Autorennen mit Factory Method Pattern"
+difficulty: 3
+question: |
+  ### Teilschritte:
+
+  a. Definiere eine Schnittstelle `Vehicle` mit einer Methode `start_engine`, die den Motor startet.
+
+  b. Implementiere konkrete Fahrzeugtypen, die von `Vehicle` erben, z. B. `Car`, `Motorcycle`, und `Truck`.
+
+  c. Erstelle eine abstrakte Klasse `RaceFactory` mit der Factory-Methode `create_vehicle`, die ein Fahrzeug erstellt.
+
+  d. Implementiere konkrete Fabriken, die von `RaceFactory` erben, z. B. `CarFactory`, `MotorcycleFactory`, und `TruckFactory`.
+
+  e. Demonstriere die Verwendung, indem du eine Rennsimulation erstellst und verschiedene Fahrzeugtypen erstellst.

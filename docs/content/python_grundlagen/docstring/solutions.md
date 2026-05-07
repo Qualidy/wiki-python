@@ -16,7 +16,6 @@ def calculate_area_rectangle(sideA, sideB):
     """
     return sideA * sideB
 
-
 def sum_positive_numbers(numbers):
     """
     Summiert die positiven Elemente in der Liste auf.
@@ -27,7 +26,6 @@ def sum_positive_numbers(numbers):
         Summe der positiven Zahlen in der Liste
     """
     return sum(number for number in numbers if number > 0)
-
 
 def combine(list0, list1, func):
     """
@@ -50,7 +48,6 @@ def combine(list0, list1, func):
 ```python
 import doctest
 
-
 def divide(a, b):
     """Compute and return the quotient of two numbers.
 
@@ -67,7 +64,6 @@ def divide(a, b):
     ZeroDivisionError: division by zero
     """
     return float(a / b)
-
 
 if __name__ == '__main__':
     doctest.testmod()

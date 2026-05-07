@@ -1,11 +1,6 @@
 # Einführung in Python-Funktionen
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yr4-QpURqAY?si=2s_y3alGvtPNVJiu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/yr4-QpURqAY?si=2s_y3alGvtPNVJiu") }}
 
 In Python ist eine Funktion eine selbstständige, wiederverwendbare Codeeinheit, die dazu dient,
 eine bestimmte Aufgabe zu erledigen. Funktionen können Parameter akzeptieren,
@@ -37,12 +32,7 @@ komplexe Aufgaben hinter einfach zu verstehenden und zu verwendenden Schnittstel
 
 [//]: # ([45min])
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M7iRN8RikMw?si=XigB3CSjsCXPRCTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/M7iRN8RikMw?si=XigB3CSjsCXPRCTo") }}
 
 Um eine Funktion zu definieren, starten wir eine Zeile mit dem Schlüsselwort `def`.
 Darauf folgt der Name der Funktion. Darauf eine `(` und eine Liste von `,`-seperierten Parameternamen und ein
@@ -55,7 +45,6 @@ im Funktionskopf):
 
 [💻 Link zum Online Compiler](https://pythontutor.com/render.html#code=def%20hoch%28%29%3A%0A%20%20%20%20print%28%22Er%20lebe...%22%29%0A%20%20%20%20print%28%22HOCH!%22%29%0A%0Ahoch%28%29%0Ahoch%28%29%0Ahoch%28%29&cumulative=true&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 def hoch():
     print("Er lebe...")
@@ -65,7 +54,6 @@ hoch()
 hoch()
 hoch()
 ```
-
 
 In den Zeilen 5, 6 und 7 führen wir die Funktion `hoch()` aus, die in Zeile 1 bis 3 definiert ist.
 Die Ausführung erfolgt, indem wir den Funktionsnamen aufschreiben und dahinter `()` schreiben.
@@ -78,12 +66,7 @@ unterscheidet sich nicht von anderem Python-Code.
 
 ## Funktionen mit Parametern
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_v9cpU5LdYc?si=Z_LhctE-a8y4WMuD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/_v9cpU5LdYc?si=Z_LhctE-a8y4WMuD") }}
 
 Über Parameter können wir dafür sorgen, dass Funktionen nicht immer exakt das Gleiche tun, sondern, eben abhängig von 
 den übergebenen Parametern, in ihren Ergebnissen variieren, obwohl die Rechenvorschriften gleich sind.
@@ -97,7 +80,6 @@ Definieren wir Parameter in einer Funktion, so müssen wir diese beim Funktionsa
 
 [💻 Link zum Online Compiler](https://pythontutor.com/render.html#code=def%20print_greeting%28name,%20age%29%3A%0A%20%20%20%20if%20age%20%3E%2060%3A%0A%20%20%20%20%20%20%20%20print%28f%22Einen%20wundersch%C3%B6nen%20guten%20Tag,%20%7Bname%7D!%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28f%22Moin%20moin!%22%29%0A%0Aprint_greeting%28%22Kevin%22,%2020%29%0Aprint_greeting%28%22J%C3%B6rg%22,%2068%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 def print_greeting(name, age):
     if age > 60:
@@ -109,7 +91,6 @@ print_greeting("Kevin", 20)
 print_greeting("Jörg", 68)
 ```
 
-
 ```mermaid
 graph LR;
     P1(["age"]) --> F[print_greeting]
@@ -118,20 +99,13 @@ graph LR;
 
 ## Rückgabewerte
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wSWtdmL83dE?si=blGDMBohuLiKoimp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/wSWtdmL83dE?si=blGDMBohuLiKoimp") }}
 
 Nun ist noch wichtig zu erwähnen, dass Funktionen nicht nur verarbeiten, sondern auch ein
 Ergebnis am Ende ihrer Durchführung zurückgeben können. Der Wert der zurückgegeben werden soll steht in einer
 Zeile mit einem vorangehenden `return`.
 
 [💻 Online Compiler](https://pythontutor.com/render.html#code=def%20calculate_discounted_price%28price,%20weekday,%20age%29%3A%0A%20%20%20%20discount%20%3D%200%0A%0A%20%20%20%20if%20weekday%20%3D%3D%20%22Sunday%22%20or%20weekday%20%3D%3D%20%22Saturday%22%3A%0A%20%20%20%20%20%20%20%20discount%20%2B%3D%200.25%0A%0A%20%20%20%20if%20age%20%3E%2065%20or%20age%20%3C%206%3A%0A%20%20%20%20%20%20%20%20discount%20%2B%3D%200.5%0A%0A%20%20%20%20return%20price%20*%20%281%20-%20discount%29%0A%0A%0Abase_price%20%3D%2010%0Acurrent_weekday%20%3D%20%22Monday%22%0Apassager_age%20%3D%2070%0A%0Aactual_price%20%3D%20calculate_discounted_price%28base_price,%20current_weekday,%20passager_age%29%0Aprint%28actual_price%29&cumulative=true&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 def calculate_discounted_price(price, weekday, age):
@@ -145,7 +119,6 @@ def calculate_discounted_price(price, weekday, age):
 
     return price * (1 - discount)
 
-
 base_price = 10
 current_weekday = "Monday"
 passager_age = 70
@@ -153,7 +126,6 @@ passager_age = 70
 actual_price = calculate_discounted_price(base_price, current_weekday, passager_age)
 print(actual_price)
 ```
-
 
 ```mermaid
 graph LR;
@@ -168,7 +140,6 @@ Durchführung des Codes, egal, was sonst noch im Funktionsrumpf folgt.
 
 [💻 Online Compiler](https://pythontutor.com/render.html#code=def%20begruessung%28name%29%3A%0A%20%20%20%20if%20%22q%22%20in%20name.lower%28%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22%7Bname%7D%20ist%20aber%20ein%20seltener%20Name!%22%0A%20%20%20%20return%20f%22Hallo,%20%7Bname%7D!%22%0A%0Aprint%28begruessung%28%22Bojack%22%29%29%0Aprint%28begruessung%28%22Aquafina%22%29%29&cumulative=true&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 def begruessung(name):
     if "q" in name.lower():
@@ -179,16 +150,9 @@ print(begruessung("Bojack"))
 print(begruessung("Aquafina"))
 ```
 
-
 ### Mehrere Rückgabewerte
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/k3rzPwl3NtQ?si=tuSuoJiJLTjJfoJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/k3rzPwl3NtQ?si=tuSuoJiJLTjJfoJI") }}
 
 In Python ist es auch möglich mehrere Objekte auf ein Mal zurück zu geben. 
 Die Syntax dafür ist sehr einfach, man schreibt nach dem `return`
@@ -196,7 +160,6 @@ die Rückgaben mit einem `,` getrennt nacheinander auf. Hier ein Beispiel
 einer Funktion, die das erste und letze Element einer Liste zurückgibt.
 
 [💻 Online Compiler](https://pythontutor.com/render.html#code=def%20first_and_last%28my_list%29%3A%0A%20%20%20%20return%20my_list%5B0%5D,%20my_list%5B-1%5D%0A%20%20%20%20%0Af,%20s%20%3D%20first_and_last%28%5B1,2,3,4,5%5D%29%0Aprint%28f%22First%20element%3A%20%7Bf%7D%22%29%0Aprint%28f%22Second%20element%3A%20%7Bs%7D%22%29%0A%0Aboth%20%3D%20first_and_last%28%5B1,2,3,4,5%5D%29%0Aprint%28f%22%7Bboth%7D%20is%20of%20type%20%7Btype%28both%29%7D%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 ```python
 def first_and_last(my_list):
@@ -210,10 +173,8 @@ both = first_and_last([1,2,3,4,5])
 print(f"{both} is of type {type(both)}")
 ```
 
-
 Eigentlich gibt die Funktion ein Tupel zurück, aber wir nutzen das automatische
 Entpacken, um die Elemente direkt in Variablen zu speichern.
-
 
 ## Bedeutung und Zweck von Funktionen
 
@@ -232,70 +193,21 @@ Entpacken, um die Elemente direkt in Variablen zu speichern.
 # Aufgaben
 
 [//]: # ([90])
-### 1. **Einfache Begrüßungsfunktion**: 🌶️️
-Schreibe eine Funktion `begruesse()`, die "Hallo Welt!" ausgibt.
-
-### 2. **Quadratzahlen**: 🌶️️
-Schreibe eine Funktion `quadrat()`, die das Quadrat einer übergebenen Zahl zurückgibt.
-
-### 3. **Maximum von zwei Zahlen**: 🌶️️
-Schreibe eine Funktion `max_zwei()`, die zwei Zahlen als Argumente nimmt und die größere
-   Zahl zurückgibt.
-
-### 4. **Summierung**: 🌶️️
-Schreibe eine Funktion `summiere()`, die die Summe von drei übergebenen Zahlen berechnet und
-   zurückgibt.
-
-### 5. **String-Wiederholung**: 🌶️️
-Schreibe eine Funktion `wiederhole_string(str, n)`, die einen String `str` und eine Zahl `n`
-   nimmt und den String `n`-mal wiederholt.
-
-### 6. **Fahrenheit in Celsius**: 🌶️️
-Schreibe eine Funktion `fahrenheit_in_celsius()`, die eine Temperatur in Fahrenheit nimmt
-   und in Celsius umrechnet. Die Formel dazu ist `c = (f - 32) * 5 / 9`.
-
-
-### 7. **Listenelemente addieren**: 🌶️️🌶️️
-Schreibe eine Funktion `addiere_positive_liste()`, die eine Liste von Zahlen 
-nimmt und alle positiven Zahlen in der Liste addiert.
-
-### 8. **Listenelemente addieren und prüfen**: 🌶️️🌶️🌶️️
-Schreibe eine Funktion `addiere_negative_liste()`, die eine Liste von Zahlen 
-nimmt und alle negativen Zahlen in der Liste addiert. Dabei soll zusätzlich 
-geprüft werden, ob es sich bei dem Eintrag überhaupt um eine Zahl handelt.
-
-### 9. **Check Gerade Zahl**: 🌶️️
-Schreibe eine Funktion `ist_gerade()`, die prüft, ob eine übergebene Zahl gerade ist.
-
-### 10. **Countdown**: 🌶️️
-Schreibe eine Funktion `countdown()`, die eine Zahl nimmt und einen Countdown von dieser Zahl bis 0
-    ausgibt.
-
-### 11. **Minimum in Liste finden**: 🌶️️
-Schreibe eine Funktion `finde_minimum()`, die eine Liste von Zahlen nimmt und das
-kleinste Element zurückgibt. Nutze dabei keine bestehende Funktion in Python,
-sondern implementiere dies über eine Schleife.
-
-### 12. **Länge eines Strings**: 🌶️️
-Schreibe eine Funktion `laenge_string()`, die die Länge eines übergebenen Strings
-zurückgibt. Nutze dabei keine bestehende Funktion in Python,
-sondern implementiere dies über eine Schleife.
-
-### 13. **Multiplikationstabelle**: 🌶️️
-Schreibe eine Funktion `multiplikationstabelle()`, die eine Zahl nimmt und ihre
-    Multiplikationstabelle bis 10 ausgibt.
-
-### 14. **Palindrome prüfen**: 🌶️️🌶️️
-Schreibe eine Funktion `ist_palindrom()`, die einen String nimmt und prüft, ob es ein
-    Palindrom ist.
-
-### 15. **Mehrere Rückgabewerte**🌶🌶
-Schreibe eine Funktion, die aus einem Text das längste und das kürzeste Wort
-findet und diese zurückgibt. Wenn es mehrere Wörter gleicher länge gibt, soll
-das Erste verwendet werden.
-
-[Lösungen](solutions.md#funktionen-definieren)
-
+{{ task(file="tasks/python_grundlagen/functions/functions/01_einfache_begruungsfunktion.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/02_quadratzahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/03_maximum_von_zwei_zahlen.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/04_summierung.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/05_string_wiederholung.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/06_fahrenheit_in_celsius.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/07_listenelemente_addieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/08_listenelemente_addieren_und_prufen.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/09_check_gerade_zahl.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/10_countdown.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/11_minimum_in_liste_finden.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/12_lange_eines_strings.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/13_multiplikationstabelle.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/14_palindrome_prufen.yaml") }}
+{{ task(file="tasks/python_grundlagen/functions/functions/15_mehrere_ruckgabewerte.yaml") }}
 ## Argumente vs Parameter - Was ist der Unterschied?
 
 [//]: # ([30min])
@@ -321,13 +233,7 @@ verstehen, da sie oft fälschlicherweise synonym verwendet werden, obwohl sie un
 
 ## Default Parametern
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jO6WghRG54w?si=L7YCF_fprbgI9JYa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/jO6WghRG54w?si=L7YCF_fprbgI9JYa") }}
 
 In Python ist es möglich einen Parameter schon bei der Funktionsdefinition
 zu belegen. Wenn dieser Parameter dann beim Aufruf nicht explizit gesetzt
@@ -354,12 +260,7 @@ folgenden Parameter eine Defaultbelegung aufweisen. Der Funktionskopf
 
 # Callstack
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/svoOgKS9n6w?si=tjvH1shIZwsX6MGp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/svoOgKS9n6w?si=tjvH1shIZwsX6MGp") }}
 
 Es ist möglich Funktionen in Funktionen auszuführen. Dabei entsteht ein sog. **Stack**
 von Funktionsaufrufen.
@@ -393,173 +294,7 @@ age = 90
 actual_price = calculate_price(price, age)
 print(actual_price)
 ```
-### Aufgabe: Stack in Exceptions🌶🌶
-Nico hat sich ein Pythonprogramm geschrieben, um seine monatlichen Kosten
-für SMSs zu berechnen. Dieses führt jedoch zu einem Fehler, wenn man es ausführt.
-
-```python
-# Erstellt eine Liste mit den zu Zahlenden SMS's
-def remove_free_sms(
-    smss_per_month,
-    free_sms_per_month):
-    
-    to_pay  = []
-    for smss in smss_per_month:
-        sms_to_pay = smss - free_sms_per_month
-        if sms_to_pay > 0:
-            to_pay.append(sms_to_pay)
-    return to_pay
-    
-    
-# Berechnet den Durchschnittspreis basierend auf dem
-# Gesamtpreis und der Anzahl der Einträge auf denen
-# sich dieser aufteilt.
-def calc_average_price(price, number_of_entries):
-    return price / number_of_entries
-
-
-# Berechnet die Durchschnittlichen Kosten pro Monat
-def calculate_average_cost_per_month(
-    smss_per_month, 
-    free_sms_per_month,
-    cost_per_sms):
-        
-    to_pay = remove_free_sms(smss_per_month, free_sms_per_month)
-    price = sum(to_pay) * cost_per_sms
-    number_of_entries = len(to_pay)
-    average_price = calc_average_price(price, number_of_entries)
-    return average_price
-
-smss = [23,9,11,23,10,12]
-
-average_price_A = calculate_average_cost_per_month(smss, 10, 0.04)
-average_price_B = calculate_average_cost_per_month(smss, 30, 0.06)
-```
-
-Auf der Konsole erscheint folgender Fehler:
-```commandline
-Traceback (most recent call last):
-  File "C:\Users\Nico\myProject\sms_calculator.py", line 36, in <module>
-    average_price_B = calculate_average_cost_per_month(smss, 30, 0.06)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Nico\myProject\sms_calculator.py", line 29, in calculate_average_cost_per_month
-    average_price = calc_average_price(price, number_of_entries)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Nico\myProject\sms_calculator.py", line 18, in calc_average_price
-    return price / number_of_entries
-           ~~~~~~^~~~~~~~~~~~~~~~~~~
-ZeroDivisionError: float division by zero
-```
-
-* Welcher Fehler ist passiert?
-* In welcher Methode ist der Fehler passiert?
-* In welcher Methode wurde diese Methode aufgerufen?
-* Wo wurde diese zweite Methode wiederum aufgerufen?
-
-### Aufgabe: Callstack im Debugger🌶
-Kopiere den obigen Code in eine IDE deiner Wahl. Setze einen Breakpoint in Zeile 18.
-Starte den Debugger.
-
-Wo findest du den Callstack der Aufgerufenen Funktonen?
-Was siehst du, wenn du durch diesen klickst?
-
-### Aufgabe: SMS-Calculator reparieren🌶🌶
-
-Repariere das obige Programm von Nico.
-
-[Lösung](solutions.md#funktionsstack)
-
-
-## Funktionen als First Class Citizens
-
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WlEBj5i3Cpc?si=gDY8AS8z836GfM8V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
-
-Funktionen sind in Python selbst auch Objekte. Das heißt sie können als Argumente übergeben werden.
-
-Als beispiel sei im Folgenden eine Funktion definiert, die mit jeweils zwei Listenelementen eine Operation durchführt
-und die Ergebnisse in einer neuen Liste speichert (wir gehen mal davon aus, dass die Liste immer eine gerade Anzahl
-von Elementen enthält). Welche Operation das ist, wird auch über eine Parameter festgelegt.
-
-[💻 Online Compiler](https://pythontutor.com/render.html#code=def%20combine2%28my_list,%20operation%29%3A%0A%20%20%20%20result%20%3D%20%5B%5D%0A%20%20%20%20for%20i%20in%20range%280,%20len%28my_list%29,2%29%3A%0A%20%20%20%20%20%20%20%20first%20%3D%20my_list%5Bi%5D%0A%20%20%20%20%20%20%20%20second%20%3D%20my_list%5Bi%2B1%5D%0A%20%20%20%20%20%20%20%20r%20%3D%20operation%28first,%20second%29%0A%20%20%20%20%20%20%20%20result.append%28r%29%0A%20%20%20%20return%20result%0A%20%20%20%20%0Adef%20add%28a,%20b%29%3A%0A%20%20%20%20return%20a%2Bb%0A%20%20%20%20%0Acombined_list%20%3D%20combine2%28%5B1,%202,%20True,%20False,%20%22hey%22,%20%22du%22%5D,%20add%29%0Aprint%28combined_list%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
-
-```python
-def combine2(my_list, operation):
-    result = []
-    for i in range(0, len(my_list),2):
-        first = my_list[i]
-        second = my_list[i+1]
-        r = operation(first, second)
-        result.append(r)
-    return result
-    
-def add(a, b):
-    return a+b
-    
-combined_list = combine2([1, 2, True, False, "hey", "du"], add)
-print(combined_list)
-```
-
-
-Beachte, dass hier in Zeile 13 nur der Funktionsname `add` als Argument übergeben wird, die runden Klammern fehlen
-(nicht `add()`)! Denn wenn wir hinter einem Funktionsnamen Klammern schreiben, sagen wir damit, dass die Funktion
-auch ausgeführt wird. Ohne Klammern meinen wir die Funktion als Objekt und können sie hier übergeben.
-
-Man kann sich das so vorstellen: Eine **Frage** kann etwas sein, dass gestellt wird, um eine Antwort auf diese Frage
-zu bekommen, oder ich kann die Frage auch jemanden mitgeben, dass er diese Frage zu einem späteren Zeitpunkt stellt.
-In dem einen Fall, soll die Frage sofort beantwortet (ausgeführt) werden, im anderen Fall geben wir die Frage mit
-und das Fragen stellen (die Ausführung) kommt später.
-
-![](comic.jpg)
-
-### Aufgabe: Multiplizieren statt addieren🌶
-Füge beim obigen Code eine Funktion `multiply(a,b)` hinzu, die die beiden Parameter `a` und `b` miteinander
-multipliziert. Die folgenden Outputs sollen dann erscheinen:
-
-```python
-combine2([3,6,"Hallo",2], multiply) # [18, "HalloHallo"]
-```
-
-### Aufgabe: Filtern🌶🌶🌶
-
-Definiere eine Funktion `smaller_than_5(n)`, die prüft, ob der Parameter `n` kleiner als 5 ist. Wenn ja, soll
-`True` zurückgegeben werden, andernfalls `False`.
-
-Definiere eine Funktion namens `my_filter(my_list, predicate)`, die eine Liste `my_list` und eine Methode 
-`predicate` erwartet. Der Methode `predicate` liefert Boolean zurück (also `True` oder `False`) und soll
-ein Kriterium sein, nach dem Elemente aus der Liste _herausgefiltert_ werden. Beispiel für dei Ausgabe:
-
-```python
-my_filter([3, 10, -3, 5, 4, 22, 9, -5], smaller_than_5) # [3, -3, 4, -5]
-my_filter([15, 29, 5], smaller_than_5) # []
-```
-
-[Lösung](solutions.md#funktionen-als-first-class-citizens)
-
-## Parameterübergabe
-
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9_PVRQknJ7M?si=r0qpc1aUbfuDuSmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
-Jetzt wird es noch einmal **wirklich wichtig**. Es geht darum, was eigentlich an die Funktionen
-genau übergeben wird, wenn wir die Argumente festlegen.
-
-Schau dir dazu den folgenden Code an und sage voraus, was der Output sein wird:
-
-[💻 Online Compiler](https://pythontutor.com/render.html#code=%23%20Primitive%20Types%20as%20Arguments%0Adef%20change_number%28number%29%3A%0A%20%20%20%20number%20%3D%200%20%0A%0Amy_number%20%3D%2010%0Achange_number%28my_number%29%0Aprint%28my_number%29%0A%0A%0A%23%20Complex%20Types%20as%20Arguments%0Adef%20change_value%28sequence%29%3A%0A%20%20%20%20sequence%5B0%5D%20%3D%200%0A%0Amy_list%20%3D%20%5B1,2,3%5D%0Achange_value%28my_list%29%0Aprint%28my_list%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
-
-```python
+{{ task(file="tasks/python_grundlagen/functions/functions/16_stack_in_exceptions.yaml") }}
 # Primitive Types as Arguments
 def change_number(number):
     number = 0 
@@ -567,7 +302,6 @@ def change_number(number):
 my_number = 10
 change_number(my_number)
 print(my_number)
-
 
 # Complex Types as Arguments
 def change_value(sequence):
@@ -577,7 +311,6 @@ my_list = [1,2,3]
 change_value(my_list)
 print(my_list)
 ```
-
 
 Hast du richtig geraten? Die Variable `my_number` blieb unverändert, der erste Eintrag
 aus `my_list` jedoch nicht. Woran liegt das?
@@ -597,7 +330,6 @@ die ID eines Objektes herausgeben. Die selbe ID heißt, das selbe Objekt liegt v
 
 [💻 Online Compiler](https://pythontutor.com/render.html#code=a%20%3D%20%5B1,2%5D%0Ab%20%3D%20a%0Ac%20%3D%20%5B1,2%5D%0A%0Aprint%28f%22a%3A%20%7Ba%7D%20hat%20id%20%7Bid%28a%29%7D%22%29%0Aprint%28f%22b%3A%20%7Bb%7D%20hat%20id%20%7Bid%28b%29%7D%22%29%0Aprint%28f%22c%3A%20%7Bc%7D%20hat%20id%20%7Bid%28c%29%7D%22%29&cumulative=false&curInstr=6&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 a = [1,2]
 b = a
@@ -608,14 +340,6 @@ print(f"b: {b} hat id {id(b)}")
 print(f"c: {c} hat id {id(c)}")
 ```
 
+{{ task(file="tasks/python_grundlagen/functions/functions/17_dictionary_veraendern.yaml") }}
 
-### Aufgabe: Dictionary verändern🌶🌶
-Schreibe eine Funktion, die ein Dictionary als Parameter erwartet und diesem
-ein neues Schlüssel Value Pärchen hinzufügt.
-
-### Aufgabe: Kopie ausgeben🌶🌶🌶
-Schreibe eine Funktion, die ein Dictionary als Parameter erwartet und
-eine Kopie des Dictionaries zurückgibt, das einen neuen Schlüssel besitzt.
-Das Argument soll also unverändert bleiben.
-
-[Lösung](solutions.md#parameterübergabe)
+{{ task(file="tasks/python_grundlagen/functions/functions/18_kopie_ausgeben.yaml") }}

@@ -1,0 +1,9 @@
+title: Umwandlung von Integer in Boolean
+difficulty: 1
+question: |
+  Konvertiere einen Integer in einen Boolean und gib das Ergebnis aus.
+solution: |
+  ```python
+  print(bool(0))  # False
+  print(bool(5))  # True
+  ```

@@ -62,28 +62,8 @@ Weitere Details findest du [hier](https://www.python.org/dev/peps/pep-0257/).
 # Aufgaben:
 [120min]
 
-## 1. **PEP 8-Konformität 🌶️️🌶️️**
-   
-Überprüfe das folgende Python-Skript auf PEP 8-Konformität. Finde und behebe Verstöße gegen die Richtlinien. Achte besonders auf Einrückungen, Zeilenlängen, Importe und Namenskonventionen.
+{{ task(file="tasks/python_grundlagen/13_pep/01_pep_8_konformitat.yaml") }}
 
-```python
-# Beispiel-Skript
+{{ task(file="tasks/python_grundlagen/13_pep/02_umsetzung_des_zen_of_python.yaml") }}
 
-def benutzerEingabe():
-    benutzerEingabe = input("Gib eine Zahl ein: ")
-    return int(benutzerEingabe)
-
-def quadratBerechnung(zahl):
-    return zahl**2
-
-ergebnis = quadratBerechnung(benutzerEingabe())
-print("Ergebnis:", ergebnis)
-```
-
-## 2. **Umsetzung des "Zen of Python" 🌶️️**
-   
-Wähle einen Grundsatz aus dem "Zen of Python" und integriere ihn in das obige Python-Skript. Erläutere im Code-Kommentar, wie diese Umsetzung sich auf den Code auswirkt.
-
-## 3. **Docstrings für Funktionen und Klassen 🌶️️**
-
-Füge Docstrings zu den Funktionen `benutzerEingabe` und `quadratBerechnung` im obigen Python-Skript hinzu. Stelle sicher, dass die Docstrings die Funktionalität klar und prägnant erklären.
+{{ task(file="tasks/python_grundlagen/13_pep/03_docstrings_fur_funktionen_und_klassen.yaml") }}

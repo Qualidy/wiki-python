@@ -1,0 +1,10 @@
+title: Booleansches AND
+difficulty: 1
+question: |
+  Was ist das Ergebnis von:
+
+  `1 < 3 and 4 < 3`
+solution: |
+  ```python
+  print(1 < 3 and 4 < 3)  # False
+  ```

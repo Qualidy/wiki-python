@@ -1,0 +1,8 @@
+title: "Nicht-leere Strings"
+difficulty: 1
+question: |
+  Filtere eine Liste von Strings und behalte nur die nicht-leeren bei.
+solution: |
+  ```python
+  nicht_leer = [s for s in ["Hallo", "", "Welt", ""] if s]
+  ```

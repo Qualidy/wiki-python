@@ -1,0 +1,20 @@
+title: "URLs unkenntlich machen"
+difficulty: 2
+question: |
+  Ersetze im folgenden Text alle URLs durch `***hidden URL***`:
+
+  ```python
+  text = "Ein Text mit einer URL: https://www.example.com und eine weitere: http://test.org."
+  ```
+solution: |
+  Ersetze im folgenden Text alle URLs durch `***hidden URL***`:
+  
+  ```python
+  import re
+  text = "Ein Text mit einer URL: https://www.example.com und eine weitere: http://test.org."
+  
+  url_pattern = r'https?://\S+'
+  
+  new_text = re.sub(url_pattern, "***hidden URL***", text)
+  print(new_text)
+  ```

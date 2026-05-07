@@ -68,28 +68,13 @@ Beispiel:
 
 Durch diese Befehle wird Pip angewiesen, den angegebenen Proxy zu verwenden, wenn es auf das Internet zugreift, und falls erforderlich, wird auch die Authentifizierung durchgeführt.
 
-
 # Aufgaben
 [60min]
 
-## 1. Installation eines Pakets 🌶️️
-   - Verwende den Befehl `pip install` und installiere das Paket "requests".
-
-## 2. Aktualisierung eines Pakets 🌶️️
-   - Aktualisiere das Paket "requests" auf die neueste verfügbare Version mit dem Befehl `pip install --upgrade`.
-
-## 3. Deinstallation eines Pakets 🌶️️
-   - Deinstalliere das Paket "requests" mit dem Befehl `pip uninstall`.
-
-## 4. Anzeige installierter Pakete 🌶️️
-   - Zeige alle installierten Pakete mit dem Befehl `pip list`.
-
-## 5. Suche nach einem Paket 🌶️️
-   - Suche nach dem Paket "numpy" mit dem Befehl `pip search numpy`.
-
-## 6. Installation einer bestimmten Paketversion 🌶️️
-   - Installiere eine spezifische Version des Pakets "requests" mit dem Befehl `pip install requests==2.25.1`.
-
-## 7. Upgrade eines Pakets auf eine bestimmte Version 🌶️️
-   - Upgrade das Paket "requests" auf eine bestimmte Version mit dem Befehl `pip install --upgrade requests==2.26.0`.
-   
+{{ task(file="tasks/python_grundlagen/03_pip/01_installation_eines_pakets.yaml") }}
+{{ task(file="tasks/python_grundlagen/03_pip/02_aktualisierung_eines_pakets.yaml") }}
+{{ task(file="tasks/python_grundlagen/03_pip/03_deinstallation_eines_pakets.yaml") }}
+{{ task(file="tasks/python_grundlagen/03_pip/04_anzeige_installierter_pakete.yaml") }}
+{{ task(file="tasks/python_grundlagen/03_pip/05_suche_nach_einem_paket.yaml") }}
+{{ task(file="tasks/python_grundlagen/03_pip/06_installation_einer_bestimmten_paketversion.yaml") }}
+{{ task(file="tasks/python_grundlagen/03_pip/07_upgrade_eines_pakets_auf_eine_bestimmte_version.yaml") }}

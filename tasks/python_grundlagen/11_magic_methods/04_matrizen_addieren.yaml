@@ -1,0 +1,4 @@
+title: "Matrizen addieren"
+difficulty: 2
+question: |
+  Erstelle eine Klasse `Matrix`, die eine 2D-Matrix repräsentiert. Implementiere die magische Methode `__add__`, um zwei `Matrix`-Objekte zu addieren. Beachte die Regeln der Matrixaddition.

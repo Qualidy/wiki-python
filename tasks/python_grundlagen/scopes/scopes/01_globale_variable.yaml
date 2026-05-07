@@ -1,0 +1,13 @@
+title: "Globale Variable"
+difficulty: 1
+question: |
+  Definiere eine globale Variable und gib sie innerhalb einer Funktion aus.
+solution: |
+  ```python
+  global_var = "Ich bin global"
+  
+  def test_global():
+     print(global_var)
+  
+  test_global()
+  ```

@@ -1,0 +1,12 @@
+title: "Multiplikationstabelle"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `multiplikationstabelle()`, die eine Zahl nimmt und ihre
+      Multiplikationstabelle bis 10 ausgibt.
+solution: |
+  ```python
+  def multiplikationstabelle(zahl):
+     for i in range(1, 11):
+         print(f"{zahl} * {i} = {zahl * i}")
+  multiplikationstabelle(3)
+  ```

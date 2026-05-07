@@ -1,0 +1,11 @@
+title: "Anzahl der Wörter in einem String zählen"
+difficulty: 2
+question: |
+  Erstelle einen String und zähle die Anzahl der Wörter darin.
+solution: |
+  ```python
+  text = "Dies ist ein Beispiel Satz."
+  woerter = text.split()
+  anzahl_woerter = len(woerter)
+  print(f"Anzahl der Wörter: {anzahl_woerter}")
+  ```

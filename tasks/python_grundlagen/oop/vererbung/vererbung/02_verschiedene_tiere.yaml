@@ -1,0 +1,46 @@
+title: "Verschiedene Tiere"
+difficulty: 1
+question: |
+  Erstellen Sie eine Python-Anwendung, die folgende Klassen für verschiedene Arten von Tieren implementiert:
+
+  Die Basisklasse `Tier` mit den Eigenschaft `name` und die Methode`bewegen()`.
+  Die Methode `bewegen()` soll den Namen des Tiers gefolgt von 
+  einem Satz wie "bewegt sich" ausgeben.
+
+  Die abgeleitete Klasse `Hund`, die von `Tier` erbt und zusätzlich die Methode `bellen()` hat.
+  Die Methode `bellen()` soll den Namen des Hundes gefolgt von "bellt" ausgeben.
+
+  Die abgeleitete Klasse Katze, die von Tier erbt und zusätzlich die Methode `miauen()` hat.
+  Die Methode `miauen()` soll den Namen der Katze gefolgt von "miaut" ausgeben. Der folgende Code
+  soll durchführbar sein:
+
+  ```python 
+  tier1 = Tier("Tier1")
+  tier1.bewegen()
+
+  hund1 = Hund("Bello")
+  hund1.bewegen()
+  hund1.bellen()
+
+  katze1 = Katze("Minka")
+  katze1.bewegen()
+  katze1.miauen()
+  ```
+
+  {{ youtube_video("https://www.youtube.com/embed/e2a_RHTPJRc?si=GLBwSrJoj-WmsZGr") }}
+  <pre><code>class Tier:
+      def __init__(self, name):
+          self.name = name
+
+      def bewegen(self):
+          print(f"{self.name} bewegt sich.")
+
+  class Hund(Tier):
+      def bellen(self):
+          print(f"{self.name} bellt.")
+
+  class Katze(Tier):
+      def miauen(self):
+          print(f"{self.name} miaut.")
+  </code></pre>
+  </details>

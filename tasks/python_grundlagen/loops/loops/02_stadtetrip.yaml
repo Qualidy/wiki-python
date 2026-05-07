@@ -1,0 +1,10 @@
+title: "Städtetrip"
+difficulty: 1
+question: |
+  Erstelle eine Liste von Städten und verwenden Sie eine `for`-Schleife, um jede Stadt auszugeben.
+solution: |
+  ```python
+  staedte = ["Berlin", "Paris", "London", "New York"]
+  for stadt in staedte:
+     print(stadt)
+  ```

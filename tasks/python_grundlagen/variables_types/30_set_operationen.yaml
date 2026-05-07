@@ -1,0 +1,11 @@
+title: Set Operationen
+difficulty: 2
+question: |
+  Erstelle die Vereinigung und Schnittmenge zweier Sets `{1, 2, 3}` und `{3, 4, 5}`.
+solution: |
+  ```python
+  set1 = {1, 2, 3}
+  set2 = {3, 4, 5}
+  vereinigung = set1 | set2
+  schnittmenge = set1 & set2
+  ```

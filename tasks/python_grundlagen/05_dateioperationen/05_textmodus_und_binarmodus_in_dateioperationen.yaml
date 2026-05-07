@@ -1,0 +1,4 @@
+title: "Textmodus und Binärmodus in Dateioperationen"
+difficulty: 2
+question: |
+  Beschreibe den Unterschied zwischen dem Lesen einer Datei im Textmodus (`'r'`) und dem Binärmodus (`'rb'`) in Bezug auf die `open`-Funktion.

@@ -1,0 +1,8 @@
+title: Integer in Float konvertieren
+difficulty: 1
+question: |
+  Konvertiere einen Integer in einen Float.
+solution: |
+  ```python
+  print(float(7))
+  ```

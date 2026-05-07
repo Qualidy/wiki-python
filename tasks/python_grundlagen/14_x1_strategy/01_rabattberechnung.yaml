@@ -1,0 +1,14 @@
+title: "Rabattberechnung"
+difficulty: 3
+question: |
+  ### Teilschritte:
+
+  a. Definiere eine Klasse `DiscountStrategy` als abstrakte Klasse mit einer Methode `calculate_discount`, die den Rabatt berechnet.
+
+  b. Implementiere konkrete Rabattstrategien, die von `DiscountStrategy` erben, z. B. `PercentageDiscount` und `FixedAmountDiscount`.
+
+  c. Erstelle eine Klasse `ShoppingCart`, die eine Instanz von `DiscountStrategy` als Attribut enthält.
+
+  d. Die Methode `apply_discount` der Klasse `ShoppingCart` sollte die Rabattberechnung unter Verwendung der übergebenen Rabattstrategie durchführen.
+
+  e. Demonstriere die Verwendung, indem du einen Einkaufswagen erstellst und verschiedene Rabattstrategien anwendest.

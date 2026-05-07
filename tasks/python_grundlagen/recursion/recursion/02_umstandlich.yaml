@@ -1,0 +1,16 @@
+title: "umständlich"
+difficulty: 2
+question: |
+  Gebe der folgenden Funktion einen Namen, der beschreibt, was sie tut.
+
+  ```python
+  def func(my_list):
+      if len(my_list) == 0:
+          return 0
+      return my_list[0] + func(my_list[1:])
+
+  func([1,2,3])
+  ```
+solution: |
+  Sie summiert die Elemente einer Liste/Tupel... auf. Also wäre auch hier `sum_up`
+  oder `sigma` ein schöner Name😉

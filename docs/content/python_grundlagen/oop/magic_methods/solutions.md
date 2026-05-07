@@ -54,5 +54,4 @@ class Punkt:
         else:
             raise TypeError("Unsupported operand type. Use int or float")
 
-
 ```

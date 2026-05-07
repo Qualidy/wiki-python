@@ -1,0 +1,9 @@
+title: "Set Länge"
+difficulty: 1
+question: |
+  Ermittle die Anzahl der Elemente in einem Set deiner Wahl.
+solution: |
+  ```python
+  mein_set = {1, 2, 3, 4, 5}
+  print(len(mein_set))
+  ```

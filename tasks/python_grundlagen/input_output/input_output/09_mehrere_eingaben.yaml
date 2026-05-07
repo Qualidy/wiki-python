@@ -1,0 +1,11 @@
+title: "Mehrere Eingaben"
+difficulty: 2
+question: |
+  Frage den Benutzer nacheinander nach seinem Vornamen und Nachnamen und gib dann den
+  vollständigen Namen aus.
+solution: |
+  ```python
+  vorname = input("Vorname: ")
+  nachname = input("Nachname: ")
+  print(f"Vollständiger Name: {vorname} {nachname}")
+  ```

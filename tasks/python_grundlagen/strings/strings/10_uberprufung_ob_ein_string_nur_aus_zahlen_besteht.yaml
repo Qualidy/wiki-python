@@ -1,0 +1,12 @@
+title: "Überprüfung, ob ein String nur aus Zahlen besteht"
+difficulty: 2
+question: |
+  Erstelle einen String und überprüfe, ob er nur aus Zahlen besteht.
+solution: |
+  ```python
+  text = "12345"
+  if text.isdigit():
+     print("Der String besteht nur aus Zahlen.")
+  else:
+     print("Der String enthält andere Zeichen als Zahlen.")
+  ```

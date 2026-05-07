@@ -1,0 +1,10 @@
+title: "Das kann ich doch auch"
+difficulty: 3
+question: |
+  Erstelle mithilfe von `zip` eine Funktion `my_enumerate`, das die Funktion `enumerate`
+  imitiert.
+solution: |
+  ```python
+  def my_enumerate(iterable):
+      return ((i, e) for i, e in zip(range(len(iterable)), iterable))
+  ```

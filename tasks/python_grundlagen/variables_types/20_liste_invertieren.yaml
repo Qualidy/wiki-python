@@ -1,0 +1,7 @@
+title: Liste invertieren
+question: |
+  Kehre die Reihenfolge der Elemente in der Liste von Aufgabe 1 um.
+solution: |
+  ```python
+  liste = liste[::-1]
+  ```

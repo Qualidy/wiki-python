@@ -50,42 +50,10 @@ drucke_infos("Max", alter=23, stadt="Wolfsburg", beruf="Softwareentwickler")
 # Aufgaben:
 [240min]
 
-## 1. `*args` Verwendung 🌶️️
+{{ task(file="tasks/python_grundlagen/12_args_kwargs/01_args_verwendung.yaml") }}
 
-Schreibe eine Funktion, die eine beliebige Anzahl von Zahlen akzeptiert und ihre Summe zurückgibt. Verwende dabei `*args`.
+{{ task(file="tasks/python_grundlagen/12_args_kwargs/02_kwargs_verwendung.yaml") }}
 
-## 2. `**kwargs` Verwendung 🌶️️
+{{ task(file="tasks/python_grundlagen/12_args_kwargs/03_kombination_aus_beidem.yaml") }}
 
-Implementiere eine Funktion, die verschiedene Informationen (Name, Alter, Geschlecht) als schlüsselwortbasierte Argumente annimmt und ausdruckt. Verwende dabei `**kwargs`.
-
-## 3. Kombination aus beidem 🌶️️🌶️️
-
-Erstelle eine Funktion, die sowohl `*args` als auch `**kwargs` verwendet. Die Funktion sollte die Summe der Zahlen aus `*args` berechnen und zusätzlich alle Informationen aus `**kwargs` ausdrucken.
-
-## 4. Personalinformationen verarbeiten 🌶️️🌶️️🌶️️
-
-Schreibe eine Funktion namens `verarbeite_personalinformationen`, die personenbezogene Informationen entgegennimmt. Die Funktion sollte folgende Anforderungen erfüllen:
-
-- Akzeptiere den Namen als Pflichtargument (`name`).
-- Akzeptiere die E-Mail-Adresse, die Telefonnummer und das Geburtsdatum als optionale Argumente (`email`, `telefon`, `geburtsdatum`) mit Standardwerten `None`.
-- Verarbeite die erhaltenen Informationen und gib einen formatierten Text aus, der alle Informationen enthält.
-
-Beispielaufruf:
-
-```python
-verarbeite_personalinformationen("Max Mustermann", email="max@example.com", telefon="123456789", geburtsdatum="01.01.1990")
-```
-
-Erwartete Ausgabe:
-
-```
-Name: Max Mustermann
-E-Mail: max@example.com
-Telefon: 123456789
-Geburtsdatum: 01.01.1990
-```
-
-Hinweise:
-- Verwende `**kwargs` für die optionalen Argumente.
-- Beachte die sinnvolle Verwendung von Standardwerten für die optionalen Argumente.
-- Nutze die Funktion, um einen formatierten Text auszugeben, der alle erhaltenen Informationen enthält.
+{{ task(file="tasks/python_grundlagen/12_args_kwargs/04_personalinformationen_verarbeiten.yaml") }}

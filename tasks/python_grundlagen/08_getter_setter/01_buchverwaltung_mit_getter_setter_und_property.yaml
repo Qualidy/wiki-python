@@ -1,0 +1,4 @@
+title: "Buchverwaltung mit Getter, Setter und @property"
+difficulty: 2
+question: |
+  Erkläre, wie Sichtbarkeit und Getter/Setter zusammenarbeiten, um den Zugriff auf Attribute zu steuern. Erweitere die Klasse `Buch` um @property-Dekoratoren für die Attribute `titel` und `autor`. Zeige, wie @property Getter- und Setter-Funktionalität bereitstellt.

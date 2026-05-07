@@ -1,0 +1,13 @@
+title: "Anzahl der Vokale zählen"
+difficulty: 3
+question: |
+  Erstelle einen String und zähle die Anzahl der Vokale in ihm.
+solution: |
+  Erstelle einen String und zähle die Anzahl der Vokale in ihm.
+  
+  ```python
+  text = "Ich bin ein Star, holt mich hier raus!"
+  text = text.lower()
+  vocals = text.count("a") + text.count("e") + text.count("i") + text.count("o") + text.count("u")
+  print(f"Vokale in {text}: {vocals}")
+  ```

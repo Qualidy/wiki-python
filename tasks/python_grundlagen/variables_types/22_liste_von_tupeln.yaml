@@ -1,0 +1,8 @@
+title: Liste von Tupeln
+difficulty: 2
+question: |
+  Erstelle eine Liste von Tupeln, wobei jedes Tupel aus einer Zahl und ihrem Quadrat besteht (für Zahlen von 1 bis 5).
+solution: |
+  ```python
+  liste_von_tupeln = [(i, i ** 2) for i in range(1, 6)]
+  ```

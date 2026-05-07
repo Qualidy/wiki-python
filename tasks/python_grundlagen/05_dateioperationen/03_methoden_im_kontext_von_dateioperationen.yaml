@@ -1,0 +1,4 @@
+title: "Methoden im Kontext von Dateioperationen"
+difficulty: 3
+question: |
+  Erkläre die Bedeutung der Methoden `read()`, `write()`, `seek()` und `close()` im Kontext von Dateioperationen. Warum ist es wichtig, die Datei nach dem Lesen oder Schreiben zu schließen?

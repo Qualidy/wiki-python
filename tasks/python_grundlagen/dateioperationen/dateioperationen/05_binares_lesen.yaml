@@ -1,0 +1,12 @@
+title: "Binäres Lesen"
+difficulty: 1
+question: |
+  Lese [beispiel.txt](beispiel.txt) und [mein_passwort.png](mein_passwort.png) mit `r`, `rt` und `rb`. Was ist möglich?
+
+  <details><summary>Lösung</summary>
+  Die <code>beispiel.txt</code> lässt sich in allen Fällen lesen. <code>"rt"</code> liefert
+  den exakten Text zurück, <code>r</code> erzeugt nach jeder Zeile einen Absatz und 
+  <code>"rb"</code> führt Zeilenumbrüche etc. nicht aus.<br>
+  Die <code>mein_passwort.png</code> lässt sich nur im Modus <code>"rb"</code> ohne Fehler anzeigen,
+  jedoch ist die Ausgabe nicht für Menschen verständlich.
+  </details>

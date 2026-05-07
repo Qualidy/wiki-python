@@ -64,30 +64,6 @@ print(mein_elektroauto.aufladen())  # Ausgabe: "Tesla Model S wird aufgeladen."
 # Aufgaben:
 [320min]
 
-## 1. **Auto und Elektroauto:** 🌶️️🌶️️
-
-Erstelle die Klassen `Auto` und `Elektroauto` mit entsprechenden Attributen. Die `Elektroauto`-Klasse erbt von der `Auto`-Klasse.
-
-- **Methodenüberschreibung:** Überschreibe die `starten`-Methode in der `Elektroauto`-Klasse, um den Elektromotor zu aktivieren.
-
--  **Instanzen erstellen und Methoden aufrufen:** Erzeuge Instanzen beider Klassen und rufe ihre Methoden auf.
-
-- **Polymorphismus:** Erkläre, wie Polymorphismus durch Vererbung in diesem Beispiel umgesetzt wird.
-
-- **Weitere Attribute:** Füge den Klassen `Auto` und 
-
-## 2. **Figur-Hierarchie:** 🌶️️🌶️️🌶️️
-
-Erstelle eine Basisklasse `Figur`, die grundlegende Eigenschaften wie Farbe und Position enthält. Implementiere dann zwei abgeleitete Klassen: `Kreis` und `Rechteck`. Jede dieser Klassen sollte spezifische Eigenschaften und Methoden haben, die zur jeweiligen geometrischen Form passen.
-
-   - Verwende in der `Figur`-Klasse das Attribut `farbe` und die Methode `bewegen()`.
-   - Die `Kreis`-Klasse sollte das Attribut `radius` haben und eine Methode `fläche_berechnen()` implementieren.
-   - Die `Rechteck`-Klasse sollte die Attribute `länge` und `breite` haben und eine Methode `umfang_berechnen()` implementieren.
-
-## 3. **Personen-Vererbung:** 🌶️️🌶️️🌶️️
-
-Implementiere eine Basisklasse `Person` mit grundlegenden Informationen wie Name und Alter. Leite dann zwei Klassen ab: `Teilnehmer` und `Dozent`. Jede dieser Klassen sollte zusätzliche Informationen und Methoden haben, die zu einem Teilnehmeren bzw. Dozent passen.
-
-   - Verwende in der `Person`-Klasse die Attribute `name` und `alter` sowie die Methode `geburtstag_feiern()`.
-   - Die `Teilnehmer`-Klasse sollte das Attribut `matrikelnummer` haben und eine Methode `prüfung_schreiben()` implementieren.
-   - Die `Dozent`-Klasse sollte das Attribut `fachgebiet` haben und eine Methode `prüfungen_korrigieren()` implementieren.
+{{ task(file="tasks/python_grundlagen/10_vererbung/01_auto_und_elektroauto.yaml") }}
+{{ task(file="tasks/python_grundlagen/10_vererbung/02_figur_hierarchie.yaml") }}
+{{ task(file="tasks/python_grundlagen/10_vererbung/03_personen_vererbung.yaml") }}

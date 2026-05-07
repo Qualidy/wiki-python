@@ -1,0 +1,6 @@
+title: "Potenzierung und Division"
+difficulty: 1
+question: |
+  Berechne das Ergebnis von `4 ** 2 / 8`.
+solution: |
+  `print(4 ** 2 / 8)  # 2.0, da zuerst potenziert und dann dividiert wird`

@@ -1,0 +1,10 @@
+title: "Verdreht"
+difficulty: 1
+question: |
+  Schreibe eine `for`-Schleife, die die Buchstaben eines Wortes in umgekehrter Reihenfolge ausgibt.
+solution: |
+  ```python
+  wort = "Python"
+  for buchstabe in wort[::-1]:
+     print(buchstabe)
+  ```

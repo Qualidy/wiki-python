@@ -1,12 +1,7 @@
 # Lösungen
 
 ### Aufgabe: Benutzernamen🌶🌶
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eDZBJG3_Jec?si=zVdbTua2zIKLV5La" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/eDZBJG3_Jec?si=zVdbTua2zIKLV5La") }}
 
 ```python
 # Eingabe eines Benutzernamens
@@ -47,13 +42,7 @@ print(f"Ihr Benutzername in Kleinbuchstaben: {kleinbuchstaben_benutzername}")
 
 4. Schließlich wird der Benutzername in Kleinbuchstaben konvertiert und angezeigt.
 
-
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XTU_6zn-K4g?si=PoDSHzST5JCvfKum" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/XTU_6zn-K4g?si=PoDSHzST5JCvfKum") }}
 
 ### 1. Länge eines Strings ermitteln:
 

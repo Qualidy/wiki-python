@@ -1,0 +1,10 @@
+title: "Quadratzahlen"
+difficulty: 1
+question: |
+  Schreibe eine `for`-Schleife, die die Quadratzahlen von 1 bis 10 ausgibt.
+solution: |
+  ```python
+  for zahl in range(1, 11):
+     quadrat = zahl ** 2
+     print(quadrat)
+  ```

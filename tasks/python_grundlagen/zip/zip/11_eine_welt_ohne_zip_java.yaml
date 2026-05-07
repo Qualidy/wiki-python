@@ -1,0 +1,15 @@
+title: "Eine Welt ohne zip (Java)"
+question: |
+  Schreibe den obigen Code, ohne List Comprehension und ohne `zip`.
+solution: |
+  ```python
+  teilnehmer = ["Anna", "Bernd", "Carla"]
+  punkte = [[10, 20, 30], [15, 25, 35], [10, 30, 50]]
+  
+  gesamtpunktzahl = dict()
+  for i in range(len(teilnehmer)):
+      gesamtpunktzahl[teilnehmer[i]] = sum(punkte[i])
+  
+  print(gesamtpunktzahl)
+  ```
+  Bewertung: 🤮

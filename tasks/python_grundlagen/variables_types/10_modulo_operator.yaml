@@ -1,0 +1,8 @@
+title: Modulo-Operator mit Integers
+difficulty: 1
+question: |
+  Verwende den Modulo-Operator, um den Rest zweier Integers zu finden.
+solution: |
+  ```python
+  print(10 % 3)
+  ```

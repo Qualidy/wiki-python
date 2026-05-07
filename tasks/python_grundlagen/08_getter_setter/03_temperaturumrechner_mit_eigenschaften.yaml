@@ -1,0 +1,4 @@
+title: "Temperaturumrechner mit Eigenschaften"
+difficulty: 2
+question: |
+  Entwickle eine Klasse `Temperaturumrechner`, die private Attribute für Celsius und Fahrenheit hat. Implementiere @property-Dekoratoren, um den Zugriff auf diese Attribute zu ermöglichen. Füge außerdem Methoden hinzu, um von Celsius nach Fahrenheit und umgekehrt umzurechnen.

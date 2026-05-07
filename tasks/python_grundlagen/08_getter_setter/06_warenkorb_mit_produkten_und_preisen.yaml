@@ -1,0 +1,4 @@
+title: "Warenkorb mit Produkten und Preisen"
+difficulty: 3
+question: |
+  Erstelle eine Klasse `Warenkorb`, die private Attribute für Produkte und Preise enthält. Implementiere @property-Dekoratoren, um den Zugriff auf diese Attribute zu steuern. Füge Methoden hinzu, um Produkte hinzuzufügen, den Gesamtpreis zu berechnen und den Inhalt des Warenkorbs anzuzeigen.

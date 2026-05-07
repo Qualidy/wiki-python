@@ -1,0 +1,13 @@
+title: "Vokale"
+difficulty: 3
+question: |
+  Schreibe eine `for`-Schleife, die die Anzahl der Vokale in einem gegebenen Wort zählt.
+solution: |
+  ```python
+  wort = "Python"
+  anzahl_vokale = 0
+  for buchstabe in wort:
+      if buchstabe.lower() in "aeiou":
+          anzahl_vokale += 1
+  print(f"Anzahl der Vokale im Wort '{wort}': {anzahl_vokale}")
+  ```

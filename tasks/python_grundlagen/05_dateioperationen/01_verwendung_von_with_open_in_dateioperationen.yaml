@@ -1,0 +1,4 @@
+title: "Verwendung von `with open` in Dateioperationen"
+difficulty: 1
+question: |
+  Erläutere die Verwendung der `with open` Anweisung und warum sie bevorzugt wird, insbesondere im Zusammenhang mit Dateioperationen.

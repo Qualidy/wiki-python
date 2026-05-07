@@ -1,0 +1,12 @@
+title: "Zeilenende ändern"
+difficulty: 2
+question: |
+  Finde heraus, welchen Wert `option` haben muss, damit `mein_string` in 
+  ```python
+  print(mein_string, option)
+  ```
+  mit einem Ausrufezeichen am Ende ausgedruckt wird.
+solution: |
+  ```python
+  print("Hallo!", end="")
+  ```

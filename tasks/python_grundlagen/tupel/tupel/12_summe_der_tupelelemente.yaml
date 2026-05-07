@@ -1,0 +1,9 @@
+title: "Summe der Tupelelemente"
+difficulty: 2
+question: |
+  Erstelle ein Tupel mit Zahlen von 1 bis 5 und berechne die Summe der Zahlen.
+solution: |
+  ```python
+  zahlen = (1, 2, 3, 4, 5)
+  print(sum(zahlen)) # Gibt die Summe aus, also 15
+  ```

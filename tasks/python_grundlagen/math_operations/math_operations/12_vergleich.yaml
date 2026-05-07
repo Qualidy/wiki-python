@@ -1,0 +1,6 @@
+title: "Vergleich"
+difficulty: 1
+question: |
+  Überprüfe, ob das Produkt von 2 und 3 gleich 6 ist.
+solution: |
+  `print(2 * 3 == 6)  # True`

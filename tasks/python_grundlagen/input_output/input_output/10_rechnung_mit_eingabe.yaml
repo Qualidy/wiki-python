@@ -1,0 +1,10 @@
+title: "Rechnung mit Eingabe"
+difficulty: 2
+question: |
+  Bitte den Benutzer, zwei Zahlen einzugeben, addiere sie und gib das Ergebnis aus.
+solution: |
+  ```python
+  zahl1 = int(input("Erste Zahl: "))
+  zahl2 = int(input("Zweite Zahl: "))
+  print(f"Ergebnis: {zahl1 + zahl2}")
+  ```

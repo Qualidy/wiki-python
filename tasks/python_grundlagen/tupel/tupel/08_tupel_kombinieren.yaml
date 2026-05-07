@@ -1,0 +1,9 @@
+title: "Tupel kombinieren"
+difficulty: 2
+question: |
+  Kombiniere das Tupel von Aufgabe 1 mit einem neuen Tupel, das drei Gemüsesorten enthält.
+solution: |
+  ```python
+  gemuese = ("Karotte", "Brokkoli", "Zwiebel")
+  kombiniert = fruechte + gemuese
+  ```

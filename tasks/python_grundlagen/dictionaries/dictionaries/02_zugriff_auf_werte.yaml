@@ -1,0 +1,8 @@
+title: "Zugriff auf Werte"
+difficulty: 1
+question: |
+  Greife auf einen Wert in einem Dictionary zu und gib ihn aus.
+solution: |
+  ```python
+  print(mein_dict["Name"])  # Gibt "Anna" aus
+  ```

@@ -1,0 +1,8 @@
+title: Schlüssel-Wert-Paare in Dictionary
+difficulty: 1
+question: |
+  Erstelle ein Dictionary mit den Schlüsseln "a", "b", "c" und den Werten 1, 2, 3.
+solution: |
+  ```python
+  dictionary = {"a": 1, "b": 2, "c": 3}
+  ```

@@ -1,0 +1,12 @@
+title: "kurz und knapp"
+difficulty: 1
+question: |
+  Was ist hier die Konsolenausgabe?
+
+  ```python
+  result = []
+  for i in ["Hallo", 3, " ", 0.0]:
+      result.append(i if isinstance(i, str) else "no str")
+
+  print(result)
+  ```

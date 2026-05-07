@@ -1,11 +1,6 @@
 # Docstring
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C4WC5LDWEb8?si=JM7T_enN-rWAu3XO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/C4WC5LDWEb8?si=JM7T_enN-rWAu3XO") }}
 
 Um unseren Code für den Entwickler verständlicher zu gestalten können wir Kommentare verwenden.
 Dazu nutzen wir in Python das Symbol `#`, um den restlichen Teil der Codezeile von der Ausführung auszuschließen:
@@ -66,34 +61,9 @@ wir nämlich von deiner IDE erkannt und wird angezeigt, wenn die die Dokumentati
 Nicht nur das, mit fortgeschrittenen Mitteln ist es sogar möglich diese Inhalte automatisch auf einer Webseite
 anzeigen zu lassen.
 
-### Aufgabe: Docstring von random🌶
-Schaue dir [die Dokumentation vom Package `random`](https://docs.python.org/3/library/random.html) an,
-das im Python enthalten ist. Vergleiche diese Dann mit dem Source code. Auf diesen Code
-wird am Amfang der Dokuentation verlinkt. Erkennst du, dass die Dokumentation im
-Code selbst hinterlegt ist?
-
-### Aufgabe: Eigene Docstrings schreiben🌶🌶
-Erstelle einen Docstring für die folgenden Funktionen:
-
-```python
-def calculate_area_rectangle(sideA, sideB):
-    return sideA * sideB
-
-
-def sum_positive_numbers(numbers):
-    return sum(number for number in numbers if number > 0)
-
-
-def combine(list0, list1, func):
-    return [func(a, b) for a, b in zip(list0, list1)]
-```
-
-### Aufgabe: Hilfe ist unterwegs🌶
-Rufe `help(calculate_area_rectangle)`, `help(sum_positive_nubmers)`, `help(combine)` auf, nachdem du die 
-letzte Aufgabe gelöst hast. Was siehst du?
-
-[Lösung](solutions.md)
-
+{{ task(file="tasks/python_grundlagen/docstring/docstring/01_docstring_von_random.yaml") }}
+{{ task(file="tasks/python_grundlagen/docstring/docstring/02_eigene_docstrings_schreiben.yaml") }}
+{{ task(file="tasks/python_grundlagen/docstring/docstring/03_hilfe_ist_unterwegs.yaml") }}
 ### Präsentationsthema: mkdocs👨‍🏫
 Finde heraus, wie man mithilfe von [mkdocs](https://www.mkdocs.org/) eine Webseite erstellen kann, die
 die Docstrings eines Projektes darstellt.
@@ -102,17 +72,11 @@ Wenn du dieses Thema vorbereiten und präsentieren möchtest, dann sprich gerne 
 
 # Unittests in der Dokumentation
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OWaHkJMybW8?si=1zRoKZzDSf0q2HP9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/OWaHkJMybW8?si=1zRoKZzDSf0q2HP9") }}
 
 In Python ist es gängig in der Dokumentation auch Beispiele für die die Ausführung der Funktion anzugeben.
 Das besondere: Mit dem Modul `doctest` können wir überprüfen, ob diese Codebeispiele auch das gewünschte
 liefern. Dies schafft Sicherheit in die Zuverlässigkeit des Programms und sollte gerne genutzt werden.
-
 
 ### Vorgehensweise:
 
@@ -262,15 +226,4 @@ Dennoch ist dies ein wertvolles Feature, dass dem Nutzer deiner Library viel Fre
 machen wird. Denn die Unittests, die wir später betrachten, sind genau so wie `#`-Kommentare
 nicht so einfach einsehbar, wie die Dokumentation.
 
-### Aufgabe: Selber Testen.🌶🌶
-Erstelle für die folgende Funktion den docstring und gebe auch doctests an:
-
-```python
-def divide(a,b):
-    return float(a / b)
-```
-
-Finde auch heraus, wie ein Doctest für `divide(42, 0)` angegeben werden kann, der ja
-einen `ZeroDivisionError` wirft.
-
-[Lösung](solutions.md#aufgabe-selber-testen)
+{{ task(file="tasks/python_grundlagen/docstring/docstring/04_selber_testen.yaml") }}

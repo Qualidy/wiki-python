@@ -1,0 +1,10 @@
+title: "Eingabe in Liste speichern"
+difficulty: 3
+question: |
+  Bitte den Benutzer um drei Lieblingsfarben und speichere sie in einer Liste. Gib 
+  dann die Liste aus.
+solution: |
+  ```python
+  farben = [input("Erste Farbe: "), input("Zweite Farbe: "), input("Dritte Farbe: ")]
+  print(farben)
+  ```

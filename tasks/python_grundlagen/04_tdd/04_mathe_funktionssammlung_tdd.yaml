@@ -1,0 +1,7 @@
+title: "Mathe-Funktionssammlung (TDD)"
+difficulty: 2
+question: |
+  - Nutze TDD, um eine Funktionssammlung für mathematische Grundoperationen (`add()`, `sub()`, `mul()`, `div()`) zu entwickeln.
+     - Schreibe zuerst die Unit-Tests und dann die Implementierung.
+     - Achte auf eine hohe Testabdeckung.
+     - Beachte insbesondere die Testfälle für die `div()` Methode, um sicherzustellen, dass unerwartete Fehler oder Divisionen durch Null behandelt werden.

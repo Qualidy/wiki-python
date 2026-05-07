@@ -1,0 +1,6 @@
+title: "Subtraktion"
+difficulty: 1
+question: |
+  Subtrahiere 2 von 10.
+solution: |
+  `print(10 - 2)  # 8`

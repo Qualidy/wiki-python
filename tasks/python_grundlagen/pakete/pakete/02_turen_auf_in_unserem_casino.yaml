@@ -1,0 +1,60 @@
+title: "Türen auf in unserem Casino"
+difficulty: 1
+question: |
+  Unsere Casino-module aus [Module](../module/module.md) sollen jetzt in ein eigenes erstes Paket umgewandelt werden. Hierzu erstellen wir einen Ordner `my_casino` und füge alle bisher erstellten Dateien
+  darin ein.
+
+  Zusätzlich erstellen wir eine Datei `__init__.py` ohne Inhalt.
+
+  Die Ordnerstruktur sieht danach wie folgt aus:
+
+  ```
+  my_casino/
+  |-- __init__.py
+  |-- casino_games.py
+  |-- my_random.py
+  |-- secure_input.py
+  ```
+
+  In den Modulen (Files) wirst du die imports umbenennen müssen.
+
+  ```python
+  from my_casino.secure_input import input_int_in_between
+  from my_casino.my_random import random_squares
+  ```
+
+  Öffne nun eine Pythonkonsole und führe die folgenden Befehle aus:
+
+  ```python
+  >>> from my_casino.casino_games import play_game
+  >>> play_game()
+  ```
+
+  Auf gehts!🤑💰
+solution: |
+  Angepasstes `casino_games.py` (nur die ersten zwei Import-Zeilen sind anders):
+  
+  ```python
+  from my_casino.secure_input import input_int_in_between
+  from my_casino.my_random import random_squares
+  
+  def bet_under_squares(my_bet, faktor):
+      random_square = random_squares(faktor)
+      print(f"Randomly roled:{random_square}")
+      return 0 if my_bet < random_square else faktor * my_bet
+  
+  def play_game(rounds=5, money=10):
+      for i in range(rounds):
+          print(f"Round {i}. Money={money}")
+          bet = input_int_in_between("Wie viel Geld willst du setzen?", 0, money)
+          money -= bet
+          faktor = input_int_in_between("Welchen Faktor willst du?", 1, 10 ** 100)
+          money += bet_under_squares(bet, faktor)
+          if not money:
+              break
+      else:
+          print(f"Du hast {money} gewonnen")
+          return
+  
+      print("Leider alles verzockt")
+  ```

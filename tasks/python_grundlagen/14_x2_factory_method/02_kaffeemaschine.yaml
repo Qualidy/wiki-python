@@ -1,0 +1,14 @@
+title: "Kaffeemaschine"
+difficulty: 2
+question: |
+  ### Teilschritte:
+
+  a. Definiere eine Schnittstelle `Beverage` mit einer Methode `brew`, die das Getränk zubereitet.
+
+  b. Implementiere konkrete Getränketypen, die von `Beverage` erben, z. B. `Coffee`, `Tea`, und `HotChocolate`.
+
+  c. Erstelle eine abstrakte Klasse `BeverageFactory` mit der Factory-Methode `create_beverage`, die ein Getränk erstellt.
+
+  d. Implementiere konkrete Fabriken, die von `BeverageFactory` erben, z. B. `CoffeeFactory`, `TeaFactory`, und `HotChocolateFactory`.
+
+  e. Zeige die Anwendung, indem du eine Kaffeemaschinen-Simulation erstellst und verschiedene Getränketypen zubereitest.

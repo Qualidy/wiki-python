@@ -1,0 +1,9 @@
+title: "String in Großbuchstaben konvertieren"
+difficulty: 2
+question: |
+  Erstelle einen String und konvertiere ihn in Großbuchstaben.
+solution: |
+  ```python
+  text = "python"
+  print(text.upper())
+  ```

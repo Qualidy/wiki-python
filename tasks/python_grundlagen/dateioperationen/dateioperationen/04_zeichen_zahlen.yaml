@@ -1,0 +1,16 @@
+title: "Zeichen zählen"
+difficulty: 1
+question: |
+  Erstelle eine Funktion, die die Anzahl der Zeichen in einer Textdatei zählt und zurückgibt.
+  Berücksichtige dabei auch Leerzeichen und Sonderzeichen.
+
+  <details><summary>Lösung</summary>
+  <pre><code>def count_characters_in_file(file_path):
+      with open(file_path, 'r') as file:
+          content = file.read()
+          return len(content)
+
+  print("Anzahl der Zeichen in der Datei:", count_characters_in_file("beispiel.txt"))
+  </code></pre></details>
+tip: |
+  Wie erhält man die Anzahl der Zeichen in einem String?

@@ -1,0 +1,8 @@
+title: "Hinzufügen von Elementen"
+difficulty: 1
+question: |
+  Füge die Zahl 6 zur Liste `zahlen` hinzu.
+solution: |
+  ```python
+  zahlen.append(6)
+  ```

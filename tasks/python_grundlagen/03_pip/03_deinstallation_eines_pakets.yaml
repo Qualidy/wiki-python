@@ -1,0 +1,4 @@
+title: "Deinstallation eines Pakets"
+difficulty: 1
+question: |
+  - Deinstalliere das Paket "requests" mit dem Befehl `pip uninstall`.

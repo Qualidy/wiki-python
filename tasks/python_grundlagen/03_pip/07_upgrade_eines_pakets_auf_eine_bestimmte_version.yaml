@@ -1,0 +1,4 @@
+title: "Upgrade eines Pakets auf eine bestimmte Version"
+difficulty: 1
+question: |
+  - Upgrade das Paket "requests" auf eine bestimmte Version mit dem Befehl `pip install --upgrade requests==2.26.0`.

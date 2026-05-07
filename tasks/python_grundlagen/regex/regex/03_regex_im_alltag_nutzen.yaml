@@ -1,0 +1,14 @@
+title: "Regex im Alltag nutzen"
+difficulty: 1
+question: |
+  Finde heraus, wie du mit deiner favorisierten IDE mithilfe von regulären Ausdrücken suchen kannst.
+solution: |
+  Finde heraus, wie du mit deiner favorisierten IDE mithilfe von regulären Ausdrücken suchen kannst.
+  
+  In **VSCode** muss auf den `.*` Button in der Suche gedrückt werden.
+  
+  ![](regex_in_vs_code.png)
+  
+  In **PyCharm** muss auf den `.*` Button in der Suche gedrückt werden.
+  
+  ![](regex_in_pycharm.png)

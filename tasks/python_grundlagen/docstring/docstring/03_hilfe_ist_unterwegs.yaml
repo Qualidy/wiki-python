@@ -1,0 +1,7 @@
+title: "Hilfe ist unterwegs"
+difficulty: 1
+question: |
+  Rufe `help(calculate_area_rectangle)`, `help(sum_positive_nubmers)`, `help(combine)` auf, nachdem du die 
+  letzte Aufgabe gelöst hast. Was siehst du?
+solution: |
+  `help` zeigt den Docstring in der Konsole an.

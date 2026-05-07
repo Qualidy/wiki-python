@@ -1,0 +1,8 @@
+title: "Liste sortieren"
+difficulty: 2
+question: |
+  Sortiere die Liste `zahlen` in absteigender Reihenfolge.
+solution: |
+  ```python
+  zahlen.sort(reverse=True)
+  ```

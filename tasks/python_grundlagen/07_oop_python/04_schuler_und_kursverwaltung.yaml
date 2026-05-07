@@ -1,0 +1,4 @@
+title: "Schüler- und Kursverwaltung"
+difficulty: 2
+question: |
+  Baue ein System zur Verwaltung von Schülern und Kursen. Erstelle Klassen für Schüler, Kurse und Lehrer. Die Schülerklasse sollte Informationen wie Name, Alter und Kurse haben. Die Kursklasse sollte Methoden zum Hinzufügen von Schülern und Lehrern enthalten.

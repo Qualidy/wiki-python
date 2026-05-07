@@ -19,13 +19,11 @@ else:
 class NegativeNumberError(Exception):
     pass
 
-
 for number in [1, 2, 0, -2, 3]:
     if number < 0:
         raise NegativeNumberError(f"Zahl {number} ist negativ")
     print(f"Zahl {number}")
 ```
-
 
 ### Aufgabe: Welche Fehler kann man so machen? 🌶️️🌶️️
 
@@ -84,7 +82,6 @@ def get_number(prompt="Gib eine Ganzzahl ein: "):
         except ValueError:
             print("Das war keine erlaubte Zahl. Erneut bitte:")
 
-
 def get_operation(prompt="Gebe Operation ein: "):
     while True:
         op = input(prompt)
@@ -92,22 +89,17 @@ def get_operation(prompt="Gebe Operation ein: "):
             return op
         print(f"{op} ist keine der Erlaubten Operationen {operations.keys()} Erneut bitte:")
 
-
 def add(a, b):
     return a + b
-
 
 def subtract(a, b):
     return a - b
 
-
 def multiply(a, b):
     return a * b
 
-
 def divide(a, b):
     return a / b
-
 
 # Wir speichern eine Referenz auf die jeweilige Operation
 # in diesem Dictionary. Wenn wir also eine neue Funktion

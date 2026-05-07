@@ -1,0 +1,15 @@
+title: "Ungerade Summanden"
+difficulty: 2
+question: |
+  Schreibe eine Funktion, zwei elementweise addiert, wenn das erste Elemente ungerade ist.
+
+  ```python
+  liste1 = [1, 2, 3, 4]
+  liste2 = [5, 6, 7, 8]
+
+  result = [6, 10]
+  ```
+solution: |
+  ```python
+  [x + y for x, y in zip(liste1, liste2) if x % 2]
+  ```

@@ -1,0 +1,19 @@
+title: "Fakultät"
+difficulty: 2
+question: |
+  Schreibe eine `for`-Schleife, die die Fakultät (n!) einer gegebenen Zahl `n` berechnet. Zur Errinnerung:
+
+  ```commandline
+  n! := n ⋅ (n-1) ⋅ (n-2) ⋅ ... ⋅ 2 ⋅ 1
+  6! = 6⋅5⋅4⋅3⋅2⋅1 = 720 
+  1! = 1
+  0! = 1
+  ```
+solution: |
+  ```python
+  n = 5
+  faktor = 1
+  for zahl in range(1, n + 1):
+      faktor *= zahl
+  print(f"Fakultät von {n} ist {faktor}")
+  ```

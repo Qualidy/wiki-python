@@ -1,0 +1,6 @@
+title: "Komplexe Rechnung"
+difficulty: 1
+question: |
+  Berechne das Ergebnis von (3 + 4) * 5.
+solution: |
+  `print((3 + 4) * 5)  # 35`

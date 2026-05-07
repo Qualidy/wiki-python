@@ -1,0 +1,60 @@
+title: "ZENSUR!!!"
+difficulty: 3
+question: |
+  Schreibe eine Klasse `Censorer` mit einer statischen Methode
+  `create_censored_file(org_file_path, censored_file_path, censored_words, symbol)`,
+  die die Angegeben String mit einem Symbol ersetzt. Dieses Symbol soll standardmäßig <code>*</code>.
+
+  Wenn alles richtig gemacht wurde, dann wird der folgende Unittest
+  funktionieren:
+
+  ```python
+  import unittest
+  import os
+  from tempfile import NamedTemporaryFile
+
+  class TestCensorer(unittest.TestCase):
+      def test_create_censored_file(self):
+          original_text = "Dies ist ein Test, um zu überprüfen, ob bestimmte Wörter zensiert werden."
+          censored_words = ["Test", "Wörter"]
+          expected_censored_text = "Dies ist ein ****, um zu überprüfen, ob bestimmte ****** zensiert werden."
+
+          # Erstelle temporäre Dateien
+          with NamedTemporaryFile(mode='w', delete=False) as org_file, NamedTemporaryFile(mode='w', delete=False) as censored_file:
+              org_file.write(original_text)
+              org_file_path = org_file.name
+              censored_file_path = censored_file.name
+
+          # Zensiere die Datei
+          Censorer.create_censored_file(org_file_path, censored_file_path, censored_words)
+
+          # Überprüfe, ob die zensierte Datei existiert
+          self.assertTrue(os.path.exists(censored_file_path))
+
+          # Überprüfe den Inhalt der zensierten Datei
+          with open(censored_file_path, 'r') as censored_file:
+              actual_censored_text = censored_file.read()
+
+          self.assertEqual(actual_censored_text, expected_censored_text)
+
+          # Bereinige die temporären Dateien
+          os.remove(org_file_path)
+          os.remove(censored_file_path)
+
+  # Starte den Test
+  unittest.main(argv=[''], exit=False)
+  ```
+
+  <details><summary>Lösung</summary>
+  <pre><code>class Censorer:
+      @staticmethod
+      def create_censored_file(org_file_path, censored_file_path, censored_words, symbol="*"):
+          with open(org_file_path, "rt") as org, open(censored_file_path, "wt") as censored:
+              text = org.read()
+              for word_to_censor in censored_words:
+                  replacement = symbol * len(word_to_censor)
+                  text = text.replace(word_to_censor, replacement)
+              censored.write(text)</code></pre>
+  </details>
+tip: |
+  Eine statische Methode wird mit `@staticmethod` dekoriert.

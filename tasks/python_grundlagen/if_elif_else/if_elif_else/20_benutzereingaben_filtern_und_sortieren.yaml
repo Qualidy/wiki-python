@@ -1,0 +1,36 @@
+title: "Benutzereingaben filtern und sortieren"
+difficulty: 3
+question: |
+  Aufgabenstellung:
+
+  - Fordere den Benutzer auf, mehrere Einträge mit Kundeninformationen einzugeben (Format: "Name, Alter, Email"). Beende 
+  die Eingabe bei Eingabe von "fertig".
+  - Filtere die Daten, um nur Kunden über 30 Jahre in die Ausgabe einzuschließen.
+  - Gib die gefilterten Daten auf der Konsole aus, sortiert nach dem Alter in absteigender Reihenfolge.
+solution: |
+  ```python
+  kunden = []
+  
+  while True:
+      eingabe = input('Kunde im Format "Name, Alter, Email" oder "fertig": ')
+      if eingabe.lower() == "fertig":
+          break
+  
+      teile = [teil.strip() for teil in eingabe.split(",")]
+      if len(teile) != 3:
+          print("Bitte genau Name, Alter und Email eingeben.")
+          continue
+  
+      name, alter_text, email = teile
+      if not alter_text.isdigit():
+          print("Das Alter muss eine Zahl sein.")
+          continue
+  
+      kunden.append({"name": name, "alter": int(alter_text), "email": email})
+  
+  gefiltert = [kunde for kunde in kunden if kunde["alter"] > 30]
+  gefiltert.sort(key=lambda kunde: kunde["alter"], reverse=True)
+  
+  for kunde in gefiltert:
+      print(f'{kunde["name"]}: {kunde["alter"]}, {kunde["email"]}')
+  ```

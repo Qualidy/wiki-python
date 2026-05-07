@@ -1,0 +1,18 @@
+title: "Noch mal auf Englisch 📺"
+question: |
+  Das folgende Video von [NeuralNine](https://www.youtube.com/watch?v=GxCXiSkm6no) 
+  fasst die Inhalte dieses Kapitels zusammen und vertieft sie.
+  Schau dir das Video an und stell mit deinem Tutor sicher, dass du alle Inhalte verstehst.
+
+  {{ youtube_video("https://www.youtube.com/embed/GxCXiSkm6no?si=s0zw6JnWV3lWkjSw") }}
+
+  Auch [2MinutesPy](https://www.youtube.com/watch?v=mWaMSGwiSB0) hat ein schönes Video zu `__init__.py`:
+
+  {{ youtube_video("https://www.youtube.com/embed/mWaMSGwiSB0?si=i-Qa1KO96IDlFLD_") }}
+solution: |
+  Besprich die Inhalte der Videos mit deinem Tutor. Du solltest danach erkl?ren k?nnen:
+  
+  - warum ein Ordner mit `__init__.py` als Paket verwendet werden kann,
+  - wie Imports aus einem Paket funktionieren,
+  - warum absolute Paket-Imports wie `from my_casino.secure_input import ...` stabiler sind,
+  - welche Rolle Module und Pakete bei der Strukturierung gr??erer Programme spielen.

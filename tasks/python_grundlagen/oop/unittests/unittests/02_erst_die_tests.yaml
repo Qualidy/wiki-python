@@ -1,0 +1,36 @@
+title: "Erst die Tests"
+difficulty: 2
+question: |
+  Erstelle fünf Tests für die Funktion `get_capital_letters(string)`.
+  Diese Funktion gibt einem aus einem String alle Großbuchstaben zurück.
+  Zum Beispiel: 
+
+  ```python
+  get_capital_letters("Ich liebe den BVB") # "IBVB" 
+  ```
+  Überlege dir, dass die Tests verschiedene Szenarien abfragen.
+  Erst nachdem du die Tests geschrieben hast, implementiere die Funktion!
+
+  {{ youtube_video("https://www.youtube.com/embed/ZADHeZo9sJo?si=1DOdbMzqSA-td31w") }}
+  <pre><code>import unittest
+
+  def get_capital_letters(string):
+      return "".join(letter for letter in string if letter.isupper())
+
+  class TestCapitalLetters(unittest.TestCase):
+      def test_empty(self):
+          self.assertEqual(get_capital_letters(""), "")
+
+      def test_normalen_satz(self):
+          self.assertEqual(get_capital_letters("Hallo. Ich bin in Kiel."), "HIK")
+
+      def test_only_capital_letters(self):
+          string = "ABCEDGEFGHDDSE"
+          self.assertEqual(get_capital_letters(string), string)
+
+      def test_no_capital_letters(self):
+          self.assertEqual(get_capital_letters("abcdefg"), "")
+
+      def test_correct_return_type(self):
+          self.assertIsInstance(get_capital_letters("Hallo du"), str)
+  </code></pre></details>

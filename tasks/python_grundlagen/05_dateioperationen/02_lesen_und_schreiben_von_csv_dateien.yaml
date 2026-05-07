@@ -1,0 +1,4 @@
+title: "Lesen und Schreiben von CSV-Dateien"
+difficulty: 2
+question: |
+  Unterscheide zwischen dem Lesen und Schreiben von CSV-Dateien in Python. Verwende dazu die `csv`-Bibliothek und erkläre die grundlegenden Schritte.

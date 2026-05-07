@@ -1,0 +1,13 @@
+title: "Längster Name"
+difficulty: 3
+question: |
+  Erstelle eine Liste von Namen und verwenden Sie eine `for`-Schleife, um den längsten Namen in der Liste zu finden.
+solution: |
+  ```python
+  namen = ["Anna", "Max", "Benjamin", "Alexandra"]
+  laengster_name = ""
+  for name in namen:
+     if len(name) > len(laengster_name):
+         laengster_name = name
+  print("Längster Name:", laengster_name)
+  ```

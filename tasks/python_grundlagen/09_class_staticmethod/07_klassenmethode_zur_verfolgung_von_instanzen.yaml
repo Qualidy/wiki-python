@@ -1,0 +1,4 @@
+title: "Klassenmethode zur Verfolgung von Instanzen"
+difficulty: 3
+question: |
+  Erweitere die Klasse `Car` um eine Klassenmethode `get_total_brand`. Diese Methode soll als Parameter eine Automarke erhalten und die Gesamtanzahl von Autos dieser Marke zurückgeben. Demonstriere die Funktionalität, indem du mehrere Autos unterschiedlicher Marken erstellst und die Gesamtanzahl für eine bestimmte Marke abrufst.

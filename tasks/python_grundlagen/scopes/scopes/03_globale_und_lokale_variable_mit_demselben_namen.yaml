@@ -1,0 +1,16 @@
+title: "Globale und lokale Variable mit demselben Namen"
+difficulty: 1
+question: |
+  Definiere eine globale und eine lokale Variable mit demselben
+     Namen und gib beide innerhalb der Funktion aus.
+solution: |
+  ```python
+  var = "Ich bin global"
+  
+  def test_gleichnamig():
+     var = "Ich bin lokal"
+     print(var)  # Lokale Variable
+     print(globals()['var'])  # Globale Variable
+  
+  test_gleichnamig()
+  ```

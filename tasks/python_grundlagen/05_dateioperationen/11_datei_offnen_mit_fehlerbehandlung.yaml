@@ -1,0 +1,4 @@
+title: "Datei öffnen mit Fehlerbehandlung"
+difficulty: 1
+question: |
+  - Schreibe einen Code, der versucht, eine Datei mit dem Namen "beispiel.txt" zu öffnen. Verwende einen `try`-Block und behandle die `FileNotFoundError`-Ausnahme im `except`-Block, indem du eine Meldung ausgibst.

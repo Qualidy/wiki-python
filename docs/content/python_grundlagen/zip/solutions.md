@@ -39,7 +39,6 @@ anzahl_übereinstimmungen = sum(1 for x, y in zip(liste1, liste2) if x == y)
 print(anzahl_übereinstimmungen)
 ```
 
-
 # Was steckt dahinter
 
 ### Aufgabe: Dictionary erstellen 
@@ -107,7 +106,6 @@ print(gesamtpunktzahl)
 ```
 Bewertung: 🤮
 
-
 # enumerate
 
 ### Aufgabe: Wo sind die größten
@@ -127,8 +125,6 @@ def my_enumerate(iterable):
     return ((i, e) for i, e in zip(range(len(iterable)), iterable))
 ```
 
-
-
 ### 7: Sortierte Paare 
 
 ```python
@@ -139,15 +135,7 @@ sortierte_paare = sorted(paare, key=lambda x: x[0] + x[1])
 print(sortierte_paare)
 ```
 
-
-
-
-
-
-
-
 # Lösungen Komplex Aufgaben
-
 
 ### Lösung 1: Datenanalyse mit `zip` und Bedingungen 
 

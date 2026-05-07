@@ -48,7 +48,6 @@ erste_zeichen = [wort[0] for wort in ["Hallo", "Welt", "Python"]]
 durchschnitt = [(liste[i] + liste[i + 1]) / 2 for i in range(len(liste) - 1)]
 ```
 
-
 ### 9. **Gerade Zahlen**
 
 ```python

@@ -1,0 +1,4 @@
+title: "Erstellung und Schreiben von Dateien"
+difficulty: 1
+question: |
+  Erläutere, wie man eine Datei in Python erstellt und schreibt. Verwende dazu den `with open`-Ansatz und zeige, wie man Text in eine Datei schreibt.

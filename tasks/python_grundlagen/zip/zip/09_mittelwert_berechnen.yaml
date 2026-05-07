@@ -1,0 +1,12 @@
+title: "Mittelwert berechnen"
+difficulty: 2
+question: |
+  Berechne den Mittelwert von drei Listen `liste1`, `liste2` und `liste3`, indem du `zip` und eine Schleife verwendest.
+solution: |
+  ```python
+  liste1 = [1, 2, 3]
+  liste2 = [4, 5, 6]
+  liste3 = [3, 4, 0]
+  mittelwerte = [(x + y + z) / 3 for x, y, z in zip(liste1, liste2, liste3)]
+  print(mittelwerte)
+  ```

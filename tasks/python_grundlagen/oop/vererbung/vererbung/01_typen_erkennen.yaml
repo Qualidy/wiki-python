@@ -1,0 +1,43 @@
+title: "Typen erkennen"
+difficulty: 1
+question: |
+  Erstelle eine Instanz `s` von `Square`. Was ist `type(s)`? Was ist `type(s).__mro__` bzw. von `Square.__mro__`?
+  Was ist das Ergebnis von `isinstance(s, Square)` und von `isinstance(s, Rectangle)`
+
+  {{ youtube_video("https://www.youtube.com/embed/OlJ2vE6Ri0Y?si=7L7oiKYkfj3QWEEq") }}
+
+  Im folgenden Beispiel sehen wir, wie `super()` sowohl dafür verwendet wird, 
+  wie die `__init__` Methode aufzurufen, als auch die Methdoe `starten`, die in
+  der Klasse `Elektroauto` überschrieben wird.
+
+  [Link zum Onlinecompiler💻](https://pythontutor.com/render.html#code=class%20Auto%3A%0A%20%20%20%20def%20__init__%28self,%20marke,%20modell%29%3A%0A%20%20%20%20%20%20%20%20self.marke%20%3D%20marke%0A%20%20%20%20%20%20%20%20self.modell%20%3D%20modell%0A%0A%20%20%20%20def%20starten%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22%7Bself.marke%7D%20%7Bself.modell%7D%20wird%20gestartet.%22%0A%0Aclass%20Elektroauto%28Auto%29%3A%0A%20%20%20%20def%20__init__%28self,%20marke,%20modell,%20reichweite%29%3A%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28marke,%20modell%29%0A%20%20%20%20%20%20%20%20self.reichweite%20%3D%20reichweite%0A%0A%20%20%20%20def%20starten%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22%7Bsuper%28%29.starten%28%29%7D%20Elektromotor%20wird%20aktiviert.%22%0A%0A%20%20%20%20def%20aufladen%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22%7Bself.marke%7D%20%7Bself.modell%7D%20wird%20aufgeladen.%22%0A%0A%23%20Instanzen%20erstellen%0Amein_auto%20%3D%20Auto%28%22Volkswagen%22,%20%22Golf%22%29%0Amein_elektroauto%20%3D%20Elektroauto%28%22Tesla%22,%20%22Model%20S%22,%20500%29%0A%0A%23%20Methoden%20aufrufen%0Aprint%28mein_auto.starten%28%29%29%20%20%20%20%20%20%20%20%20%20%23%20Ausgabe%3A%20%22Volkswagen%20Golf%20wird%20gestartet.%22%0Aprint%28mein_elektroauto.starten%28%29%29%20%20%20%23%20Ausgabe%3A%20%22Tesla%20Model%20S%20wird%20gestartet.%20Elektromotor%20wird%20aktiviert.%22%0Aprint%28mein_elektroauto.aufladen%28%29%29%20%20%23%20Ausgabe%3A%20%22Tesla%20Model%20S%20wird%20aufgeladen.%22&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+  ```python
+  class Auto:
+      def __init__(self, marke, modell):
+          self.marke = marke
+          self.modell = modell
+
+      def starten(self):
+          return f"{self.marke} {self.modell} wird gestartet."
+
+  class Elektroauto(Auto):
+      def __init__(self, marke, modell, reichweite):
+          super().__init__(marke, modell)
+          self.reichweite = reichweite
+
+      def starten(self):
+          return f"{super().starten()} Elektromotor wird aktiviert."
+
+      def aufladen(self):
+          return f"{self.marke} {self.modell} wird aufgeladen."
+
+  # Instanzen erstellen
+  mein_auto = Auto("Volkswagen", "Golf")
+  mein_elektroauto = Elektroauto("Tesla", "Model S", 500)
+
+  # Methoden aufrufen
+  print(mein_auto.starten())          # Ausgabe: "Volkswagen Golf wird gestartet."
+  print(mein_elektroauto.starten())   # Ausgabe: "Tesla Model S wird gestartet. Elektromotor wird aktiviert."
+  print(mein_elektroauto.aufladen())  # Ausgabe: "Tesla Model S wird aufgeladen."
+  ```

@@ -1,10 +1,5 @@
 # Sets
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9eilDC1_yfg?si=G1EG0fo6LHgBL_qU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/9eilDC1_yfg?si=G1EG0fo6LHgBL_qU") }}
 
 Ein Set ist eine Datenstruktur, die für die Speicherung einer ungeordneten Sammlung von einzigartigen Elementen
 verwendet wird. Das heißt, dass sich die Elemente in einem Set nicht wiederholen. 
@@ -25,7 +20,6 @@ Sets werden mit geschweiften Klammern `{}` oder der `set()`-Funktion erstellt.
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=einzigartige_zahlen%20%3D%20%7B1,%202,%203,%202,%201%7D%20%0Abuchstaben%20%3D%20%7B'a',%20'a',%20'b',%20'b'%7D%0A%0Atext%20%3D%20%22Python%20ist%20cool.%20Mathe%20ist%20auch%20cool.%22%0Aunique_words%20%3D%20set%28text.split%28%29%29%0A%0Afor%20word%20in%20unique_words%3A%0A%20%20%20%20print%28word%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 einzigartige_zahlen = {1, 2, 3, 2, 1} 
 buchstaben = {'a', 'a', 'b', 'b'}
@@ -37,13 +31,7 @@ for word in unique_words:
     print(word)
 ```
 
-
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1QHRIBsSNi4?si=sV9Z3edNwUf7YFyb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/1QHRIBsSNi4?si=sV9Z3edNwUf7YFyb") }}
 
 Hier eine Auswahl über häufig verwendete Funktionen im Zusammenhang mit Sets. 
 [Du findest alle Set Methoden hier.](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
@@ -64,7 +52,6 @@ Hier eine Auswahl über häufig verwendete Funktionen im Zusammenhang mit Sets.
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=setA%20%3D%20%7B1,2,3,2,1%7D%0AsetB%20%3D%20set%28range%283%29%29%0A%0Aprint%28setA%20%7C%20setB%29%0Aprint%28setA%20%26%20setB%29%0Aprint%28setA%20-%20setB%29%0Aprint%28setB%20-%20setA%29%0Aprint%28setA%20%5E%20setB%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-
 ```python
 setA = {1,2,3,2,1}
 setB = set(range(3))
@@ -76,7 +63,6 @@ print(setB - setA)
 print(setA ^ setB)
 ```
 
-
 Häufig werden Sets verwendet, um Duplikate aus Listen zu entfernen oder um zu prüfen, ob Elemente in einer Struktur sind.
 Dies ist nämlich aufgrund der internen Struktur von Sets häufig schneller, als bei Listen.
 
@@ -84,46 +70,23 @@ Dies ist nämlich aufgrund der internen Struktur von Sets häufig schneller, als
 
 [//]: # ([40min])
 
-### 1. **Set Erstellung**: 🌶️️
-Erstelle ein Set aus den Zahlen 1 bis 5 und gib es aus.
-### 2. **Duplikatentfernung**: 🌶️️
-Konvertiere die Liste `[1, 2, 2, 3, 4, 5, 5, 6]` in ein Set, um Duplikate zu entfernen.
-### 3. **Elemente Hinzufügen**:  🌶️️
-Füge die Zahlen 6, 7 und 8 zu dem Set aus Aufgabe 1 hinzu.
-### 4. **Element Entfernen**:  🌶️️
-Entferne die Zahl 5 aus dem Set, das du in Aufgabe 3 erstellt hast.
-### 5. **Set Durchlaufen**: 🌶️️
-Durchlaufe ein Set in einer Schleife und drucke jedes Element aus.
-### 6. **Set Union**: 🌶️️
-Erstelle zwei Sets, `set1 = {1, 2, 3}` und `set2 = {3, 4, 5}`, und finde ihre Vereinigung.
-### 7. **Set Schnittmenge**: 🌶️️
-Finde die Schnittmenge von `set1` und `set2` aus der vorherigen Aufgabe.
-### 8. **Set Differenz**: 🌶️️
-Ermittle die Differenz zwischen `set1` und `set2` und umgekehrt.
-### 9. **Symmetrische Differenz**: 🌶️️
-Finde die symmetrische Differenz zwischen `set1` und `set2`.
-### 10. **Set Länge**: 🌶️️
-Ermittle die Anzahl der Elemente in einem Set deiner Wahl.
-### 11. **Set Mitgliedschaftstest**: 🌶️️
-Überprüfe, ob ein bestimmtes Element in einem Set vorhanden ist.
-### 12. **Set Leeren**: 🌶️️
-Entferne alle Elemente aus einem Set.
-### 13. **Subsets**: 🌶️️🌶️️
-Überprüfe, ob ein Set eine Teilmenge eines anderen Sets ist.
-### 14. **Supersets**: 🌶️️🌶️️
-Überprüfe, ob ein Set eine Obermenge eines anderen Sets ist.
-
-[Lösungen](solutions.md)
-
+{{ task(file="tasks/python_grundlagen/sets/sets/01_set_erstellung.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/02_duplikatentfernung.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/03_elemente_hinzufugen.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/04_element_entfernen.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/05_set_durchlaufen.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/06_set_union.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/07_set_schnittmenge.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/08_set_differenz.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/09_symmetrische_differenz.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/10_set_lange.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/11_set_mitgliedschaftstest.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/12_set_leeren.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/13_subsets.yaml") }}
+{{ task(file="tasks/python_grundlagen/sets/sets/14_supersets.yaml") }}
 ## Unveränderliche Sets: `frozenset`
 
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aMQpjzIbl1o?si=dekfHgM-xNg5LRoh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
-
+{{ youtube_video("https://www.youtube.com/embed/aMQpjzIbl1o?si=dekfHgM-xNg5LRoh") }}
 
 Möchte man ein Set erstellen, das jedoch unveränderlich (immutable) ist, so steht hier die Struktur `frozenset` bereit.
 Wir können hier dieselben nicht manipulierenden Operationen anwenden wie bei normalen Sets.

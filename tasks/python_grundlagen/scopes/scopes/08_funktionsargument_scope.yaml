@@ -1,0 +1,15 @@
+title: "Funktionsargument Scope"
+difficulty: 1
+question: |
+  Übergebe eine Variable als Argument an eine Funktion und ändere sie innerhalb der
+     Funktion.
+solution: |
+  ```python
+  def test_argument(arg):
+     arg = "Geändert"
+     print(arg)
+  
+  var = "Original"
+  test_argument(var)
+  print(var)  # Bleibt "Original"
+  ```

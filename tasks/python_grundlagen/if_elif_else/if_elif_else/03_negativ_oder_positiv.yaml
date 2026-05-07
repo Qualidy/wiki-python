@@ -1,0 +1,4 @@
+title: "Negativ oder Positiv"
+difficulty: 1
+question: |
+  Schreibe ein Programm, das überprüft, ob eine Zahl positiv, negativ oder 0 ist.

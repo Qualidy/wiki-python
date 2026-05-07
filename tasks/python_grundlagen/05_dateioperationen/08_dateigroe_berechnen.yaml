@@ -1,0 +1,4 @@
+title: "Dateigröße berechnen"
+difficulty: 2
+question: |
+  Schreibe eine Funktion, die die Größe einer Datei in Kilobyte berechnet und ausgibt.

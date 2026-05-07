@@ -1,0 +1,13 @@
+title: "Bedingung fehlt"
+difficulty: 2
+question: |
+  Was ist hier die Ausgabe:
+
+  ```python
+  result = [(i, j) for i in range(1, 11) for j in range(1, 11) if ...]
+  print(result) # [(1, 9), (2, 8), (3, 7), (4, 6), (5, 5), (6, 4), (7, 3), (8, 2), (9, 1)]
+  ```
+solution: |
+  ```python
+  paare = [(i, j) for i in range(1, 11) for j in range(1, 11) if i + j == 10]
+  ```

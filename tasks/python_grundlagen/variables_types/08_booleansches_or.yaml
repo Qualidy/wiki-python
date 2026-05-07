@@ -1,0 +1,12 @@
+title: Booleansches OR
+difficulty: 1
+question: |
+  Es gelte `a=1` und `b=2`. Was ist das Ergebnis?
+
+  `a < 3 or b > 3`
+solution: |
+  ```python
+  a = 1
+  b = 2
+  print(a < 3 or b > 3)  # True
+  ```

@@ -1,0 +1,9 @@
+title: "Docstring von random"
+difficulty: 1
+question: |
+  Schaue dir [die Dokumentation vom Package `random`](https://docs.python.org/3/library/random.html) an,
+  das im Python enthalten ist. Vergleiche diese Dann mit dem Source code. Auf diesen Code
+  wird am Amfang der Dokuentation verlinkt. Erkennst du, dass die Dokumentation im
+  Code selbst hinterlegt ist?
+solution: |
+  Im Sourcecode findet man genau den Docstring, der auch in der Dokumentation auftaucht.

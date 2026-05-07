@@ -1,0 +1,6 @@
+title: "Modulo"
+difficulty: 1
+question: |
+  Finde den Rest der Division von 18 durch 10.
+solution: |
+  `print(18 % 10)  # 8`

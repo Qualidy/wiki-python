@@ -1,0 +1,17 @@
+title: "Minimum in Liste finden"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `finde_minimum()`, die eine Liste von Zahlen nimmt und das
+  kleinste Element zurückgibt. Nutze dabei keine bestehende Funktion in Python,
+  sondern implementiere dies über eine Schleife.
+solution: |
+  ```python
+  def finde_minimum(liste):
+      minimum = liste[0]
+      for element in liste[1:]:
+          if element < minimum:
+              minimum = element
+      return minimum
+  
+  print(finde_minimum([5, 3, 8, 2, 9])) # 2
+  ```

@@ -1,0 +1,22 @@
+title: "Klassenmethode für Initialisierung"
+difficulty: 2
+question: |
+  Implementiere eine Klassenmethode in einer Klasse `Person`, 
+  die für die Initialisierung von Instanzen verwendet wird. 
+  Die Klassenmethode sollte alternative Wege zur Instanzierung ermöglichen. 
+  Demonstriere den Gebrauch der Klassenmethode.
+
+  Hier als Hilfestellung eine allgemeine Struktur für die Implementierung der
+  Klassenmethode in der Klasse `Person`:
+
+  ```python
+  class Person:
+      def __init__(self, name, age):
+          # Konstruktorcode hier
+
+      @classmethod
+      def alternative_instanzierung(cls, parameter):
+          # Implementierung der Klassenmethode hier
+          # Verwende 'cls', um auf die Klasse zuzugreifen und eine neue Instanz zu erstellen
+          return cls(neue_parameter_werte)
+  ```

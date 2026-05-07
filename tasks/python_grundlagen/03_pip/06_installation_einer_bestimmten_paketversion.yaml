@@ -1,0 +1,4 @@
+title: "Installation einer bestimmten Paketversion"
+difficulty: 1
+question: |
+  - Installiere eine spezifische Version des Pakets "requests" mit dem Befehl `pip install requests==2.25.1`.

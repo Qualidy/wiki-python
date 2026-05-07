@@ -1,0 +1,6 @@
+title: "Exponentialfunktion"
+difficulty: 2
+question: |
+  Berechne $e^3$ ($e$ ist die Basis des natürlichen Logarithmus).
+solution: |
+  `import math; print(math.exp(3))  # etwa 20.085`

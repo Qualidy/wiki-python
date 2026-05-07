@@ -1,0 +1,6 @@
+title: "Natürlicher Logarithmus"
+difficulty: 2
+question: |
+  Berechne den natürlichen Logarithmus von 8.
+solution: |
+  `import math; print(math.log(8, math.e))  # etwa 2.079`

@@ -1,0 +1,8 @@
+title: "Tupel erstellen"
+difficulty: 1
+question: |
+  Erstelle ein Tupel mit den Namen von fünf verschiedenen Früchten.
+solution: |
+  ```python
+  fruechte = ("Apfel", "Banane", "Kirsche", "Orange", "Mango")
+  ```

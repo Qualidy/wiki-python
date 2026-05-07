@@ -1,0 +1,9 @@
+title: "Grundlegendes Dictionary"
+difficulty: 1
+question: |
+  Erstelle ein Dictionary mit drei Schlüssel-Wert-Paaren und gib es aus.
+solution: |
+  ```python
+  mein_dict = {"Name": "Anna", "Alter": 30, "Beruf": "Ingenieurin"}
+  print(mein_dict)
+  ```

@@ -1,0 +1,21 @@
+title: "Fremden Code lesen"
+difficulty: 3
+question: |
+  [Laden Sie diese Dateien herunter🔽](sorting_example.zip). Es enthält eine Sortieralgorithmus und dessen Visualisierung.
+  Erklären Sie den Ablauf des Sortieralgorithmus und machen Sie sich grob mit der Visualisierung vertraut.
+  Schreiben Sie den Docstring für die Funktion `simple_sort`. Ggf. musst du noch `pip import matplotlib` ausführen,
+  damit die Visualisierung funktioniert.
+solution: |
+  `simple_sort` ist eine Bubble-Sort-Implementierung: Benachbarte Elemente werden paarweise verglichen und vertauscht, wenn sie in der falschen Reihenfolge stehen. Nach jedem inneren Durchlauf ist das gr??te noch unsortierte Element weiter nach rechts gewandert.
+  
+  Ein passender Docstring w?re:
+  
+  ```python
+  def simple_sort(elements):
+      """Sortiert die Liste aufsteigend mit Bubble Sort und visualisiert jeden Vergleich.
+  
+      Die Liste wird direkt ver?ndert. Bei jedem Vergleich zweier benachbarter
+      Elemente wird ein Frame f?r die Visualisierung erzeugt. Die aktuell
+      verglichenen Elemente werden farbig markiert.
+      """
+  ```

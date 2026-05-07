@@ -1,0 +1,4 @@
+title: "Flugbuchungssystem"
+difficulty: 3
+question: |
+  Entwickle ein System zur Buchung von Flügen. Erstelle Klassen für Flüge, Passagiere und Buchungen. Die Flugklasse sollte Informationen wie Abflugort, Zielort und verfügbare Plätze haben. Die Passagierklasse sollte Attribute wie Name und Alter enthalten. Die Buchungsklasse sollte Methoden zum Buchen und Stornieren von Flügen haben.

@@ -1,0 +1,9 @@
+title: "Nur Werte durchlaufen"
+difficulty: 2
+question: |
+  Durchlaufe ein Dictionary und gib nur die Werte aus.
+solution: |
+  ```python
+  for value in mein_dict.values():
+     print(value)
+  ```

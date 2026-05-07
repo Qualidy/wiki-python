@@ -1,0 +1,15 @@
+title: "Fast endlose Schleife"
+difficulty: 3
+question: |
+  Erstelle eine Schleife, die so lange Zufallszahlen zwischen 1 und 10 generiert und ausgibt, bis die Zahl 5 erscheint.
+  Nutze dazu `random.randint(a,b)` ([Doku](https://docs.python.org/3/library/random.html#random.randint))
+solution: |
+  ```python
+  import random
+  
+  zahl = 0
+  while zahl != 5:
+      zahl = random.randint(1, 10)
+      print(zahl)
+  print("Das wars!")
+  ```

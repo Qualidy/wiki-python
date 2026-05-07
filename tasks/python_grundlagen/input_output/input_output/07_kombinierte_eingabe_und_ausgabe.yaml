@@ -1,0 +1,10 @@
+title: "Kombinierte Eingabe und Ausgabe"
+difficulty: 2
+question: |
+  Frage den Benutzer nach seinem Lieblingsessen und sage ihm mit `print`, dass du 
+  es auch magst.
+solution: |
+  ```python
+  essen = input("Was ist dein Lieblingsessen? ")
+  print(f"Ich mag auch {essen}!")
+  ```

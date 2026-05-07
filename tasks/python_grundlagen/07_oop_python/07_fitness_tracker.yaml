@@ -1,0 +1,4 @@
+title: "Fitness-Tracker"
+difficulty: 3
+question: |
+  Baue eine Anwendung zur Verfolgung von Fitnessaktivitäten. Erstelle Klassen für Benutzer, Übungen und Trainingseinheiten. Die Benutzerklasse sollte Informationen wie Name, Alter und Trainingshistorie haben. Die Übungsklasse sollte Attribute wie Name, Kalorienverbrauch und Muskelgruppen enthalten. Implementiere Methoden zum Hinzufügen von Trainingseinheiten und Berechnen des Kalorienverbrauchs.

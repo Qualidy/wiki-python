@@ -1,0 +1,11 @@
+title: "Begrüßung"
+difficulty: 2
+question: |
+  * Verwende `input`, um den Benutzer nach seinem Namen zu fragen und speichere das Ergebnis in
+  einer Variablen. 
+  * Begrüße ihn anschließend mit `print`.
+solution: |
+  ```python
+  name = input("Wie heißt du? ")
+  print(f"Hallo, {name}!")
+  ```

@@ -1,0 +1,8 @@
+title: "Tupel vom Tupel"
+difficulty: 1
+question: |
+  Erstelle ein Tupel aus den ersten drei Elementen des Tupels von Aufgabe 1.
+solution: |
+  ```python
+  erste_drei = fruechte[:3]
+  ```

@@ -1,0 +1,14 @@
+title: "Zuviel oder zu wenig"
+difficulty: 1
+question: |
+  Wie oft wird die folgende Schleife durchlaufen?
+
+  ```python
+  for i, j in zip(range(10), range(20)):
+      print(i, j)
+  ```
+solution: |
+  Die Schleife wird 10 Mal durchlaufen. `zip` liefert nur so viele Paare, bis
+  **einer** der Parameter erschöpft ist. D.h. nach der Ausgabe `9 9` ist Schluss,
+  da dann `range(10)` erschüpft ist, obwohl es noch weitere Elemente in `range(20)`
+  gäbe.

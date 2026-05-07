@@ -1,0 +1,8 @@
+title: Diskussion
+difficulty: 1
+question: |
+  Für welche Anwendungen float und integer jeweils besser geeignet sind und wo es keine Rolle spielt!
+solution: |
+  **Integer**: Wenn nur ganze Zahlen Sinn ergeben, z.B. Alter oder Geburtsjahr.
+
+  **Floats**: Wenn auch Bruchteile relevant sind, z.B. Gewicht.

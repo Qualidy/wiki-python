@@ -1,0 +1,16 @@
+title: "Fakultät berechnen"
+difficulty: 3
+question: |
+  Man kann die Fakultät einer Zahl `n` mit der Formel folgenden Formel berechnen:
+      
+      n! = 1, wenn ≤ n
+      n! = n * (n-1)!, andernfalls
+
+  Nutze das, um eine rekursive Implementierung von der Fakultätsfunktion zu programmieren.
+solution: |
+  ```python
+  def fak(n):
+      if n <= 1:
+          return 1
+      return n * fak(n-1)
+  ```

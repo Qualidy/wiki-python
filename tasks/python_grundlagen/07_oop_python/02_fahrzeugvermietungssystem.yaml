@@ -1,0 +1,4 @@
+title: "Fahrzeugvermietungssystem"
+difficulty: 2
+question: |
+  Implementiere ein System zur Vermietung von Fahrzeugen. Erstelle Klassen für Fahrzeuge (Auto, Motorrad usw.) und Vermietungsagenturen. Die Fahrzeugklasse sollte Informationen wie Modell, Baujahr und Verfügbarkeit enthalten. Die Vermietungsagenturklasse sollte Methoden zum Vermieten und Zurückgeben von Fahrzeugen haben.

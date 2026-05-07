@@ -1,0 +1,4 @@
+title: "Aktualisierung eines Pakets"
+difficulty: 1
+question: |
+  - Aktualisiere das Paket "requests" auf die neueste verfügbare Version mit dem Befehl `pip install --upgrade`.

@@ -1,0 +1,8 @@
+title: Integer Addition
+difficulty: 1
+question: |
+  Schreibe ein Programm, das zwei Integers addiert.
+solution: |
+  ```python
+  print(3 + 5)
+  ```

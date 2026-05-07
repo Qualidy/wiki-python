@@ -70,58 +70,12 @@ verwendet werden.
 von einem Regex erkannt werden.
 * Hier noch ein Hilfreiches Tutorial von Corey Schaffer:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sa-TUpSx1JA?si=gqXzbEcOWooXP5sZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{ youtube_video("https://www.youtube.com/embed/sa-TUpSx1JA?si=gqXzbEcOWooXP5sZ") }}
 
-### Aufgabe: Hashtags extrahieren🌶
-
-Extrahiere alle Hashtags im folgenden Beispiel:
-
-```python
-text = "Ein Text mit #Python und #Programmierung. #Regex Übungen sind auch dabei."
-```
-
-### Aufgabe: CSV-Zeile parsen🌶
-
-Schreibe einen regulären Ausdruck, um Daten aus einer CSV-Zeile zu extrahieren. Die `,`-separierten Einträge
-sollen dann in einer Liste erscheinen.
-
-```python
-csv_line = "Alice,25,Female,Engineer"
-```
-
-### Aufgabe: Regex im Alltag nutzen🌶
-Finde heraus, wie du mit deiner favorisierten IDE mithilfe von regulären Ausdrücken suchen kannst.
-
-### Aufgabe: Datum filtern🌶🌶
-
-Finde alle Datums im folgenden Text:
-
-```python
-text = "Ein Beispieltext mit dem Datum 27.01.2024 und einem weiteren Datum 01.12.2023."
-```
-
-### Aufgabe: URLs unkenntlich machen🌶🌶
-
-Ersetze im folgenden Text alle URLs durch `***hidden URL***`:
-
-```python
-text = "Ein Text mit einer URL: https://www.example.com und eine weitere: http://test.org."
-```
-
-### Aufgabe: Farbcodes🌶🌶
-
-Filtere alle Hexadezimalen Farbcodes mit 6 Ziffern heraus:
-
-```python
-text = "Farbcodes: #FF0000, #00FF00, #0000FF."
-```
-
-### Aufgabe: HTML-Tags entfernen🌶🌶🌶
-
-Entferne aus dem folgenden Text die HTML-Tags:
-
-```python
-html_text = "<p>Dies ist ein <strong>Beispiel</strong> HTML-Text.</p>"
-```
-
-[Lösung](solution.md)
+{{ task(file="tasks/python_grundlagen/regex/regex/01_hashtags_extrahieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/regex/regex/02_csv_zeile_parsen.yaml") }}
+{{ task(file="tasks/python_grundlagen/regex/regex/03_regex_im_alltag_nutzen.yaml") }}
+{{ task(file="tasks/python_grundlagen/regex/regex/04_datum_filtern.yaml") }}
+{{ task(file="tasks/python_grundlagen/regex/regex/05_urls_unkenntlich_machen.yaml") }}
+{{ task(file="tasks/python_grundlagen/regex/regex/06_farbcodes.yaml") }}
+{{ task(file="tasks/python_grundlagen/regex/regex/07_html_tags_entfernen.yaml") }}

@@ -1,0 +1,15 @@
+title: "Punkt-Klasse erweitern"
+difficulty: 1
+question: |
+  Gegeben ist eine einfache `Punkt`-Klasse mit den Koordinaten `x` und `y`. 
+
+     ```python
+  class Punkt:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+     ```
+       
+  Implementiere die magische Methode `__sub__`, um zwei `Punkt`-Objekte voneinander zu subtrahieren und ein neues `Punkt`-Objekt mit den subtrahierten Koordinaten zu erstellen.
+
+  _Tipp_: Du kannst dich an dem Beispiel zum addieren zweiter Punkte orientieren.

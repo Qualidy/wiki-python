@@ -1,0 +1,9 @@
+title: "String rückwärts ausgeben"
+difficulty: 2
+question: |
+  Erstelle einen String und gib ihn rückwärts aus.
+solution: |
+  ```python
+  text = "Python"
+  print(text[::-1])
+  ```

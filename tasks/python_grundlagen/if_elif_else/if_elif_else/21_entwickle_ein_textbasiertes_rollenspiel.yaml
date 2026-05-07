@@ -1,0 +1,57 @@
+title: "Entwickle ein textbasiertes Rollenspiel"
+difficulty: 5
+question: |
+  Aufgabenstellung:
+
+  - Du steuerst mit deiner Eingabe (input) einen Helden, der in einem Labyrinth gefangen ist.
+  - Du beschreibst mit Texten was passiert.
+  - Jede Runde kannst du eine Entscheidung treffenn zb vorwärst gehen... durch eine Tür gehen etc.
+  - Du bestitzt 20 Trefferpunkte
+  - Gelegentlich triffst du auf Feinde und musst Kämpfen.
+  - Die Feinde besitzen ebenfalls Trefferpunkte und du kannst Attacken ausführen.
+  - Eien Attacke ist erfolgreich, wenn du eine Quiz-Frage richtig beantwortest.
+  - Erstelle dazu ein Dictionary für deine Quiz-Fragen und benutze idealerweise Fragen um die Themen aus diesem Kurs (also Python und Mathematik)
+  - Überlege dir ein tolles End-Game mit einem Endboss.
+  - Solltest du auf 0 Trefferpunkte fallen, hast du das Spiel verloren.
+  - Tauscht später eure Fragen und Antworten aus und erstellt ein gemeinsames großes Deictionary, um euch mit dem Spiel auf die Prüfung vorzubereiten.
+solution: |
+  Eine m?gliche L?sung ist ein kleines Spiel mit Schleife, Trefferpunkten, Quiz-Fragen und Kampfentscheidung:
+  
+  ```python
+  import random
+  
+  fragen = {
+      "Was ist 3 ** 2?": "9",
+      "Welcher Typ ist [1, 2, 3]?": "list",
+      "Wie hei?t der Restoperator in Python?": "%",
+  }
+  
+  held_lp = 20
+  boss_lp = 12
+  
+  print("Du betrittst das Labyrinth.")
+  
+  while held_lp > 0 and boss_lp > 0:
+      aktion = input("Aktion (weiter/ausruhen): ").lower()
+  
+      if aktion == "ausruhen":
+          held_lp = min(20, held_lp + 2)
+          print(f"Du ruhst dich aus. LP: {held_lp}")
+          continue
+  
+      frage, antwort = random.choice(list(fragen.items()))
+      print("Ein Gegner erscheint.")
+      eingabe = input(frage + " ")
+  
+      if eingabe.strip().lower() == antwort.lower():
+          boss_lp -= 4
+          print(f"Treffer! Boss-LP: {boss_lp}")
+      else:
+          held_lp -= 5
+          print(f"Falsch. Deine LP: {held_lp}")
+  
+  if held_lp <= 0:
+      print("Du hast verloren.")
+  else:
+      print("Du hast den Endboss besiegt!")
+  ```

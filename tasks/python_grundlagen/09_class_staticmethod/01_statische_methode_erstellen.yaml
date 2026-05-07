@@ -1,0 +1,6 @@
+title: "Statische Methode erstellen"
+difficulty: 1
+question: |
+  Erstelle eine Klasse mit einer statischen Methode.
+  Die statische Methode soll eine einfache Berechnung durchführen und das Ergebnis zurückgeben. 
+  Demonstriere den Aufruf dieser Methode über die Klasse.

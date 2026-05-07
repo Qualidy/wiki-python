@@ -12,9 +12,7 @@ Set the stage for [PyPi](https://pypi.org/)!
 
 PyPI ist ein Online-Repository für öffentliche Python-Pakete. Entwickler können Pakete veröffentlichen, die jeder installieren und verwenden kann. Für jedes Paket gibt es hier eine Installationsanleitung, eine Beschreibung, Versionshinweise und Informationen zu Abhängigkeiten.
 
-### Aufgabe: Erkunde PyPI 🌶️
-Besuche [PyPi](https://pypi.org/) undschau dich um, suche nach einem beliebten Paket, zum Beispiel `requests`.
-
+{{ task(file="tasks/python_grundlagen/pakete/pakete/01_erkunde_pypi.yaml") }}
 ### Pakete selber packen
 Ein Package enthält **immer** eine `__init__.py`. Diese zeigt an,
 dass es sich bei dem Ordner um ein Python Package handelt.
@@ -29,60 +27,10 @@ my_package/
 |   |-- module3.py
 ```
 
-### Aufgabe: Türen auf in unserem Casino 🌶
-Unsere Casino-module aus [Module](../module/module.md) sollen jetzt in ein eigenes erstes Paket umgewandelt werden. Hierzu erstellen wir einen Ordner `my_casino` und füge alle bisher erstellten Dateien
-darin ein.
-
-Zusätzlich erstellen wir eine Datei `__init__.py` ohne Inhalt.
-
-Die Ordnerstruktur sieht danach wie folgt aus:
-
-```
-my_casino/
-|-- __init__.py
-|-- casino_games.py
-|-- my_random.py
-|-- secure_input.py
-```
-
-In den Modulen (Files) wirst du die imports umbenennen müssen.
-
-```python
-from my_casino.secure_input import input_int_in_between
-from my_casino.my_random import random_squares
-```
-
-Öffne nun eine Pythonkonsole und führe die folgenden Befehle aus:
-
-```python
->>> from my_casino.casino_games import play_game
->>> play_game()
-```
-
-Auf gehts!🤑💰
-
-[Lösung](solutions.md#aufgabe-türen-auf)
-
-
-### Aufgabe: Noch mal auf Englisch 📺
-
-Das folgende Video von [NeuralNine](https://www.youtube.com/watch?v=GxCXiSkm6no) 
-fasst die Inhalte dieses Kapitels zusammen und vertieft sie.
-Schau dir das Video an und stell mit deinem Tutor sicher, dass du alle Inhalte verstehst.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GxCXiSkm6no?si=s0zw6JnWV3lWkjSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-Auch [2MinutesPy](https://www.youtube.com/watch?v=mWaMSGwiSB0) hat ein schönes Video zu `__init__.py`:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mWaMSGwiSB0?si=i-Qa1KO96IDlFLD_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+{{ task(file="tasks/python_grundlagen/pakete/pakete/02_turen_auf_in_unserem_casino.yaml") }}
+{{ task(file="tasks/python_grundlagen/pakete/pakete/03_noch_mal_auf_englisch.yaml") }}
 ## Was ist Name == Main?
-<details>
-<summary>
-🎦 Video
-</summary>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/57b8gJKZf6o?si=sBKUorE0e-MlfRoK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</details>
+{{ youtube_video("https://www.youtube.com/embed/57b8gJKZf6o?si=sBKUorE0e-MlfRoK") }}
 
 Wenn wir die folgende Datei `greetings.py` ausführen
 

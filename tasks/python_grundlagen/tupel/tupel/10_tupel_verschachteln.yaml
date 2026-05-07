@@ -1,0 +1,8 @@
+title: "Tupel verschachteln"
+difficulty: 1
+question: |
+  Erstelle ein verschachteltes Tupel, das das Originaltupel von Aufgabe 1 und das Gemüsetupel von Aufgabe 8 enthält.
+solution: |
+  ```python
+  verschachtelt = (fruechte, gemuese)
+  ```

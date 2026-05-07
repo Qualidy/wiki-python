@@ -1,0 +1,56 @@
+title: "Typen finden"
+difficulty: 3
+question: |
+  Gib hier die richtigen Typen an. Hier ist ggf noch Recherche nötig.
+
+  Hier ist ein [Cheatsheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html).
+
+  Hier findest du die [ausführliche Dokumentation](https://docs.python.org/3/library/typing.html#module-typing).
+
+  ```python
+  def get_rest(zaehler, nenner):
+      return zaehler // nenner
+
+  def greeting(name, alter=None):
+      if alter is not None and alter > 60:
+          return f"Einen wunderschönen Tag, {name}."
+      return f"Was geht, {name}?"
+
+  def calculate_average(list_of_ints):
+      return sum(list_of_ints) / len(list_of_ints)
+
+  def min_max(list_of_floats):
+      return min(list_of_floats), max(list_of_floats)
+
+  def behave_different(value):
+      if isinstance(value, tuple):
+          return value[::-1]
+      elif isinstance(value, int):
+          return value / 2
+      else:
+          return None
+  ```
+
+  Es gäbe zu Type Hints noch sehr viel zu erzählen, jedoch wollen wir uns zunächst mit weiteren Python Basics
+  auseinandersetzen, bevor wir dieses optionale Sprachfeature vertiefen.
+solution: |
+  ```python
+  def get_rest(zaehler: int, nenner: int) -> int:
+      return zaehler // nenner
+  
+  from typing import Optional
+  
+  def greeting(name: str, alter: Optional[int] = None):
+      if alter is not None and alter > 60:
+          return f"Einen wunderschönen Tag, {name}."
+      return f"Was geht, {name}?"
+  
+  def calculate_average(list_of_ints: list[int]) -> float:
+      return sum(list_of_ints) / len(list_of_ints)
+  
+  from typing import Tuple, List
+  
+  def min_max(list_of_floats: List[float]) -> Tuple[float, float]:
+      return min(list_of_floats), max(list_of_floats)
+  
+  from typing import Any

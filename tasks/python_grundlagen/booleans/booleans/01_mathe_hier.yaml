@@ -1,0 +1,19 @@
+title: "Mathe, hier!"
+difficulty: 2
+question: |
+  Verwende im folgenden Code den Satz von De Morgan.
+
+  ```python
+  x = 3
+  y = 8
+  z = 10
+
+  if not (x > 5 or y < 10):
+      print("Die Bedingung ist nicht erfüllt.")
+  else:
+      print("Die Bedingung ist erfüllt.")
+  ```
+solution: |
+  ```python
+  if not x > 5 and not y < 10:
+      ...

@@ -1,0 +1,8 @@
+title: Werte aus Dictionary abrufen
+difficulty: 1
+question: |
+  Greife auf den Wert des Schlüssels "b" im Dictionary von Aufgabe 2 zu.
+solution: |
+  ```python
+  wert = dictionary["b"]
+  ```

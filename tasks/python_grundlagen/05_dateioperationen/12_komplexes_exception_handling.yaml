@@ -1,0 +1,4 @@
+title: "Komplexes Exception Handling"
+difficulty: 3
+question: |
+  Erstelle einen Code, der eine Datei öffnet, ihren Inhalt liest und in eine andere Datei schreibt. Behandle dabei `FileNotFoundError`, `PermissionError` und `IOError` mit spezifischen Ausnahmen. Gib eine Meldung aus, wenn eine Ausnahme auftritt.

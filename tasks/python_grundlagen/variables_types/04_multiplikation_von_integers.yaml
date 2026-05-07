@@ -1,0 +1,8 @@
+title: Multiplikation von Integers
+difficulty: 1
+question: |
+  Multipliziere zwei Integers und gib das Ergebnis aus.
+solution: |
+  ```python
+  print(6 * 8)
+  ```

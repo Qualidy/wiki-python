@@ -1,0 +1,8 @@
+title: "Multiplikation"
+difficulty: 1
+question: |
+  Multipliziere das Tupel von Aufgabe 1, um ein Tupel zu erstellen, das jedes Element dreimal enthält.
+solution: |
+  ```python 
+  dreifach = fruechte * 3
+  ```

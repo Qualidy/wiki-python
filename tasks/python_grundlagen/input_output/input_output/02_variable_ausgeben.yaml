@@ -1,0 +1,8 @@
+title: "Variable ausgeben"
+difficulty: 1
+question: |
+  Erstelle eine Variable `text` mit dem Wert "Python" und gib sie mit `print` aus.
+solution: |
+  ```python
+  text = "Python"; print(text)
+  ```

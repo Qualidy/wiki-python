@@ -50,7 +50,6 @@ Implementierung.
 Insgesamt ermöglicht die OOP eine organisierte und strukturierte Entwicklung von Software, wodurch Code besser lesbar,
 wartbar und erweiterbar wird.
 
-
 # Analogie
 
 Stell dir vor, du möchtest eine Kaffeemaschine bauen. Die Kaffeemaschine repräsentiert dabei die Klasse, 

@@ -1,0 +1,4 @@
+title: "Autoverwaltung mit Kilometerstand"
+difficulty: 2
+question: |
+  Entwickle eine Klasse `Auto`, die private Attribute für Marke, Modell und Kilometerstand hat. Implementiere @property-Dekoratoren, um den Zugriff auf diese Attribute zu steuern. Füge Methoden hinzu, um den Kilometerstand zu erhöhen und anzuzeigen.

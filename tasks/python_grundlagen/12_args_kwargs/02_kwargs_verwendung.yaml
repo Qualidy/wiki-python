@@ -1,0 +1,4 @@
+title: "`kwargs` Verwendung"
+difficulty: 1
+question: |
+  Implementiere eine Funktion, die verschiedene Informationen (Name, Alter, Geschlecht) als schlüsselwortbasierte Argumente annimmt und ausdruckt. Verwende dabei `**kwargs`.

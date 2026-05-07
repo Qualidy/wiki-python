@@ -1,0 +1,7 @@
+title: "Entpacken bei Listen"
+difficulty: 2
+question: |
+  Ändere den Code aus Aufgabe 16 so, dass in der ersten Zeile eine Liste, statt eines Tupels erstellt wird.
+  Was ändert sich nun an der Ausgabe?
+solution: |
+  Die Konsolenausgabe ist exakt gleich wie in Aufgabe 16.

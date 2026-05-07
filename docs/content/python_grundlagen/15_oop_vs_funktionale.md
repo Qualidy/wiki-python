@@ -132,15 +132,5 @@ square_lambda = lambda x: x ** 2
 # Aufgaben:
 [100min]
 
-## 1. **Fakultät berechnen 🌶️️🌶️️** 
-
-Implementiere eine Funktion zur Berechnung der Fakultät einer Zahl unter Verwendung der funktionalen Programmierung und Rekursion. Teilschritte:
-   - Schreibe eine Lambda-Funktion für die Fakultät.
-   - Implementiere eine Funktion höherer Ordnung zur Anwendung der Lambda-Funktion.
-   - Teste die Funktionalität mit verschiedenen Eingaben.
-
-## 2. **Wortliste sortieren 🌶️️🌶️️🌶️️**
- Erstelle eine Liste von Wörtern und sortiere sie nach der Länge unter Verwendung der Funktionen `sorted` und `len` im funktionalen Stil. Teilschritte:
-   - Definiere eine Liste von Wörtern.
-   - Verwende die `sorted`-Funktion mit einer Lambda-Funktion als Schlüssel für die Sortierung. [Dokumentation](https://docs.python.org/3/howto/sorting.html#sorting-how-to)
-   - Gib die sortierte Liste aus.
+{{ task(file="tasks/python_grundlagen/15_oop_vs_funktionale/01_fakultat_berechnen.yaml") }}
+{{ task(file="tasks/python_grundlagen/15_oop_vs_funktionale/02_wortliste_sortieren.yaml") }}

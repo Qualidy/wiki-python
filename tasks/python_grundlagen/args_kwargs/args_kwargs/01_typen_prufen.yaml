@@ -1,0 +1,9 @@
+title: "Typen prüfen"
+difficulty: 1
+question: |
+  Prüfe im obigen Beispiel den Typ von `faktors` und `mitarbeiter`.
+
+  <details><summary>Lösung</summary>
+  Beide sind vom Typ <code>tuple</code>.</details>
+tip: |
+  Typen lass sich mit `type` erfragen.

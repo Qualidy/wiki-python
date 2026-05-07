@@ -1,4 +1,5 @@
 import os
+import re
 import yaml
 
 
@@ -53,6 +54,10 @@ def create_task(title="Aufgabe",
                 collapsed=False,
                 solution_video=None,
                 question_video=None):
+    question = render_embedded_macros(question)
+    tip = render_embedded_macros(tip)
+    solution = render_embedded_macros(solution)
+
     difficulty_icons = difficulty * difficulty_icon + (" " if difficulty else "")
     collapsed_symbol = "" if collapsed else "+"
 
@@ -73,6 +78,21 @@ def create_task(title="Aufgabe",
 
 def add_tabs(text, tabs=1):
     return ('\n' + text).replace('\n', '\n' + '\t' * tabs)
+
+
+embedded_youtube_re = re.compile(
+    r'\{\{\s*youtube_video\(\s*([\'"])(.*?)\1\s*(?:,\s*([\'"])(.*?)\3\s*)?\)\s*\}\}'
+)
+
+
+def render_embedded_macros(text):
+    if not text:
+        return text
+
+    def replace_youtube(match):
+        return youtube_video_admonition(match.group(2), match.group(4) or "Video")
+
+    return embedded_youtube_re.sub(replace_youtube, text)
 
 
 import urllib.parse

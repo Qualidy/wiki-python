@@ -1,0 +1,4 @@
+title: "Docstrings für Funktionen und Klassen"
+difficulty: 1
+question: |
+  Füge Docstrings zu den Funktionen `benutzerEingabe` und `quadratBerechnung` im obigen Python-Skript hinzu. Stelle sicher, dass die Docstrings die Funktionalität klar und prägnant erklären.

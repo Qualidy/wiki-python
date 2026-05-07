@@ -1,0 +1,4 @@
+title: "Installation eines Pakets"
+difficulty: 1
+question: |
+  - Verwende den Befehl `pip install` und installiere das Paket "requests".

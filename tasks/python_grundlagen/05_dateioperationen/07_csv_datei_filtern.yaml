@@ -1,0 +1,4 @@
+title: "CSV-Datei filtern"
+difficulty: 2
+question: |
+  Erstelle eine Funktion, die eine CSV-Datei liest, bestimmte Zeilen filtert und das Ergebnis in eine neue Datei schreibt. Die Filterkriterien sollten anpassbar sein.

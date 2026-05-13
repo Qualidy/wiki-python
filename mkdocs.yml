@@ -1,78 +1,78 @@
-site_name: Basis Wiki
+site_name: Python Wiki
 
 nav:
   - Übersicht: index.md
   - Topic 1: content/1.md
   - Python Grundlagen:
-    - Einführung: content/python_grundlagen/python_grundlagen/python_grundlagen.md
-    - Variable Datentypen: content/python_grundlagen/variables_types/variablen_datentypen.md
-    - Ein- und Ausgabe: content/python_grundlagen/input_output/input_output.md
-    - Mathematische Operationen: content/python_grundlagen/math_operations/math_operations.md
-    - Verzweigungen: content/python_grundlagen/if_elif_else/if_elif_else.md
-    - Der Debugger: content/python_grundlagen/debugging/debugging.md
-    - Listen: content/python_grundlagen/lists/lists.md
-    - Tupel: content/python_grundlagen/tupel/tupel.md
-    - Strings: content/python_grundlagen/strings/strings.md
-    - Exkurs - Regex: content/python_grundlagen/regex/regex.md
-    - Schleifen: content/python_grundlagen/loops/loops.md
-    - Sets: content/python_grundlagen/sets/sets.md
-    - Dictionaries: content/python_grundlagen/dictionaries/dictionaries.md
-    - Funktionen: content/python_grundlagen/functions/functions.md
-    - Exkurs - Rekursion: content/python_grundlagen/recursion/recursion.md
-    - Booleans: content/python_grundlagen/booleans/booleans.md
-    - Exkurs Type Hints: content/python_grundlagen/type_hints/type_hints.md
-    - Bytecode: content/python_grundlagen/bytecode/bytecode.md
-    - List Comprehensions: content/python_grundlagen/list_comp/list_comp.md
-    - Zip: content/python_grundlagen/zip/zip.md
-    - Try-Except: content/python_grundlagen/try_except/try_except.md
-    - Mini-Projekt - Sortieralgorithmen: content/python_grundlagen/sorting_algorithms/sorting_algorithms.md
-#              - Git Teil 1: content/git/git_Teil1.md
-    - Docstring: content/python_grundlagen/docstring/docstring.md
-    - Klassen definieren und instanziieren: content/python_grundlagen/oop/define_classes/define_classes.md
-    - Attribute: content/python_grundlagen/oop/attributes/attributes.md
-    - Methoden: content/python_grundlagen/oop/methods/methods.md
-    - Unittest: content/python_grundlagen/oop/unittests/unittests.md
-    - Vererbung: content/python_grundlagen/oop/vererbung/vererbung.md
-    - Magic Methods: content/python_grundlagen/oop/magic_methods/magic_methods.md
-    - Bonusweek:
-      - Tag 1: content/bonusweek/tag_1.md
-      - Tag 2: content/bonusweek/tag_2.md
-      - Tag 3: content/bonusweek/tag_3.md
-      - Tag 4: content/bonusweek/tag_4.md
-      - Tag 5: content/bonusweek/tag_5.md
-    - Getter Setter: content/python_grundlagen/oop/getter_setter/getter_setter.md
-    - Class- & Staticmethod: content/python_grundlagen/oop/class_static_methods/class_static_methods.md
-    - Args & Kwargs: content/python_grundlagen/args_kwargs/args_kwargs.md
-    - Dateioperationen: content/python_grundlagen/dateioperationen/dateioperationen.md                     
-    - Module: content/python_grundlagen/module/module.md
-    - Pakete: content/python_grundlagen/pakete/pakete.md
-    - Pip und Venv: content/python_grundlagen/pip_venv/pip_venv.md
+      - Einführung: content/python_grundlagen/python_grundlagen/python_grundlagen.md
+      - Variable Datentypen: content/python_grundlagen/variables_types/variablen_datentypen.md
+      - Ein- und Ausgabe: content/python_grundlagen/input_output/input_output.md
+      - Mathematische Operationen: content/python_grundlagen/math_operations/math_operations.md
+      - Verzweigungen: content/python_grundlagen/if_elif_else/if_elif_else.md
+      - Der Debugger: content/python_grundlagen/debugging/debugging.md
+      - Listen: content/python_grundlagen/lists/lists.md
+      - Tupel: content/python_grundlagen/tupel/tupel.md
+      - Strings: content/python_grundlagen/strings/strings.md
+      - Exkurs - Regex: content/python_grundlagen/regex/regex.md
+      - Schleifen: content/python_grundlagen/loops/loops.md
+      - Sets: content/python_grundlagen/sets/sets.md
+      - Dictionaries: content/python_grundlagen/dictionaries/dictionaries.md
+      - Funktionen: content/python_grundlagen/functions/functions.md
+      - Exkurs - Rekursion: content/python_grundlagen/recursion/recursion.md
+      - Booleans: content/python_grundlagen/booleans/booleans.md
+      - Exkurs Type Hints: content/python_grundlagen/type_hints/type_hints.md
+      - Bytecode: content/python_grundlagen/bytecode/bytecode.md
+      - List Comprehensions: content/python_grundlagen/list_comp/list_comp.md
+      - Zip: content/python_grundlagen/zip/zip.md
+      - Try-Except: content/python_grundlagen/try_except/try_except.md
+      - Mini-Projekt - Sortieralgorithmen: content/python_grundlagen/sorting_algorithms/sorting_algorithms.md
+      #              - Git Teil 1: content/git/git_Teil1.md
+      - Docstring: content/python_grundlagen/docstring/docstring.md
+      - Klassen definieren und instanziieren: content/python_grundlagen/oop/define_classes/define_classes.md
+      - Attribute: content/python_grundlagen/oop/attributes/attributes.md
+      - Methoden: content/python_grundlagen/oop/methods/methods.md
+      - Unittest: content/python_grundlagen/oop/unittests/unittests.md
+      - Vererbung: content/python_grundlagen/oop/vererbung/vererbung.md
+      - Magic Methods: content/python_grundlagen/oop/magic_methods/magic_methods.md
+      - Bonusweek:
+          - Tag 1: content/bonusweek/tag_1.md
+          - Tag 2: content/bonusweek/tag_2.md
+          - Tag 3: content/bonusweek/tag_3.md
+          - Tag 4: content/bonusweek/tag_4.md
+          - Tag 5: content/bonusweek/tag_5.md
+      - Getter Setter: content/python_grundlagen/oop/getter_setter/getter_setter.md
+      - Class- & Staticmethod: content/python_grundlagen/oop/class_static_methods/class_static_methods.md
+      - Args & Kwargs: content/python_grundlagen/args_kwargs/args_kwargs.md
+      - Dateioperationen: content/python_grundlagen/dateioperationen/dateioperationen.md
+      - Module: content/python_grundlagen/module/module.md
+      - Pakete: content/python_grundlagen/pakete/pakete.md
+      - Pip und Venv: content/python_grundlagen/pip_venv/pip_venv.md
   - Begriffssammlung:
-    - Python Grundlagen: content/begriffe/begriffe_1.md
-    - git: content/begriffe/begriffe_git.md
-    - Clean Code: content/begriffe/begriffe_clean_code.md
-    - SQL-Datenbanken: content/begriffe/begriffe_db1.md
-    - Python und SQL: content/begriffe/begriffe_db_python.md
-    - Web: content/begriffe/begriffe_web.md
-    - Azure: content/begriffe/begriffe_azure.md
-    - Docker: content/begriffe/begriffe_docker.md
-    - NoSQL-Datenbanken: content/begriffe/begriffe_db2.md
-    - Datenverarbeitung und -darstellung: content/begriffe/begriffe_data_science.md
-    - Python Fortgeschritten: content/begriffe/begriffe_python_advanced.md
-    - Robotik: content/begriffe/begriffe_robotik.md
+      - Python Grundlagen: content/begriffe/begriffe_1.md
+      - git: content/begriffe/begriffe_git.md
+      - Clean Code: content/begriffe/begriffe_clean_code.md
+      - SQL-Datenbanken: content/begriffe/begriffe_db1.md
+      - Python und SQL: content/begriffe/begriffe_db_python.md
+      - Web: content/begriffe/begriffe_web.md
+      - Azure: content/begriffe/begriffe_azure.md
+      - Docker: content/begriffe/begriffe_docker.md
+      - NoSQL-Datenbanken: content/begriffe/begriffe_db2.md
+      - Datenverarbeitung und -darstellung: content/begriffe/begriffe_data_science.md
+      - Python Fortgeschritten: content/begriffe/begriffe_python_advanced.md
+      - Robotik: content/begriffe/begriffe_robotik.md
   - Checklisten:
-    - Python Grundlagen: content/checklists/checklist_1.md
-    - git: content/checklists/checklist_git.md
-    - Clean Code: content/checklists/checklist_clean_code.md
-    - SQL-Datenbanken: content/checklists/checklist_db1.md
-    - Python und SQL: content/checklists/checklist_db_python.md
-    - Web: content/checklists/checklist_web.md
-    - Azure: content/checklists/checklist_azure.md
-    - Docker: content/checklists/checklist_docker.md
-    - NoSQL-Datenbanken: content/checklists/checklist_db2.md
-    - Datenverarbeitung und -darstellung: content/checklists/checklist_data_science.md
-    - Python Fortgeschritten: content/checklists/checklist_python_advanced.md
-    - Robotik: content/checklists/checklist_robotik.md
+      - Python Grundlagen: content/checklists/checklist_1.md
+      - git: content/checklists/checklist_git.md
+      - Clean Code: content/checklists/checklist_clean_code.md
+      - SQL-Datenbanken: content/checklists/checklist_db1.md
+      - Python und SQL: content/checklists/checklist_db_python.md
+      - Web: content/checklists/checklist_web.md
+      - Azure: content/checklists/checklist_azure.md
+      - Docker: content/checklists/checklist_docker.md
+      - NoSQL-Datenbanken: content/checklists/checklist_db2.md
+      - Datenverarbeitung und -darstellung: content/checklists/checklist_data_science.md
+      - Python Fortgeschritten: content/checklists/checklist_python_advanced.md
+      - Robotik: content/checklists/checklist_robotik.md
 
 theme:
   name: material
@@ -125,10 +125,10 @@ extra_css:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  
+
 plugins:
-    - search
-    - macros
+  - search
+  - macros
 
 extra:
   social:

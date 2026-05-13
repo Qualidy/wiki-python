@@ -13,11 +13,11 @@ Am Ende der Woche soll jeder ein Repository mit Lösungen zu allen Aufgaben habe
 ![Chiffren Encoder-Decoder](./assets/chiffre.png)
 
 ### Konzepte des Zweiten Tages
-- [Klassen](../python_grundlagen/oop/define_classes/define_classes.md)
-- [Vererbung](../python_grundlagen/oop/vererbung/vererbung.md)
+- [Klassen](../../oop_grundlagen/define_classes/define_classes.md)
+- [Vererbung](../../vererbung_polymorphismus/vererbung/vererbung.md)
 - [Git](https://python-wiki.de/lehrplan/git/git.html)
-- [Docstring](../python_grundlagen/docstring/docstring.md)
-- [Unittests](../python_grundlagen/oop/unittests/unittests.md)
+- [Docstring](../../funktionen_vertiefung/docstring/docstring.md)
+- [Unittests](../../oop_grundlagen/unittests/unittests.md)
 
 ## Simple Ceasar Chiffre 🌶️🌶️
 Schreibe ein Programm für einfache Verschlüsslungen.

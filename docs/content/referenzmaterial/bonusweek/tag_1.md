@@ -14,13 +14,13 @@ Am Ende der Woche soll jeder ein Repository mit Lösungen zu allen Aufgaben habe
 ![Wordle Preview](https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_og_1200x630.png)
 
 ### Konzepte des Ersten Tages
-- [Input und Output](../python_grundlagen/input_output/input_output.md)
-- [Verzweigungen](../python_grundlagen/if_elif_else/if_elif_else.md)
-- [Strings](../python_grundlagen/strings/strings.md)
-- [Schleifen](../python_grundlagen/loops/loops.md)
-- [Debugger](../python_grundlagen/debugging/debugging.md)
+- [Input und Output](../../python_grundlagen/input_output/input_output.md)
+- [Verzweigungen](../../python_grundlagen/if_elif_else/if_elif_else.md)
+- [Strings](../../python_grundlagen/strings/strings.md)
+- [Schleifen](../../python_grundlagen/loops/loops.md)
+- [Debugger](../../python_grundlagen/debugging/debugging.md)
 - [Einführung in Git](https://python-wiki.de/lehrplan/git/git.html)
-- [Docstring](../python_grundlagen/docstring/docstring.md)
+- [Docstring](../../funktionen_vertiefung/docstring/docstring.md)
 
 ## Palindrome prüfen mit Indices 🌶️🌶️
 Schreibe ein Python-Programm, das überprüft, ob ein gegebenes Wort ein Palindrom ist oder nicht.

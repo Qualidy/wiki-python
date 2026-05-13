@@ -14,7 +14,7 @@ hide:
 <div class="grid cards fancy" markdown>
 
 - [ :material-language-python: Python Grundlagen ](content/python_grundlagen/python_grundlagen/python_grundlagen.md)
-- [ :material-alert-box: Funktionen & Fehlerbehandlung ](){ .disabled }
+- [ :material-alert-box: Funktionen & Fehlerbehandlung ](content/funktionen_fehlerbehandlung/index.md)
 
 </div>
 
@@ -22,7 +22,7 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-table-column: Datenstrukturen ](){ .disabled }
+- [ :material-table-column: Datenstrukturen ](content/datenstrukturen/lists/lists.md)
 
 </div>
 
@@ -30,9 +30,9 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-function-variant: Funktionen Vertiefung ](){ .disabled }
-- [ :material-rocket-launch: Comprehensions ](){ .disabled }
-- [ :material-card-multiple-outline: OOP Grundlagen ](){ .disabled }
+- [ :material-function-variant: Funktionen Vertiefung ](content/funktionen_vertiefung/scopes/scopes.md)
+- [ :material-rocket-launch: Comprehensions ](content/comprehensions/list_comp/list_comp.md)
+- [ :material-card-multiple-outline: OOP Grundlagen ](content/oop_grundlagen/define_classes/define_classes.md)
 
 </div>
 
@@ -40,9 +40,9 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-help-box: Exceptions Vertiefung ](){ .disabled }
-- [ :material-file-multiple: Dateien & Dateisystem ](){ .disabled }
-- [ :material-package-variant-closed: Module, Pakete & pip ](){ .disabled }
+- [ :material-help-box: Exceptions Vertiefung ](content/python_grundlagen/try_except/try_except.md)
+- [ :material-file-multiple: Dateien & Dateisystem ](content/dateien_dateisystem/dateioperationen/dateioperationen.md)
+- [ :material-package-variant-closed: Module, Pakete & pip ](content/module_pakete_pip/pakete/pakete.md)
 
 </div>
 
@@ -50,9 +50,9 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-vector-line: Vererbung & Polymorphismus ](){ .disabled }
+- [ :material-vector-line: Vererbung & Polymorphismus ](content/vererbung_polymorphismus/vererbung/vererbung.md)
 - [ :material-vector-polyline: Mehrfachvererbung & MRO ](){ .disabled }
-- [ :material-magic-staff: Dunder-Methoden & Kapselung ](){ .disabled }
+- [ :material-magic-staff: Dunder-Methoden & Kapselung ](content/dunder_kapselung/magic_methods/magic_methods.md)
 
 </div>
 

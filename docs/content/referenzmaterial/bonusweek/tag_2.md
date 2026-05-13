@@ -16,13 +16,13 @@ Bevor wir mit dem heutigen Projek starten, schauen wir uns an, wie man aus docst
 ![Kontaktbuch Preview](./assets/kontaktbuch.png)
 
 ### Konzepte des Zweiten Tages
-- [Dictionaries](../python_grundlagen/dictionaries/dictionaries.md)
-- [Exception Handling in Python](../python_grundlagen/try_except/try_except.md)
-- [Klassen](../python_grundlagen/oop/define_classes/define_classes.md)
-- [(Optional) Exkurs: Reguläre Ausdrücke](../python_grundlagen/regex/regex.md)
+- [Dictionaries](../../datenstrukturen/dictionaries/dictionaries.md)
+- [Exception Handling in Python](../../python_grundlagen/try_except/try_except.md)
+- [Klassen](../../oop_grundlagen/define_classes/define_classes.md)
+- [(Optional) Exkurs: Reguläre Ausdrücke](../../referenzmaterial/regex/regex.md)
 - [Einführung in Git](https://python-wiki.de/lehrplan/git/git.html)
-- [Docstring](../python_grundlagen/docstring/docstring.md)
-- [Unittests](../python_grundlagen/oop/unittests/unittests.md)
+- [Docstring](../../funktionen_vertiefung/docstring/docstring.md)
+- [Unittests](../../oop_grundlagen/unittests/unittests.md)
 
 ## Simples zahlen raten 🌶️🌶️
 ![Raten Simple Preview](./assets/raten_einfach.png)

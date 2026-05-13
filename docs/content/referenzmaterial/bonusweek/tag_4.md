@@ -26,15 +26,15 @@ graph TD;
 ```
 
 ### Konzepte des Zweiten Tages
-- [Klassen](../python_grundlagen/oop/define_classes/define_classes.md)
-- [Exkurs: Rekursion](../python_grundlagen/recursion/recursion.md)
-- [Algorithmen](../python_grundlagen/sorting_algorithms/sorting_algorithms.md)
+- [Klassen](../../oop_grundlagen/define_classes/define_classes.md)
+- [Exkurs: Rekursion](../../referenzmaterial/recursion/recursion.md)
+- [Algorithmen](../../referenzmaterial/sorting_algorithms/sorting_algorithms.md)
 - [Git](https://python-wiki.de/lehrplan/git/git.html)
-- [Docstring](../python_grundlagen/docstring/docstring.md)
-- [Unittests](../python_grundlagen/oop/unittests/unittests.md)
+- [Docstring](../../funktionen_vertiefung/docstring/docstring.md)
+- [Unittests](../../oop_grundlagen/unittests/unittests.md)
 
 ## Aufgaben
-- [Aufgaben zu Rekursion](../python_grundlagen/recursion/recursion.md)
+- [Aufgaben zu Rekursion](../../referenzmaterial/recursion/recursion.md)
 
 ### Erweiterungen
 - **Visualisierung der Suche**: Entwickle eine Möglichkeit, jeden Schritt deiner Suche zu visualisieren.

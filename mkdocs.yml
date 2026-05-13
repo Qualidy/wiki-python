@@ -17,91 +17,91 @@ nav:
       - Try-Except (Einführung): content/python_grundlagen/try_except/try_except.md
       - Imports (Einführung): content/python_grundlagen/module/module.md
 
-  - Funktionen & Fehlerbehandlung:
-      - Übersicht: content/funktionen_fehlerbehandlung/index.md
-      - Funktionen: content/python_grundlagen/functions/functions.md
-      - Type Hints: content/python_grundlagen/type_hints/type_hints.md
-      - Try-Except: content/python_grundlagen/try_except/try_except.md
-
-  - Datenstrukturen:
-      - Listen: content/datenstrukturen/lists/lists.md
-      - Tupel: content/datenstrukturen/tupel/tupel.md
-      - Sets: content/datenstrukturen/sets/sets.md
-      - Dictionaries: content/datenstrukturen/dictionaries/dictionaries.md
-      - Booleans: content/datenstrukturen/booleans/booleans.md
-      - Zip: content/datenstrukturen/zip/zip.md
-
-  - Funktionen Vertiefung:
-      - Scopes: content/funktionen_vertiefung/scopes/scopes.md
-      - Args & Kwargs: content/funktionen_vertiefung/args_kwargs/args_kwargs.md
-      - Docstring: content/funktionen_vertiefung/docstring/docstring.md
-
-  - Comprehensions:
-      - List Comprehensions: content/comprehensions/list_comp/list_comp.md
-
-  - OOP Grundlagen:
-      - Klassen definieren: content/oop_grundlagen/define_classes/define_classes.md
-      - Attribute: content/oop_grundlagen/attributes/attributes.md
-      - Methoden: content/oop_grundlagen/methods/methods.md
-      - Unittest: content/oop_grundlagen/unittests/unittests.md
-
-  - Exceptions Vertiefung:
-      - Try-Except-Else-Finally: content/python_grundlagen/try_except/try_except.md
-
-  - Dateien & Dateisystem:
-      - Dateioperationen: content/dateien_dateisystem/dateioperationen/dateioperationen.md
-
-  - Module, Pakete & pip:
-      - Module: content/python_grundlagen/module/module.md
-      - Pakete: content/module_pakete_pip/pakete/pakete.md
-      - Pip und Venv: content/module_pakete_pip/pip_venv/pip_venv.md
-
-  - Vererbung & Polymorphismus:
-      - Vererbung: content/vererbung_polymorphismus/vererbung/vererbung.md
-
-  - Dunder-Methoden & Kapselung:
-      - Magic Methods: content/dunder_kapselung/magic_methods/magic_methods.md
-      - Getter & Setter (@property): content/dunder_kapselung/getter_setter/getter_setter.md
-      - Class- & Staticmethod: content/dunder_kapselung/class_static_methods/class_static_methods.md
-
-  - Referenzmaterial:
-      - Exkurs - Regex: content/referenzmaterial/regex/regex.md
-      - Exkurs - Rekursion: content/referenzmaterial/recursion/recursion.md
-      - Exkurs - Sortieralgorithmen: content/referenzmaterial/sorting_algorithms/sorting_algorithms.md
-      - Bytecode: content/referenzmaterial/bytecode/bytecode.md
-      - Bonusweek (Wordle):
-          - Tag 1: content/referenzmaterial/bonusweek/tag_1.md
-          - Tag 2: content/referenzmaterial/bonusweek/tag_2.md
-          - Tag 3: content/referenzmaterial/bonusweek/tag_3.md
-          - Tag 4: content/referenzmaterial/bonusweek/tag_4.md
-          - Tag 5: content/referenzmaterial/bonusweek/tag_5.md
-
-  - Begriffssammlung:
-      - Python Grundlagen: content/begriffe/begriffe_1.md
-      - git: content/begriffe/begriffe_git.md
-      - Clean Code: content/begriffe/begriffe_clean_code.md
-      - SQL-Datenbanken: content/begriffe/begriffe_db1.md
-      - Python und SQL: content/begriffe/begriffe_db_python.md
-      - Web: content/begriffe/begriffe_web.md
-      - Azure: content/begriffe/begriffe_azure.md
-      - Docker: content/begriffe/begriffe_docker.md
-      - NoSQL-Datenbanken: content/begriffe/begriffe_db2.md
-      - Datenverarbeitung und -darstellung: content/begriffe/begriffe_data_science.md
-      - Python Fortgeschritten: content/begriffe/begriffe_python_advanced.md
-      - Robotik: content/begriffe/begriffe_robotik.md
-  - Checklisten:
-      - Python Grundlagen: content/checklists/checklist_1.md
-      - git: content/checklists/checklist_git.md
-      - Clean Code: content/checklists/checklist_clean_code.md
-      - SQL-Datenbanken: content/checklists/checklist_db1.md
-      - Python und SQL: content/checklists/checklist_db_python.md
-      - Web: content/checklists/checklist_web.md
-      - Azure: content/checklists/checklist_azure.md
-      - Docker: content/checklists/checklist_docker.md
-      - NoSQL-Datenbanken: content/checklists/checklist_db2.md
-      - Datenverarbeitung und -darstellung: content/checklists/checklist_data_science.md
-      - Python Fortgeschritten: content/checklists/checklist_python_advanced.md
-      - Robotik: content/checklists/checklist_robotik.md
+#  - Funktionen & Fehlerbehandlung:
+#      - Übersicht: content/funktionen_fehlerbehandlung/index.md
+#      - Funktionen: content/python_grundlagen/functions/functions.md
+#      - Type Hints: content/python_grundlagen/type_hints/type_hints.md
+#      - Try-Except: content/python_grundlagen/try_except/try_except.md
+#
+#  - Datenstrukturen:
+#      - Listen: content/datenstrukturen/lists/lists.md
+#      - Tupel: content/datenstrukturen/tupel/tupel.md
+#      - Sets: content/datenstrukturen/sets/sets.md
+#      - Dictionaries: content/datenstrukturen/dictionaries/dictionaries.md
+#      - Booleans: content/datenstrukturen/booleans/booleans.md
+#      - Zip: content/datenstrukturen/zip/zip.md
+#
+#  - Funktionen Vertiefung:
+#      - Scopes: content/funktionen_vertiefung/scopes/scopes.md
+#      - Args & Kwargs: content/funktionen_vertiefung/args_kwargs/args_kwargs.md
+#      - Docstring: content/funktionen_vertiefung/docstring/docstring.md
+#
+#  - Comprehensions:
+#      - List Comprehensions: content/comprehensions/list_comp/list_comp.md
+#
+#  - OOP Grundlagen:
+#      - Klassen definieren: content/oop_grundlagen/define_classes/define_classes.md
+#      - Attribute: content/oop_grundlagen/attributes/attributes.md
+#      - Methoden: content/oop_grundlagen/methods/methods.md
+#      - Unittest: content/oop_grundlagen/unittests/unittests.md
+#
+#  - Exceptions Vertiefung:
+#      - Try-Except-Else-Finally: content/python_grundlagen/try_except/try_except.md
+#
+#  - Dateien & Dateisystem:
+#      - Dateioperationen: content/dateien_dateisystem/dateioperationen/dateioperationen.md
+#
+#  - Module, Pakete & pip:
+#      - Module: content/python_grundlagen/module/module.md
+#      - Pakete: content/module_pakete_pip/pakete/pakete.md
+#      - Pip und Venv: content/module_pakete_pip/pip_venv/pip_venv.md
+#
+#  - Vererbung & Polymorphismus:
+#      - Vererbung: content/vererbung_polymorphismus/vererbung/vererbung.md
+#
+#  - Dunder-Methoden & Kapselung:
+#      - Magic Methods: content/dunder_kapselung/magic_methods/magic_methods.md
+#      - Getter & Setter (@property): content/dunder_kapselung/getter_setter/getter_setter.md
+#      - Class- & Staticmethod: content/dunder_kapselung/class_static_methods/class_static_methods.md
+#
+#  - Referenzmaterial:
+#      - Exkurs - Regex: content/referenzmaterial/regex/regex.md
+#      - Exkurs - Rekursion: content/referenzmaterial/recursion/recursion.md
+#      - Exkurs - Sortieralgorithmen: content/referenzmaterial/sorting_algorithms/sorting_algorithms.md
+#      - Bytecode: content/referenzmaterial/bytecode/bytecode.md
+#      - Bonusweek (Wordle):
+#          - Tag 1: content/referenzmaterial/bonusweek/tag_1.md
+#          - Tag 2: content/referenzmaterial/bonusweek/tag_2.md
+#          - Tag 3: content/referenzmaterial/bonusweek/tag_3.md
+#          - Tag 4: content/referenzmaterial/bonusweek/tag_4.md
+#          - Tag 5: content/referenzmaterial/bonusweek/tag_5.md
+#
+#  - Begriffssammlung:
+#      - Python Grundlagen: content/begriffe/begriffe_1.md
+#      - git: content/begriffe/begriffe_git.md
+#      - Clean Code: content/begriffe/begriffe_clean_code.md
+#      - SQL-Datenbanken: content/begriffe/begriffe_db1.md
+#      - Python und SQL: content/begriffe/begriffe_db_python.md
+#      - Web: content/begriffe/begriffe_web.md
+#      - Azure: content/begriffe/begriffe_azure.md
+#      - Docker: content/begriffe/begriffe_docker.md
+#      - NoSQL-Datenbanken: content/begriffe/begriffe_db2.md
+#      - Datenverarbeitung und -darstellung: content/begriffe/begriffe_data_science.md
+#      - Python Fortgeschritten: content/begriffe/begriffe_python_advanced.md
+#      - Robotik: content/begriffe/begriffe_robotik.md
+#  - Checklisten:
+#      - Python Grundlagen: content/checklists/checklist_1.md
+#      - git: content/checklists/checklist_git.md
+#      - Clean Code: content/checklists/checklist_clean_code.md
+#      - SQL-Datenbanken: content/checklists/checklist_db1.md
+#      - Python und SQL: content/checklists/checklist_db_python.md
+#      - Web: content/checklists/checklist_web.md
+#      - Azure: content/checklists/checklist_azure.md
+#      - Docker: content/checklists/checklist_docker.md
+#      - NoSQL-Datenbanken: content/checklists/checklist_db2.md
+#      - Datenverarbeitung und -darstellung: content/checklists/checklist_data_science.md
+#      - Python Fortgeschritten: content/checklists/checklist_python_advanced.md
+#      - Robotik: content/checklists/checklist_robotik.md
 
 theme:
   name: material

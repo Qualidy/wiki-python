@@ -16,12 +16,12 @@ Bevor wir mit dem heutigen Projek starten, schauen wir uns erweiterte Konzepte i
 ![Adventure Preview](./assets/adventure.png)
 
 ### Konzepte des Dritten Tages
-- [Klassen](../python_grundlagen/oop/define_classes/define_classes.md)
-- [Dictionaries](../python_grundlagen/dictionaries/dictionaries.md)
-- [Exkurs: Type Hints](../python_grundlagen/type_hints/type_hints.md)
+- [Klassen](../../oop_grundlagen/define_classes/define_classes.md)
+- [Dictionaries](../../datenstrukturen/dictionaries/dictionaries.md)
+- [Exkurs: Type Hints](../../python_grundlagen/type_hints/type_hints.md)
 - [Einführung in Git](https://python-wiki.de/lehrplan/git/git.html)
-- [Docstring](../python_grundlagen/docstring/docstring.md)
-- [Unittests](../python_grundlagen/oop/unittests/unittests.md)
+- [Docstring](../../funktionen_vertiefung/docstring/docstring.md)
+- [Unittests](../../oop_grundlagen/unittests/unittests.md)
 
 ## Auf in den Kampf!🌶🌶🌶
 Erstelle eine Klasse Gladiator nach der folgenden Vorlage und sorge dafür, dass die richtigen Konsolentexte erscheinen. ⚔️

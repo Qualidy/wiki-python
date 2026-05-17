@@ -2,7 +2,7 @@
 
 {{ youtube_video("https://www.youtube.com/embed/hnd6Fs2L0do?si=MfhPW2wgUOiN8qel") }}
 
-Wir haben im [Kapitel Docstring](../../docstring/docstring.md#unittests-in-der-dokumentation) gesehen,
+Wir haben im [Kapitel Docstring](../../funktionen_vertiefung/docstring/docstring.md#unittests-in-der-dokumentation) gesehen,
 wie man Unittests in den Docstring einbauen kann. Das ist nützlich, um sicherzustellen, dass der Nutzer
 Codebeispiele besitzt und diese auch immer Funktionieren.
 

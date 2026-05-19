@@ -2,3 +2,10 @@ title: "Einkaufsliste"
 difficulty: 2
 question: |
   Schreibe ein Programm, das überprüft, ob ein Artikel in einer Einkaufsliste vorhanden ist.
+solution: |
+  ```python
+  if artikel in einkaufsliste:
+      print("Artikel vorhanden")
+  else:
+      print("Artikel nicht vorhanden")
+  ```

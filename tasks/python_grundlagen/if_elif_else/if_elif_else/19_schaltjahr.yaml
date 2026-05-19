@@ -2,3 +2,10 @@ title: "Schaltjahr"
 difficulty: 3
 question: |
   Schreibe ein Programm, das überprüft, ob ein gegebenes Jahr ein Schaltjahr ist oder nicht.
+solution: |
+  ```python
+  if jahr % 4 == 0 and (jahr % 100 != 0 or jahr % 400 == 0):
+      print("Schaltjahr")
+  else:
+      print("Kein Schaltjahr")
+  ```

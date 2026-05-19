@@ -3,3 +3,12 @@ difficulty: 2
 question: |
   Schreibe ein Programm, das basierend auf dem Gewicht eines Fahrzeugs eine Kategorie
   (Leicht, Mittel, Schwer) zuweist.
+solution: |
+  ```python
+  if gewicht < 1000:
+      print("Leicht")
+  elif gewicht < 3000:
+      print("Mittel")
+  else:
+      print("Schwer")
+  ```

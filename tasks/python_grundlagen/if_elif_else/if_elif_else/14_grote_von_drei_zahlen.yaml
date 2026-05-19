@@ -2,3 +2,12 @@ title: "Größte von drei Zahlen"
 difficulty: 1
 question: |
   Bestimme die größte Zahl aus drei gegebenen Zahlen.
+solution: |
+  ```python
+  if a > b and a > c:
+      print(a)
+  elif b > a and b > c:
+      print(b)
+  else:
+      print(c)
+  ```

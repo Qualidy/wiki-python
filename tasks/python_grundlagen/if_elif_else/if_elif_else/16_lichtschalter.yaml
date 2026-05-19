@@ -1,5 +1,12 @@
 title: "Lichtschalter"
 difficulty: 2
 question: |
-  Simuliere einen Lichtschalter, der das Licht ein- und ausschaltet basierend auf der aktuellen 
+  Simuliere einen Lichtschalter, der das Licht ein- und ausschaltet basierend auf der aktuellen
   Zustandsvariable.
+solution: |
+  ```python
+  if lichtstatus:
+      print("Licht an")
+  else:
+      print("Licht aus")
+  ```

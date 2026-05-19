@@ -2,3 +2,10 @@ title: "Teilbarkeit"
 difficulty: 1
 question: |
   Überprüfe, ob eine Zahl durch eine andere Zahl ohne Rest teilbar ist.
+solution: |
+  ```python
+  if zahl1 % zahl2 == 0:
+      print("Teilbar")
+  else:
+      print("Nicht teilbar")
+  ```

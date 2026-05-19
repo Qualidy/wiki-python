@@ -1,5 +1,14 @@
 title: "Temperaturen"
 difficulty: 2
 question: |
-  Schreibe ein Programm, das unterschiedliche Meldungen für verschiedene Temperaturbereiche ausgibt 
+  Schreibe ein Programm, das unterschiedliche Meldungen für verschiedene Temperaturbereiche ausgibt
   (z.B. kalt, warm, heiß).
+solution: |
+  ```python
+  if temperatur < 10:
+      print("Kalt")
+  elif temperatur < 25:
+      print("Warm")
+  else:
+      print("Heiß")
+  ```

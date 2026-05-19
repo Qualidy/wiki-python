@@ -15,41 +15,41 @@ question: |
   - Solltest du auf 0 Trefferpunkte fallen, hast du das Spiel verloren.
   - Tauscht später eure Fragen und Antworten aus und erstellt ein gemeinsames großes Deictionary, um euch mit dem Spiel auf die Prüfung vorzubereiten.
 solution: |
-  Eine m?gliche L?sung ist ein kleines Spiel mit Schleife, Trefferpunkten, Quiz-Fragen und Kampfentscheidung:
-  
+  Eine mögliche Lösung ist ein kleines Spiel mit Schleife, Trefferpunkten, Quiz-Fragen und Kampfentscheidung:
+
   ```python
   import random
-  
+
   fragen = {
       "Was ist 3 ** 2?": "9",
       "Welcher Typ ist [1, 2, 3]?": "list",
       "Wie hei?t der Restoperator in Python?": "%",
   }
-  
+
   held_lp = 20
   boss_lp = 12
-  
+
   print("Du betrittst das Labyrinth.")
-  
+
   while held_lp > 0 and boss_lp > 0:
       aktion = input("Aktion (weiter/ausruhen): ").lower()
-  
+
       if aktion == "ausruhen":
           held_lp = min(20, held_lp + 2)
           print(f"Du ruhst dich aus. LP: {held_lp}")
           continue
-  
+
       frage, antwort = random.choice(list(fragen.items()))
       print("Ein Gegner erscheint.")
       eingabe = input(frage + " ")
-  
+
       if eingabe.strip().lower() == antwort.lower():
           boss_lp -= 4
           print(f"Treffer! Boss-LP: {boss_lp}")
       else:
           held_lp -= 5
           print(f"Falsch. Deine LP: {held_lp}")
-  
+
   if held_lp <= 0:
       print("Du hast verloren.")
   else:

@@ -2,3 +2,10 @@ title: "Kinotag"
 difficulty: 2
 question: |
   Erstelle ein Programm, das unterschiedliche Eintrittspreise basierend auf dem Wochentag berechnet.
+solution: |
+  ```python
+  if wochentag == "Montag":
+      print("Preis: 5 Euro")
+  else:
+      print("Preis: 10 Euro")
+  ```

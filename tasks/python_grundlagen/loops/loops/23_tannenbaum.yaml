@@ -1,0 +1,17 @@
+title: "Tannenbaum"
+difficulty: 2
+question: |
+  Schreibe ein Python-Programm, das den Benutzer nach der Breite des Tannenbaums fragt und diesen dann Zeile für Zeile mit print() im Terminal ausgibt.
+  - Frage die Breite n (ungerade Zahl) mit input() ab
+  - Der Baum beginnt oben mit einer Spitze und wird jede Zeile um 2 Sterne breiter
+  - Darunter folgt ein zentrierter Stamm aus |||
+  ```bash
+  Wie breit soll der Baum sein? 9
+
+      *
+     ***
+    *****
+   *******
+  *********
+     |||
+  ```

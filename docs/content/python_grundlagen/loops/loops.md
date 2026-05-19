@@ -1,6 +1,6 @@
 # Schleifen
 
-[//]: # ([10min])
+[//]: # "[10min]"
 
 In der Programmierung sind **Schleifen** ein grundlegendes Konzept, welches verwendet wird, um einen bestimmten Block
 von Anweisungen wiederholt auszuführen. Man sagt auch, dass Schleifen über etwas iterieren. Dies kann zum Beispiel ein
@@ -18,7 +18,7 @@ verwendet, wenn die Anzahl der Schleifendurchläufe im Voraus nicht bekannt ist.
 
 {{ youtube_video("https://www.youtube.com/embed/IZmCkNQb5v8?si=I4rS9cz-B1xrp0_6") }}
 
-Hier ist ein einfaches Beispiel für eine `for`-Schleife in Python (drücke auf "Next >" um den Code schrittweise 
+Hier ist ein einfaches Beispiel für eine `for`-Schleife in Python (drücke auf "Next >" um den Code schrittweise
 durchzuführen):
 
 [💻 Link zum Onlinecompiler](https://pythontutor.com/render.html#code=fruechte%20%3D%20%5B%22Apfel%22,%20%22Banane%22,%20%22Kirsche%22%5D%0Afor%20frucht%20in%20fruechte%3A%0A%20%20%20%20print%28frucht%29%0Aprint%28%22fertig%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
@@ -47,7 +47,7 @@ for element in sequenz:
 
 ## Aufgaben
 
-[//]: # ([35min])
+[//]: # "[35min]"
 
 {{ task(file="tasks/python_grundlagen/loops/loops/01_zahlen.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/02_stadtetrip.yaml") }}
@@ -59,27 +59,29 @@ for element in sequenz:
 {{ task(file="tasks/python_grundlagen/loops/loops/08_thermometer_fur_amerikaner.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/09_vokale.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/10_haufigkeit.yaml") }}
+
 # Iteration über feste Zahlenbereiche mit `range`
 
 {{ youtube_video("https://www.youtube.com/embed/IQhjfZiCOro?si=47NPqX5Fn0SOri8G") }}
 
-Möchte man über einen bestimmten Zahlenraum iterieren, so verwendet man in Python die `range`-Funktion. Es gibt drei 
+Möchte man über einen bestimmten Zahlenraum iterieren, so verwendet man in Python die `range`-Funktion. Es gibt drei
 Möglichkeiten `range` aufzurufen:
 
 | Anazahl Parameter | Aufruf                         | Bedeutung                                                                                                                | Beispiel          | Entsprechende Liste |
-|-------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------------|---------------------|
+| ----------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ----------------- | ------------------- |
 | 1                 | `range(end)`                   | Die Range enthält die Integer von `0` bis _ausschließlich_ `end`.                                                        | `range(3)`        | `[0,1,2]`           |
 | 2                 | `range(start, end)`            | Die Range enthält die Integer von `start` bis _ausschließlich_ `end`.                                                    | `range(12, 15)`   | `[12,13,14]`        |
 | 3                 | `range(start, end, step_size)` | Die Range enthält die Integer von `start` bis _ausschließlich_ `end`. und geht dabei in Schritten der Größe `step_size`. | `range(3, 10, 2)` | `[3,5,7,9]`         |
 
 {{ task(file="tasks/python_grundlagen/loops/loops/11_ranges_vorhersagen.yaml") }}
+
 ## Nutzen von Ranges
 
 Ranges wirken auf den ersten Blick sehr ähnlich zu Listen. Schaut man sie sich genauer an, stellt man sogar fest,
 dass sie sogar Indizierung und Slicing erlauben. Es gibt zwei wichtige Vorteile:
 
-* Ranges können leicht instanziiert werden (wie würdest du eine Liste aller geraden Zahlen bis 1000 in Python sonst erstellen?),
-* Ranges sparen Speicherplatz. Denn die Zahlen, die in der Range sind, werden nicht alle zunächst im Speicher hinlegt, sondern erst bei Bedarf bereitgestellt (indem sie jeweils berechnet werden).
+- Ranges können leicht instanziiert werden (wie würdest du eine Liste aller geraden Zahlen bis 1000 in Python sonst erstellen?),
+- Ranges sparen Speicherplatz. Denn die Zahlen, die in der Range sind, werden nicht alle zunächst im Speicher hinlegt, sondern erst bei Bedarf bereitgestellt (indem sie jeweils berechnet werden).
 
 Wir können Ranges so einfach für Schleifeniterationen über einen Integer-Zahlenraum nutzen:
 
@@ -94,7 +96,8 @@ for i in range(5):
 
 {{ youtube_video("https://www.youtube.com/embed/nqMMCr3juCE?si=RpI4n9QONgTR_Qz7") }}
 
-[//]: # ([120min])
+[//]: # "[120min]"
+
 While-Schleifen ermöglichen es einen Block von Anweisungen
 wiederholt auszuführen, **solange eine bestimmte Bedingung erfüllt ist**.
 Sie sind besonders nützlich, wenn die Anzahl der
@@ -144,18 +147,20 @@ Wie wir die Endlosschleife doch verlassen können, lernen wir dann gleich.
 
 ## Aufgaben
 
-[//]: # ([35min])
+[//]: # "[35min]"
 
 {{ task(file="tasks/python_grundlagen/loops/loops/12_summe_von_1_bis_100.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/13_input_erfragen.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/14_fakultat_2.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/15_fast_endlose_schleife.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/16_fibonacci.yaml") }}
+
 # Vorzeitiges Abbrechen einer Schleife
 
 {{ youtube_video("https://www.youtube.com/embed/suZrbAoSmr0?si=hloioyGs7h7phUNw") }}
 
-[//]: # ([60min])
+[//]: # "[60min]"
+
 In vielen Fällen sucht man einfach einen Wert in einem Bereich oder ein bestimmtes Element in einer List. Sobald man
 dieses gefunden hat, kann man die Schleife eigentlich abbrechen. Dafür nutzt man das Keyword `break`:
 
@@ -189,7 +194,7 @@ der Code direkt an den Schleifenanfang (wegen des `continue`), statt die Zeile 4
 direkt zum nächsten Durchlauf. In allen anderen Fällen wird die Zahl auf der Konsole ausgegeben.
 
 Sehr häufig wird break in Kombination mit while-Schleifen verwendet. Wieso? Weil es so einfach möglich ist,
-Endlosschleifen zu erzeugen, die unter bestimmten Bedingungen abbrechen, die nicht im Schleifenkopf überprüft werden.  
+Endlosschleifen zu erzeugen, die unter bestimmten Bedingungen abbrechen, die nicht im Schleifenkopf überprüft werden.
 
 Zum Beispiel:
 
@@ -212,7 +217,8 @@ den Befehl `break` verlassen und das Programm kann normal weiterlaufen.
 
 {{ youtube_video("https://www.youtube.com/embed/_HQlJUAIuh8?si=N0iBJYNgI4g8MVpT") }}
 
-[//]: # ([30min])
+[//]: # "[30min]"
+
 In Python können sowohl `while`- als auch `for`-Schleifen mit einem optionalen `else`-Zweig versehen werden. Dieser Teil
 der Schleife wird ausgeführt, wenn die Schleife auf normale Weise beendet wird, d.h., **nicht durch ein `break`-Statement
 unterbrochen wird**.
@@ -248,15 +254,17 @@ summe = 0
 for sub_list in list_of_lists:
     for element in sub_list:
         summe += element
-    print(f"Zwischenergebnis: {summe}")        
+    print(f"Zwischenergebnis: {summe}")
 print(f"Endergebnis: {summe}")
 ```
 
 {{ task(file="tasks/python_grundlagen/loops/loops/17_produktsummen.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/18_summenprodukt.yaml") }}
+{{ task(file="tasks/python_grundlagen/loops/loops/23_tannenbaum.yaml") }}
+
 # Anspruchsvolle Aufgaben
 
-[//]: # ([60min])
+[//]: # "[60min]"
 
 {{ task(file="tasks/python_grundlagen/loops/loops/19_finden.yaml") }}
 {{ task(file="tasks/python_grundlagen/loops/loops/20_benutzerdefinierte_passwortuberprufung.yaml") }}

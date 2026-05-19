@@ -1,5 +1,10 @@
 title: "Einfache if-Abfrage"
 difficulty: 1
 question: |
-  Schreibe ein Programm, das überprüft, ob eine Variable `x` größer als 10 ist. Gib eine 
+  Schreibe ein Programm, das überprüft, ob eine Variable `x` größer als 10 ist. Gib eine
   entsprechende Nachricht aus.
+solution: |
+  ```python
+  if x > 10:
+      print("x ist größer als 10.")
+  ```

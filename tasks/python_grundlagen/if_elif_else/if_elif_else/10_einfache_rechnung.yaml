@@ -1,5 +1,16 @@
 title: "Einfache Rechnung"
 difficulty: 2
 question: |
-  Schreibe ein Programm, das eine einfache mathematische Operation (Addition, Subtraktion, 
+  Schreibe ein Programm, das eine einfache mathematische Operation (Addition, Subtraktion,
   Multiplikation, Division) basierend auf Benutzereingaben ausführt.
+solution: |
+  ```python
+  if operation == '+':
+      print(a + b)
+  elif operation == '-':
+      print(a - b)
+  elif operation == '*':
+      print(a * b)
+  elif operation == '/':
+      print(a / b)
+  ```

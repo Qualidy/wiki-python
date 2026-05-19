@@ -2,3 +2,10 @@ title: "Maximalwert"
 difficulty: 2
 question: |
   Schreibe ein Programm, das den größeren Wert von zwei Zahlen ausgibt.
+solution: |
+  ```python
+  if zahl1 > zahl2:
+      print(zahl1)
+  else:
+      print(zahl2)
+  ```

@@ -2,3 +2,12 @@ title: "Größer oder kleiner"
 difficulty: 1
 question: |
   Überprüfe, ob eine Variable `a` größer, kleiner oder gleich einer anderen Variable `b` ist.
+solution: |
+  ```python
+  if a > b:
+      print("a ist größer als b")
+  elif a < b:
+      print("a ist kleiner als b")
+  else:
+      print("a ist gleich b")
+  ```

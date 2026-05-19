@@ -2,3 +2,12 @@ title: "Negativ oder Positiv"
 difficulty: 1
 question: |
   Schreibe ein Programm, das überprüft, ob eine Zahl positiv, negativ oder 0 ist.
+solution: |
+  ```python
+if zahl > 0:
+    print("Positiv")
+elif zahl < 0:
+    print("Negativ")
+else:
+    print("Null")
+```

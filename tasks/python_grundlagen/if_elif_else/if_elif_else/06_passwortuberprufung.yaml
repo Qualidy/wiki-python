@@ -1,5 +1,12 @@
 title: "Passwortüberprüfung"
 difficulty: 2
 question: |
-  Erstelle ein Programm, das überprüft, ob ein eingegebenes Passwort mit einem gespeicherten 
+  Erstelle ein Programm, das überprüft, ob ein eingegebenes Passwort mit einem gespeicherten
   Passwort übereinstimmt.
+solution: |
+  ```python
+  if eingegebenes_passwort == gespeichertes_passwort:
+      print("Passwort korrekt!")
+  else:
+      print("Falsches Passwort!")
+  ```

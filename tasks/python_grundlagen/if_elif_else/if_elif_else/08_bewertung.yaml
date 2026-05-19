@@ -1,5 +1,18 @@
 title: "Bewertung"
 difficulty: 2
 question: |
-  Überprüfe anhand einer Variable `note`, ob die Note "sehr gut", "gut", "befriedigend", "ausreichend" 
+  Überprüfe anhand einer Variable `note`, ob die Note "sehr gut", "gut", "befriedigend", "ausreichend"
   oder "nicht ausreichend" ist.
+solution: |
+  ```python
+  if note >= 1.0 and note < 1.5:
+      print("sehr gut")
+  elif note < 2.5:
+      print("gut")
+  elif note < 3.5:
+      print("befriedigend")
+  elif note < 4.0:
+      print("ausreichend")
+  else:
+      print("nicht ausreichend")
+  ```

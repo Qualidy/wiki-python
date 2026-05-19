@@ -2,3 +2,10 @@ title: "Alter überprüfen"
 difficulty: 2
 question: |
   Schreibe ein Programm, das überprüft, ob eine Person anhand ihres Alters volljährig ist.
+solution: |
+  ```python
+  if alter >= 18:
+      print("Die Person ist volljährig.")
+  else:
+      print("Die Person ist minderjährig.")
+  ```

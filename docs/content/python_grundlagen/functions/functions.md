@@ -21,7 +21,7 @@ auszugeben.
 Eine weitere bisher häufig genutzte Funktion ist `input()`, die es uns ermöglicht, Benutzereingaben zu erfassen. Diese
 Eingaben können dann für eine Vielzahl von Zwecken innerhalb des Programms verwendet werden.
 
-Schließlich haben wir auch die `random`-Bibliothek und ihre Funktionen wie `random.randint()` verwendet, um 
+Schließlich haben wir auch die `random`-Bibliothek und ihre Funktionen wie `random.randint()` verwendet, um
 Zufallszahlen zu generieren.
 
 Diese Funktionen sind Beispiele dafür, wie eingebaute und modul-spezifische Funktionen in Python die Entwicklung von
@@ -30,7 +30,7 @@ komplexe Aufgaben hinter einfach zu verstehenden und zu verwendenden Schnittstel
 
 ## Definition von Funktionen
 
-[//]: # ([45min])
+[//]: # "[45min]"
 
 {{ youtube_video("https://www.youtube.com/embed/M7iRN8RikMw?si=XigB3CSjsCXPRCTo") }}
 
@@ -68,11 +68,11 @@ unterscheidet sich nicht von anderem Python-Code.
 
 {{ youtube_video("https://www.youtube.com/embed/_v9cpU5LdYc?si=Z_LhctE-a8y4WMuD") }}
 
-Über Parameter können wir dafür sorgen, dass Funktionen nicht immer exakt das Gleiche tun, sondern, eben abhängig von 
+Über Parameter können wir dafür sorgen, dass Funktionen nicht immer exakt das Gleiche tun, sondern, eben abhängig von
 den übergebenen Parametern, in ihren Ergebnissen variieren, obwohl die Rechenvorschriften gleich sind.
 
 Im Bild gesprochen: Ein Rezept besteht einerseits aus einer Liste von Zubereitungsschritten (Funktionskörper)
-aber auch aus einer Auflistung der Zutaten (Parameter). Nun kann man zwei verschiedene Kuchen mit demselben Rezept 
+aber auch aus einer Auflistung der Zutaten (Parameter). Nun kann man zwei verschiedene Kuchen mit demselben Rezept
 backen, indem man die Zutaten variiert. So macht es z.B. einen Unterschied welche konkrete Apfelsorte man in einem
 Apfelkuchen verwendet.
 
@@ -154,7 +154,7 @@ print(begruessung("Aquafina"))
 
 {{ youtube_video("https://www.youtube.com/embed/k3rzPwl3NtQ?si=tuSuoJiJLTjJfoJI") }}
 
-In Python ist es auch möglich mehrere Objekte auf ein Mal zurück zu geben. 
+In Python ist es auch möglich mehrere Objekte auf ein Mal zurück zu geben.
 Die Syntax dafür ist sehr einfach, man schreibt nach dem `return`
 die Rückgaben mit einem `,` getrennt nacheinander auf. Hier ein Beispiel
 einer Funktion, die das erste und letze Element einer Liste zurückgibt.
@@ -164,7 +164,7 @@ einer Funktion, die das erste und letze Element einer Liste zurückgibt.
 ```python
 def first_and_last(my_list):
     return my_list[0], my_list[-1]
-    
+
 f, s = first_and_last([1,2,3,4,5])
 print(f"First element: {f}")
 print(f"Second element: {s}")
@@ -178,7 +178,8 @@ Entpacken, um die Elemente direkt in Variablen zu speichern.
 
 ## Bedeutung und Zweck von Funktionen
 
-[//]: # ([30min])
+[//]: # "[30min]"
+
 1. **Modularität**: Funktionen ermöglichen es, den Code in kleinere, wiederverwendbare Teile zu unterteilen. Das macht
    den Code übersichtlicher und wartbarer.
 
@@ -192,7 +193,8 @@ Entpacken, um die Elemente direkt in Variablen zu speichern.
 
 # Aufgaben
 
-[//]: # ([90])
+[//]: # "[90]"
+
 {{ task(file="tasks/python_grundlagen/functions/functions/01_einfache_begruungsfunktion.yaml") }}
 {{ task(file="tasks/python_grundlagen/functions/functions/02_quadratzahlen.yaml") }}
 {{ task(file="tasks/python_grundlagen/functions/functions/03_maximum_von_zwei_zahlen.yaml") }}
@@ -208,9 +210,11 @@ Entpacken, um die Elemente direkt in Variablen zu speichern.
 {{ task(file="tasks/python_grundlagen/functions/functions/13_multiplikationstabelle.yaml") }}
 {{ task(file="tasks/python_grundlagen/functions/functions/14_palindrome_prufen.yaml") }}
 {{ task(file="tasks/python_grundlagen/functions/functions/15_mehrere_ruckgabewerte.yaml") }}
+
 ## Argumente vs Parameter - Was ist der Unterschied?
 
-[//]: # ([30min])
+[//]: # "[30min]"
+
 In der Programmierung ist es wortvoll, die Unterschiede zwischen Parametern und Argumenten zu
 verstehen, da sie oft fälschlicherweise synonym verwendet werden, obwohl sie unterschiedliche Konzepte darstellen.
 
@@ -229,7 +233,7 @@ verstehen, da sie oft fälschlicherweise synonym verwendet werden, obwohl sie un
   und `b` eingesetzt werden.
 
 **Analogie**: Man kann sich Parameter als die "Beschreibung" eines Produkts und Argumente als das "tatsächliche
-  Produkt" vorstellen.
+Produkt" vorstellen.
 
 ## Default Parametern
 
@@ -272,38 +276,49 @@ Im folgenden Code, siehst du, wie Funktionen in Funktionen ausgeführt werden.
 ```python
 def calculate_price(base_price, age_of_passenger):
     discount = 0
-    
+
     if age_of_passenger > 65:
         discount += calculate_discount_for_elders(age_of_passenger)
-    
+
     result = calculate_discount(base_price, discount)
     return result
-    
+
 def calculate_discount_for_elders(age_of_passenger):
     if age_of_passenger > 100:
         return 1.0
     return 0.5
-    
+
 def calculate_discount(base_price, discount):
     reduction = 1 - discount
     result = base_price * reduction
     return result
-    
+
 price = 10
 age = 90
 actual_price = calculate_price(price, age)
 print(actual_price)
 ```
+
 {{ task(file="tasks/python_grundlagen/functions/functions/16_stack_in_exceptions.yaml") }}
+
 # Primitive Types as Arguments
+
+Variablen außerhalb von Funktionen können nicht direkt von Funktionen verändert werden. Das liegt daran, dass die Werte von primitiven Datentypen (wie `int`, `float`, `str`, etc.) in Python **by value** übergeben werden. Das bedeutet, dass eine Kopie des Wertes an die Funktion übergeben wird, und nicht die Variable selbst.
+
+```python
 def change_number(number):
-    number = 0 
+    number = 0
 
 my_number = 10
 change_number(my_number)
 print(my_number)
+```
 
 # Complex Types as Arguments
+
+Komplexe Datentypen (wie `list`, `dict`, etc.) werden in Python **by reference** übergeben. Das bedeutet, dass eine Referenz auf das Objekt im Speicher an die Funktion übergeben wird. Wenn die Funktion das Objekt verändert, wird diese Veränderung auch außerhalb der Funktion sichtbar, da beide, die Variable außerhalb der Funktion und der Parameter innerhalb der Funktion, auf dasselbe Objekt im Speicher verweisen.
+
+```python
 def change_value(sequence):
     sequence[0] = 0
 

@@ -4,10 +4,10 @@
 
 Type Hints sind in Python seit der Version 3.5 offiziell verfügbar und stellen eine optionale Erweiterung für die
 Sprache dar. Sie ermöglichen es Entwicklern, den **erwarteten Datentyp** von Parametern und Rückgabewerten in Funktionen
-anzugeben. 
+anzugeben.
 
-Type Hints sind dabei lediglich **ein Hinweis** für andere Programmierer und werden nicht 
-ohne automatisch durch Python nicht überprüft. Dafür gibt es allerdings frei verfügbare Tools, um dies zu tun.
+Type Hints sind dabei lediglich **ein Hinweis** für andere Programmierer und werden nicht
+automatisch durch Python überprüft. Dafür gibt es allerdings frei verfügbare Tools, um dies zu tun.
 
 Type Hints können nach Variablen oder Parametern mit einem `:` hinter dem Variablennamen angegeben werden.
 Den Rückgabetyp von Funktonen wird nach den Parameterklammern nach einem `->` gesetzt.
@@ -48,32 +48,33 @@ Python-Unterstützung in VS Code durch Features wie schnelle und umfassende stat
 
 {{ task(file="tasks/python_grundlagen/type_hints/type_hints/01_typehints_betrachten.yaml") }}
 {{ task(file="tasks/python_grundlagen/type_hints/type_hints/02_basistypen_bestimmen.yaml") }}
+
 ## Wichtigkeit von Type Hints
 
-[//]: # ([40min])
+[//]: # "[40min]"
 
-* **Verbesserte Lesbarkeit und Wartbarkeit**: Type Hints machen den Code für andere Entwickler (oder auch für den Autor
-   selbst zu einem späteren Zeitpunkt) leichter verständlich.
+- **Verbesserte Lesbarkeit und Wartbarkeit**: Type Hints machen den Code für andere Entwickler (oder auch für den Autor
+  selbst zu einem späteren Zeitpunkt) leichter verständlich.
 
-* **Fehlervermeidung**: Sie helfen dabei, Fehler zu identifizieren, indem sie sicherstellen, dass Funktionen mit den
-   erwarteten Datentypen verwendet werden.
+- **Fehlervermeidung**: Sie helfen dabei, Fehler zu identifizieren, indem sie sicherstellen, dass Funktionen mit den
+  erwarteten Datentypen verwendet werden.
 
-* **Unterstützung durch Entwicklungswerkzeuge**: Moderne Entwicklungsumgebungen nutzen Type Hints, um
-   potenzielle Laufzeitfehler zu erkennen.
+- **Unterstützung durch Entwicklungswerkzeuge**: Moderne Entwicklungsumgebungen nutzen Type Hints, um
+  potenzielle Laufzeitfehler zu erkennen.
 
-* **Verbesserte Refactoring-Unterstützung**: Type Hints erleichtern das Refactoring von Code, da Tools präziser
-   erkennen können, wie bestimmte Variablen und Funktionen verwendet werden.
+- **Verbesserte Refactoring-Unterstützung**: Type Hints erleichtern das Refactoring von Code, da Tools präziser
+  erkennen können, wie bestimmte Variablen und Funktionen verwendet werden.
 
-* **Dokumentation**: Sie dienen als eine Form der Dokumentation, die es neuen Nutzern des Codes erleichtert, die
-   Funktionsweise und den Zweck von Funktionen zu verstehen.
+- **Dokumentation**: Sie dienen als eine Form der Dokumentation, die es neuen Nutzern des Codes erleichtert, die
+  Funktionsweise und den Zweck von Funktionen zu verstehen.
 
 ## Weitere Beispiele
 
 {{ youtube_video("https://www.youtube.com/embed/CBhga84SM3s?si=PKe3QHd1p4PNeh9_") }}
 
-[//]: # ([25min])
+[//]: # "[25min]"
 
-Im einfachsten Fall nutzen wir einfach nur die uns bekannten primitiven Datentypen 
+Im einfachsten Fall nutzen wir einfach nur die uns bekannten primitiven Datentypen
 
 ```python
 def begruesse(name: str, alter: int) -> str:
@@ -82,6 +83,10 @@ def begruesse(name: str, alter: int) -> str:
 
 Viele der in Python vorimplementierten komplexen Datentypen können über das Modul `typing` importiert
 und beim Typehinting genutzt werden:
+
+!!! warning "Diese Syntax ist für Listen, Tuple, Sets und Dictionaries veraltet!"
+
+    Seit Python 3.9 können die generischen Typen direkt mit eckigen Klammern verwendet werden, ohne dass das `typing`-Modul importiert werden muss. Siehe weiter unten
 
 ```python
 from typing import List, Dict, Tuple
@@ -99,8 +104,108 @@ def print_in_reverse(text: str) -> None:
     print(text[::-1])
 ```
 
+!!! tip "Ab Python 3.9"
+
+    Für Collections die generischen Typen verwenden:
+
+```python
+def get_min_max(daten: list[int]) -> dict[str, int]:
+    return {"max": max(daten), "min": min(daten)}
+
+def create_dict(data: list[tuple[str, int]]) -> dict[str, int]:
+    result = {}
+    for item in data:
+        result[item[0]] = item[1]
+    return result
+
+def print_in_reverse(text: str) -> None:
+    print(text[::-1])
+```
+
 # Aufgaben
 
-[//]: # ([25min])
+[//]: # "[25min]"
 
 {{ task(file="tasks/python_grundlagen/type_hints/type_hints/03_typen_finden.yaml") }}
+
+## Spezielle Typen
+
+Es gibt Utility Typen, die in bestimmten Situationen hilfreich sein können, z.B. `Optional`, `Union` oder `Any`. Diese können ebenfalls aus dem `typing`-Modul importiert werden.
+
+### Optional
+
+Der `Optional`-Typ wird verwendet, um anzugeben, dass ein Wert entweder einen bestimmten Typ haben oder `None` sein kann.
+
+```python
+from typing import Optional
+
+def get_user_name(user_id: int) -> Optional[str]:
+    if user_id == 1:
+        return "Alice"
+    elif user_id == 2:
+        return "Bob"
+    else:
+        return None
+```
+
+### Union
+
+Der `Union`-Typ ermöglicht es, anzugeben, dass ein Wert mehrere mögliche Typen haben kann.
+
+```python
+from typing import Union
+
+def process_data(data: Union[int, str]) -> None:
+    if isinstance(data, int):
+        print(f"Processing integer: {data}")
+    elif isinstance(data, str):
+        print(f"Processing string: {data}")
+```
+
+### Any
+
+Der `Any`-Typ signalisiert, dass ein Wert jeden beliebigen Typ haben kann.
+
+```python
+from typing import Any
+
+def process_any(data: Any) -> None:
+    print(f"Processing data of any type: {data}")
+```
+
+## Type Alias
+
+Ein Type Alias ermöglicht es, komplexe Typen unter einem einfacheren Namen zusammenzufassen.
+
+```python
+from users import User
+
+type UserList = list[User]
+
+def get_users() -> UserList:
+    return database.get_all_users()
+```
+
+!!! warning "Die Type Aliase Syntax ist je nach Python Version unterschiedlich!"
+
+    Vor Python 3.9:
+
+    ```python
+    from typing import List
+
+    UserList = List[User]
+    ```
+
+    Python 3.9:
+
+    ```python
+    from typing import TypeAlias
+
+    UserList: TypeAlias = list[User]
+    ```
+
+    Python 3.10+:
+
+    ```python
+    type UserList = list[User]
+    ```

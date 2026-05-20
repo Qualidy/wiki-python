@@ -9,15 +9,15 @@ question: |
   def remove_free_sms(
       smss_per_month,
       free_sms_per_month):
-      
+
       to_pay  = []
       for smss in smss_per_month:
           sms_to_pay = smss - free_sms_per_month
           if sms_to_pay > 0:
               to_pay.append(sms_to_pay)
       return to_pay
-      
-      
+
+
   # Berechnet den Durchschnittspreis basierend auf dem
   # Gesamtpreis und der Anzahl der Einträge auf denen
   # sich dieser aufteilt.
@@ -26,10 +26,10 @@ question: |
 
   # Berechnet die Durchschnittlichen Kosten pro Monat
   def calculate_average_cost_per_month(
-      smss_per_month, 
+      smss_per_month,
       free_sms_per_month,
       cost_per_sms):
-          
+
       to_pay = remove_free_sms(smss_per_month, free_sms_per_month)
       price = sum(to_pay) * cost_per_sms
       number_of_entries = len(to_pay)
@@ -94,10 +94,10 @@ question: |
           r = operation(first, second)
           result.append(r)
       return result
-      
+
   def add(a, b):
       return a+b
-      
+
   combined_list = combine2([1, 2, True, False, "hey", "du"], add)
   print(combined_list)
   ```
@@ -126,7 +126,7 @@ question: |
   Definiere eine Funktion `smaller_than_5(n)`, die prüft, ob der Parameter `n` kleiner als 5 ist. Wenn ja, soll
   `True` zurückgegeben werden, andernfalls `False`.
 
-  Definiere eine Funktion namens `my_filter(my_list, predicate)`, die eine Liste `my_list` und eine Methode 
+  Definiere eine Funktion namens `my_filter(my_list, predicate)`, die eine Liste `my_list` und eine Methode
   `predicate` erwartet. Der Methode `predicate` liefert Boolean zurück (also `True` oder `False`) und soll
   ein Kriterium sein, nach dem Elemente aus der Liste _herausgefiltert_ werden. Beispiel für dei Ausgabe:
 
@@ -135,22 +135,10 @@ question: |
   my_filter([15, 29, 5], smaller_than_5) # []
   ```
 
-  ## Parameterübergabe
-
-  {{ youtube_video("https://www.youtube.com/embed/9_PVRQknJ7M?si=r0qpc1aUbfuDuSmc") }}
-
-  Jetzt wird es noch einmal **wirklich wichtig**. Es geht darum, was eigentlich an die Funktionen
-  genau übergeben wird, wenn wir die Argumente festlegen.
-
-  Schau dir dazu den folgenden Code an und sage voraus, was der Output sein wird:
-
-  [💻 Online Compiler](https://pythontutor.com/render.html#code=%23%20Primitive%20Types%20as%20Arguments%0Adef%20change_number%28number%29%3A%0A%20%20%20%20number%20%3D%200%20%0A%0Amy_number%20%3D%2010%0Achange_number%28my_number%29%0Aprint%28my_number%29%0A%0A%0A%23%20Complex%20Types%20as%20Arguments%0Adef%20change_value%28sequence%29%3A%0A%20%20%20%20sequence%5B0%5D%20%3D%200%0A%0Amy_list%20%3D%20%5B1,2,3%5D%0Achange_value%28my_list%29%0Aprint%28my_list%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
-  ```python
 solution: |
   * Welcher Fehler ist passiert? `ZeroDivisionError`, weil durch `0` geteilt wurde.
   * In welcher Methode ist der Fehler passiert? `calc_average_price`
   * In welcher Methode wurde diese Methode aufgerufen? `calculate_average_cost_per_month`
   * Wo wurde diese zweite Methode wiederum aufgerufen? Zeile 36
-  
+
   Man kann also den Stack von unten nach oben einfach lesen.

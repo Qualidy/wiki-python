@@ -301,24 +301,29 @@ print(actual_price)
 
 {{ task(file="tasks/python_grundlagen/functions/functions/16_stack_in_exceptions.yaml") }}
 
-# Primitive Types as Arguments
+## Parameterübergabe
 
-Variablen außerhalb von Funktionen können nicht direkt von Funktionen verändert werden. Das liegt daran, dass die Werte von primitiven Datentypen (wie `int`, `float`, `str`, etc.) in Python **by value** übergeben werden. Das bedeutet, dass eine Kopie des Wertes an die Funktion übergeben wird, und nicht die Variable selbst.
+{{ youtube_video("https://www.youtube.com/embed/9_PVRQknJ7M?si=r0qpc1aUbfuDuSmc") }}
+
+Jetzt wird es noch einmal **wirklich wichtig**. Es geht darum, was eigentlich an die Funktionen
+genau übergeben wird, wenn wir die Argumente festlegen.
+
+Schau dir dazu den folgenden Code an und sage voraus, was der Output sein wird:
+
+[💻 Online Compiler](https://pythontutor.com/render.html#code=%23%20Primitive%20Types%20as%20Arguments%0Adef%20change_number%28number%29%3A%0A%20%20%20%20number%20%3D%200%20%0A%0Amy_number%20%3D%2010%0Achange_number%28my_number%29%0Aprint%28my_number%29%0A%0A%0A%23%20Complex%20Types%20as%20Arguments%0Adef%20change_value%28sequence%29%3A%0A%20%20%20%20sequence%5B0%5D%20%3D%200%0A%0Amy_list%20%3D%20%5B1,2,3%5D%0Achange_value%28my_list%29%0Aprint%28my_list%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ```python
+# Primitive Types as Arguments
+
 def change_number(number):
     number = 0
 
 my_number = 10
 change_number(my_number)
 print(my_number)
-```
 
 # Complex Types as Arguments
 
-Komplexe Datentypen (wie `list`, `dict`, etc.) werden in Python **by reference** übergeben. Das bedeutet, dass eine Referenz auf das Objekt im Speicher an die Funktion übergeben wird. Wenn die Funktion das Objekt verändert, wird diese Veränderung auch außerhalb der Funktion sichtbar, da beide, die Variable außerhalb der Funktion und der Parameter innerhalb der Funktion, auf dasselbe Objekt im Speicher verweisen.
-
-```python
 def change_value(sequence):
     sequence[0] = 0
 

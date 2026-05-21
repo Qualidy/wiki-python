@@ -17,6 +17,11 @@ nav:
       - Try-Except (Einführung): content/python_grundlagen/try_except/try_except.md
       - Imports (Einführung): content/python_grundlagen/module/module.md
 
+  - Projekt Woche 1:
+      - Übersicht: content/project_quiz/index.md
+      - Aufgabe: content/project_quiz/aufgabe.md
+      - Git Cheat Sheet: content/project_quiz/git_cheatsheet.md
+
 #  - Funktionen & Fehlerbehandlung:
 #      - Übersicht: content/funktionen_fehlerbehandlung/index.md
 #      - Funktionen: content/python_grundlagen/functions/functions.md

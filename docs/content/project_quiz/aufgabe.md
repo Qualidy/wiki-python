@@ -83,6 +83,7 @@ pcep-quiz/
 ## 📝 Beispiel-Struktur
 
 ### `questions.py`:
+
 ```python
 questions = [
     {
@@ -106,6 +107,7 @@ questions = [
 ```
 
 ### `quiz_engine.py` (Grundgerüst):
+
 ```python
 from typing import Optional
 
@@ -115,60 +117,23 @@ def display_question(question: dict, num: int, total: int) -> None:
 
 def get_answer(question: dict) -> int:
     """Liest Antwort vom Nutzer (mit Validierung!)"""
-    while True:
-        try:
-            answer = int(input("Deine Antwort (1-4): "))
-            if 1 <= answer <= len(question['options']):
-                return answer
-            else:
-                print(f"Bitte Zahl zwischen 1 und {len(question['options'])}")
-        except ValueError:
-            print("Fehler: Bitte eine Zahl eingeben!")
+    pass
 
 def check_answer(answer: int, question: dict) -> bool:
     """Prüft ob Antwort richtig ist"""
-    return (answer - 1) == question['correct_index']
+    pass
 
 def run_quiz(questions: list[dict]) -> dict:
     """Durchläuft ein komplettes Quiz"""
-    results = {
-        'total': len(questions),
-        'correct': 0,
-        'wrong': 0,
-        'details': []
-    }
-
-    for i, question in enumerate(questions, 1):
-        display_question(question, i, len(questions))
-        answer = get_answer(question)
-        is_correct = check_answer(answer, question)
-
-        if is_correct:
-            print("✓ Richtig!")
-            results['correct'] += 1
-        else:
-            print("✗ Falsch!")
-            results['wrong'] += 1
-
-        print(f"Erklärung: {question['explanation']}\n")
-        results['details'].append({
-            'question': question['question'],
-            'correct': is_correct,
-            'category': question.get('category', 'Unknown')
-        })
-
-    return results
+    pass
 
 def display_results(results: dict) -> None:
     """Zeigt Ergebnisse an"""
-    percentage = (results['correct'] / results['total']) * 100
-    print(f"\n{'='*50}")
-    print(f"Quiz beendet!")
-    print(f"Korrekt: {results['correct']}/{results['total']} ({percentage:.1f}%)")
-    print(f"{'='*50}\n")
+    pass
 ```
 
 ### `main.py` (Grundgerüst):
+
 ```python
 from questions import questions
 import quiz_engine
@@ -184,33 +149,7 @@ def main() -> None:
         print("2. Meine Ergebnisse anzeigen")
         print("3. Beenden")
 
-        try:
-            choice = input("\nWahl (1-3): ").strip()
-
-            if choice == "1":
-                quiz_questions = questions.copy()
-                random.shuffle(quiz_questions)
-                results = quiz_engine.run_quiz(quiz_questions)
-                quiz_engine.display_results(results)
-                all_results.append(results)
-
-            elif choice == "2":
-                if all_results:
-                    print(f"Du hast {len(all_results)} Quiz(e) gemacht:")
-                    for i, r in enumerate(all_results, 1):
-                        pct = (r['correct'] / r['total']) * 100
-                        print(f"  {i}. {r['correct']}/{r['total']} richtig ({pct:.0f}%)")
-                else:
-                    print("Noch keine Quizze gemacht!")
-
-            elif choice == "3":
-                print("Auf Wiedersehen!")
-                break
-            else:
-                print("Ungültig! Bitte 1-3 eingeben.")
-
-        except Exception as e:
-            print(f"Fehler: {e}")
+        # ...
 
 if __name__ == '__main__':
     main()
@@ -221,6 +160,7 @@ if __name__ == '__main__':
 ## 🔄 Git-Workflow
 
 ### Start (gemeinsam):
+
 ```bash
 # Repo erstellen/clonen
 git clone <repo-url>
@@ -232,6 +172,7 @@ git config user.email "deine@email.com"
 ```
 
 ### Pro Gruppe:
+
 ```bash
 # Feature-Branch erstellen (z.B. für questions, quiz_engine, main, stats)
 git checkout -b feature/quiz-engine
@@ -250,6 +191,7 @@ git push origin feature/quiz-engine
 ```
 
 ### Commits sollten sein:
+
 - `feat: add ...` (neue Funktion)
 - `fix: bug in ...` (Bugfix)
 - `refactor: improve ...` (Code verbessern)
@@ -259,24 +201,25 @@ git push origin feature/quiz-engine
 
 ## 📅 Zeitplan (1-1.5 Tage)
 
-| Zeit | Aktivität | UE |
-|------|-----------|-----|
-| **Tag 1 Start** | Briefing & Anforderungen klären | 0.5 |
-| | Repo setup & Git intro | 0.5 |
-| | Code-Struktur planen (gemeinsam) | 0.5 |
-| **Arbeitsphase 1** | Entwicklung: questions.py + quiz_engine.py | 2–2.5 |
-| | Regelmäßige Commits machen | |
-| **Tag 1 Ende / Tag 2 Start** | Testing & Debugging | 1 |
-| **Arbeitsphase 2** | main.py & optionale Features | 1–1.5 |
-| | Code-Review in Paaren | 0.5 |
-| **Finale Phase** | Integration, Git `log` zeigen | 0.5 |
-| | Demo/Präsentation (3–5 Min) | 0.5 |
+| Zeit                         | Aktivität                                  | UE    |
+| ---------------------------- | ------------------------------------------ | ----- |
+| **Tag 1 Start**              | Briefing & Anforderungen klären            | 0.5   |
+|                              | Repo setup & Git intro                     | 0.5   |
+|                              | Code-Struktur planen (gemeinsam)           | 0.5   |
+| **Arbeitsphase 1**           | Entwicklung: questions.py + quiz_engine.py | 2–2.5 |
+|                              | Regelmäßige Commits machen                 |       |
+| **Tag 1 Ende / Tag 2 Start** | Testing & Debugging                        | 1     |
+| **Arbeitsphase 2**           | main.py & optionale Features               | 1–1.5 |
+|                              | Code-Review in Paaren                      | 0.5   |
+| **Finale Phase**             | Integration, Git `log` zeigen              | 0.5   |
+|                              | Demo/Präsentation (3–5 Min)                | 0.5   |
 
 ---
 
 ## ✅ Abgabe & Evaluation
 
 Jede Gruppe zeigt:
+
 1. **Funktionales Programm:** Quiz läuft, Fragen erscheinen, Scoring stimmt
 2. **Code-Qualität:** Type Hints, Try/Except, aussagekräftige Funktionsnamen
 3. **Git-Geschichte:** `git log` mit mindestens 3–5 Commits

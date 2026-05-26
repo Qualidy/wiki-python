@@ -1,7 +1,7 @@
 ---
 hide:
-    - navigation
-    - toc
+  - navigation
+  - toc
 ---
 
 # Python Kurs
@@ -23,6 +23,7 @@ hide:
 <div class="grid cards fancy" markdown>
 
 - [ :material-table-column: Datenstrukturen ](content/datenstrukturen/lists/lists.md)
+- [ :material-rocket-launch: Comprehensions ](content/comprehensions/list_comp/list_comp.md)
 
 </div>
 
@@ -30,30 +31,42 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
+- [ :material-function-variant: Funktionen Vertiefung ](#)
+- [ :material-card-multiple-outline: OOP Grundlagen ](#)
+<!--
 - [ :material-function-variant: Funktionen Vertiefung ](content/funktionen_vertiefung/scopes/scopes.md)
-- [ :material-rocket-launch: Comprehensions ](content/comprehensions/list_comp/list_comp.md)
 - [ :material-card-multiple-outline: OOP Grundlagen ](content/oop_grundlagen/define_classes/define_classes.md)
-
+-->
 </div>
 
 ### Woche 4
 
 <div class="grid cards fancy" markdown>
 
+- [ :material-help-box: Exceptions Vertiefung ](#)
+- [ :material-file-multiple: Dateien & Dateisystem ](#)
+- [ :material-package-variant-closed: Module, Pakete & pip ](#)
+
+<!--
 - [ :material-help-box: Exceptions Vertiefung ](content/python_grundlagen/try_except/try_except.md)
 - [ :material-file-multiple: Dateien & Dateisystem ](content/dateien_dateisystem/dateioperationen/dateioperationen.md)
 - [ :material-package-variant-closed: Module, Pakete & pip ](content/module_pakete_pip/pakete/pakete.md)
-
+-->
 </div>
 
 ### Woche 5
 
 <div class="grid cards fancy" markdown>
 
+- [ :material-vector-line: Vererbung & Polymorphismus ](#)
+- [ :material-vector-polyline: Mehrfachvererbung & MRO ](#)
+- [ :material-magic-staff: Dunder-Methoden & Kapselung ](#)
+
+<!--
 - [ :material-vector-line: Vererbung & Polymorphismus ](content/vererbung_polymorphismus/vererbung/vererbung.md)
 - [ :material-vector-polyline: Mehrfachvererbung & MRO ](){ .disabled }
 - [ :material-magic-staff: Dunder-Methoden & Kapselung ](content/dunder_kapselung/magic_methods/magic_methods.md)
-
+-->
 </div>
 
 ### Woche 6

@@ -1,96 +1,100 @@
 /* Kartenhintergrund mit Farbverlauf und angepasstem Schatten */
 .grid.cards.fancy li {
-    background: linear-gradient(135deg, rgba(255, 193, 7, 0.8), rgba(255, 152, 0, 0.9));
-    background-color: var(--md-primary-fg-color);
-    color: var(--md-primary-bg-color);
-    border-radius: 12px !important;
-    position: relative; /* Ermöglicht die Positionierung von absolut positionierten Kindern */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    /* transition: background 0.3s ease, box-shadow 0.3s ease; */
-    transition:
-        background 250ms ease,
-        box-shadow 250ms ease;
-    overflow: visible; /* Ermöglicht, dass Elemente (z. B. Icons) über die Box hinausragen */
-    padding: 0px !important;
-    border: None !important;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.8), rgba(255, 152, 0, 0.9));
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-radius: 12px !important;
+  position: relative; /* Ermöglicht die Positionierung von absolut positionierten Kindern */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* transition: background 0.3s ease, box-shadow 0.3s ease; */
+  transition:
+    background 250ms ease,
+    box-shadow 250ms ease;
+  overflow: visible; /* Ermöglicht, dass Elemente (z. B. Icons) über die Box hinausragen */
+  padding: 0px !important;
+  border: None !important;
 }
 
 /* Hover-Effekt für die Karten */
 .grid.cards.fancy li:hover {
-    /* background: linear-gradient(135deg, var(--md-accent-fg-color), var(--md-primary-bg-color)); */
-    background-color: var(--md-accent-fg-color);
-    box-shadow: 0 0 12px var(--md-accent-fg-color) !important;
+  /* background: linear-gradient(135deg, var(--md-accent-fg-color), var(--md-primary-bg-color)); */
+  background-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 12px var(--md-accent-fg-color) !important;
 }
 
 /* Icons mittig rechts auf den Karten positionieren */
 .grid.cards.fancy li svg {
-    position: absolute;
-    top: 50%; /* Vertikal mittig */
-    right: 10px; /* Rechtsbündig mit etwas Abstand */
-    transform: translateY(-50%); /* Exakte vertikale Zentrierung */
-    /* opacity: 0.4; Weniger auffällig im normalen Zustand */
-    width: 60px; /* Größe der Icons im normalen Zustand */
-    height: auto;
-    fill: var(--md-accent-bg-color);
-    transition:
-        opacity 0.3s ease,
-        transform 0.7s ease,
-        fill 0.3s ease; /* Übergangseffekte für Hover */
-    pointer-events: none; /* Keine Interaktion mit dem Icon */
-    z-index: 1; /* Stellt sicher, dass das Icon nicht hinter anderen Elementen liegt */
+  position: absolute;
+  top: 50%; /* Vertikal mittig */
+  right: 10px; /* Rechtsbündig mit etwas Abstand */
+  transform: translateY(-50%); /* Exakte vertikale Zentrierung */
+  /* opacity: 0.4; Weniger auffällig im normalen Zustand */
+  width: 60px; /* Größe der Icons im normalen Zustand */
+  height: auto;
+  fill: var(--md-accent-bg-color);
+  transition:
+    opacity 0.3s ease,
+    transform 0.7s ease,
+    fill 0.3s ease; /* Übergangseffekte für Hover */
+  pointer-events: none; /* Keine Interaktion mit dem Icon */
+  z-index: 1; /* Stellt sicher, dass das Icon nicht hinter anderen Elementen liegt */
 }
 
 /* Animation und Vergrößerung bei Hover auf die Karten */
 .grid.cards.fancy li:hover svg {
-    opacity: 1; /* Icons werden undurchsichtig beim Hover */
-    transform: translateY(-50%) scale(1.4) rotate(365deg); /* Leichte Vergrößerung und Rotation im Uhrzeigersinn */
-    width: 80px; /* Vergrößert das Icon dezent */
-    fill: var(--md-primary-fg-color);
+  opacity: 1; /* Icons werden undurchsichtig beim Hover */
+  transform: translateY(-50%) scale(1.4) rotate(365deg); /* Leichte Vergrößerung und Rotation im Uhrzeigersinn */
+  width: 80px; /* Vergrößert das Icon dezent */
+  fill: var(--md-primary-fg-color);
 }
 
 /* Anpassung der Textfarbe und Schriftarten */
 .grid.cards.fancy li a {
-    display: block;
-    color: var(--md-primary-bg-color);
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.8rem;
-    padding-right: 70px;
-    transition: 0.3s all;
+  display: block;
+  color: var(--md-primary-bg-color);
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8rem;
+  padding-right: 70px;
+  transition: 0.3s all;
 }
 
 .grid.cards.fancy li p {
-    /* color: #ffffff; Beschreibung bleibt Weiß */
-    font-family: "Roboto", sans-serif;
+  /* color: #ffffff; Beschreibung bleibt Weiß */
+  font-family: "Roboto", sans-serif;
 }
 
 /* Hintergrundfarbe und Helligkeit der Karte bei Hover erhöhen */
 .grid.cards.fancy li:hover a {
-    color: var(--md-accent-bg-color); /* Weißer Text bei Hover bleibt bestehen */
+  color: var(--md-accent-bg-color); /* Weißer Text bei Hover bleibt bestehen */
 }
 
 /* Disabled state for menu items */
-.grid.cards.fancy li:has(a.disabled) {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-    background-color: #ccc !important;
-    background: #ccc !important;
+.grid.cards.fancy li:has(a.disabled),
+.grid.cards.fancy li:has(a[href="#"]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #ccc !important;
+  background: #ccc !important;
 }
 
-.grid.cards.fancy li:has(a.disabled):hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
-    background-color: #ccc !important;
-    background: #ccc !important;
+.grid.cards.fancy li:has(a.disabled):hover,
+.grid.cards.fancy li:has(a[href="#"]):hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  background-color: #ccc !important;
+  background: #ccc !important;
 }
 
-.grid.cards.fancy li:has(a.disabled) svg {
-    opacity: 0.3 !important;
-    fill: #999 !important;
+.grid.cards.fancy li:has(a.disabled) svg,
+.grid.cards.fancy li:has(a[href="#"]) svg {
+  opacity: 0.3 !important;
+  fill: #999 !important;
 }
 
-.grid.cards.fancy li a.disabled {
-    cursor: not-allowed;
-    pointer-events: none;
+.grid.cards.fancy li a.disabled,
+.grid.cards.fancy li a[href="#"] {
+  cursor: not-allowed;
+  pointer-events: none;
 }

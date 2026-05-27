@@ -24,6 +24,7 @@ hide:
 
 - [ :material-table-column: Datenstrukturen ](content/datenstrukturen/lists/lists.md)
 - [ :material-rocket-launch: Comprehensions ](content/comprehensions/list_comp/list_comp.md)
+- [ :material-file-multiple: Dateien & Dateisystem ](content/dateien_dateisystem/dateioperationen/dateioperationen.md)
 
 </div>
 

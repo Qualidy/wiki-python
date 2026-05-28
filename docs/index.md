@@ -25,6 +25,8 @@ hide:
 - [ :material-table-column: Datenstrukturen ](content/datenstrukturen/lists/lists.md)
 - [ :material-rocket-launch: Comprehensions ](content/comprehensions/list_comp/list_comp.md)
 - [ :material-file-multiple: Dateien & Dateisystem ](content/dateien_dateisystem/dateioperationen/dateioperationen.md)
+- [ :material-function-variant: Funktionen Vertiefung ](content/funktionen_vertiefung/scopes/scopes.md)
+- [ :material-card-multiple-outline: OOP Grundlagen ](content/oop_grundlagen/define_classes/define_classes.md)
 
 </div>
 
@@ -32,12 +34,6 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-function-variant: Funktionen Vertiefung ](#)
-- [ :material-card-multiple-outline: OOP Grundlagen ](#)
-<!--
-- [ :material-function-variant: Funktionen Vertiefung ](content/funktionen_vertiefung/scopes/scopes.md)
-- [ :material-card-multiple-outline: OOP Grundlagen ](content/oop_grundlagen/define_classes/define_classes.md)
--->
 </div>
 
 ### Woche 4

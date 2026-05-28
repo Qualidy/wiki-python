@@ -36,16 +36,16 @@ nav:
   - Comprehensions:
       - List Comprehensions: content/comprehensions/list_comp/list_comp.md
 
-  #  - Funktionen Vertiefung:
-  #      - Scopes: content/funktionen_vertiefung/scopes/scopes.md
-  #      - Args & Kwargs: content/funktionen_vertiefung/args_kwargs/args_kwargs.md
-  #      - Docstring: content/funktionen_vertiefung/docstring/docstring.md
-  #
-  #  - OOP Grundlagen:
-  #      - Klassen definieren: content/oop_grundlagen/define_classes/define_classes.md
-  #      - Attribute: content/oop_grundlagen/attributes/attributes.md
-  #      - Methoden: content/oop_grundlagen/methods/methods.md
-  #      - Unittest: content/oop_grundlagen/unittests/unittests.md
+  - Funktionen Vertiefung:
+      - Scopes: content/funktionen_vertiefung/scopes/scopes.md
+      - Args & Kwargs: content/funktionen_vertiefung/args_kwargs/args_kwargs.md
+      - Docstring: content/funktionen_vertiefung/docstring/docstring.md
+
+  - OOP Grundlagen:
+      - Klassen definieren: content/oop_grundlagen/define_classes/define_classes.md
+      - Attribute: content/oop_grundlagen/attributes/attributes.md
+      - Methoden: content/oop_grundlagen/methods/methods.md
+      - Unittest: content/oop_grundlagen/unittests/unittests.md
   #
   #  - Exceptions Vertiefung:
   #      - Try-Except-Else-Finally: content/python_grundlagen/try_except/try_except.md

@@ -18,7 +18,7 @@ question: |
       print(f"Roboter hat die Marke {x.marke}")
   ```
 
-  Neben `hasattr` gibt es die vorimplementierten Funktionen `getattr` und `setattr`. 
+  Neben `hasattr` gibt es die vorimplementierten Funktionen `getattr` und `setattr`.
   Finde heraus, was diese Funktionen tun und ändere den obigen Code so, dass diese Funktionen verwendet werden.
 
   Was macht der dritte Parameter von `getattr`?
@@ -29,22 +29,21 @@ question: |
 
   `setattr` setzt ein Attribut.
 
-  `getattr` gibt einem das Attribut mit dem gegebenen Namen zurück. Der dritte Parameter wird ist optional und wird 
+  `getattr` gibt einem das Attribut mit dem gegebenen Namen zurück. Der dritte Parameter wird ist optional und wird
   zurückgegeben, wenn kein Attribut des angegebenen Namens gefunden wurde.
 
   Der geänderte Code sieht wie folgt aus:
 
-  <pre><code>class Roboter:
-      marke = "VW"
+solution: |
+  class Roboter:
+       marke = "VW"
 
-  x = Roboter()
+   x = Roboter()
 
-  if not hasattr(x, "speed"):
-      setattr(x, "speed", 0)
+   if not hasattr(x, "speed"):
+       setattr(x, "speed", 0)
 
-  print(f"Roboter fährt {getattr(x, "speed")} km/h")
+   print(f"Roboter fährt {getattr(x, "speed")} km/h")
 
-  if hasattr(x, "marke"):
-      print(f"Roboter hat die Marke {getattr(x, "marke")}")
-  </code></pre>
-  </details>
+   if hasattr(x, "marke"):
+       print(f"Roboter hat die Marke {getattr(x, "marke")}")

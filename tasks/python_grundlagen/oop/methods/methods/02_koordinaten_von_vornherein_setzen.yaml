@@ -1,7 +1,7 @@
 title: "Koordinaten von vornherein setzen"
 difficulty: 1
 question: |
-  Erweitere die Klasse `Point` aus der [Aufgabe Koordinaten setzen](#aufgabe-koordinaten-setzen) um eine 
+  Erweitere die Klasse `Point` aus der [Aufgabe Koordinaten setzen](#aufgabe-koordinaten-setzen) um eine
   `__init__` Methode, sodass direkt `x` und `y` Wert gesetzt werden können. Der folgende Code soll also Ausführbar sein:
 
   ```python
@@ -11,7 +11,8 @@ question: |
   ```
 
   {{ youtube_video("https://www.youtube.com/embed/LGtuDOss4bM?si=eo4CxwZS8mxFX-EE") }}
-  <pre><code>class Point:
+solution: |
+  class Point:
       def __init__(self, x, y):
           self.x = x
           self.y = y
@@ -24,5 +25,4 @@ question: |
 
   point = Point(4, 7)
   x, y = point.get_coordinates()
-  print(f"Punkt hat den x-Wert {x} und den y-Wert {y}")</code></pre>
-  </details>
+  print(f"Punkt hat den x-Wert {x} und den y-Wert {y}")

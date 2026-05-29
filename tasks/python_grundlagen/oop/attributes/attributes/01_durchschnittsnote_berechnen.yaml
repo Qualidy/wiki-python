@@ -6,7 +6,8 @@ question: |
   Schreibe dann Code, der diese Attribute ausließt und die Durchschnittsnote berechnet.
 
   {{ youtube_video("https://www.youtube.com/embed/wo1AvTRUIJU?si=8edJnXhyEt4t-ZEe") }}
-  <pre><code>class Student:
+solution: |
+  class Student:
       pass
 
   anna = Student()
@@ -15,6 +16,4 @@ question: |
   anna.Deutschnote = 1
 
   durchschnitt = (anna.Mathenote + anna.Englischnote + anna.Deutschnote) / 3
-  print(durchschnitt)</code></pre>
-
-  </details>
+  print(durchschnitt)

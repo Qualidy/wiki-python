@@ -14,7 +14,8 @@ question: |
   booking.february_income = 200
   ```
   {{ youtube_video("https://www.youtube.com/embed/YPwcI1X8BdA?si=PBN9PXM8LYYL46PG") }}
-  <pre><code>class Buchhaltung:
+solution: |
+  class Buchhaltung:
       pass
 
   booking = Buchhaltung()
@@ -29,5 +30,4 @@ question: |
 
   print(summe)
 
-  print(sum(value for name, value in booking.__dict__.items() if 'spending' in name))</code></pre>
-  </details>
+  print(sum(value for name, value in booking.__dict__.items() if 'spending' in name))

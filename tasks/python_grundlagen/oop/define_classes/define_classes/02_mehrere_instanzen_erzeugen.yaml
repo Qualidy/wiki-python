@@ -1,14 +1,11 @@
 title: "mehrere Instanzen erzeugen"
 difficulty: 1
 question: |
-  Erstelle eine leere Klasse `Car` und erzeuge drei verschiedene Instanzen von `Car`. 
+  Erstelle eine leere Klasse `Car` und erzeuge drei verschiedene Instanzen von `Car`.
   Wie kannst du überprüfen, dass die Instanzen wirklich verschieden sind?
 
-  <details>
-  <summary>
-  Lösung
-  </summary>
-  <pre><code>class Car:
+solution: |
+  class Car:
       pass
 
   a = Car()
@@ -17,9 +14,4 @@ question: |
 
   print(id(a))
   print(id(b))
-  print(id(c))</code></pre>
-  </details>
-
-  [//]: # (### Aufgabe: Identitätsvergleich🌶🌶)
-
-  [//]: # (Finde heraus, was `is` und `is not` in Python tun und an welcher Stelle wir sie im Beispielcode hätten nutzen können.)
+  print(id(c))

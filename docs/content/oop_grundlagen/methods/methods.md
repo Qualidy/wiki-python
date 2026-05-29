@@ -40,12 +40,12 @@ set_baujahr(robo, 2000)
 print(robo.baujahr)
 ```
 
-Soweit so gut, der Code funktioniert, aber eigentlich gehört die Methode `set_baujahr` ja eigentlich zu Klasse 
+Soweit so gut, der Code funktioniert, aber eigentlich gehört die Methode `set_baujahr` ja eigentlich zu Klasse
 `Roboter`. Sie sollte nicht auch von anderen Instanzen anderer Klassen aufrufbar sein. Wir können die Funktion
 daher in den Klassenrumpf verschieben und machen aus ihr so eine **Methode**.
 
-Dadurch ändert sich noch ein weiteres Detail, um die Methode nun aufzurufen, müssen wir sie zunächst aus 
-der Klasse  `Roboter` herausbekommen, indem wir `Roboter.set_baujahr(...)` aufrufen (ähnlich wie beim
+Dadurch ändert sich noch ein weiteres Detail, um die Methode nun aufzurufen, müssen wir sie zunächst aus
+der Klasse `Roboter` herausbekommen, indem wir `Roboter.set_baujahr(...)` aufrufen (ähnlich wie beim
 abfragen eines Klassenattributes). Nun funktioniert der folgende Code:
 
 [Link zum Onlinecompiler💻](https://pythontutor.com/render.html#code=class%20Roboter%3A%0A%20%20%20%20def%20set_baujahr%28roboter,%20baujahr%29%3A%0A%20%20%20%20%20%20%20%20if%20baujahr%20%3C%201800%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20raise%20ValueError%28%22So%20fr%C3%BCh%20gab%20es%20noch%20keine%20Roboter!%22%29%0A%20%20%20%20%20%20%20%20roboter.baujahr%20%3D%20baujahr%0A%0A%0Arobo%20%3D%20Roboter%28%29%0A%0ARoboter.set_baujahr%28robo,%202000%29%0A%0Aprint%28robo.baujahr%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
@@ -92,6 +92,7 @@ print(robo.baujahr)
 ```
 
 {{ task(file="tasks/python_grundlagen/oop/methods/methods/01_koordinaten_setzen.yaml") }}
+
 ## Jede Instanz hat eigene Attribute
 
 {{ youtube_video("https://www.youtube.com/embed/YcqvbaaGDCQ?si=eSXbxIbZk9X23bP6") }}
@@ -148,7 +149,7 @@ Hier können wir dann z.B. direkt bestimmte Attribute festlegen:
 class Roboter:
     def __init__(self, name):
         self.name = name
-        
+
     def sage_hallo(self):
         print(f"Hallo, ich bin {self.name}.")
 
@@ -159,10 +160,10 @@ y.sage_hallo()
 
 Oft verwirrt, dass es bei `__init__` auch erforderlich ist, dass der erste Parameter `self` ist.
 `__init__` erstellt nämlich tatsächlich gar keine Instanz. Das wird über eine andere Methode, namens `__new__`
-gesteuert. Diese sehen wir hier gar nicht und wird stillschweigend von Python aufgerufen, als 
+gesteuert. Diese sehen wir hier gar nicht und wird stillschweigend von Python aufgerufen, als
 wir `Roboter("Karl")` ausführen. Auf dieser frischen Instanz wird dann `__init__` ausgeführt und
-die Attribute werden festgelegt. Wer mehr dazu erfahren möchte, lese die 
-[Pythondoku](https://docs.python.org/3/reference/datamodel.html#object.__new__) 
+die Attribute werden festgelegt. Wer mehr dazu erfahren möchte, lese die
+[Pythondoku](https://docs.python.org/3/reference/datamodel.html#object.__new__)
 oder [diesen Artikel](https://builtin.com/data-science/new-python).
 
 🔅Merke: `__new__` instanziiert, `__init__` initialisiert.

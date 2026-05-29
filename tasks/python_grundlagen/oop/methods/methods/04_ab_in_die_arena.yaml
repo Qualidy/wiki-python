@@ -16,7 +16,8 @@ question: |
   ```
 
   {{ youtube_video("https://www.youtube.com/embed/I9BhX2cqoR8?si=wjzPC0gQxRwE_OPE") }}
-  <pre><code>class Arena:
+solution: |
+  class Arena:
       def __init__(self, attacker: Gladiator, defender: Gladiator):
           self.attacker = attacker
           self.defender = defender
@@ -29,5 +30,3 @@ question: |
           winner = self.attacker if self.attacker.is_alive() else self.defender
 
           print(f"The winner is {winner.name}!🎉🎉🎉")
-  </code></pre>
-  </details>

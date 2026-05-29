@@ -23,7 +23,8 @@ question: |
   Tipp: Nutze die Methoden `split` und `join`. Am einfachsten ist das mit List-Comprehension. Ja, tatsächlich.
 
   {{ youtube_video("https://www.youtube.com/embed/6fi7XA91uos?si=3ETKGAxL495ic8zM") }}
-  <pre><code>class Person:
+solution: |
+  class Person:
       pass
 
   anna = Person()
@@ -36,5 +37,4 @@ question: |
       return "".join(word[0] for word in person.name.split())
 
   print(getInitials(anna)) # 'ALZ'
-  print(getInitials(karl)) # 'KG'</code></pre>
-  </details>
+  print(getInitials(karl)) # 'KG'

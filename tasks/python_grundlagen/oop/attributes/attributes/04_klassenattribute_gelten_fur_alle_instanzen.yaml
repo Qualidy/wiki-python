@@ -22,7 +22,7 @@ question: |
 
   Roboter.marke = 'Porsche'
 
-  print(x.marke) 
+  print(x.marke)
   print(y.marke)
   print(Roboter.marke)
   ```
@@ -32,20 +32,19 @@ question: |
   Ein Klassenattribut gilt für alle Instanzen einer Klasse.
   Wenn man es ändert, ändert man es für alle, da sie alle das Attribut an einer Stelle nachlesen.
 
-  <pre><code>class Roboter:
-      marke = 'VW'
+solution: |
+  class Roboter:
+       marke = 'VW'
 
-  x = Roboter()
-  y = Roboter()
+   x = Roboter()
+   y = Roboter()
 
-  print(x.marke) # 'VW'
-  print(y.marke) # 'VW'
-  print(Roboter.marke) # 'VW'
+   print(x.marke) # 'VW'
+   print(y.marke) # 'VW'
+   print(Roboter.marke) # 'VW'
 
-  Roboter.marke = 'Porsche'
+   Roboter.marke = 'Porsche'
 
-  print(x.marke) # 'Porsche'
-  print(y.marke) # 'Porsche'
-  print(Roboter.marke) # 'Porsche'
-  </code></pre>
-  </details>
+   print(x.marke) # 'Porsche'
+   print(y.marke) # 'Porsche'
+   print(Roboter.marke) # 'Porsche'

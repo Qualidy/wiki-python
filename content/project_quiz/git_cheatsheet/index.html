@@ -1,0 +1,2280 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../aufgabe/">
+      
+      
+        <link rel="next" href="../../funktionen_fehlerbehandlung/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Git Cheat Sheet - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-cheat-sheet-schnelle-referenz" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git Cheat Sheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup-einmalig" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Initial Setup (einmalig)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Initial Setup (einmalig)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-klonen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository klonen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konfiguration-lokal-fur-dieses-projekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfiguration (lokal für dieses Projekt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#globale-konfiguration-nur-einmalig-notig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Globale Konfiguration (nur einmalig nötig)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wichtige-befehle-im-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Wichtige Befehle im Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Wichtige Befehle im Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-feature-branch-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Feature-Branch erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-status-anschauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Status anschauen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-anderungen-hinzufugen-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Änderungen hinzufügen (staging)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-commit-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Commit erstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-changes-anschauen-vor-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Changes anschauen (vor Commit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-commit-historik-anschauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ Commit-Historik anschauen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-push-zum-remote-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      7️⃣ Push zum Remote (GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-pull-request-erstellen-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      8️⃣ Pull Request erstellen (GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-branches-anschauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      9️⃣ Branches anschauen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zu-anderen-branch-wechseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔟 Zu anderen Branch wechseln
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Häufige Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Häufige Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-1-feature-entwickeln-pushen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 1: Feature entwickeln &amp; pushen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-2-anderungen-verwerfen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 2: Änderungen verwerfen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-3-main-mit-neuesten-anderungen-updaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 3: Main mit neuesten Änderungen updaten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-4-merge-nach-pull-request-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 4: Merge (nach Pull Request Approval)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-losungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Häufige Fehler &amp; Lösungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Häufige Fehler &amp; Lösungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-fatal-your-current-branch-is-ahead-of-originmain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: "fatal: your current branch is ahead of 'origin/main'"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-fatal-refusing-to-merge-unrelated-histories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: "fatal: refusing to merge unrelated histories"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-falscher-name-oder-email-in-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Falscher Name oder Email in Commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-falsche-datei-gecomiitet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Falsche Datei gecomiitet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Merge Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nutzliche-kombinationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Nützliche Kombinationen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Nützliche Kombinationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gesamte-repository-historie-visualisieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gesamte Repository-Historie visualisieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-seit-letztem-commit-anschauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Änderungen seit letztem Commit anschauen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alle-commits-eines-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alle Commits eines Authors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits-mit-keyword-suchen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commits mit Keyword suchen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-infos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Weitere Infos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-cheat-sheet-schnelle-referenz">Git Cheat Sheet – Schnelle Referenz<a class="headerlink" href="#git-cheat-sheet-schnelle-referenz" title="Permanent link">&para;</a></h1>
+<p>Ein kompakter Überblick über die wichtigsten Git-Befehle für dieses Projekt.</p>
+<hr />
+<h2 id="initial-setup-einmalig">🔧 Initial Setup (einmalig)<a class="headerlink" href="#initial-setup-einmalig" title="Permanent link">&para;</a></h2>
+<h3 id="repository-klonen">Repository klonen<a class="headerlink" href="#repository-klonen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/pcep-quiz.git
+<span class="nb">cd</span><span class="w"> </span>pcep-quiz
+</code></pre></div></td></tr></table></div>
+<h3 id="konfiguration-lokal-fur-dieses-projekt">Konfiguration (lokal für dieses Projekt)<a class="headerlink" href="#konfiguration-lokal-fur-dieses-projekt" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="globale-konfiguration-nur-einmalig-notig">Globale Konfiguration (nur einmalig nötig)<a class="headerlink" href="#globale-konfiguration-nur-einmalig-notig" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="wichtige-befehle-im-workflow">📌 Wichtige Befehle im Workflow<a class="headerlink" href="#wichtige-befehle-im-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="1-feature-branch-erstellen">1️⃣ Feature-Branch erstellen<a class="headerlink" href="#1-feature-branch-erstellen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/quiz-engine
+<span class="c1"># oder (modernere Syntax):</span>
+git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature/quiz-engine
+</code></pre></div></td></tr></table></div>
+<p><strong>Naming-Konvention:</strong>
+- <code>feature/</code> – neue Funktion
+- <code>fix/</code> – Bugfix
+- <code>refactor/</code> – Code-Verbesserung
+- <code>docs/</code> – Dokumentation</p>
+<p>Beispiele:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/quiz-engine
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/statistics
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/main-menu
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h3 id="2-status-anschauen">2️⃣ Status anschauen<a class="headerlink" href="#2-status-anschauen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>status
+</code></pre></div></td></tr></table></div>
+<p>Zeigt:
+- Geänderte Dateien
+- Neue Dateien (untracked)
+- Staged Changes</p>
+<hr />
+<h3 id="3-anderungen-hinzufugen-staging">3️⃣ Änderungen hinzufügen (staging)<a class="headerlink" href="#3-anderungen-hinzufugen-staging" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Alle Änderungen staging</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+
+<span class="c1"># Nur bestimmte Datei</span>
+git<span class="w"> </span>add<span class="w"> </span>quiz_engine.py
+
+<span class="c1"># Interaktiv (einzelne Teile wählen)</span>
+git<span class="w"> </span>add<span class="w"> </span>-p
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="4-commit-erstellen">4️⃣ Commit erstellen<a class="headerlink" href="#4-commit-erstellen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Mit Message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: add run_quiz function with basic loop&quot;</span>
+
+<span class="c1"># Interaktiv (öffnet Editor)</span>
+git<span class="w"> </span>commit
+</code></pre></div></td></tr></table></div>
+<p><strong>Gutes Commit-Format:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;type&gt;: &lt;kurze Beschreibung&gt;
+
+&lt;längere Erklärung (optional)&gt;
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Beispiele:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: add question display function&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;fix: validate user input in get_answer&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;refactor: split main into smaller functions&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;docs: add type hints to quiz_engine&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h3 id="5-changes-anschauen-vor-commit">5️⃣ Changes anschauen (vor Commit)<a class="headerlink" href="#5-changes-anschauen-vor-commit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Unstaged changes anschauen</span>
+git<span class="w"> </span>diff
+
+<span class="c1"># Staged changes anschauen</span>
+git<span class="w"> </span>diff<span class="w"> </span>--staged
+
+<span class="c1"># Kompletter Diff zur main branch</span>
+git<span class="w"> </span>diff<span class="w"> </span>main
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="6-commit-historik-anschauen">6️⃣ Commit-Historik anschauen<a class="headerlink" href="#6-commit-historik-anschauen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Einfache Liste</span>
+git<span class="w"> </span>log
+
+<span class="c1"># Kompakte Darstellung (empfohlen!)</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline
+
+<span class="c1"># Mit Branches visualisieren</span>
+git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--oneline<span class="w"> </span>--all
+
+<span class="c1"># Letzten 5 Commits</span>
+git<span class="w"> </span>log<span class="w"> </span>-5
+</code></pre></div></td></tr></table></div>
+<p>Beispiel-Output:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>* a1b2c3d feat: add statistics module
+* d4e5f6g feat: add main menu
+* h7i8j9k feat: complete quiz_engine
+* l0m1n2o feat: add questions.py
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h3 id="7-push-zum-remote-github">7️⃣ Push zum Remote (GitHub)<a class="headerlink" href="#7-push-zum-remote-github" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beim ersten Push (upstream setzen)</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/quiz-engine
+
+<span class="c1"># Danach einfach</span>
+git<span class="w"> </span>push
+
+<span class="c1"># Spezifischen Branch pushen</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/quiz-engine
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="8-pull-request-erstellen-github">8️⃣ Pull Request erstellen (GitHub)<a class="headerlink" href="#8-pull-request-erstellen-github" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Auf GitHub gehen</li>
+<li>"Compare &amp; pull request" Button erscheint</li>
+<li>Title &amp; Description ausfüllen</li>
+<li>"Create pull request" klicken</li>
+</ol>
+<p>Oder via CLI:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gh<span class="w"> </span>pr<span class="w"> </span>create<span class="w"> </span>--title<span class="w"> </span><span class="s2">&quot;Add quiz engine&quot;</span><span class="w"> </span>--body<span class="w"> </span><span class="s2">&quot;Implements core quiz loop&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h3 id="9-branches-anschauen">9️⃣ Branches anschauen<a class="headerlink" href="#9-branches-anschauen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Lokale Branches</span>
+git<span class="w"> </span>branch
+
+<span class="c1"># Alle Branches (auch remote)</span>
+git<span class="w"> </span>branch<span class="w"> </span>-a
+
+<span class="c1"># Welcher Branch bin ich gerade?</span>
+git<span class="w"> </span>branch<span class="w"> </span>--show-current
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="zu-anderen-branch-wechseln">🔟 Zu anderen Branch wechseln<a class="headerlink" href="#zu-anderen-branch-wechseln" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="c1"># oder (modern):</span>
+git<span class="w"> </span>switch<span class="w"> </span>main
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="haufige-workflows">🔄 Häufige Workflows<a class="headerlink" href="#haufige-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="workflow-1-feature-entwickeln-pushen">Workflow 1: Feature entwickeln &amp; pushen<a class="headerlink" href="#workflow-1-feature-entwickeln-pushen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Feature-Branch erstellen</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/quiz-engine
+
+<span class="c1"># 2. Code schreiben</span>
+<span class="c1"># ... editiere quiz_engine.py ...</span>
+
+<span class="c1"># 3. Status anschauen</span>
+git<span class="w"> </span>status
+
+<span class="c1"># 4. Änderungen staging</span>
+git<span class="w"> </span>add<span class="w"> </span>quiz_engine.py
+
+<span class="c1"># 5. Commit</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: add run_quiz function&quot;</span>
+
+<span class="c1"># 6. Mehr Code schreiben</span>
+<span class="c1"># ... editiere quiz_engine.py weiter ...</span>
+
+<span class="c1"># 7. Erneut Add &amp; Commit</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: add display_question function&quot;</span>
+
+<span class="c1"># 8. Push</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/quiz-engine
+
+<span class="c1"># 9. Am nächsten Tag: neuer Code</span>
+<span class="c1"># ... editiere quiz_engine.py ...</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: add result display&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="workflow-2-anderungen-verwerfen">Workflow 2: Änderungen verwerfen<a class="headerlink" href="#workflow-2-anderungen-verwerfen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Unstaged Änderungen verwerfen (VOR git add)</span>
+git<span class="w"> </span>restore<span class="w"> </span>quiz_engine.py
+<span class="c1"># oder:</span>
+git<span class="w"> </span>checkout<span class="w"> </span>quiz_engine.py
+
+<span class="c1"># Staged Änderungen unstagen (nach git add, vor git commit)</span>
+git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>quiz_engine.py
+
+<span class="c1"># Letzte 1 Commit rückgängig machen (nur lokal!)</span>
+git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+</code></pre></div></td></tr></table></div>
+<p>⚠️ <strong>Vorsicht:</strong> Folgende Commands sind destruktiv:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1<span class="w">    </span><span class="c1"># Commits + Code löschen!</span>
+git<span class="w"> </span>revert<span class="w"> </span>HEAD<span class="w">            </span><span class="c1"># Sicherer: neuer Commit der Änderungen rückgängig macht</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h3 id="workflow-3-main-mit-neuesten-anderungen-updaten">Workflow 3: Main mit neuesten Änderungen updaten<a class="headerlink" href="#workflow-3-main-mit-neuesten-anderungen-updaten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Auf main wechseln</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># 2. Neueste Änderungen vom Remote holen</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+<span class="c1"># oder einfach:</span>
+git<span class="w"> </span>pull
+
+<span class="c1"># 3. Zurück zum Feature-Branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>feature/quiz-engine
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="workflow-4-merge-nach-pull-request-approval">Workflow 4: Merge (nach Pull Request Approval)<a class="headerlink" href="#workflow-4-merge-nach-pull-request-approval" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Auf main wechseln</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># 2. Branch pullen (falls nicht lokal)</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># 3. Feature-Branch mergen</span>
+git<span class="w"> </span>merge<span class="w"> </span>feature/quiz-engine
+
+<span class="c1"># 4. Push</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># 5. Feature-Branch löschen (optional)</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/quiz-engine
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="haufige-fehler-losungen">🆘 Häufige Fehler &amp; Lösungen<a class="headerlink" href="#haufige-fehler-losungen" title="Permanent link">&para;</a></h2>
+<h3 id="problem-fatal-your-current-branch-is-ahead-of-originmain">Problem: "fatal: your current branch is ahead of 'origin/main'"<a class="headerlink" href="#problem-fatal-your-current-branch-is-ahead-of-originmain" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Einfach pushen</span>
+git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="problem-fatal-refusing-to-merge-unrelated-histories">Problem: "fatal: refusing to merge unrelated histories"<a class="headerlink" href="#problem-fatal-refusing-to-merge-unrelated-histories" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Beim klonen passiert → nicht relevant bei diesem Projekt</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="problem-falscher-name-oder-email-in-commit">Problem: Falscher Name oder Email in Commit<a class="headerlink" href="#problem-falscher-name-oder-email-in-commit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Letzten Commit korrigieren</span>
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;Neuer Name &lt;neuer@email.com&gt;&quot;</span>
+
+<span class="c1"># Global wechseln (zukünftige Commits)</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Richtiger Name&quot;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="problem-falsche-datei-gecomiitet">Problem: Falsche Datei gecomiitet<a class="headerlink" href="#problem-falsche-datei-gecomiitet" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Vor dem Push rückgängig machen</span>
+git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>falsche_datei.py
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: correct commit message&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="problem-merge-conflicts">Problem: Merge Conflicts<a class="headerlink" href="#problem-merge-conflicts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Conflict anschauen</span>
+git<span class="w"> </span>status
+
+<span class="c1"># Datei öffnen und konflikt manuell lösen</span>
+<span class="c1"># Dann:</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;fix: resolve merge conflict&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="nutzliche-kombinationen">📊 Nützliche Kombinationen<a class="headerlink" href="#nutzliche-kombinationen" title="Permanent link">&para;</a></h2>
+<h3 id="gesamte-repository-historie-visualisieren">Gesamte Repository-Historie visualisieren<a class="headerlink" href="#gesamte-repository-historie-visualisieren" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--oneline<span class="w"> </span>--all<span class="w"> </span>--decorate
+</code></pre></div></td></tr></table></div>
+<h3 id="anderungen-seit-letztem-commit-anschauen">Änderungen seit letztem Commit anschauen<a class="headerlink" href="#anderungen-seit-letztem-commit-anschauen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>diff<span class="w"> </span>HEAD
+</code></pre></div></td></tr></table></div>
+<h3 id="alle-commits-eines-authors">Alle Commits eines Authors<a class="headerlink" href="#alle-commits-eines-authors" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;Max Mustermann&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="commits-mit-keyword-suchen">Commits mit Keyword suchen<a class="headerlink" href="#commits-mit-keyword-suchen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;quiz&quot;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="best-practices">🎯 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<p>✅ <strong>DO:</strong>
+- Oft committen (nach jeder Funktion)
+- Aussagekräftige Commit-Messages schreiben
+- Vor dem Push <code>git log</code> checken
+- Regelmäßig <code>git pull</code> machen
+- Feature-Branches für neue Features nutzen</p>
+<p>❌ <strong>DON'T:</strong>
+- Große Changesets in 1 Commit
+- "fixed" oder "update" als Messages
+- Auf main direkt committen
+- Vergessen zu pushen
+- Andere Branches löschen ohne Grund</p>
+<hr />
+<h2 id="weitere-infos">📚 Weitere Infos<a class="headerlink" href="#weitere-infos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Interaktives Tutorial: https://learngitbranching.js.org/</li>
+<li>Offizielle Git Docs: https://git-scm.com/doc</li>
+<li>GitHub Guides: https://guides.github.com/</li>
+</ul>
+<hr />
+<p><strong>Happy Committing! 🎉</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../aufgabe/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Aufgabe">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Aufgabe
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../funktionen_fehlerbehandlung/" class="md-footer__link md-footer__link--next" aria-label="Next: Übersicht">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Übersicht
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

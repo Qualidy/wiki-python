@@ -1,0 +1,2316 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../if_elif_else/if_elif_else/">
+      
+      
+        <link rel="next" href="../../input_output/input_output/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Schleifen (while, for) - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#schleifen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Schleifen (while, for)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="schleifen">Schleifen<a class="headerlink" href="#schleifen" title="Permanent link">&para;</a></h1>
+<p>In der Programmierung sind <strong>Schleifen</strong> ein grundlegendes Konzept, welches verwendet wird, um einen bestimmten Block
+von Anweisungen wiederholt auszuführen. Man sagt auch, dass Schleifen über etwas iterieren. Dies kann zum Beispiel ein
+Zahlenbereich sein oder auch eine Menge an Elementen in einer Liste.</p>
+<p>In Python gibt es zwei Hauptarten von Schleifen:</p>
+<p><strong><code>for</code>-Schleife:</strong> Die <code>for</code>-Schleife wird verwendet, um über eine Sequenz (z. B. eine Liste, ein Tupel oder eine
+Zeichenkette) zu iterieren und den Codeblock für jedes Element in der Sequenz auszuführen.</p>
+<p><strong><code>while</code>-Schleife:</strong> Die <code>while</code>-Schleife wird so lange ausgeführt, wie eine angegebene Bedingung wahr ist. Sie wird
+verwendet, wenn die Anzahl der Schleifendurchläufe im Voraus nicht bekannt ist.</p>
+<h1 id="einfuhrung-in-for-schleifen">Einführung in <code>for</code>-Schleifen<a class="headerlink" href="#einfuhrung-in-for-schleifen" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/IZmCkNQb5v8?si=I4rS9cz-B1xrp0_6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Hier ist ein einfaches Beispiel für eine <code>for</code>-Schleife in Python (drücke auf "Next &gt;" um den Code schrittweise
+durchzuführen):</p>
+<p><a href="https://pythontutor.com/render.html#code=fruechte%20%3D%20%5B%22Apfel%22,%20%22Banane%22,%20%22Kirsche%22%5D%0Afor%20frucht%20in%20fruechte%3A%0A%20%20%20%20print%28frucht%29%0Aprint%28%22fertig%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fruechte</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Apfel&quot;</span><span class="p">,</span> <span class="s2">&quot;Banane&quot;</span><span class="p">,</span> <span class="s2">&quot;Kirsche&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">frucht</span> <span class="ow">in</span> <span class="n">fruechte</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">frucht</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fertig&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Diese Schleife iteriert über die Liste <code>fruechte</code> und gibt jede Frucht nacheinander aus. Für jeden Durchlauf der
+Schleife nimmt <code>frucht</code> ein anderes Element der Liste an und steht im Schleifenkörper zur Verfügung.</p>
+<h2 id="syntax-einer-for-schleife">Syntax einer <code>for</code>-Schleife<a class="headerlink" href="#syntax-einer-for-schleife" title="Permanent link">&para;</a></h2>
+<p>Die grundlegende Syntax einer <code>for</code>-Schleife in Python lautet:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sequenz</span><span class="p">:</span>
+<span class="c1"># Anweisungen, die für jedes Element ausgeführt werden</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>element</code>: Eine Variable, die den aktuellen Wert aus der Sequenz repräsentiert.</li>
+<li><code>sequenz</code>: Die Sequenz, über die iteriert wird (z. B. eine Liste, ein Tupel, eine Zeichenkette oder eine range, auf die wir gleich eingehen werden).</li>
+</ul>
+<h2 id="aufgaben">Aufgaben<a class="headerlink" href="#aufgaben" title="Permanent link">&para;</a></h2>
+<details class="question" open="open">
+<summary>🌶 Zählen</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die die Zahlen von 1 bis 10 ausgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Städtetrip</summary>
+<p>Erstelle eine Liste von Städten und verwenden Sie eine <code>for</code>-Schleife, um jede Stadt auszugeben.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">staedte</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Berlin&quot;</span><span class="p">,</span> <span class="s2">&quot;Paris&quot;</span><span class="p">,</span> <span class="s2">&quot;London&quot;</span><span class="p">,</span> <span class="s2">&quot;New York&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">stadt</span> <span class="ow">in</span> <span class="n">staedte</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">stadt</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Summierung</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die die Summe aller Zahlen von 1 bis 10 berechnet.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]:</span>
+   <span class="n">summe</span> <span class="o">+=</span> <span class="n">zahl</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">summe</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Längster Name</summary>
+<p>Erstelle eine Liste von Namen und verwenden Sie eine <code>for</code>-Schleife, um den längsten Namen in der Liste zu finden.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Anna&quot;</span><span class="p">,</span> <span class="s2">&quot;Max&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Alexandra&quot;</span><span class="p">]</span>
+<span class="n">laengster_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">:</span>
+   <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">laengster_name</span><span class="p">):</span>
+       <span class="n">laengster_name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Längster Name:&quot;</span><span class="p">,</span> <span class="n">laengster_name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Quadratzahlen</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die die Quadratzahlen von 1 bis 10 ausgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+   <span class="n">quadrat</span> <span class="o">=</span> <span class="n">zahl</span> <span class="o">**</span> <span class="mi">2</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">quadrat</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Verdreht</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die die Buchstaben eines Wortes in umgekehrter Reihenfolge ausgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">wort</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="k">for</span> <span class="n">buchstabe</span> <span class="ow">in</span> <span class="n">wort</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">buchstabe</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Fakultät</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die die Fakultät (n!) einer gegebenen Zahl <code>n</code> berechnet. Zur Errinnerung:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>n! := n ⋅ (n-1) ⋅ (n-2) ⋅ ... ⋅ 2 ⋅ 1
+6! = 6⋅5⋅4⋅3⋅2⋅1 = 720 
+1! = 1
+0! = 1
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">faktor</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">faktor</span> <span class="o">*=</span> <span class="n">zahl</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fakultät von </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> ist </span><span class="si">{</span><span class="n">faktor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Thermometer für Amerikaner</summary>
+<p>Erstelle eine Liste von Temperaturen in Celsius und verwenden Sie eine <code>for</code>-Schleife, um jede nacheinander in Fahrenheit
+umzuwandeln und auszugeben. Recherchiere die entsprechende Formel.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">temperaturen_celsius</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">celsius</span> <span class="ow">in</span> <span class="n">temperaturen_celsius</span><span class="p">:</span>
+    <span class="n">fahrenheit</span> <span class="o">=</span> <span class="p">(</span><span class="n">celsius</span> <span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">celsius</span><span class="si">}</span><span class="s2">°C entspricht </span><span class="si">{</span><span class="n">fahrenheit</span><span class="si">}</span><span class="s2">°F&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Vokale</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die die Anzahl der Vokale in einem gegebenen Wort zählt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">wort</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">anzahl_vokale</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">buchstabe</span> <span class="ow">in</span> <span class="n">wort</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">buchstabe</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="s2">&quot;aeiou&quot;</span><span class="p">:</span>
+        <span class="n">anzahl_vokale</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Anzahl der Vokale im Wort &#39;</span><span class="si">{</span><span class="n">wort</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">anzahl_vokale</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Häufigkeit</summary>
+<p>Schreibe eine <code>for</code>-Schleife, die einen Text durchläuft und zählt, wie oft ein bestimmtes Wort in diesem Text
+vorkommt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python ist eine Programmiersprache, und Python ist großartig.&quot;</span>
+<span class="n">gesuchtes_wort</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">anzahl</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">woerter</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">wort</span> <span class="ow">in</span> <span class="n">woerter</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">wort</span> <span class="o">==</span> <span class="n">gesuchtes_wort</span><span class="p">:</span>
+        <span class="n">anzahl</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Anzahl von &#39;</span><span class="si">{</span><span class="n">gesuchtes_wort</span><span class="si">}</span><span class="s2">&#39; im Text: </span><span class="si">{</span><span class="n">anzahl</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h1 id="iteration-uber-feste-zahlenbereiche-mit-range">Iteration über feste Zahlenbereiche mit <code>range</code><a class="headerlink" href="#iteration-uber-feste-zahlenbereiche-mit-range" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/IQhjfZiCOro?si=47NPqX5Fn0SOri8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Möchte man über einen bestimmten Zahlenraum iterieren, so verwendet man in Python die <code>range</code>-Funktion. Es gibt drei
+Möglichkeiten <code>range</code> aufzurufen:</p>
+<table>
+<thead>
+<tr>
+<th>Anazahl Parameter</th>
+<th>Aufruf</th>
+<th>Bedeutung</th>
+<th>Beispiel</th>
+<th>Entsprechende Liste</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>range(end)</code></td>
+<td>Die Range enthält die Integer von <code>0</code> bis <em>ausschließlich</em> <code>end</code>.</td>
+<td><code>range(3)</code></td>
+<td><code>[0,1,2]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>range(start, end)</code></td>
+<td>Die Range enthält die Integer von <code>start</code> bis <em>ausschließlich</em> <code>end</code>.</td>
+<td><code>range(12, 15)</code></td>
+<td><code>[12,13,14]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>range(start, end, step_size)</code></td>
+<td>Die Range enthält die Integer von <code>start</code> bis <em>ausschließlich</em> <code>end</code>. und geht dabei in Schritten der Größe <code>step_size</code>.</td>
+<td><code>range(3, 10, 2)</code></td>
+<td><code>[3,5,7,9]</code></td>
+</tr>
+</tbody>
+</table>
+<details class="question" open="open">
+<summary>🌶 Ranges vorhersagen</summary>
+<p>Welche listen werden in jeder Zeile jeweils erzeugt?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> 
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> 
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span> <span class="c1"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># [0, 5, 10, 15, 20, 25]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># [0, 3, 6, 9]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># []</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="c1"># []</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h2 id="nutzen-von-ranges">Nutzen von Ranges<a class="headerlink" href="#nutzen-von-ranges" title="Permanent link">&para;</a></h2>
+<p>Ranges wirken auf den ersten Blick sehr ähnlich zu Listen. Schaut man sie sich genauer an, stellt man sogar fest,
+dass sie sogar Indizierung und Slicing erlauben. Es gibt zwei wichtige Vorteile:</p>
+<ul>
+<li>Ranges können leicht instanziiert werden (wie würdest du eine Liste aller geraden Zahlen bis 1000 in Python sonst erstellen?),</li>
+<li>Ranges sparen Speicherplatz. Denn die Zahlen, die in der Range sind, werden nicht alle zunächst im Speicher hinlegt, sondern erst bei Bedarf bereitgestellt (indem sie jeweils berechnet werden).</li>
+</ul>
+<p>Wir können Ranges so einfach für Schleifeniterationen über einen Integer-Zahlenraum nutzen:</p>
+<p><a href="https://pythontutor.com/render.html#code=for%20i%20in%20range%285%29%3A%0A%20%20%20%20print%28i%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h1 id="einfuhrung-in-while-schleifen-in-python">Einführung in While-Schleifen in Python<a class="headerlink" href="#einfuhrung-in-while-schleifen-in-python" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/nqMMCr3juCE?si=RpI4n9QONgTR_Qz7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>While-Schleifen ermöglichen es einen Block von Anweisungen
+wiederholt auszuführen, <strong>solange eine bestimmte Bedingung erfüllt ist</strong>.
+Sie sind besonders nützlich, wenn die Anzahl der
+Wiederholungen <strong>nicht im Voraus bekannt</strong> ist. Dies ist zum Beispiel bei einer wiederholten Eingabeaufforderung an den
+Nutzer der Fall.</p>
+<p>Hier ist ein einfaches Beispiel für eine <code>while</code>-Schleife in Python:</p>
+<p><a href="https://pythontutor.com/render.html#code=zaehler%20%3D%200%0Awhile%20zaehler%20%3C%205%3A%0A%20%20%20%20print%28%22Schleife%20Nr.%22,%20zaehler%29%0A%20%20%20%20zaehler%20%2B%3D%201%0Aprint%28%22fertig%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">zaehler</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schleife Nr.&quot;</span><span class="p">,</span> <span class="n">zaehler</span><span class="p">)</span>
+    <span class="n">zaehler</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fertig&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Hier sehen wir noch ein kompliziertes Beispiel, bei dem eine Zahl so lange von einer anderen Subtrahiert wird,
+bis eine Zahl negativ wird. Welcher Rechenoperation wird mit diesem Code umgesetzt?</p>
+<p><a href="https://pythontutor.com/render.html#code=zaehler%20%3D%2018%0Aoriginal_zaehler%20%3D%20zaehler%0Anenner%20%3D%205%0Aanzahl%20%3D%200%0Awhile%20zaehler%20-%20nenner%20%3E%200%3A%0A%20%20%20%20zaehler%20%3D%20zaehler%20-%20nenner%0A%20%20%20%20anzahl%20%3D%20anzahl%20%2B%201%0Aprint%28f%22%7Bnenner%7D%20passt%20%7Banzahl%7D%20mal%20in%20den%20%7Boriginal_zaehler%7D%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">zaehler</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">original_zaehler</span> <span class="o">=</span> <span class="n">zaehler</span>
+<span class="n">nenner</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">anzahl</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">zaehler</span> <span class="o">-</span> <span class="n">nenner</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">zaehler</span> <span class="o">=</span> <span class="n">zaehler</span> <span class="o">-</span> <span class="n">nenner</span>
+    <span class="n">anzahl</span> <span class="o">=</span> <span class="n">anzahl</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nenner</span><span class="si">}</span><span class="s2"> passt </span><span class="si">{</span><span class="n">anzahl</span><span class="si">}</span><span class="s2"> mal in den </span><span class="si">{</span><span class="n">original_zaehler</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Natürlich können wir auch sehr einfach <strong>Endlosschleifen</strong> erzeugen in dem wir die Bedingung einfach immer auf <code>True</code>
+lassen:</p>
+<p><a href="https://pythontutor.com/render.html#code=while%20True%3A%0A%20%20%20%20eingabe%20%3D%20input%28%22Bitte%20gib%20etwas%20ein%3A%22%29%0A%20%20%20%20print%28f%22Deine%20Eingabe%20ist%3A%20%7Beingabe%7D%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%2212%22,%22asdfadsf%22%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">eingabe</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Bitte gib etwas ein:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deine Eingabe ist: </span><span class="si">{</span><span class="n">eingabe</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Wie wir die Endlosschleife doch verlassen können, lernen wir dann gleich.</p>
+<h2 id="aufgaben_1">Aufgaben<a class="headerlink" href="#aufgaben_1" title="Permanent link">&para;</a></h2>
+<details class="question" open="open">
+<summary>🌶🌶 Summe von 1 bis 100</summary>
+<p>Nutze eine while-Schleife, die die Zahlen 1, 2, 3, ... usw. so lange addiert, bis die Summe größer als 100 ist.
+Bis zu welcher Zahl muss addiert werden? Wie groß ist die erste Summe über 100?</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="n">summe</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Die Summe von 1 bis </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> ist </span><span class="si">{</span><span class="n">summe</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Input erfragen</summary>
+<p>Schreibe ein Programm, dass den Nutzer immer wieder nach Zahlen fragt. Es soll nach jeder Eingabe
+die Summe aller bisher erfragen Zahlen zurückgeben.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">next</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Bitte gib eine Zahl ein: &quot;</span><span class="p">)</span>
+    <span class="n">summe</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">next</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;In der Summe bisher insgesamt: </span><span class="si">{</span><span class="n">summe</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Fakultät</summary>
+<p>Verwende eine While-Schleife, um das kleinste <code>n</code> zu finden, sodass <code>n! &gt; 100_000</code> ist.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">faktor</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">faktor</span> <span class="o">*=</span> <span class="n">zahl</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fakultät von </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> ist </span><span class="si">{</span><span class="n">faktor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Fast endlose Schleife</summary>
+<p>Erstelle eine Schleife, die so lange Zufallszahlen zwischen 1 und 10 generiert und ausgibt, bis die Zahl 5 erscheint.
+Nutze dazu <code>random.randint(a,b)</code> (<a href="https://docs.python.org/3/library/random.html#random.randint">Doku</a>)</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">zahl</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">zahl</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">zahl</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Das wars!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Fibonacci</summary>
+<p>Nutze eine While-Schleife, um die erste Zahl in der Fibonaccifolge zu finden, die größer als 100 ist.
+Die Fibonaccifolge beginnt mit den beiden Zahlen <code>1</code> und <code>1</code>. Die nächste Zahl der Folge ist die Summe
+der beiden vorherigen. Der Anfang der Fibonaccifolge sieht also wie folgt aus:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">f_1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">f_2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">at_least</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">while</span> <span class="n">f_2</span> <span class="o">&lt;</span> <span class="n">at_least</span><span class="p">:</span>
+    <span class="c1"># Berechne die nächste Fibonaccizahl</span>
+    <span class="n">f_3</span> <span class="o">=</span> <span class="n">f_1</span> <span class="o">+</span> <span class="n">f_2</span>
+
+    <span class="c1"># Setze die aktuelle und letzte Fibonaccizahl fest.</span>
+    <span class="n">f_1</span> <span class="o">=</span> <span class="n">f_2</span>
+    <span class="n">f_2</span> <span class="o">=</span> <span class="n">f_3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Die Zahl </span><span class="si">{</span><span class="n">f_3</span><span class="si">}</span><span class="s2"> ist die erste Fibonaccizahl, die größer als  </span><span class="si">{</span><span class="n">at_least</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h1 id="vorzeitiges-abbrechen-einer-schleife">Vorzeitiges Abbrechen einer Schleife<a class="headerlink" href="#vorzeitiges-abbrechen-einer-schleife" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/suZrbAoSmr0?si=hloioyGs7h7phUNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In vielen Fällen sucht man einfach einen Wert in einem Bereich oder ein bestimmtes Element in einer List. Sobald man
+dieses gefunden hat, kann man die Schleife eigentlich abbrechen. Dafür nutzt man das Keyword <code>break</code>:</p>
+<p><a href="https://pythontutor.com/render.html#code=for%20i%20in%20range%280,%2010%29%3A%0A%20%20%20%20print%28i%29%0A%20%20%20%20if%20i%20%3D%3D%205%3A%0A%20%20%20%20%20%20%20%20break%0Aprint%28%22Ende%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ende&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Sobald die Bedingung <code>i == 5</code> wahr wird, sorgt <code>break</code> dafür, dass wir die Schleifen verlassen. Damit sparen wir uns 5
+weitere Durchläufe. Bei komplexen Problemstellungen kann man damit sehr viel Zeit sparen.</p>
+<p>Auf der anderen Seite gibt es aber auch Fälle, in denen man nicht die ganze Schleife beenden will, sondern nur den
+aktuellen Durchlauf. Dafür nutzt man das Keyword <code>continue</code>.</p>
+<p><a href="https://pythontutor.com/render.html#code=for%20i%20in%20range%280,%2010%29%3A%0A%20%20%20%20if%203%20%3C%3D%20i%20%3C%3D%205%3A%0A%20%20%20%20%20%20%20%20continue%0A%20%20%20%20print%28i%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Wieso? Für jeder Zahl zwischen 0 und 10 wird überprüft, ob diese Zahl zwischen 3 und 5 liegt. Ist das der Fall, springt
+der Code direkt an den Schleifenanfang (wegen des <code>continue</code>), statt die Zeile 4 auszuführen.
+direkt zum nächsten Durchlauf. In allen anderen Fällen wird die Zahl auf der Konsole ausgegeben.</p>
+<p>Sehr häufig wird break in Kombination mit while-Schleifen verwendet. Wieso? Weil es so einfach möglich ist,
+Endlosschleifen zu erzeugen, die unter bestimmten Bedingungen abbrechen, die nicht im Schleifenkopf überprüft werden.</p>
+<p>Zum Beispiel:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">eingabe</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">eingabe</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deine Eingabe in groß: </span><span class="si">{</span><span class="n">eingabe</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bye Bye&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Durch <code>while True:</code> läuft diese Schleife theoretisch endlos lange, weil die Bedingung immer wahr ist. Bei jedem
+Schleifendurchlauf wird der Nutzer nach einer Eingabe gefragt. Sobald der Nutzer "C" eingibt, wird die Schleife durch
+den Befehl <code>break</code> verlassen und das Programm kann normal weiterlaufen.</p>
+<h1 id="else-zweig-bei-while-und-for-schleifen-in-python">Else-Zweig bei While- und For-Schleifen in Python<a class="headerlink" href="#else-zweig-bei-while-und-for-schleifen-in-python" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/_HQlJUAIuh8?si=N0iBJYNgI4g8MVpT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In Python können sowohl <code>while</code>- als auch <code>for</code>-Schleifen mit einem optionalen <code>else</code>-Zweig versehen werden. Dieser Teil
+der Schleife wird ausgeführt, wenn die Schleife auf normale Weise beendet wird, d.h., <strong>nicht durch ein <code>break</code>-Statement
+unterbrochen wird</strong>.</p>
+<p><a href="https://pythontutor.com/render.html#code=summe%20%3D%200%0Afor%20number%20in%20%5B%2243%22,%20%221234%22,%20%2233.4%22,%20%2210%22%5D%3A%0A%20%20%20%20if%20not%20number.isdigit%28%29%3A%0A%20%20%20%20%20%20%20%20print%28f%22%7Bnumber%7D%20is%20no%20integer!%20Abort%22%29%0A%20%20%20%20%20%20%20%20break%0A%20%20%20%20summe%20%2B%3D%20int%28number%29%0Aelse%3A%0A%20%20%20%20print%28f%22Die%20Summe%20aller%20Zahlen%20ist%20%7Bsumme%7D.%22%29%0Aprint%28%22Ende%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;43&quot;</span><span class="p">,</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span> <span class="s2">&quot;33.4&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">number</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is no integer! Abort&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">summe</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Die Summe aller Zahlen ist </span><span class="si">{</span><span class="n">summe</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ende&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h1 id="verschachtelte-schleifen">Verschachtelte Schleifen<a class="headerlink" href="#verschachtelte-schleifen" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/eBdI_N7yK8A?si=rr9x0FQ3WyNqqyki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Es ist auch möglich Schleifen in Schleifen zu verwenden. Dies sieht man tatsächlich sehr häufig, da es oft
+verschachtelte Strukturen gibt, die durchlaufen werden sollen, z.B. Listen von Listen.</p>
+<p><a href="https://pythontutor.com/render.html#code=list_of_lists%20%3D%20%5B%5B1,2,3%5D,%20%5B40,50,60%5D,%20%5B700,800,900%5D%5D%0A%0Asumme%20%3D%200%0A%0Afor%20sub_list%20in%20list_of_lists%3A%0A%20%20%20%20for%20element%20in%20sub_list%3A%0A%20%20%20%20%20%20%20%20summe%20%2B%3D%20element%0A%20%20%20%20print%28f%22Zwischenergebnis%3A%20%7Bsumme%7D%22%29%20%20%20%20%20%20%20%20%0Aprint%28f%22Endergebnis%3A%20%7Bsumme%7D%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Onlinecompiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">],</span> <span class="p">[</span><span class="mi">700</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">900</span><span class="p">]]</span>
+
+<span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="n">list_of_lists</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sub_list</span><span class="p">:</span>
+        <span class="n">summe</span> <span class="o">+=</span> <span class="n">element</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zwischenergebnis: </span><span class="si">{</span><span class="n">summe</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Endergebnis: </span><span class="si">{</span><span class="n">summe</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="question" open="open">
+<summary>🌶🌶 Produktsummen</summary>
+<p>Was ist das Ergebnis des folgenden Codes. Versuche in eigenen Worten zu beschreiben, was der Code tut.
+Tipp: Führe den Code mit dem Debugger aus.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]]:</span>
+    <span class="n">subsum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sub_list</span><span class="p">:</span>
+        <span class="n">subsum</span> <span class="o">+=</span> <span class="n">element</span>
+    <span class="n">result</span> <span class="o">*=</span> <span class="n">subsum</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]]:</span>
+    <span class="n">subsum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sub_list</span><span class="p">:</span>
+        <span class="n">subsum</span> <span class="o">+=</span> <span class="n">element</span>
+    <span class="n">result</span> <span class="o">*=</span> <span class="n">subsum</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="arithmatex">\[1 ⋅ (4+3+2) ⋅ (5+6+7) = 1 ⋅ 9 ⋅ 18 = 162\]</div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Summenprodukt</summary>
+<p>Schreibe Code, der die Liste <code>[[1,2,3], [-3, 4, 6, 9, 3], [0], [4,4], []]</code> durchläuft.
+Die Elemente jeder inneren Liste sollen multipliziert werden und diese Zwischenergebnisse dann addiert werden.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">super_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[]]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="n">super_list</span><span class="p">:</span>
+    <span class="n">subprodukt</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sub_list</span><span class="p">:</span>
+        <span class="n">subprodukt</span> <span class="o">*=</span> <span class="n">element</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sub_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Wenn keine Elemente in der Liste sind, soll 0 als Summand genutzt werden, nicht 1.</span>
+        <span class="n">subprodukt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="n">subprodukt</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="arithmatex">\[0 + (1⋅1⋅2⋅3) + (1⋅(-3)⋅4⋅6⋅9⋅3) + (1⋅0)+ (1⋅4⋅4) + 0 = 0 + 6 + 648 + 0 + 8 + 0 = 662\]</div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Tannenbaum</summary>
+<p>Schreibe ein Python-Programm, das den Benutzer nach der Breite des Tannenbaums fragt und diesen dann Zeile für Zeile mit print() im Terminal ausgibt.
+- Frage die Breite n (ungerade Zahl) mit input() ab
+- Der Baum beginnt oben mit einer Spitze und wird jede Zeile um 2 Sterne breiter
+- Darunter folgt ein zentrierter Stamm aus |||
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Wie<span class="w"> </span>breit<span class="w"> </span>soll<span class="w"> </span>der<span class="w"> </span>Baum<span class="w"> </span>sein?<span class="w"> </span><span class="m">9</span>
+
+<span class="w">    </span>*
+<span class="w">   </span>***
+<span class="w">  </span>*****
+<span class="w"> </span>*******
+*********
+<span class="w">   </span><span class="o">||</span><span class="p">|</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<h1 id="anspruchsvolle-aufgaben">Anspruchsvolle Aufgaben<a class="headerlink" href="#anspruchsvolle-aufgaben" title="Permanent link">&para;</a></h1>
+<details class="question" open="open">
+<summary>🌶 1: Finden</summary>
+<p>Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt.
+Schreibe eine Antwort mit und eine ohne die Verwendung von <code>continue</code>.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt.&quot;</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Erstes Wort mit mehr als 8 Buchstaben: </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Code ohne  <code>continue</code>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Schreibe ien Programm, das in einem Text das erste Wort findet, länger als 8 Buchstaben ist und dieses zurückgibt.&quot;</span>
+<span class="n">first_word</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">first_word</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="n">first_word</span> <span class="o">=</span> <span class="n">word</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Erstes Wort mit mehr als 8 Buchstaben: </span><span class="si">{</span><span class="n">first_word</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 2: Benutzerdefinierte Passwortüberprüfung</summary>
+<p>Schreibe ein Programm, das den Benutzer zur Eingabe eines Passworts auffordert. Das Passwort muss bestimmte Kriterien
+erfüllen (z.B. mindestens 8 Zeichen lang, enthält sowohl Zahlen als auch Buchstaben). Das Programm soll dem Benutzer
+mitteilen, ob das eingegebene Passwort gültig ist oder nicht. Wenn das Passwort nicht gültig ist, soll das Programm
+spezifizieren, welche Kriterien nicht erfüllt wurden.</p>
+<details class="success">
+<summary>Lösung</summary>
+<p>```python</p>
+<p>password = input("Bitte gib ein Passwort ein: ")</p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 3: Einfacher Zahlenraten</summary>
+<p>Erstelle ein Spiel, bei dem der Benutzer versuchen muss, eine zufällig generierte Zahl zwischen 1 und 100 zu erraten.
+Nach jeder Eingabe gibt das Programm an, ob die geratene Zahl zu hoch oder zu niedrig ist. Der Benutzer hat eine
+begrenzte Anzahl von Versuchen (z.B. 10). Nach dem Spiel gibt das Programm an, ob der Benutzer gewonnen hat und wie
+viele Versuche benötigt wurden.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">zahl</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">versuch</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">max_versuche</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">while</span> <span class="n">versuch</span> <span class="o">&lt;</span> <span class="n">max_versuche</span><span class="p">:</span>
+    <span class="n">raten</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Rate die Zahl: &quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">raten</span> <span class="o">==</span> <span class="n">zahl</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Richtig! Du hast die Zahl in </span><span class="si">{</span><span class="n">versuch</span><span class="si">}</span><span class="s2"> Versuchen erraten.&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">raten</span> <span class="o">&lt;</span> <span class="n">zahl</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die gesuchte Zahl ist höher.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die gesuchte Zahl ist niedriger.&quot;</span><span class="p">)</span>
+
+    <span class="n">versuch</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Leider falsch. Die gesuchte Zahl war </span><span class="si">{</span><span class="n">zahl</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 4: Bestellung in einem virtuellen Café</summary>
+<p>Simuliere ein einfaches Bestellsystem für ein Café. Das Programm listet verschiedene Getränke und Speisen mit ihren
+Preisen auf. Der Benutzer kann Artikel auswählen und die gewünschte Menge angeben. Das Programm führt eine laufende
+Summe der Bestellung. Nachdem der Benutzer seine Auswahl abgeschlossen hat, zeigt das Programm die Gesamtsumme der
+Bestellung an und fragt, ob der Benutzer bar oder mit Karte zahlen möchte.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">menu</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Kaffee&quot;</span><span class="p">:</span> <span class="mf">2.50</span><span class="p">,</span> <span class="s2">&quot;Tee&quot;</span><span class="p">:</span> <span class="mf">2.00</span><span class="p">,</span> <span class="s2">&quot;Kuchen&quot;</span><span class="p">:</span> <span class="mf">3.00</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">menu</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Kaffee&quot;</span><span class="p">:</span> <span class="mf">2.50</span><span class="p">,</span> <span class="s2">&quot;Tee&quot;</span><span class="p">:</span> <span class="mf">2.00</span><span class="p">,</span> <span class="s2">&quot;Kuchen&quot;</span><span class="p">:</span> <span class="mf">3.00</span><span class="p">}</span>
+<span class="n">bestellung</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menü:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">artikel</span><span class="p">,</span> <span class="n">preis</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">artikel</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">preis</span><span class="si">}</span><span class="s2"> Euro&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">artikel</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Wähle einen Artikel (oder &#39;fertig&#39; zum Abschließen): &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">artikel</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;fertig&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">artikel</span> <span class="ow">in</span> <span class="n">menu</span><span class="p">:</span>
+        <span class="n">menge</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wie viele von </span><span class="si">{</span><span class="n">artikel</span><span class="si">}</span><span class="s2"> möchtest du? &quot;</span><span class="p">))</span>
+        <span class="n">summe</span> <span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">artikel</span><span class="p">]</span> <span class="o">*</span> <span class="n">menge</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Artikel nicht im Menü.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gesamtsumme: </span><span class="si">{</span><span class="n">summe</span><span class="si">}</span><span class="s2"> Euro&quot;</span><span class="p">)</span>
+<span class="n">zahlung</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Zahlst du bar oder mit Karte? &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Bezahlt mit </span><span class="si">{</span><span class="n">zahlung</span><span class="si">}</span><span class="s2">. Vielen Dank für deine Bestellung!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../if_elif_else/if_elif_else/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Verzweigungen (if/elif/else)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Verzweigungen (if/elif/else)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../input_output/input_output/" class="md-footer__link md-footer__link--next" aria-label="Next: Ein- und Ausgabe">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Ein- und Ausgabe
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

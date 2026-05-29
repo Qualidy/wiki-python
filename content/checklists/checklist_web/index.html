@@ -1,0 +1,1627 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>API Intro - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-intro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Intro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-intro">API Intro<a class="headerlink" href="#api-intro" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Grundlagen einer API und ihre Rolle als Mittler zwischen verschiedenen Softwarekomponenten.</li>
+<li>Ich kann die Funktionsweise einer API anhand des Kellner-Küche-Beispiels erläutern.</li>
+<li>Ich weiß, wie APIs in der Praxis eingesetzt werden, um spezifische Funktionen und Daten zu nutzen, ohne diese selbst entwickeln zu müssen.</li>
+</ul>
+<h1 id="api-arten">API Arten<a class="headerlink" href="#api-arten" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich kenne die Unterschiede zwischen REST, GraphQL und WebSockets und kann ihre Einsatzgebiete erläutern.</li>
+<li>Ich verstehe das Prinzip der REST-APIs und kann die CRUD-Operationen auf die entsprechenden HTTP-Methoden abbilden.</li>
+<li>Ich kann die Vorteile von GraphQL in Bezug auf die Flexibilität der Datenabfrage und die Strukturierung der Antworten beschreiben.</li>
+<li>Ich weiß, wie WebSockets funktionieren und in welchen Szenarien sie gegenüber REST und GraphQL bevorzugt werden.</li>
+</ul>
+<h1 id="api-kommunikation">API Kommunikation<a class="headerlink" href="#api-kommunikation" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Verwendung und Funktionsweise von CURL zur Interaktion mit APIs über die Kommandozeile und kenne die Vor- und Nachteile.</li>
+<li>Ich kenne die Python Requests Library und ihre Anwendung zur Durchführung von HTTP-Anfragen in Python.</li>
+<li>Ich kann die Vorteile und Funktionsweise von Postman zur Erstellung, zum Testen und zur Dokumentation von API-Anfragen erläutern und kenne dessen grafische Benutzeroberfläche.</li>
+</ul>
+<h1 id="api-nutzung">API Nutzung<a class="headerlink" href="#api-nutzung" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich kann CURL im Terminal verwenden, um Wetterdaten von einer API wie Open-Meteo abzurufen.</li>
+<li>Ich beherrsche den Einsatz der Python Requests Library, um API-Anfragen zu stellen und auf Wetterdaten von Open-Meteo zuzugreifen.</li>
+<li>Ich verstehe, wie man Postman zur Durchführung von API-Anfragen verwendet und kann damit Wetterdaten von Open-Meteo abfragen.</li>
+</ul>
+<h1 id="http-methoden">HTTP Methoden<a class="headerlink" href="#http-methoden" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe den Einsatz verschiedener HTTP-Methoden (GET, POST, PUT, DELETE) im Kontext der Python Requests Library.</li>
+<li>Ich kann Daten mittels HTTP-Requests mit Payloads übertragen und verstehe die Bedeutung des Content-Type Headers.</li>
+<li>Ich weiß, wie man HTTP-Headers für Authentifizierung und Cookie-Management in Python Requests verwendet."</li>
+</ul>
+<h1 id="python-requests">Python Requests<a class="headerlink" href="#python-requests" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Verwendung des <code>response</code> Objekts in der Python Requests Library, insbesondere die Bedeutung des Statuscodes für die Fehlerbehandlung.</li>
+<li>Ich weiß, wie ich auf verschiedene Teile der HTTP-Antwort zugreifen kann, einschließlich Content, Text, JSON, Headers und Cookies.</li>
+<li>Ich kann grundlegende Fehlerbehandlung implementieren, um auf clientseitige und serverseitige Fehler angemessen zu reagieren.</li>
+</ul>
+<h1 id="aufbau-einer-api">Aufbau einer API<a class="headerlink" href="#aufbau-einer-api" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe, wie man eine API durch Festlegung ihrer Funktionen und Daten plant und klare Anforderungen und Endpoints definiert.</li>
+<li>Ich kenne die Bedeutung von Klarheit, Einfachheit und Konsistenz im API-Design und kann effektive, intuitive Endpoints erstellen.</li>
+<li>Mir ist bewusst, wie man das Schema für API-Requests und Responses festlegt, einschließlich der Auswahl zwischen JSON und XML, abhängig vom Anwendungsfall.</li>
+</ul>
+<h1 id="implementierungsprinzipien">Implementierungsprinzipien<a class="headerlink" href="#implementierungsprinzipien" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Bedeutung der Planung und Dokumentation in der API-Entwicklung, einschließlich der Erstellung von Anforderungsdokumenten und der Definition von API-Architektur.</li>
+<li>Ich erkenne die Wichtigkeit des Testens in allen Phasen der API-Entwicklung, um Zuverlässigkeit und Sicherheit zu gewährleisten.</li>
+<li>Mir ist bewusst, dass eine umfassende und klare Dokumentation essentiell für die Nutzbarkeit und Wartung einer API ist.</li>
+</ul>
+<h1 id="web-api-frameworks">Web API Frameworks<a class="headerlink" href="#web-api-frameworks" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich kenne die Unterschiede zwischen Flask und Django und verstehe, dass Flask für kleine Projekte und Django für größere Anwendungen geeignet ist.</li>
+<li>Ich kann eine einfache API in Flask und Django einrichten und verstehe die Grundlagen der Routendefinition und des Serverstarts in beiden Frameworks.</li>
+<li>Ich bin mit den Hauptmerkmalen von Flask und Django vertraut, einschließlich deren Flexibilität, Erweiterbarkeit und der integrierten Funktionen.</li>
+</ul>
+<h1 id="restful-planning">RESTful Planning<a class="headerlink" href="#restful-planning" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich habe erkannt, wie wichtig es ist, die Kernfunktionen und Anwendungsfälle einer API zu Beginn der Planung zu definieren, um die Hauptaufgaben klar zu umreißen.</li>
+<li>Ich kann die Strukturierung von Endpoints in einer RESTful API verstehen und anwenden, wobei ich mich auf ein ressourcenbasiertes Design konzentriere.</li>
+<li>Ich weiß, wie ich das Datenmodell für eine API festlegen und Beziehungen zwischen verschiedenen Datenmodellen definieren kann, einschließlich der Integration einer Datenbank mit Werkzeugen wie SQLAlchemy.</li>
+</ul>
+<h1 id="restful-umsetzung">RESTful Umsetzung<a class="headerlink" href="#restful-umsetzung" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich habe verstanden, wie man in Flask Routen für verschiedene HTTP-Methoden wie GET, POST, PUT und DELETE definiert und wie diese Routen benutzt werden, um CRUD-Operationen zu implementieren.</li>
+<li>Ich weiß, wie man in Flask mit dem <code>request</code>-Objekt Daten aus Anfragen verarbeitet, einschließlich der Handhabung von JSON-Daten und Formulardaten.</li>
+<li>Ich erkenne die Bedeutung des korrekten Umgangs mit HTTP-Fehlercodes und Ausnahmen in Flask, um klare und informative Antworten an den Client zu senden.</li>
+</ul>
+<h1 id="restful-testing">RESTful Testing<a class="headerlink" href="#restful-testing" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich habe gelernt, wie man die Python Requests Library verwendet, um automatisierte Tests für eine Flask-API zu schreiben. </li>
+<li>Ich weiß, wie man Postman für das manuelle Testen und Automatisieren von API-Tests verwendet.</li>
+<li>Ich erkenne die Bedeutung des Testens aller Aspekte einer API, einschließlich der korrekten Fehlerbehandlung, und wie man Postman verwendet, um verschiedene Szenarien und API-Antworten zu testen.</li>
+</ul>
+<h1 id="restful-dokumentation">RESTful Dokumentation<a class="headerlink" href="#restful-dokumentation" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe, wie wichtig eine gut strukturierte und vollständige Dokumentation für die Benutzerfreundlichkeit und Wartbarkeit einer API ist. </li>
+<li>Ich kenne die Werkzeuge Swagger/OpenAPI und MkDocs/Sphinx und ihre Anwendungen zur Erstellung von API-Dokumentationen.</li>
+<li>Ich kann eine API-Dokumentation erstellen, die eine klare Übersicht über die Endpoints, ihre Parameter und mögliche Fehlercodes bietet.</li>
+</ul>
+<h1 id="einfuhrung-web">Einführung Web<a class="headerlink" href="#einfuhrung-web" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe, was eine API ist und warum sie für moderne Webentwicklungen wichtig ist, insbesondere für die Kommunikation zwischen Backend und Frontend.</li>
+<li>Ich kann das Prinzip einer RESTful API beschreiben, einschließlich der Nutzung von HTTP-Methoden und des zustandslosen Designs.</li>
+<li>Ich kenne die Hauptunterschiede zwischen Flask und Django, insbesondere im Hinblick auf ihre Einsatzgebiete und Funktionalitäten.</li>
+<li>Ich weiß, wie Daten in einer RESTful API übertragen werden, einschließlich der Verwendung von JSON oder XML als gängige Formate.</li>
+</ul>
+<h1 id="web-basics">Web Basics<a class="headerlink" href="#web-basics" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Grundkomponenten einer Website, einschließlich HTML, CSS und JavaScript, und wie sie zusammenwirken, um eine interaktive und visuelle Online-Präsenz zu schaffen.</li>
+<li>Ich kann erklären, wie das Dokumentenobjektmodell (DOM) die Struktur einer Webseite abbildet und wie es von JavaScript genutzt wird, um die Seite dynamisch zu verändern und auf Benutzerinteraktionen zu reagieren.</li>
+<li>Ich erkenne die Bedeutung von Webentwicklungstools für die Analyse und Optimierung von Websites, einschließlich der Untersuchung von Elementen, der Nutzung der Konsole, der Verwaltung von Anwendungen wie Cookies und LocalStorage sowie der Netzwerkanalyse.</li>
+</ul>
+<h1 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Grundkomponenten einer Website, einschließlich HTML, CSS und JavaScript, und wie sie zusammenwirken, um eine interaktive und visuelle Online-Präsenz zu schaffen.</li>
+<li>Ich kann erklären, wie das Dokumentenobjektmodell (DOM) die Struktur einer Webseite abbildet und wie es von JavaScript genutzt wird, um die Seite dynamisch zu verändern und auf Benutzerinteraktionen zu reagieren.</li>
+<li>Ich erkenne die Bedeutung von Webentwicklungstools für die Analyse und Optimierung von Websites, einschließlich der Untersuchung von Elementen, der Nutzung der Konsole, der Verwaltung von Anwendungen wie Cookies und LocalStorage sowie der Netzwerkanalyse.</li>
+</ul>
+<h1 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die unterschiedlichen Methoden, CSS in HTML-Dokumente einzubinden, einschließlich Inline-Styling und externer Stylesheets, und kann die Vor- und Nachteile jeder Methode beurteilen.</li>
+<li>Ich kenne das CSS-Box-Modell und verstehe, wie es zur Gestaltung und Positionierung von Elementen auf einer Webseite verwendet wird, einschließlich der Anwendung von Margin, Border, Padding und Content-Bereichen.</li>
+<li>Ich kann verschiedene CSS-Selektoren und Kombinatoren verwenden, um spezifische Elemente auf einer Webseite zu stylen, und verstehe, wie Pseudo-Klassen und Pseudo-Elemente zur Verfeinerung der Selektion und Gestaltung eingesetzt werden.</li>
+</ul>
+<h1 id="komplexeres-html">Komplexeres HTML<a class="headerlink" href="#komplexeres-html" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe, wie man HTML-Formulare mit verschiedenen Eingabefeldern wie Text, E-Mail, Zahl und Dropdown-Menüs erstellt, um Benutzerinteraktionen zu ermöglichen.</li>
+<li>Ich kann tabellarische Daten effektiv darstellen, indem ich HTML-Tabellenelemente wie <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> und <code>&lt;td&gt;</code> verwende, um strukturierte und lesbare Datenpräsentationen zu schaffen.</li>
+<li>Ich weiß, wie man externe Inhalte wie Karten oder Videos in eine Webseite einbettet, indem ich das <code>&lt;iframe&gt;</code>-Element verwende, und kann dessen Größe und Quelle anpassen, um relevante Informationen oder interaktive Elemente zu integrieren.</li>
+</ul>
+<h1 id="komplexeres-css">Komplexeres CSS<a class="headerlink" href="#komplexeres-css" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe, wie man Flexbox in CSS verwendet, um flexible und responsive Layouts zu erstellen, und kann damit Elemente in einem Container effizient ausrichten und verteilen.</li>
+<li>Ich kenne die Anwendung von Media Queries in CSS, um responsive Designs zu erstellen, die sich an verschiedene Bildschirmgrößen und Geräte anpassen, und kann damit die Darstellung von Inhalten auf unterschiedlichen Geräten optimieren.</li>
+<li>Ich weiß, wie man das Bootstrap-Framework nutzt, um vorgefertigte Komponenten und Layouts einzusetzen, und kann damit die Entwicklungsgeschwindigkeit erhöhen und die Konsistenz in der Benutzeroberfläche bewahren.</li>
+</ul>
+<h1 id="interaktive-websites">Interaktive Websites<a class="headerlink" href="#interaktive-websites" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Rolle von JavaScript in der Webentwicklung, insbesondere wie es zur Erstellung interaktiver und dynamischer Webseiten beiträgt, und kann JavaScript in meine Webprojekte einbinden.</li>
+<li>Ich weiß, wie man JavaScript nutzt, um Daten im Local Storage zu speichern und abzurufen, was für die Funktionalität von Webanwendungen wie dem Speichern von Benutzereingaben wichtig ist.</li>
+<li>Ich kenne die Unterschiede zwischen Client-Side und Server-Side Rendering sowie die Konzepte von Single Page Applications (SPA) und Progressive Web Apps (PWA), und kann diese Kenntnisse nutzen, um moderne, effiziente und benutzerfreundliche Webanwendungen zu erstellen.</li>
+</ul>
+<h1 id="javascript">Javascript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich kann einfache JavaScript-Programme erstellen, um grundlegende Aktionen wie das Ausgeben von Nachrichten in der Konsole durchzuführen.</li>
+<li>Ich verstehe, wie man in JavaScript Basisoperationen wie die Addition von Zahlen durchführt und das Ergebnis in der Konsole ausgibt.</li>
+<li>Ich bin fähig, interaktive JavaScript-Programme zu schreiben, die Benutzereingaben abfragen und darauf basierend personalisierte Botschaften ausgeben.</li>
+<li>Ich kann JavaScript nutzen, um das Aussehen von HTML-Elementen dynamisch zu ändern, wie zum Beispiel die Farbe eines <code>&lt;div&gt;</code>-Elements.</li>
+</ul>
+<h1 id="eventhandling">Eventhandling<a class="headerlink" href="#eventhandling" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich kann einen Toggle-Schalter mit JavaScript erstellen, der die Farbe eines Div-Elements bei jedem Klick zwischen Rot und Grün wechselt.</li>
+<li>Ich bin in der Lage, ein Formular zu entwickeln, das Benutzern ermöglicht, dynamisch Elemente zu einer Liste hinzuzufügen, indem ich JavaScript zur DOM-Manipulation einsetze.</li>
+<li>Ich kann eine Anwendung mit JavaScript implementieren, die auf Tastendrücke reagiert und entsprechende Aktionen ausführt.</li>
+<li>Ich verstehe, wie man eine Bildergalerie erstellt, bei der das Überfahren eines Bildes mit der Maus spezifische Informationen zum Bild anzeigt, indem ich Hover-Events in JavaScript verwende.</li>
+<li>Ich kann eine Drag-and-Drop-Funktionalität implementieren, die es ermöglicht, Elemente auf der Webseite zu verschieben, indem ich <code>drag</code>- und <code>drop</code>-Events in JavaScript nutze.</li>
+</ul>
+<h1 id="fetch-api">Fetch API<a class="headerlink" href="#fetch-api" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich kann die Fetch API in JavaScript verwenden, um eine GET-Anfrage an die JSON-Placeholder API zu senden und die Header der Antwort in der Konsole anzuzeigen.</li>
+<li>Ich kann aktuelle Wetterdaten von der Open-Meteo API mit der Fetch API abrufen und die Ergebnisse in der Konsole anzeigen.</li>
+<li>Ich bin fähig, eine interaktive Benutzeroberfläche zu entwickeln, die es Benutzern ermöglicht, einen Standort einzugeben und das Wetter für diesen Ort anzuzeigen.</li>
+<li>Ich kann eine Anwendung erstellen, die eine 7-Tage-Wettervorhersage für einen eingegebenen Standort liefert, indem ich die Open-Meteo API verwende, um die notwendigen Daten abzurufen und die Vorhersage auf der Webseite anzuzeigen.</li>
+</ul>
+<h1 id="js-frameworks-libraries">JS Frameworks &amp; Libraries<a class="headerlink" href="#js-frameworks-libraries" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Integration von JavaScript-Bibliotheken und Frameworks in HTML-Dokumente durch das Hinzufügen von <code>&lt;script&gt;</code>-Tags, die auf die Bibliotheksdateien verweisen.</li>
+<li>Ich kenne die Anwendung von Moment.js zur Datums- und Zeitmanipulation und -formatierung.</li>
+<li>Ich weiß, was statische Webseiten sind, ihre Eigenschaften und Einsatzbereiche, und kann die Vorteile wie Einfachheit, Geschwindigkeit und geringere Backend-Verarbeitung nachvollziehen.</li>
+</ul>
+<h1 id="moderne-web-applikationen">Moderne Web Applikationen<a class="headerlink" href="#moderne-web-applikationen" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Anwendung moderner Web-APIs wie der Geolocation API, Canvas API, Web Storage API, WebRTC und Service Workers, um fortgeschrittene Funktionen in Webanwendungen zu implementieren.</li>
+<li>Ich kann die Geolocation API nutzen, um den aktuellen Standort des Benutzers zu ermitteln und standortbezogene Daten wie Wetterinformationen anzuzeigen.</li>
+<li>Ich kenne die Möglichkeiten der Canvas API, um 2D- und 3D-Grafiken zu zeichnen, was die Erstellung von Spielen, Grafikeditoren oder interaktiven Bildungsanwendungen ermöglicht.</li>
+</ul>
+<h1 id="serverside-javascript-npm">Serverside Javascript (NPM)<a class="headerlink" href="#serverside-javascript-npm" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Nutzung von JavaScript außerhalb des Browsers, insbesondere durch Node.js, das die V8 JavaScript Engine von Google Chrome nutzt, um serverseitige Anwendungen zu entwickeln.</li>
+<li>Ich erkenne die Fähigkeiten von Node.js und Express, eine Kombination, die das Erstellen von serverseitigen Anwendungen, ähnlich wie Flask in Python, ermöglicht und HTTP-Anfragen bearbeiten kann.</li>
+<li>Ich weiß, dass Node Package Manager (NPM) ein zentrales Repository für Node.js-Pakete ist, das Entwicklern ermöglicht, Bibliotheken und Tools einfach hinzuzufügen, zu aktualisieren und zu verwalten, um die Entwicklungseffizienz zu steigern.</li>
+</ul>
+<h1 id="rendering">Rendering<a class="headerlink" href="#rendering" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe den Unterschied zwischen Client-Side und Server-Side Rendering.</li>
+<li>Ich erkenne die Bedeutung von Client-Side Rendering in Single Page Applications (SPAs), die häufig in modernen Webanwendungen mit Frameworks wie React oder Angular verwendet werden. </li>
+<li>Ich verstehe, dass Server-Side Rendering traditionellere Webanwendungen und Websites unterstützt, bei denen die vollständige Seite inklusive aller Inhalte auf dem Server generiert und als fertiges HTML an den Browser gesendet wird.</li>
+</ul>
+<h1 id="planung-von-web-apps">Planung von Web Apps<a class="headerlink" href="#planung-von-web-apps" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich erkenne, dass effektives Projektmanagement in der Softwareentwicklung, besonders bei Web- und Cloud-Applikationen, entscheidend ist.</li>
+<li>Ich verstehe, dass der Schlüssel zu einem erfolgreichen Projekt darin liegt, sowohl die Planungsphase, die UML- und Architekturdiagramme umfasst, als auch die Aufgabenverteilung und Implementierung sorgfältig zu durchdenken und umzusetzen.</li>
+<li>Ich erkenne die Bedeutung der Zusammenarbeit in Teams, um durch gemeinsame Anstrengungen und Ressourcenaufteilung effizientere und effektivere Ergebnisse zu erzielen.</li>
+</ul>
+<h1 id="projekte-mit-struktur">Projekte mit Struktur<a class="headerlink" href="#projekte-mit-struktur" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich erkenne den Wert von Scrum als agiles Framework, das Flexibilität, Teamzusammenarbeit und iterative Entwicklung betont.</li>
+<li>Ich verstehe, dass agile Methoden wie Kanban den Schwerpunkt auf Anpassungsfähigkeit und Kundeneinbindung legen, ohne einen festen Projektplan zu folgen.</li>
+<li>Ich erkenne die Bedeutung der verschiedenen Rollen in einem Projektteam, darunter Projektmanager, UI/UX-Designer, Entwickler, Tester und DevOps.</li>
+</ul>
+<h1 id="uml">UML<a class="headerlink" href="#uml" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe die Bedeutung und Anwendung von UML-Klassendiagrammen zur Darstellung der Struktur und Beziehungen innerhalb objektorientierter Systeme.</li>
+<li>Ich erkenne die Vielfalt der UML-Diagrammtypen und ihre Anwendungsbereiche, um verschiedene Aspekte eines Softwareprojekts zu visualisieren und zu dokumentieren.</li>
+<li>Ich begreife die Rolle von UML in der Softwareentwicklung als Werkzeug zur Verbesserung der Kommunikation und Planung innerhalb des Projektteams.</li>
+</ul>
+<h1 id="test-domain-driven">Test &amp; Domain Driven<a class="headerlink" href="#test-domain-driven" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ich verstehe das Konzept von Test Driven Development (TDD) und seine Bedeutung in der Softwareentwicklung.</li>
+<li>Ich erkenne die Bedeutung des TDD-Zyklus "Red-Green-Refactor" und wie dieser Ansatz zur Entwicklung qualitativ hochwertiger Software beiträgt.</li>
+<li>Ich kann die Vorteile von TDD einschätzen, darunter die Verbesserung der Codequalität und die Reduzierung von Fehlern.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

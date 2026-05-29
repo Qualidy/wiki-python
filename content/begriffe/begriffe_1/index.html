@@ -1,0 +1,2869 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Begriffssammlung Python Grundlagen - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#begriffssammlung-python-grundlagen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Begriffssammlung Python Grundlagen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="begriffssammlung-python-grundlagen">Begriffssammlung Python Grundlagen<a class="headerlink" href="#begriffssammlung-python-grundlagen" title="Permanent link">&para;</a></h1>
+<h1 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>Programmiersprache unserer Wahl</td>
+<td><a href="https://www.python.org">Referenz</a></td>
+</tr>
+<tr>
+<td>PyCharm</td>
+<td>Umfassende Python IDE von Jetbrains</td>
+<td><a href="https://www.jetbrains.com/pycharm/">Referenz</a></td>
+</tr>
+<tr>
+<td>VSCode</td>
+<td>Universal-IDE mit mächtigen Python-Plugins</td>
+<td><a href="https://code.visualstudio.com/">Referenz</a></td>
+</tr>
+<tr>
+<td>Jupyter</td>
+<td>Entwicklungsumgebung für interaktives Programmiereun</td>
+<td><a href="https://jupyter.org/">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="variablen-datentypen">Variablen Datentypen<a class="headerlink" href="#variablen-datentypen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable</td>
+<td>Name, mit dem man Werte wiederholt nutzen kann</td>
+<td><a href="https://docs.python.org/3/faq/programming.html">Referenz</a></td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>Datentyp für Ganzzahlen</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex">Referenz</a></td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Datentyp für Fließkommazahlne</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex">Referenz</a></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Datentyp für Wahrheitswerte (<code>True</code>/<code>False</code>)</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#boolean-type-bool">Referenz</a></td>
+</tr>
+<tr>
+<td>String</td>
+<td>Datentyp für Zeichenketten</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">Referenz</a></td>
+</tr>
+<tr>
+<td>List</td>
+<td>Veränderliche Kollektion verschiedener Elemente</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range">Referenz</a></td>
+</tr>
+<tr>
+<td>Tupel</td>
+<td>Unveränderliche Kollektion verschiedener Elementen</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range">Referenz</a></td>
+</tr>
+<tr>
+<td>Set</td>
+<td>Menge einzigartiger Elemente</td>
+<td><a href="https://docs.python.org/3.12/tutorial/datastructures.html?highlight=set#sets">Referenz</a></td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>Schlüssel-Wert-Paare</td>
+<td><a href="https://docs.python.org/3.12/tutorial/datastructures.html?highlight=dictionary#dictionaries">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="input-output">Input Output<a class="headerlink" href="#input-output" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>print</code></td>
+<td>Funktion um Variablen als Text auf der Konsole auszugeben</td>
+<td><a href="https://docs.python.org/3/library/functions.html?highlight=print#print">Referenz</a></td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Funktion, um Nutzereingaben von der Konsole zu lesen</td>
+<td><a href="https://docs.python.org/3/library/functions.html?highlight=input#input">Referenz</a></td>
+</tr>
+<tr>
+<td>f-String</td>
+<td>Möglichkeit, Strings zu formatieren</td>
+<td><a href="https://docs.python.org/3/tutorial/inputoutput.html?highlight=f%20strings#tut-f-strings">Referenz</a></td>
+</tr>
+<tr>
+<td><code>int()</code></td>
+<td>Funktion, um Strings, die nur Zahlen enthalten in Integer umzuwandlen</td>
+<td><a href="https://docs.python.org/3/library/functions.html?highlight=int#int">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="mathematische-operationen">Mathematische Operationen<a class="headerlink" href="#mathematische-operationen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Addition von zwei Variablen</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtraktion von zwei Variablen</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplikation von zwei Variablen</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Divison von zwei Variablen</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td>Ganzzahldivision von zwei Variablen</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Module von zwei Variablen</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Potenzieren</td>
+<td><a href="https://docs.python.org/3/library/operator.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>math.sqrt</code></td>
+<td>Ziehen der Quadratwurzel</td>
+<td><a href="https://docs.python.org/3/library/math.html?highlight=math%20sqrt#math.sqrt">Referenz</a></td>
+</tr>
+<tr>
+<td><code>math.exp</code></td>
+<td>Exponentailfunktion</td>
+<td><a href="https://docs.python.org/3/library/math.html?highlight=math%20sqrt#math.exp">Referenz</a></td>
+</tr>
+<tr>
+<td><code>math.log</code></td>
+<td>Logartihmus zur angegeben Basis</td>
+<td><a href="https://docs.python.org/3/library/math.html?highlight=math%20sqrt#math.log">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="verzweigungen">Verzweigungen<a class="headerlink" href="#verzweigungen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if</code>, <code>else</code></td>
+<td>Verzweigungen aufgrund von Bedingungen</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=else#if-statements">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Breakpoint</td>
+<td>Zeile im Code, bis zu der dieser vom Debugger ausgeführt wird. Diese Zeile wartet noch auf die Ausführung.</td>
+</tr>
+<tr>
+<td>Continue</td>
+<td>Führt den Code weiter aus bis zum nächsten Breakpoint oder zum Programmende.</td>
+</tr>
+<tr>
+<td>Step Over</td>
+<td>Führe die aktuelle Codezeile aus und gehe zur nächsten Codezeile, die ausgeführt werden soll.</td>
+</tr>
+<tr>
+<td>Step Into</td>
+<td>Wenn in der akutellen Zeile eine Funktion ausgeführt werden soll, wird in diese hineingesprungen, sodass die Ausführung der Funktion schritt für Schritt nachvollzogen werden kann.</td>
+</tr>
+<tr>
+<td>Step Out</td>
+<td>Wenn derzeit eine Funktion ausgeführt wird, wird die Ausführung so lange automatisch weitergeführt, bis die Funktionsausführung beendet ist und dann wieder unterbrochen.</td>
+</tr>
+<tr>
+<td>Restart</td>
+<td>Beendet die Ausführung der Applikation und startet den Debugmodus erneut.</td>
+</tr>
+<tr>
+<td>Stop</td>
+<td>Beendet die Ausführung der Applikation.</td>
+</tr>
+<tr>
+<td>Debug Console</td>
+<td>Erlaubt die Ausführung von Befehlen, während das Programm im Debugmodus pausiert. Funktionen können hier ausgeführt und Variablen gelesen und manipuliert werden.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="listen">Listen<a class="headerlink" href="#listen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th></th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list</code></td>
+<td>Datentyp in Python zur Sammlung mehrerer Daten. Listen sind mutable (veränderbar).</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">Referenz</a></td>
+</tr>
+<tr>
+<td>Mutability</td>
+<td>Einträge des Objekts können im Nachhinein verändert werden.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-mutable">Referenz</a></td>
+</tr>
+<tr>
+<td>Immutablity</td>
+<td>Einträge des Objekts können nicht mehr verändert werden.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-immutable">Referenz</a></td>
+</tr>
+<tr>
+<td>Slicing</td>
+<td>Wähle mit der Notation <code>sequence[i:j:s]</code> einen Teil einer Liste/Tupel/String aus. Nämlich den Teil vom Index <code>i</code> (inklusive) bis <code>j</code> (exklusive) in Schrittgrößen <code>s</code></td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html?highlight=slicing#sequences">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.append(x)</code></td>
+<td>Fügt ein Element am Ende der Liste hinzu</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.extend([x, y, ...])</code></td>
+<td>Erweitert die Liste um die Elemente in der angegebenen Liste</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.insert(i, x)</code></td>
+<td>Fügt an Position <code>i</code> das Element <code>x</code> ein</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.remove(x)</code></td>
+<td>Entfernt das erste Vorkommen von <code>x</code> aus der Liste</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.pop(i)</code></td>
+<td>Entfernt und gibt das Element an der Position <code>i</code> zurück</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.clear()</code></td>
+<td>Entfernt alle Elemente aus der Liste</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.index(x)</code></td>
+<td>Gibt den Index des ersten Vorkommens von <code>x</code> zurück</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.count(x)</code></td>
+<td>Zählt, wie oft <code>x</code> in der Liste vorkommt</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.sort()</code></td>
+<td>Sortiert die Elemente der Liste</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>mylist.reverse()</code></td>
+<td>Kehrt die Reihenfolge der Elemente in der Liste um</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>Schlüsselwort, um zu überprüfen, ob ein Element in einer Liste ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>list1 + list2</code></td>
+<td>Konkatination zweier Listen zu einem großen Liste</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>list1 * zahl</code></td>
+<td>Vervielfältigung eines Liste</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="tupel">Tupel<a class="headerlink" href="#tupel" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tupel</td>
+<td>Unveränderlicher Datentypen zur Sammlung von Daten</td>
+<td><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">Referenz</a></td>
+</tr>
+<tr>
+<td><code>tuple</code></td>
+<td>Konstruktor der Klasse <code>tuple</code>, mit dem eine Liste uws. in ein Tupel übersetzt werden kann.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#tuple">Referenz</a></td>
+</tr>
+<tr>
+<td><code>len(tupel)</code></td>
+<td>Gibt die Anzahl der Elemente im Tupel zurück.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#len">Referenz</a></td>
+</tr>
+<tr>
+<td><code>max(tupel)</code></td>
+<td>Gibt das größte Element im Tupel zurück.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#max">Referenz</a></td>
+</tr>
+<tr>
+<td><code>min(tupel)</code></td>
+<td>Gibt das kleinste Element im Tupel zurück.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#min">Referenz</a></td>
+</tr>
+<tr>
+<td><code>sum(tupel)</code></td>
+<td>Berechnet die Summe der Elemente im Tupel.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#sum">Referenz</a></td>
+</tr>
+<tr>
+<td><code>tupel.index()</code></td>
+<td>Sucht nach einem Element und gibt dessen Index zurück.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>tupel.count()</code></td>
+<td>Zählt, wie oft ein Element im Tupel vorkommt.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>tuple1 + tuple2</code></td>
+<td>Konkatination zweier Tupel zu einem großen Tupel</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>tuple1 * zahl</code></td>
+<td>Vervielfältigung eines Tupels</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>Schlüsselwort, um zu überprüfen, ob ein Element in einem Tupel ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Kurzbeschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>Primitiver Datentyp zum Speichern von Zeichenketten in Python.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#textseq">Referenz</a></td>
+</tr>
+<tr>
+<td>Escape Zeichen</td>
+<td>Zeichen, wie <code>\n</code> für Absätze oder <code>\t</code> für Tabs.</td>
+<td><a href="https://de.wikipedia.org/wiki/Escape_(Steuerzeichen)">Referenz</a></td>
+</tr>
+<tr>
+<td>Unicode</td>
+<td>Der Unicode-Standard legt frest, wie Schrift elektronisch gespeichert wird.</td>
+<td><a href="https://de.wikipedia.org/wiki/Unicode">Referenz</a></td>
+</tr>
+<tr>
+<td><code>len(string)</code></td>
+<td>Gibt die Länge des Strings zurück.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#len">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.upper()</code></td>
+<td>Konvertiert den String in Großbuchstaben.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.lower()</code></td>
+<td>Konvertiert den String in Kleinbuchstaben.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.lower">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.strip()</code></td>
+<td>Entfernt Leerzeichen am Anfang und Ende des Strings.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.strip">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.replace(old, new)</code></td>
+<td>Ersetzt Teilzeichenketten im String.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.replace">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.split(delimiter)</code></td>
+<td>Teilt den String in Teile anhand eines Trennzeichen.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.split">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.find(substring)</code></td>
+<td>Sucht nach einer Teilzeichenkette und gibt den Index des ersten Vorkommens zurück. Wenn nicht gefunden, wird -1 zurückgegeben.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.find">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.startswith(prefix)</code></td>
+<td>Überprüft, ob der String mit einem bestimmten Präfix beginnt.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.startswith">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.endswith(suffix)</code></td>
+<td>Überprüft, ob der String mit einem bestimmten Suffix endet.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">Referenz</a></td>
+</tr>
+<tr>
+<td><code>string.count(substring)</code></td>
+<td>Zählt die Anzahl der Vorkommnisse einer Teilzeichenkette im String.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#str.count">Referenz</a></td>
+</tr>
+<tr>
+<td><code>str1 + str2</code></td>
+<td>Konkatination zweier Strings zu einem großen String</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>str1 * zahl</code></td>
+<td>Vervielfältigung eines String</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>Schlüsselwort, um zu überprüfen, ob ein String in einem anderen enthalten ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Referenz</a></td>
+</tr>
+<tr>
+<td>f-String</td>
+<td>Strings, die sich besonders leicht formatieren lassen.</td>
+<td><a href="https://peps.python.org/pep-0498/">PEP 498</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="schleifen">Schleifen<a class="headerlink" href="#schleifen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzbeschreibung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for ... in ...:</code></td>
+<td>Schlüsselwort, um Schleife zu definieren, die eine Sequenz durchläuft.</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#for-statements">Referenz</a></td>
+</tr>
+<tr>
+<td><code>range</code></td>
+<td>Erstellt eine Rangeobjekt, dass ein Integerintervall umfasst.</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#the-range-function">Referenz</a></td>
+</tr>
+<tr>
+<td><code>break</code></td>
+<td>Bricht die komplette Durchführung einer Schleife ab.</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#break-and-continue-statements-and-else-clauses-on-loops">Referenz</a></td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>Bricht den aktuellen Schleifendurchlauf ab und geht an den an den Schleifenkopf</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#break-and-continue-statements-and-else-clauses-on-loops">Referenz</a></td>
+</tr>
+<tr>
+<td><code>else</code></td>
+<td>Kann nach Schleifen verwendet werden um Code nach der Schleifenausführung durchzuführen, wenn kein <code>break</code> ausgeführt wurde.</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#break-and-continue-statements-and-else-clauses-on-loops">Referenz</a></td>
+</tr>
+<tr>
+<td><code>while ...:</code></td>
+<td>Schlüsselwort, um Schleifen zu definieren, die von einer Bedingung abhäng.</td>
+<td><a href="https://docs.python.org/3/reference/compound_stmts.html?highlight=while#the-while-statement">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="sets">Sets<a class="headerlink" href="#sets" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th></th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set</code></td>
+<td>Ungeordnete Sammlung von Hashables, bei denen jedes Element höchstens ein mal auftaucht.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>frozenset</code></td>
+<td>Ungeordnete Sammlung von Hashables, bei denen jedes Element höchstens ein mal auftaucht, die immutable ist (wie Tupel)</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>a in set1</code></td>
+<td>Prüfe, ob ein Element in einem Set ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.add(x)</code></td>
+<td>Fügt das Element <code>x</code> zum Set hinzu.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.remove(x)</code></td>
+<td>Entfernt das Element <code>x</code> aus dem Set. Wirft einen Fehler, falls <code>x</code> nicht vorhanden ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.discard(x)</code></td>
+<td>Entfernt das Element <code>x</code> aus dem Set. Kein Fehler, wenn <code>x</code> nicht vorhanden ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.pop()</code></td>
+<td>Entfernt und gibt ein zufälliges Element aus dem Set zurück.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.clear()</code></td>
+<td>Entfernt alle Elemente aus dem Set.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.union(set2)</code> oder <code>set1 ǀ set2</code></td>
+<td>Gibt ein Set zurück, dass die Summe der Elemente von <code>set1</code> und <code>set2</code> enthält</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.intersection(set2)</code> oder <code>set1 &amp; set2</code></td>
+<td>Gibt ein neues Set zurück, das die Schnittmenge von <code>set1</code> und <code>set2</code> ist.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.difference(set2)</code> oder <code>set1 - set2</code></td>
+<td>Gibt ein neues Set zurück, das die Elemente von <code>set1</code> enthält, die nicht in <code>set2</code> sind.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+<tr>
+<td><code>set1.symmetric_difference(set2)</code> oder <code>set1 ^ set2</code></td>
+<td>Gibt ein neues Set zurück, das Elemente enthält, die in <code>set1</code> oder <code>set2</code>, aber nicht in beiden sind.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#set">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklörung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dictionary</code></td>
+<td>Ein Datencontainer mit dem man Werte und schlüssel miteinander assoziieren kann.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td>Schlüssel</td>
+<td>Value über den im Dictionary ein Wert referenziert wird.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td>Wert</td>
+<td>Für ein Schlüssel gespeicherter Value</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td>Schlüssel-Wert-Paare</td>
+<td>Paar auch Schlüssel und Wert (Key-Value-Pair)</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>my_dict[key]</code></td>
+<td>Greif auf den Wert mit dem Key <code>key</code> zu. Existiert dieser nicht wird er beim Schreiben erstellt. Beim Lesen gibt es einen Fehler</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>get(key)</code></td>
+<td>Gibt den Wert für den angegebenen Schlüssel zurück. Gibt <code>None</code> zurück, wenn der Schlüssel nicht existiert.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>keys()</code></td>
+<td>Gibt ein neues Ansichtsobjekt zurück, das alle Schlüssel des Dictionaries enthält.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>values()</code></td>
+<td>Gibt ein neues Ansichtsobjekt zurück, das alle Werte des Dictionaries enthält.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>items()</code></td>
+<td>Gibt ein neues Ansichtsobjekt zurück, das alle Schlüssel-Wert-Paare des Dictionaries als Tupel enthält.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>update(dict2)</code></td>
+<td>Aktualisiert das Dictionary mit Schlüssel-Wert-Paaren aus einem anderen Dictionary oder iterierbaren Schlüssel-Wert-Paaren.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>pop(key)</code></td>
+<td>Entfernt den Eintrag mit dem angegebenen Schlüssel und gibt dessen Wert zurück.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>popitem()</code></td>
+<td>Entfernt und gibt ein zufälliges Schlüssel-Wert-Paar als Tupel zurück.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>Entfernt alle Elemente aus dem Dictionary.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+<tr>
+<td><code>copy()</code></td>
+<td>Erstellt eine flache Kopie des Dictionaries.</td>
+<td><a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="funktionen">Funktionen<a class="headerlink" href="#funktionen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklörung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funktion</td>
+<td>Ein gekapselter Codeteil, der von anderer Stelle aus aufgerufen werden kann.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-function">Referenz</a></td>
+</tr>
+<tr>
+<td><code>def</code></td>
+<td>Kennzeichnet die Definition einer Funktion oder Methode in Pythoncode.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-function">Referenz</a></td>
+</tr>
+<tr>
+<td>Parameter</td>
+<td>Platzhalter Werte welche an Funktionne übergeben werden.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-parameter">Referenz</a></td>
+</tr>
+<tr>
+<td>Argument</td>
+<td>Name für die Werte, die für die Parameter eingesetzt werden.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-argument">Referenz</a></td>
+</tr>
+<tr>
+<td><code>return</code></td>
+<td>Optionales Keyword, das einzeigt, dass der nachfolgende Code in der Zeile die Rückgabe der Funktion ist.</td>
+<td><a href="https://docs.python.org/3/reference/simple_stmts.html#return">Referenz</a></td>
+</tr>
+<tr>
+<td>Callstack</td>
+<td>Der Liste von Funktionenaufrufen, die aufeinander basieren.</td>
+<td></td>
+</tr>
+<tr>
+<td>Funktionen als First Class Citizens</td>
+<td>Funktionen werden als Objekte behandelt und können dementsprechend als Argumente an Funktionen übergeben werden.</td>
+<td><a href="https://de.wikipedia.org/wiki/First-Class-Funktion">Referenz</a></td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Gibt die Id eines Objektes zurück.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#id">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="booleans">Booleans<a class="headerlink" href="#booleans" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklörung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Funktion, die primär für Booleans angewandt wird und dem logichsen "und" entspricht.</td>
+<td><a href="https://docs.python.org/3/reference/expressions.html#boolean-operations">Referenz</a></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Funktion, die primär für Booleans angewandt wird und dem logichsen "oder" entspricht.</td>
+<td><a href="https://docs.python.org/3/reference/expressions.html#boolean-operations">Referenz</a></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Funktion, die primär für Booleans angewandt wird und dem logichsen "nicht" entspricht.</td>
+<td><a href="https://docs.python.org/3/reference/expressions.html#boolean-operations">Referenz</a></td>
+</tr>
+<tr>
+<td>Ternärer Operator</td>
+<td>Kurzschreibweise um, eine Variable unter einer Bedingung verschieden zuzuordnen.</td>
+<td><a href="https://docs.python.org/3/reference/expressions.html#conditional-expressions">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="type-hints">Type Hints<a class="headerlink" href="#type-hints" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type Hint</td>
+<td>Optionaler Typhinweis einer Variable oder Funktionrückgabe.</td>
+<td><a href="https://peps.python.org/pep-0484/">PEP 484</a></td>
+</tr>
+<tr>
+<td><code>typing</code></td>
+<td>Modul, um Typehinweise durchzuführen.</td>
+<td><a href="https://docs.python.org/3/library/typing.html#module-typing">Python Dokumentation</a></td>
+</tr>
+<tr>
+<td><code>Sequence</code></td>
+<td>Zusammenfassender Typ aus dem Typingmodul.</td>
+<td><a href="https://docs.python.org/3/library/typing.html#typing.Sequence">Python Dokumentation</a></td>
+</tr>
+<tr>
+<td><code>Optional</code></td>
+<td>Zeigt an, dass der Typ auch None sein kann.</td>
+<td><a href="https://docs.python.org/3/library/typing.html#typing.Optional">Python Dokumentation</a></td>
+</tr>
+<tr>
+<td><code>Union</code> oder <code>ǀ</code></td>
+<td>Vereinigt mehrere mögliche Typen.</td>
+<td><a href="https://docs.python.org/3/library/typing.html#typing.Union">Python Dokumentation</a></td>
+</tr>
+<tr>
+<td><code>Any</code></td>
+<td>Typ, der beliebigen Typ beschreibt.</td>
+<td><a href="https://docs.python.org/3/library/typing.html#typing.Any">Python Dokumentation</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="bytecode">Bytecode<a class="headerlink" href="#bytecode" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bytecode</td>
+<td>Eine übersetzte Repräsentation eines Programmes, welches für einen Pythoninterpreter verständlich ist.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-bytecode">Referenz</a></td>
+</tr>
+<tr>
+<td>Maschinencode</td>
+<td>Code welcher für Prozessoren verständlich, aber für Menschen unverständlich ist.</td>
+<td><a href="https://en.wikipedia.org/wiki/Machine_code">Referenz</a></td>
+</tr>
+<tr>
+<td><code>dis</code> Module</td>
+<td>Programmmodule welche das rück-übersetzen von Bytecode zu für Menschen lesbaren Text ermöglicht.</td>
+<td><a href="https://docs.python.org/3/library/dis.html#">Referenz</a></td>
+</tr>
+<tr>
+<td>Kompilieren</td>
+<td>Übersetzen in Programmcode in eine für den Computer verständliche Repräsentation.</td>
+<td><a href="https://de.wikipedia.org/wiki/Compiler">Referenz</a></td>
+</tr>
+<tr>
+<td>Interpretieren</td>
+<td>Übersetzt wie der Compiler Programmcode in eine für den Computer verständliche Repräsentation, jedoch wird nicht alles im vorhinein übersetzt.</td>
+<td><a href="https://de.wikipedia.org/wiki/Interpreter">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-comprehension">List Comprehension<a class="headerlink" href="#list-comprehension" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List Comprehension</td>
+<td>Sammelbegriff für die Anwendung von Funktionen auf Listen, Sets, uws., welche in anderen Programmiersprachen mit Schleifen gelöst werden müssen.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-list-comprehension">Referenz</a></td>
+</tr>
+<tr>
+<td><code>generator</code></td>
+<td>Funktion, die über <code>next</code> neue Elemente liefert.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-generator">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="zip">zip<a class="headerlink" href="#zip" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>zip</code></td>
+<td>Methode zur Elementweisen Bildung von Paaren zweier Iterables.</td>
+<td><a href="https://docs.python.org/3/library/functions.html?highlight=zip#zip">Referenz</a></td>
+</tr>
+<tr>
+<td><code>enumarate</code></td>
+<td>Methode die Index un Element in eines Iterables zurückgibt.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#enumerate">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="try-except">Try Except<a class="headerlink" href="#try-except" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BaseException</code></td>
+<td>Basisklasse, um Ausnahmen im Programmcode darzustellen.</td>
+<td><a href="https://docs.python.org/3/library/exceptions.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>try</code></td>
+<td>Einleitung des Blocks in dem eine Exception geworfen werden kann.</td>
+<td><a href="https://docs.python.org/3/reference/compound_stmts.html#the-try-statement">Referenz</a></td>
+</tr>
+<tr>
+<td><code>except</code></td>
+<td>Behandlung einer Ausnahme.</td>
+<td><a href="https://docs.python.org/3/reference/compound_stmts.html#the-try-statement">Referenz</a></td>
+</tr>
+<tr>
+<td><code>finally</code></td>
+<td>Abschluss, der immer ausgeführt wird.</td>
+<td><a href="https://docs.python.org/3/reference/compound_stmts.html#the-try-statement">Referenz</a></td>
+</tr>
+<tr>
+<td><code>raise</code></td>
+<td>Werfen einer Exception</td>
+<td><a href="https://docs.python.org/3/reference/compound_stmts.html#the-raise-statement">Referenz</a></td>
+</tr>
+<tr>
+<td><code>else</code></td>
+<td>optionaler Block, falls keine Exception auftrat</td>
+<td><a href="https://docs.python.org/3/reference/compound_stmts.html#the-try-statement">Referenz</a></td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Schlüsselwort, um Klasse und Exceptions zu definieren</td>
+<td><a href="https://docs.python.org/3/reference/classes.html">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="docstring">Docstring<a class="headerlink" href="#docstring" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docstring</td>
+<td>Mehrzeiliger String z.B. unter einem Funktionskopf, der die Nutzung der Funktion dokumentiert.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-docstring">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="klassen-definieren-und-instanziieren">Klassen definieren und instanziieren<a class="headerlink" href="#klassen-definieren-und-instanziieren" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klasse</td>
+<td>Eine Blaupause für Instanzen, also vom Nutzer definierte Objekte.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-class">Referenz</a></td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Schlüsselwort, mit dem eine Klasse in Python definiert wird.</td>
+<td><a href="https://docs.python.org/3/tutorial/classes.html#class-definition-syntax">Referenz</a></td>
+</tr>
+<tr>
+<td>instanziieren</td>
+<td>Fachbegriff, der ausdrückt, dass ein Objekt einer bestimmten Klasse erzeugt wird.</td>
+<td><a href="https://docs.python.org/3/tutorial/classes.html#class-objects">Referenz</a></td>
+</tr>
+<tr>
+<td><code>is</code> und <code>is not</code></td>
+<td>Funktion, um herauszufinden, ob in zwei Variablen die <em>selbe</em> Instanz gespeichert ist.</td>
+<td><a href="https://docs.python.org/3/reference/expressions.html#is">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="attribute">Attribute<a class="headerlink" href="#attribute" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attribut</td>
+<td>Eigenschaft einer Instanz.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#id3">Referenz</a></td>
+</tr>
+<tr>
+<td>Klassenattribut</td>
+<td>Eigenschaft einer Klasse, die von jeder Instanz aus aufgerufen werden kann.</td>
+<td><a href="https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables">Referenz</a></td>
+</tr>
+<tr>
+<td><code>x.__dict__</code></td>
+<td>Auflistung der Attribute einer Instanz.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#id3">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="methoden">Methoden<a class="headerlink" href="#methoden" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Methode</td>
+<td>Funktion in einer Klasse</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-method">Referenz</a></td>
+</tr>
+<tr>
+<td><code>self</code></td>
+<td>Erste Parameter in einer Methode, der die Instanz referenziert.</td>
+<td><a href="https://docs.python.org/3/glossary.html#term-method">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__init__</code></td>
+<td>Methode, die eine neu erstelle Instanz inizialisiert.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__init__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__new__</code></td>
+<td>Funktion, die eine neu erstelle Instanz inizialisiert.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__new__">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="unittests">Unittests<a class="headerlink" href="#unittests" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unittest</code></td>
+<td>Ein integriertes Testframework-Modul in Python</td>
+<td><a href="https://docs.python.org/3/library/unittest.html">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<p><a href="../lehrplan/python_grundlagen/oop/unittests/unittests.md#methoden-der-klasse-testcase">Liste mit Methoden der Klasse Testcase</a></p>
+<h1 id="vererbung">Vererbung<a class="headerlink" href="#vererbung" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vererbung</td>
+<td>Das Konzept, bei dem eine Klasse (Unterklasse) von einer anderen Klasse (Basisklasse) erbt, um deren Attribute und Methoden zu nutzen und/oder zu erweitern.</td>
+<td><a href="https://docs.python.org/3/tutorial/classes.html#inheritance">Referenz</a></td>
+</tr>
+<tr>
+<td>super()</td>
+<td>Ein Funktionsaufruf, der in einer abgeleiteten Klasse verwendet wird, um auf Methoden oder Attribute der Basisklasse zuzugreifen.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#super">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="magic-methods">Magic Methods<a class="headerlink" href="#magic-methods" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__str__</code></td>
+<td>Diese magische Methode wird aufgerufen, wenn die <code>str</code>-Funktion auf ein Objekt angewendet wird. Sie ermöglicht die Definition einer benutzerfreundlichen Zeichenfolge, die das Objekt repräsentiert.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__str__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__add__</code></td>
+<td>Diese magische Methode wird aufgerufen, wenn das <code>+</code>-Zeichen auf ein Objekt angewendet wird. Sie ermöglicht die Definition der Addition von zwei Objekten der Klasse.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__add__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__len__</code></td>
+<td>Diese magische Methode wird aufgerufen, wenn die <code>len</code>-Funktion auf ein Objekt angewendet wird. Sie ermöglicht die Definition der Anzahl von Elementen in einem Objekt.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__len__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__sub__</code></td>
+<td>Diese magische Methode wird aufgerufen, wenn das <code>-</code>-Zeichen auf ein Objekt angewendet wird. Sie ermöglicht die Definition der Subtraktion von zwei Objekten der Klasse.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__sub__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__eq__</code></td>
+<td>Diese magische Methode wird aufgerufen, um die Gleichheit von zwei Objekten zu überprüfen.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__eq__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__ne__</code></td>
+<td>Diese magische Methode wird aufgerufen, um die Ungleichheit von zwei Objekten zu überprüfen.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__ne__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__lt__</code></td>
+<td>Diese magische Methode wird aufgerufen, um festzustellen, ob ein Objekt kleiner als ein anderes ist.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__lt__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__le__</code></td>
+<td>Diese magische Methode wird aufgerufen, um festzustellen, ob ein Objekt kleiner oder gleich einem anderen ist.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__le__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__gt__</code></td>
+<td>Diese magische Methode wird aufgerufen, um festzustellen, ob ein Objekt größer als ein anderes ist.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__gt__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__ge__</code></td>
+<td>Diese magische Methode wird aufgerufen, um festzustellen, ob ein Objekt größer oder gleich einem anderen ist.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__ge__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__getitem__</code></td>
+<td>Diese magische Methode wird aufgerufen, um den Zugriff auf ein Element mittels Index zu ermöglichen.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__getitem__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__setitem__</code></td>
+<td>Diese magische Methode wird aufgerufen, um das Setzen eines Elements mittels Index zu ermöglichen.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__setitem__">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__contains__</code></td>
+<td>Diese magische Methode wird aufgerufen, um zu prüfen, ob ein Objekt ein bestimmtes Element enthält.</td>
+<td><a href="https://docs.python.org/3/reference/datamodel.html#object.__contains__">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="class-staticmethod">Class staticmethod<a class="headerlink" href="#class-staticmethod" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>staticmethod</code></td>
+<td>ist ein Dekorator für die Definition statischer Methoden in Python.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#staticmethod">Referenz</a></td>
+</tr>
+<tr>
+<td><code>classmethod</code></td>
+<td>ist ein Dekorator für die Definition von Klassenmethoden in Python.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#classmethod">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="getter-setter">Getter Setter<a class="headerlink" href="#getter-setter" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Getter und Setter</td>
+<td>Getter und Setter sind Methoden, die den Lese- und Schreibzugriff auf Attribute ermöglichen. Der Getter liest den Wert eines Attributs, während der Setter den Wert setzt.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#property">Referenz</a></td>
+</tr>
+<tr>
+<td><code>@property</code></td>
+<td><code>@property</code> ist ein Dekorator in Python, der es ermöglicht, eine Methode wie ein Attribut zu behandeln. Es wird verwendet, um den Zugriff auf Attribute zu steuern.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#property">Referenz</a></td>
+</tr>
+<tr>
+<td><code>@setter</code></td>
+<td><code>@setter</code> ist ein spezifischer Dekorator, der mit <code>@property</code> verwendet wird, um die Setzung eines Attributs zu steuern. Es wird verwendet, um die Zuweisung eines Werts über den Setter zu ermöglichen.</td>
+<td><a href="https://docs.python.org/3/library/functions.html#property">Referenz</a></td>
+</tr>
+<tr>
+<td>Getter</td>
+<td>Ein Getter ist eine Methode, die den Wert eines privaten Attributs zurückgibt. Es ermöglicht den Lesezugriff auf das Attribut von außerhalb der Klasse. Der Getter wird normalerweise mit <code>@property</code> implementiert.</td>
+<td><a href="https://de.wikipedia.org/wiki/Zugriffsfunktion">Referenz</a></td>
+</tr>
+<tr>
+<td>Setter</td>
+<td>Ein Setter ist eine Methode, die den Wert eines privaten Attributs setzt. Es ermöglicht den Schreibzugriff auf das Attribut von außerhalb der Klasse. Der Setter wird normalerweise mit <code>@setter</code> implementiert.</td>
+<td><a href="https://de.wikipedia.org/wiki/Zugriffsfunktion">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="dateioperationen">Dateioperationen<a class="headerlink" href="#dateioperationen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>open</code></td>
+<td>Eine Funktion  um eine Datei zu öffnen</td>
+<td><a href="https://docs.python.org/3/library/functions.html?highlight=open#open">Referenz</a></td>
+</tr>
+<tr>
+<td>absolute Pfade</td>
+<td>Der vollständige Speicherort einer Datei</td>
+<td><a href="https://www.codingrooms.com/blog/file-paths">Referenz</a></td>
+</tr>
+<tr>
+<td>relative Pfade</td>
+<td>Der Speicherort einer Datei  in relation zum aktuellen Arbeitsordner</td>
+<td><a href="https://www.codingrooms.com/blog/file-paths">Referenz</a></td>
+</tr>
+<tr>
+<td>r-Präfix</td>
+<td>Ein String in welchem Escape-Zeichen deaktiviert sind</td>
+<td><a href="https://docs.python.org/3/reference/lexical_analysis.html">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="args-kwargs">args kwargs<a class="headerlink" href="#args-kwargs" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>args</code></td>
+<td>Erlaubt den Umgang mit einer variablen Anzahl von <strong>nicht</strong>-schlüsselwortbasierten Argumenten in Funktionen.</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions">Referenz</a></td>
+</tr>
+<tr>
+<td><code>kwargs</code></td>
+<td>Ermöglicht den Umgang mit einer variablen Anzahl von schlüsselwortbasierten Argumenten in Funktionen.</td>
+<td><a href="https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="module">Module<a class="headerlink" href="#module" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modul</td>
+<td>Eine .py Datei. Diese kann in anderen Pythondatein eingebunden werden, um die implementierten Funktionen zu nutzen.</td>
+<td><a href="https://docs.python.org/3/tutorial/modules.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>import</code></td>
+<td>Importiert ein Modul oder Teile davon in ein Python-Skript.</td>
+<td><a href="https://docs.python.org/3/reference/simple_stmts.html#import">Referenz</a></td>
+</tr>
+<tr>
+<td><code>from</code></td>
+<td>Importiert spezifische Teile aus einem Modul oder Paket.</td>
+<td><a href="https://docs.python.org/3/reference/simple_stmts.html#from">Referenz</a></td>
+</tr>
+<tr>
+<td><code>as</code></td>
+<td>Ermöglicht das Festlegen von Aliasen für Module oder importierte Teile.</td>
+<td><a href="https://docs.python.org/3/reference/simple_stmts.html#the-import-statement">Referenz</a></td>
+</tr>
+<tr>
+<td><code>random</code></td>
+<td>Ein Modul mit vielen Funktionen um Pseudozufallszahlen zu erzeugen.</td>
+<td><a href="https://docs.python.org/3/library/random.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>if __name__ == "__main__":</code></td>
+<td>Zeigt Code an, der Nur ausgeführt wird, wenn diese Pythondatei ausgeführt wird.</td>
+<td><a href="https://docs.python.org/3/library/__main__.html#module-__main__">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="pakete">Pakete<a class="headerlink" href="#pakete" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paket</td>
+<td>Eine Sammlung von Modulen in einem Verzeichnis, das einem Namespace entspricht. Pakete strukturieren den Python-Code.</td>
+<td><a href="https://docs.python.org/3/tutorial/modules.html#packages">Referenz</a></td>
+</tr>
+<tr>
+<td><code>__init__.py</code></td>
+<td>Eine Datei, die angibt, dass ein Verzeichnis als Python-Paket behandelt werden sollte. Sie kann Initialisierungscode für das Paket enthalten.</td>
+<td><a href="https://docs.python.org/3/reference/import.html#regular-packages">Referenz</a></td>
+</tr>
+<tr>
+<td><code>site-packages</code></td>
+<td>Ein Verzeichnis, in dem Drittanbieter-Pakete installiert werden. Es ist Teil des Python-Suchpfads, auf den <code>import</code> zugreift.</td>
+<td><a href="https://docs.python.org/3/tutorial/modules.html#the-module-search-path">Referenz</a></td>
+</tr>
+<tr>
+<td><code>PyPI</code></td>
+<td>Die Python Package Index ist ein Repository von Software für die Programmiersprache Python. Nutzer können Pakete hochladen und installieren.</td>
+<td><a href="https://pypi.org/">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="pip-und-venv">Pip und Venv<a class="headerlink" href="#pip-und-venv" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+<th>Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pip</code></td>
+<td>Das Paketinstallationsprogramm für Python. Es ermöglicht das Installieren, Aktualisieren und Entfernen von Paketen.</td>
+<td><a href="https://pip.pypa.io/en/stable/cli/pip_install/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>virtualenv</code></td>
+<td>Ein Werkzeug zum Erstellen isolierter Python-Umgebungen. Jede Umgebung kann eigene Paketversionen haben, unabhängig von anderen Umgebungen.</td>
+<td><a href="https://virtualenv.pypa.io/en/latest/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>requirements.txt</code></td>
+<td>Eine Datei, die die Paketabhängigkeiten für ein Python-Projekt auflistet. Es wird oft verwendet, um eine konsistente Umgebung für Projekte zu gewährleisten.</td>
+<td><a href="https://pip.pypa.io/en/stable/reference/requirements-file-format/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>pip --version</code></td>
+<td>Ein Befehl im Terminal, um die installierte Version von pip zu überprüfen.</td>
+<td><a href="https://pip.pypa.io/en/stable/reference/pip_version/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>pip list</code></td>
+<td>Listet alle auf dem System installierten Python-Pakete auf.</td>
+<td><a href="https://pip.pypa.io/en/stable/reference/pip_list/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>pip search PACKAGE_NAME</code></td>
+<td>Sucht nach einem spezifischen Paket auf PyPI, ersetzt <code>PACKAGE_NAME</code> mit dem Namen des gesuchten Pakets. Hinweis: Diese Funktion wurde in neueren Versionen von pip entfernt.</td>
+<td><a href="https://pip.pypa.io/en/stable/news/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>pip install PACKAGE_NAME</code></td>
+<td>Installiert ein Python-Paket, wobei <code>PACKAGE_NAME</code> der Name des gewünschten Pakets ist.</td>
+<td><a href="https://pip.pypa.io/en/stable/reference/pip_install/">Referenz</a></td>
+</tr>
+<tr>
+<td><code>venv</code></td>
+<td>Ein Modul zur Erstellung isolierter Python-Umgebungen, um Abhängigkeitskonflikte zwischen Projekten zu vermeiden.</td>
+<td><a href="https://docs.python.org/3/library/venv.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>python -m venv venv_name</code></td>
+<td>Erstellt eine neue virtuelle Umgebung mit dem Namen <code>venv_name</code>.</td>
+<td><a href="https://docs.python.org/3/library/venv.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>source {venv_name}/bin/activate</code></td>
+<td>Aktiviert die virtuelle Umgebung <code>venv_name</code>, sodass deren Pakete und Skripte im aktuellen Terminal verwendet werden können.</td>
+<td><a href="https://docs.python.org/3/library/venv.html">Referenz</a></td>
+</tr>
+<tr>
+<td><code>deactivate</code></td>
+<td>Deaktiviert die aktuelle virtuelle Umgebung und kehrt zur globalen Python-Umgebung zurück.</td>
+<td><a href="https://docs.python.org/3/library/venv.html">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

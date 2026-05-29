@@ -1,0 +1,1840 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Begriffssammlung SQL Datenbanken - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#begriffssammlung-sql-datenbanken" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Begriffssammlung SQL Datenbanken
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="begriffssammlung-sql-datenbanken">Begriffssammlung SQL Datenbanken<a class="headerlink" href="#begriffssammlung-sql-datenbanken" title="Permanent link">&para;</a></h1>
+<h1 id="einfuhrung-in-sql">Einführung in SQL<a class="headerlink" href="#einfuhrung-in-sql" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Daten</td>
+<td style="text-align: left;">Informationen und Fakten, die elektronisch erfasst, gespeichert und verarbeitet werden sollen.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Daten">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenbank</td>
+<td style="text-align: left;">Eine organisierte Sammlung von Daten, typischerweise elektronisch gespeichert in einem strukturierten Format.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Datenbank">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tabellen</td>
+<td style="text-align: left;">Strukturen innerhalb einer Datenbank, in denen Daten in Zeilen und Spalten organisiert sind.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Datenbanktabelle">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Indizes</td>
+<td style="text-align: left;">Spezielle Datenstrukturen, die das schnelle Auffinden von Datensätzen innerhalb einer Datenbanktabelle erleichtern.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Index_(Datenbank)">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Schlüssel</td>
+<td style="text-align: left;">Eindeutige Identifier (wie Primärschlüssel) oder Verweise zwischen Tabellen (wie Fremdschlüssel), um Beziehungen zu definieren.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Schl%C3%BCssel_(Datenbank)">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">SQL</td>
+<td style="text-align: left;">Eine standardisierte Sprache für das Abfragen und Manipulieren von relationalen Datenbanken.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/SQL">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenbankprogramm (DBMS)</td>
+<td style="text-align: left;">Software zur Erstellung, Verwaltung und Abfrage von Datenbanken; auch als Datenbankmanagementsystem bekannt.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Datenbank#Datenbankmanagementsystem">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">SQLite3</td>
+<td style="text-align: left;">Eine leichte, disk-basierte Datenbank, die keine separate Serverprozess benötigt.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/index.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">DDL (Data Definition Language)</td>
+<td style="text-align: left;">Teil der SQL-Sprache, der für die Definition und Modifikation von Datenbankstrukturen verwendet wird.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Data_Definition_Language">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">DML (Data Manipulation Language)</td>
+<td style="text-align: left;">Teil der SQL-Sprache, der für das Einfügen, Aktualisieren, Löschen und Abfragen von Daten verwendet wird.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Data_Manipulation_Language">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">DCL (Data Control Language)</td>
+<td style="text-align: left;">Teil der SQL-Sprache, der für die Definition von Zugriffsrechten auf Datenbankobjekte verwendet wird.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Data_Control_Language">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">TCL (Transaction Control Language)</td>
+<td style="text-align: left;">Teil der SQL-Sprache, der für die Verwaltung von Transaktionen in Datenbanken verwendet wird.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Transaktionssteuerung">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">DQL (Data Query Language)</td>
+<td style="text-align: left;">Teil der SQL-Sprache, der speziell für das Abfragen von Daten aus Datenbanken verwendet wird.</td>
+<td style="text-align: left;"><a href="https://en.wikipedia.org/wiki/SQL#Data_query_language_(DQL)">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">CRUD</td>
+<td style="text-align: left;">Akronym für Create, Read, Update, Delete – die vier grundlegenden Operationen in Datenbanken.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/CRUD">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="arbeitsumgebung-einrichten">Arbeitsumgebung einrichten<a class="headerlink" href="#arbeitsumgebung-einrichten" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Plugin Database Navigator (DBN)</td>
+<td style="text-align: left;">Ein Plugin für PyCharm, das erweiterte Funktionen für die Verbindung mit und Verwaltung von Datenbanken bietet.</td>
+<td style="text-align: left;"><a href="https://plugins.jetbrains.com/plugin/1800-database-navigator">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">SQLite Plugin für VSCode</td>
+<td style="text-align: left;">Eine Erweiterung für Visual Studio Code, die das Arbeiten mit SQLite-Datenbanken innerhalb der IDE ermöglicht.</td>
+<td style="text-align: left;"><a href="https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenbankdatei (.db)</td>
+<td style="text-align: left;">Eine Datei, die von SQLite verwendet wird, um Datenbankdaten zu speichern. Diese Dateien können direkt von SQLite gelesen und beschrieben werden.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/fileformat.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenbankverbindung</td>
+<td style="text-align: left;">Die Einstellung und Authentifizierungsinformationen, die benötigt werden, um aus einer Anwendung heraus mit einer Datenbank zu kommunizieren.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Datenbank#Datenbankverbindung">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenbank-Navigator</td>
+<td style="text-align: left;">Ein Werkzeug oder Plugin, das in Entwicklungs-IDEs verwendet wird, um eine visuelle Schnittstelle für die Interaktion mit Datenbanken zu bieten.</td>
+<td style="text-align: left;"><a href="https://plugins.jetbrains.com/plugin/1800-database-navigator">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">SQLite-Plugin</td>
+<td style="text-align: left;">Eine Softwareerweiterung für Entwicklungs-IDEs, die speziell entwickelt wurde, um die Arbeit mit SQLite-Datenbanken zu erleichtern.</td>
+<td style="text-align: left;"><a href="https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="tabellen">Tabellen<a class="headerlink" href="#tabellen" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>CREATE TABLE</code></td>
+<td style="text-align: left;">Erstellt eine Datenbanktabelle.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_createtable.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SELECT</code></td>
+<td style="text-align: left;">Liest Daten aus.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_select.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>INSERT</code></td>
+<td style="text-align: left;">Speichert Daten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_insert.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>UPDATE</code></td>
+<td style="text-align: left;">Verändert Daten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_update.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DELETE</code></td>
+<td style="text-align: left;">Löscht Daten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_delete.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>WHERE</code></td>
+<td style="text-align: left;">Filtert Daten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_select.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LIKE</code></td>
+<td style="text-align: left;">Vergleicht Textdaten Daten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/c3ref/strlike.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DELETE</code></td>
+<td style="text-align: left;">Löscht Daten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_delete.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DROP TABLE</code></td>
+<td style="text-align: left;">Löscht eine Tabelle.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_droptable.html">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anmerkung:</strong></p>
+<p>Die Referenzen beziehen sich oft auf die im Lehrplan aufgeführten Unterrichtseinheiten.
+Für eine vollständige Ansicht der SQL Sprachdefinition greifen sie bitte auf die <a href="https://www.sqlite.org/lang.html">SQLite Homepage</a> zurück.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Command Line Interface (CLI)</td>
+<td style="text-align: left;">Kommandozeile: Konsolen-Programm zur Bedienung eines anderen Programmes. In diesem Fall, die Datenbank.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Kommandozeile">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Unified Modeling Language (UML)</td>
+<td style="text-align: left;">Eine grafische Modellierungssprache zur Spezifikation, Konstruktion, Dokumentation und Visualisierung von Software-Teilen und anderen Systemen</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Unified_Modeling_Language">Referenz</a>]</td>
+</tr>
+<tr>
+<td style="text-align: left;">Objekt-Relationales Mapping (ORM)</td>
+<td style="text-align: left;">Eine Technik der Softwareentwicklung, mit der ein in einer objektorientierten Programmiersprache geschriebenes Anwendungsprogramm seine Objekte in einer relationalen Datenbank ablegen kann.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Objektrelationale_Abbildung">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Entity-Relationship Diagram (ER-Diagram)</td>
+<td style="text-align: left;">dient dazu, im Rahmen der semantischen Datenmodellierung den in einem gegebenen Kontext (z. B. einem Projekt zur Erstellung eines Informationssystems) relevanten Ausschnitt der realen Welt zu bestimmen und darzustellen. Das ER-Modell besteht im Wesentlichen aus einer Grafik (ER-Diagramm, Abk. ERD) sowie einer Beschreibung der darin verwendeten Elemente.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Entity-Relationship-Modell">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">CRUD Prinzip</td>
+<td style="text-align: left;">Allgemeine Bezeichnung für die vier möglichen Datenoperationen: Erstellen (<strong>C</strong>reate), Lesen (<strong>R</strong>ead), Ändern (<strong>U</strong>pdate) und Löschen (<strong>D</strong>elete).</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/CRUD">Reerenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Relationale Datenbank (DB)</td>
+<td style="text-align: left;">In relationalen Datenbanken werden Daten in Tabellen gespeichert und die Beziehungen zwischen den Daten werden durch Schlüssel definiert. Dies steht im Gegensatz zu NoSQL-Datenbanken, die eine Vielzahl von Datenmodellen wie Dokumenten-, Schlüssel-Wert-, Graph- und Spaltenfamilienmodelle verwenden können und oft für spezifische Arten von Anwendungen oder Datenverarbeitungsanforderungen optimiert sind.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/datenbanken.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tabelle</td>
+<td style="text-align: left;">Eine Sammlung von Daten, organisiert in Zeilen und Spalten.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/datenbanken.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Zeile (Row)</td>
+<td style="text-align: left;">Ein Datensatz in einer Tabelle, der aus mehreren verbundenen Feldern besteht.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/datenbanken.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Spalte (Column)</td>
+<td style="text-align: left;">Eine vertikale Gruppierung von Daten in einer Tabelle, alle vom gleichen Datentyp.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/datenbanken.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">SQL (Structured Query Language)</td>
+<td style="text-align: left;">Eine Sprache zur Verwaltung und Abfrage von Daten in relationalen Datenbanken.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/datenbanken.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Alias</td>
+<td style="text-align: left;">Stellvertretende Bezeichnung für Tabellen oder Spalten.</td>
+<td style="text-align: left;"><a href="https://learnsql.de/blog/verwendung-von-aliasen-mit-sql-joins/">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">JOIN</td>
+<td style="text-align: left;">Eine Operation in SQL, die Zeilen aus zwei oder mehr Tabellen basierend auf einer gemeinsamen Beziehung kombiniert.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/joins_and_views.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">INNER JOIN</td>
+<td style="text-align: left;">Ein JOIN-Typ, der nur die Zeilen zurückgibt, die in beiden JOIN-Tabellen eine Übereinstimmung haben.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/joins_and_views.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">LEFT JOIN</td>
+<td style="text-align: left;">Ein JOIN-Typ, der alle Zeilen aus der linken Tabelle und die übereinstimmenden Zeilen aus der rechten Tabelle zurückgibt.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/joins_and_views.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">RIGHT JOIN</td>
+<td style="text-align: left;">Ein JOIN-Typ, der alle Zeilen aus der rechten Tabelle und die übereinstimmenden Zeilen aus der linken Tabelle zurückgibt.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/joins_and_views.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Vollständiger OUTER JOIN (FULL OUTER JOIN)</td>
+<td style="text-align: left;">Ein JOIN-Typ, der alle Zeilen zurückgibt, wenn in einer der Tabellen eine Übereinstimmung besteht.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/joins_and_views.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Aggregatfunktion</td>
+<td style="text-align: left;">Eine Funktion in SQL, die eine Berechnung auf einer Gruppe von Werten durchführt und ein einzelnes Ergebnis zurückgibt (z.B. COUNT, SUM, AVG).</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/build_in_functions.md#aggregatefunktionen-in-sqlite">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Normalisierung</td>
+<td style="text-align: left;">Der Prozess der Strukturierung einer Datenbank, um Redundanz zu reduzieren und die Integrität zu verbessern.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/normalization.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Referentielle Integrität</td>
+<td style="text-align: left;">Nach der RI-Regel dürfen Datensätze (über ihre Fremdschlüssel) nur auf existierende Datensätze verweisen.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/Referentielle_Integrit%C3%A4t">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Transaktion</td>
+<td style="text-align: left;">Eine Gruppe von Operationen, die als eine einzige Einheit ausgeführt werden, um die Datenintegrität zu gewährleisten.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/scripting_and_deploying.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">View (Sicht)</td>
+<td style="text-align: left;">Eine virtuelle Tabelle, die das Ergebnis einer SQL-Abfrage darstellt und wie eine reale Tabelle verwendet werden kann.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/joins_and_views.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Constraint (Einschränkung)</td>
+<td style="text-align: left;">Eine Regel, die auf die Daten in einer Datenbanktabelle angewendet wird, um die Genauigkeit und Zuverlässigkeit der Daten zu gewährleisten.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/create_tables.md">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Reservierte Worte</td>
+<td style="text-align: left;">Wörter, die in SQLite als Sprachelemente verwendet werden und somit nicht in der Namesvergabe von Tabellen, Spalten, Variablen und Funktionen zulässig ist.</td>
+<td style="text-align: left;"><a href="../lehrplan/datenbanken/unterrichte-alt/reserved_words_sqlite.md">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="index-indizes-eng-index-indexes">Index, Indizes (eng. index, indexes)<a class="headerlink" href="#index-indizes-eng-index-indexes" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Index</code></td>
+<td style="text-align: left;">Eine Datenstruktur, die das schnelle Auffinden von Datensätzen ermöglicht.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/queryplanner.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Zusammengesetzter Index</code></td>
+<td style="text-align: left;">Ein Index, der auf mehreren Spalten einer Tabelle basiert.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/queryplanner.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Vollständiger Tabellenscan</code></td>
+<td style="text-align: left;">Ein Durchlauf durch die gesamte Tabelle, um Datensätze zu finden.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/queryplanner.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>B-Baum</code></td>
+<td style="text-align: left;">Eine Baumstruktur, die in Datenbankindizes verwendet wird.</td>
+<td style="text-align: left;"><a href="https://de.wikipedia.org/wiki/B-Baum">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CREATE INDEX</code></td>
+<td style="text-align: left;">Erstellt einen Index auf einer oder mehreren Spalten.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_createindex.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DROP INDEX</code></td>
+<td style="text-align: left;">Löscht einen Index.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_dropindex.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EXPLAIN QUERY PLAN</code></td>
+<td style="text-align: left;">Zeigt den Abfrageplan für eine SQL-Anweisung.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_explain.html">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="schlussel-eng-key">Schlüssel (eng. Key)<a class="headerlink" href="#schlussel-eng-key" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Primärschlüssel (Primary Key)</code></td>
+<td style="text-align: left;">Eindeutiger Identifikator für Datensätze in einer Tabelle.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_createtable.html#primkeyconst">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Fremdschlüssel (Foreign Key)</code></td>
+<td style="text-align: left;">Verweist auf den Primärschlüssel einer anderen Tabelle zur Herstellung einer Beziehung.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/foreignkeys.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>UNIQUE Constraint</code></td>
+<td style="text-align: left;">Stellt sicher, dass alle Werte in einer Spalte einzigartig sind.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_createtable.html#uniqueconst">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REFERENTIAL Integrity</code></td>
+<td style="text-align: left;">Gewährleistet die Konsistenz der Beziehungen zwischen Tabellen.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/foreignkeys.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CREATE TABLE</code></td>
+<td style="text-align: left;">Erstellt eine neue Tabelle, eventuell mit Primär- und Fremdschlüsseln.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_createtable.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ALTER TABLE</code></td>
+<td style="text-align: left;">Modifiziert eine bestehende Tabelle, um Fremdschlüssel hinzuzufügen oder zu entfernen.</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_altertable.html">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SQL CONSTRAINTS</code></td>
+<td style="text-align: left;">Definiert Regeln für die Daten in einer Tabelle (z.B. <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>).</td>
+<td style="text-align: left;"><a href="https://www.sqlite.org/lang_createtable.html#constraints">Referenz</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

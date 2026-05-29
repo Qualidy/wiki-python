@@ -1,0 +1,2071 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../scopes/scopes/">
+      
+      
+        <link rel="next" href="../../docstring/docstring/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Args & Kwargs - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#args-kwargs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Args & Kwargs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listen-als-positionale-parameter-ubergeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listen als positionale Parameter übergeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyword-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyword Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#args-und-kwargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      args und kwargs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verpflichtende-positionale-und-keyword-argumente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verpflichtende positionale und Keyword Argumente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divide and Conquer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="args-kwargs">Args &amp; Kwargs<a class="headerlink" href="#args-kwargs" title="Permanent link">&para;</a></h1>
+<p>In Python gibt es zwei wichtige Konzepte im Zusammenhang mit Funktionen,
+nämlich <code>*args</code> und <code>**kwargs</code>. Diese ermöglichen es, Funktionen flexibler zu gestalten 
+und mit variabler Anzahl von Argumenten umzugehen.</p>
+<h2 id="beispiel-1">Beispiel 1<a class="headerlink" href="#beispiel-1" title="Permanent link">&para;</a></h2>
+<p>Angenommen wir wollen Funktionen zur Verfügung stellen, um eine beliebe Menge von Zahlen zu multiplizieren.</p>
+<p>Derzeit haben wir keine gute Möglichkeit das umzusetzen, außer für jede Parameterzahl eine eigene Funktion zur Verfügung zu stellen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiply_2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">multiply_3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">multiply_4</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="n">d</span>
+
+<span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Das ist eine sehr unschöne Lösung. Sollen wir jetzt Milliarden von Funktionen vordefinieren, um mit jeder
+beliebigen Anzahl von Argumenten zurechtzukommen?</p>
+<p>Auch die Lösung eine Funktion zu erstellen, die mit eine Liste erwartet, ist keine wirkliche:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">faktors</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">faktor</span> <span class="ow">in</span> <span class="n">faktors</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">faktor</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>  <span class="c1"># 30</span>
+</code></pre></div></td></tr></table></div>
+<p>Denn wir wollen ja die Funktion aufrufen, ohne die Parameter vorher in eine Liste zu verpacken:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Antwort:</strong> Wir nutzen <code>*args</code> als einen Parameter in unserer Funktion, in dieser werden alle
+Alle positionalen Argumente gelegt, die nicht an anderer Stelle zugeordnet sind:</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20multiply%28*faktors%29%3A%0A%20%20%20%20result%20%3D%201%0A%20%20%20%20for%20faktor%20in%20faktors%3A%0A%20%20%20%20%20%20%20%20result%20*%3D%20faktor%0A%20%20%20%20return%20result%0A%0A%0Aprint%28multiply%282,%203,%205%29%29%20%20%23%2030&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="o">*</span><span class="n">faktors</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">faktor</span> <span class="ow">in</span> <span class="n">faktors</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">faktor</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># 30</span>
+</code></pre></div></td></tr></table></div>
+<p>durch das Asterisksymbol <code>*</code> vor dem <code>faktors</code>, sagen wir, dass alle positionalen Argumente, die noch nicht
+an einen anderen Parameter bunden sind (hier gibt es keinen), in das Tupel <code>faktors</code> gespeichert werden sollen.</p>
+<h2 id="beispiel-2">Beispiel 2<a class="headerlink" href="#beispiel-2" title="Permanent link">&para;</a></h2>
+<p>Im folgenden Beispiel sehen wir, dass wir zunächst zwei Parameter <code>leiter</code> und <code>stellvertreter</code>
+haben. Diese müssen beim Funktionsaufruf immer angegeben werden. Im Parameter <code>mitarbeiter</code> werden
+alle weiteren positionalen Argumente in einem Tupel gesichert. Wenn es keine gibt, ist das Tupel leer.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20print_abteilung_namen%28leiter,%20stellvertreter,%20*mitarbeiter%29%3A%0A%20%20%20%20print%28f%22Leitung%3A%20%7Bleiter%7D%22%29%0A%20%20%20%20print%28f%22Stellvertretung%3A%20%7Bstellvertreter%7D%22%29%0A%20%20%20%20for%20arbeiter%20in%20mitarbeiter%3A%0A%20%20%20%20%20%20%20%20print%28f%22Mitarbeiter%3A%20%7Barbeiter%7D%22%29%0A%20%20%20%20print%28f%22Neben%20Leitung%20und%20Stellvertretung%20gibt%20es%20%7Blen%28mitarbeiter%29%7D%20Mitarbeiter.%22%29%0A%0A%0Aprint_abteilung_namen%28%22Johanna%22,%20%22Klara%22,%20%22Bianca%22,%20%22Siegfried%22%29%0Aprint_abteilung_namen%28%22Tom%22,%20%22Jerry%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">print_abteilung_namen</span><span class="p">(</span><span class="n">leiter</span><span class="p">,</span> <span class="n">stellvertreter</span><span class="p">,</span> <span class="o">*</span><span class="n">mitarbeiter</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Leitung: </span><span class="si">{</span><span class="n">leiter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stellvertretung: </span><span class="si">{</span><span class="n">stellvertreter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arbeiter</span> <span class="ow">in</span> <span class="n">mitarbeiter</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mitarbeiter: </span><span class="si">{</span><span class="n">arbeiter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Neben Leitung und Stellvertretung gibt es </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">)</span><span class="si">}</span><span class="s2"> Mitarbeiter.&quot;</span><span class="p">)</span>
+
+<span class="n">print_abteilung_namen</span><span class="p">(</span><span class="s2">&quot;Johanna&quot;</span><span class="p">,</span> <span class="s2">&quot;Klara&quot;</span><span class="p">,</span> <span class="s2">&quot;Bianca&quot;</span><span class="p">,</span> <span class="s2">&quot;Siegfried&quot;</span><span class="p">)</span>
+<span class="n">print_abteilung_namen</span><span class="p">(</span><span class="s2">&quot;Tom&quot;</span><span class="p">,</span> <span class="s2">&quot;Jerry&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="question" open="open">
+<summary>🌶 Typen prüfen</summary>
+<p>Prüfe im obigen Beispiel den Typ von <code>faktors</code> und <code>mitarbeiter</code>.</p>
+<p><details><summary>Lösung</summary>
+Beide sind vom Typ <code>tuple</code>.</details></p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Typen lass sich mit <code>type</code> erfragen.</p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Konkatinieren von Strings</summary>
+<p>Schreibe eine Funktion <code>concat</code>, die eine beliebige Anzahl von String zu einem einzigen String
+konkatiniert.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">concat</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;Du&quot;</span><span class="p">,</span> <span class="s2">&quot;wie&quot;</span><span class="p">,</span> <span class="s2">&quot;geht&quot;</span><span class="p">)</span> <span class="c1"># &quot;HalloDuwiegeht&quot;</span>
+<span class="n">concat</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;Du&quot;</span><span class="p">)</span> <span class="c1"># &quot;HalloDu&quot;</span>
+<span class="n">concat</span><span class="p">()</span> <span class="c1"># &quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><details><summary>Lösung</summary>
+<pre><code>def concat(*strings):
+    result = ""
+    for string in strings:
+        result += string
+    return result</code></pre>
+</details></p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Strings können mit <code>+</code> konkatiniert werden.</p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Konkatenieren mit Trennzeichen</summary>
+<p>Erweitere die Lösung der letzten Aufgabe, sodass ein Paremeter <code>seperator</code> mit angegeben werden kann.
+Dieser ist per default auf den leeren String <code>''</code> gesetzt. Folgender Code ist dann <strong>zusätzlich</strong> möglich:</p>
+<p>An welcher Stelle muss ein Defaultparameter eingefügt werden?</p>
+<p>Wandle diese und die letzten Beispiele in Unittests um.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">concat</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;Du&quot;</span><span class="p">,</span> <span class="s2">&quot;wie&quot;</span><span class="p">,</span> <span class="s2">&quot;geht&quot;</span><span class="p">,</span> <span class="n">seperator</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="c1"># &quot;Hallo Du wie geht&quot;</span>
+<span class="n">concat</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;Du&quot;</span><span class="p">,</span> <span class="n">seperator</span><span class="o">=</span><span class="s2">&quot;~~&quot;</span><span class="p">)</span> <span class="c1"># &quot;Hallo~~Du&quot;</span>
+<span class="n">concat</span><span class="p">(</span><span class="n">seperator</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">)</span> <span class="c1"># &quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><details><summary>Lösung</summary>
+<pre><code>def concat(*strings, seperator=""):
+    result = ""
+    for string in strings:
+        result += string + seperator
+    return result if not seperator else result[:-len(seperator)]</p>
+<p>import unittest</p>
+<p>class ConcatTest(unittest.TestCase):
+    def test_concat_0(self):
+        self.assertEqual(concat("Hallo", "Du", "wie", "geht"), "HalloDuwiegeht")</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>def test_concat_1(self):
+    self.assertEqual(concat(&quot;Hallo&quot;, &quot;Du&quot;), &quot;HalloDu&quot;)
+
+def test_concat_2(self):
+    self.assertEqual(concat(), &quot;&quot;)
+
+def test_concat_3(self):
+    self.assertEqual(concat(&quot;Hallo&quot;, &quot;Du&quot;, &quot;wie&quot;, &quot;geht&quot;, seperator=&quot; &quot;), &quot;Hallo Du wie geht&quot;)
+
+def test_concat_4(self):
+    self.assertEqual(concat(&quot;Hallo&quot;, &quot;Du&quot;, seperator=&quot;~~&quot;), &quot;Hallo~~Du&quot;)
+
+def test_concat_5(self):
+    self.assertEqual(concat(seperator=&quot;*&quot;), &quot;&quot;)
+</code></pre></div></td></tr></table></div>
+<p></code></pre>
+</details></p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Der Methodenkopf muss wie folgt aussehen:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>def concat(*strings, seperator=&quot;&quot;):
+</code></pre></div></td></tr></table></div></p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Gepaarte Summen</summary>
+<p>Erstelle eine Funktion <code>paired_sum</code>, die eine beliebige Anzahl von Parametern erlaubt.
+Immer zwei Parameter werden addiert und zurückgegeben.
+Die Rückgabe ist ein Tupel. 
+Wenn eine ungerade Anzahl von Parametern übergeben wird,
+dann wird eine Exception geworfen.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">paired_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1"># (3, 7)</span>
+<span class="n">paired_sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># </span>
+<span class="n">paired_sum</span><span class="p">()</span> <span class="c1"># (,) leeres Tupel</span>
+</code></pre></div></td></tr></table></div>
+<p><details><summary>Lösung</summary>
+<pre><code>def paired_sum(*summands):
+    if len(summands) % 2:
+        raise Exception("Number of Arguments must be even.")</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>return tuple(a + b for a, b in zip(summands[::2], summands[1::2]))
+</code></pre></div></td></tr></table></div>
+<p></code></pre></details></p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Wie kann man mit Slicing jedes zweite Element erreichen?
+Wie kann man mit <code>zip</code> zwei Teillisten paralell durchlaufen?</p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Beliebig viele Zeilen in Datei speichern</summary>
+<p>Erstelle eine Funktion <code>save_lines_to_file</code>, die als ersten Parameter einen Speicherort
+erwartet und dann eine beliebige Anzahl von Strings.
+Diese Strings sollen jeweils als Zeilen in eine die vorgegebene Datei gespeichert werden.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">save_lines_to_file</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;wie&quot;</span><span class="p">,</span> <span class="s2">&quot;geht&quot;</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span> <span class="p">,</span> <span class="s2">&quot;dir denn heute so?&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Datei:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Hallo
+wie
+geht
+es
+dir denn heute so?
+</code></pre></div></td></tr></table></div></p>
+<p><details><summary>Lösung</summary>
+<pre><code>def save_lines_to_file(loc, *lines):
+    with open(loc, "wt") as file:
+        for line in lines:
+            file.write(line+"\n")
+</code></pre></details></p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Das Symbol für einen Zeilenumbruch ist <code>\n</code></p>
+</details>
+</details>
+<h2 id="listen-als-positionale-parameter-ubergeben">Listen als positionale Parameter übergeben<a class="headerlink" href="#listen-als-positionale-parameter-ubergeben" title="Permanent link">&para;</a></h2>
+<p>Wir wissen nun, wie wir eine beliebige Anzahl von Parametern erlauben.
+Aber was ist, wenn unsere Parameter in einer Liste gesammelt sind?</p>
+<p>In so einem Fall müssen wir eine Liste entpacken, wenn wir die Elemente
+als einzelne Parameter übergeben wollen. Dieses Entpacken funktioniert 
+wieder mit dem Asterisk-Operator <code>*</code> wie folgt:</p>
+<p><strong>Beispiel 1:</strong></p>
+<p><a href="https://pythontutor.com/render.html#code=def%20multiply%28*faktors%29%3A%0A%20%20%20%20result%20%3D%201%0A%20%20%20%20for%20faktor%20in%20faktors%3A%0A%20%20%20%20%20%20%20%20result%20*%3D%20faktor%0A%20%20%20%20return%20result%0A%0A%0A%23%20Erst%20anlegen,%20dann%20entpacken%3A%0Anumbers%20%3D%20%5B1,2,3,4%5D%0Aprint%28multiply%28*numbers%29%29%0A%0A%23%20Anlegen%20und%20entpacken%20in%20einem%20Schritt%3A%0Aprint%28multiply%28*%5B2,%203,%205%5D%29%29%0A%0A%23%20H%C3%A4ndisch%20entpacken%0Aa,%20b,%20c,%20d%20%3D%20numbers%0Aprint%28multiply%28a,b,c,d%29%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="o">*</span><span class="n">faktors</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">faktor</span> <span class="ow">in</span> <span class="n">faktors</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">*=</span> <span class="n">faktor</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Erst anlegen, dann entpacken:</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">))</span>
+
+<span class="c1"># Anlegen und entpacken in einem Schritt:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+
+<span class="c1"># Händisch entpacken</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">numbers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel 2:</strong></p>
+<p><a href="https://pythontutor.com/render.html#code=def%20print_abteilung_namen%28leiter,%20stellvertreter,%20*mitarbeiter%29%3A%0A%20%20%20%20print%28f%22Leitung%3A%20%7Bleiter%7D%22%29%0A%20%20%20%20print%28f%22Stellvertretung%3A%20%7Bstellvertreter%7D%22%29%0A%20%20%20%20for%20arbeiter%20in%20mitarbeiter%3A%0A%20%20%20%20%20%20%20%20print%28f%22Mitarbeiter%3A%20%7Barbeiter%7D%22%29%0A%20%20%20%20print%28f%22Neben%20Leitung%20und%20Stellvertretung%20gibt%20es%20%7Blen%28mitarbeiter%29%7D%20Mitarbeiter.%22%29%0A%0A%0Aprint_abteilung_namen%28%22Johanna%22,%20%22Klara%22,%20*%5B%22Bianca%22,%20%22Siegfried%22%5D%29%0Aprint_abteilung_namen%28*%5B%22Johanna%22,%20%22Klara%22,%20%22Bianca%22,%20%22Siegfried%22%5D%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">print_abteilung_namen</span><span class="p">(</span><span class="n">leiter</span><span class="p">,</span> <span class="n">stellvertreter</span><span class="p">,</span> <span class="o">*</span><span class="n">mitarbeiter</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Leitung: </span><span class="si">{</span><span class="n">leiter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stellvertretung: </span><span class="si">{</span><span class="n">stellvertreter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arbeiter</span> <span class="ow">in</span> <span class="n">mitarbeiter</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mitarbeiter: </span><span class="si">{</span><span class="n">arbeiter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Neben Leitung und Stellvertretung gibt es </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">)</span><span class="si">}</span><span class="s2"> Mitarbeiter.&quot;</span><span class="p">)</span>
+
+<span class="n">print_abteilung_namen</span><span class="p">(</span><span class="s2">&quot;Johanna&quot;</span><span class="p">,</span> <span class="s2">&quot;Klara&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="s2">&quot;Bianca&quot;</span><span class="p">,</span> <span class="s2">&quot;Siegfried&quot;</span><span class="p">])</span>
+<span class="n">print_abteilung_namen</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="s2">&quot;Johanna&quot;</span><span class="p">,</span> <span class="s2">&quot;Klara&quot;</span><span class="p">,</span> <span class="s2">&quot;Bianca&quot;</span><span class="p">,</span> <span class="s2">&quot;Siegfried&quot;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Beispiel 3:</strong></p>
+<p>Wir können diese Notation tatsächlich auch bei Funktionen benutzen, die gar keine variable Anzahl an Parametern erlauben:</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20add%28a,%20b%29%3A%0A%20%20%20%20return%20a%20%2B%20b%0A%0Asummands%20%3D%20%5B1,%204%5D%0Aprint%28add%28*summands%29%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">summands</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">summands</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="keyword-arguments">Keyword Arguments<a class="headerlink" href="#keyword-arguments" title="Permanent link">&para;</a></h2>
+<p>Im Moment haben wir uns nur mit positionalen Argumenten beschäftigt.
+In Python ist es auch möglich Argumente über ein Keyword zu übergeben.
+Wir sprechen dann von <strong>Keyword Arguments</strong></p>
+<p><a href="https://pythontutor.com/render.html#code=def%20sub%28a,%20b%29%3A%0A%20%20%20%20return%20a%20-%20b%0A%0Aprint%28sub%28a%20%3D%201,%20b%20%3D%202%29%29%0Aprint%28sub%28b%20%3D%201,%20a%20%3D%202%29%29%0Aprint%28sub%281,%20b%20%3D%202%29%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sub</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sub</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p>Es müssen immer zuerst die positionalen Argumente übergeben werden, bevor die Keyword Argumente übergeben werden.</p>
+<p>Um eine beliebige Anzahl an Keyword Argumenten zu erlauben, können wir mit dem Doppelasterisk <code>**</code> einen Parameter
+festlegen, in dem alle noch nicht gebundenen Argumente als Dictionary gespeichert sind.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20print_abteilung%28leitung,%20vertretung,%20**mitarbeiter%29%3A%0A%20%20%20%20print%28f%22Leitung%3A%20%7Bleitung%7D%22%29%0A%20%20%20%20print%28f%22Vertretung%3A%20%7Bvertretung%7D%22%29%0A%20%20%20%20for%20stelle,%20name%20in%20mitarbeiter.items%28%29%3A%0A%20%20%20%20%20%20%20%20print%28f%22%7Bstelle%7D%3A%20%7Bname%7D%22%29%0A%20%20%20%20%20%20%20%20%0A%0Aprint_abteilung%28leitung%3D%22Karl%22,%20vertretung%3D%22Steffi%22,%20b%C3%BCro%3D%22Jochen%22,%20it%3D%22Claudia%22%29%0A%0Aprint_abteilung%28%22Karl%22,%20%22Steffi%22,%20b%C3%BCro%3D%22Jochen%22,%20it%3D%22Claudia%22%29%0A%0Aprint_abteilung%28%22Karl%22,%20vertretung%3D%22Steffi%22,%20b%C3%BCro%3D%22Jochen%22,%20it%3D%22Claudia%22%29%0A%0Amitarb%20%3D%20%7B%0A%20%20%20%20%22Support%22%3A%20%22Steffi%22,%0A%20%20%20%20%22Powerhouse%22%3A%20%22Max%22,%0A%7D%0A%0Aprint_abteilung%28%22Karl%22,%20vertretung%3D%22Steffi%22,%20b%C3%BCro%3D%22Jochen%22,**mitarb%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">print_abteilung</span><span class="p">(</span><span class="n">leitung</span><span class="p">,</span> <span class="n">vertretung</span><span class="p">,</span> <span class="o">**</span><span class="n">mitarbeiter</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Leitung: </span><span class="si">{</span><span class="n">leitung</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertretung: </span><span class="si">{</span><span class="n">vertretung</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">stelle</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">mitarbeiter</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stelle</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="n">leitung</span><span class="o">=</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="n">vertretung</span><span class="o">=</span><span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="n">it</span><span class="o">=</span><span class="s2">&quot;Claudia&quot;</span><span class="p">)</span>
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="n">it</span><span class="o">=</span><span class="s2">&quot;Claudia&quot;</span><span class="p">)</span>
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="n">vertretung</span><span class="o">=</span><span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="n">it</span><span class="o">=</span><span class="s2">&quot;Claudia&quot;</span><span class="p">)</span>
+
+<span class="n">mitarb</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Support&quot;</span><span class="p">:</span> <span class="s2">&quot;Steffi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Powerhouse&quot;</span><span class="p">:</span> <span class="s2">&quot;Max&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="n">vertretung</span><span class="o">=</span><span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span><span class="o">**</span><span class="n">mitarb</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Wir sehen in diesem Beispiel auch, dass man ein dictionary entpacken kann, um den Inhalt als Argumente
+an eine Funktion zu übergeben.</p>
+<h2 id="args-und-kwargs">args und kwargs<a class="headerlink" href="#args-und-kwargs" title="Permanent link">&para;</a></h2>
+<p>In vielen Pythonfunktionen sehen wir, dass die beiden Parameter <code>*args</code> und <code>**kwargs</code> als letzte beiden Parameter
+notiert sind. Dies sorgt dafür, dass eine beliebige Anzahl an Argumenten an diese Methoden übergeben werden kann.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20print_abteilung%28leitung,%20vertretung,%20*andere,%20**mitarbeiter%29%3A%0A%20%20%20%20print%28f%22Leitung%3A%20%7Bleitung%7D%22%29%0A%20%20%20%20print%28f%22Vertretung%3A%20%7Bvertretung%7D%22%29%0A%20%20%20%20for%20stelle,%20name%20in%20mitarbeiter.items%28%29%3A%0A%20%20%20%20%20%20%20%20print%28f%22%7Bstelle%7D%3A%20%7Bname%7D%22%29%0A%20%20%20%20for%20rest%20in%20andere%3A%0A%20%20%20%20%20%20%20%20print%28f%22weiterhin%3A%20%7Brest%7D%22%29%0A%20%20%20%20%20%20%20%20%0A%0Aprint_abteilung%28leitung%3D%22Karl%22,%20vertretung%3D%22Steffi%22,%20b%C3%BCro%3D%22Jochen%22,%20it%3D%22Claudia%22%29%0A%0Aprint_abteilung%28%22Karl%22,%20%22Steffi%22,%20%22Mirco%22,%20%22Claudia%22,%20b%C3%BCro%3D%22Jochen%22,%20it%3D%22Claudia%22%29%0A%0Aprint_abteilung%28%22Karl%22,%20vertretung%3D%22Steffi%22,%20b%C3%BCro%3D%22Jochen%22,%20it%3D%22Claudia%22%29%0A%0Amitarb%20%3D%20%7B%0A%20%20%20%20%22Support%22%3A%20%22Steffi%22,%0A%20%20%20%20%22Powerhouse%22%3A%20%22Max%22,%0A%7D%0A%0Arest%20%3D%20%5B%22Rainer%22,%20%22Walter%22%5D%0A%0Aprint_abteilung%28%22Karl%22,%20b%C3%BCro%3D%22Jochen%22,%20*rest,%20**mitarb%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Link zum Onlinecompiler 💻</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">print_abteilung</span><span class="p">(</span><span class="n">leitung</span><span class="p">,</span> <span class="n">vertretung</span><span class="p">,</span> <span class="o">*</span><span class="n">andere</span><span class="p">,</span> <span class="o">**</span><span class="n">mitarbeiter</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Leitung: </span><span class="si">{</span><span class="n">leitung</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertretung: </span><span class="si">{</span><span class="n">vertretung</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">stelle</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">mitarbeiter</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stelle</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">rest</span> <span class="ow">in</span> <span class="n">andere</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;weiterhin: </span><span class="si">{</span><span class="n">rest</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="n">leitung</span><span class="o">=</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="n">vertretung</span><span class="o">=</span><span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="n">it</span><span class="o">=</span><span class="s2">&quot;Claudia&quot;</span><span class="p">)</span>
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="s2">&quot;Mirco&quot;</span><span class="p">,</span> <span class="s2">&quot;Claudia&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="n">it</span><span class="o">=</span><span class="s2">&quot;Claudia&quot;</span><span class="p">)</span>
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="n">vertretung</span><span class="o">=</span><span class="s2">&quot;Steffi&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="n">it</span><span class="o">=</span><span class="s2">&quot;Claudia&quot;</span><span class="p">)</span>
+
+<span class="n">mitarb</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Support&quot;</span><span class="p">:</span> <span class="s2">&quot;Steffi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Powerhouse&quot;</span><span class="p">:</span> <span class="s2">&quot;Max&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">rest</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Rainer&quot;</span><span class="p">,</span> <span class="s2">&quot;Walter&quot;</span><span class="p">]</span>
+
+<span class="n">print_abteilung</span><span class="p">(</span><span class="s2">&quot;Karl&quot;</span><span class="p">,</span> <span class="n">büro</span><span class="o">=</span><span class="s2">&quot;Jochen&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span><span class="p">,</span> <span class="o">**</span><span class="n">mitarb</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Dies ist besonders wertvoll, wenn die Methoden intern andere Funktionen mit diversen Parametern verwendet,
+die wir von außen so ansteuerbar machen.</p>
+<h2 id="verpflichtende-positionale-und-keyword-argumente">Verpflichtende positionale und Keyword Argumente<a class="headerlink" href="#verpflichtende-positionale-und-keyword-argumente" title="Permanent link">&para;</a></h2>
+<p>Um zu erzwingen, dass Argumente als positionale Argumente übergeben werden,
+kann ein <code>/</code> als ein Parameter eingefügt werden. Alle Argumente vor dem <code>/</code> können nicht als 
+Keyword Argumente übergeben werden. Dies sieht man jedoch selten.</p>
+<p>Wenn man erzwingen möchte, dass Parameter als Keyword Argument gesetzt werden, kann man ein einzelnes <code>*</code>
+als Parameter setzen. Dann muss jedes nach dem <code>*</code> folgende Parameter als Keyword Argument übergeben werden.
+Dies sieht man sehr häufig.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">somefunc</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">p5</span><span class="p">,</span> <span class="n">p6</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="divide-and-conquer">Divide and Conquer<a class="headerlink" href="#divide-and-conquer" title="Permanent link">&para;</a></h2>
+<p>Prinzipiell kann man mit Hilfe von <code>*args</code> das zusammenfügen von Strings erleichtern, wie man in den vorherigen beispielen gesehen hat.
+Hierfür eine Funktion, die gegebenen Parameter zu einem kebab-case string verwandelt (ein Minus zwischen die Wörter einfügt):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">kebab</span><span class="p">(</span><span class="o">*</span><span class="n">strings</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">string</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">[:</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">kebab</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;tree&quot;</span><span class="p">))</span>
+<span class="c1"># Das ergibt: one-two-three</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Da <code>*args</code> zu benutzen nur eine konvention ist, kann man wie man in dem Beispiel sieht, auch einen anderen Namen 
+vergeben. Natürlich muss trotzdem ein <code>*</code> benutzt werden.</p>
+<p>Durch das entpacken von Listen kann auch listen zerteilen.</p>
+<p>Wenn man nun einen ersten, normalen Parameter hinzufügt, kann man durch eine Rekursion die gesamte Funktion sogar auf 
+zwei Zeilen code reduzieren:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">variadic_kebab</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="o">*</span><span class="n">va</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">first</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">va</span> <span class="k">else</span> <span class="n">first</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">variadic_kebab</span><span class="p">(</span><span class="o">*</span><span class="n">va</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">variadic_kebab</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;tree&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+Das ergibt: one-two-three</p>
+<p>Die Funktion macht hier Gebrauch von einem Ternary um zu prüfen ob die Parameterliste <code>va</code> leer ist. 
+Wenn das der Fall ist, wird nur <code>first</code> returned. Wenn die Liste NICHT leer ist, dann wird der erste eintrag aus
+<code>va</code> innerhalb der Rekursion zu <code>first</code>.</p>
+<p>Wenn man die beiden Versionen der Funktion vergleicht, merkt man vor allem dass <code>variadic_kebab</code> es ermöglicht dass man 
+erzwingen kann dass mindestens ein Parameter übergeben werden muss. Logisch, denn der Parameter <code>first</code> ist ja auch ein normaler Parameter.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">kebab</span><span class="p">())</span> <span class="c1"># OK</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variadic_kebab</span><span class="p">())</span> <span class="c1"># Error</span>
+</code></pre></div></td></tr></table></div>
+<details class="question" open="open">
+<summary>🌶 Args zu Dictionary</summary>
+<p>Schreibe eine Funktion, welche <code>*args</code> als Dictionary returned. Da Dictionaries für jedes value einen Key brauchen, sollte die Funktion logischerweise bei einer ungeraden Anzahl von Parametern trotzdem noch funktionieren.</p>
+<p><details><summary>Lösung</summary>
+<pre><code>def dictify(*strings):
+    thisdict = {}
+    for i in range(len(strings)//2):
+        thisdict.update({strings[i]:strings[i+1]})
+    return thisdict</p>
+<p>print(dictify("a", "b", "c"))</code></pre>
+</details></p>
+<p>Hinweis: Zur lösung dieser Aufgabe gibt es eine zweite Variante welche der <code>variadic_kebab</code> Funktion stark ähnelt.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../scopes/scopes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scopes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Scopes
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../docstring/docstring/" class="md-footer__link md-footer__link--next" aria-label="Next: Docstring">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Docstring
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

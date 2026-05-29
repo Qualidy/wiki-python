@@ -1,0 +1,1880 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Begriffe db2 - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nosql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Begriffe db2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h2 id="nosql">NoSQL<a class="headerlink" href="#nosql" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">NoSQL</td>
+<td style="text-align: left;">Der Begriff "NoSQL" steht für "Not only SQL" und bezeichnet eine Gruppe von Datenbankmanagementsystemen, die sich von traditionellen relationalen Datenbanken unterscheiden. Diese Systeme sind nicht ausschließlich auf SQL beschränkt und bieten unterschiedliche Ansätze für die Speicherung und Abfrage von Daten.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Dokumentenorientierte Datenbanken</td>
+<td style="text-align: left;">Dokumentenorientierte Datenbanken sind eine Kategorie von NoSQL-Datenbanken, die darauf abzielen, Daten in flexiblen, dokumentenähnlichen Strukturen zu speichern. Dokumente können verschiedene Datentypen enthalten und ermöglichen eine einfache Skalierung und Anpassung an sich ändernde Anforderungen.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Graphdatenbanken</td>
+<td style="text-align: left;">Graphdatenbanken sind eine Form von NoSQL-Datenbanken, die sich auf die Speicherung und Abfrage von Daten mit komplexen Beziehungen konzentrieren. Sie verwenden Graphen, um Entitäten und ihre Beziehungen zueinander darzustellen, was besonders für netzwerkorientierte Datenmodelle geeignet ist.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Spaltenorientierte Datenbanken</td>
+<td style="text-align: left;">Spaltenorientierte Datenbanken sind auf die effiziente Speicherung und Abfrage von Daten in Spalten ausgerichtet, im Gegensatz zu Zeilen. Dies ist besonders für Analysen und Data Warehousing-Anwendungen geeignet, bei denen häufig aggregierte Abfragen über große Datensätze durchgeführt werden.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Schlüssel-Wert-Datenbanken</td>
+<td style="text-align: left;">Schlüssel-Wert-Datenbanken speichern Daten in einem einfachen Schlüssel-Wert-Format, wobei jeder Datenpunkt einen eindeutigen Schlüssel hat. Diese Art von Datenbanken ist einfach, schnell und effizient bei einfachen Lese- und Schreibvorgängen, eignet sich jedoch möglicherweise nicht für komplexe Abfrageoperationen.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Primär-Sekundär-Architektur</td>
+<td style="text-align: left;">Die Primär-Sekundär-Architektur ist eine Datenbankarchitektur, die auf Redundanz und hohe Verfügbarkeit abzielt. Sie besteht aus einer primären (Primary) Datenbankinstanz und mehreren sekundären (Secondary) Datenbankinstanzen. Die primäre Instanz ist für Lese- und Schreibzugriffe verantwortlich, während die sekundären Instanzen Daten von der primären Instanz replizieren.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Horizontale Skalierbarkeit</td>
+<td style="text-align: left;">Horizontale Skalierbarkeit bezieht sich auf die Fähigkeit eines Systems, die Leistungsfähigkeit durch Hinzufügen weiterer Ressourcen (z. B. Server) zu verbessern. Bei NoSQL-Datenbanken wird dies oft durch die Verwendung von Primär-Sekundär-Architekturen erreicht, wodurch die Last auf mehrere Server verteilt werden kann.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Vertikale Skalierbarkeit</td>
+<td style="text-align: left;">Vertikale Skalierbarkeit bezieht sich auf die Erhöhung der Leistungsfähigkeit eines Systems durch das Hinzufügen von Ressourcen zu einer einzelnen Instanz. In SQL-Datenbanken bedeutet dies in der Regel die Erweiterung der Hardware, während in NoSQL-Datenbanken andere Ansätze wie horizontale Skalierbarkeit bevorzugt werden.</td>
+<td style="text-align: left;"><a href="#">Referenz</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Neo4j</td>
+<td style="text-align: left;"><a href="https://neo4j.com">Neo4j</a> ist eine bekannte Graphdatenbank, die das Property-Graph-Modell nutzt. Es erlaubt die Speicherung von Eigenschaften an den Kanten und Knoten des Graphen, was eine flexible Datenmodellierung ermöglicht.</td>
+<td style="text-align: left;"><a href="https://neo4j.com">Neo4j</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">OrientDB</td>
+<td style="text-align: left;"><a href="http://orientdb.org">OrientDB</a> kombiniert Funktionalitäten von Dokumenten- und Graphdatenbanken. Es unterstützt eine breite Palette von Anwendungsfällen und erlaubt die Verwaltung unterschiedlicher Datenstrukturen in einer einzigen Datenbank.</td>
+<td style="text-align: left;"><a href="http://orientdb.org">OrientDB</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">ArangoDB</td>
+<td style="text-align: left;"><a href="https://arangodb.com">ArangoDB</a> kombiniert Dokumenten-, Graphen- und Schlüssel-Wert-Modelle. Es ermöglicht die Verwaltung unterschiedlicher Datenstrukturen in einer einzigen Datenbank.</td>
+<td style="text-align: left;"><a href="https://arangodb.com">ArangoDB</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">MongoDB</td>
+<td style="text-align: left;">MongoDB ist eine dokumentenorientierte NoSQL-Datenbank, die auf Flexibilität und Skalierbarkeit ausgelegt ist. Sie speichert Daten in einem flexiblen, JSON-ähnlichen Format namens BSON (Binary JSON) und ist frei von Schemaanforderungen.</td>
+<td style="text-align: left;"><a href="https://www.mongodb.com/">MongoDB</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BSON</td>
+<td style="text-align: left;">BSON (Binary JSON) ist ein Binärformat zur Serialisierung von JSON-ähnlichen Dokumenten. Es wurde speziell für die Verwendung mit MongoDB entwickelt und ermöglicht effiziente Speicherung und Übertragung von Daten.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/bson-types/">BSON</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">MongoDB-Shell</td>
+<td style="text-align: left;">Die MongoDB-Shell ist eine interaktive JavaScript-Shell, mit der Benutzer direkt mit einer MongoDB-Datenbank interagieren können. Sie ermöglicht das Ausführen von Befehlen und Skripten zur Verwaltung und Abfrage von Daten in MongoDB.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/mongodb-shell/">MongoDB Shell</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">MongoDB-CLI (mongosh)</td>
+<td style="text-align: left;">Die MongoDB Command-Line Interface (CLI), auch als mongosh bekannt, ist eine interaktive Shell für MongoDB. Sie ermöglicht das Ausführen von MongoDB-Befehlen und Skripten für Datenbankverwaltung und -abfrage direkt über die Kommandozeile.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/mongodb-shell/">mongosh</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Collection</td>
+<td style="text-align: left;">In MongoDB ist eine Collection eine Gruppe von MongoDB-Dokumenten. Collections sind das Äquivalent zu Tabellen in relationalen Datenbanken. Sie können Dokumente unterschiedlicher Struktur enthalten, da MongoDB keine festen Schemata erfordert.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/databases-and-collections/">Collections</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>insert_one()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um ein Dokument in einer Collection einzufügen. Erwartet ein Dictionary als Parameter und gibt ein <code>InsertOneResult</code> Objekt zurück.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/">MongoDB Dokumentation - insertOne()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>find()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um Dokumente in einer Collection zu lesen. Gibt ein <code>Cursor</code> Objekt zurück, das alle Dokumente enthält.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.find/">MongoDB Dokumentation - find()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>forEach()</code></td>
+<td style="text-align: left;">Methode in MongoDB, die auf einem <code>Cursor</code> Objekt verwendet wird, um eine Funktion für jedes Dokument in der Collection auszuführen. Die Funktion erhält das aktuelle Dokument als Parameter.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/cursor.forEach/">MongoDB Dokumentation - cursor.forEach()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>updateOne()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um ein Dokument in einer Collection zu aktualisieren. Erwartet ein Objekt für das zu aktualisierende Dokument und ein Objekt für die Aktualisierungen. Gibt ein <code>UpdateResult</code> Objekt zurück.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/">MongoDB Dokumentation - updateOne()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deleteOne()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um ein Dokument in einer Collection zu löschen. Erwartet ein Objekt für das zu löschende Dokument. Gibt ein <code>DeleteResult</code> Objekt zurück.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.deleteOne/">MongoDB Dokumentation - deleteOne()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deleteMany()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um mehrere Dokumente in einer Collection zu löschen. Erwartet ein Objekt für die zu löschenden Dokumente. Gibt ein <code>DeleteResult</code> Objekt zurück.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/">MongoDB Dokumentation - deleteMany()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>findOne()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um das erste Dokument in einer Collection zu finden. Erwartet ein Objekt mit den Eigenschaften des gesuchten Dokuments.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.findOne/">MongoDB Dokumentation - findOne()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>count()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um die Anzahl der Dokumente in einer Collection zu zählen. Erwartet ein Objekt mit den Eigenschaften der gesuchten Dokumente.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.count/">MongoDB Dokumentation - count()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sort()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um Dokumente in einer Collection zu sortieren. Erwartet ein Objekt mit den Eigenschaften, nach denen die Dokumente sortiert werden sollen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/cursor.sort/">MongoDB Dokumentation - sort()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>limit()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um die Anzahl der zurückgegebenen Dokumente zu begrenzen. Erwartet eine Zahl als Parameter.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/cursor.limit/">MongoDB Dokumentation - limit()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>skip()</code></td>
+<td style="text-align: left;">Methode in MongoDB, um eine bestimmte Anzahl von Dokumenten zu überspringen. Erwartet eine Zahl als Parameter.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/cursor.skip/">MongoDB Dokumentation - skip()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Schema Design Patterns</td>
+<td style="text-align: left;">Methoden und Ansätze für das Entwerfen von Dokumentstrukturen in MongoDB, um die Leistung, Skalierbarkeit und Flexibilität der Datenbank zu optimieren.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/">MongoDB Dokumentation - Schema Design Patterns</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Präkalkulierte Muster (Precomputed)</td>
+<td style="text-align: left;">Speicherung vorberechneter Daten im Dokument zur Vermeidung häufiger Berechnungen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/precomputed-patterns/">MongoDB Dokumentation - Präkalkulierte Muster</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Baumstrukturen (Tree Structures)</td>
+<td style="text-align: left;">Verwendung von materialisierten Pfaden oder Elternreferenzen zur Abbildung von Baumstrukturen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/tree/">MongoDB Dokumentation - Baumstrukturen</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Polymorphe Muster (Polymorphic)</td>
+<td style="text-align: left;">Einsatz spezieller Schlüssel zur Typisierung von Dokumenten.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/polymorphic-patterns/">MongoDB Dokumentation - Polymorphe Muster</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Caching Patterns</td>
+<td style="text-align: left;">Speicherung wiederholter Daten in Dokumenten zur Minimierung von wiederholten Abfragen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/caching-patterns/">MongoDB Dokumentation - Caching Patterns</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Zeitreihenmuster (Time Series)</td>
+<td style="text-align: left;">Erstellung rollender Sammlungen für Zeitreihendaten zur Speicherung über einen bestimmten Zeitraum.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/time-series-patterns/">MongoDB Dokumentation - Zeitreihenmuster</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Bucket Patterns</td>
+<td style="text-align: left;">Gruppierung von Daten in Buckets zur Effizienzsteigerung von Abfragen und Analysen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/bucket-patterns/">MongoDB Dokumentation - Bucket Patterns</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Outlier Patterns</td>
+<td style="text-align: left;">Auslagerung von Ausreißern in separate Dokumente zur Vermeidung von Leistungseinbußen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/schema-design-patterns/outlier-patterns/">MongoDB Dokumentation - Outlier Patterns</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Data Modeling Patterns</td>
+<td style="text-align: left;">Bewährte Methoden für das Modellieren von Daten in MongoDB, einschließlich der Strukturierung von Dokumenten und Beziehungen zwischen Dokumenten.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/data-modeling-introduction/">MongoDB Dokumentation - Data Modeling Patterns</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Einbettung von Datenmodellen</td>
+<td style="text-align: left;">Einbetten von Dokumenten in andere, um mehrere Informationen in einem einzigen Dokument zusammenzufassen. Nutzung von Arrays für die Speicherung mehrerer Werte oder Dokumente für ein bestimmtes Feld.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/data-modeling-embedded-models/">MongoDB Dokumentation - Einbettung von Datenmodellen</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Verweise (References)</td>
+<td style="text-align: left;">Nutzung von manuellen Verweisen durch Verlinken mit Dokumenten in anderen Sammlungen. MongoDB unterstützt DBRefs als spezielle Struktur für Verweise.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/data-modeling-referential-integrity/">MongoDB Dokumentation - Verweise</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>aggregate()</code></td>
+<td style="text-align: left;">Führt eine Aggregation auf der Collection aus, indem sie eine Pipeline von Aggregationsoperationen verwendet.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/">MongoDB Dokumentation - aggregate()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mapReduce()</code></td>
+<td style="text-align: left;">Führt eine Map-Reduce-Operation auf der Collection aus, wobei eine Map-Funktion und eine Reduce-Funktion verwendet werden, um komplexe Transformationen und Berechnungen durchzuführen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.mapReduce/">MongoDB Dokumentation - mapReduce()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">B-Baum</td>
+<td style="text-align: left;">Ein balancierter Baum (Balanced Tree), der in vielen Datenbanksystemen, einschließlich MongoDB, zur Implementierung von Indizes verwendet wird.</td>
+<td style="text-align: left;"><a href="https://en.wikipedia.org/wiki/B-tree">B-Baum - Wikipedia</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>createIndex()</code></td>
+<td style="text-align: left;">Erstellt einen Index in MongoDB auf einem oder mehreren Feldern, um die Abfrageleistung zu verbessern.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/">MongoDB Dokumentation - createIndex()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dropIndex()</code></td>
+<td style="text-align: left;">Löscht einen zuvor erstellten Index in MongoDB.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.dropIndex/">MongoDB Dokumentation - dropIndex()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getIndexes()</code></td>
+<td style="text-align: left;">Zeigt die Indizes einer MongoDB Collection an.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.getIndexes/">MongoDB Dokumentation - getIndexes()</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stats()</code></td>
+<td style="text-align: left;">Zeigt die Eigenschaften eines Indexes in MongoDB an.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/method/db.collection.stats/#index-stats-method">MongoDB Dokumentation - Index Stats</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Schrittweise Migration</td>
+<td style="text-align: left;">Ein Ansatz zur Datenbankmigration, bei dem Änderungen im Datenmodell schrittweise eingeführt werden, wobei jede Phase vor der nächsten validiert wird.</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parallelbetrieb</td>
+<td style="text-align: left;">Die Implementierung einer neuen Datenbankversion parallel zur bestehenden, um einen nahtlosen Übergang zu ermöglichen.</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenmigrationsskripte</td>
+<td style="text-align: left;">Skripte, die entwickelt werden, um Daten von der alten Datenbankstruktur in die neue zu überführen, unter Berücksichtigung von Datenbereinigung und Anpassungen an das neue Modell.</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Versionierung von Dokumenten</td>
+<td style="text-align: left;">Das Hinzufügen von Versionsinformationen zu Dokumenten, um unterschiedliche Datenmodellversionen zu bewältigen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/tutorial/model-versioning/">MongoDB Dokumentation - Model Versioning</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Feature-Schalter</td>
+<td style="text-align: left;">Mechanismen, die die Aktivierung oder Deaktivierung von Funktionen basierend auf der Datenbankversion ermöglichen.</td>
+<td style="text-align: left;"><a href="https://martinfowler.com/articles/feature-toggles.html">Feature Toggles (Martin Fowler)</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Testumgebung</td>
+<td style="text-align: left;">Eine dedizierte Umgebung, in der Änderungen vor der Implementierung in der Produktionsumgebung ausgiebig getestet werden können.</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h1 id="pymongo">PyMongo<a class="headerlink" href="#pymongo" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">pymongo</td>
+<td style="text-align: left;">Eine Python-Bibliothek, die den direkten Zugriff auf MongoDB-Datenbanken ermöglicht.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/">pymongo Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">MongoClient</td>
+<td style="text-align: left;">Eine Klasse in pymongo, die die Verbindung zu einem MongoDB-Server herstellt.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/mongo_client.html">MongoClient Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>insert_one()</code></td>
+<td style="text-align: left;">Eine Methode, um ein Dokument in eine MongoDB-Sammlung einzufügen.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.insert_one">insert_one() Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>find()</code></td>
+<td style="text-align: left;">Eine Methode, um Dokumente in einer MongoDB-Sammlung abzurufen.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find">find() Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>forEach()</code></td>
+<td style="text-align: left;">Eine Methode, um über die Ergebnisse eines Cursor-Objekts in pymongo zu iterieren.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/cursor.html">Cursor-Objekt Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>update_one()</code></td>
+<td style="text-align: left;">Eine Methode, um ein Dokument in einer MongoDB-Sammlung zu aktualisieren.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.update_one">update_one() Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>delete_one()</code></td>
+<td style="text-align: left;">Eine Methode, um ein Dokument aus einer MongoDB-Sammlung zu löschen.</td>
+<td style="text-align: left;"><a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.delete_one">delete_one() Dokumentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">MongoDB Query Language</td>
+<td style="text-align: left;">Die Abfragesprache, die in MongoDB verwendet wird, basierend auf JSON-ähnlichen Dokumenten.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/tutorial/query-documents/">MongoDB Query Language</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="datenbank-refactoring-in-nosql">Datenbank Refactoring in NoSQL<a class="headerlink" href="#datenbank-refactoring-in-nosql" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Datenbank-Refactoring</td>
+<td style="text-align: left;">Der Prozess der Überarbeitung der Datenbankstruktur, um die Effizienz, Leistung und Wartbarkeit zu verbessern.</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Index-Optimierung</td>
+<td style="text-align: left;">Der Prozess der Überprüfung und Optimierung von Indizes, um die Abfrageleistung in einer MongoDB-Datenbank zu verbessern.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/indexes/">Indexing Strategies</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Aggregation Framework</td>
+<td style="text-align: left;">Ein mächtiges Framework in MongoDB zur Verarbeitung von Daten, Transformation von Dokumenten und Aggregation von Ergebnissen direkt in der Datenbank.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/aggregation/">Aggregation Framework</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Embedded vs. Referenzierte Daten</td>
+<td style="text-align: left;">Die Entscheidung, ob Daten direkt in einem Dokument eingebettet oder durch Referenzen verknüpft werden sollen, um die Abfrageleistung und Wartbarkeit zu optimieren.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/tutorial/model-relationships-between-documents/">Model Relationships Between Documents</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sicherheit-fur-nosql-datenbanken">Sicherheit für NoSQL-Datenbanken<a class="headerlink" href="#sicherheit-fur-nosql-datenbanken" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kurzerklärung</th>
+<th style="text-align: left;">Link zur Referenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Datentypen und Validierung</td>
+<td style="text-align: left;">Die korrekte Verwendung von Datentypen in MongoDB-Dokumenten und die Möglichkeit der Datenvalidierung, um die Datenintegrität zu gewährleisten und Speicherplatz effizient zu nutzen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/bson-types/">Datentypen in MongoDB</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Sharding</td>
+<td style="text-align: left;">Eine Technik zur Skalierung von MongoDB-Datenbanken, bei der Daten horizontal über mehrere Server verteilt werden. Dies verbessert die Leistung und Kapazität der Datenbankinfrastruktur.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/sharding/">Sharding in MongoDB</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Datenbereinigung</td>
+<td style="text-align: left;">Der Prozess der Entfernung nicht mehr benötigter Daten, Indizes oder Sammlungen, um Speicherplatz zu optimieren und die Effizienz der Datenbank zu verbessern.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/tutorial/remove-documents/">Remove Documents</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Backup-Strategie</td>
+<td style="text-align: left;">Die Planung und Umsetzung einer Strategie für regelmäßige Backups, um Datenverlust zu verhindern und die Datensicherheit zu gewährleisten.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/backups/">Backup and Restore with MongoDB Tools</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Sicherheit</td>
+<td style="text-align: left;">Die Überprüfung und Aktualisierung der Sicherheitskonfiguration, Benutzerzugriffe und Rollen in MongoDB-Datenbanken, um unbefugten Zugriff zu verhindern.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/security/security-checklist/">Security Checklist</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Dokumentation</td>
+<td style="text-align: left;">Die Aktualisierung der Dokumentation der MongoDB-Datenbankstruktur, um Entwicklerteams relevante Informationen bereitzustellen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/">MongoDB Documentation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mongod.conf</code></td>
+<td style="text-align: left;">Die Konfigurationsdatei für den MongoDB-Server. Hier werden verschiedene Einstellungen vorgenommen, um das Verhalten des Servers anzupassen, einschließlich Sicherheitsmaßnahmen und Verzeichnispfadeinstellungen.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/reference/configuration-options/">Dokumentation - Konfigurationsdateien</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Bind Mount</td>
+<td style="text-align: left;">Ein Mechanismus in Docker, der es ermöglicht, Dateien oder Verzeichnisse vom Hostsystem in den Container zu mounten. Wird verwendet, um die <code>mongod.conf</code>-Datei und Logging-Verzeichnisse in den MongoDB-Container zu übertragen.</td>
+<td style="text-align: left;"><a href="https://docs.docker.com/storage/bind-mounts/">Docker - Bind Mounts</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Authentifizierung</td>
+<td style="text-align: left;">Der Prozess der Identitätsprüfung von Benutzern oder Systemen, um sicherzustellen, dass nur autorisierte Entitäten auf Ressourcen zugreifen können. In MongoDB wird dies durch Benutzeranmeldung und Rollenvergabe realisiert.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/authentication/">Dokumentation - Authentifizierung</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Rollenvergabe</td>
+<td style="text-align: left;">Die Zuweisung von spezifischen Berechtigungen und Verantwortlichkeiten zu Benutzern in einer Datenbank. In MongoDB werden Rollen verwendet, um den Zugriff auf Datenbankressourcen zu steuern.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/authorization/">Dokumentation - Rollen</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">TLS/SSL</td>
+<td style="text-align: left;">Transport Layer Security (TLS) und Secure Sockets Layer (SSL) sind Verschlüsselungsprotokolle, die dazu dienen, die Sicherheit der Datenübertragung zwischen einem Client und einem Server zu gewährleisten.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/security-transport-encryption/">Dokumentation - TLS/SSL</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Audit-Log</td>
+<td style="text-align: left;">Ein Protokoll, das Aufzeichnungen von Aktivitäten und Ereignissen enthält. In MongoDB wird das Audit-Log verwendet, um Datenbankaktivitäten zu überwachen und zu protokollieren, um die Sicherheit zu verbessern.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/auditing/">Dokumentation - Audit-Log</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Injection-Angriffe</td>
+<td style="text-align: left;">Angriffe, bei denen schädlicher Code oder unerwünschte Befehle in Datenbankabfragen oder Eingabedaten eingeschleust werden. In MongoDB sollten Parameterisierung und Validierung eingesetzt werden, um solche Angriffe zu verhindern.</td>
+<td style="text-align: left;"><a href="https://owasp.org/www-community/attacks/Injection">OWASP - Injection</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Begrenzung von Netzwerkzugriffen</td>
+<td style="text-align: left;">Die Einschränkung der Kommunikation und des Zugriffs auf ein Netzwerk, um nicht autorisierten Zugriff zu verhindern. In MongoDB kann dies durch Konfigurationsoptionen und Firewalls erreicht werden.</td>
+<td style="text-align: left;"><a href="https://docs.mongodb.com/manual/core/security-hardening/">Dokumentation - Netzwerkeinstellungen</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

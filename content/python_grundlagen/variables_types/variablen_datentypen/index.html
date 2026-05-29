@@ -1,0 +1,2221 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../debugging/debugging/">
+      
+      
+        <link rel="next" href="../../math_operations/math_operations/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Variable Datentypen - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variablen-und-datentypen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Variable Datentypen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bedeutung-von-variablen-in-der-programmierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bedeutung von Variablen in der Programmierung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bedeutung von Variablen in der Programmierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-daten-speichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Daten speichern:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lesbarkeit-und-wartbarkeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Lesbarkeit und Wartbarkeit:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-berechnungen-durchfuhren-und-ergebnisse-speichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Berechnungen durchführen und Ergebnisse speichern:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-daten-wiederverwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Daten wiederverwenden :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-speichern-von-zustanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Speichern von Zuständen :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="variablen-und-datentypen">Variablen und Datentypen<a class="headerlink" href="#variablen-und-datentypen" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/4umrj_L6grQ?si=jTK_7DsrNdTpJirf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In diesem Abschnitt lernen wir die Grundlagen von Variablen und verschiedenen Datentypen in Python kennen. Variablen
+sind wie Behälter, in denen wir Daten speichern können, während Datentypen die Art der Daten bestimmen, die in diesen
+Variablen gespeichert werden können.</p>
+<h2 id="bedeutung-von-variablen-in-der-programmierung">Bedeutung von Variablen in der Programmierung<a class="headerlink" href="#bedeutung-von-variablen-in-der-programmierung" title="Permanent link">&para;</a></h2>
+<p>Variablen sind ein unverzichtbarer Bestandteil der meisten Programmiersprachen, einschließlich Python. Sie erfüllen
+mehrere wichtige Funktionen:</p>
+<h4 id="1-daten-speichern">1. <strong>Daten speichern</strong>:<a class="headerlink" href="#1-daten-speichern" title="Permanent link">&para;</a></h4>
+<p>Variablen dienen als Speicherorte im Arbeitsspeicher eines Computers, in denen Daten gespeichert werden können.
+   Diese Daten können Zahlen, Texte, und andere möglichen anderen Objekte sein.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">sum</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">13</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="2-lesbarkeit-und-wartbarkeit">2. <strong>Lesbarkeit und Wartbarkeit</strong>:<a class="headerlink" href="#2-lesbarkeit-und-wartbarkeit" title="Permanent link">&para;</a></h4>
+<p>Variablen helfen, den Code verständlicher zu machen. Durch sinnvolle Namen wird der Zweck des Codes klarer, was die
+   Wartung und Fehlerbehebung vereinfacht.</p>
+<h4 id="3-berechnungen-durchfuhren-und-ergebnisse-speichern">3. <strong>Berechnungen durchführen und Ergebnisse speichern</strong>:<a class="headerlink" href="#3-berechnungen-durchfuhren-und-ergebnisse-speichern" title="Permanent link">&para;</a></h4>
+<p>Variablen ermöglichen die Durchführung von Berechnungen mit gespeicherten Werten. So können beispielsweise
+   mathematische Operationen ausgeführt und das Ergebnis in einer anderen Variablen gespeichert werden.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nominator</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">denominator</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">nominator</span> <span class="o">/</span> <span class="n">denominator</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="4-daten-wiederverwenden">4. <strong>Daten wiederverwenden</strong> :<a class="headerlink" href="#4-daten-wiederverwenden" title="Permanent link">&para;</a></h4>
+<p>Variablen werden eingesetzt, um Daten in verschiedenen Teilen eines Programms zu nutzen.</p>
+<h4 id="5-speichern-von-zustanden">5. <strong>Speichern von Zuständen</strong> :<a class="headerlink" href="#5-speichern-von-zustanden" title="Permanent link">&para;</a></h4>
+<p>In komplexeren Anwendungen dienen Variablen dazu, den Zustand einer Anwendung zu speichern und zu verwalten.
+   Beispiele hierfür sind der Login-Status eines Nutzers oder die Anzahl der Artikel in einem Warenkorb.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Hans&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ich heiße auch &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Klaus&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo auch &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Variablen sind somit essenziell für die Erstellung flexibler, effizienter und verständlicher Programme und bilden die
+Grundlage für fast alle Operationen und Logiken in der Programmierung.</p>
+<hr />
+<h1 id="variablenbenennung">Variablenbenennung<a class="headerlink" href="#variablenbenennung" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/Vh9EhNoBbUg?si=00nEOu7edngNqrXx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Eine Variable in Python kann erstellt werden, indem man ihr einen Namen gibt und
+ihr einen Wert zuweist. Dabei steht links immer der Variablenname und rechts der Wert, der in dieser gespeichert werden
+soll:</p>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">meine_variable</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">alter</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">Geburtsjahr</span> <span class="o">=</span> <span class="mi">1940</span>
+<span class="n">willkommens_text</span> <span class="o">=</span> <span class="s2">&quot;Hey du!&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Geburtsjahr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">willkommens_text</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="namenskonventionen">Namenskonventionen:<a class="headerlink" href="#namenskonventionen" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Variablennamen sollten klar und beschreibend sein. In Python verwenden wir oft Snake-Case,
+  bei dem Wörter durch Unterstriche getrennt werden (z.B. <code>meine_variable</code>).</li>
+<li>Variablennamen dürften nicht mit einer Zahl anfangen und keine Sonderzeichen außer dem Unterstrich enthalten.</li>
+</ul>
+<p>Kurze Variablennamen sind nur in absoluten Ausnahmefällen zu verwenden, z.B. als Laufvariable in einer Schleife. Es
+kostet keine Ressourcen und kein Geld aussagekräftige Variablen zu nutzen.</p>
+<p>Eine Variable <code>a</code> könnte alles sein, während die Variable <code>zinssatz</code> recht sicher ein Zinssatz darstellen wird.</p>
+<h2 id="besonderheit-bei-pythons">Besonderheit bei Pythons <code>=</code><a class="headerlink" href="#besonderheit-bei-pythons" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/zNgZVTrWxng?si=BsjNS8CHHqBJ02KB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In Python ist auch die folgende Syntax erlaubt, um mit weniger
+Codezeilen mehrere Variablen zuzuordnen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># a,b,c haben alle den Wert 10</span>
+<span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span>   <span class="c1"># d = 15 und e = 20</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h1 id="datentypen">Datentypen<a class="headerlink" href="#datentypen" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/Z85rA3SxHls?si=t8TWYWv5EtwUZtnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In Python gibt es verschiedene Datentypen, aber hier konzentrieren wir uns auf die grundlegendsten.</p>
+<h2 id="primitive-datentypen">Primitive Datentypen<a class="headerlink" href="#primitive-datentypen" title="Permanent link">&para;</a></h2>
+<h3 id="integers-ganzzahlen">Integers (Ganzzahlen):<a class="headerlink" href="#integers-ganzzahlen" title="Permanent link">&para;</a></h3>
+<p>Integers repräsentieren ganze Zahlen, positiv oder negativ, ohne Dezimalstellen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">alter</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">anzahl_der_aepfel</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+</code></pre></div></td></tr></table></div>
+<p>Möchte man andere Datentypen in Integers umwandeln, nutzt man die <code>int</code>-Funtkion, wie wir unten im Beispiel sehen
+können:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">zahl_von_zeichenkette</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;20&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="floats-gleitkommazahlen">Floats (Gleitkommazahlen):<a class="headerlink" href="#floats-gleitkommazahlen" title="Permanent link">&para;</a></h3>
+<p>Dezimalzahlen werden durch den Datentyp <code>float</code> dargestellt und sind im IEEE 754 Format codiert. Beim Umgang mit floats
+kann es zu Ungenauigkeiten kommen, da sich nicht alle Dezimalzahlen perfekt darstellen lassen. Das sollte aber hier
+für uns noch keine große Rolle spielen.</p>
+<p>Beispiel:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">preis</span> <span class="o">=</span> <span class="mf">19.99</span>
+<span class="n">temperatur</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span>
+<span class="n">floaty</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="booleans-boolesche-werte">Booleans (Boolesche Werte):<a class="headerlink" href="#booleans-boolesche-werte" title="Permanent link">&para;</a></h3>
+<p>Booleans repräsentieren nur zwei Werte: True (wahr) oder False (falsch).</p>
+<p>Sie sind sehr nützlich in Bedingungen und Schleifen, da sie das zum Beispiel das Ergebnis von Vergleichen sind
+(später mehr dazu).</p>
+<p>Ein anderer praktischer Anwendungsfall ist die Nutzung als 'flag', ob zum Beispiel jemand Student ist oder nicht.</p>
+<p>Beispiel:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ist_student</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">ist_sonnig</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+<p>Von Booleans werden wir um Laufe der Woche noch mehr hören und sie auch schon direkt in unserem eigenen Programm nutzen.</p>
+<h3 id="ubungsaufgaben">Übungsaufgaben<a class="headerlink" href="#ubungsaufgaben" title="Permanent link">&para;</a></h3>
+<details class="question" open="open">
+<summary>🌶 Integer Addition</summary>
+<p>Schreibe ein Programm, das zwei Integers addiert.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Integer Subtraktion</summary>
+<p>Subtrahiere einen Integer von einem anderen und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Float Division</summary>
+<p>Dividiere zwei Floats und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mf">7.5</span> <span class="o">/</span> <span class="mf">2.5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Multiplikation von Integers</summary>
+<p>Multipliziere zwei Integers und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Konvertierung von Float zu Integer</summary>
+<p>Konvertiere einen Float in einen Integer und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">7.8</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Vergleich von Integers</summary>
+<p>Was ist das Ergebnis von:</p>
+<ul>
+<li><code>1 &lt; 3</code></li>
+<li><code>10 &gt; 11</code></li>
+<li><code>22 != 23</code></li>
+<li><code>567 &lt;= 890</code></li>
+<li><code>444 &gt;= 444</code></li>
+<li><code>42 =&lt; 42</code></li>
+</ul>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>       <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">11</span><span class="p">)</span>     <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">22</span> <span class="o">!=</span> <span class="mi">23</span><span class="p">)</span>    <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">567</span> <span class="o">&lt;=</span> <span class="mi">890</span><span class="p">)</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">444</span> <span class="o">&gt;=</span> <span class="mi">444</span><span class="p">)</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">42</span> <span class="o">=&lt;</span> <span class="mi">42</span><span class="p">)</span>    <span class="c1"># SyntaxError</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Booleansches AND</summary>
+<p>Was ist das Ergebnis von:</p>
+<p><code>1 &lt; 3 and 4 &lt; 3</code></p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># False</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Booleansches OR</summary>
+<p>Es gelte <code>a=1</code> und <code>b=2</code>. Was ist das Ergebnis?</p>
+<p><code>a &lt; 3 or b &gt; 3</code></p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># True</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Umwandlung von Integer in Boolean</summary>
+<p>Konvertiere einen Integer in einen Boolean und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>  <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># True</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Modulo-Operator mit Integers</summary>
+<p>Verwende den Modulo-Operator, um den Rest zweier Integers zu finden.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Potenzierung von Floats</summary>
+<p>Berechne die Potenz eines Floats (z.B. <span class="arithmatex">\(5.5^3\)</span>) und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mf">5.5</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Vergleich von Floats</summary>
+<p>Vergleiche zwei Floats miteinander und gib das Ergebnis (True oder False) aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mf">5.5</span> <span class="o">==</span> <span class="mf">5.5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Integer in Float konvertieren</summary>
+<p>Konvertiere einen Integer in einen Float.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Negation eines Booleans</summary>
+<p>Negiere einen booleschen Wert und gib das Ergebnis aus.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Kombination von Booleans und Integers</summary>
+<p>Überprüfe, ob ein Integer positiv ist und gib das Ergebnis als Boolean zurück.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Diskussion</summary>
+<p>Für welche Anwendungen float und integer jeweils besser geeignet sind und wo es keine Rolle spielt!</p>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Integer</strong>: Wenn nur ganze Zahlen Sinn ergeben, z.B. Alter oder Geburtsjahr.</p>
+<p><strong>Floats</strong>: Wenn auch Bruchteile relevant sind, z.B. Gewicht.</p>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Diskussion</summary>
+<p>Kann man mit Fließkommazahlen jede Dezimalzahl darstellen? Begründet eure Antworten.</p>
+<details class="success">
+<summary>Lösung</summary>
+<p>Nein, Fließkommazahlen haben keine unendlich hohe Genauigkeit. Für viele Anwendungen reicht dies aus, aber
+insbesondere wenn sehr viele Berechnungen durchgeführt werden, können diese Ungenauigkeiten zu signifikanten
+Abweichungen führen. Deswegen verwendet man zum Beispiel für Geldbeträge häufig Integer und nutzt die kleinste
+Währungseinheit. Erst zur Ausgabe wird umgerechnet.</p>
+</details>
+</details>
+<h2 id="die-type-funktion">Die <code>type()</code>-Funktion<a class="headerlink" href="#die-type-funktion" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/pEWPaCG4dGI?si=gFzVAMYYYHuBSDJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Die <code>type()</code>-Funktion in Python sagt dir, was für eine Art
+von Sache eine Variable ist. Sie verrät dir, ob es sich um eine Zahl, einen Text oder etwas
+ganz anderes handelt.</p>
+<p><strong>Ein Beispiel:</strong>
+Angenommen, du hast eine Zahl, sagen wir 42. Du möchtest wissen, welche Art von Zahl das ist. Du könntest die <code>type()</code>
+-Funktion verwenden, indem du folgenden Code schreibst:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nummer</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nummer</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p>Wenn du diesen Code ausführst, wird Python dir sagen, dass <code>nummer</code> vom Typ "int" ist, was für "integer" steht.
+So verwendest du die <code>type()</code>-Funktion , um den Typ von Variablen in Python herauszufinden. Du gibst ihr etwas und sie
+verrät dir, was es ist.</p>
+<p><strong>Wofür man die <code>type()</code>-Funktion verwenden kann:</strong>
+Die Verwendung der <code>type()</code>-Funktion in Python kann sehr nützlich sein. Hier sind einige Anwendungsfälle:</p>
+<ul>
+<li><strong>Fehlervermeidung:</strong> Wenn du sicherstellen möchtest, dass dein Code mit den richtigen Daten arbeitet, kannst
+   du <code>type()</code> verwenden, um sicherzustellen, dass die erwarteten Datentypen vorliegen. Wenn du beispielsweise eine
+   Funktion schreibst, die nur mit Ganzzahlen arbeitet, kannst du überprüfen, ob die eingegebene Variable wirklich eine
+   Ganzzahl ist, bevor du weitermachst.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verdopple</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">zahl</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Ungültige Eingabe&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Debugging:</strong> Wenn du einen Fehler in deinem Code findest und herausfinden möchtest, warum er auftritt, kann
+   die <code>type()</code>-Funktion dir helfen. Du kannst sie verwenden, um die Datentypen von Variablen während der Ausführung
+   deines Programms zu überprüfen und so eventuelle Inkonsistenzen zu erkennen.</li>
+<li><strong>Dynamisches Programmieren:</strong> In Python können Variablen unterschiedliche Datentypen haben, da Python eine
+   dynamische Typisierung unterstützt. Manchmal ist es hilfreich, den aktuellen Typ einer Variable während der Laufzeit
+   zu überprüfen und den Programmfluss entsprechend anzupassen.</li>
+</ul>
+<p>Die <code>type()</code>-Funktion ist also ein Werkzeug, mit dem du sicherstellen kannst, dass dein Code korrekt funktioniert und
+den erwarteten Datentypen entspricht. Sie ist besonders nützlich, wenn du mit verschiedenen Datenstrukturen und -typen
+in Python arbeitest.</p>
+<h2 id="strings-list-tupel-set-dictionary">Strings, List, Tupel, Set, Dictionary<a class="headerlink" href="#strings-list-tupel-set-dictionary" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/FaXcBl25hFQ?si=OOKZKs3NAauT4MAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<h3 id="strings-zeichenketten">Strings (Zeichenketten):<a class="headerlink" href="#strings-zeichenketten" title="Permanent link">&para;</a></h3>
+<p>Strings werden verwendet, um Text zu speichern. In Python gibt es eine Vielzahl von Funktionen und Methoden, die es
+erlauben Strings zu verarbeiten. Strings in Python sind Unicode, das heißt so ziemlich jedes Zeichen, was es gibt kann
+gespeichert werden, auch Emojis zum Beipiel!</p>
+<p><strong>Beispiel</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Anna&quot;</span>
+<span class="n">begruessung</span> <span class="o">=</span> <span class="s1">&#39;Hallo Welt!&#39;</span>
+<span class="n">zahl_als_text</span> <span class="o">=</span> <span class="s2">&quot;1234&quot;</span>
+<span class="n">cool</span> <span class="o">=</span> <span class="s2">&quot;😎&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zahl_als_text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cool</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Strings sind für uns sehr wichtig. Der Datentyp ist sehr universell und typischerweise werden jegliche Eingaben und
+Ausgaben eine Art String sein.</p>
+<h3 id="listen">Listen<a class="headerlink" href="#listen" title="Permanent link">&para;</a></h3>
+<p>Listen in Python sind eine der vielseitigsten Datenstrukturen und werden verwendet, um eine geordnete Sammlung von
+Elementen zu speichern.</p>
+<p>Listen werden mit eckigen Klammern <code>[]</code>  oder der <code>list()</code>-Funktion erstellt. Die Elemente werden in eckigen Klammern
+durch Kommata getrennt.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">fruechte</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Apfel&quot;</span><span class="p">,</span> <span class="s2">&quot;Banane&quot;</span><span class="p">,</span> <span class="s2">&quot;Kirsche&quot;</span><span class="p">]</span>
+<span class="n">zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">gemischt</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.14</span><span class="p">,</span> <span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+
+<span class="n">buchstaben</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">)</span> <span class="c1"># [&quot;H&quot;, &quot;a&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</span>
+</code></pre></div></td></tr></table></div>
+<p>Listen sind sehr häufig verwendete Datenstrukturen. Deswegen ist dies hier nur ein kleiner Einstieg und wir lernen
+später noch mehr zu Listen.</p>
+<p>Wir können auf Listen-Elemente auch einfach zugreifen und neue Elemente hinzufügen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">erster_buchstabe</span> <span class="o">=</span> <span class="n">buchstaben</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">fruechte</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Birne&quot;</span><span class="p">)</span> <span class="c1"># [&quot;Apfel&quot;, &quot;Banane&quot;, &quot;Kirsche&quot;, &quot;Birne&quot;]</span>
+</code></pre></div></td></tr></table></div>
+<p>Beim Zugriff auf Listen fangen wir immer bei 0 an mit zählen.</p>
+<h3 id="tupel">Tupel<a class="headerlink" href="#tupel" title="Permanent link">&para;</a></h3>
+<p>Tupel in Python sind ähnlich wie Listen eine Datenstruktur zur Sammlung von Werten. Im Gegensatz zu Listen sind sie
+unveränderlich, wenn sie einmal erstell wurden.</p>
+<p>Sie werden mit runden Klammern <code>()</code> erstellt. Die Elemente werden durch Kommas getrennt.</p>
+<p><strong>Beispiel</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">koordinaten</span> <span class="o">=</span> <span class="p">(</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">20.1</span><span class="p">)</span>
+<span class="n">rgb_farbe</span> <span class="o">=</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Ebenso wie Listen, sind Tupel wichtige Datenstrukturen. Auch hier lernen wir später noch mehr. Wir dürfen aber jetzt
+schon verraten, dass wir Elemente eines Tupels genauso auslesen können, wie die Elemente einer Liste:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">rot_anteil</span> <span class="o">=</span> <span class="n">rgb_farbe</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Aber was passiert eigenltich, wenn wir folgendes machen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">blau_anteil</span> <span class="o">=</span> <span class="n">rgb_farbe</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p>Wir bekommen einen Fehler! Und zwar folgenden:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ne">IndexError</span><span class="p">:</span> <span class="nb">tuple</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</code></pre></div></td></tr></table></div>
+<p>Das sagt uns, dass wir "our of range" sind, also außerhalb der möglichen Elemente einen Zugriff durchführen wollen.</p>
+<h3 id="aufgaben">Aufgaben<a class="headerlink" href="#aufgaben" title="Permanent link">&para;</a></h3>
+<details class="question" open="open">
+<summary>🌶 Liste erstellen</summary>
+<p>Erstelle eine Liste mit den Zahlen von 1 bis 10.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="c1"># oder</span>
+<span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Tupel zu Liste</summary>
+<p>Konvertiere das Tupel <code>(1, 2, 3)</code> in eine Liste.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tupel</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">liste</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tupel</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>Liste invertieren</summary>
+<p>Kehre die Reihenfolge der Elemente in der Liste von Aufgabe 1 um.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Tupel aus Listen</summary>
+<p>Erstelle ein Tupel aus den ersten drei Elementen der Liste von Aufgabe 1.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tupel</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">liste</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Liste von Tupeln</summary>
+<p>Erstelle eine Liste von Tupeln, wobei jedes Tupel aus einer Zahl und ihrem Quadrat besteht (für Zahlen von 1 bis 5).</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_von_tupeln</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Listenelemente filtern</summary>
+<p>Erstelle eine neue Liste aus der Liste von Aufgabe 1, die nur gerade Zahlen enthält.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">gerade_zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">liste</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Element in Liste überprüfen</summary>
+<p>Überprüfe, ob die Zahl 3 in der Liste von Aufgabe 6 enthalten ist.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">3</span> <span class="ow">in</span> <span class="n">gerade_zahlen</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h3 id="sets">Sets<a class="headerlink" href="#sets" title="Permanent link">&para;</a></h3>
+<p>Sets in Python sind eine Datenstruktur, die für die Speicherung einer ungeordneten Sammlung von einzigartigen Elementen
+verwendet wird. Das heißt kein Element kann doppelt vorkommen.</p>
+<p>Wir erstellen Sets mit geschweiften Klammern <code>{}</code> und den jeweiligen Elementen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">einzigartige_zahlen</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">einzigartige_zahlen</span><span class="p">)</span>
+
+<span class="n">buchstaben</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s1">&#39;aa&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">buchstaben</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h3>
+<p>Mit Dictionaries können wir Schlüssel-Wert-Paare speichern. Dies ist die vielleicht wichtigste Datenstruktur in Python
+und wird auch von der Sprache selbst in hohem Maße genutzt. Sehr viele Dinge in Python lassen sich im Grunde auf
+Dictionaries zurückführen.</p>
+<p>Wir erstellen Dictionaries mit geschweiften Klammern <code>{}</code> und <code>Schlüssel: Wert</code>- Paaren, die durch Komma getrennt sind:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mein_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Max&quot;</span><span class="p">,</span> <span class="s2">&quot;Alter&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Stadt&quot;</span><span class="p">:</span> <span class="s2">&quot;Berlin&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mein_dict</span><span class="p">)</span>
+
+<span class="c1"># Zugriff auf den Wert mit dem Schlüssel &quot;Name&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">mein_dict</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># Gibt &quot;Max&quot; aus</span>
+</code></pre></div></td></tr></table></div>
+<h1 id="aufgaben_1">Aufgaben<a class="headerlink" href="#aufgaben_1" title="Permanent link">&para;</a></h1>
+<p>Wenn ihr bei einer Aufgabe nicht wisst, wie es geht oder euch nicht sicher seit, versucht zuerst bei einer Suchmaschine
+eurer Wahl nach einem Lösungsweg zu suchen. Das Finden von Informationen ist ein wichtiger Skill als Software-Entwickler.</p>
+<details class="question" open="open">
+<summary>🌶 Elemente zu Set hinzufügen</summary>
+<p>Füge die Zahlen 4, 5 und 6 zu einem Set <code>{1, 2, 3}</code> hinzu.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">s</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Schlüssel-Wert-Paare in Dictionary</summary>
+<p>Erstelle ein Dictionary mit den Schlüsseln "a", "b", "c" und den Werten 1, 2, 3.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Element aus Set entfernen</summary>
+<p>Entferne ein beliebiges Element aus dem Set von Aufgabe 1.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># Entfernt die Zahl 4 aus dem Set</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Werte aus Dictionary abrufen</summary>
+<p>Greife auf den Wert des Schlüssels "b" im Dictionary von Aufgabe 2 zu.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">wert</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Dictionary Werte ändern</summary>
+<p>Ändere im Dictionary von Aufgabe 2 den Wert von "c" zu 4.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Set Operationen</summary>
+<p>Erstelle die Vereinigung und Schnittmenge zweier Sets <code>{1, 2, 3}</code> und <code>{3, 4, 5}</code>.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">vereinigung</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">|</span> <span class="n">set2</span>
+<span class="n">schnittmenge</span> <span class="o">=</span> <span class="n">set1</span> <span class="o">&amp;</span> <span class="n">set2</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Schlüssel aus Dictionary entfernen</summary>
+<p>Entferne den Schlüssel "a" aus dem Dictionary von Aufgabe 2.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">del</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Duplikate aus Liste entfernen</summary>
+<p>Entferne alle Duplikate aus der Liste <code>[1, 2, 2, 3, 3, 4, 4, 5]</code>.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_ohne_duplikate</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../debugging/debugging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Der Debugger">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Der Debugger
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../math_operations/math_operations/" class="md-footer__link md-footer__link--next" aria-label="Next: Mathematische Operationen">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Mathematische Operationen
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

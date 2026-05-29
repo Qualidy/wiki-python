@@ -1,0 +1,2490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../../funktionen_fehlerbehandlung/">
+      
+      
+        <link rel="next" href="../../type_hints/type_hints/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Funktionen - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#einfuhrung-in-python-funktionen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funktionen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition-von-funktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition von Funktionen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funktionen-mit-parametern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funktionen mit Parametern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ruckgabewerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rückgabewerte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rückgabewerte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mehrere-ruckgabewerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mehrere Rückgabewerte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bedeutung-und-zweck-von-funktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bedeutung und Zweck von Funktionen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="einfuhrung-in-python-funktionen">Einführung in Python-Funktionen<a class="headerlink" href="#einfuhrung-in-python-funktionen" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/yr4-QpURqAY?si=2s_y3alGvtPNVJiu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In Python ist eine Funktion eine selbstständige, wiederverwendbare Codeeinheit, die dazu dient,
+eine bestimmte Aufgabe zu erledigen. Funktionen können Parameter akzeptieren,
+Operationen durchführen und einen können Rückgabewert liefern.</p>
+<pre class="mermaid"><code>graph LR;
+    A([Parameter]) --&gt; B[Funktion] --&gt; C([Rückgabewert])</code></pre>
+<p>Bereits in unseren bisherigen Python-Lektionen haben wir verschiedene eingebaute Funktionen verwendet, die
+verdeutlichen, wie nützlich und vielseitig Funktionen in Python sind. Auch in der Startphase haben wir bereits
+unsere eigenen Funktionen geschrieben.</p>
+<p>Ein klassisches Beispiel ist die <code>print()</code>-Funktion, die wir häufig verwendet haben, um Werte auf dem Bildschirm
+auszugeben.</p>
+<p>Eine weitere bisher häufig genutzte Funktion ist <code>input()</code>, die es uns ermöglicht, Benutzereingaben zu erfassen. Diese
+Eingaben können dann für eine Vielzahl von Zwecken innerhalb des Programms verwendet werden.</p>
+<p>Schließlich haben wir auch die <code>random</code>-Bibliothek und ihre Funktionen wie <code>random.randint()</code> verwendet, um
+Zufallszahlen zu generieren.</p>
+<p>Diese Funktionen sind Beispiele dafür, wie eingebaute und modul-spezifische Funktionen in Python die Entwicklung von
+Programmen vereinfachen und bereichern können, indem sie
+komplexe Aufgaben hinter einfach zu verstehenden und zu verwendenden Schnittstellen verbergen.</p>
+<h2 id="definition-von-funktionen">Definition von Funktionen<a class="headerlink" href="#definition-von-funktionen" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/M7iRN8RikMw?si=XigB3CSjsCXPRCTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Um eine Funktion zu definieren, starten wir eine Zeile mit dem Schlüsselwort <code>def</code>.
+Darauf folgt der Name der Funktion. Darauf eine <code>(</code> und eine Liste von <code>,</code>-seperierten Parameternamen und ein
+abschließendes <code>):</code>. All das war der <strong>Funktionskopf</strong>. Nun wir die nächste Zeile eingerückt.
+Alle folgenden, eingerückten Zeilen sind der <strong>Funktionsrumpf</strong>. Sie werden ausgeführt, wenn die Funktion aufgerufen wird,
+sonst nicht.</p>
+<p>Schauen wir dazu direkt ein Beispiel an einer Funktion <strong>ohne</strong> Parameter (d.h. einfach nur <code>()</code> nach dem Funktionsnamen
+im Funktionskopf):</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20hoch%28%29%3A%0A%20%20%20%20print%28%22Er%20lebe...%22%29%0A%20%20%20%20print%28%22HOCH!%22%29%0A%0Ahoch%28%29%0Ahoch%28%29%0Ahoch%28%29&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hoch</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Er lebe...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HOCH!&quot;</span><span class="p">)</span>
+
+<span class="n">hoch</span><span class="p">()</span>
+<span class="n">hoch</span><span class="p">()</span>
+<span class="n">hoch</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>In den Zeilen 5, 6 und 7 führen wir die Funktion <code>hoch()</code> aus, die in Zeile 1 bis 3 definiert ist.
+Die Ausführung erfolgt, indem wir den Funktionsnamen aufschreiben und dahinter <code>()</code> schreiben.</p>
+<p>Wir sehen dann, wie der Zeiger, von Zeile 5 zu Zeile 1 springt, dann die Zeilen 2 und 3 ausführt und dann
+bei Zeile 6 weitermacht, wo es zuletzt aufgehört hatte.</p>
+<p>Im Funktionskörper können alle Dinge, die wir aus Python kennen ganz normal verwendet werden. Der Code im Funktionsblock
+unterscheidet sich nicht von anderem Python-Code.</p>
+<h2 id="funktionen-mit-parametern">Funktionen mit Parametern<a class="headerlink" href="#funktionen-mit-parametern" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/_v9cpU5LdYc?si=Z_LhctE-a8y4WMuD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Über Parameter können wir dafür sorgen, dass Funktionen nicht immer exakt das Gleiche tun, sondern, eben abhängig von
+den übergebenen Parametern, in ihren Ergebnissen variieren, obwohl die Rechenvorschriften gleich sind.</p>
+<p>Im Bild gesprochen: Ein Rezept besteht einerseits aus einer Liste von Zubereitungsschritten (Funktionskörper)
+aber auch aus einer Auflistung der Zutaten (Parameter). Nun kann man zwei verschiedene Kuchen mit demselben Rezept
+backen, indem man die Zutaten variiert. So macht es z.B. einen Unterschied welche konkrete Apfelsorte man in einem
+Apfelkuchen verwendet.</p>
+<p>Definieren wir Parameter in einer Funktion, so müssen wir diese beim Funktionsaufruf mit Klammern angeben:</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20print_greeting%28name,%20age%29%3A%0A%20%20%20%20if%20age%20%3E%2060%3A%0A%20%20%20%20%20%20%20%20print%28f%22Einen%20wundersch%C3%B6nen%20guten%20Tag,%20%7Bname%7D!%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28f%22Moin%20moin!%22%29%0A%0Aprint_greeting%28%22Kevin%22,%2020%29%0Aprint_greeting%28%22J%C3%B6rg%22,%2068%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Link zum Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">print_greeting</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Einen wunderschönen guten Tag, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Moin moin!&quot;</span><span class="p">)</span>
+
+<span class="n">print_greeting</span><span class="p">(</span><span class="s2">&quot;Kevin&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">print_greeting</span><span class="p">(</span><span class="s2">&quot;Jörg&quot;</span><span class="p">,</span> <span class="mi">68</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<pre class="mermaid"><code>graph LR;
+    P1(["age"]) --&gt; F[print_greeting]
+    P2(["name"]) --&gt; F</code></pre>
+<h2 id="ruckgabewerte">Rückgabewerte<a class="headerlink" href="#ruckgabewerte" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/wSWtdmL83dE?si=blGDMBohuLiKoimp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Nun ist noch wichtig zu erwähnen, dass Funktionen nicht nur verarbeiten, sondern auch ein
+Ergebnis am Ende ihrer Durchführung zurückgeben können. Der Wert der zurückgegeben werden soll steht in einer
+Zeile mit einem vorangehenden <code>return</code>.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20calculate_discounted_price%28price,%20weekday,%20age%29%3A%0A%20%20%20%20discount%20%3D%200%0A%0A%20%20%20%20if%20weekday%20%3D%3D%20%22Sunday%22%20or%20weekday%20%3D%3D%20%22Saturday%22%3A%0A%20%20%20%20%20%20%20%20discount%20%2B%3D%200.25%0A%0A%20%20%20%20if%20age%20%3E%2065%20or%20age%20%3C%206%3A%0A%20%20%20%20%20%20%20%20discount%20%2B%3D%200.5%0A%0A%20%20%20%20return%20price%20*%20%281%20-%20discount%29%0A%0A%0Abase_price%20%3D%2010%0Acurrent_weekday%20%3D%20%22Monday%22%0Apassager_age%20%3D%2070%0A%0Aactual_price%20%3D%20calculate_discounted_price%28base_price,%20current_weekday,%20passager_age%29%0Aprint%28actual_price%29&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calculate_discounted_price</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">weekday</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">weekday</span> <span class="o">==</span> <span class="s2">&quot;Sunday&quot;</span> <span class="ow">or</span> <span class="n">weekday</span> <span class="o">==</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">:</span>
+        <span class="n">discount</span> <span class="o">+=</span> <span class="mf">0.25</span>
+
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">65</span> <span class="ow">or</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">discount</span> <span class="o">+=</span> <span class="mf">0.5</span>
+
+    <span class="k">return</span> <span class="n">price</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">discount</span><span class="p">)</span>
+
+<span class="n">base_price</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">current_weekday</span> <span class="o">=</span> <span class="s2">&quot;Monday&quot;</span>
+<span class="n">passager_age</span> <span class="o">=</span> <span class="mi">70</span>
+
+<span class="n">actual_price</span> <span class="o">=</span> <span class="n">calculate_discounted_price</span><span class="p">(</span><span class="n">base_price</span><span class="p">,</span> <span class="n">current_weekday</span><span class="p">,</span> <span class="n">passager_age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">actual_price</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<pre class="mermaid"><code>graph LR;
+    P1(["price"]) --&gt; F[print_greeting]
+    P2(["weekday"]) --&gt; F
+    P3(["age"]) --&gt; F
+    F --return--&gt; R(["actual_price"])</code></pre>
+<p>⚠ Sobald eine <code>return</code> Zeile durchgeführt wird endet auch sofort die
+Durchführung des Codes, egal, was sonst noch im Funktionsrumpf folgt.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20begruessung%28name%29%3A%0A%20%20%20%20if%20%22q%22%20in%20name.lower%28%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22%7Bname%7D%20ist%20aber%20ein%20seltener%20Name!%22%0A%20%20%20%20return%20f%22Hallo,%20%7Bname%7D!%22%0A%0Aprint%28begruessung%28%22Bojack%22%29%29%0Aprint%28begruessung%28%22Aquafina%22%29%29&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">begruessung</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s2">&quot;q&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> ist aber ein seltener Name!&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hallo, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">(</span><span class="s2">&quot;Bojack&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">(</span><span class="s2">&quot;Aquafina&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="mehrere-ruckgabewerte">Mehrere Rückgabewerte<a class="headerlink" href="#mehrere-ruckgabewerte" title="Permanent link">&para;</a></h3>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/k3rzPwl3NtQ?si=tuSuoJiJLTjJfoJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In Python ist es auch möglich mehrere Objekte auf ein Mal zurück zu geben.
+Die Syntax dafür ist sehr einfach, man schreibt nach dem <code>return</code>
+die Rückgaben mit einem <code>,</code> getrennt nacheinander auf. Hier ein Beispiel
+einer Funktion, die das erste und letze Element einer Liste zurückgibt.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20first_and_last%28my_list%29%3A%0A%20%20%20%20return%20my_list%5B0%5D,%20my_list%5B-1%5D%0A%20%20%20%20%0Af,%20s%20%3D%20first_and_last%28%5B1,2,3,4,5%5D%29%0Aprint%28f%22First%20element%3A%20%7Bf%7D%22%29%0Aprint%28f%22Second%20element%3A%20%7Bs%7D%22%29%0A%0Aboth%20%3D%20first_and_last%28%5B1,2,3,4,5%5D%29%0Aprint%28f%22%7Bboth%7D%20is%20of%20type%20%7Btype%28both%29%7D%22%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">first_and_last</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">first_and_last</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;First element: </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Second element: </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">both</span> <span class="o">=</span> <span class="n">first_and_last</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">both</span><span class="si">}</span><span class="s2"> is of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">both</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Eigentlich gibt die Funktion ein Tupel zurück, aber wir nutzen das automatische
+Entpacken, um die Elemente direkt in Variablen zu speichern.</p>
+<h2 id="bedeutung-und-zweck-von-funktionen">Bedeutung und Zweck von Funktionen<a class="headerlink" href="#bedeutung-und-zweck-von-funktionen" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Modularität</strong>: Funktionen ermöglichen es, den Code in kleinere, wiederverwendbare Teile zu unterteilen. Das macht
+   den Code übersichtlicher und wartbarer.</p>
+</li>
+<li>
+<p><strong>Wiederverwendbarkeit</strong>: Einmal definierte Funktionen können in verschiedenen Teilen eines Programms oder sogar in
+   verschiedenen Programmen wiederverwendet werden.</p>
+</li>
+<li>
+<p><strong>Abstraktion</strong>: Durch Funktionen kann man komplexe Abläufe hinter einer einfachen Schnittstelle verbergen. Nutzer
+   der Funktion müssen nicht wissen, wie die Funktion intern arbeitet.</p>
+</li>
+<li>
+<p><strong>Testbarkeit</strong>: Funktionen ermöglichen es, kleine Teile des Codes isoliert zu testen.</p>
+</li>
+</ol>
+<h1 id="aufgaben">Aufgaben<a class="headerlink" href="#aufgaben" title="Permanent link">&para;</a></h1>
+<details class="question" open="open">
+<summary>🌶 Einfache Begrüßungsfunktion</summary>
+<p>Schreibe eine Funktion <code>begruesse()</code>, die "Hallo Welt!" ausgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">begruesse</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo Welt!&quot;</span><span class="p">)</span>
+<span class="n">begruesse</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Quadratzahlen</summary>
+<p>Schreibe eine Funktion <code>quadrat()</code>, die das Quadrat einer übergebenen Zahl zurückgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">quadrat</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">zahl</span> <span class="o">*</span> <span class="n">zahl</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quadrat</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Maximum von zwei Zahlen</summary>
+<p>Schreibe eine Funktion <code>max_zwei()</code>, die zwei Zahlen als Argumente nimmt und die größere
+   Zahl zurückgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_zwei</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max_zwei</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Summierung</summary>
+<p>Schreibe eine Funktion <code>summiere()</code>, die die Summe von drei übergebenen Zahlen berechnet und
+   zurückgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">summiere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">summiere</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 String-Wiederholung</summary>
+<p>Schreibe eine Funktion <code>wiederhole_string(str, n)</code>, die einen String <code>str</code> und eine Zahl <code>n</code>
+   nimmt und den String <code>n</code>-mal wiederholt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">wiederhole_string</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+  <span class="k">return</span> <span class="nb">str</span> <span class="o">*</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wiederhole_string</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Fahrenheit in Celsius</summary>
+<p>Schreibe eine Funktion <code>fahrenheit_in_celsius()</code>, die eine Temperatur in Fahrenheit nimmt
+   und in Celsius umrechnet. Die Formel dazu ist <code>c = (f - 32) * 5 / 9</code>.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fahrenheit_in_celsius</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">f</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fahrenheit_in_celsius</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Listenelemente addieren</summary>
+<p>Schreibe eine Funktion <code>addiere_positive_liste()</code>, die eine Liste von Zahlen 
+nimmt und alle positiven Zahlen in der Liste addiert.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">addiere_positive_liste</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">summe</span> <span class="o">+=</span> <span class="n">i</span>
+
+    <span class="k">return</span> <span class="n">summe</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">addiere_positive_liste</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span> <span class="c1"># 9</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Listenelemente addieren und prüfen</summary>
+<p>Schreibe eine Funktion <code>addiere_negative_liste()</code>, die eine Liste von Zahlen 
+nimmt und alle negativen Zahlen in der Liste addiert. Dabei soll zusätzlich 
+geprüft werden, ob es sich bei dem Eintrag überhaupt um eine Zahl handelt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">addiere_positive_liste</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">summe</span> <span class="o">+=</span> <span class="n">i</span>
+
+    <span class="k">return</span> <span class="n">summe</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">addiere_positive_liste</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="s2">&quot;keine Zahl&quot;</span><span class="p">]))</span> <span class="c1"># -11.1</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Check Gerade Zahl</summary>
+<p>Schreibe eine Funktion <code>ist_gerade()</code>, die prüft, ob eine übergebene Zahl gerade ist.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ist_gerade</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">zahl</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ist_gerade</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Countdown</summary>
+<p>Schreibe eine Funktion <code>countdown()</code>, die eine Zahl nimmt und einen Countdown von dieser Zahl bis 0
+    ausgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">countdown</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">zahl</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+       <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">countdown</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Minimum in Liste finden</summary>
+<p>Schreibe eine Funktion <code>finde_minimum()</code>, die eine Liste von Zahlen nimmt und das
+kleinste Element zurückgibt. Nutze dabei keine bestehende Funktion in Python,
+sondern implementiere dies über eine Schleife.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">finde_minimum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="o">&lt;</span> <span class="n">minimum</span><span class="p">:</span>
+            <span class="n">minimum</span> <span class="o">=</span> <span class="n">element</span>
+    <span class="k">return</span> <span class="n">minimum</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">finde_minimum</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">]))</span> <span class="c1"># 2</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Länge eines Strings</summary>
+<p>Schreibe eine Funktion <code>laenge_string()</code>, die die Länge eines übergebenen Strings
+zurückgibt. Nutze dabei keine bestehende Funktion in Python,
+sondern implementiere dies über eine Schleife.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">laenge_string</span><span class="p">(</span><span class="n">my_str</span><span class="p">):</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="n">length</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">length</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">laenge_string</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶 Multiplikationstabelle</summary>
+<p>Schreibe eine Funktion <code>multiplikationstabelle()</code>, die eine Zahl nimmt und ihre
+    Multiplikationstabelle bis 10 ausgibt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiplikationstabelle</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+       <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">zahl</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">zahl</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">multiplikationstabelle</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Palindrome prüfen</summary>
+<p>Schreibe eine Funktion <code>ist_palindrom()</code>, die einen String nimmt und prüft, ob es ein
+    Palindrom ist.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ist_palindrom</span><span class="p">(</span><span class="n">my_str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">my_str</span> <span class="o">==</span> <span class="n">my_str</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ist_palindrom</span><span class="p">(</span><span class="s2">&quot;radar&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Mehrere Rückgabewerte</summary>
+<p>Schreibe eine Funktion, die aus einem Text das längste und das kürzeste Wort
+findet und diese zurückgibt. Wenn es mehrere Wörter gleicher länge gibt, soll
+das Erste verwendet werden.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">biggest_and_smallest_word</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">longest</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">shortest</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">shortest</span><span class="p">):</span>
+            <span class="n">shortest</span> <span class="o">=</span> <span class="n">word</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">shortest</span><span class="p">):</span>
+            <span class="n">longest</span> <span class="o">=</span> <span class="n">word</span>
+
+    <span class="k">return</span> <span class="n">shortest</span><span class="p">,</span> <span class="n">longest</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<h2 id="argumente-vs-parameter-was-ist-der-unterschied">Argumente vs Parameter - Was ist der Unterschied?<a class="headerlink" href="#argumente-vs-parameter-was-ist-der-unterschied" title="Permanent link">&para;</a></h2>
+<p>In der Programmierung ist es wortvoll, die Unterschiede zwischen Parametern und Argumenten zu
+verstehen, da sie oft fälschlicherweise synonym verwendet werden, obwohl sie unterschiedliche Konzepte darstellen.</p>
+<h4 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Parameter sind die Variablen, die in der Definition einer Funktion aufgeführt werden. Sie agieren wie
+  Platzhalter für die Werte, die die Funktion beim Aufruf erhält.</li>
+<li><strong>Beispiel</strong>: In der Funktionsdefinition <code>def addiere(a, b):</code>, sind <code>a</code> und <code>b</code> die Parameter. Sie definieren, welche
+  Art von Werten die Funktion erwartet.</li>
+</ul>
+<h4 id="argumente">Argumente<a class="headerlink" href="#argumente" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Definition</strong>: Argumente sind die tatsächlichen Werte, die beim Aufruf einer Funktion an diese übergeben werden. Sie
+  ersetzen die Parameter, wenn die Funktion ausgeführt wird.</li>
+<li><strong>Beispiel</strong>: Beim Aufruf <code>addiere(3, 5)</code>, sind <code>3</code> und <code>5</code> die Argumente. Sie sind die konkreten Werte, die für <code>a</code>
+  und <code>b</code> eingesetzt werden.</li>
+</ul>
+<p><strong>Analogie</strong>: Man kann sich Parameter als die "Beschreibung" eines Produkts und Argumente als das "tatsächliche
+Produkt" vorstellen.</p>
+<h2 id="default-parametern">Default Parametern<a class="headerlink" href="#default-parametern" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/jO6WghRG54w?si=L7YCF_fprbgI9JYa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>In Python ist es möglich einen Parameter schon bei der Funktionsdefinition
+zu belegen. Wenn dieser Parameter dann beim Aufruf nicht explizit gesetzt
+wird, dann wird der vorher festgelegte default-Wert als Argument genutzt. Im folgenden
+Beispiel sehen wird, dass der Parameter <code>formal</code> per default auf <code>False</code>
+gesetzt ist.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">begruessung</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">formal</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">formal</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Sehr geehrte/r </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">,&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hallo, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">(</span><span class="s2">&quot;Anna&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">(</span><span class="s2">&quot;Prof. Dr. Müller&quot;</span><span class="p">,</span> <span class="n">formal</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">(</span><span class="s2">&quot;Frau Hiltraut&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">begruessung</span><span class="p">(</span><span class="n">formal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Herr Hiltraut&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p>Sobald ein Parameter eine Defaultbelegung hat, müssen auch die darauf
+folgenden Parameter eine Defaultbelegung aufweisen. Der Funktionskopf
+<code>def begruessung(formal=False, name)</code> würde also zu einem Fehler führen.</p>
+<h1 id="callstack">Callstack<a class="headerlink" href="#callstack" title="Permanent link">&para;</a></h1>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/svoOgKS9n6w?si=tjvH1shIZwsX6MGp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Es ist möglich Funktionen in Funktionen auszuführen. Dabei entsteht ein sog. <strong>Stack</strong>
+von Funktionsaufrufen.</p>
+<p>Im folgenden Code, siehst du, wie Funktionen in Funktionen ausgeführt werden.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20calculate_price%28base_price,%20age_of_passenger%29%3A%0A%20%20%20%20discount%20%3D%200%0A%20%20%20%20%0A%20%20%20%20if%20age_of_passenger%20%3E%2065%3A%0A%20%20%20%20%20%20%20%20discount%20%2B%3D%20calculate_discount_for_elders%28age_of_passenger%29%0A%20%20%20%20%0A%20%20%20%20result%20%3D%20calculate_discount%28base_price,%20discount%29%0A%20%20%20%20return%20result%0A%20%20%20%20%0Adef%20calculate_discount_for_elders%28age_of_passenger%29%3A%0A%20%20%20%20if%20age_of_passenger%20%3E%20100%3A%0A%20%20%20%20%20%20%20%20return%201.0%0A%20%20%20%20return%200.5%0A%20%20%20%20%0Adef%20calculate_discount%28base_price,%20discount%29%3A%0A%20%20%20%20reduction%20%3D%201%20-%20discount%0A%20%20%20%20result%20%3D%20base_price%20*%20reduction%0A%20%20%20%20return%20result%0A%20%20%20%20%0Aprice%20%3D%2010%0Aage%20%3D%2090%0Aactual_price%20%3D%20calculate_price%28price,%20age%29%0Aprint%28actual_price%29&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calculate_price</span><span class="p">(</span><span class="n">base_price</span><span class="p">,</span> <span class="n">age_of_passenger</span><span class="p">):</span>
+    <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">age_of_passenger</span> <span class="o">&gt;</span> <span class="mi">65</span><span class="p">:</span>
+        <span class="n">discount</span> <span class="o">+=</span> <span class="n">calculate_discount_for_elders</span><span class="p">(</span><span class="n">age_of_passenger</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">calculate_discount</span><span class="p">(</span><span class="n">base_price</span><span class="p">,</span> <span class="n">discount</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_discount_for_elders</span><span class="p">(</span><span class="n">age_of_passenger</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">age_of_passenger</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="mf">0.5</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_discount</span><span class="p">(</span><span class="n">base_price</span><span class="p">,</span> <span class="n">discount</span><span class="p">):</span>
+    <span class="n">reduction</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">discount</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">base_price</span> <span class="o">*</span> <span class="n">reduction</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">price</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">actual_price</span> <span class="o">=</span> <span class="n">calculate_price</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">actual_price</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="question" open="open">
+<summary>🌶🌶 Stack in Exceptions</summary>
+<p>Nico hat sich ein Pythonprogramm geschrieben, um seine monatlichen Kosten
+für SMSs zu berechnen. Dieses führt jedoch zu einem Fehler, wenn man es ausführt.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Erstellt eine Liste mit den zu Zahlenden SMS&#39;s</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_free_sms</span><span class="p">(</span>
+    <span class="n">smss_per_month</span><span class="p">,</span>
+    <span class="n">free_sms_per_month</span><span class="p">):</span>
+
+    <span class="n">to_pay</span>  <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">smss</span> <span class="ow">in</span> <span class="n">smss_per_month</span><span class="p">:</span>
+        <span class="n">sms_to_pay</span> <span class="o">=</span> <span class="n">smss</span> <span class="o">-</span> <span class="n">free_sms_per_month</span>
+        <span class="k">if</span> <span class="n">sms_to_pay</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">to_pay</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sms_to_pay</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">to_pay</span>
+
+
+<span class="c1"># Berechnet den Durchschnittspreis basierend auf dem</span>
+<span class="c1"># Gesamtpreis und der Anzahl der Einträge auf denen</span>
+<span class="c1"># sich dieser aufteilt.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_average_price</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">number_of_entries</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">price</span> <span class="o">/</span> <span class="n">number_of_entries</span>
+
+<span class="c1"># Berechnet die Durchschnittlichen Kosten pro Monat</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_average_cost_per_month</span><span class="p">(</span>
+    <span class="n">smss_per_month</span><span class="p">,</span>
+    <span class="n">free_sms_per_month</span><span class="p">,</span>
+    <span class="n">cost_per_sms</span><span class="p">):</span>
+
+    <span class="n">to_pay</span> <span class="o">=</span> <span class="n">remove_free_sms</span><span class="p">(</span><span class="n">smss_per_month</span><span class="p">,</span> <span class="n">free_sms_per_month</span><span class="p">)</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">to_pay</span><span class="p">)</span> <span class="o">*</span> <span class="n">cost_per_sms</span>
+    <span class="n">number_of_entries</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">to_pay</span><span class="p">)</span>
+    <span class="n">average_price</span> <span class="o">=</span> <span class="n">calc_average_price</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">number_of_entries</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">average_price</span>
+
+<span class="n">smss</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+
+<span class="n">average_price_A</span> <span class="o">=</span> <span class="n">calculate_average_cost_per_month</span><span class="p">(</span><span class="n">smss</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">)</span>
+<span class="n">average_price_B</span> <span class="o">=</span> <span class="n">calculate_average_cost_per_month</span><span class="p">(</span><span class="n">smss</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Auf der Konsole erscheint folgender Fehler:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Traceback (most recent call last):
+  File &quot;C:\Users\Nico\myProject\sms_calculator.py&quot;, line 36, in &lt;module&gt;
+    average_price_B = calculate_average_cost_per_month(smss, 30, 0.06)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Nico\myProject\sms_calculator.py&quot;, line 29, in calculate_average_cost_per_month
+    average_price = calc_average_price(price, number_of_entries)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Nico\myProject\sms_calculator.py&quot;, line 18, in calc_average_price
+    return price / number_of_entries
+           ~~~~~~^~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>Welcher Fehler ist passiert?</li>
+<li>In welcher Methode ist der Fehler passiert?</li>
+<li>In welcher Methode wurde diese Methode aufgerufen?</li>
+<li>Wo wurde diese zweite Methode wiederum aufgerufen?</li>
+</ul>
+<h3 id="aufgabe-callstack-im-debugger">Aufgabe: Callstack im Debugger🌶<a class="headerlink" href="#aufgabe-callstack-im-debugger" title="Permanent link">&para;</a></h3>
+<p>Kopiere den obigen Code in eine IDE deiner Wahl. Setze einen Breakpoint in Zeile 18.
+Starte den Debugger.</p>
+<p>Wo findest du den Callstack der Aufgerufenen Funktonen?
+Was siehst du, wenn du durch diesen klickst?</p>
+<h3 id="aufgabe-sms-calculator-reparieren">Aufgabe: SMS-Calculator reparieren🌶🌶<a class="headerlink" href="#aufgabe-sms-calculator-reparieren" title="Permanent link">&para;</a></h3>
+<p>Repariere das obige Programm von Nico.</p>
+<h2 id="funktionen-als-first-class-citizens">Funktionen als First Class Citizens<a class="headerlink" href="#funktionen-als-first-class-citizens" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/WlEBj5i3Cpc?si=gDY8AS8z836GfM8V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Funktionen sind in Python selbst auch Objekte. Das heißt sie können als Argumente übergeben werden.</p>
+<p>Als beispiel sei im Folgenden eine Funktion definiert, die mit jeweils zwei Listenelementen eine Operation durchführt
+und die Ergebnisse in einer neuen Liste speichert (wir gehen mal davon aus, dass die Liste immer eine gerade Anzahl
+von Elementen enthält). Welche Operation das ist, wird auch über eine Parameter festgelegt.</p>
+<p><a href="https://pythontutor.com/render.html#code=def%20combine2%28my_list,%20operation%29%3A%0A%20%20%20%20result%20%3D%20%5B%5D%0A%20%20%20%20for%20i%20in%20range%280,%20len%28my_list%29,2%29%3A%0A%20%20%20%20%20%20%20%20first%20%3D%20my_list%5Bi%5D%0A%20%20%20%20%20%20%20%20second%20%3D%20my_list%5Bi%2B1%5D%0A%20%20%20%20%20%20%20%20r%20%3D%20operation%28first,%20second%29%0A%20%20%20%20%20%20%20%20result.append%28r%29%0A%20%20%20%20return%20result%0A%20%20%20%20%0Adef%20add%28a,%20b%29%3A%0A%20%20%20%20return%20a%2Bb%0A%20%20%20%20%0Acombined_list%20%3D%20combine2%28%5B1,%202,%20True,%20False,%20%22hey%22,%20%22du%22%5D,%20add%29%0Aprint%28combined_list%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">combine2</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">operation</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">),</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">second</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">operation</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="n">combined_list</span> <span class="o">=</span> <span class="n">combine2</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">,</span> <span class="s2">&quot;du&quot;</span><span class="p">],</span> <span class="n">add</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_list</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Beachte, dass hier in Zeile 13 nur der Funktionsname <code>add</code> als Argument übergeben wird, die runden Klammern fehlen
+(nicht <code>add()</code>)! Denn wenn wir hinter einem Funktionsnamen Klammern schreiben, sagen wir damit, dass die Funktion
+auch ausgeführt wird. Ohne Klammern meinen wir die Funktion als Objekt und können sie hier übergeben.</p>
+<p>Man kann sich das so vorstellen: Eine <strong>Frage</strong> kann etwas sein, dass gestellt wird, um eine Antwort auf diese Frage
+zu bekommen, oder ich kann die Frage auch jemanden mitgeben, dass er diese Frage zu einem späteren Zeitpunkt stellt.
+In dem einen Fall, soll die Frage sofort beantwortet (ausgeführt) werden, im anderen Fall geben wir die Frage mit
+und das Fragen stellen (die Ausführung) kommt später.</p>
+<p><img alt="" src="../comic.jpg" /></p>
+<h3 id="aufgabe-multiplizieren-statt-addieren">Aufgabe: Multiplizieren statt addieren🌶<a class="headerlink" href="#aufgabe-multiplizieren-statt-addieren" title="Permanent link">&para;</a></h3>
+<p>Füge beim obigen Code eine Funktion <code>multiply(a,b)</code> hinzu, die die beiden Parameter <code>a</code> und <code>b</code> miteinander
+multipliziert. Die folgenden Outputs sollen dann erscheinen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">combine2</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">multiply</span><span class="p">)</span> <span class="c1"># [18, &quot;HalloHallo&quot;]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="aufgabe-filtern">Aufgabe: Filtern🌶🌶🌶<a class="headerlink" href="#aufgabe-filtern" title="Permanent link">&para;</a></h3>
+<p>Definiere eine Funktion <code>smaller_than_5(n)</code>, die prüft, ob der Parameter <code>n</code> kleiner als 5 ist. Wenn ja, soll
+<code>True</code> zurückgegeben werden, andernfalls <code>False</code>.</p>
+<p>Definiere eine Funktion namens <code>my_filter(my_list, predicate)</code>, die eine Liste <code>my_list</code> und eine Methode
+<code>predicate</code> erwartet. Der Methode <code>predicate</code> liefert Boolean zurück (also <code>True</code> oder <code>False</code>) und soll
+ein Kriterium sein, nach dem Elemente aus der Liste <em>herausgefiltert</em> werden. Beispiel für dei Ausgabe:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">my_filter</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">],</span> <span class="n">smaller_than_5</span><span class="p">)</span> <span class="c1"># [3, -3, 4, -5]</span>
+<span class="n">my_filter</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">smaller_than_5</span><span class="p">)</span> <span class="c1"># []</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Lösung</summary>
+<ul>
+<li>Welcher Fehler ist passiert? <code>ZeroDivisionError</code>, weil durch <code>0</code> geteilt wurde.</li>
+<li>In welcher Methode ist der Fehler passiert? <code>calc_average_price</code></li>
+<li>In welcher Methode wurde diese Methode aufgerufen? <code>calculate_average_cost_per_month</code></li>
+<li>Wo wurde diese zweite Methode wiederum aufgerufen? Zeile 36</li>
+</ul>
+<p>Man kann also den Stack von unten nach oben einfach lesen.</p>
+</details>
+</details>
+<h2 id="parameterubergabe">Parameterübergabe<a class="headerlink" href="#parameterubergabe" title="Permanent link">&para;</a></h2>
+<details class="video">
+<summary>Video</summary>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/9_PVRQknJ7M?si=r0qpc1aUbfuDuSmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></p>
+</details>
+<p>Jetzt wird es noch einmal <strong>wirklich wichtig</strong>. Es geht darum, was eigentlich an die Funktionen
+genau übergeben wird, wenn wir die Argumente festlegen.</p>
+<p>Schau dir dazu den folgenden Code an und sage voraus, was der Output sein wird:</p>
+<p><a href="https://pythontutor.com/render.html#code=%23%20Primitive%20Types%20as%20Arguments%0Adef%20change_number%28number%29%3A%0A%20%20%20%20number%20%3D%200%20%0A%0Amy_number%20%3D%2010%0Achange_number%28my_number%29%0Aprint%28my_number%29%0A%0A%0A%23%20Complex%20Types%20as%20Arguments%0Adef%20change_value%28sequence%29%3A%0A%20%20%20%20sequence%5B0%5D%20%3D%200%0A%0Amy_list%20%3D%20%5B1,2,3%5D%0Achange_value%28my_list%29%0Aprint%28my_list%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Primitive Types as Arguments</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">change_number</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">my_number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">change_number</span><span class="p">(</span><span class="n">my_number</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_number</span><span class="p">)</span>
+
+<span class="c1"># Complex Types as Arguments</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">change_value</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="n">sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">change_value</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Hast du richtig geraten? Die Variable <code>my_number</code> blieb unverändert, der erste Eintrag
+aus <code>my_list</code> jedoch nicht. Woran liegt das?</p>
+<p>In der Variablen <code>my_number</code> ist ein primitiver Datentyp (<code>int</code>). Der Wert in <code>my_number</code>
+wird in den Parameter <code>number</code> <strong>kopiert</strong>. Wenn dieser nun manipuliert ist,
+kriegt der Wert in <code>my_number</code> das gar nicht mit.</p>
+<p>In der Variablen <code>my_list</code> dagegen ist ein kkomplexer Datentyp (<code>list</code>).
+In der Variablen <code>my_list</code> ist, um genau zu sein, eine <code>Referenz</code> (die Adresse im Speicher) zu einer Liste gespeichert,
+und nicht die ganze Liste. Beim Methodenaufruf <code>change_value</code> wird nun diese Referenz kopiert.
+Sowohl die globale Variable <code>my_list</code> als auch der lokale Parameter <code>sequenz</code> beziehen sich nun
+auf dasselbe komplexe Objekt. Und wenn einer von beiden dieses Objekt ändern, kriegen das also beide mit.</p>
+<p>Und wie weiß ich, welches Objekt ich referenziere? Mit der Funktion <code>id</code> können wir uns
+die ID eines Objektes herausgeben. Die selbe ID heißt, das selbe Objekt liegt vor.</p>
+<p><a href="https://pythontutor.com/render.html#code=a%20%3D%20%5B1,2%5D%0Ab%20%3D%20a%0Ac%20%3D%20%5B1,2%5D%0A%0Aprint%28f%22a%3A%20%7Ba%7D%20hat%20id%20%7Bid%28a%29%7D%22%29%0Aprint%28f%22b%3A%20%7Bb%7D%20hat%20id%20%7Bid%28b%29%7D%22%29%0Aprint%28f%22c%3A%20%7Bc%7D%20hat%20id%20%7Bid%28c%29%7D%22%29&amp;cumulative=false&amp;curInstr=6&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">💻 Online Compiler</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> hat id </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;b: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> hat id </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;c: </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> hat id </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="question" open="open">
+<summary>🌶🌶 Dictionary verändern</summary>
+<p>Schreibe eine Funktion, die ein Dictionary als Parameter erwartet und diesem
+ein neues Schlüssel Value Pärchen hinzufügt.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bigger_dict</span><span class="p">(</span><span class="n">my_dict</span><span class="p">):</span>
+    <span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;entry&quot;</span>
+
+<span class="n">dic</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;old&#39;</span><span class="p">:</span> <span class="s1">&#39;somethin&#39;</span><span class="p">}</span>
+<span class="n">bigger_dict</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span> <span class="c1"># {&#39;old&#39;: &#39;somethin&#39;, &#39;new&#39;: &#39;entry&#39;}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Kopie ausgeben</summary>
+<p>Schreibe eine Funktion, die ein Dictionary als Parameter erwartet und
+eine Kopie des Dictionaries zurückgibt, das einen neuen Schlüssel besitzt.
+Das Argument soll also unverändert bleiben.</p>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">new_bigger_dict</span><span class="p">(</span><span class="n">my_dict</span><span class="p">):</span>
+    <span class="n">new_dict</span> <span class="o">=</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">new_dict</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;entry&quot;</span>
+    <span class="k">return</span> <span class="n">new_dict</span>
+
+<span class="n">dic</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;old&#39;</span><span class="p">:</span> <span class="s1">&#39;somethin&#39;</span><span class="p">}</span>
+
+<span class="n">new_dic</span> <span class="o">=</span> <span class="n">new_bigger_dict</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span> <span class="c1"># {&#39;old&#39;: &#39;somethin&#39;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_dic</span><span class="p">)</span> <span class="c1"># {&#39;old&#39;: &#39;somethin&#39;, &#39;new&#39;: &#39;entry&#39;}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../funktionen_fehlerbehandlung/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Übersicht">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Übersicht
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../type_hints/type_hints/" class="md-footer__link md-footer__link--next" aria-label="Next: Type Hints">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Type Hints
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

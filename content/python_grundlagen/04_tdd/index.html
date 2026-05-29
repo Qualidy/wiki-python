@@ -1,0 +1,2315 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Tests schreiben - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tests-schreiben" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tests schreiben
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tests-schreiben">Tests schreiben<a class="headerlink" href="#tests-schreiben" title="Permanent link">&para;</a></h1>
+<h2 id="modultests">Modultests<a class="headerlink" href="#modultests" title="Permanent link">&para;</a></h2>
+<p>Für den Begriff Modultest oder Komponententest wird häufig im Deutschen der englische Begriff "Unittest" ("unit test")
+verwendet. Modultests verwendet man in der Software-Entwicklung, um Module, also funktionale Einzelteile eines 
+Programmes, zu testen, d.h. man prüft, ob sie die geforderte Funktionalität bringen.
+Es empfiehlt sich, Tests auf Modulebene durchzuführen, da die dortigen
+Funktionalitäten noch eine begrenzte bzw. überschaubare Komplexität zeigen und die Schnittstellen
+noch klar definiert sind. Häufig kann man so ein Modul
+vollständig auf Korrektheit prüfen. Dies ist auf einem umfassenden Software-Paket in der Regel nicht mehr möglich. 
+Niemand kann beispielsweise ein
+Betriebssystem vollständig auf Korrektheit prüfen.</p>
+<p>Wir wollen zunächst ohne Zuhilfenahme besonderer Frameworks selbst Tests schreiben. </p>
+<h2 id="im-modul-eingebaute-tests">Im Modul eingebaute Tests<a class="headerlink" href="#im-modul-eingebaute-tests" title="Permanent link">&para;</a></h2>
+<p>Im folgenden definieren wir ein Modul <code>fibonacci</code>, mit zwei Funktionen:</p>
+<ul>
+<li><code>fib</code> berechnet die Fibonacci-Zahl der n-ten Generation.</li>
+<li><code>fiblist</code> produziert eine Liste von Fibbonaccizahlen bis zur n-ten Generation.</li>
+</ul>
+<p>Zur Erinnerung. Die Fibonaccizahlen beginnen mit <code>0</code> und <code>1</code>. Eine neue Generation von Fibonaccizahlen entsteht
+aus der Summe der letzten beiden Fibonaccizahlen. Also:</p>
+<ul>
+<li>Die 0-te Generation ist 0+1=1.</li>
+<li>Die 1-te Generation ist 1+1=2.</li>
+<li>Die 2-te Generation ist 1+2=3.</li>
+<li>Die 3-te Generation ist 2+3=5.</li>
+<li>Die 4-te Generation ist 3+5=8.</li>
+<li>Die 5-te Generation ist 5+8=13.</li>
+<li>usw. ...</li>
+</ul>
+<p>Das fibonacci-Modul sieht wie folgt aus (Dateiname: <code>fibonacci.py</code>):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sd">&quot;&quot;&quot; Modul mit wichtigen Funktionen zur Fibonacci-Folge &quot;&quot;&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Die Fibonacci-Zahl für die n-te </span>
+<span class="sd">        Generation wird iterativ berechnet &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fiblist</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; produziert die Liste der Fibbo-Zahlen </span>
+<span class="sd">        bis zur n-ten Generation &quot;&quot;&quot;</span>
+    <span class="n">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">fib</span> <span class="o">+=</span> <span class="p">[</span><span class="n">fib</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">fib</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">fib</span>
+</code></pre></div></td></tr></table></div>
+<p>Natürlich kann man dieses Modul auch "manuell" in der interaktiven Python-Shell testen.
+Doch das ist einmalig und müsste bei Änderungen wiederholt werden. Das ist nicht zumutbar.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>fibonacci<span class="w"> </span>import<span class="w"> </span>fib,<span class="w"> </span>fiblist
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+<span class="m">0</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+<span class="m">1</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">10</span><span class="o">)</span>
+<span class="m">55</span>
+&gt;&gt;&gt;<span class="w"> </span>fiblist<span class="o">(</span><span class="m">10</span><span class="o">)</span>
+<span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="m">13</span>,<span class="w"> </span><span class="m">21</span>,<span class="w"> </span><span class="m">34</span>,<span class="w"> </span><span class="m">55</span><span class="o">]</span>
+&gt;&gt;&gt;<span class="w"> </span>fiblist<span class="o">(</span>-8<span class="o">)</span>
+<span class="o">[</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span><span class="o">]</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span>-1<span class="o">)</span>
+<span class="m">0</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">0</span>.5<span class="o">)</span>
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;fibonacci.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>fib
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>range<span class="o">(</span>n<span class="o">)</span>:
+TypeError:<span class="w"> </span><span class="s1">&#39;float&#39;</span><span class="w"> </span>object<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>interpreted<span class="w"> </span>as<span class="w"> </span>an<span class="w"> </span>integer
+&gt;&gt;&gt;<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<p>Um das Testen zu Automatisieren könnte also unser Modul
+direkt um eine oder mehrere if-Anweisungen erweitern:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">fib</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">55</span> <span class="ow">and</span> <span class="n">fib</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12586269025</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test für fib-Funktion erfolgreich&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fib-Funktion liefert fehlerhafte Werte&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Ruft man das Programm dann direkt auf, erhält man folgende Ausgabe:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci.py<span class="w"> </span>
+Test<span class="w"> </span>für<span class="w"> </span>fib-Funktion<span class="w"> </span>erfolgreich
+</code></pre></div></td></tr></table></div>
+<p>Nun wollen wir bewusst einen Fehler in unsere <code>fib</code>-Funktion einbauen. Dazu ändern wir die Zeile</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>  
+</code></pre></div></td></tr></table></div>
+<p>in</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>um.</p>
+<p>Im Prinzip liefert <code>fib</code> zwar noch die Fibonacci-Werte, aber um eins versetzt.
+Wollen wir den <code>n</code>-ten Wert (für n größer als 0 berechnen), so müssen wir <code>fib(n-1)</code> aufrufen.
+Ein Aufruf des veränderten Moduls liefert nun eine Fehlermeldung:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">$</span> <span class="n">python3</span> <span class="n">fibonacci</span><span class="o">.</span><span class="n">py</span> 
+<span class="n">fib</span><span class="o">-</span><span class="n">Funktion</span> <span class="n">liefert</span> <span class="n">fehlerhafte</span> <span class="n">Werte</span>
+</code></pre></div></td></tr></table></div>
+<p>Dieses Vorgehen hat jedoch einen entscheidenden Nachteil.
+Wenn man das Modul importiert, wird auch das Ergebnis dieses oder ähnlicher Tests angezeigt:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>import<span class="w"> </span>fibonacci
+Test<span class="w"> </span>für<span class="w"> </span>fib-Funktion<span class="w"> </span>erfolgreich
+</code></pre></div></td></tr></table></div>
+<p>Es ist aber störend und auch nicht üblich, wenn Module solche Meldungen beim import ausgeben. 
+Module sollen sich "schweigend" laden lassen.</p>
+<p>Wir haben jedoch schon gelernt, wie wir Code eines Moduls nur durchführen lassen, wenn dieses auch gestartet wird:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sd">&quot;&quot;&quot; Modul mit wichtigen Funktionen zur Fibonacci-Folge &quot;&quot;&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Iterative Fibonacci-Funktion &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fiblist</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; produziert Liste der Fibbo-Zahlen &quot;&quot;&quot;</span>
+    <span class="n">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">fib</span> <span class="o">+=</span> <span class="p">[</span><span class="n">fib</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">fib</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">fib</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">fib</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">55</span> <span class="ow">and</span> <span class="n">fib</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12586269025</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test für fib-Funktion erfolgreich&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fib-Funktion liefert fehlerhafte Werte&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Nun gibt es keine Ausgaben, wenn das Modul importiert wird, und zwar weder im Fehlerfall noch im Erfolgsfall. 
+Diese Methode ist die einfachste und am
+weitesten verbreitetste Methode für Modultests.</p>
+<p>Dennoch ist dies noch keine schöne Lösung. Die Tests sind noch sehr unorganisiert und es ist auch schwierig zu testen,
+ob z.B. bestimmte Exceptions richtig geworfen werden.</p>
+<h2 id="doctest-modul">doctest-Modul<a class="headerlink" href="#doctest-modul" title="Permanent link">&para;</a></h2>
+<p>Das doctest-Modul stellt eine weitere einfache Methode dar, Modultests durchzuführen.
+Der eigentliche Test befindet sich bei dieser Methode, wie der
+Name vermuten lässt, im Docstring.</p>
+<h3 id="vorgehensweise">Vorgehensweise:<a class="headerlink" href="#vorgehensweise" title="Permanent link">&para;</a></h3>
+<p>Man muss das Modul "doctest" importieren. 
+Dann kopiert man einen Auszug aus einer interaktiven Sitzung in den Docstring einer Funktion.</p>
+<p>Im Folgenden zeigen wir das Vorgehen an einem simplen Beispiel.
+Dazu haben wir das vorige fibonacci-Modul bis auf die Funktion fib abgespeckt:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Die Fibonacci-Zahl für die n-te </span>
+<span class="sd">    Generation wird iterativ berechnet</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+</code></pre></div></td></tr></table></div>
+<p>Dieses Modul rufen wir nun in einer interaktiven Python-Shell auf und lassen ein
+paar Werte berechnen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>fibonacci<span class="w"> </span>import<span class="w"> </span>fib
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+<span class="m">0</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+<span class="m">1</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">10</span><span class="o">)</span>
+<span class="m">55</span>
+&gt;&gt;&gt;<span class="w"> </span>fib<span class="o">(</span><span class="m">15</span><span class="o">)</span>
+<span class="m">610</span>
+&gt;&gt;&gt;<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<p>Diese Aufrufe mit den Ergebnissen kopieren wir aus der interaktiven Shell in den
+Docstring unserer Funktion. Damit das Modul doctest aktiv wird, müssen wir die
+Methode <code>testmod()</code> starten, falls das Modul direkt aufgerufen wird. Dies können
+wir wie üblich mit einem Test des Attributs <code>__name__</code> auf den Wert <code>"__main__"</code>
+machen. Das vollständige Modul sieht nun wie folgt aus:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Die Fibonacci-Zahl für die n-te </span>
+<span class="sd">    Generation wird iterativ berechnet </span>
+
+<span class="sd">    &gt;&gt;&gt; fib(0)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; fib(1)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; fib(10) </span>
+<span class="sd">    55</span>
+<span class="sd">    &gt;&gt;&gt; fib(15)</span>
+<span class="sd">    610</span>
+<span class="sd">    &gt;&gt;&gt; </span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Starten wir obiges Modul direkt mit dem Aufruf</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci.py
+</code></pre></div></td></tr></table></div>
+<p>erhalten wir keine Ausgabe, weil alles okay ist.</p>
+<p>Deshalb bauen wir wieder einen kleinen Fehler ein. Dazu ändern wir erneut die Zeile</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>in</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>um.</p>
+<p>Nun erhalten wir folgende Ausgabe beim direkten Start des Moduls:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci_doctest.py<span class="w"> </span>
+**********************************************************************
+File<span class="w"> </span><span class="s2">&quot;fibonacci.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+Failed<span class="w"> </span>example:
+<span class="w">    </span>fib<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+Expected:
+<span class="w">    </span><span class="m">0</span>
+Got:
+<span class="w">    </span><span class="m">1</span>
+**********************************************************************
+File<span class="w"> </span><span class="s2">&quot;fibonacci.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">12</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+Failed<span class="w"> </span>example:
+<span class="w">    </span>fib<span class="o">(</span><span class="m">10</span><span class="o">)</span><span class="w"> </span>
+Expected:
+<span class="w">    </span><span class="m">55</span>
+Got:
+<span class="w">    </span><span class="m">89</span>
+**********************************************************************
+File<span class="w"> </span><span class="s2">&quot;fibonacci.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">14</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+Failed<span class="w"> </span>example:
+<span class="w">    </span>fib<span class="o">(</span><span class="m">15</span><span class="o">)</span>
+Expected:
+<span class="w">    </span><span class="m">610</span>
+Got:
+<span class="w">    </span><span class="m">987</span>
+**********************************************************************
+<span class="m">1</span><span class="w"> </span>items<span class="w"> </span>had<span class="w"> </span>failures:
+<span class="w">   </span><span class="m">3</span><span class="w"> </span>of<span class="w">   </span><span class="m">4</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+***Test<span class="w"> </span>Failed***<span class="w"> </span><span class="m">3</span><span class="w"> </span>failures.
+</code></pre></div></td></tr></table></div>
+<p>Es werden alle Aufrufe angezeigt, die ein fehlerhaftes Ergebnis geliefert haben.
+Wir sehen jeweils den Beispielaufruf hinter der Zeile "Failed example:". Hinter
+"Expected:" folgt der erwartete Wert, also der korrekte Wert, und hinter "Got:"
+folgt der von der Funktion produzierte Ausdruck, also der Wert, den doctest beim
+Aufruf von fib erhalten hat.</p>
+<h1 id="unittest">unittest<a class="headerlink" href="#unittest" title="Permanent link">&para;</a></h1>
+<p>Eine weitere Möglichkeit Unittests zu schreiben ist mittels des Pakets <code>unittest</code>. Der offensichtlichste Unterschied zum Modul <code>doctest</code> besteht darin, dass die
+Testfälle bei dem Modul "unittest" außerhalb des eigentlichen Programmcodes definiert werden, d.h. in einer eigenen Datei. Der Vorteil besteht unter anderem
+darin, dass die Programmdokumentation und die Testbeschreibungen voneinander getrennt sind. Der Preis dafür besteht besteht jedoch in einem erhöhten Aufwand
+für die Erstellung der Tests.</p>
+<h3 id="vorgehen">Vorgehen<a class="headerlink" href="#vorgehen" title="Permanent link">&para;</a></h3>
+<p>Wir wollen nun für unser Modul <code>fibonacci.py</code> einen Test mit unittest erstellen. In einer Datei, z.B. <code>fibonacci_unittest.py</code>, müssen wir das Modul unittest und
+das zu testende Modul, also in unserem Fall <code>fibonacci</code>, importieren.</p>
+<p><strong>Hinweis:</strong> Es empfiehlt sich eine einheitliche Konventions innerhalb des Projekts für die Dateinamen die Tests enthalten zu wählen. Wird <em>Visual Studio Code</em> verwendet so sollte für die Ausführungserkennung das Wort <code>test</code> im Dateinamen vorkommen. Entweder <code>fibonacci_test.py</code> oder <code>test_fibonacci.py</code> abhängig davon, ob bevorzugt wird alle Testdateien im Dateibaum nebeneinandern zu haben, oder alternativ die Testdatei neben der Codedatei die sie testet liegen zu haben.</p>
+<p>Außerdem müssen wir eine Klasse mit beliebigem Namen - wir wählen in unserem Beispiel <code>FibonacciTest</code> - erstellen, die von <code>unittest.TestCase</code> erbt. In dieser Klasse werden die nötigen Testfälle in Methoden definiert. <strong>Der Name dieser Methoden ist beliebig, er muss jedoch mit test beginnen.</strong> In unserer Methode <code>testCalculation</code> benutzen wir die Methode <code>assertEqual</code> der Klasse
+<code>TestCase</code>. <code>assertEqual(first, second, msg = None)</code> prüft, ob der Ausdruck <code>first</code> gleich dem Ausdruck <code>second</code> ist. Falls die beiden Ausdrücke ungleich
+sind, wird <code>msg</code> ausgegeben, wenn <code>msg</code> ungleich <code>None</code> ist.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fibonacci</span><span class="w"> </span><span class="kn">import</span> <span class="n">fib</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FibonacciTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">testCalculation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">55</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="mi">6765</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Rufen wir obigen Testfall auf, erhalten wir folgende Ausgabe:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci_unittest.py<span class="w"> </span>
+.
+----------------------------------------------------------------------
+Ran<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.000s
+
+OK
+</code></pre></div></td></tr></table></div>
+<p>Bei der normalen Programmentwicklung ist dies das von uns gewünschte Ergebnis.</p>
+<p>Hier sind wir allerdings interessiert, was im Fehlerfall passiert. Wir produzieren deshalb wieder unseren Fehler. Dazu ändern wir von neuem die Zeile</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>in</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+<p>um.</p>
+<p>Jetzt sieht der Test wie folgt aus:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci_unittest.py<span class="w"> </span>
+<span class="nv">F</span>
+<span class="o">======================================================================</span>
+FAIL:<span class="w"> </span>testCalculation<span class="w"> </span><span class="o">(</span>__main__.FibonacciTest<span class="o">)</span>
+----------------------------------------------------------------------
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;fibonacci_unittest.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>testCalculation
+<span class="w">    </span>self.assertEqual<span class="o">(</span>fib<span class="o">(</span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+AssertionError:<span class="w"> </span><span class="m">1</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="m">0</span>
+
+----------------------------------------------------------------------
+Ran<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.000s
+
+FAILED<span class="w"> </span><span class="o">(</span><span class="nv">failures</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Bereits die erste Anweisung in testCalculation hat eine Ausnahme erzeugt. In diesem Fall wurden die weiteren assertEqual-Aufrufe nicht mehr ausgeführt. Wir verändern fib nun dahingehend, dass wir nur einen falschen Wert erhalten, wenn n auf 20 gesetzt ist:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Iterative Fibonacci-Funktion &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>    
+    <span class="k">return</span> <span class="n">a</span>
+</code></pre></div></td></tr></table></div>
+<p>Die Ausgabe eines Testlaufs sieht nun wie folgt aus:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci_unittest.py<span class="w"> </span>
+<span class="nv">F</span>
+<span class="o">======================================================================</span>
+FAIL:<span class="w"> </span>testCalculation<span class="w"> </span><span class="o">(</span>__main__.FibonacciTest<span class="o">)</span>
+----------------------------------------------------------------------
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;fibonacci_unittest.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">12</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>testCalculation
+<span class="w">    </span>self.assertEqual<span class="o">(</span>fib<span class="o">(</span><span class="m">20</span><span class="o">)</span>,<span class="w"> </span><span class="m">6765</span><span class="o">)</span>
+AssertionError:<span class="w"> </span><span class="m">42</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="m">6765</span>
+
+----------------------------------------------------------------------
+Ran<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.000s
+
+FAILED<span class="w"> </span><span class="o">(</span><span class="nv">failures</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Jetzt wurden aber auch die folgenden Anweisungen durchgeführt, allerdings
+generierten sie keine Ausnahme, da ihre Ergebnisse ja korrekt sind:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="methoden-der-klasse-testcase">Methoden der Klasse TestCase<a class="headerlink" href="#methoden-der-klasse-testcase" title="Permanent link">&para;</a></h3>
+<p>Wir wollen nun näher auf die Klasse TestCase eingehen. Wir stellen dazu einige
+wichtige Methoden dieser Klasse vor. Zunächst stellen wir die beiden
+Hook-Methoden <code>setUp()</code> und <code>tearDown()</code> vor.</p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setUp()</td>
+<td>Bei der Methode setUp handelt es sich um eine sogenannte Hook-Methode. Sie wird vor jedem Aufruf der implementierten Testmethoden aufgerufen. Wird in der Methode setUp eine Ausnahme generiert, so wird diese auch als Error in der Testausgabe ausgegeben. Selbstverständlich wird auch bei einer Ausnahme im setUp-Code der Test abgebrochen.</td>
+</tr>
+<tr>
+<td>tearDown()</td>
+<td>Die Methode tearDown wird nach dem Aufruf einer Testmethode gestartet. Ebenso wie bei setUp gilt, dass im Code von tearDown generierte Ausnahmen auch in der Testausgabe ausgegeben werden.</td>
+</tr>
+<tr>
+<td>assertEqual(self, first, second, msg=None)</td>
+<td>Der Test schlägt fehl, wenn die Parameter "first" und "second" nicht gleich sind. Dabei ist Gleichheit im Sinne von "==" gemeint, also Wertegleichheit und nicht nur reine Objektgleichheit.</td>
+</tr>
+<tr>
+<td>assertAlmostEqual(self, first, second, places=None, msg=None, delta=None)</td>
+<td>Diese Methode schlägt fehl, wenn die Differenz der beiden Parameter "first" und "second" gleich 0 ist, nachdem man sie vor dem Vergleich auf "places" Nachkommastellen gerundet hatte. Der Default-Wert für "places" ist 7.</td>
+</tr>
+<tr>
+<td>assertCountEqual(self, first, second, msg=None)</td>
+<td>Die Parameter "first" und "second" müssen hierbei sequentielle Datentypen sein. Es muss folgendes gelten:<br>Alle Elemente müssen genauso oft in "first" wie in "second" vorkommen.<br><br>Beispiel:<br><br>[0, 1, 1] und [1, 0, 1] gelten in obigem Sinne als gleich, weil die 0 und die 1 jeweils gleich oft vorkommen.<br><br>[0, 0, 1] und [0, 1] sind verschieden, weil die 0 in der ersten Liste zweimal vorkommt und in der zweiten Liste nur einmal.</td>
+</tr>
+<tr>
+<td>assertDictEqual(self, d1, d2, msg=None)</td>
+<td>Betrachtet die beiden Argumente als Dictionaries und prüft auf Gleichheit.</td>
+</tr>
+<tr>
+<td>assertTrue(self, expr, msg=None)</td>
+<td>Prüft, ob der Ausdruck "expr" True ist.</td>
+</tr>
+<tr>
+<td>assertGreater(self, a, b, msg=None)</td>
+<td>Prüft, ob a &gt; b gilt.</td>
+</tr>
+<tr>
+<td>assertGreaterEqual(self, a, b, msg=None)</td>
+<td>Prüft, ob a ≥ b gilt.</td>
+</tr>
+<tr>
+<td>assertFalse(self, expr, msg=None)</td>
+<td>Prüft, ob der Ausdruck "expr" False ist.</td>
+</tr>
+<tr>
+<td>assertLess(self, a, b, msg=None)</td>
+<td>Prüft, ob a &lt; b gilt.</td>
+</tr>
+<tr>
+<td>assertLessEqual(self, a, b, msg=None)</td>
+<td>Prüft, ob a ≤ b gilt.</td>
+</tr>
+<tr>
+<td>assertIn(self, member, container, msg=None)</td>
+<td>Prüft, ob a in b gilt.</td>
+</tr>
+<tr>
+<td>assertIs(self, expr1, expr2, msg=None)</td>
+<td>Prüft, ob "a is b" gilt.</td>
+</tr>
+<tr>
+<td>assertIsInstance(self, obj, cls, msg=None)</td>
+<td>Prüft, ob isinstance(obj, cls) gilt.</td>
+</tr>
+<tr>
+<td>assertIsNone(self, obj, msg=None)</td>
+<td>Prüft, ob "obj is None" gilt.</td>
+</tr>
+<tr>
+<td>assertIsNot(self, expr1, expr2, msg=None)</td>
+<td>Prüft, ob "a is not b" gilt.</td>
+</tr>
+<tr>
+<td>assertIsNotNone(self, obj, msg=None)</td>
+<td>Prüft, ob obj nicht None ist.</td>
+</tr>
+<tr>
+<td>assertListEqual(self, list1, list2, msg=None)</td>
+<td>Listen werden auf Gleichheit geprüft.</td>
+</tr>
+<tr>
+<td>assertMultiLineEqual(self, first, second, msg=None)</td>
+<td>Mehrzeilige Strings werden auf Gleichheit geprüft.</td>
+</tr>
+<tr>
+<td>assertNotRegexpMatches(self, text, unexpected_regexp, msg=None)</td>
+<td>Schlägt fehl, wenn der Text "text" den regulären Ausdruck unexpected_regexp matched.</td>
+</tr>
+<tr>
+<td>assertTupleEqual(self, tuple1, tuple2, msg=None)</td>
+<td>Analog zu assertListEqual</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>https://docs.python.org/3/library/unittest.html</p>
+</blockquote>
+<p>Wir erweitern unser voriges Beispiel um eine setUp- und eine tearDown-Methode:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fibonacci</span><span class="w"> </span><span class="kn">import</span> <span class="n">fib</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FibonacciTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fib_elems</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;setUp executed!&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">testCalculation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">val</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fib_elems</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">val</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Objekte können gelöscht oder geändert werden</span>
+        <span class="c1"># in diesem Fall macht es jedoch wenig Sinn:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fib_elems</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;tearDown executed!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Ein Aufruf führt zu folgendem Ergebnis:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci_unittest2.py<span class="w"> </span>
+setUp<span class="w"> </span>executed!
+tearDown<span class="w"> </span>executed!
+.
+----------------------------------------------------------------------
+Ran<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.000s
+
+OK
+</code></pre></div></td></tr></table></div>
+<p>Die meisten der TestCase-Methoden verfügen über einen optionalen Parameter
+<code>msg</code>. Mit <code>msg</code> kann man eine zusätzliche Beschreibung für einen Fehler
+ausgeben.</p>
+<h2 id="tdd-testgetriebene-entwicklung">TDD: Testgetriebene Entwicklung<a class="headerlink" href="#tdd-testgetriebene-entwicklung" title="Permanent link">&para;</a></h2>
+<h3 id="oder-am-anfang-war-der-test">oder "Am Anfang war der Test"<a class="headerlink" href="#oder-am-anfang-war-der-test" title="Permanent link">&para;</a></h3>
+<p>Im vorigen Abschnitt hatten wir bereits eine fertig geschriebene Fibonacci-Funktion. Man kann auch so vorgehen, dass man bereits am Anfang Ergebnisse in den Docstring schreibt und die Funktion dann erst entwickelt. Das ist die Grund-Idee von "Testgetriebener Entwicklung". Diese wird auf Englisch auch als <strong>Test Driven Development</strong> kurz <strong><em>TDD</em></strong> bezeichnet. Der Entwickler definiert ein Testszenario, welches die gewünschte Funktion abbildet. Zu Beginn wird der
+Test fehlschlagen, denn der Code muss noch geschrieben werden.</p>
+<p>Die Kunst dabei ist, passende Testszenarien zu schreiben. Es ist natürlich erstrebenswert, dass der Test alle möglichen Argumente und alle möglichen
+Rückgabewerte prüft. Das ist aber in der Regel nicht machbar.</p>
+<p>Im Folgenden haben wir den Rückgabewert der Funktion fib fest auf 0 gesetzt:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Die Fibonacci-Zahl für die n-te </span>
+<span class="sd">    Generation wird iterativ berechnet </span>
+
+<span class="sd">    &gt;&gt;&gt; fib(0)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; fib(1)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; fib(10) </span>
+<span class="sd">    55</span>
+<span class="sd">    &gt;&gt;&gt; fib(15)</span>
+<span class="sd">    610</span>
+<span class="sd">    &gt;&gt;&gt; </span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Es versteht sich von selbst, dass ein Test dieses Moduls außer für fib(0) nur
+Fehler liefert:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>fibonacci_TDD.py<span class="w"> </span>
+**********************************************************************
+File<span class="w"> </span><span class="s2">&quot;fibonacci_TDD.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">10</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+Failed<span class="w"> </span>example:
+<span class="w">    </span>fib<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+Expected:
+<span class="w">    </span><span class="m">1</span>
+Got:
+<span class="w">    </span><span class="m">0</span>
+**********************************************************************
+File<span class="w"> </span><span class="s2">&quot;fibonacci_TDD.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">12</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+Failed<span class="w"> </span>example:
+<span class="w">    </span>fib<span class="o">(</span><span class="m">10</span><span class="o">)</span><span class="w"> </span>
+Expected:
+<span class="w">    </span><span class="m">55</span>
+Got:
+<span class="w">    </span><span class="m">0</span>
+**********************************************************************
+File<span class="w"> </span><span class="s2">&quot;fibonacci_TDD.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">14</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+Failed<span class="w"> </span>example:
+<span class="w">    </span>fib<span class="o">(</span><span class="m">15</span><span class="o">)</span>
+Expected:
+<span class="w">    </span><span class="m">610</span>
+Got:
+<span class="w">    </span><span class="m">0</span>
+**********************************************************************
+<span class="m">1</span><span class="w"> </span>items<span class="w"> </span>had<span class="w"> </span>failures:
+<span class="w">   </span><span class="m">3</span><span class="w"> </span>of<span class="w">   </span><span class="m">4</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>__main__.fib
+***Test<span class="w"> </span>Failed***<span class="w"> </span><span class="m">3</span><span class="w"> </span>failures.
+</code></pre></div></td></tr></table></div>
+<p>Man ändert bzw. schreibt nun den eigentlichen Code der Funktion fib solange, bis die Tests im Doctest "bestanden" werden.</p>
+<p>Dieses Vorgehen ist eine Methode der Software-Entwicklung, die man als "Testgetriebene Entwicklung" oder auch "Testgesteuerte Entwicklung" bezeichnet.</p>
+<p>Aber wie so häufig in der Softwareentwicklungsbranche werden auch in diesem Fall die englischen
+Fachbegriffe benutzt, d.h. "test first development" oder noch geläufiger "test-driven development" (TDD).</p>
+<details class="question" open="open">
+<summary>Aufgabe</summary>
+<p>[150min]</p>
+<ol>
+<li>Schreibe für das Codebeispiel <code>primzahlen.py</code> einen<ol>
+<li>Modultest</li>
+<li>Unittest</li>
+<li>Doctest</li>
+</ol>
+</li>
+<li>Erstelle eine Klasse <em>Geo</em> für geometrische Objekte (z.B. Rechteck, Quadrat, Kreis)
+mit Berechnungsfunktionen für Umfang und Fläche. </li>
+<li>Teste die Korrektheit der <em>Geo</em>-Klasse mit Hilfe von doctests.</li>
+<li>Nutze TDD um ein Klasse zu entwickeln, die mathematische Grundoperationen
+ermöglicht, also z.B. <code>add()</code>, <code>sub()</code>, <code>mul()</code> und <code>div()</code>. Erstelle dazu das
+Klassengerüst mit "leeren" Funktionen und entwickle zuerst die (Unit-)Testmethoden nach
+dem Muster "Was muss das Ergebnis einer Addition, Subtraktion, etc sein".
+Ziel ist es eine möglichst hohe Testabdeckung zu erreichen!</li>
+<li>Welches Verhalten sollte bei der <code>div()</code> Methode umbedingt getestet werden?</li>
+</ol>
+</details>
+<h1 id="wichtige-begriffe-zusammengefasst">Wichtige Begriffe zusammengefasst:<a class="headerlink" href="#wichtige-begriffe-zusammengefasst" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>Unittest</strong>: Das <code>unittest</code>-Modul ist ein integriertes Testframework in Python, das Testfälle und Testsuiten bereitstellt. Es ermöglicht die Strukturierung von Tests und das Vergleichen von erwarteten und tatsächlichen Ergebnissen. Unittests können dazu verwendet werden, die Korrektheit von Funktionen, Klassen und Modulen sicherzustellen.</li>
+</ul>
+<p><a href="https://docs.python.org/3/library/unittest.html">Python-Dokumentation zu unittest</a></p>
+<ul>
+<li>
+<p><strong>assert</strong>: In Python dient das <code>assert</code>-Statement dazu, eine Bedingung zu überprüfen und sicherzustellen, dass sie während der Ausführung wahr ist. Wenn die Bedingung falsch ist, wird eine <code>AssertionError</code>-Ausnahme ausgelöst. Die Verwendung von <code>assert</code> ist besonders nützlich für das Schreiben von Tests und die Gewährleistung von Invarianten im Code.
+<a href="https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement">Python-Dokumentation zu assert</a>.</p>
+</li>
+<li>
+<p><strong>TDD (Test-Driven Development)</strong>: TDD, oder "Test Driven Development", ist eine Entwicklungspraxis, bei der Tests vor dem eigentlichen Code geschrieben werden. Der Zyklus besteht typischerweise aus den Schritten: </p>
+</li>
+</ul>
+<p>Schreibe erst einen Test, führe den Test aus (er sollte fehlschlagen), schreibe den Code, um den Test zu bestehen, und führe den Test erneut aus. Dieser Ansatz fördert schrittweise Entwicklung von Funktionen und stellt sicher, dass jede Funktion getestet wird.</p>
+<ul>
+<li><strong>Doctest</strong>: Das <code>doctest</code>-Modul ermöglicht das Schreiben von Tests innerhalb der Docstrings von Python-Modulen und -Funktionen. Es führt die in den Docstrings geschriebenen Beispiele aus und überprüft, ob die Ausgabe mit den erwarteten Ergebnissen übereinstimmt. Doctests sind eine praktische Möglichkeit, Tests direkt in der Dokumentation zu integrieren.
+<a href="https://docs.python.org/3/library/doctest.html">Python-Dokumentation zu doctest</a></li>
+</ul>
+<h1 id="aufgaben">Aufgaben<a class="headerlink" href="#aufgaben" title="Permanent link">&para;</a></h1>
+<details class="question" open="open">
+<summary>🌶 Primzzahlenfunktion testen</summary>
+<ul>
+<li>Modultest: Schreibe Tests für das Modul <code>primzahlen.py</code>, um sicherzustellen, dass die Primzahlberechnung korrekt funktioniert.</li>
+<li>Unittest: Erstelle Unittests für die Funktionen in <code>primzahlen.py</code> mit dem <code>unittest</code>-Framework.</li>
+<li>Doctest: Integriere Beispiele und Tests direkt in die Docstrings des Moduls.</li>
+</ul>
+<p>primzahlen.py: </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ist_primzahl</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Geo-Funktionssammlung</summary>
+<ul>
+<li>Implementiere eine Funktionssammlung namens <code>Geo</code>, die geometrische Objekte berechnen kann (z.B., Rechteck, Quadrat, Kreis).</li>
+<li>Füge Berechnungsmethoden für Umfang und Fläche hinzu.</li>
+<li>Schreibe doctest-Tests, um die Korrektheit der Implementierung sicherzustellen.</li>
+</ul>
+</details>
+<details class="question" open="open">
+<summary>🌶🌶 Mathe-Funktionssammlung (TDD)</summary>
+<ul>
+<li>Nutze TDD, um eine Funktionssammlung für mathematische Grundoperationen (<code>add()</code>, <code>sub()</code>, <code>mul()</code>, <code>div()</code>) zu entwickeln.</li>
+<li>Schreibe zuerst die Unit-Tests und dann die Implementierung.</li>
+<li>Achte auf eine hohe Testabdeckung.</li>
+<li>Beachte insbesondere die Testfälle für die <code>div()</code> Methode, um sicherzustellen, dass unerwartete Fehler oder Divisionen durch Null behandelt werden.</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

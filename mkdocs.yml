@@ -59,10 +59,10 @@ nav:
   #      - Pip und Venv: content/module_pakete_pip/pip_venv/pip_venv.md
   #
   - OOP Vertiefung:
-      - Vererbung: content/vererbung_polymorphismus/vererbung/vererbung.md
-      - Magic Methods: content/dunder_kapselung/magic_methods/magic_methods.md
-      - Getter & Setter (@property): content/dunder_kapselung/getter_setter/getter_setter.md
-      - Class- & Staticmethod: content/dunder_kapselung/class_static_methods/class_static_methods.md
+      - Vererbung: content/oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung.md
+      - Magic Methods: content/oop_vertiefung/magic_methods/magic_methods.md
+      - Getter & Setter (@property): content/oop_vertiefung/getter_setter/getter_setter.md
+      - Class- & Staticmethod: content/oop_vertiefung/class_static_methods/class_static_methods.md
 
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md

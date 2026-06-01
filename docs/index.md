@@ -34,7 +34,7 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-vector-line: OOP Vertiefung ](content/vererbung_polymorphismus/vererbung/vererbung.md)
+- [ :material-vector-line: OOP Vertiefung ](content/oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung.md)
 
 </div>
 

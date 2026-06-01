@@ -15,6 +15,7 @@ question: |
   ```
   {{ youtube_video("https://www.youtube.com/embed/YPwcI1X8BdA?si=PBN9PXM8LYYL46PG") }}
 solution: |
+  ```python
   class Buchhaltung:
       pass
 
@@ -31,3 +32,4 @@ solution: |
   print(summe)
 
   print(sum(value for name, value in booking.__dict__.items() if 'spending' in name))
+  ```

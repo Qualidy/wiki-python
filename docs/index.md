@@ -34,6 +34,8 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
+- [ :material-vector-line: OOP Vertiefung ](content/vererbung_polymorphismus/vererbung/vererbung.md)
+
 </div>
 
 ### Woche 4

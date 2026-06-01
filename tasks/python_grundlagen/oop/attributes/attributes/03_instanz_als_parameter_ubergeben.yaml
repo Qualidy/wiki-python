@@ -24,6 +24,7 @@ question: |
 
   {{ youtube_video("https://www.youtube.com/embed/6fi7XA91uos?si=3ETKGAxL495ic8zM") }}
 solution: |
+  ```python
   class Person:
       pass
 
@@ -38,3 +39,4 @@ solution: |
 
   print(getInitials(anna)) # 'ALZ'
   print(getInitials(karl)) # 'KG'
+  ```

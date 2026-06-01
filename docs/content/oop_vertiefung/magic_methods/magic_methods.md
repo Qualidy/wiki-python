@@ -93,8 +93,8 @@ print(C) # Zeigt die definierte Stringdarstellung der Klasse an.
 # Magic Methods:
 
 | Magic/Dunder Method | ermöglicht       | Beschreibung                                                                                                                                                                                         | Dokumentation                                                                           |
-| ------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --- |
-| `__str__`           | `print(x)`       | Diese magische Methode wird aufgerufen, wenn die `str`-Funktion auf ein Objekt angewendet wird. Sie ermöglicht die Definition einer benutzerfreundlichen Zeichenfolge, die das Objekt repräsentiert. | [Dokumentation](https://docs.python.org/3/reference/datamodel.html#object.__str__)      |     |
+| ------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `__str__`           | `print(x)`       | Diese magische Methode wird aufgerufen, wenn die `str`-Funktion auf ein Objekt angewendet wird. Sie ermöglicht die Definition einer benutzerfreundlichen Zeichenfolge, die das Objekt repräsentiert. | [Dokumentation](https://docs.python.org/3/reference/datamodel.html#object.__str__)      |
 | `__add__`           | `x + y`          | Diese magische Methode wird aufgerufen, wenn das `+`-Zeichen auf ein Objekt angewendet wird. Sie ermöglicht die Definition der Addition von zwei Objekten der Klasse.                                | [Dokumentation](https://docs.python.org/3/reference/datamodel.html#object.__add__)      |
 | `__len__`           | `len(x)`         | Diese magische Methode wird aufgerufen, wenn die `len`-Funktion auf ein Objekt angewendet wird. Sie ermöglicht die Definition der Anzahl von Elementen in einem Objekt.                              | [Dokumentation](https://docs.python.org/3/reference/datamodel.html#object.__len__)      |
 | `__sub__`           | `x - y`          | Diese magische Methode wird aufgerufen, wenn das `-`-Zeichen auf ein Objekt angewendet wird. Sie ermöglicht die Definition der Subtraktion von zwei Objekten der Klasse.                             | [Dokumentation](https://docs.python.org/3/reference/datamodel.html#object.__sub__)      |
@@ -111,4 +111,6 @@ print(C) # Zeigt die definierte Stringdarstellung der Klasse an.
 Es gibt noch weitere ... 😉
 
 {{ task(file="tasks/python_grundlagen/oop/magic_methods/magic_methods/01_weiter_mit_punkten.yaml") }}
+{{ task(file="tasks/python_grundlagen/oop/magic_methods/magic_methods/01b_weiter_mit_punkten.yaml") }}
+{{ task(file="tasks/python_grundlagen/oop/magic_methods/magic_methods/01c_weiter_mit_punkten.yaml") }}
 {{ task(file="tasks/python_grundlagen/oop/magic_methods/magic_methods/02_was_ist_notig.yaml") }}

@@ -37,8 +37,10 @@ question: |
           ...
   ```
 
+solution: |
   {{ youtube_video("https://www.youtube.com/embed/R-kMRMouH0g?si=0fCG5tnFnIw5evHG") }}
-  <pre><code>class Person:
+  ```python
+  class Person:
       person_count = 0
 
       def __init__(self, name, age):
@@ -99,4 +101,4 @@ question: |
       def test_get_count(self):
           Person.from_person(Person("Walter", 50))
           self.assertEqual(Person.get_count(), 2)
-  </code></pre></details>
+  ```

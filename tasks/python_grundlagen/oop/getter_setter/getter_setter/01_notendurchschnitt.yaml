@@ -8,7 +8,9 @@ question: |
   Erstelle eine Property `durchschnitt`, die nur einen Getter hat und zwar `get_durchschnitt`.
 
   {{ youtube_video("https://www.youtube.com/embed/JY6vrxQnGAo?si=N5xboL9qcmP8cNHk") }}
-  <pre><code>class Student:
+solution: |
+  ```python
+  class Student:
       def __init__(self, mathe, python, englisch):
           self.mathe = mathe
           self.python = python
@@ -20,4 +22,4 @@ question: |
       durchschnitt = property(get_durchschnitt)
 
   print(Student(1,2,1).durchschnitt) # 1.333333333
-  </code></pre></details>
+  ```

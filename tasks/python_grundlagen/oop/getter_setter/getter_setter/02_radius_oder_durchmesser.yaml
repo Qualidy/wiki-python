@@ -22,8 +22,10 @@ question: |
 
   * Schreibe mindestens 7 Unittest, die die Anforderungen prüfen.
 
+solution: |
   {{ youtube_video("https://www.youtube.com/embed/3mH44DRp4Eo?si=S0jMli8t9yiXE5_c") }}
-  <pre><code>import unittest
+  ```python
+  import unittest
 
   class KreisTest(unittest.TestCase):
       def test_no_negativ_radius(self):
@@ -61,13 +63,12 @@ question: |
 
       # Es können noch Tests hinzugefügt werden, die prüfen,
       # dass die richtigen Exceptions geworfen werden.
-  </code></pre>
-  </code></pre></details>
-
+  ```
   {{ youtube_video("https://www.youtube.com/embed/LzCGoGBIoks?si=4zW3Wcw2XzMb0Hif") }}
-  <pre><code>class Kreis:
+  ```python
+  class Kreis:
       def __init__(self, radius):
-          self.radius = radius
+          self.radius = radius # Nutzt die set_radius Methode
 
       def get_radius(self):
           return self.__radius
@@ -92,5 +93,4 @@ question: |
 
       diameter = property(get_diameter, set_diameter)
       radius = property(get_radius, set_radius)
-  </code></pre>
-  </details>
+  ```

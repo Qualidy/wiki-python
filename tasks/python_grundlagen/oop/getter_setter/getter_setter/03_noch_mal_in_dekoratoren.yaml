@@ -5,8 +5,10 @@ question: |
   und aus [Aufgabe: Radius und Durchmesser](#aufgabe-radius-oder-durchmesser)
   so an, dass es mit Dekoratoren funktioniert.
 
+solution: |
   {{ youtube_video("https://www.youtube.com/embed/1Wgn0rTlBQg?si=cljmPH2I-82IqmxN") }}
-  <pre><code>class Student:
+  ```python
+  class Student:
       def __init__(self, mathe, python, englisch):
           self.mathe = mathe
           self.python = python
@@ -17,10 +19,12 @@ question: |
           return (self.mathe + self.python + self.englisch) / 3
 
   print(Student(1,2,1).durchschnitt) # 1.333333333
-  </code></pre></details>
+  ```
 
   {{ youtube_video("https://www.youtube.com/embed/9IdzD5pMjXs?si=GXyytGuuTXuAImO-") }}
-  <pre><code>class Kreis:
+
+  ```python
+  class Kreis:
       def __init__(self, radius):
           self.radius = radius
 
@@ -48,4 +52,4 @@ question: |
               return Kreis(self.radius * other)
           else:
               raise TypeError()
-  </code></pre></details>
+  ```

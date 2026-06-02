@@ -61,6 +61,7 @@ nav:
   - OOP Vertiefung:
       - Vererbung: content/oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung.md
       - Magic Methods: content/oop_vertiefung/magic_methods/magic_methods.md
+      - Protected & Private: content/oop_vertiefung/protected_private/protected_private.md
       - Getter & Setter (@property): content/oop_vertiefung/getter_setter/getter_setter.md
       - Class- & Staticmethod: content/oop_vertiefung/class_static_methods/class_static_methods.md
 

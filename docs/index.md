@@ -42,9 +42,8 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-help-box: Exceptions Vertiefung ](#)
-- [ :material-file-multiple: Dateien & Dateisystem ](#)
-- [ :material-package-variant-closed: Module, Pakete & pip ](#)
+- [ :material-help-box: Exceptions Vertiefung ](content/exceptions/index.md)
+- [ :material-package-variant-closed: Module, Pakete & pip ](content/exceptions/pip.md)
 
 <!--
 - [ :material-help-box: Exceptions Vertiefung ](content/python_grundlagen/try_except/try_except.md)

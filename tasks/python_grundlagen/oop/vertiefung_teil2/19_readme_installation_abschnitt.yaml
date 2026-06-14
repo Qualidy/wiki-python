@@ -1,0 +1,38 @@
+title: "Installationsabschnitt schreiben"
+difficulty: 2
+question: |
+  Schreibe einen Markdown-Abschnitt `## Installation` für ein Python-Projekt.
+
+  Der Abschnitt soll diese Schritte enthalten:
+
+  - Repository öffnen oder herunterladen
+  - virtuelle Umgebung erstellen
+  - virtuelle Umgebung aktivieren
+  - Abhängigkeiten installieren
+  - Programm starten
+
+  Nutze mindestens zwei Codeblöcke.
+solution: |
+  ```markdown
+  ## Installation
+
+  Öffne zuerst den Projektordner im Terminal.
+
+  ```bash
+  cd mein-projekt
+  python -m venv .venv
+  ```
+
+  Aktiviere danach die virtuelle Umgebung:
+
+  ```bash
+  source .venv/bin/activate
+  ```
+
+  Installiere die Abhängigkeiten und starte das Programm:
+
+  ```bash
+  pip install -r requirements.txt
+  python main.py
+  ```
+  ```

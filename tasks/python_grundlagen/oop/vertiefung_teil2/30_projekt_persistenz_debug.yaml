@@ -1,0 +1,29 @@
+title: "Projekt: Speichern und Debuggen"
+difficulty: 3
+question: |
+  Ergänze dein Projekt um zwei Funktionen:
+
+  1. `save_state(filename, data)` speichert einfache Projektdaten in eine Datei.
+  2. `debug_object(obj)` gibt Klasse, Attribute und Oberklassen aus.
+
+  Nutze für `save_state` entweder Text, CSV oder JSON.
+solution: |
+  Beispiel mit JSON:
+
+  ```python
+  import json
+
+
+  def save_state(filename, data):
+      with open(filename, "w", encoding="utf-8") as file:
+          json.dump(data, file, indent=2)
+
+
+  def debug_object(obj):
+      print("Klasse:", obj.__class__.__name__)
+      print("Attribute:", obj.__dict__)
+      print("Oberklassen:", obj.__class__.__bases__)
+
+
+  save_state("savegame.json", {"player": "Ada", "room": 1})
+  ```

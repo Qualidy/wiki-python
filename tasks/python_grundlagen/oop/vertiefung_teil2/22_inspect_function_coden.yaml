@@ -1,0 +1,38 @@
+title: "inspect_object schreiben"
+difficulty: 2
+question: |
+  Schreibe eine Funktion `inspect_object(obj)`.
+
+  Sie soll ausgeben:
+
+  - Name der Klasse
+  - Modul der Klasse
+  - direkte Oberklassen
+  - Instanzattribute über `__dict__`
+  - ob das Objekt ein Attribut `name` besitzt
+
+  Teste die Funktion mit mindestens zwei eigenen Klassen.
+solution: |
+  ```python
+  def inspect_object(obj):
+      cls = obj.__class__
+      print("Klasse:", cls.__name__)
+      print("Modul:", cls.__module__)
+      print("Oberklassen:", cls.__bases__)
+      print("Attribute:", obj.__dict__)
+      print("hat name:", hasattr(obj, "name"))
+
+
+  class Person:
+      def __init__(self, name):
+          self.name = name
+
+
+  class Course:
+      def __init__(self, title):
+          self.title = title
+
+
+  inspect_object(Person("Ada"))
+  inspect_object(Course("Python"))
+  ```

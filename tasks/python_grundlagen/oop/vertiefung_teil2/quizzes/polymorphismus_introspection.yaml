@@ -1,0 +1,173 @@
+title: "Quiz: Polymorphismus & Introspection"
+description: "Dieses Quiz prüft typische PCAP-Snippets zu polymorphem Verhalten."
+questions:
+  - type: single
+    prompt: "Was ist Polymorphismus?"
+    answer: "same_call"
+    options:
+      - label: "Gleicher Methodenaufruf, unterschiedliches Verhalten"
+        value: "same_call"
+      - label: "Jede Klasse darf nur eine Methode haben"
+        value: "one_method"
+      - label: "Alle Attribute müssen private sein"
+        value: "private"
+  - type: text
+    prompt: "Welche Ausgabe entsteht bei type(Dog()) == Animal, wenn Dog von Animal erbt? Antworte mit True oder False."
+    answer: "False"
+    explanation: "type() prüft den exakten Typ. Dog() ist nicht exakt Animal."
+  - type: text
+    prompt: "Welche Ausgabe entsteht bei isinstance(Dog(), Animal), wenn Dog von Animal erbt? Antworte mit True oder False."
+    answer: "True"
+    explanation: "isinstance() berücksichtigt Oberklassen."
+  - type: multiple
+    prompt: "Welche Ausdrücke gehören zur Introspection?"
+    answer: ["dict", "name", "bases"]
+    options:
+      - label: "obj.__dict__"
+        value: "dict"
+      - label: "Class.__name__"
+        value: "name"
+      - label: "Class.__bases__"
+        value: "bases"
+      - label: "x = 5 + 3"
+        value: "calc"
+  - type: single
+    prompt: "Warum kann hasattr(obj, 'x') True sein, obwohl 'x' nicht in obj.__dict__ steht?"
+    answer: "class_lookup"
+    options:
+      - label: "Python sucht auch in Klasse und Oberklassen."
+        value: "class_lookup"
+      - label: "hasattr ignoriert Attribute."
+        value: "ignore"
+      - label: "__dict__ zeigt immer nur Klassenattribute."
+        value: "wrong_dict"
+  - type: text
+    prompt: "Zu welchem Namen wird __balance in der Klasse Account intern ungefähr umgeschrieben?"
+    answer: "_Account__balance"
+    explanation: "Name Mangling nutzt _Klassenname__attribut."
+  - type: single
+    prompt: "Was ist Overriding?"
+    answer: "subclass_redefines"
+    options:
+      - label: "Eine Unterklasse definiert eine geerbte Methode neu."
+        value: "subclass_redefines"
+      - label: "Eine Instanz bekommt ein neues Attribut."
+        value: "new_attr"
+      - label: "Ein Modul wird importiert."
+        value: "import"
+  - type: single
+    prompt: "Was beschreibt Duck Typing am besten?"
+    answer: "behavior"
+    options:
+      - label: "Entscheidend ist, ob ein Objekt das benötigte Verhalten besitzt."
+        value: "behavior"
+      - label: "Jedes Objekt muss von Duck erben."
+        value: "duck_class"
+      - label: "Nur eingebaute Typen dürfen verwendet werden."
+        value: "builtins"
+  - type: text
+    prompt: "Welche Ausgabe entsteht bei [1, 2] == [1, 2]? Antworte mit True oder False."
+    answer: "True"
+  - type: text
+    prompt: "Welche Ausgabe entsteht bei [1, 2] is [1, 2]? Antworte mit True oder False."
+    answer: "False"
+    explanation: "Es sind zwei verschiedene Listenobjekte."
+  - type: single
+    prompt: "Was enthält Product.__name__ für eine Klasse Product?"
+    answer: "Product"
+    options:
+      - label: "Product"
+        value: "Product"
+      - label: "__main__"
+        value: "__main__"
+      - label: "object"
+        value: "object"
+  - type: single
+    prompt: "Was enthält Product.__bases__ typischerweise, wenn Product keine explizite Oberklasse hat?"
+    answer: "object"
+    options:
+      - label: "object"
+        value: "object"
+      - label: "Product"
+        value: "Product"
+      - label: "Alle Instanzattribute"
+        value: "attrs"
+  - type: multiple
+    prompt: "Welche Aussagen zu hasattr(obj, name) sind richtig?"
+    answer: ["string_name", "class_search"]
+    options:
+      - label: "Der Attributname wird als String übergeben."
+        value: "string_name"
+      - label: "Python sucht auch in Klasse und Oberklassen."
+        value: "class_search"
+      - label: "hasattr verändert das Objekt immer."
+        value: "mutates"
+  - type: text
+    prompt: "Welche Methode wird bei print(obj) indirekt verwendet?"
+    answer: "__str__"
+    explanation: "print(obj) nutzt str(obj)."
+  - type: single
+    prompt: "Wann ist isinstance(obj, Base) besonders nützlich?"
+    answer: "inheritance"
+    options:
+      - label: "Wenn Unterklassen akzeptiert werden sollen"
+        value: "inheritance"
+      - label: "Wenn nur der exakte Typ akzeptiert werden soll"
+        value: "exact"
+      - label: "Wenn das Objekt gelöscht werden soll"
+        value: "delete"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Document:
+          def export(self):
+              return "Document"
+
+      class Pdf(Document):
+          def export(self):
+              return "PDF"
+
+      items = [Document(), Pdf()]
+
+      for item in items:
+          print(item.export())
+    answer: |
+      Document
+      PDF
+    explanation: "Der gleiche Aufruf export() führt je nach Objekt zu unterschiedlichem Verhalten."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Animal:
+          pass
+
+      class Dog(Animal):
+          pass
+
+      dog = Dog()
+      print(type(dog) == Animal)
+      print(isinstance(dog, Animal))
+      print(isinstance(dog, object))
+    answer: |
+      False
+      True
+      True
+    explanation: "type prüft exakt, isinstance berücksichtigt die Vererbung."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Product:
+          tax = 0.19
+
+          def __init__(self, name):
+              self.name = name
+
+      product = Product("Tastatur")
+      print("tax" in product.__dict__)
+      print(hasattr(product, "tax"))
+      print(Product.__name__)
+    answer: |
+      False
+      True
+      Product
+    explanation: "tax ist ein Klassenattribut und wird über die Klasse gefunden."

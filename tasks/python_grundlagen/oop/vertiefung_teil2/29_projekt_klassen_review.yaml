@@ -1,0 +1,20 @@
+title: "Projekt-Klassenreview"
+difficulty: 2
+question: |
+  Prüfe deinen Projektentwurf:
+
+  1. Welche Klassen sind echte fachliche Dinge?
+  2. Welche Klassen enthalten andere Objekte?
+  3. Wo nutzt du Vererbung?
+  4. Ist diese Vererbung wirklich eine "ist-ein"-Beziehung?
+  5. Welche Methode wird polymorph verwendet?
+  6. Welche Klasse sollte eine `__str__`-Methode bekommen?
+
+  Schreibe danach mindestens zwei Änderungen an deinem Entwurf auf.
+solution: |
+  Beispielantwort:
+
+  - `Inventory` enthält `Item`-Objekte, also Komposition.
+  - `Key` ist ein spezielles `Item`, also Vererbung.
+  - `Room` sollte nicht von `Item` erben, weil ein Raum kein Gegenstand ist.
+  - `interact()` kann polymorph für Türen, Gegenstände und Ereignisse genutzt werden.

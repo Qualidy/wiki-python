@@ -1,0 +1,184 @@
+title: "Quiz: Projektvorbereitung"
+description: "Dieses Quiz prüft Entscheidungen, die vor dem OOP-Projekt wichtig sind."
+questions:
+  - type: single
+    prompt: "Welche Frage hilft bei der Entscheidung für Vererbung?"
+    answer: "is_a"
+    options:
+      - label: "Ist A eine spezielle Form von B?"
+        value: "is_a"
+      - label: "Wie viele Zeilen Code spare ich?"
+        value: "lines"
+      - label: "Kann ich dadurch input() vermeiden?"
+        value: "input"
+  - type: single
+    prompt: "Welche Frage hilft bei der Entscheidung für Komposition?"
+    answer: "has_a"
+    options:
+      - label: "Hat oder benutzt A ein B?"
+        value: "has_a"
+      - label: "Hat A denselben Namen wie B?"
+        value: "same_name"
+      - label: "Ist B kürzer zu schreiben?"
+        value: "short"
+  - type: multiple
+    prompt: "Welche Punkte gehören sinnvoll in eine Projekt-README?"
+    answer: ["start", "features", "limits"]
+    options:
+      - label: "Startanleitung"
+        value: "start"
+      - label: "Features"
+        value: "features"
+      - label: "Bekannte Grenzen"
+        value: "limits"
+      - label: "Alle privaten Passwörter"
+        value: "passwords"
+  - type: text
+    prompt: "Welche Magic Method ist als Mindestanforderung für lesbare Ausgabe sinnvoll?"
+    answer: "__str__"
+    explanation: "__str__ macht Objekte in print() und f-Strings lesbar."
+  - type: single
+    prompt: "Welche Methode eignet sich gut als polymorphe Projektmethode?"
+    answer: "interact"
+    options:
+      - label: "interact()"
+        value: "interact"
+      - label: "__very_private_python_internal__()"
+        value: "private"
+      - label: "einmalige_methode_nur_fuer_eine_klasse()"
+        value: "single"
+  - type: text
+    prompt: "Welches Attribut zeigt die Instanzattribute eines Objekts?"
+    answer: "__dict__"
+    explanation: "obj.__dict__ enthält die Instanzattribute."
+  - type: single
+    prompt: "Was sollte zuerst entstehen?"
+    answer: "model"
+    options:
+      - label: "Eine Skizze der Klassen und Beziehungen"
+        value: "model"
+      - label: "Direkt ein komplexes Menü"
+        value: "menu"
+      - label: "Zuerst möglichst viele globale Variablen"
+        value: "globals"
+  - type: multiple
+    prompt: "Welche Anforderungen passen zu einem OOP-Projekt?"
+    answer: ["classes", "polymorphism", "exceptions", "io"]
+    options:
+      - label: "mehrere Klassen"
+        value: "classes"
+      - label: "polymorphe Methode"
+        value: "polymorphism"
+      - label: "Fehlerbehandlung"
+        value: "exceptions"
+      - label: "Datei-I/O"
+        value: "io"
+      - label: "alles in einer einzigen riesigen Funktion"
+        value: "one_function"
+  - type: single
+    prompt: "Welche Klasse wäre eher eine Verwaltungsklasse?"
+    answer: "Game"
+    options:
+      - label: "Game"
+        value: "Game"
+      - label: "int"
+        value: "int"
+      - label: "print"
+        value: "print"
+  - type: text
+    prompt: "Welche Funktion könnte Debug-Informationen über ein Objekt ausgeben? Antworte mit einem passenden Namen aus dem Material."
+    answer: "inspect_object"
+    explanation: "inspect_object(obj) wurde als Debug-Funktion vorgeschlagen."
+  - type: single
+    prompt: "Was sollte eine Projekt-Demo mindestens zeigen?"
+    answer: "flow"
+    options:
+      - label: "Einen nachvollziehbaren Ablauf mit Objekten und Methoden"
+        value: "flow"
+      - label: "Nur leere Klassendefinitionen"
+        value: "empty"
+      - label: "Nur Kommentare ohne Code"
+        value: "comments"
+  - type: multiple
+    prompt: "Welche Daten eignen sich für eine einfache Speicherung?"
+    answer: ["player", "room", "inventory"]
+    options:
+      - label: "aktueller Spielername"
+        value: "player"
+      - label: "aktueller Raum"
+        value: "room"
+      - label: "Inventarliste"
+        value: "inventory"
+      - label: "der komplette Python-Interpreter"
+        value: "interpreter"
+  - type: single
+    prompt: "Welche Beziehung passt zwischen Inventory und Item meist besser?"
+    answer: "composition"
+    options:
+      - label: "Komposition"
+        value: "composition"
+      - label: "Vererbung"
+        value: "inheritance"
+  - type: single
+    prompt: "Welche Beziehung passt zwischen Key und Item meist besser?"
+    answer: "inheritance"
+    options:
+      - label: "Vererbung"
+        value: "inheritance"
+      - label: "Gar keine Beziehung möglich"
+        value: "none"
+      - label: "Key muss ein Modul sein"
+        value: "module"
+  - type: text
+    prompt: "Welche Methode könnte verschiedene Spielobjekte einheitlich beschreiben?"
+    answer: "describe"
+    explanation: "describe(), interact() oder use() sind typische polymorphe Methoden. Hier wird describe erwartet."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt diese mögliche Projekt-Debug-Funktion?"
+    code: |
+      class Item:
+          def __init__(self, name):
+              self.name = name
+
+      item = Item("Key")
+      print(item.__class__.__name__)
+      print(item.__dict__)
+    answer: |
+      Item
+      {'name': 'Key'}
+    explanation: "Die Debug-Ausgabe zeigt Klassennamen und Instanzattribute."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der polymorphe Projektcode?"
+    code: |
+      class Door:
+          def interact(self):
+              return "Door opens"
+
+      class Chest:
+          def interact(self):
+              return "Chest opens"
+
+      objects = [Door(), Chest()]
+
+      for obj in objects:
+          print(obj.interact())
+    answer: |
+      Door opens
+      Chest opens
+    explanation: "Beide Objekte besitzen interact(), aber mit unterschiedlichem Verhalten."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Inventory:
+          def __init__(self):
+              self.items = []
+
+          def __len__(self):
+              return len(self.items)
+
+      inventory = Inventory()
+      inventory.items.append("Key")
+      inventory.items.append("Map")
+      print(len(inventory))
+    answer: "2"
+    explanation: "len(inventory) ruft Inventory.__len__() auf."

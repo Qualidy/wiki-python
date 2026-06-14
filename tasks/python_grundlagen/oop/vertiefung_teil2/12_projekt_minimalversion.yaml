@@ -1,0 +1,29 @@
+title: "Minimalversion implementieren"
+difficulty: 3
+question: |
+  Implementiere eine Minimalversion deines Projekts ohne Menü.
+
+  Anforderungen:
+
+  - mindestens 4 Klassen aus deiner Planung
+  - ein kurzer Demo-Ablauf am Ende der Datei
+  - mindestens eine Vererbungsbeziehung
+  - mindestens eine überschriebene Methode
+  - mindestens eine `__str__`-Methode
+  - eine Debug-Funktion mit `__dict__` und `__class__.__name__`
+
+  Das Programm darf zunächst feste Beispielobjekte verwenden. Es muss noch
+  keine vollständige Benutzereingabe besitzen.
+solution: |
+  Eine Lösung hängt von deinem Thema ab.
+
+  Prüfe am Ende selbst:
+
+  ```python
+  def inspect_object(obj):
+      print("Klasse:", obj.__class__.__name__)
+      print("Attribute:", obj.__dict__)
+      print("Oberklassen:", obj.__class__.__bases__)
+  ```
+
+  Diese Funktion sollte mit mehreren deiner Objekte funktionieren.

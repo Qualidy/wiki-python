@@ -56,9 +56,14 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-vector-line: Vererbung & Polymorphismus ](#)
-- [ :material-vector-polyline: Mehrfachvererbung & MRO ](#)
-- [ :material-magic-staff: Dunder-Methoden & Kapselung ](#)
+- [ :material-vector-line: OOP Vertiefung Teil 2 ](content/oop_vertiefung_teil2/index.md)
+- [ :material-file-document-edit: Projekt dokumentieren ](content/oop_vertiefung_teil2/markdown_dokumentation.md)
+- [ :material-refresh: OOP Wiederholung ](content/oop_vertiefung_teil2/oop_wiederholung.md)
+- [ :material-account-switch: Polymorphismus & Introspection ](content/oop_vertiefung_teil2/polymorphismus_introspection.md)
+- [ :material-puzzle: Komposition & Mixins ](content/oop_vertiefung_teil2/komposition_mixins.md)
+- [ :material-vector-polyline: Mehrfachvererbung & MRO ](content/oop_vertiefung_teil2/mro_diamond.md)
+- [ :material-sword-cross: Dungeon Projekt ](content/oop_vertiefung_teil2/projekt_dungeon.md)
+- [ :material-help-circle: Wiederholungsquizzes ](content/oop_vertiefung_teil2/quiz_oop_grundlagen.md)
 
 <!--
 - [ :material-vector-line: Vererbung & Polymorphismus ](content/vererbung_polymorphismus/vererbung/vererbung.md)

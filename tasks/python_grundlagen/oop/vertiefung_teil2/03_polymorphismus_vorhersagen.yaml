@@ -1,0 +1,37 @@
+title: "Polymorphismus vorhersagen"
+difficulty: 1
+question: |
+  Welche Ausgabe erzeugt der folgende Code?
+
+  ```python
+  class Document:
+      def export(self):
+          return "Dokument"
+
+
+  class PdfDocument(Document):
+      def export(self):
+          return "PDF"
+
+
+  class HtmlDocument(Document):
+      def export(self):
+          return "HTML"
+
+
+  documents = [PdfDocument(), HtmlDocument(), Document()]
+
+  for document in documents:
+      print(document.export())
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  PDF
+  HTML
+  Dokument
+  ```
+
+  Die Schleife ruft immer `document.export()` auf. Die konkrete Methode wird
+  aber anhand des tatsächlichen Objekts ausgewählt.

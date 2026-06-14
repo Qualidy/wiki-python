@@ -1,0 +1,35 @@
+title: "Konstruktor-Kette debuggen"
+difficulty: 2
+question: |
+  Welche Ausgabe erzeugt der Code?
+
+  ```python
+  class Vehicle:
+      def __init__(self, brand):
+          print("Vehicle.__init__")
+          self.brand = brand
+
+
+  class Car(Vehicle):
+      def __init__(self, brand, doors):
+          print("Car.__init__ start")
+          super().__init__(brand)
+          self.doors = doors
+          print("Car.__init__ end")
+
+
+  car = Car("VW", 4)
+  print(car.__dict__)
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  Car.__init__ start
+  Vehicle.__init__
+  Car.__init__ end
+  {'brand': 'VW', 'doors': 4}
+  ```
+
+  `Car.__init__` startet zuerst. Durch `super().__init__(brand)` wird dann der
+  Konstruktor von `Vehicle` ausgeführt.

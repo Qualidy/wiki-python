@@ -1,0 +1,24 @@
+title: "OOP-Wiederholungsquiz"
+difficulty: 1
+question: |
+  Beantworte die Fragen kurz:
+
+  1. Was ist der Unterschied zwischen Klasse und Objekt?
+  2. Was ist ein Instanzattribut?
+  3. Was ist ein Klassenattribut?
+  4. Wofür steht `self`?
+  5. Wann wird `__init__` ausgeführt?
+  6. Was bedeutet Overriding?
+  7. Was ist der Unterschied zwischen `is` und `==`?
+  8. Warum ist `isinstance()` bei Vererbung oft sinnvoller als `type()`?
+solution: |
+  Mögliche Antworten:
+
+  1. Eine Klasse ist ein Bauplan, ein Objekt ist ein konkretes Exemplar.
+  2. Ein Instanzattribut gehört zu einem bestimmten Objekt.
+  3. Ein Klassenattribut gehört zur Klasse und ist über alle Instanzen erreichbar.
+  4. `self` referenziert das Objekt, auf dem die Methode aufgerufen wurde.
+  5. `__init__` wird nach dem Erzeugen einer neuen Instanz ausgeführt.
+  6. Overriding bedeutet, dass eine Unterklasse eine Methode der Oberklasse neu definiert.
+  7. `is` prüft Identität, `==` prüft Gleichheit.
+  8. `isinstance()` berücksichtigt auch Oberklassen.

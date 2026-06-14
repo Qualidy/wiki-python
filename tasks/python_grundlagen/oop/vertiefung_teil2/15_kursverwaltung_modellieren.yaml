@@ -1,0 +1,49 @@
+title: "Kursverwaltung modellieren"
+difficulty: 3
+question: |
+  Modelliere eine kleine Kursverwaltung.
+
+  Anforderungen:
+
+  - Klasse `Student` mit `name` und `email`
+  - Klasse `Course` mit `title` und einer Liste von Studierenden
+  - `Course.add_student(student)` fügt nur `Student`-Objekte hinzu
+  - falsche Typen sollen einen `TypeError` auslösen
+  - `Course.__len__()` gibt die Anzahl der Studierenden zurück
+  - `Course.__str__()` gibt eine lesbare Zusammenfassung zurück
+  - schreibe am Ende einen kleinen Demo-Ablauf
+solution: |
+  ```python
+  class Student:
+      def __init__(self, name, email):
+          self.name = name
+          self.email = email
+
+      def __str__(self):
+          return f"{self.name} <{self.email}>"
+
+
+  class Course:
+      def __init__(self, title):
+          self.title = title
+          self.students = []
+
+      def add_student(self, student):
+          if not isinstance(student, Student):
+              raise TypeError("Es können nur Student-Objekte hinzugefügt werden.")
+          self.students.append(student)
+
+      def __len__(self):
+          return len(self.students)
+
+      def __str__(self):
+          return f"{self.title}: {len(self)} Teilnehmer"
+
+
+  course = Course("Python OOP")
+  course.add_student(Student("Ada", "ada@example.com"))
+  course.add_student(Student("Linus", "linus@example.com"))
+
+  print(course)
+  print(course.students[0])
+  ```

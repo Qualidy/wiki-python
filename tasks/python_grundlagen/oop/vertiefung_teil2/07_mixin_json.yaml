@@ -1,0 +1,40 @@
+title: "Ein einfaches Mixin"
+difficulty: 2
+question: |
+  Erstelle ein `JsonMixin` mit einer Methode `to_dict()`.
+
+  Danach soll eine Klasse `Book` dieses Mixin nutzen.
+
+  Der folgende Code soll funktionieren:
+
+  ```python
+  book = Book("Python", "Ada")
+  print(book.to_dict())
+  ```
+
+  Erwartete Ausgabe:
+
+  ```python
+  {'title': 'Python', 'author': 'Ada'}
+  ```
+solution: |
+  Eine mögliche Lösung:
+
+  ```python
+  class JsonMixin:
+      def to_dict(self):
+          return self.__dict__
+
+
+  class Book(JsonMixin):
+      def __init__(self, title, author):
+          self.title = title
+          self.author = author
+
+
+  book = Book("Python", "Ada")
+  print(book.to_dict())
+  ```
+
+  `JsonMixin` ist keine fachliche Oberklasse von `Book`. Es ergänzt nur eine
+  kleine Zusatzfähigkeit.

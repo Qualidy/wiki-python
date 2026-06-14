@@ -1,0 +1,68 @@
+title: "README zum letzten Projekt"
+difficulty: 1
+question: |
+  Erstelle für dein Projekt der letzten Woche eine Datei `README.md`.
+
+  Die README soll mindestens diese Abschnitte enthalten:
+
+  - Projektname
+  - Kurzbeschreibung
+  - Features
+  - Installation
+  - Start
+  - Bedienung
+  - Projektstruktur
+  - Beispielablauf
+  - Bekannte Grenzen
+  - Ausblick
+
+  Nutze mindestens:
+
+  - drei Überschriften
+  - eine Liste
+  - einen Codeblock
+  - eine Tabelle
+  - mindestens einen inline Code-Ausdruck wie `python main.py`
+tip: |
+  Beschreibe nicht nur, was dein Projekt kann. Beschreibe auch, wie eine
+  andere Person es starten kann.
+solution: |
+  Beispielstruktur:
+
+  ```markdown
+  # Flaggenquiz
+
+  Eine kleine Quiz-App, in der Länder anhand ihrer Flaggen erraten werden.
+
+  ## Features
+
+  - zufällige Flaggen anzeigen
+  - Antwort prüfen
+  - Punktestand anzeigen
+
+  ## Installation
+
+  ```bash
+  python -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  ```
+
+  ## Start
+
+  ```bash
+  python main.py
+  ```
+
+  ## Projektstruktur
+
+  | Datei | Aufgabe |
+  |-------|---------|
+  | main.py | startet die App |
+  | data.py | enthält Länderinformationen |
+
+  ## Bekannte Grenzen
+
+  - noch keine Highscore-Liste
+  - noch keine Speicherung
+  ```

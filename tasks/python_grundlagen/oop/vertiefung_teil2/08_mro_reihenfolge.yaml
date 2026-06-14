@@ -1,0 +1,43 @@
+title: "MRO-Reihenfolge"
+difficulty: 2
+question: |
+  Welche Ausgabe erzeugt der folgende Code?
+
+  ```python
+  class Parent:
+      def source(self):
+          return "Parent"
+
+
+  class ChildLeft(Parent):
+      def source(self):
+          return "ChildLeft"
+
+
+  class ChildRight(Parent):
+      def source(self):
+          return "ChildRight"
+
+
+  class GrandChild(ChildLeft, ChildRight):
+      pass
+
+
+  print(GrandChild().source())
+  print(GrandChild.__mro__)
+  ```
+solution: |
+  Die erste Ausgabe ist:
+
+  ```text
+  ChildLeft
+  ```
+
+  Die MRO ist:
+
+  ```python
+  (<class '__main__.GrandChild'>, <class '__main__.ChildLeft'>, <class '__main__.ChildRight'>, <class '__main__.Parent'>, <class 'object'>)
+  ```
+
+  Python sucht `source()` zuerst in `GrandChild`, dann in `ChildLeft`.
+  Dort wird die Methode gefunden.

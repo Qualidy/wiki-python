@@ -1,0 +1,46 @@
+title: "PCAP-Snippets zur MRO"
+difficulty: 3
+question: |
+  Beantworte für jedes Snippet: Welche Methode wird ausgeführt?
+
+  ```python
+  class Root:
+      def run(self):
+          return "Root"
+
+  class Left(Root):
+      pass
+
+  class Right(Root):
+      def run(self):
+          return "Right"
+
+  class Final(Left, Right):
+      pass
+
+  print(Final().run())
+  ```
+
+  Danach ändere `class Final(Left, Right)` zu `class Final(Right, Left)`.
+  Was ändert sich?
+solution: |
+  Im ersten Fall ist die MRO:
+
+  ```text
+  Final -> Left -> Right -> Root -> object
+  ```
+
+  `Left` hat keine eigene `run()`-Methode. Danach findet Python `Right.run()`.
+  Ausgabe:
+
+  ```text
+  Right
+  ```
+
+  Im zweiten Fall ist die MRO:
+
+  ```text
+  Final -> Right -> Left -> Root -> object
+  ```
+
+  Auch hier wird `Right.run()` gefunden. Die Ausgabe bleibt also `Right`.

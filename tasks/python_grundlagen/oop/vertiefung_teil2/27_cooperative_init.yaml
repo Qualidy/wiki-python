@@ -1,0 +1,47 @@
+title: "Kooperatives __init__"
+difficulty: 3
+question: |
+  Erkläre, warum der folgende Code problematisch ist. Korrigiere ihn danach.
+
+  ```python
+  class TimestampMixin:
+      def __init__(self):
+          self.created_at = "today"
+
+
+  class Entity:
+      def __init__(self, name):
+          self.name = name
+
+
+  class Document(TimestampMixin, Entity):
+      def __init__(self, name):
+          super().__init__()
+  ```
+
+  Ziel: `Document("README")` soll sowohl `name` als auch `created_at` besitzen.
+solution: |
+  Problem: `TimestampMixin.__init__` nimmt kein `name` entgegen und ruft
+  `super()` nicht weiter. `Entity.__init__` wird nicht sauber erreicht.
+
+  Eine mögliche kooperative Lösung:
+
+  ```python
+  class TimestampMixin:
+      def __init__(self, *args, **kwargs):
+          super().__init__(*args, **kwargs)
+          self.created_at = "today"
+
+
+  class Entity:
+      def __init__(self, name):
+          self.name = name
+
+
+  class Document(TimestampMixin, Entity):
+      pass
+
+
+  document = Document("README")
+  print(document.__dict__)
+  ```

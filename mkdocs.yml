@@ -41,29 +41,42 @@ nav:
       - Args & Kwargs: content/funktionen_vertiefung/args_kwargs/args_kwargs.md
       - Docstring: content/funktionen_vertiefung/docstring/docstring.md
 
+  - Dateien & Dateisystem:
+      - Dateioperationen: content/dateien_dateisystem/dateioperationen/dateioperationen.md
+
   - OOP Grundlagen:
       - Klassen definieren: content/oop_grundlagen/define_classes/define_classes.md
       - Attribute: content/oop_grundlagen/attributes/attributes.md
       - Methoden: content/oop_grundlagen/methods/methods.md
       - Unittest: content/oop_grundlagen/unittests/unittests.md
-  #
-  #  - Exceptions Vertiefung:
-  #      - Try-Except-Else-Finally: content/python_grundlagen/try_except/try_except.md
-  #
-  - Dateien & Dateisystem:
-      - Dateioperationen: content/dateien_dateisystem/dateioperationen/dateioperationen.md
-  #
-  #  - Module, Pakete & pip:
-  #      - Module: content/python_grundlagen/module/module.md
-  #      - Pakete: content/module_pakete_pip/pakete/pakete.md
-  #      - Pip und Venv: content/module_pakete_pip/pip_venv/pip_venv.md
-  #
+
+
   - OOP Vertiefung:
       - Vererbung: content/oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung.md
       - Magic Methods: content/oop_vertiefung/magic_methods/magic_methods.md
       - Protected & Private: content/oop_vertiefung/protected_private/protected_private.md
       - Getter & Setter (@property): content/oop_vertiefung/getter_setter/getter_setter.md
       - Class- & Staticmethod: content/oop_vertiefung/class_static_methods/class_static_methods.md
+
+
+  - Exceptions Vertiefung:
+      - Überblick: content/exceptions/index.md
+
+  - Module, Pakete & pip:
+      - Pip und Venv: content/exceptions/pip.md
+
+  - OOP Vertiefung Teil 2:
+      - Überblick: content/oop_vertiefung_teil2/index.md
+      - Projekt dokumentieren mit Markdown: content/oop_vertiefung_teil2/markdown_dokumentation.md
+      - OOP Wiederholung: content/oop_vertiefung_teil2/oop_wiederholung.md
+      - Polymorphismus & Introspection: content/oop_vertiefung_teil2/polymorphismus_introspection.md
+      - Komposition, Vererbung & Mixins: content/oop_vertiefung_teil2/komposition_mixins.md
+      - Mehrfachvererbung, MRO & Diamond: content/oop_vertiefung_teil2/mro_diamond.md
+      - Projekt Dungeon Simulator: content/oop_vertiefung_teil2/projekt_dungeon.md
+      - Quiz OOP Grundlagen: content/oop_vertiefung_teil2/quiz_oop_grundlagen.md
+      - Quiz Polymorphismus & Introspection: content/oop_vertiefung_teil2/quiz_polymorphismus_introspection.md
+      - Quiz Komposition, Mixins & MRO: content/oop_vertiefung_teil2/quiz_komposition_mixins_mro.md
+      - Quiz Projektvorbereitung: content/oop_vertiefung_teil2/quiz_projektvorbereitung.md
 
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md

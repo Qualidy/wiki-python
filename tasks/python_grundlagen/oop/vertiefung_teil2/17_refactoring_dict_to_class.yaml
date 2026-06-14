@@ -1,0 +1,52 @@
+title: "Refactoring: Dict zu Klasse"
+difficulty: 3
+question: |
+  Der folgende Code nutzt Dictionaries:
+
+  ```python
+  product = {
+      "name": "Tastatur",
+      "price": 40,
+      "stock": 12,
+  }
+
+  def sell(product, amount):
+      if amount > product["stock"]:
+          raise ValueError("Nicht genug Bestand")
+      product["stock"] -= amount
+  ```
+
+  Refactore den Code zu einer Klasse `Product`.
+
+  Anforderungen:
+
+  - Attribute `name`, `price`, `_stock`
+  - Methode `sell(amount)`
+  - Methode `restock(amount)`
+  - `ValueError` bei ungültigen Mengen
+  - `__str__` für eine lesbare Ausgabe
+solution: |
+  ```python
+  class Product:
+      def __init__(self, name, price, stock):
+          if price < 0 or stock < 0:
+              raise ValueError("Preis und Bestand dürfen nicht negativ sein.")
+          self.name = name
+          self.price = price
+          self._stock = stock
+
+      def sell(self, amount):
+          if amount <= 0:
+              raise ValueError("Menge muss positiv sein.")
+          if amount > self._stock:
+              raise ValueError("Nicht genug Bestand.")
+          self._stock -= amount
+
+      def restock(self, amount):
+          if amount <= 0:
+              raise ValueError("Menge muss positiv sein.")
+          self._stock += amount
+
+      def __str__(self):
+          return f"{self.name}: {self.price} Euro, Bestand: {self._stock}"
+  ```

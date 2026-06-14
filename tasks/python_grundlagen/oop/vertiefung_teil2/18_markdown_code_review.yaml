@@ -1,0 +1,20 @@
+title: "README-Review"
+difficulty: 1
+question: |
+  Tausche deine README mit einer anderen Person.
+
+  Prüfe:
+
+  - Ist klar, was das Projekt macht?
+  - Ist klar, wie man es startet?
+  - Gibt es einen Codeblock für Start oder Installation?
+  - Gibt es eine Projektstruktur?
+  - Gibt es bekannte Grenzen oder einen Ausblick?
+
+  Schreibe danach drei konkrete Verbesserungsvorschläge.
+solution: |
+  Beispiel für konkrete Verbesserungsvorschläge:
+
+  - "Im Abschnitt Start fehlt der genaue Befehl `python main.py`."
+  - "Die Datei `data.py` wird verwendet, aber in der Projektstruktur nicht erklärt."
+  - "Der Abschnitt Features beschreibt nur ein Feature. Ergänze Punktestand und zufällige Fragen."

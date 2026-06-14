@@ -1,0 +1,45 @@
+title: "Benachrichtigungen polymorph versenden"
+difficulty: 3
+question: |
+  Implementiere ein kleines Benachrichtigungssystem.
+
+  Anforderungen:
+
+  - Basisklasse `Notification`
+  - Unterklassen `EmailNotification`, `SmsNotification`, `PushNotification`
+  - alle Klassen haben eine Methode `send(message)`
+  - die Unterklassen überschreiben `send`
+  - eine Funktion `send_all(notifications, message)` ruft polymorph `send` auf
+  - am Ende soll eine Liste verschiedener Benachrichtigungen verarbeitet werden
+solution: |
+  ```python
+  class Notification:
+      def send(self, message):
+          return f"Nachricht: {message}"
+
+
+  class EmailNotification(Notification):
+      def send(self, message):
+          return f"E-Mail gesendet: {message}"
+
+
+  class SmsNotification(Notification):
+      def send(self, message):
+          return f"SMS gesendet: {message}"
+
+
+  class PushNotification(Notification):
+      def send(self, message):
+          return f"Push gesendet: {message}"
+
+
+  def send_all(notifications, message):
+      for notification in notifications:
+          print(notification.send(message))
+
+
+  send_all(
+      [EmailNotification(), SmsNotification(), PushNotification()],
+      "Systemwartung um 18 Uhr",
+  )
+  ```

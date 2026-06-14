@@ -1,0 +1,42 @@
+title: "Bankkonto mit Kapselung"
+difficulty: 2
+question: |
+  Implementiere eine Klasse `BankAccount`.
+
+  Anforderungen:
+
+  - Konstruktor mit `owner` und `balance`
+  - `balance` soll intern als `__balance` gespeichert werden
+  - Methode `deposit(amount)`
+  - Methode `withdraw(amount)`
+  - Methode `get_balance()`
+  - bei negativen Beträgen soll `ValueError` geworfen werden
+  - bei zu hoher Auszahlung soll ebenfalls `ValueError` geworfen werden
+  - `__str__` soll z.B. `Konto von Ada: 120 Euro` zurückgeben
+solution: |
+  ```python
+  class BankAccount:
+      def __init__(self, owner, balance):
+          if balance < 0:
+              raise ValueError("Startguthaben darf nicht negativ sein.")
+          self.owner = owner
+          self.__balance = balance
+
+      def deposit(self, amount):
+          if amount <= 0:
+              raise ValueError("Betrag muss positiv sein.")
+          self.__balance += amount
+
+      def withdraw(self, amount):
+          if amount <= 0:
+              raise ValueError("Betrag muss positiv sein.")
+          if amount > self.__balance:
+              raise ValueError("Nicht genug Guthaben.")
+          self.__balance -= amount
+
+      def get_balance(self):
+          return self.__balance
+
+      def __str__(self):
+          return f"Konto von {self.owner}: {self.__balance} Euro"
+  ```

@@ -1,0 +1,46 @@
+title: "Diamond mit super"
+difficulty: 3
+question: |
+  Welche Ausgabe entsteht?
+
+  ```python
+  class Parent:
+      def setup(self):
+          print("Parent")
+
+
+  class ChildLeft(Parent):
+      def setup(self):
+          print("ChildLeft")
+          super().setup()
+
+
+  class ChildRight(Parent):
+      def setup(self):
+          print("ChildRight")
+          super().setup()
+
+
+  class GrandChild(ChildLeft, ChildRight):
+      def setup(self):
+          print("GrandChild")
+          super().setup()
+
+
+  GrandChild().setup()
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  GrandChild
+  ChildLeft
+  ChildRight
+  Parent
+  ```
+
+  `super()` geht jeweils zum nächsten Eintrag in der MRO:
+
+  ```text
+  GrandChild -> ChildLeft -> ChildRight -> Parent -> object
+  ```

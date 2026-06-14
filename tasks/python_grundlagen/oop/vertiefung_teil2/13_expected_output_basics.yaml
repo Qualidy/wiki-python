@@ -1,0 +1,36 @@
+title: "Expected Output: Attribute und Klassenattribute"
+difficulty: 2
+question: |
+  Schreibe die Ausgabe des Programms auf, ohne es auszuführen.
+
+  ```python
+  class Robot:
+      category = "machine"
+
+      def __init__(self, name):
+          self.name = name
+
+
+  a = Robot("A-1")
+  b = Robot("B-2")
+  b.category = "custom"
+
+  print(a.category)
+  print(b.category)
+  print(Robot.category)
+  print(a.__dict__)
+  print(b.__dict__)
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  machine
+  custom
+  machine
+  {'name': 'A-1'}
+  {'name': 'B-2', 'category': 'custom'}
+  ```
+
+  `b.category = "custom"` erzeugt ein Instanzattribut auf `b`. Das
+  Klassenattribut `Robot.category` bleibt unverändert.

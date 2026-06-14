@@ -1,0 +1,39 @@
+title: "MRO: Reihenfolge tauschen"
+difficulty: 2
+question: |
+  Vergleiche die Ausgabe von `DuckA` und `DuckB`.
+
+  ```python
+  class CanSwim:
+      def move(self):
+          return "swim"
+
+
+  class CanFly:
+      def move(self):
+          return "fly"
+
+
+  class DuckA(CanSwim, CanFly):
+      pass
+
+
+  class DuckB(CanFly, CanSwim):
+      pass
+
+
+  print(DuckA().move())
+  print(DuckB().move())
+  print(DuckA.__mro__)
+  print(DuckB.__mro__)
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  swim
+  fly
+  ```
+
+  Bei `DuckA` steht `CanSwim` vor `CanFly`. Bei `DuckB` ist es umgekehrt.
+  Deshalb wird jeweils eine andere `move()`-Methode zuerst gefunden.

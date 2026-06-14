@@ -1,0 +1,24 @@
+title: "Komposition oder Vererbung?"
+difficulty: 2
+question: |
+  Entscheide jeweils: Vererbung oder Komposition?
+
+  1. `ElectricCar` und `Car`
+  2. `Car` und `Engine`
+  3. `Invoice` und `PdfExporter`
+  4. `AdminUser` und `User`
+  5. `Course` und `Student`
+  6. `ShoppingCart` und `Product`
+
+  Begründe jede Entscheidung mit "ist-ein" oder "hat/benutzt-ein".
+solution: |
+  Mögliche Einordnung:
+
+  1. `ElectricCar` ist ein spezielles `Car`: Vererbung.
+  2. `Car` hat einen `Engine`: Komposition.
+  3. `Invoice` benutzt eventuell einen `PdfExporter`: Komposition.
+  4. `AdminUser` ist ein spezieller `User`: Vererbung.
+  5. `Course` hat/verwaltet `Student`-Objekte: Komposition.
+  6. `ShoppingCart` enthält `Product`-Objekte: Komposition.
+
+  Wichtig ist die fachliche Beziehung, nicht nur die Möglichkeit, Code zu sparen.

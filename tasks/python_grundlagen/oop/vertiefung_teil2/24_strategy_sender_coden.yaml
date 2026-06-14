@@ -1,0 +1,37 @@
+title: "Austauschbares Verhalten mit Komposition"
+difficulty: 3
+question: |
+  Implementiere:
+
+  - `EmailSender` mit `send(text)`
+  - `ConsoleSender` mit `send(text)`
+  - `NotificationService`, der im Konstruktor einen Sender erhält
+  - Methode `notify(text)`, die an den Sender delegiert
+
+  Tausche danach den Sender zur Laufzeit aus.
+solution: |
+  ```python
+  class EmailSender:
+      def send(self, text):
+          return f"E-Mail: {text}"
+
+
+  class ConsoleSender:
+      def send(self, text):
+          return f"Konsole: {text}"
+
+
+  class NotificationService:
+      def __init__(self, sender):
+          self.sender = sender
+
+      def notify(self, text):
+          return self.sender.send(text)
+
+
+  service = NotificationService(EmailSender())
+  print(service.notify("Hallo"))
+
+  service.sender = ConsoleSender()
+  print(service.notify("Hallo"))
+  ```

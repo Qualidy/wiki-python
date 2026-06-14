@@ -1,0 +1,31 @@
+title: "Mixin für kurze Objektinfos"
+difficulty: 3
+question: |
+  Schreibe ein `InfoMixin` mit einer Methode `info()`.
+
+  `info()` soll den Klassennamen und `__dict__` zurückgeben.
+
+  Nutze das Mixin in zwei unterschiedlichen Klassen, z.B. `Book` und
+  `Product`.
+solution: |
+  ```python
+  class InfoMixin:
+      def info(self):
+          return f"{self.__class__.__name__}: {self.__dict__}"
+
+
+  class Book(InfoMixin):
+      def __init__(self, title, author):
+          self.title = title
+          self.author = author
+
+
+  class Product(InfoMixin):
+      def __init__(self, name, price):
+          self.name = name
+          self.price = price
+
+
+  print(Book("Python", "Ada").info())
+  print(Product("Tastatur", 40).info())
+  ```

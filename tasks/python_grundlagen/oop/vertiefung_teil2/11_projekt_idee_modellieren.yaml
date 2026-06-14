@@ -1,0 +1,36 @@
+title: "Projektidee modellieren"
+difficulty: 2
+question: |
+  Plane dein Dungeon- oder Simulationsprojekt, bevor du Code schreibst.
+
+  Erstelle eine kurze Markdown-Skizze mit:
+
+  - Projektthema
+  - Ziel des Programms
+  - mindestens 6 möglichen Klassen
+  - mindestens einer Vererbungsbeziehung
+  - mindestens einer Kompositionsbeziehung
+  - mindestens einer polymorphen Methode
+  - mindestens einer Stelle für Datei-I/O
+
+  Nutze diese Tabelle:
+
+  | Klasse | Aufgabe | wichtige Attribute | wichtige Methoden |
+  |--------|---------|--------------------|-------------------|
+solution: |
+  Beispiel, nur als Orientierung:
+
+  | Klasse | Aufgabe | wichtige Attribute | wichtige Methoden |
+  |--------|---------|--------------------|-------------------|
+  | `Player` | aktive Figur | `name`, `health` | `interact()` |
+  | `Room` | Ort | `description`, `objects` | `describe()` |
+  | `Item` | Gegenstand | `name` | `use()` |
+  | `Key` | spezieller Gegenstand | `code` | `use()` |
+  | `Door` | Hindernis | `locked` | `interact()` |
+  | `Game` | Ablauf | `player`, `rooms` | `run()` |
+
+  Vererbung: `Key` ist ein spezielles `Item`.
+
+  Komposition: `Room` enthält mehrere Objekte.
+
+  Polymorphismus: Verschiedene Objekte implementieren `interact()`.

@@ -1,0 +1,42 @@
+title: "Fehlmodellierung korrigieren"
+difficulty: 3
+question: |
+  Der folgende Code nutzt Vererbung, obwohl Komposition passender wäre:
+
+  ```python
+  class Logger:
+      def log(self, message):
+          print(f"LOG: {message}")
+
+
+  class Order(Logger):
+      def __init__(self, number):
+          self.number = number
+
+      def confirm(self):
+          self.log(f"Bestellung {self.number} bestätigt")
+  ```
+
+  Refactore den Code so, dass `Order` einen `Logger` benutzt, aber nicht von
+  `Logger` erbt.
+solution: |
+  ```python
+  class Logger:
+      def log(self, message):
+          print(f"LOG: {message}")
+
+
+  class Order:
+      def __init__(self, number, logger):
+          self.number = number
+          self.logger = logger
+
+      def confirm(self):
+          self.logger.log(f"Bestellung {self.number} bestätigt")
+
+
+  order = Order("A-100", Logger())
+  order.confirm()
+  ```
+
+  Eine Bestellung ist kein Logger. Sie benutzt einen Logger.

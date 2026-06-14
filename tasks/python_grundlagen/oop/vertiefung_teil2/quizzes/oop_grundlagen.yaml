@@ -1,0 +1,184 @@
+title: "Quiz: OOP-Grundlagen"
+description: "Beantworte die Fragen und klicke danach auf Prüfen."
+questions:
+  - type: single
+    prompt: "Was beschreibt eine Klasse am besten?"
+    answer: "blueprint"
+    options:
+      - label: "Ein Bauplan für Objekte"
+        value: "blueprint"
+      - label: "Immer ein konkretes Objekt"
+        value: "object"
+      - label: "Eine Datei auf der Festplatte"
+        value: "file"
+    explanation: "Eine Klasse ist der Bauplan; eine Instanz ist das konkrete Objekt."
+  - type: text
+    prompt: "Wie heißt der erste Parameter einer Instanzmethode per Konvention?"
+    answer: "self"
+    explanation: "Der erste Parameter heißt per Konvention self."
+  - type: single
+    prompt: "Wo steht ein Attribut, das im Konstruktor mit self.name gesetzt wurde?"
+    answer: "instance"
+    options:
+      - label: "Im __dict__ der Instanz"
+        value: "instance"
+      - label: "Nur im __dict__ der Klasse"
+        value: "class"
+      - label: "Gar nicht, Attribute sind unsichtbar"
+        value: "none"
+  - type: multiple
+    prompt: "Welche Aussagen zu Klassenattributen sind richtig?"
+    answer: ["class_dict", "instance_access"]
+    options:
+      - label: "Sie stehen im __dict__ der Klasse."
+        value: "class_dict"
+      - label: "Sie sind über Instanzen erreichbar."
+        value: "instance_access"
+      - label: "Sie werden immer automatisch in jedes Instanz-__dict__ kopiert."
+        value: "copied"
+    explanation: "Klassenattribute sind über Instanzen erreichbar, werden aber nicht automatisch kopiert."
+  - type: single
+    prompt: "Was bedeutet Overriding?"
+    answer: "override"
+    options:
+      - label: "Eine Unterklasse definiert eine Methode der Oberklasse neu."
+        value: "override"
+      - label: "Eine Klasse löscht alle Attribute."
+        value: "delete"
+      - label: "Eine Funktion wird außerhalb der Klasse definiert."
+        value: "function"
+  - type: text
+    prompt: "Welche Magic Method liefert eine lesbare Stringdarstellung für print(obj)?"
+    answer: "__str__"
+    explanation: "print(obj) nutzt str(obj), und dafür ist __str__ zuständig."
+  - type: single
+    prompt: "Wann wird __init__ normalerweise ausgeführt?"
+    answer: "after_new"
+    options:
+      - label: "Beim Erzeugen einer neuen Instanz"
+        value: "after_new"
+      - label: "Nur beim Importieren eines Moduls"
+        value: "import"
+      - label: "Nur wenn print() aufgerufen wird"
+        value: "print"
+  - type: text
+    prompt: "Welches Attribut zeigt die Instanzattribute eines Objekts?"
+    answer: "__dict__"
+    explanation: "obj.__dict__ enthält die Instanzattribute."
+  - type: single
+    prompt: "Was ist ein Instanzattribut?"
+    answer: "object_attr"
+    options:
+      - label: "Ein Attribut eines konkreten Objekts"
+        value: "object_attr"
+      - label: "Ein Attribut, das nur in Kommentaren steht"
+        value: "comment"
+      - label: "Eine Methode ohne self"
+        value: "method"
+  - type: single
+    prompt: "Welche Schreibweise signalisiert in Python 'intern gedacht'?"
+    answer: "_name"
+    options:
+      - label: "_name"
+        value: "_name"
+      - label: "name!"
+        value: "bang"
+      - label: "public name"
+        value: "public"
+  - type: text
+    prompt: "Zu welchem Namen wird __balance in der Klasse Account intern ungefähr umgeschrieben?"
+    answer: "_Account__balance"
+    explanation: "Name Mangling nutzt _Klassenname__attribut."
+  - type: single
+    prompt: "Was prüft is?"
+    answer: "identity"
+    options:
+      - label: "Ob zwei Namen auf dasselbe Objekt zeigen"
+        value: "identity"
+      - label: "Ob zwei Listen gleiche Werte enthalten"
+        value: "equality"
+      - label: "Ob eine Klasse eine Methode besitzt"
+        value: "method"
+  - type: single
+    prompt: "Was prüft == normalerweise?"
+    answer: "equality"
+    options:
+      - label: "Gleichheit nach definierter Vergleichslogik"
+        value: "equality"
+      - label: "Immer Objektidentität"
+        value: "identity"
+      - label: "Die MRO"
+        value: "mro"
+  - type: multiple
+    prompt: "Welche Methoden sind Magic Methods?"
+    answer: ["init", "str", "len"]
+    options:
+      - label: "__init__"
+        value: "init"
+      - label: "__str__"
+        value: "str"
+      - label: "__len__"
+        value: "len"
+      - label: "calculate_total"
+        value: "normal"
+  - type: single
+    prompt: "Was macht super().__init__(...) in einer Unterklasse typischerweise?"
+    answer: "parent_init"
+    options:
+      - label: "Es ruft den nächsten Konstruktor in der Vererbungskette auf."
+        value: "parent_init"
+      - label: "Es löscht alle Instanzattribute."
+        value: "delete"
+      - label: "Es erzeugt immer eine zweite Instanz."
+        value: "second"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Box:
+          kind = "small"
+
+          def __init__(self, label):
+              self.label = label
+
+      box = Box("A")
+      box.kind = "large"
+
+      print(Box.kind)
+      print(box.kind)
+      print(box.__dict__)
+    answer: |
+      small
+      large
+      {'label': 'A', 'kind': 'large'}
+    explanation: "box.kind erzeugt ein Instanzattribut und verändert Box.kind nicht."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class User:
+          def __init__(self, name):
+              self.name = name
+
+          def __str__(self):
+              return f"User: {self.name}"
+
+      user = User("Ada")
+      print(user)
+      print(user.__dict__)
+    answer: |
+      User: Ada
+      {'name': 'Ada'}
+    explanation: "print(user) nutzt __str__."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Account:
+          def __init__(self):
+              self.__balance = 100
+
+      account = Account()
+      print(account.__dict__)
+      print(hasattr(account, "__balance"))
+    answer: |
+      {'_Account__balance': 100}
+      False
+    explanation: "__balance wird durch Name Mangling umbenannt."

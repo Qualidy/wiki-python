@@ -1,0 +1,37 @@
+title: "Klassenattribute und __dict__"
+difficulty: 2
+question: |
+  Welche Ausgabe erzeugt der folgende Code?
+
+  ```python
+  class Course:
+      platform = "Python Wiki"
+
+      def __init__(self, title):
+          self.title = title
+
+
+  course = Course("OOP")
+
+  print(course.__dict__)
+  print(Course.__dict__["platform"])
+  print("platform" in course.__dict__)
+  print(hasattr(course, "platform"))
+  ```
+
+  Erkläre den Unterschied zwischen den letzten beiden Ausgaben.
+solution: |
+  Ausgabe:
+
+  ```text
+  {'title': 'OOP'}
+  Python Wiki
+  False
+  True
+  ```
+
+  `platform` ist ein Klassenattribut. Es steht deshalb in `Course.__dict__`,
+  aber nicht in `course.__dict__`.
+
+  `hasattr(course, "platform")` ist trotzdem `True`, weil Python beim Zugriff
+  auf `course.platform` auch in der Klasse sucht.

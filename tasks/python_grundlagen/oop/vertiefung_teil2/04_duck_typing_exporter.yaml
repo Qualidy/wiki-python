@@ -1,0 +1,41 @@
+title: "Duck Typing anwenden"
+difficulty: 2
+question: |
+  Schreibe eine Funktion `run_export(exporter, rows)`.
+
+  Die Funktion soll `exporter.export(rows)` aufrufen. Erstelle danach zwei
+  Klassen:
+
+  - `CsvExporter`
+  - `JsonExporter`
+
+  Beide Klassen sollen eine Methode `export(self, rows)` besitzen, aber
+  unterschiedliche Strings zurückgeben.
+
+  Die Klassen müssen nicht von derselben Oberklasse erben.
+solution: |
+  Eine mögliche Lösung:
+
+  ```python
+  class CsvExporter:
+      def export(self, rows):
+          return f"{len(rows)} Zeilen als CSV exportiert"
+
+
+  class JsonExporter:
+      def export(self, rows):
+          return f"{len(rows)} Zeilen als JSON exportiert"
+
+
+  def run_export(exporter, rows):
+      return exporter.export(rows)
+
+
+  rows = [{"name": "Ada"}, {"name": "Linus"}]
+
+  print(run_export(CsvExporter(), rows))
+  print(run_export(JsonExporter(), rows))
+  ```
+
+  Das ist Polymorphismus über Duck Typing: Entscheidend ist, dass das Objekt
+  eine passende Methode `export()` hat.

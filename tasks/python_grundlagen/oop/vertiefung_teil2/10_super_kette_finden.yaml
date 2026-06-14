@@ -1,0 +1,61 @@
+title: "Unterbrochene super-Kette"
+difficulty: 3
+question: |
+  In dieser Aufgabe wurde einmal `super()` vergessen. Welche Ausgabe entsteht?
+
+  ```python
+  class Base:
+      def build(self):
+          print("Base")
+
+
+  class Header(Base):
+      def build(self):
+          print("Header")
+          super().build()
+
+
+  class Footer(Base):
+      def build(self):
+          print("Footer")
+          # super().build() fehlt
+
+
+  class Report(Header, Footer):
+      def build(self):
+          print("Report")
+          super().build()
+
+
+  Report().build()
+  ```
+
+  Ergänze danach den fehlenden `super()`-Aufruf und vergleiche die Ausgabe.
+solution: |
+  Ausgabe ohne `super()` in `Footer`:
+
+  ```text
+  Report
+  Header
+  Footer
+  ```
+
+  `Base` wird nicht erreicht, weil `Footer.build()` die Kette nicht fortsetzt.
+
+  Korrektur:
+
+  ```python
+  class Footer(Base):
+      def build(self):
+          print("Footer")
+          super().build()
+  ```
+
+  Dann entsteht:
+
+  ```text
+  Report
+  Header
+  Footer
+  Base
+  ```

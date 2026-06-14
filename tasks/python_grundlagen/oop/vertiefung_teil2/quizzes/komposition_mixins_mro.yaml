@@ -1,0 +1,178 @@
+title: "Quiz: Komposition, Mixins & MRO"
+description: "Prüfe zuerst die Modellierungsentscheidung, dann die MRO."
+questions:
+  - type: single
+    prompt: "Ein Auto hat einen Motor. Welche Beziehung passt besser?"
+    answer: "composition"
+    options:
+      - label: "Komposition"
+        value: "composition"
+      - label: "Vererbung"
+        value: "inheritance"
+  - type: single
+    prompt: "Ein AdminUser ist ein User. Welche Beziehung passt besser?"
+    answer: "inheritance"
+    options:
+      - label: "Komposition"
+        value: "composition"
+      - label: "Vererbung"
+        value: "inheritance"
+  - type: single
+    prompt: "Was ist ein Mixin meistens?"
+    answer: "ability"
+    options:
+      - label: "Eine kleine Zusatzfähigkeit für Klassen"
+        value: "ability"
+      - label: "Immer die wichtigste Basisklasse"
+        value: "base"
+      - label: "Ein Ersatz für jede Komposition"
+        value: "replacement"
+  - type: text
+    prompt: "Welche Methode/Property zeigt die Method Resolution Order einer Klasse? Schreibe den Ausdruck für die Klasse Report."
+    answer: "Report.__mro__"
+    explanation: "Die MRO ist über Class.__mro__ sichtbar."
+  - type: single
+    prompt: "Was bedeutet super() bei Mehrfachvererbung genauer?"
+    answer: "next_mro"
+    options:
+      - label: "Nächster Eintrag in der MRO"
+        value: "next_mro"
+      - label: "Immer die erste Klasse im Alphabet"
+        value: "alphabet"
+      - label: "Immer object"
+        value: "object"
+  - type: text
+    prompt: "Welche Ausgabe entsteht bei class Duck(CanSwim, CanFly), wenn beide move() haben und CanSwim.move() 'swim' zurückgibt?"
+    answer: "swim"
+    explanation: "CanSwim steht im Klassenkopf zuerst."
+  - type: single
+    prompt: "Ein Course enthält Student-Objekte. Welche Beziehung passt besser?"
+    answer: "composition"
+    options:
+      - label: "Komposition"
+        value: "composition"
+      - label: "Vererbung"
+        value: "inheritance"
+  - type: single
+    prompt: "Ein ElectricCar ist ein Car. Welche Beziehung passt besser?"
+    answer: "inheritance"
+    options:
+      - label: "Komposition"
+        value: "composition"
+      - label: "Vererbung"
+        value: "inheritance"
+  - type: multiple
+    prompt: "Welche Aussagen zu Mixins sind sinnvoll?"
+    answer: ["small", "suffix", "ability"]
+    options:
+      - label: "Mixins sollten eher klein bleiben."
+        value: "small"
+      - label: "Mixin-Namen enden oft auf Mixin."
+        value: "suffix"
+      - label: "Mixins ergänzen häufig eine Fähigkeit."
+        value: "ability"
+      - label: "Mixins müssen immer Datenbanken öffnen."
+        value: "database"
+  - type: text
+    prompt: "Welche Ausgabe entsteht bei class Duck(CanFly, CanSwim), wenn CanFly.move() 'fly' zurückgibt?"
+    answer: "fly"
+  - type: single
+    prompt: "Was ist das Diamond Problem?"
+    answer: "shared_parent"
+    options:
+      - label: "Zwei Oberklassen erben von derselben Basisklasse."
+        value: "shared_parent"
+      - label: "Eine Klasse hat gar keine Oberklasse."
+        value: "none"
+      - label: "Eine Methode hat zu viele Parameter."
+        value: "params"
+  - type: text
+    prompt: "Welcher Eintrag steht am Ende fast jeder MRO?"
+    answer: "object"
+    explanation: "Fast alle Klassen erben am Ende von object."
+  - type: multiple
+    prompt: "Welche Schritte helfen beim Lösen einer MRO-Aufgabe?"
+    answer: ["write_mro", "left_to_right", "super_next"]
+    options:
+      - label: "MRO aufschreiben"
+        value: "write_mro"
+      - label: "Methode von links nach rechts suchen"
+        value: "left_to_right"
+      - label: "super() als nächsten MRO-Eintrag verstehen"
+        value: "super_next"
+      - label: "Alphabetisch sortieren"
+        value: "alphabet"
+  - type: single
+    prompt: "Was ist ein Warnsignal gegen Vererbung?"
+    answer: "only_reuse"
+    options:
+      - label: "Vererbung wird nur genutzt, um Code zu sparen."
+        value: "only_reuse"
+      - label: "Eine echte ist-ein-Beziehung liegt vor."
+        value: "is_a"
+      - label: "Eine Unterklasse spezialisiert eine Oberklasse."
+        value: "specializes"
+  - type: text
+    prompt: "Welche Methode wird in einem InfoMixin oft genutzt, um Attribute auszugeben?"
+    answer: "__dict__"
+    explanation: "obj.__dict__ zeigt die Instanzattribute."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class CanSwim:
+          def move(self):
+              return "swim"
+
+      class CanFly:
+          def move(self):
+              return "fly"
+
+      class Duck(CanFly, CanSwim):
+          pass
+
+      print(Duck().move())
+    answer: "fly"
+    explanation: "CanFly steht in der MRO vor CanSwim."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Parent:
+          def setup(self):
+              print("Parent")
+
+      class Left(Parent):
+          def setup(self):
+              print("Left")
+              super().setup()
+
+      class Right(Parent):
+          def setup(self):
+              print("Right")
+              super().setup()
+
+      class Child(Left, Right):
+          def setup(self):
+              print("Child")
+              super().setup()
+
+      Child().setup()
+    answer: |
+      Child
+      Left
+      Right
+      Parent
+    explanation: "super() folgt der MRO: Child -> Left -> Right -> Parent."
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class InfoMixin:
+          def info(self):
+              return self.__dict__
+
+      class Book(InfoMixin):
+          def __init__(self, title):
+              self.title = title
+
+      print(Book("Python").info())
+    answer: "{'title': 'Python'}"
+    explanation: "Das Mixin stellt info() bereit, Book liefert die Instanzattribute."

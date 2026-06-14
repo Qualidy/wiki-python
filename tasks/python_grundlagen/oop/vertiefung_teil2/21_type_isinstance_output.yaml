@@ -1,0 +1,34 @@
+title: "Expected Output: type und isinstance"
+difficulty: 2
+question: |
+  Schreibe die Ausgabe auf:
+
+  ```python
+  class Animal:
+      pass
+
+
+  class Dog(Animal):
+      pass
+
+
+  dog = Dog()
+
+  print(type(dog) == Dog)
+  print(type(dog) == Animal)
+  print(isinstance(dog, Dog))
+  print(isinstance(dog, Animal))
+  print(isinstance(dog, object))
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  True
+  False
+  True
+  True
+  True
+  ```
+
+  Jede Python-Klasse erbt am Ende von `object`.

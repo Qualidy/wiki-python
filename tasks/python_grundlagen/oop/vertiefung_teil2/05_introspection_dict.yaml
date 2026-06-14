@@ -1,0 +1,36 @@
+title: "Introspection untersuchen"
+difficulty: 2
+question: |
+  Betrachte den folgenden Code. Welche Aussagen sind wahr?
+
+  ```python
+  class Product:
+      tax_rate = 0.19
+
+      def __init__(self, name, price):
+          self.name = name
+          self.price = price
+          self.__active = True
+
+
+  product = Product("Tastatur", 40)
+  ```
+
+  Aussagen:
+
+  1. `"name" in product.__dict__` ist `True`.
+  2. `"tax_rate" in product.__dict__` ist `True`.
+  3. `hasattr(product, "tax_rate")` ist `True`.
+  4. `hasattr(product, "__active")` ist `True`.
+  5. `hasattr(product, "_Product__active")` ist `True`.
+  6. `Product.__name__` ist `"Product"`.
+solution: |
+  Wahr sind: 1, 3, 5 und 6.
+
+  Erklärung:
+
+  - `name` ist ein Instanzattribut.
+  - `tax_rate` ist ein Klassenattribut und steht nicht in `product.__dict__`.
+  - `hasattr()` findet `tax_rate`, weil Python auch in der Klasse sucht.
+  - `__active` wird durch Name Mangling zu `_Product__active`.
+  - `Product.__name__` enthält den Klassennamen.

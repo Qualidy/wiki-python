@@ -95,8 +95,10 @@ Eine gute Projekt-Dokumentation beantwortet mindestens diese Fragen:
 | Ausblick | Was könnte man verbessern? |
 
 ## README-Vorlage
-
+### **Github**-Beispiel: 
+https://github.com/SadikshyaBashyal/Hangman-Game
 ```markdown
+"
 # Projektname
 
 Kurze Beschreibung des Projekts in 2-4 Sätzen.
@@ -109,17 +111,17 @@ Kurze Beschreibung des Projekts in 2-4 Sätzen.
 
 ## Installation
 
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-```
-
+```.
 ## Start
 
 ```bash
 python main.py
-```
+```.
 
 ## Bedienung
 
@@ -136,7 +138,7 @@ Beschreibe kurz, wie man das Programm benutzt.
 
 ```text
 Beispielausgabe oder Beispielablauf
-```
+```.
 
 ## Bekannte Grenzen
 
@@ -147,6 +149,7 @@ Beispielausgabe oder Beispielablauf
 
 - mögliche Erweiterung 1
 - mögliche Erweiterung 2
+
 ```
 
 !!! warning "Codeblock in Codeblock"

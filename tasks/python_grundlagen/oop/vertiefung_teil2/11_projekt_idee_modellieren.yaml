@@ -1,17 +1,18 @@
-title: "Projektidee modellieren"
+title: "Ticket-System modellieren"
 difficulty: 2
 question: |
-  Plane dein Dungeon- oder Simulationsprojekt, bevor du Code schreibst.
+  Plane dein Ticket-System Backend, bevor du Code schreibst.
 
   Erstelle eine kurze Markdown-Skizze mit:
 
-  - Projektthema
-  - Ziel des Programms
-  - mindestens 6 möglichen Klassen
+  - Ziel des Systems
+  - mindestens 7 möglichen Klassen
   - mindestens einer Vererbungsbeziehung
   - mindestens einer Kompositionsbeziehung
   - mindestens einer polymorphen Methode
-  - mindestens einer Stelle für Datei-I/O
+  - mindestens zwei eigenen Exceptions
+  - mindestens einer Stelle für JSON-Datei-I/O
+  - kurzer Erklärung, wie später ein Frontend darauf zugreifen könnte
 
   Nutze diese Tabelle:
 
@@ -22,15 +23,16 @@ solution: |
 
   | Klasse | Aufgabe | wichtige Attribute | wichtige Methoden |
   |--------|---------|--------------------|-------------------|
-  | `Player` | aktive Figur | `name`, `health` | `interact()` |
-  | `Room` | Ort | `description`, `objects` | `describe()` |
-  | `Item` | Gegenstand | `name` | `use()` |
-  | `Key` | spezieller Gegenstand | `code` | `use()` |
-  | `Door` | Hindernis | `locked` | `interact()` |
-  | `Game` | Ablauf | `player`, `rooms` | `run()` |
+  | `Ticket` | Basisklasse für Tickets | `id`, `title`, `_status` | `change_status()`, `to_dict()` |
+  | `BugTicket` | Fehler-Ticket | `severity` | `calculate_priority()` |
+  | `FeatureRequest` | Wunsch/Verbesserung | `business_value` | `calculate_priority()` |
+  | `Comment` | Kommentar zu einem Ticket | `author`, `text`, `created_at` | `to_dict()` |
+  | `User` | Person im System | `name`, `role` | `can_handle(ticket)` |
+  | `TicketSystem` | Verwaltung | `tickets` | `create_ticket()`, `find_ticket()` |
+  | `JsonStorage` | Persistenz | `filename` | `save()`, `load()` |
 
-  Vererbung: `Key` ist ein spezielles `Item`.
+  Vererbung: `BugTicket` und `FeatureRequest` sind spezielle Tickets.
 
-  Komposition: `Room` enthält mehrere Objekte.
+  Komposition: Ein `Ticket` enthält mehrere `Comment`-Objekte.
 
-  Polymorphismus: Verschiedene Objekte implementieren `interact()`.
+  Polymorphismus: Verschiedene Ticketarten implementieren `calculate_priority()`.

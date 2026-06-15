@@ -1,7 +1,8 @@
 title: "Minimalversion implementieren"
 difficulty: 3
 question: |
-  Implementiere eine Minimalversion deines Projekts ohne Menü.
+  Implementiere eine Minimalversion deines Ticket-System Backends ohne Menü
+  und ohne Frontend.
 
   Anforderungen:
 
@@ -11,19 +12,12 @@ question: |
   - mindestens eine überschriebene Methode
   - mindestens eine `__str__`-Methode
   - eine Debug-Funktion mit `__dict__` und `__class__.__name__`
+  - Methoden sollen Werte zurückgeben, nicht nur `print()` verwenden
 
   Das Programm darf zunächst feste Beispielobjekte verwenden. Es muss noch
   keine vollständige Benutzereingabe besitzen.
-solution: |
-  Eine Lösung hängt von deinem Thema ab.
-
-  Prüfe am Ende selbst:
-
-  ```python
-  def inspect_object(obj):
-      print("Klasse:", obj.__class__.__name__)
-      print("Attribute:", obj.__dict__)
-      print("Oberklassen:", obj.__class__.__bases__)
-  ```
-
-  Diese Funktion sollte mit mehreren deiner Objekte funktionieren.
+tip: |
+  Starte klein: Erst Konstruktoren, Attribute und einen Demo-Ablauf bauen,
+  danach Vererbung, `__str__` und Debug-Funktion ergänzen. Wenn du die gleiche
+  Methode für unterschiedliche Ticketarten aufrufen kannst, ohne den konkreten
+  Typ vorher abzufragen, bist du nah an Polymorphismus.

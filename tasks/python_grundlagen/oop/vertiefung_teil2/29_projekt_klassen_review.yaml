@@ -1,7 +1,7 @@
 title: "Projekt-Klassenreview"
 difficulty: 2
 question: |
-  Prüfe deinen Projektentwurf:
+  Prüfe deinen Ticket-System-Entwurf:
 
   1. Welche Klassen sind echte fachliche Dinge?
   2. Welche Klassen enthalten andere Objekte?
@@ -9,12 +9,14 @@ question: |
   4. Ist diese Vererbung wirklich eine "ist-ein"-Beziehung?
   5. Welche Methode wird polymorph verwendet?
   6. Welche Klasse sollte eine `__str__`-Methode bekommen?
+  7. Welche Methoden wären später für ein Streamlit-Frontend nützlich?
 
   Schreibe danach mindestens zwei Änderungen an deinem Entwurf auf.
 solution: |
   Beispielantwort:
 
-  - `Inventory` enthält `Item`-Objekte, also Komposition.
-  - `Key` ist ein spezielles `Item`, also Vererbung.
-  - `Room` sollte nicht von `Item` erben, weil ein Raum kein Gegenstand ist.
-  - `interact()` kann polymorph für Türen, Gegenstände und Ereignisse genutzt werden.
+  - `Ticket` enthält `Comment`-Objekte, also Komposition.
+  - `BugTicket` ist ein spezielles `Ticket`, also Vererbung.
+  - `TicketSystem` sollte nicht von `Ticket` erben, weil es kein Ticket ist.
+  - `calculate_priority()` kann polymorph für verschiedene Ticketarten genutzt werden.
+  - Für ein Frontend sind Methoden wie `list_tickets()`, `create_ticket()` und `change_status()` nützlich.

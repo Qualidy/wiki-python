@@ -1,29 +1,14 @@
-title: "Projekt: Speichern und Debuggen"
+title: "Ticket-System: Speichern und Debuggen"
 difficulty: 3
 question: |
-  Ergänze dein Projekt um zwei Funktionen:
+  Ergänze dein Ticket-System um zwei Bausteine:
 
-  1. `save_state(filename, data)` speichert einfache Projektdaten in eine Datei.
+  1. `save_tickets(filename, tickets)` speichert Tickets in eine JSON-Datei.
   2. `debug_object(obj)` gibt Klasse, Attribute und Oberklassen aus.
 
-  Nutze für `save_state` entweder Text, CSV oder JSON.
-solution: |
-  Beispiel mit JSON:
-
-  ```python
-  import json
-
-
-  def save_state(filename, data):
-      with open(filename, "w", encoding="utf-8") as file:
-          json.dump(data, file, indent=2)
-
-
-  def debug_object(obj):
-      print("Klasse:", obj.__class__.__name__)
-      print("Attribute:", obj.__dict__)
-      print("Oberklassen:", obj.__class__.__bases__)
-
-
-  save_state("savegame.json", {"player": "Ada", "room": 1})
-  ```
+  Wichtig: Speichere nicht die Python-Objekte direkt, sondern Dictionaries,
+  z.B. über eine Methode `to_dict()`.
+tip: |
+  JSON kann einfache Datentypen speichern, aber keine Python-Objekte direkt.
+  Baue deshalb zuerst eine saubere Umwandlung deiner Objekte in Dictionaries.
+  Die Debug-Funktion soll mit verschiedenen Objektarten funktionieren.

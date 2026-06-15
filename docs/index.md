@@ -62,7 +62,7 @@ hide:
 - [ :material-account-switch: Polymorphismus & Introspection ](content/oop_vertiefung_teil2/polymorphismus_introspection.md)
 - [ :material-puzzle: Komposition & Mixins ](content/oop_vertiefung_teil2/komposition_mixins.md)
 - [ :material-vector-polyline: Mehrfachvererbung & MRO ](content/oop_vertiefung_teil2/mro_diamond.md)
-- [ :material-sword-cross: Dungeon Projekt ](content/oop_vertiefung_teil2/projekt_dungeon.md)
+- [ :material-ticket-confirmation: Ticket-System Projekt ](content/oop_vertiefung_teil2/projekt_ticket_system.md)
 - [ :material-help-circle: Wiederholungsquizzes ](content/oop_vertiefung_teil2/quiz_oop_grundlagen.md)
 
 <!--

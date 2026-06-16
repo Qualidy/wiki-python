@@ -35,12 +35,12 @@ questions:
     prompt: "Was bedeutet super() bei Mehrfachvererbung genauer?"
     answer: "next_mro"
     options:
-      - label: "Nächster Eintrag in der MRO"
-        value: "next_mro"
       - label: "Immer die erste Klasse im Alphabet"
         value: "alphabet"
       - label: "Immer object"
         value: "object"
+      - label: "Nächster Eintrag in der MRO"
+        value: "next_mro"
   - type: text
     prompt: "Welche Ausgabe entsteht bei class Duck(CanSwim, CanFly), wenn beide move() haben und CanSwim.move() 'swim' zurückgibt?"
     answer: "swim"
@@ -49,10 +49,10 @@ questions:
     prompt: "Ein Course enthält Student-Objekte. Welche Beziehung passt besser?"
     answer: "composition"
     options:
-      - label: "Komposition"
-        value: "composition"
       - label: "Vererbung"
         value: "inheritance"
+      - label: "Komposition"
+        value: "composition"
   - type: single
     prompt: "Ein ElectricCar ist ein Car. Welche Beziehung passt besser?"
     answer: "inheritance"
@@ -65,14 +65,14 @@ questions:
     prompt: "Welche Aussagen zu Mixins sind sinnvoll?"
     answer: ["small", "suffix", "ability"]
     options:
-      - label: "Mixins sollten eher klein bleiben."
-        value: "small"
+      - label: "Mixins müssen immer Datenbanken öffnen."
+        value: "database"
       - label: "Mixin-Namen enden oft auf Mixin."
         value: "suffix"
       - label: "Mixins ergänzen häufig eine Fähigkeit."
         value: "ability"
-      - label: "Mixins müssen immer Datenbanken öffnen."
-        value: "database"
+      - label: "Mixins sollten eher klein bleiben."
+        value: "small"
   - type: text
     prompt: "Welche Ausgabe entsteht bei class Duck(CanFly, CanSwim), wenn CanFly.move() 'fly' zurückgibt?"
     answer: "fly"
@@ -94,14 +94,14 @@ questions:
     prompt: "Welche Schritte helfen beim Lösen einer MRO-Aufgabe?"
     answer: ["write_mro", "left_to_right", "super_next"]
     options:
-      - label: "MRO aufschreiben"
-        value: "write_mro"
+      - label: "Alphabetisch sortieren"
+        value: "alphabet"
       - label: "Methode von links nach rechts suchen"
         value: "left_to_right"
       - label: "super() als nächsten MRO-Eintrag verstehen"
         value: "super_next"
-      - label: "Alphabetisch sortieren"
-        value: "alphabet"
+      - label: "MRO aufschreiben"
+        value: "write_mro"
   - type: single
     prompt: "Was ist ein Warnsignal gegen Vererbung?"
     answer: "only_reuse"

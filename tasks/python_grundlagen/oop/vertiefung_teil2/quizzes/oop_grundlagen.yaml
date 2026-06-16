@@ -20,31 +20,31 @@ questions:
     prompt: "Wo steht ein Attribut, das im Konstruktor mit self.name gesetzt wurde?"
     answer: "instance"
     options:
-      - label: "Im __dict__ der Instanz"
-        value: "instance"
       - label: "Nur im __dict__ der Klasse"
         value: "class"
       - label: "Gar nicht, Attribute sind unsichtbar"
         value: "none"
+      - label: "Im __dict__ der Instanz"
+        value: "instance"
   - type: multiple
     prompt: "Welche Aussagen zu Klassenattributen sind richtig?"
     answer: ["class_dict", "instance_access"]
     options:
       - label: "Sie stehen im __dict__ der Klasse."
         value: "class_dict"
-      - label: "Sie sind über Instanzen erreichbar."
-        value: "instance_access"
       - label: "Sie werden immer automatisch in jedes Instanz-__dict__ kopiert."
         value: "copied"
+      - label: "Sie sind über Instanzen erreichbar."
+        value: "instance_access"
     explanation: "Klassenattribute sind über Instanzen erreichbar, werden aber nicht automatisch kopiert."
   - type: single
     prompt: "Was bedeutet Overriding?"
     answer: "override"
     options:
-      - label: "Eine Unterklasse definiert eine Methode der Oberklasse neu."
-        value: "override"
       - label: "Eine Klasse löscht alle Attribute."
         value: "delete"
+      - label: "Eine Unterklasse definiert eine Methode der Oberklasse neu."
+        value: "override"
       - label: "Eine Funktion wird außerhalb der Klasse definiert."
         value: "function"
   - type: text
@@ -69,22 +69,22 @@ questions:
     prompt: "Was ist ein Instanzattribut?"
     answer: "object_attr"
     options:
-      - label: "Ein Attribut eines konkreten Objekts"
-        value: "object_attr"
       - label: "Ein Attribut, das nur in Kommentaren steht"
         value: "comment"
+      - label: "Ein Attribut eines konkreten Objekts"
+        value: "object_attr"
       - label: "Eine Methode ohne self"
         value: "method"
   - type: single
     prompt: "Welche Schreibweise signalisiert in Python 'intern gedacht'?"
     answer: "_name"
     options:
-      - label: "_name"
-        value: "_name"
       - label: "name!"
         value: "bang"
       - label: "public name"
         value: "public"
+      - label: "_name"
+        value: "_name"
   - type: text
     prompt: "Zu welchem Namen wird __balance in der Klasse Account intern ungefähr umgeschrieben?"
     answer: "_Account__balance"
@@ -103,32 +103,32 @@ questions:
     prompt: "Was prüft == normalerweise?"
     answer: "equality"
     options:
-      - label: "Gleichheit nach definierter Vergleichslogik"
-        value: "equality"
       - label: "Immer Objektidentität"
         value: "identity"
       - label: "Die MRO"
         value: "mro"
+      - label: "Gleichheit nach definierter Vergleichslogik"
+        value: "equality"
   - type: multiple
     prompt: "Welche Methoden sind Magic Methods?"
     answer: ["init", "str", "len"]
     options:
-      - label: "__init__"
-        value: "init"
-      - label: "__str__"
-        value: "str"
-      - label: "__len__"
-        value: "len"
       - label: "calculate_total"
         value: "normal"
+      - label: "__str__"
+        value: "str"
+      - label: "__init__"
+        value: "init"
+      - label: "__len__"
+        value: "len"
   - type: single
     prompt: "Was macht super().__init__(...) in einer Unterklasse typischerweise?"
     answer: "parent_init"
     options:
-      - label: "Es ruft den nächsten Konstruktor in der Vererbungskette auf."
-        value: "parent_init"
       - label: "Es löscht alle Instanzattribute."
         value: "delete"
+      - label: "Es ruft den nächsten Konstruktor in der Vererbungskette auf."
+        value: "parent_init"
       - label: "Es erzeugt immer eine zweite Instanz."
         value: "second"
   - type: output

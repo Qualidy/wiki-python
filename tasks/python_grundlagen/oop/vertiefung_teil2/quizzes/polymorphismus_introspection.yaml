@@ -23,14 +23,14 @@ questions:
     prompt: "Welche Ausdrücke gehören zur Introspection?"
     answer: ["dict", "name", "bases"]
     options:
-      - label: "obj.__dict__"
-        value: "dict"
-      - label: "Class.__name__"
-        value: "name"
-      - label: "Class.__bases__"
-        value: "bases"
       - label: "x = 5 + 3"
         value: "calc"
+      - label: "Class.__name__"
+        value: "name"
+      - label: "obj.__dict__"
+        value: "dict"
+      - label: "Class.__bases__"
+        value: "bases"
   - type: single
     prompt: "Warum kann hasattr(obj, 'x') True sein, obwohl 'x' nicht in obj.__dict__ steht?"
     answer: "class_lookup"
@@ -49,22 +49,22 @@ questions:
     prompt: "Was ist Overriding?"
     answer: "subclass_redefines"
     options:
-      - label: "Eine Unterklasse definiert eine geerbte Methode neu."
-        value: "subclass_redefines"
       - label: "Eine Instanz bekommt ein neues Attribut."
         value: "new_attr"
+      - label: "Eine Unterklasse definiert eine geerbte Methode neu."
+        value: "subclass_redefines"
       - label: "Ein Modul wird importiert."
         value: "import"
   - type: single
     prompt: "Was beschreibt Duck Typing am besten?"
     answer: "behavior"
     options:
-      - label: "Entscheidend ist, ob ein Objekt das benötigte Verhalten besitzt."
-        value: "behavior"
       - label: "Jedes Objekt muss von Duck erben."
         value: "duck_class"
       - label: "Nur eingebaute Typen dürfen verwendet werden."
         value: "builtins"
+      - label: "Entscheidend ist, ob ein Objekt das benötigte Verhalten besitzt."
+        value: "behavior"
   - type: text
     prompt: "Welche Ausgabe entsteht bei [1, 2] == [1, 2]? Antworte mit True oder False."
     answer: "True"
@@ -86,22 +86,22 @@ questions:
     prompt: "Was enthält Product.__bases__ typischerweise, wenn Product keine explizite Oberklasse hat?"
     answer: "object"
     options:
-      - label: "object"
-        value: "object"
       - label: "Product"
         value: "Product"
       - label: "Alle Instanzattribute"
         value: "attrs"
+      - label: "object"
+        value: "object"
   - type: multiple
     prompt: "Welche Aussagen zu hasattr(obj, name) sind richtig?"
     answer: ["string_name", "class_search"]
     options:
       - label: "Der Attributname wird als String übergeben."
         value: "string_name"
-      - label: "Python sucht auch in Klasse und Oberklassen."
-        value: "class_search"
       - label: "hasattr verändert das Objekt immer."
         value: "mutates"
+      - label: "Python sucht auch in Klasse und Oberklassen."
+        value: "class_search"
   - type: text
     prompt: "Welche Methode wird bei print(obj) indirekt verwendet?"
     answer: "__str__"
@@ -110,10 +110,10 @@ questions:
     prompt: "Wann ist isinstance(obj, Base) besonders nützlich?"
     answer: "inheritance"
     options:
-      - label: "Wenn Unterklassen akzeptiert werden sollen"
-        value: "inheritance"
       - label: "Wenn nur der exakte Typ akzeptiert werden soll"
         value: "exact"
+      - label: "Wenn Unterklassen akzeptiert werden sollen"
+        value: "inheritance"
       - label: "Wenn das Objekt gelöscht werden soll"
         value: "delete"
   - type: output

@@ -1,0 +1,377 @@
+title: "Quiz: OOP English Vocabulary"
+description: "Practice common English OOP vocabulary and Python OOP syntax for PCAP-style questions."
+questions:
+  - type: single
+    prompt: "Which word means a reusable blueprint for creating objects?"
+    answer: "class"
+    options:
+      - label: "module"
+        value: "module"
+      - label: "class"
+        value: "class"
+      - label: "loop"
+        value: "loop"
+      - label: "exception"
+        value: "exception"
+    explanation: "A class is a blueprint. An object or instance is created from it."
+
+  - type: single
+    prompt: "Which term means a concrete object created from a class?"
+    answer: "instance"
+    options:
+      - label: "superclass"
+        value: "superclass"
+      - label: "attribute"
+        value: "attribute"
+      - label: "instance"
+        value: "instance"
+      - label: "package"
+        value: "package"
+
+  - type: multiple
+    prompt: "Which terms usually describe data stored on or in an object?"
+    answer: ["attribute", "state", "property"]
+    options:
+      - label: "attribute"
+        value: "attribute"
+      - label: "state"
+        value: "state"
+      - label: "import"
+        value: "import"
+      - label: "property"
+        value: "property"
+    explanation: "Attributes and properties represent object data; state describes the current values."
+
+  - type: single
+    prompt: "Which term means an action or behavior that belongs to an object or class?"
+    answer: "method"
+    options:
+      - label: "method"
+        value: "method"
+      - label: "literal"
+        value: "literal"
+      - label: "delimiter"
+        value: "delimiter"
+      - label: "folder"
+        value: "folder"
+
+  - type: text
+    prompt: "Write the English term: The first parameter of an instance method in Python is usually called ____."
+    answer: "self"
+    explanation: "The conventional name is self."
+
+  - type: single
+    prompt: "Which pair best matches the terms state and behavior?"
+    answer: "data_actions"
+    options:
+      - label: "parent class and child class"
+        value: "parent_child"
+      - label: "data and actions"
+        value: "data_actions"
+      - label: "file and directory"
+        value: "file_directory"
+      - label: "key and index"
+        value: "key_index"
+
+  - type: multiple
+    prompt: "Which terms are connected to inheritance?"
+    answer: ["superclass", "subclass", "base_class"]
+    options:
+      - label: "slicing"
+        value: "slicing"
+      - label: "superclass"
+        value: "superclass"
+      - label: "subclass"
+        value: "subclass"
+      - label: "base class"
+        value: "base_class"
+
+  - type: single
+    prompt: "Which statement best describes inheritance?"
+    answer: "is_a"
+    options:
+      - label: "One object contains another object."
+        value: "has_a"
+      - label: "A class receives behavior from another class."
+        value: "is_a"
+      - label: "A function reads a file."
+        value: "file_io"
+      - label: "A string is converted to lowercase."
+        value: "string_method"
+
+  - type: single
+    prompt: "Which statement best describes composition?"
+    answer: "has_a"
+    options:
+      - label: "A class is a specialized version of another class."
+        value: "is_a"
+      - label: "A variable is copied into every module."
+        value: "copy"
+      - label: "An object is built from other objects."
+        value: "has_a"
+      - label: "A method replaces an inherited method."
+        value: "override"
+
+  - type: single
+    prompt: "Which term means hiding internal details behind a controlled public interface?"
+    answer: "encapsulation"
+    options:
+      - label: "encapsulation"
+        value: "encapsulation"
+      - label: "concatenation"
+        value: "concatenation"
+      - label: "iteration"
+        value: "iteration"
+      - label: "indentation"
+        value: "indentation"
+
+  - type: single
+    prompt: "Which term means focusing on essential features while ignoring unnecessary details?"
+    answer: "abstraction"
+    options:
+      - label: "aggregation"
+        value: "aggregation"
+      - label: "serialization"
+        value: "serialization"
+      - label: "abstraction"
+        value: "abstraction"
+      - label: "mutation"
+        value: "mutation"
+
+  - type: multiple
+    prompt: "Which words are commonly connected to encapsulation?"
+    answer: ["private", "internal_state", "public_interface"]
+    options:
+      - label: "private"
+        value: "private"
+      - label: "internal state"
+        value: "internal_state"
+      - label: "list slicing"
+        value: "slicing"
+      - label: "public interface"
+        value: "public_interface"
+
+  - type: single
+    prompt: "Which term means that different objects can respond to the same operation in different ways?"
+    answer: "polymorphism"
+    options:
+      - label: "immutability"
+        value: "immutability"
+      - label: "recursion"
+        value: "recursion"
+      - label: "formatting"
+        value: "formatting"
+      - label: "polymorphism"
+        value: "polymorphism"
+
+  - type: single
+    prompt: "Which term means a subclass provides its own version of an inherited method?"
+    answer: "overriding"
+    options:
+      - label: "overloading"
+        value: "overloading"
+      - label: "overriding"
+        value: "overriding"
+      - label: "importing"
+        value: "importing"
+      - label: "indexing"
+        value: "indexing"
+
+  - type: single
+    prompt: "Which term means several methods or operations share a name but differ by parameters or accepted types?"
+    answer: "overloading"
+    options:
+      - label: "delegation"
+        value: "delegation"
+      - label: "name mangling"
+        value: "name_mangling"
+      - label: "overloading"
+        value: "overloading"
+      - label: "deserialization"
+        value: "deserialization"
+    explanation: "Python does not use Java-style method overloading for ordinary methods, but the vocabulary appears in OOP discussions."
+
+  - type: text
+    prompt: "Write the English term: The method that initializes a newly created Python object is named ____."
+    answer: "__init__"
+    explanation: "__init__ is the initializer. It is often informally called the constructor in beginner material."
+
+  - type: single
+    prompt: "Which term best describes __str__, __len__, and __eq__?"
+    answer: "dunder_methods"
+    options:
+      - label: "dunder methods"
+        value: "dunder_methods"
+      - label: "local variables"
+        value: "local_variables"
+      - label: "list methods only"
+        value: "list_methods"
+      - label: "environment variables"
+        value: "environment_variables"
+
+  - type: multiple
+    prompt: "Which terms are related to Python introspection?"
+    answer: ["__dict__", "__name__", "__bases__"]
+    options:
+      - label: "__dict__"
+        value: "__dict__"
+      - label: "string concatenation"
+        value: "concatenation"
+      - label: "__name__"
+        value: "__name__"
+      - label: "__bases__"
+        value: "__bases__"
+    explanation: "Introspection means examining objects, classes, or metadata at runtime."
+
+  - type: single
+    prompt: "Which term means the order in which Python searches for methods in an inheritance hierarchy?"
+    answer: "mro"
+    options:
+      - label: "Method Resolution Order"
+        value: "mro"
+      - label: "Module Runtime Output"
+        value: "module_output"
+      - label: "Multiple Return Operator"
+        value: "return_operator"
+      - label: "Memory Reference Object"
+        value: "memory_reference"
+
+  - type: single
+    prompt: "Which term describes the multiple-inheritance situation where two paths lead to the same ancestor class?"
+    answer: "diamond_problem"
+    options:
+      - label: "factory method"
+        value: "factory_method"
+      - label: "diamond problem"
+        value: "diamond_problem"
+      - label: "syntax tree"
+        value: "syntax_tree"
+      - label: "namespace collision"
+        value: "namespace_collision"
+
+  - type: single
+    prompt: "Which term means a small reusable class that adds a specific capability to other classes?"
+    answer: "mixin"
+    options:
+      - label: "iterator"
+        value: "iterator"
+      - label: "traceback"
+        value: "traceback"
+      - label: "mixin"
+        value: "mixin"
+      - label: "literal"
+        value: "literal"
+
+  - type: multiple
+    prompt: "Which terms are connected to object creation?"
+    answer: ["instantiation", "initializer", "constructor"]
+    options:
+      - label: "instantiation"
+        value: "instantiation"
+      - label: "membership test"
+        value: "membership_test"
+      - label: "initializer"
+        value: "initializer"
+      - label: "constructor"
+        value: "constructor"
+
+  - type: single
+    prompt: "Which term means converting an object into a storable or transferable format?"
+    answer: "serialization"
+    options:
+      - label: "deserialization"
+        value: "deserialization"
+      - label: "serialization"
+        value: "serialization"
+      - label: "inheritance"
+        value: "inheritance"
+      - label: "overriding"
+        value: "overriding"
+
+  - type: single
+    prompt: "Which term means converting stored data back into an object or object-like structure?"
+    answer: "deserialization"
+    options:
+      - label: "iteration"
+        value: "iteration"
+      - label: "serialization"
+        value: "serialization"
+      - label: "deserialization"
+        value: "deserialization"
+      - label: "delegation"
+        value: "delegation"
+
+  - type: single
+    prompt: "Which term means passing part of an object's work to another object?"
+    answer: "delegation"
+    options:
+      - label: "encapsulation"
+        value: "encapsulation"
+      - label: "delegation"
+        value: "delegation"
+      - label: "slicing"
+        value: "slicing"
+      - label: "formatting"
+        value: "formatting"
+
+  - type: single
+    prompt: "Which term means an object that another object needs in order to do its work?"
+    answer: "dependency"
+    options:
+      - label: "keyword"
+        value: "keyword"
+      - label: "operand"
+        value: "operand"
+      - label: "dependency"
+        value: "dependency"
+      - label: "literal"
+        value: "literal"
+
+  - type: multiple
+    prompt: "Which terms are related to loose, replaceable design?"
+    answer: ["dependency_injection", "common_interface", "substitutability"]
+    options:
+      - label: "dependency injection"
+        value: "dependency_injection"
+      - label: "hard-coded dependency"
+        value: "hard_coded"
+      - label: "common interface"
+        value: "common_interface"
+      - label: "substitutability"
+        value: "substitutability"
+
+  - type: output
+    prompt: "Which English OOP term best describes the relationship shown by this code? Write one word."
+    code: |
+      class Engine:
+          pass
+
+      class Car:
+          def __init__(self):
+              self.engine = Engine()
+    answer: "composition"
+    explanation: "A Car has an Engine, so this is composition."
+
+  - type: output
+    prompt: "Which English OOP term best describes the relationship shown by this code? Write one word."
+    code: |
+      class User:
+          pass
+
+      class AdminUser(User):
+          pass
+    answer: "inheritance"
+    explanation: "AdminUser is a specialized User, so this is inheritance."
+
+  - type: output
+    prompt: "Which English term best describes what happens here? Write one word."
+    code: |
+      class Report:
+          def export(self):
+              return "generic"
+
+      class PdfReport(Report):
+          def export(self):
+              return "pdf"
+    answer: "overriding"
+    explanation: "PdfReport defines its own version of export()."

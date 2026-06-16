@@ -167,6 +167,10 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
                 f'placeholder="{placeholder}" autocomplete="off">'
             )
 
+        result_parts.append(
+            f'<button type="button" class="md-button quiz-check-one" '
+            f'data-question-index="{index}">Diese Frage prüfen</button>'
+        )
         result_parts.append('<p class="quiz-feedback" aria-live="polite"></p>')
         result_parts.append('</div>')
 
@@ -200,6 +204,9 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
 .quiz-output-input {
   font-family: var(--md-code-font-family);
   min-height: 6rem;
+}
+.quiz-check-one {
+  margin-top: 0.55rem;
 }
 .quiz-feedback {
   margin: 0.45rem 0 0;
@@ -235,36 +242,52 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
     return left.length === right.length && left.every((value, index) => value === right[index]);
   }}
 
+  function checkQuestion(index) {{
+    const question = answers[index];
+    const name = "{quiz_id}-q" + index;
+    const container = form.querySelectorAll(".quiz-question")[index];
+    const feedback = container.querySelector(".quiz-feedback");
+
+    let correct = false;
+    if (question.type === "single") {{
+      const selected = form.querySelector('input[name="' + name + '"]:checked');
+      correct = selected && normalize(selected.value) === normalize(question.answer);
+    }} else if (question.type === "multiple") {{
+      const selected = Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map(input => input.value);
+      correct = arraysEqual(selected, Array.isArray(question.answer) ? question.answer : [question.answer]);
+    }} else {{
+      const input = form.querySelector('[name="' + name + '"]');
+      const validAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
+      correct = input && validAnswers.some(answer => normalize(input.value) === normalize(answer));
+    }}
+
+    if (correct) {{
+      feedback.textContent = "Richtig.";
+      feedback.className = "quiz-feedback correct";
+    }} else {{
+      feedback.textContent = "Noch nicht richtig." + (question.explanation ? " " + question.explanation : "");
+      feedback.className = "quiz-feedback incorrect";
+    }}
+
+    return correct;
+  }}
+
+  form.querySelectorAll(".quiz-check-one").forEach(button => {{
+    button.addEventListener("click", function() {{
+      const index = Number(button.dataset.questionIndex);
+      checkQuestion(index);
+      form.querySelector(".quiz-summary").textContent = "";
+    }});
+  }});
+
   form.querySelector(".quiz-check").addEventListener("click", function() {{
     let score = 0;
     let total = 0;
 
     answers.forEach(function(question, index) {{
-      const name = "{quiz_id}-q" + index;
-      const container = form.querySelectorAll(".quiz-question")[index];
-      const feedback = container.querySelector(".quiz-feedback");
       total += Number(question.points || 1);
-
-      let correct = false;
-      if (question.type === "single") {{
-        const selected = form.querySelector('input[name="' + name + '"]:checked');
-        correct = selected && normalize(selected.value) === normalize(question.answer);
-      }} else if (question.type === "multiple") {{
-        const selected = Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map(input => input.value);
-        correct = arraysEqual(selected, Array.isArray(question.answer) ? question.answer : [question.answer]);
-      }} else {{
-        const input = form.querySelector('[name="' + name + '"]');
-        const validAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
-        correct = validAnswers.some(answer => normalize(input.value) === normalize(answer));
-      }}
-
-      if (correct) {{
+      if (checkQuestion(index)) {{
         score += Number(question.points || 1);
-        feedback.textContent = "Richtig.";
-        feedback.className = "quiz-feedback correct";
-      }} else {{
-        feedback.textContent = "Noch nicht richtig." + (question.explanation ? " " + question.explanation : "");
-        feedback.className = "quiz-feedback incorrect";
       }}
     }});
 

@@ -1,0 +1,107 @@
+title: "Smart Sensor: Diamond, Mixins und Komposition"
+difficulty: 5
+question: |
+  Entwickle schrittweise ein kleines Backend-Modell für ein Smart-Home-Gerät.
+  Die Aufgabe ist bewusst komplexer: Erst sollst du eine Diamond-Struktur mit
+  MRO verstehen, danach das Modell mit Mixins und Komposition erweitern.
+
+  ## Schritt 1: Diamond-Struktur implementieren
+
+  Implementiere diese Klassenstruktur:
+
+  ```mermaid
+  classDiagram
+      HardwareUnit <|-- NetworkDevice
+      HardwareUnit <|-- MeasuringDevice
+      NetworkDevice <|-- SmartTemperatureSensor
+      MeasuringDevice <|-- SmartTemperatureSensor
+  ```
+
+  Anforderungen:
+
+  - `HardwareUnit` ist die gemeinsame Grandparent-Klasse.
+  - `HardwareUnit` besitzt `serial_number` und eine Methode `status()`.
+  - `NetworkDevice` erbt von `HardwareUnit` und ergänzt `ip_address`.
+  - `MeasuringDevice` erbt von `HardwareUnit` und ergänzt `unit`, z.B. `"C"`.
+  - `SmartTemperatureSensor` erbt von `NetworkDevice` und `MeasuringDevice`.
+  - Jede Klasse, die `__init__()` definiert, soll kooperativ mit `super()`
+    arbeiten.
+  - Erzeuge ein Sensor-Objekt und gib aus:
+    - `sensor.__dict__`
+    - `SmartTemperatureSensor.__mro__`
+    - `sensor.status()`
+
+  Beantworte danach schriftlich:
+
+  1. Warum ist das eine Diamond-Struktur?
+  2. Warum darf `HardwareUnit.__init__()` nicht zweimal ausgeführt werden?
+  3. Welche Rolle spielt `super()` in dieser Struktur?
+  4. Was ändert sich, wenn du die Reihenfolge im Klassenkopf von
+     `SmartTemperatureSensor` tauschst?
+
+  ## Schritt 2: Mixins und Komposition ergänzen
+
+  Erweitere dein Modell um mindestens diese Klassen:
+
+  ```mermaid
+  classDiagram
+      JsonMixin <|-- SmartTemperatureSensor
+      DiagnosticMixin <|-- SmartTemperatureSensor
+      SmartTemperatureSensor o-- Battery
+      SmartTemperatureSensor o-- AlertChannel
+
+      class JsonMixin {
+          to_dict()
+      }
+      class DiagnosticMixin {
+          diagnostic_report()
+      }
+      class Battery {
+          level
+          is_low()
+      }
+      class AlertChannel {
+          send(message)
+      }
+  ```
+
+  Anforderungen:
+
+  - `JsonMixin` ergänzt `to_dict()`.
+  - `DiagnosticMixin` ergänzt `diagnostic_report()`.
+  - `Battery` ist eine eigene Klasse mit `level` und `is_low()`.
+  - `AlertChannel` ist eine eigene Klasse mit `send(message)`.
+  - `SmartTemperatureSensor` soll ein `Battery`-Objekt enthalten.
+  - `SmartTemperatureSensor` soll ein `AlertChannel`-Objekt benutzen.
+  - Wenn die Batterie niedrig ist, soll eine Methode des Sensors eine Warnung
+    über den `AlertChannel` auslösen.
+
+  Wichtig:
+
+  - `Battery` und `AlertChannel` sollen **nicht** Oberklassen des Sensors sein.
+  - Begründe kurz, warum hier Komposition besser passt als Vererbung.
+  - Gib am Ende erneut die MRO aus und erkläre, welche Klassen darin auftauchen
+    und welche nicht.
+
+  ## UML-Aufgabe
+
+  Zeichne vor dem Coden ein eigenes UML-Klassendiagramm. Es kann auf Papier,
+  im Whiteboard oder als Mermaid-Diagramm entstehen.
+
+  Markiere darin:
+
+  - die Diamond-Struktur
+  - die Mixin-Klassen
+  - die Kompositionsbeziehungen
+  - die Klasse, bei der `super()` am wichtigsten ist
+tip: |
+  Gute Reihenfolge:
+
+  1. Erst nur `HardwareUnit`, `NetworkDevice`, `MeasuringDevice` und
+     `SmartTemperatureSensor` bauen.
+  2. Danach die MRO ausgeben und verstehen.
+  3. Erst dann `JsonMixin`, `DiagnosticMixin`, `Battery` und `AlertChannel`
+     ergänzen.
+
+  Bei kooperativem `__init__()` ist hilfreich: Jede Klasse verarbeitet nur ihre
+  eigenen Argumente und reicht den Rest mit `super()` weiter.

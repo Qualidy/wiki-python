@@ -233,3 +233,4 @@ Wenn eine Klasse `super()` vergisst, endet die Kette dort.
 {{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/26_mro_order_swap.yaml") }}
 {{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/27_cooperative_init.yaml") }}
 {{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/28_mro_pcapsnippets.yaml") }}
+{{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/31_smart_sensor_diamond_mixins.yaml") }}

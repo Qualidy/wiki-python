@@ -69,6 +69,9 @@ Für Werte, die zwischen Interaktionen erhalten bleiben sollen, nutzt man
 | `st.success()` / `st.warning()` / `st.error()` | Feedback nach Aktionen |
 | `st.session_state` | Objekte während der Session speichern |
 
+
+**Hier findest du weitere Elemente und Informationen:**
+https://docs.streamlit.io/develop/api-reference
 ## Warum das gut zu OOP-Backends passt
 
 Das Backend sollte weiterhin keine Streamlit-Abhängigkeit besitzen.

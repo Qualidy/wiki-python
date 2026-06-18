@@ -192,3 +192,5 @@ Das ist die Grundlage für Polymorphismus.
 {{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/15_kursverwaltung_modellieren.yaml") }}
 {{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/16_constructor_super_debug.yaml") }}
 {{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/17_refactoring_dict_to_class.yaml") }}
+{{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/32_custom_exception_inventory.yaml") }}
+{{ task(file="tasks/python_grundlagen/oop/vertiefung_teil2/33_property_decorator_temperature.yaml") }}

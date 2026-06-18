@@ -1,0 +1,31 @@
+title: "Eigene Exception-Klasse: Lagerbestand"
+difficulty: 3
+question: |
+  Implementiere eine kleine Lagerklasse mit eigener Exception.
+
+  Anforderungen:
+
+  - Erstelle eine eigene Exception-Klasse `OutOfStockError`.
+  - Erstelle eine Klasse `Product` mit:
+    - `name`
+    - `_stock`
+    - Methode `sell(amount)`
+    - Methode `restock(amount)`
+    - Methode `get_stock()`
+  - `sell(amount)` soll eine `OutOfStockError` werfen, wenn mehr verkauft
+    werden soll, als vorhanden ist.
+  - Bei `amount <= 0` soll eine `ValueError` geworfen werden.
+  - Schreibe einen kurzen Demo-Ablauf mit `try`/`except`, der beide Fehlerarten
+    zeigt.
+
+  Zusatz:
+
+  - Gib der Exception eine sinnvolle Fehlermeldung, z.B. mit Produktname,
+    gewünschter Menge und verfügbarem Bestand.
+  - Prüfe mit `isinstance(error, Exception)`, ob deine eigene Exception von
+    `Exception` erbt.
+tip: |
+  Eine eigene Exception ist meistens eine sehr kleine Klasse, die von
+  `Exception` erbt. Wichtig ist hier nicht viel Code, sondern dass dein
+  Programm fachlich unterscheiden kann: ungültige Menge ist `ValueError`, zu
+  wenig Bestand ist `OutOfStockError`.

@@ -1,0 +1,38 @@
+title: "Class Properties mit @property: Temperatur"
+difficulty: 3
+question: |
+  Implementiere eine Klasse `TemperatureReading`, die mit Properties arbeitet.
+
+  Anforderungen:
+
+  - Konstruktor mit `sensor_id` und `celsius`.
+  - Speichere den Celsius-Wert intern als `_celsius`.
+  - Erstelle eine Property `celsius`.
+  - Erstelle einen Setter für `celsius`.
+  - Der Setter soll prüfen:
+    - Wert muss `int` oder `float` sein.
+    - Wert darf nicht kleiner als `-273.15` sein.
+  - Bei ungültigem Typ soll `TypeError` geworfen werden.
+  - Bei zu niedrigem Wert soll `ValueError` geworfen werden.
+  - Erstelle eine read-only Property `fahrenheit`, die aus `celsius`
+    berechnet wird.
+  - `__str__` soll eine lesbare Ausgabe liefern, z.B.
+    `Sensor A1: 21.5 C / 70.7 F`.
+
+  Schreibe danach einen kurzen Demo-Ablauf:
+
+  - Objekt erzeugen
+  - `celsius` lesen
+  - `fahrenheit` lesen
+  - `celsius` über die Property ändern
+  - einen ungültigen Wert testen und Fehler abfangen
+
+  Zusatz:
+
+  - Erkläre in 2-3 Sätzen, warum `fahrenheit` keine eigene Instanzvariable
+    sein muss.
+  - Prüfe mit `reading.__dict__`, welche Attribute wirklich gespeichert sind.
+tip: |
+  Eine Property sieht beim Verwenden wie ein Attribut aus, ruft intern aber
+  Methoden auf. Dadurch kannst du Validierung einbauen, ohne dass Nutzer der
+  Klasse `get_celsius()` oder `set_celsius()` aufrufen müssen.

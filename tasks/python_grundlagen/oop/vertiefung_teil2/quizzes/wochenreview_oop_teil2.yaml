@@ -1,0 +1,331 @@
+title: "Quiz: Wochenreview OOP Teil 2"
+description: "Wiederholung aller Wochenthemen mit PCAP-typischen Fragen und kurzen Code-Snippets."
+questions:
+  - type: single
+    prompt: "Welche Aussage beschreibt eine Klasse am besten?"
+    answer: "blueprint"
+    options:
+      - label: "Ein konkretes Objekt zur Laufzeit"
+        value: "object"
+      - label: "Ein Bauplan für Objekte"
+        value: "blueprint"
+      - label: "Eine Schleife mit Methoden"
+        value: "loop"
+      - label: "Eine Datei mit JSON-Daten"
+        value: "json"
+
+  - type: text
+    prompt: "Wie heißt der erste Parameter einer Instanzmethode per Konvention?"
+    answer: "self"
+    explanation: "Der Parameter heißt per Konvention self und verweist auf das aktuelle Objekt."
+
+  - type: multiple
+    prompt: "Welche Aussagen zu Instanzattributen und Klassenattributen sind richtig?"
+    answer: ["instance_dict", "class_dict", "class_access"]
+    options:
+      - label: "Instanzattribute stehen typischerweise in obj.__dict__."
+        value: "instance_dict"
+      - label: "Klassenattribute stehen im __dict__ der Klasse."
+        value: "class_dict"
+      - label: "Klassenattribute sind oft über Instanzen erreichbar."
+        value: "class_access"
+      - label: "Klassenattribute werden immer in jedes Instanz-__dict__ kopiert."
+        value: "copied"
+
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Counter:
+          amount = 0
+
+          def __init__(self):
+              self.amount = 5
+
+      c = Counter()
+      print(Counter.amount)
+      print(c.amount)
+      print(c.__dict__)
+    answer: |
+      0
+      5
+      {'amount': 5}
+    explanation: "self.amount erzeugt ein Instanzattribut und überschreibt nicht Counter.amount."
+
+  - type: single
+    prompt: "Was ist Polymorphismus?"
+    answer: "same_call"
+    options:
+      - label: "Gleicher Methodenaufruf, unterschiedliches Verhalten je nach Objekt"
+        value: "same_call"
+      - label: "Alle Klassen müssen dieselben Attribute besitzen"
+        value: "same_attrs"
+      - label: "Eine Klasse darf nur eine Methode haben"
+        value: "one_method"
+      - label: "Objekte dürfen nicht verändert werden"
+        value: "immutable"
+
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class CsvExporter:
+          def export(self):
+              return "csv"
+
+      class JsonExporter:
+          def export(self):
+              return "json"
+
+      for exporter in [CsvExporter(), JsonExporter()]:
+          print(exporter.export())
+    answer: |
+      csv
+      json
+    explanation: "Beide Objekte besitzen export(); der konkrete Typ bestimmt das Verhalten."
+
+  - type: multiple
+    prompt: "Welche Ausdrücke gehören zu Introspection?"
+    answer: ["dict", "name", "bases", "hasattr"]
+    options:
+      - label: "obj.__dict__"
+        value: "dict"
+      - label: "Class.__name__"
+        value: "name"
+      - label: "Class.__bases__"
+        value: "bases"
+      - label: "hasattr(obj, 'name')"
+        value: "hasattr"
+      - label: "x + y"
+        value: "addition"
+
+  - type: text
+    prompt: "Welche Magic Method wird von print(obj) indirekt genutzt?"
+    answer: "__str__"
+    explanation: "print(obj) nutzt str(obj), und dafür ist __str__ zuständig."
+
+  - type: single
+    prompt: "Welche Beziehung passt zu 'Ein Course enthält Student-Objekte'?"
+    answer: "composition"
+    options:
+      - label: "Vererbung"
+        value: "inheritance"
+      - label: "Komposition"
+        value: "composition"
+      - label: "Name Mangling"
+        value: "mangling"
+      - label: "Overloading"
+        value: "overloading"
+
+  - type: single
+    prompt: "Welche Beziehung passt zu 'Ein AdminUser ist ein User'?"
+    answer: "inheritance"
+    options:
+      - label: "Komposition"
+        value: "composition"
+      - label: "Dependency Injection"
+        value: "di"
+      - label: "Vererbung"
+        value: "inheritance"
+      - label: "Serialization"
+        value: "serialization"
+
+  - type: multiple
+    prompt: "Welche Aussagen zu Mixins sind sinnvoll?"
+    answer: ["small", "ability", "multiple_inheritance"]
+    options:
+      - label: "Mixins ergänzen häufig eine kleine Fähigkeit."
+        value: "ability"
+      - label: "Mixins sollten eher klein bleiben."
+        value: "small"
+      - label: "Mixins werden über Mehrfachvererbung eingebunden."
+        value: "multiple_inheritance"
+      - label: "Mixins sollten immer Datenbankverbindungen öffnen."
+        value: "database"
+
+  - type: single
+    prompt: "Was bedeutet super() bei Mehrfachvererbung am genauesten?"
+    answer: "next_mro"
+    options:
+      - label: "Immer die direkte Elternklasse"
+        value: "direct_parent"
+      - label: "Immer object"
+        value: "object"
+      - label: "Der nächste Eintrag in der MRO"
+        value: "next_mro"
+      - label: "Die alphabetisch erste Oberklasse"
+        value: "alphabet"
+
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Base:
+          def setup(self):
+              print("Base")
+
+      class Left(Base):
+          def setup(self):
+              print("Left")
+              super().setup()
+
+      class Right(Base):
+          def setup(self):
+              print("Right")
+              super().setup()
+
+      class Child(Left, Right):
+          def setup(self):
+              print("Child")
+              super().setup()
+
+      Child().setup()
+    answer: |
+      Child
+      Left
+      Right
+      Base
+    explanation: "super() folgt der MRO: Child -> Left -> Right -> Base."
+
+  - type: single
+    prompt: "Was ist das Diamond Problem?"
+    answer: "shared_ancestor"
+    options:
+      - label: "Zwei Vererbungspfade führen zu derselben gemeinsamen Oberklasse."
+        value: "shared_ancestor"
+      - label: "Eine Klasse besitzt keine Attribute."
+        value: "no_attrs"
+      - label: "Eine Methode gibt None zurück."
+        value: "none"
+      - label: "Eine Liste enthält doppelte Werte."
+        value: "duplicates"
+
+  - type: text
+    prompt: "Zu welchem Namen wird __balance in der Klasse Account ungefähr umgeschrieben?"
+    answer: "_Account__balance"
+    explanation: "Name Mangling nutzt _Klassenname__attribut."
+
+  - type: single
+    prompt: "Wofür ist eine eigene Exception-Klasse sinnvoll?"
+    answer: "domain_error"
+    options:
+      - label: "Um fachliche Fehler genauer unterscheiden zu können"
+        value: "domain_error"
+      - label: "Um alle Fehler automatisch zu ignorieren"
+        value: "ignore"
+      - label: "Um Klassenattribute zu verstecken"
+        value: "hide"
+      - label: "Um Module schneller zu importieren"
+        value: "import"
+
+  - type: single
+    prompt: "Welche Exception passt besser zu einer negativen Anzahl in sell(-3)?"
+    answer: "value_error"
+    options:
+      - label: "OutOfStockError"
+        value: "out_of_stock"
+      - label: "ValueError"
+        value: "value_error"
+      - label: "StopIteration"
+        value: "stop"
+      - label: "KeyboardInterrupt"
+        value: "keyboard"
+    explanation: "Eine negative Menge ist ein ungültiger Wert; zu wenig Bestand wäre ein fachlicher Lagerfehler."
+
+  - type: single
+    prompt: "Was macht @property in Python?"
+    answer: "attribute_like_method"
+    options:
+      - label: "Eine Methode kann wie ein Attribut gelesen werden."
+        value: "attribute_like_method"
+      - label: "Eine Klasse wird automatisch zu JSON."
+        value: "json"
+      - label: "Eine Methode wird privat."
+        value: "private"
+      - label: "Eine Funktion wird zur Schleife."
+        value: "loop"
+
+  - type: multiple
+    prompt: "Welche Aussagen zu Property-Settern sind richtig?"
+    answer: ["validation", "assignment", "encapsulation"]
+    options:
+      - label: "Sie können Validierung beim Zuweisen ausführen."
+        value: "validation"
+      - label: "Sie werden bei obj.property = value genutzt."
+        value: "assignment"
+      - label: "Sie unterstützen Kapselung."
+        value: "encapsulation"
+      - label: "Sie löschen immer das Objekt."
+        value: "delete"
+
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Temperature:
+          def __init__(self, celsius):
+              self.celsius = celsius
+
+          @property
+          def fahrenheit(self):
+              return self.celsius * 9 / 5 + 32
+
+      temp = Temperature(10)
+      print(temp.fahrenheit)
+    answer: "50.0"
+    explanation: "10 * 9 / 5 + 32 ergibt 50.0."
+
+  - type: single
+    prompt: "Welche Projektstruktur ist für ein späteres Frontend am sinnvollsten?"
+    answer: "separated_backend"
+    options:
+      - label: "Backend-Klassen unabhängig halten und aus dem Frontend aufrufen"
+        value: "separated_backend"
+      - label: "Alle Eingaben direkt in die Ticket-Klasse mit st.text_input schreiben"
+        value: "streamlit_inside_model"
+      - label: "Alle Daten nur mit print() ausgeben"
+        value: "print_only"
+      - label: "Alle Klassen in __dict__ speichern"
+        value: "dict_only"
+
+  - type: multiple
+    prompt: "Welche Streamlit-Elemente sind für eine einfache Backend-Oberfläche typisch?"
+    answer: ["dataframe", "form", "sidebar", "session_state"]
+    options:
+      - label: "st.dataframe()"
+        value: "dataframe"
+      - label: "st.form()"
+        value: "form"
+      - label: "st.sidebar"
+        value: "sidebar"
+      - label: "st.session_state"
+        value: "session_state"
+      - label: "super().__mro__()"
+        value: "wrong_super"
+
+  - type: single
+    prompt: "Warum ist st.session_state in Streamlit wichtig?"
+    answer: "keep_state"
+    options:
+      - label: "Damit Werte zwischen Interaktionen erhalten bleiben"
+        value: "keep_state"
+      - label: "Damit Python keine Klassen mehr braucht"
+        value: "no_classes"
+      - label: "Damit CSS automatisch generiert wird"
+        value: "css"
+      - label: "Damit JSON-Dateien verschwinden"
+        value: "json"
+
+  - type: text
+    prompt: "Mit welchem Befehl startet man eine Streamlit-Datei namens app.py?"
+    answer: "streamlit run app.py"
+    explanation: "Streamlit-Apps werden mit streamlit run DATEI.py gestartet."
+
+  - type: single
+    prompt: "Welche Aussage ist für PCAP-Codefragen besonders wichtig?"
+    answer: "predict"
+    options:
+      - label: "Code nur optisch wiedererkennen"
+        value: "visual"
+      - label: "Ausgaben, MRO und Attributsuche vorhersagen können"
+        value: "predict"
+      - label: "Nur Projekte mit Frontend bauen"
+        value: "frontend"
+      - label: "Alle Methoden auswendig alphabetisch sortieren"
+        value: "alphabet"

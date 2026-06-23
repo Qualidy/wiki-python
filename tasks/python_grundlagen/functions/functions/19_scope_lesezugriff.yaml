@@ -1,0 +1,23 @@
+title: "Scope – Lesezugriff"
+difficulty: 1
+question: |
+  Was gibt das folgende Programm aus? Überlege zuerst, bevor du es ausführst.
+
+  ```python
+  name = "Alice"
+
+  def begruessung():
+      print(f"Hallo, {name}!")
+
+  begruessung()
+  print(name)
+  ```
+solution: |
+  **Ausgabe:**
+  ```
+  Hallo, Alice!
+  Alice
+  ```
+
+  Die Funktion `begruessung()` hat **keinen eigenen** `name` – sie liest daher die globale Variable.
+  Ein reiner Lesezugriff auf eine globale Variable ist innerhalb einer Funktion erlaubt.

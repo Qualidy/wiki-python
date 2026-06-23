@@ -1,0 +1,42 @@
+title: "Scope & Closure – Rabattrechner"
+difficulty: 2
+question: |
+  Erstelle ein kleines Rabatt-System mit Scope und Closure:
+
+  1. Definiere eine globale Variable `waehrung = "€"`.
+  2. Schreibe eine Funktion `rabatt_rechner(prozent)`, die eine neue Funktion zurückgibt.
+     Die zurückgegebene Funktion nimmt einen `preis` entgegen und gibt den rabattierten Preis
+     als formatierten String zurück (z. B. `"80.00 €"`).
+  3. Erstelle damit zwei Rabatt-Funktionen: `mitarbeiter_rabatt` (20 %) und `vip_rabatt` (30 %).
+
+  Erwartetes Verhalten:
+  ```python
+  print(mitarbeiter_rabatt(100))      # "80.00 €"
+  print(vip_rabatt(100))              # "70.00 €"
+  print(mitarbeiter_rabatt(59.99))    # "47.99 €"
+  ```
+
+  **Hinweis:** Nutze `round()` für die Rundung auf zwei Nachkommastellen.
+solution: |
+  ```python
+  waehrung = "€"  # globale Variable
+
+  def rabatt_rechner(prozent):
+      def berechne(preis):
+          reduziert = round(preis * (1 - prozent / 100), 2)
+          return f"{reduziert:.2f} {waehrung}"
+      return berechne
+
+  mitarbeiter_rabatt = rabatt_rechner(20)
+  vip_rabatt = rabatt_rechner(30)
+
+  print(mitarbeiter_rabatt(100))     # 80.00 €
+  print(vip_rabatt(100))             # 70.00 €
+  print(mitarbeiter_rabatt(59.99))   # 47.99 €
+  ```
+
+  Hier kommen mehrere Konzepte zusammen:
+
+  - **Globaler Scope:** `waehrung` wird in der inneren Funktion gelesen (LEGB-Regel: Global).
+  - **Closure:** `berechne` merkt sich den Wert von `prozent` aus dem Enclosing Scope.
+  - **Lokaler Scope:** `reduziert` und `preis` existieren nur innerhalb von `berechne`.

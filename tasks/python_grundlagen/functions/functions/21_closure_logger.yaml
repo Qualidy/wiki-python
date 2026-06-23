@@ -1,0 +1,34 @@
+title: "Closure – Logger-Funktion"
+difficulty: 1
+question: |
+  In vielen Projekten möchte man Log-Nachrichten mit einem festen Präfix versehen (z. B. dem Modulnamen).
+
+  Schreibe eine Funktion `erstelle_logger(praefix)`, die eine neue Funktion zurückgibt.
+  Die zurückgegebene Funktion nimmt eine `nachricht` entgegen und gibt sie mit dem Präfix aus.
+
+  Erwartetes Verhalten:
+  ```python
+  db_log = erstelle_logger("[DB]")
+  auth_log = erstelle_logger("[AUTH]")
+
+  db_log("Verbindung hergestellt")   # [DB] Verbindung hergestellt
+  auth_log("Login erfolgreich")      # [AUTH] Login erfolgreich
+  db_log("Query ausgeführt")         # [DB] Query ausgeführt
+  ```
+solution: |
+  ```python
+  def erstelle_logger(praefix):
+      def log(nachricht):
+          print(f"{praefix} {nachricht}")
+      return log
+
+  db_log = erstelle_logger("[DB]")
+  auth_log = erstelle_logger("[AUTH]")
+
+  db_log("Verbindung hergestellt")   # [DB] Verbindung hergestellt
+  auth_log("Login erfolgreich")      # [AUTH] Login erfolgreich
+  db_log("Query ausgeführt")         # [DB] Query ausgeführt
+  ```
+
+  `log` ist eine Closure – sie merkt sich den Wert von `praefix` aus dem Enclosing Scope.
+  Dieses Muster wird in der Praxis häufig für Logger, Konfigurationen oder Factory-Funktionen eingesetzt.

@@ -1,0 +1,30 @@
+title: "Scope – global Keyword"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `toggle()`, die eine globale Variable `aktiv` (Startwert `False`) bei jedem Aufruf umschaltet (`True` → `False` → `True` …). Nutze das `global`-Keyword.
+
+  Erwartetes Verhalten:
+  ```
+  print(aktiv)   # False
+  toggle()
+  print(aktiv)   # True
+  toggle()
+  print(aktiv)   # False
+  ```
+solution: |
+  ```python
+  aktiv = False
+
+  def toggle():
+      global aktiv
+      aktiv = not aktiv
+
+  print(aktiv)   # False
+  toggle()
+  print(aktiv)   # True
+  toggle()
+  print(aktiv)   # False
+  ```
+
+  Ohne `global` würde Python `aktiv` als lokale Variable interpretieren und einen `UnboundLocalError` auslösen,
+  weil man versucht, eine lokale Variable zu lesen, bevor sie zugewiesen wurde.

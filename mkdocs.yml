@@ -80,6 +80,9 @@ nav:
       - Quiz Komposition, Mixins & MRO: content/oop_vertiefung_teil2/quiz_komposition_mixins_mro.md
       - Quiz Wochenreview: content/oop_vertiefung_teil2/quiz_wochenreview.md
 
+  - Wiederholung:
+      - Scope, Closure & Variablen: content/wiederholung/function_scopes_and_closure.md
+
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md
 #      - Exkurs - Rekursion: content/referenzmaterial/recursion/recursion.md

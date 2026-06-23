@@ -1,0 +1,37 @@
+title: "Closure – Validierung mit Grenzwerten"
+difficulty: 1
+question: |
+  Bei der Eingabevalidierung prüft man oft, ob ein Wert in einem bestimmten Bereich liegt.
+
+  Schreibe eine Funktion `erstelle_validator(min_wert, max_wert)`, die eine neue Funktion zurückgibt.
+  Die zurückgegebene Funktion nimmt einen `wert` entgegen und gibt `True` zurück, wenn er
+  im Bereich `min_wert` bis `max_wert` (jeweils inklusive) liegt, sonst `False`.
+
+  Erwartetes Verhalten:
+  ```python
+  ist_prozent = erstelle_validator(0, 100)
+  ist_temperatur = erstelle_validator(-40, 60)
+
+  print(ist_prozent(50))       # True
+  print(ist_prozent(101))      # False
+  print(ist_temperatur(-10))   # True
+  print(ist_temperatur(80))    # False
+  ```
+solution: |
+  ```python
+  def erstelle_validator(min_wert, max_wert):
+      def validiere(wert):
+          return min_wert <= wert <= max_wert
+      return validiere
+
+  ist_prozent = erstelle_validator(0, 100)
+  ist_temperatur = erstelle_validator(-40, 60)
+
+  print(ist_prozent(50))       # True
+  print(ist_prozent(101))      # False
+  print(ist_temperatur(-10))   # True
+  print(ist_temperatur(80))    # False
+  ```
+
+  Die innere Funktion `validiere` ist eine Closure, die sich `min_wert` und `max_wert` merkt.
+  Solche Validierungs-Fabriken sind ein gängiges Muster bei der Eingabeprüfung.

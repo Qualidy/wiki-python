@@ -76,6 +76,7 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
+- [ :material-refresh: Wiederholung ](content/wiederholung/function_scopes_and_closure.md)
 - [ :material-test-tube: Projekt 1 ](){ .disabled }
 
 </div>

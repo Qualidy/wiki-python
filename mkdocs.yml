@@ -82,6 +82,7 @@ nav:
 
   - Wiederholung:
       - Scope, Closure & Variablen: content/wiederholung/function_scopes_and_closure.md
+      - Exceptions: content/wiederholung/exceptions.md
 
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md

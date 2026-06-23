@@ -1,0 +1,36 @@
+title: "Mehrere except-Blöcke"
+difficulty: 1
+question: |
+  Was gibt das folgende Programm aus? Überlege zuerst, bevor du es ausführst.
+
+  ```python
+  def verarbeite(wert):
+      try:
+          zahl = int(wert)
+          ergebnis = 10 / zahl
+          print(f"Ergebnis: {ergebnis}")
+      except ValueError:
+          print("Keine gültige Zahl!")
+      except ZeroDivisionError:
+          print("Division durch Null!")
+      except Exception as e:
+          print(f"Unbekannter Fehler: {e}")
+
+  verarbeite("abc")
+  verarbeite("0")
+  verarbeite("5")
+  ```
+solution: |
+  **Ausgabe:**
+  ```
+  Keine gültige Zahl!
+  Division durch Null!
+  Ergebnis: 2.0
+  ```
+
+  - `"abc"` → `int("abc")` löst einen `ValueError` aus.
+  - `"0"` → `int("0")` funktioniert, aber `10 / 0` löst einen `ZeroDivisionError` aus.
+  - `"5"` → Kein Fehler, das Ergebnis `2.0` wird ausgegeben.
+
+  Jeder `except`-Block fängt genau **einen** Fehlertyp ab.
+  Der allgemeine `except Exception`-Block am Ende dient als Auffangnetz für alles andere.

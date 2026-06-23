@@ -1,0 +1,36 @@
+title: "Reihenfolge der except-Blöcke"
+difficulty: 1
+question: |
+  Das folgende Programm enthält einen logischen Fehler. Finde ihn und erkläre, warum die Ausgabe nicht wie erwartet ist.
+
+  ```python
+  try:
+      zahl = int("abc")
+  except Exception:
+      print("Allgemeiner Fehler")
+  except ValueError:
+      print("Kein gültiger Integer")
+  ```
+
+  Was wird ausgegeben, und warum ist das problematisch?
+solution: |
+  **Ausgabe:**
+  ```
+  Allgemeiner Fehler
+  ```
+
+  Das Problem: `except Exception` steht **vor** `except ValueError`.
+  Da `ValueError` eine Unterklasse von `Exception` ist, wird der allgemeine Block zuerst erreicht – der spezifischere `ValueError`-Block wird **nie** ausgeführt.
+
+  **Korrekte Reihenfolge** – spezifische Exceptions zuerst:
+
+  ```python
+  try:
+      zahl = int("abc")
+  except ValueError:
+      print("Kein gültiger Integer")
+  except Exception:
+      print("Allgemeiner Fehler")
+  ```
+
+  **Regel:** Immer von **spezifisch → allgemein** ordnen.

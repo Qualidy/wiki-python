@@ -1,0 +1,44 @@
+title: "raise zur Eingabevalidierung"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `berechne_durchschnitt(noten)`, die eine Liste von Noten (1–6) entgegennimmt und den Durchschnitt zurückgibt.
+
+  Die Funktion soll mit `raise` Fehler werfen, wenn:
+
+  - die Liste leer ist → `ValueError` mit Nachricht `"Notenliste darf nicht leer sein"`
+  - eine Note nicht zwischen 1 und 6 liegt → `ValueError` mit Nachricht `"Ungültige Note: {note}"`
+
+  Teste mit:
+  ```python
+  print(berechne_durchschnitt([1, 2, 3]))
+  print(berechne_durchschnitt([]))
+  print(berechne_durchschnitt([1, 7, 3]))
+  ```
+solution: |
+  ```python
+  def berechne_durchschnitt(noten):
+      if not noten:
+          raise ValueError("Notenliste darf nicht leer sein")
+      for note in noten:
+          if note < 1 or note > 6:
+              raise ValueError(f"Ungültige Note: {note}")
+      return sum(noten) / len(noten)
+
+  testfaelle = [[1, 2, 3], [], [1, 7, 3]]
+
+  for noten in testfaelle:
+      try:
+          ergebnis = berechne_durchschnitt(noten)
+          print(f"{noten} → Durchschnitt: {ergebnis}")
+      except ValueError as e:
+          print(f"{noten} → Fehler: {e}")
+  ```
+
+  **Ausgabe:**
+  ```
+  [1, 2, 3] → Durchschnitt: 2.0
+  [] → Fehler: Notenliste darf nicht leer sein
+  [1, 7, 3] → Fehler: Ungültige Note: 7
+  ```
+
+  Mit `raise` kann man Fehler **aktiv auslösen**, um ungültige Eingaben frühzeitig abzufangen.

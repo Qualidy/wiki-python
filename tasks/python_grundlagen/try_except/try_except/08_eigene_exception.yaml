@@ -1,0 +1,38 @@
+title: "Eigene Exception definieren"
+difficulty: 1
+question: |
+  Erstelle eine eigene Exception-Klasse `AlterUngueltigError`, die von `Exception` erbt.
+
+  Schreibe dann eine Funktion `pruefe_alter(alter)`, die:
+
+  - einen `AlterUngueltigError` mit einer passenden Nachricht wirft, wenn `alter < 0` oder `alter > 150`
+  - sonst `"Alter gültig"` ausgibt
+
+  Teste die Funktion mit den Werten `25`, `-3` und `200`.
+  Fange die Exception jeweils mit `try/except` ab und gib die Fehlermeldung aus.
+solution: |
+  ```python
+  class AlterUngueltigError(Exception):
+      pass
+
+  def pruefe_alter(alter):
+      if alter < 0 or alter > 150:
+          raise AlterUngueltigError(f"Ungültiges Alter: {alter}")
+      print("Alter gültig")
+
+  for alter in [25, -3, 200]:
+      try:
+          pruefe_alter(alter)
+      except AlterUngueltigError as e:
+          print(e)
+  ```
+
+  **Ausgabe:**
+  ```
+  Alter gültig
+  Ungültiges Alter: -3
+  Ungültiges Alter: 200
+  ```
+
+  Eigene Exceptions erben von `Exception` (oder einer spezifischeren Klasse).
+  Die Fehlermeldung wird als Argument an den Konstruktor übergeben und ist über `str(e)` abrufbar.

@@ -1,0 +1,59 @@
+title: "Exceptions – Alles kombiniert"
+difficulty: 2
+question: |
+  Erstelle ein kleines Bestellsystem:
+
+  1. Definiere eine eigene Exception `BestellFehler(Exception)`.
+  2. Schreibe eine Funktion `bestelle(produkt, menge)` mit folgender Logik:
+     - `produkt` muss ein String sein, sonst → `TypeError`
+     - `menge` muss ein `int` sein, sonst → `TypeError`
+     - `menge <= 0` → `BestellFehler` mit Nachricht `"Menge muss positiv sein"`
+     - Sonst: gib `"Bestellung: {menge}x {produkt}"` zurück
+  3. Teste die Funktion mit folgenden Aufrufen und fange alle Fehler mit passenden `except`-Blöcken ab:
+
+  ```python
+  bestelle("Apfel", 3)
+  bestelle("Apfel", -1)
+  bestelle(123, 3)
+  bestelle("Apfel", "zwei")
+  ```
+solution: |
+  ```python
+  class BestellFehler(Exception):
+      pass
+
+  def bestelle(produkt, menge):
+      if not isinstance(produkt, str):
+          raise TypeError(f"Produkt muss ein String sein, nicht {type(produkt).__name__}")
+      if not isinstance(menge, int):
+          raise TypeError(f"Menge muss ein int sein, nicht {type(menge).__name__}")
+      if menge <= 0:
+          raise BestellFehler("Menge muss positiv sein")
+      return f"Bestellung: {menge}x {produkt}"
+
+  testfaelle = [("Apfel", 3), ("Apfel", -1), (123, 3), ("Apfel", "zwei")]
+
+  for produkt, menge in testfaelle:
+      try:
+          ergebnis = bestelle(produkt, menge)
+          print(ergebnis)
+      except BestellFehler as e:
+          print(f"BestellFehler: {e}")
+      except TypeError as e:
+          print(f"TypeError: {e}")
+  ```
+
+  **Ausgabe:**
+  ```
+  Bestellung: 3x Apfel
+  BestellFehler: Menge muss positiv sein
+  TypeError: Produkt muss ein String sein, nicht int
+  TypeError: Menge muss ein int sein, nicht str
+  ```
+
+  Hier kommen alle Konzepte zusammen:
+
+  - **Eigene Exception** (`BestellFehler`) für fachliche Fehler
+  - **`raise`** zur Validierung der Eingaben
+  - **Mehrere `except`-Blöcke** für verschiedene Fehlertypen
+  - **Eingebaute Exceptions** (`TypeError`) für Typprüfungen

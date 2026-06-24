@@ -1,0 +1,55 @@
+title: "Kursverwaltung"
+difficulty: 2
+question: |
+  In einer Programmierschule gibt es drei Kurse. Jeder Kurs hat eine Teilnehmerliste:
+
+  ```python
+  python_kurs = {"Anna", "Ben", "Clara", "David", "Eva"}
+  java_kurs = {"Ben", "Frank", "Clara", "Gina"}
+  web_kurs = {"Anna", "Gina", "Hugo", "David"}
+  ```
+
+  Löse folgende Teilaufgaben:
+
+  1. Finde alle **Teilnehmer insgesamt** (ohne Duplikate).
+  2. Finde Teilnehmer, die **in allen drei Kursen** sind.
+  3. Finde Teilnehmer, die **nur im Python-Kurs** sind (und in keinem anderen).
+  4. Finde Teilnehmer, die **genau zwei Kurse** besuchen.
+  5. Prüfe, ob der `python_kurs` ein **Superset** aller Teilnehmer ist, die in Python und Java sind.
+solution: |
+  ```python
+  python_kurs = {"Anna", "Ben", "Clara", "David", "Eva"}
+  java_kurs = {"Ben", "Frank", "Clara", "Gina"}
+  web_kurs = {"Anna", "Gina", "Hugo", "David"}
+
+  # 1. Alle Teilnehmer
+  alle = python_kurs | java_kurs | web_kurs
+  print("Alle:", alle)
+
+  # 2. In allen drei Kursen
+  in_allen = python_kurs & java_kurs & web_kurs
+  print("In allen drei:", in_allen)  # set() – niemand ist in allen drei
+
+  # 3. Nur im Python-Kurs
+  nur_python = python_kurs - java_kurs - web_kurs
+  print("Nur Python:", nur_python)  # {'Eva'}
+
+  # 4. Genau zwei Kurse
+  # Idee: In mindestens zwei, aber nicht in allen drei
+  in_py_und_java = python_kurs & java_kurs
+  in_py_und_web = python_kurs & web_kurs
+  in_java_und_web = java_kurs & web_kurs
+
+  in_mindestens_zwei = in_py_und_java | in_py_und_web | in_java_und_web
+  genau_zwei = in_mindestens_zwei - in_allen
+  print("Genau zwei Kurse:", genau_zwei)  # {'Anna', 'Ben', 'Clara', 'David', 'Gina'}
+
+  # 5. Superset-Prüfung
+  py_und_java = python_kurs & java_kurs  # {'Ben', 'Clara'}
+  print("Python ist Superset von Python∩Java:", python_kurs.issuperset(py_und_java))  # True
+  ```
+tip: |
+  - Vereinigung: `|` oder `.union()`
+  - Schnittmenge: `&` oder `.intersection()`
+  - Differenz: `-` oder `.difference()`
+  - Für "genau zwei Kurse": Finde zuerst alle, die in mindestens zwei Kursen sind, und ziehe dann diejenigen ab, die in allen drei sind.

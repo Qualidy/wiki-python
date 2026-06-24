@@ -1,0 +1,26 @@
+title: "Slicing"
+difficulty: 1
+question: |
+  Gegeben ist folgende Liste:
+
+  ```python
+  buchstaben = ["a", "b", "c", "d", "e", "f", "g"]
+  ```
+
+  Schreibe jeweils **einen** Slice-Ausdruck, der folgendes Ergebnis liefert:
+
+  1. `["c", "d", "e"]`
+  2. `["a", "b", "c"]`
+  3. `["e", "f", "g"]`
+  4. `["a", "c", "e", "g"]`
+  5. `["g", "f", "e", "d", "c", "b", "a"]`
+solution: |
+  ```python
+  buchstaben = ["a", "b", "c", "d", "e", "f", "g"]
+
+  print(buchstaben[2:5])   # 1. ["c", "d", "e"]
+  print(buchstaben[:3])    # 2. ["a", "b", "c"]
+  print(buchstaben[4:])    # 3. ["e", "f", "g"]  (oder [-3:])
+  print(buchstaben[::2])   # 4. ["a", "c", "e", "g"]
+  print(buchstaben[::-1])  # 5. ["g", "f", "e", "d", "c", "b", "a"]
+  ```

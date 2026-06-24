@@ -1,0 +1,24 @@
+title: "index(), count() und in"
+difficulty: 1
+question: |
+  Gegeben ist folgende Liste:
+
+  ```python
+  noten = [2, 1, 3, 2, 1, 4, 2, 5, 1]
+  ```
+
+  1. Wie oft kommt die Note `2` vor?
+  2. An welchem Index steht die erste `4`?
+  3. Prüfe mit dem `in`-Operator, ob die Note `6` enthalten ist.
+  4. Was passiert, wenn du `noten.index(6)` aufrufst?
+solution: |
+  ```python
+  noten = [2, 1, 3, 2, 1, 4, 2, 5, 1]
+
+  print(noten.count(2))    # 3
+  print(noten.index(4))    # 5
+  print(6 in noten)        # False
+  # noten.index(6)         # ValueError: 6 is not in list
+  ```
+
+  **Tipp:** Vor `index()` immer mit `in` prüfen, ob das Element existiert, um einen `ValueError` zu vermeiden.

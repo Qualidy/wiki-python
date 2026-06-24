@@ -1,0 +1,28 @@
+title: "remove() vs. pop()"
+difficulty: 1
+question: |
+  Gegeben ist folgende Liste:
+
+  ```python
+  tiere = ["Hund", "Katze", "Vogel", "Katze", "Fisch"]
+  ```
+
+  1. Entferne das **erste** Vorkommen von `"Katze"` mit `remove()`.
+  2. Entferne das **letzte** Element mit `pop()` und speichere es in einer Variable.
+  3. Entferne das Element an **Index 0** mit `pop()`.
+  4. Gib die Liste und das mit `pop()` entfernte Element aus.
+solution: |
+  ```python
+  tiere = ["Hund", "Katze", "Vogel", "Katze", "Fisch"]
+
+  tiere.remove("Katze")       # ["Hund", "Vogel", "Katze", "Fisch"]
+  letztes = tiere.pop()       # "Fisch", Liste: ["Hund", "Vogel", "Katze"]
+  tiere.pop(0)                # "Hund", Liste: ["Vogel", "Katze"]
+
+  print("Liste:", tiere)      # ["Vogel", "Katze"]
+  print("Entfernt:", letztes) # Fisch
+  ```
+
+  - `remove(x)` entfernt nach **Wert** (nur erstes Vorkommen).
+  - `pop(i)` entfernt nach **Index** und gibt das Element zurück.
+  - `pop()` ohne Argument entfernt das **letzte** Element.

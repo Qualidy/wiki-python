@@ -1,0 +1,31 @@
+title: "Kopie vs. Referenz"
+difficulty: 2
+question: |
+  Was gibt der folgende Code aus? Erkläre, warum.
+
+  ```python
+  original = [1, 2, [3, 4]]
+
+  referenz = original
+  flache_kopie = original.copy()
+
+  original[0] = 99
+  original[2][0] = 99
+
+  print("original:", original)
+  print("referenz:", referenz)
+  print("flache_kopie:", flache_kopie)
+  ```
+solution: |
+  ```
+  original: [99, 2, [99, 4]]
+  referenz: [99, 2, [99, 4]]
+  flache_kopie: [1, 2, [99, 4]]
+  ```
+
+  - `referenz = original` erstellt **keine Kopie**, sondern eine zweite Referenz auf dasselbe Objekt. Alle Änderungen wirken sich auf beide aus.
+  - `copy()` erstellt eine **flache Kopie** – die äußere Liste ist neu, aber die inneren Objekte (z. B. `[3, 4]`) werden **nicht** kopiert, sondern referenziert.
+  - Deshalb ändert `original[2][0] = 99` auch die flache Kopie, aber `original[0] = 99` nicht.
+  - Für vollständig unabhängige Kopien: `import copy` → `copy.deepcopy(original)`.
+tip: |
+  Denke daran: `copy()` und `[:]` erstellen nur eine **flache** Kopie. Verschachtelte Objekte werden weiterhin geteilt.

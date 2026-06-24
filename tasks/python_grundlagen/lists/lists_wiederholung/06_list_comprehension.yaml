@@ -1,0 +1,23 @@
+title: "List Comprehensions"
+difficulty: 1
+question: |
+  Schreibe jeweils **eine** List Comprehension für folgende Aufgaben:
+
+  1. Eine Liste der Quadrate von 1 bis 10.
+  2. Alle geraden Zahlen von 1 bis 20.
+  3. Alle Wörter aus der Liste `["Hallo", "Hi", "Python", "Hey", "Welt"]`, die mit `"H"` beginnen.
+solution: |
+  ```python
+  # 1. Quadrate
+  quadrate = [x ** 2 for x in range(1, 11)]
+  print(quadrate)  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+  # 2. Gerade Zahlen
+  gerade = [x for x in range(1, 21) if x % 2 == 0]
+  print(gerade)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+  # 3. Wörter mit "H"
+  woerter = ["Hallo", "Hi", "Python", "Hey", "Welt"]
+  h_woerter = [w for w in woerter if w.startswith("H")]
+  print(h_woerter)  # ["Hallo", "Hi", "Hey"]
+  ```

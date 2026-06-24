@@ -1,0 +1,26 @@
+title: "Gemeinsame Hobbys"
+difficulty: 1
+question: |
+  Gegeben sind zwei Listen mit Hobbys von zwei Personen:
+
+  ```python
+  hobbys_anna = ["Lesen", "Schwimmen", "Kochen", "Yoga"]
+  hobbys_ben = ["Kochen", "Gaming", "Lesen", "Radfahren"]
+  ```
+
+  Finde mithilfe von Sets heraus, welche Hobbys **beide** gemeinsam haben.
+  Gib das Ergebnis aus.
+solution: |
+  ```python
+  hobbys_anna = ["Lesen", "Schwimmen", "Kochen", "Yoga"]
+  hobbys_ben = ["Kochen", "Gaming", "Lesen", "Radfahren"]
+
+  gemeinsam = set(hobbys_anna) & set(hobbys_ben)
+  print(gemeinsam)  # {'Lesen', 'Kochen'}
+  ```
+
+  Alternativ mit Methode:
+
+  ```python
+  gemeinsam = set(hobbys_anna).intersection(hobbys_ben)
+  ```

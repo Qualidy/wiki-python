@@ -1,0 +1,25 @@
+title: "Fehlende Zutaten"
+difficulty: 1
+question: |
+  Du hast ein Rezept und einen Vorrat. Finde heraus, welche Zutaten dir **fehlen**.
+
+  ```python
+  rezept = {"Mehl", "Zucker", "Eier", "Butter", "Milch"}
+  vorrat = {"Mehl", "Eier", "Milch"}
+  ```
+
+  Gib die fehlenden Zutaten aus.
+solution: |
+  ```python
+  rezept = {"Mehl", "Zucker", "Eier", "Butter", "Milch"}
+  vorrat = {"Mehl", "Eier", "Milch"}
+
+  fehlend = rezept - vorrat
+  print(fehlend)  # {'Zucker', 'Butter'}
+  ```
+
+  Alternativ mit Methode:
+
+  ```python
+  fehlend = rezept.difference(vorrat)
+  ```

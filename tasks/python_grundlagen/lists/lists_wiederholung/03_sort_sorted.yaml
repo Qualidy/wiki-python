@@ -1,0 +1,27 @@
+title: "sort() vs. sorted()"
+difficulty: 1
+question: |
+  Was gibt der folgende Code aus? Überlege zuerst, bevor du ihn ausführst.
+
+  ```python
+  zahlen = [5, 2, 8, 1, 9]
+
+  ergebnis = zahlen.sort()
+  print("ergebnis:", ergebnis)
+  print("zahlen:", zahlen)
+
+  neue_zahlen = [5, 2, 8, 1, 9]
+  ergebnis2 = sorted(neue_zahlen, reverse=True)
+  print("ergebnis2:", ergebnis2)
+  print("neue_zahlen:", neue_zahlen)
+  ```
+solution: |
+  ```
+  ergebnis: None
+  zahlen: [1, 2, 5, 8, 9]
+  ergebnis2: [9, 8, 5, 2, 1]
+  neue_zahlen: [5, 2, 8, 1, 9]
+  ```
+
+  - `sort()` sortiert **in-place** und gibt `None` zurück – häufige PCAP-Falle!
+  - `sorted()` gibt eine **neue Liste** zurück und lässt das Original unverändert.

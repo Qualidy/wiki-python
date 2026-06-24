@@ -1,0 +1,27 @@
+title: "append() vs. extend()"
+difficulty: 1
+question: |
+  Was gibt der folgende Code aus? Überlege zuerst, bevor du ihn ausführst.
+
+  ```python
+  a = [1, 2, 3]
+  b = [1, 2, 3]
+
+  a.append([4, 5])
+  b.extend([4, 5])
+
+  print("a:", a)
+  print("b:", b)
+  print("len(a):", len(a))
+  print("len(b):", len(b))
+  ```
+solution: |
+  ```
+  a: [1, 2, 3, [4, 5]]
+  b: [1, 2, 3, 4, 5]
+  len(a): 4
+  len(b): 5
+  ```
+
+  - `append()` fügt das übergebene Objekt **als ein einzelnes Element** hinzu – hier die gesamte Liste `[4, 5]`.
+  - `extend()` fügt **jedes Element** des übergebenen Iterables einzeln hinzu.

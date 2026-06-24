@@ -1,0 +1,17 @@
+title: "Set Comprehension – mit Filter"
+difficulty: 1
+question: |
+  Gegeben ist eine Liste von Zahlen (mit Duplikaten):
+
+  ```python
+  zahlen = [3, -1, 4, -1, 5, 9, -2, 6, 5, 3, -5]
+  ```
+
+  Erstelle mit einer **Set Comprehension** ein Set, das nur die **positiven** Zahlen enthält (ohne Duplikate).
+solution: |
+  ```python
+  zahlen = [3, -1, 4, -1, 5, 9, -2, 6, 5, 3, -5]
+
+  positiv = {x for x in zahlen if x > 0}
+  print(positiv)  # {3, 4, 5, 6, 9}
+  ```

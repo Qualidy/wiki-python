@@ -1,0 +1,10 @@
+# Quellen – Exceptions (PCEP/PCAP)
+
+- [Offizieller PCEP-30-02 Syllabus](https://pythoninstitute.org/pcep-exam-syllabus)
+- [Offizieller PCAP-31-03 Syllabus](https://pythoninstitute.org/pcap-exam-syllabus)
+- [Python Essentials 2 Kurs (edube.org)](https://edube.org/study/pe2)
+- [Python Built-in Exceptions Dokumentation](https://docs.python.org/3/library/exceptions.html)
+- [W3Resource – Abstract Exceptions](https://www.w3resource.com/python/certificate/functions-and-exceptions-abstract-exceptions.php)
+- [W3Resource – LookupError](https://www.w3resource.com/python/certificate/functions-and-exceptions-lookuperror.php)
+- [KodeKloud – Hierarchy of Exceptions](https://notes.kodekloud.com/docs/PCAP-Python-Certification-Course/Exceptions/Hierarchy-of-Exceptions/page)
+- [CertifHub – PCAP Study Guide 2026](https://blog.certifhub.com/pcap-31-03-certified-associate-python-programmer-study-guide-2026/)

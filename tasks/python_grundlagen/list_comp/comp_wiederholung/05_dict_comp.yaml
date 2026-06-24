@@ -1,0 +1,17 @@
+title: "Dict Comprehension – Grundform"
+difficulty: 1
+question: |
+  Gegeben ist eine Liste von Städten:
+
+  ```python
+  staedte = ["Berlin", "Hamburg", "München", "Köln"]
+  ```
+
+  Erstelle mit einer **Dict Comprehension** ein Dictionary, das jede Stadt als **Key** und die **Länge des Namens** als Value enthält.
+solution: |
+  ```python
+  staedte = ["Berlin", "Hamburg", "München", "Köln"]
+
+  laengen = {stadt: len(stadt) for stadt in staedte}
+  print(laengen)  # {'Berlin': 6, 'Hamburg': 7, 'München': 7, 'Köln': 4}
+  ```

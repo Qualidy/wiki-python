@@ -1,0 +1,19 @@
+title: "Set Comprehension – Grundform"
+difficulty: 1
+question: |
+  Gegeben ist eine Liste von Wörtern:
+
+  ```python
+  woerter = ["Python", "programmieren", "Pasta", "lernen", "Praxis"]
+  ```
+
+  Erstelle mit einer **Set Comprehension** ein Set, das alle **Anfangsbuchstaben** (in Kleinbuchstaben) enthält.
+solution: |
+  ```python
+  woerter = ["Python", "programmieren", "Pasta", "lernen", "Praxis"]
+
+  anfang = {w[0].lower() for w in woerter}
+  print(anfang)  # {'p', 'l'}
+  ```
+
+  Da ein Set keine Duplikate enthält, kommt `'p'` nur einmal vor, obwohl drei Wörter mit P beginnen.

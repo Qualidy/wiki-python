@@ -20,4 +20,8 @@ Zusammenfassungen der wichtigsten Themen für die Projektwochen.
 
     Methoden, Slicing, Sortieren, Comprehensions, Kopie vs. Referenz
 
+- :material-code-braces: **[Comprehensions](comprehension_wiederholung.md)**
+
+    List, Set & Dict Comprehension, Filter, Nested, Generator vs. Tuple
+
 </div>

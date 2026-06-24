@@ -1,0 +1,10 @@
+title: "List Comprehension – Grundform"
+difficulty: 1
+question: |
+  Erstelle mit einer **List Comprehension** eine Liste, die die **ersten 10 Vielfachen von 7** enthält
+  (also `[7, 14, 21, ..., 70]`).
+solution: |
+  ```python
+  vielfache = [7 * i for i in range(1, 11)]
+  print(vielfache)  # [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+  ```

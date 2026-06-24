@@ -1,0 +1,18 @@
+title: "Dict Comprehension – mit Filter"
+difficulty: 1
+question: |
+  Gegeben ist ein Dictionary mit Produktpreisen:
+
+  ```python
+  preise = {"Laptop": 999, "Maus": 25, "Monitor": 349, "Kabel": 8, "Tastatur": 65}
+  ```
+
+  Erstelle mit einer **Dict Comprehension** ein neues Dictionary, das nur Produkte enthält,
+  die **mehr als 50 Euro** kosten.
+solution: |
+  ```python
+  preise = {"Laptop": 999, "Maus": 25, "Monitor": 349, "Kabel": 8, "Tastatur": 65}
+
+  teuer = {produkt: preis for produkt, preis in preise.items() if preis > 50}
+  print(teuer)  # {'Laptop': 999, 'Monitor': 349, 'Tastatur': 65}
+  ```

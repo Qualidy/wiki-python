@@ -1,0 +1,48 @@
+title: "Nested Comprehension – Lesen & Verstehen"
+difficulty: 2
+question: |
+  Lies den folgenden Code und beantworte die Fragen **ohne ihn auszuführen**:
+
+  ```python
+  farben = ["rot", "blau"]
+  groessen = ["S", "M", "L"]
+
+  kombinationen = [f"{f}-{g}" for f in farben for g in groessen]
+  print(kombinationen)
+  ```
+
+  1. Was gibt `print(kombinationen)` aus?
+  2. Wie viele Elemente hat die Liste?
+  3. Schreibe den Code als **verschachtelte for-Schleife** um.
+solution: |
+  **1. Ausgabe:**
+
+  ```
+  ['rot-S', 'rot-M', 'rot-L', 'blau-S', 'blau-M', 'blau-L']
+  ```
+
+  **2. Anzahl:** 6 Elemente (2 Farben × 3 Größen)
+
+  **3. Als verschachtelte Schleife:**
+
+  ```python
+  farben = ["rot", "blau"]
+  groessen = ["S", "M", "L"]
+
+  kombinationen = []
+  for f in farben:
+      for g in groessen:
+          kombinationen.append(f"{f}-{g}")
+
+  print(kombinationen)
+  ```
+
+  Die **Reihenfolge der `for`-Klauseln** in der Comprehension entspricht der
+  Verschachtelung der Schleifen: Die **äußere** Schleife (`for f in farben`)
+  steht **zuerst**, die **innere** (`for g in groessen`) danach.
+tip: |
+  Lies die Comprehension von links nach rechts:
+
+  1. `f"{f}-{g}"` → was wird pro Element erzeugt?
+  2. `for f in farben` → äußere Schleife
+  3. `for g in groessen` → innere Schleife

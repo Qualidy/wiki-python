@@ -1,0 +1,18 @@
+title: "List Comprehension – mit Filter"
+difficulty: 1
+question: |
+  Gegeben ist eine Liste von Namen:
+
+  ```python
+  namen = ["Anna", "Bo", "Christina", "Ed", "Friedrich", "Gia"]
+  ```
+
+  Erstelle mit einer List Comprehension eine neue Liste, die nur die Namen enthält,
+  die **mehr als 3 Zeichen** haben.
+solution: |
+  ```python
+  namen = ["Anna", "Bo", "Christina", "Ed", "Friedrich", "Gia"]
+
+  lange_namen = [name for name in namen if len(name) > 3]
+  print(lange_namen)  # ['Anna', 'Christina', 'Friedrich']
+  ```

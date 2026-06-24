@@ -85,6 +85,7 @@ nav:
       - Exceptions: content/wiederholung/exceptions.md
       - Sets: content/wiederholung/set_wiederholung.md
       - Listen: content/wiederholung/list_wiederholung.md
+      - Comprehensions: content/wiederholung/comprehension_wiederholung.md
 
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md

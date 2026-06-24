@@ -1,0 +1,35 @@
+title: "Name Mangling: Ausgabe vorhersagen"
+difficulty: 3
+question: |
+  Welche Ausgabe erzeugt der Code?
+
+  ```python
+  class Parent:
+      def __init__(self):
+          self.__value = "parent"
+
+      def show(self):
+          return self.__value
+
+
+  class Child(Parent):
+      def __init__(self):
+          super().__init__()
+          self.__value = "child"
+
+
+  obj = Child()
+  print(obj.show())
+  print(obj.__dict__)
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  parent
+  {'_Parent__value': 'parent', '_Child__value': 'child'}
+  ```
+
+  `Parent.__value` und `Child.__value` werden unterschiedlich gemangled.
+  Die Methode `show()` gehoert zu `Parent` und liest deshalb
+  `_Parent__value`.

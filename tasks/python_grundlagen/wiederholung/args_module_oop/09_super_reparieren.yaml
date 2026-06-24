@@ -1,0 +1,44 @@
+title: "Fehlendes `super()` reparieren"
+difficulty: 2
+question: |
+  Der Code wirft einen Fehler. Repariere ihn so, dass `print(course.info())`
+  funktioniert.
+
+  ```python
+  class LearningResource:
+      def __init__(self, title):
+          self.title = title
+
+      def info(self):
+          return f"Ressource: {self.title}"
+
+
+  class Video(LearningResource):
+      def __init__(self, title, duration):
+          self.duration = duration
+
+
+  course = Video("OOP Wiederholung", 25)
+  print(course.info())
+  ```
+solution: |
+  ```python
+  class LearningResource:
+      def __init__(self, title):
+          self.title = title
+
+      def info(self):
+          return f"Ressource: {self.title}"
+
+
+  class Video(LearningResource):
+      def __init__(self, title, duration):
+          super().__init__(title)
+          self.duration = duration
+
+
+  course = Video("OOP Wiederholung", 25)
+  print(course.info())
+  ```
+
+  Ohne `super().__init__(title)` wird `self.title` nie gesetzt.

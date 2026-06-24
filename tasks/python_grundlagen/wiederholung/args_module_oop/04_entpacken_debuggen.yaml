@@ -1,0 +1,44 @@
+title: "Entpacken mit `*` und `**` debuggen"
+difficulty: 2
+question: |
+  Der Code soll `create_user("Ada", "Lovelace", active=True, role="admin")`
+  aufrufen, aber die Werte liegen in einer Liste und einem Dictionary.
+
+  Repariere den Aufruf.
+
+  ```python
+  def create_user(first_name, last_name, active=False, role="user"):
+      return {
+          "first_name": first_name,
+          "last_name": last_name,
+          "active": active,
+          "role": role,
+      }
+
+
+  names = ["Ada", "Lovelace"]
+  options = {"active": True, "role": "admin"}
+
+  user = create_user(names, options)
+  print(user)
+  ```
+solution: |
+  ```python
+  def create_user(first_name, last_name, active=False, role="user"):
+      return {
+          "first_name": first_name,
+          "last_name": last_name,
+          "active": active,
+          "role": role,
+      }
+
+
+  names = ["Ada", "Lovelace"]
+  options = {"active": True, "role": "admin"}
+
+  user = create_user(*names, **options)
+  print(user)
+  ```
+
+  `*names` entpackt die Liste in Positionsargumente. `**options` entpackt
+  das Dictionary in benannte Argumente.

@@ -1,0 +1,29 @@
+title: "Standardmodule zuordnen"
+difficulty: 2
+question: |
+  Ordne das passende Standardmodul zu.
+
+  Module:
+
+  - `platform`
+  - `os`
+  - `sys`
+  - `math`
+  - `random`
+  - `datetime`
+
+  Situationen:
+
+  1. Du willst wissen, ob das Programm auf Windows, Linux oder macOS laeuft.
+  2. Du brauchst die Quadratwurzel von `81`.
+  3. Du willst eine Zufallszahl zwischen `1` und `6`.
+  4. Du willst das heutige Datum ausgeben.
+  5. Du willst das aktuelle Arbeitsverzeichnis anzeigen.
+  6. Du willst sehen, in welchen Pfaden Python nach Modulen sucht.
+solution: |
+  1. `platform`, z.B. `platform.system()`
+  2. `math`, z.B. `math.sqrt(81)`
+  3. `random`, z.B. `random.randint(1, 6)`
+  4. `datetime`, z.B. `datetime.date.today()`
+  5. `os`, z.B. `os.getcwd()`
+  6. `sys`, z.B. `sys.path`

@@ -1,0 +1,35 @@
+title: "`super()`: Ausgabe und Attribute vorhersagen"
+difficulty: 2
+question: |
+  Welche Ausgabe erzeugt der Code?
+
+  ```python
+  class User:
+      def __init__(self, name):
+          print("User init")
+          self.name = name
+
+
+  class Trainer(User):
+      def __init__(self, name, topic):
+          print("Trainer init start")
+          super().__init__(name)
+          self.topic = topic
+          print("Trainer init end")
+
+
+  trainer = Trainer("Mina", "Python")
+  print(trainer.__dict__)
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  Trainer init start
+  User init
+  Trainer init end
+  {'name': 'Mina', 'topic': 'Python'}
+  ```
+
+  `Trainer.__init__` startet zuerst. `super().__init__(name)` ruft den
+  Konstruktor von `User` auf und setzt `name`.

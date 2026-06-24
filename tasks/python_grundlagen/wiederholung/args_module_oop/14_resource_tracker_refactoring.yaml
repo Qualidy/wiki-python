@@ -1,0 +1,62 @@
+title: "Refactoring: Resource Tracker"
+difficulty: 3
+question: |
+  Refactore den Code zu Klassen.
+
+  Ausgangscode:
+
+  ```python
+  resources = []
+
+
+  def add_resource(name, category, **metadata):
+      resources.append({
+          "name": name,
+          "category": category,
+          "metadata": metadata,
+      })
+
+
+  add_resource("Laptop", "Hardware", owner="Ada", condition="good")
+  add_resource("Python Wiki", "Material", topic="OOP")
+  print(resources)
+  ```
+
+  Anforderungen:
+
+  - Klasse `Resource` mit `name`, `category` und `metadata`
+  - `metadata` soll ueber `**metadata` angenommen werden
+  - `__str__` fuer eine lesbare Ausgabe
+  - Klasse `ResourceTracker`
+  - `ResourceTracker` speichert Ressourcen intern in `_resources`
+  - Methode `add_resource(name, category, **metadata)`
+  - `__len__` fuer die Anzahl der Ressourcen
+solution: |
+  ```python
+  class Resource:
+      def __init__(self, name, category, **metadata):
+          self.name = name
+          self.category = category
+          self.metadata = metadata
+
+      def __str__(self):
+          return f"{self.name} ({self.category})"
+
+
+  class ResourceTracker:
+      def __init__(self):
+          self._resources = []
+
+      def add_resource(self, name, category, **metadata):
+          resource = Resource(name, category, **metadata)
+          self._resources.append(resource)
+
+      def __len__(self):
+          return len(self._resources)
+
+
+  tracker = ResourceTracker()
+  tracker.add_resource("Laptop", "Hardware", owner="Ada", condition="good")
+  tracker.add_resource("Python Wiki", "Material", topic="OOP")
+  print(len(tracker))
+  ```

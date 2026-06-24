@@ -1,0 +1,15 @@
+title: "Importfehler erklaeren"
+difficulty: 2
+question: |
+  Erklaere jeweils die wahrscheinlichste Ursache und eine passende Loesung.
+
+  1. `ModuleNotFoundError: No module named 'price_tools'`
+  2. `AttributeError: module 'price_tools' has no attribute 'gross_price'`
+  3. Eine Datei heisst `random.py`, danach funktioniert `import random` komisch.
+solution: |
+  1. Python findet keine Datei bzw. kein Paket mit diesem Namen. Loesung:
+     Dateiname, Ordner und aktuelles Arbeitsverzeichnis pruefen.
+  2. Das Modul wurde gefunden, aber der Name `gross_price` existiert darin
+     nicht. Loesung: Schreibweise und Inhalt von `price_tools.py` pruefen.
+  3. Die eigene Datei `random.py` ueberschattet das Standardmodul `random`.
+     Loesung: eigene Datei umbenennen, z.B. `random_demo.py`.

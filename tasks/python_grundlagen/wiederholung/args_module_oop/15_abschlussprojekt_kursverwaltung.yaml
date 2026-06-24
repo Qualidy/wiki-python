@@ -1,0 +1,100 @@
+title: "Abschlussprojekt: Kursverwaltung"
+difficulty: 4
+question: |
+  Baue eine kleine Kursverwaltung mit mehreren Dateien.
+
+  Struktur:
+
+  ```text
+  course_app/
+      __init__.py
+      models.py
+      reporting.py
+  main.py
+  ```
+
+  Anforderungen an `models.py`:
+
+  - Klasse `Person` mit `name`
+  - Klasse `Trainer(Person)` mit `topic`
+  - `Trainer.__init__` nutzt `super()`
+  - Klasse `Course` mit `title`, `trainer` und internem `_participants`
+  - Methode `add_participants(*names)`
+  - `__len__` gibt die Anzahl der Teilnehmenden zurueck
+  - `__str__` gibt z.B. `"Python OOP mit Mina"` zurueck
+
+  Anforderungen an `reporting.py`:
+
+  - Funktion `course_report(course, **options)`
+  - optional `show_count=True`
+  - optional `uppercase=True`
+
+  Anforderungen an `main.py`:
+
+  - importiere die Klassen und die Reporting-Funktion
+  - erstelle einen Trainer und einen Kurs
+  - fuege mehrere Teilnehmende mit `*args` hinzu
+  - gib den Report aus
+solution: |
+  `course_app/models.py`:
+
+  ```python
+  class Person:
+      def __init__(self, name):
+          self.name = name
+
+
+  class Trainer(Person):
+      def __init__(self, name, topic):
+          super().__init__(name)
+          self.topic = topic
+
+
+  class Course:
+      def __init__(self, title, trainer):
+          self.title = title
+          self.trainer = trainer
+          self._participants = []
+
+      def add_participants(self, *names):
+          for name in names:
+              self._participants.append(name)
+
+      def __len__(self):
+          return len(self._participants)
+
+      def __str__(self):
+          return f"{self.title} mit {self.trainer.name}"
+  ```
+
+  `course_app/reporting.py`:
+
+  ```python
+  def course_report(course, **options):
+      show_count = options.get("show_count", True)
+      uppercase = options.get("uppercase", False)
+
+      text = str(course)
+      if show_count:
+          text += f" ({len(course)} Teilnehmende)"
+      if uppercase:
+          text = text.upper()
+      return text
+  ```
+
+  `main.py`:
+
+  ```python
+  from course_app.models import Course
+  from course_app.models import Trainer
+  from course_app.reporting import course_report
+
+
+  trainer = Trainer("Mina", "Python")
+  course = Course("Python OOP", trainer)
+
+  names = ["Ada", "Linus", "Grace"]
+  course.add_participants(*names)
+
+  print(course_report(course, show_count=True, uppercase=False))
+  ```

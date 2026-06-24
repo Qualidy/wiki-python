@@ -24,4 +24,16 @@ Zusammenfassungen der wichtigsten Themen für die Projektwochen.
 
     List, Set & Dict Comprehension, Filter, Nested, Generator vs. Tuple
 
+- :material-star-circle: **[Args und Kwargs](args_kwargs_wiederholung.md)**
+
+    `*args`, `**kwargs`, Entpacken mit `*` und `**`, flexible Funktionen
+
+- :material-package-variant-closed: **[Module und Imports](module_imports_wiederholung.md)**
+
+    `platform`, Standardmodule, Importvarianten, typische Importfehler
+
+- :material-shape-outline: **[Klassen, super() und Dunder Methods](klassen_oop_wiederholung.md)**
+
+    `super()`, Dunder Methods, public/protected/private, Name Mangling
+
 </div>

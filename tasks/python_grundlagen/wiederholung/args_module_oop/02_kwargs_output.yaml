@@ -1,0 +1,25 @@
+title: "`**kwargs`: Ausgabe vorhersagen"
+difficulty: 1
+question: |
+  Welche Ausgabe erzeugt der Code?
+
+  ```python
+  def show_settings(**settings):
+      print(type(settings))
+      print(settings["theme"])
+      print(settings.get("debug", False))
+
+
+  show_settings(theme="dark", language="de")
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  <class 'dict'>
+  dark
+  False
+  ```
+
+  `**settings` sammelt benannte Argumente in einem Dictionary. Da `debug`
+  nicht uebergeben wurde, liefert `get("debug", False)` den Defaultwert.

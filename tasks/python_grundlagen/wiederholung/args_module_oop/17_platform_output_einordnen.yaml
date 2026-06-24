@@ -1,0 +1,29 @@
+title: "`platform`: Ausgabe einordnen"
+difficulty: 2
+question: |
+  Ordne die folgenden Ausgaben den passenden `platform`-Funktionen zu.
+
+  Funktionen:
+
+  - `platform.system()`
+  - `platform.machine()`
+  - `platform.python_version()`
+  - `platform.python_implementation()`
+
+  Ausgaben:
+
+  1. `"CPython"`
+  2. `"3.12.11"`
+  3. `"Darwin"`
+  4. `"arm64"`
+
+  Schreibe zu jeder Ausgabe die passende Funktion und eine kurze Begruendung.
+solution: |
+  1. `"CPython"` gehoert zu `platform.python_implementation()`, weil es die
+     Python-Implementierung beschreibt.
+  2. `"3.12.11"` gehoert zu `platform.python_version()`, weil es die
+     Python-Version als String beschreibt.
+  3. `"Darwin"` gehoert zu `platform.system()`, weil es den Systemnamen liefert.
+     Auf macOS ist das haeufig `"Darwin"`.
+  4. `"arm64"` gehoert zu `platform.machine()`, weil es die
+     Maschinenarchitektur beschreibt.

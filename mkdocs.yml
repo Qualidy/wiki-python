@@ -81,11 +81,15 @@ nav:
       - Quiz Wochenreview: content/oop_vertiefung_teil2/quiz_wochenreview.md
 
   - Wiederholung:
+      - Übersicht: content/wiederholung/index.md
       - Scope, Closure & Variablen: content/wiederholung/function_scopes_and_closure.md
       - Exceptions: content/wiederholung/exceptions.md
       - Sets: content/wiederholung/set_wiederholung.md
       - Listen: content/wiederholung/list_wiederholung.md
       - Comprehensions: content/wiederholung/comprehension_wiederholung.md
+      - Args und Kwargs: content/wiederholung/args_kwargs_wiederholung.md
+      - Module und Imports: content/wiederholung/module_imports_wiederholung.md
+      - Klassen, super() und Dunder Methods: content/wiederholung/klassen_oop_wiederholung.md
 
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md

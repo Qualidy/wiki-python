@@ -1,0 +1,43 @@
+title: "Dunder Methods: Inventar"
+difficulty: 3
+question: |
+  Implementiere eine Klasse `Inventory`.
+
+  Anforderungen:
+
+  - Konstruktor ohne Pflichtparameter
+  - internes Attribut `_items` als Liste
+  - Methode `add_item(name)`
+  - `__len__` ermoeglicht `len(inventory)`
+  - `__contains__` ermoeglicht `"Laptop" in inventory`
+  - `__str__` gibt alle Items kommasepariert zurueck
+
+  Beispiel:
+
+  ```python
+  inventory = Inventory()
+  inventory.add_item("Laptop")
+  inventory.add_item("Maus")
+
+  print(len(inventory))
+  print("Laptop" in inventory)
+  print(inventory)
+  ```
+solution: |
+  ```python
+  class Inventory:
+      def __init__(self):
+          self._items = []
+
+      def add_item(self, name):
+          self._items.append(name)
+
+      def __len__(self):
+          return len(self._items)
+
+      def __contains__(self, name):
+          return name in self._items
+
+      def __str__(self):
+          return ", ".join(self._items)
+  ```

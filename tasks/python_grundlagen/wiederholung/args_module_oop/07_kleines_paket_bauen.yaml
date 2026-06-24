@@ -1,0 +1,52 @@
+title: "Mini-Paket fuer Kursmaterial"
+difficulty: 3
+question: |
+  Baue eine kleine Modulstruktur:
+
+  ```text
+  course_tools/
+      __init__.py
+      grading.py
+      text_tools.py
+  main.py
+  ```
+
+  Anforderungen:
+
+  - `grading.py` enthaelt `average(*ratings)`.
+  - `grading.py` enthaelt `needs_repeat(*ratings)`, Rueckgabe `True`, wenn
+    der Durchschnitt kleiner als `3` ist.
+  - `text_tools.py` enthaelt `headline(text)`, Rueckgabe in Grossbuchstaben.
+  - `main.py` importiert beide Module und testet die Funktionen.
+solution: |
+  `course_tools/grading.py`:
+
+  ```python
+  def average(*ratings):
+      if not ratings:
+          return 0
+      return sum(ratings) / len(ratings)
+
+
+  def needs_repeat(*ratings):
+      return average(*ratings) < 3
+  ```
+
+  `course_tools/text_tools.py`:
+
+  ```python
+  def headline(text):
+      return text.upper()
+  ```
+
+  `main.py`:
+
+  ```python
+  from course_tools import grading
+  from course_tools import text_tools
+
+
+  print(text_tools.headline("args und kwargs"))
+  print(grading.average(2, 3, 2, 4))
+  print(grading.needs_repeat(2, 3, 2, 4))
+  ```

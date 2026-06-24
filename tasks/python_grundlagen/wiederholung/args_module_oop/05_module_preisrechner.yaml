@@ -1,0 +1,40 @@
+title: "Eigenes Modul: Preisrechner"
+difficulty: 2
+question: |
+  Erstelle zwei Dateien im selben Ordner.
+
+  Datei `price_tools.py`:
+
+  - Konstante `TAX_RATE = 0.19`
+  - Funktion `gross_price(net_price)`
+  - Funktion `format_price(value)`, Rueckgabe z.B. `"119.00 EUR"`
+
+  Datei `main.py`:
+
+  - importiere das Modul mit `import price_tools`
+  - berechne den Bruttopreis fuer `100`
+  - gib den formatierten Preis aus
+solution: |
+  `price_tools.py`:
+
+  ```python
+  TAX_RATE = 0.19
+
+
+  def gross_price(net_price):
+      return net_price * (1 + TAX_RATE)
+
+
+  def format_price(value):
+      return f"{value:.2f} EUR"
+  ```
+
+  `main.py`:
+
+  ```python
+  import price_tools
+
+
+  price = price_tools.gross_price(100)
+  print(price_tools.format_price(price))
+  ```

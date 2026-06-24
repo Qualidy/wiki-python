@@ -1,0 +1,31 @@
+title: "Public, protected, private einordnen"
+difficulty: 2
+question: |
+  Ordne die Attribute ein und erklaere, welche Zugriffe technisch moeglich sind.
+
+  ```python
+  class Course:
+      def __init__(self, title, trainer):
+          self.title = title
+          self._trainer = trainer
+          self.__participants = []
+
+      def add_participant(self, name):
+          self.__participants.append(name)
+
+      def count_participants(self):
+          return len(self.__participants)
+  ```
+
+  Beantworte:
+
+  1. Welches Attribut ist public?
+  2. Welches Attribut ist protected nach Konvention?
+  3. Welches Attribut nutzt Name Mangling?
+  4. Wie heisst `__participants` intern?
+solution: |
+  1. `title` ist public.
+  2. `_trainer` ist protected nach Konvention. Der Zugriff ist technisch
+     moeglich, sollte aber von aussen vermieden werden.
+  3. `__participants` nutzt Name Mangling.
+  4. Intern heisst es `_Course__participants`.

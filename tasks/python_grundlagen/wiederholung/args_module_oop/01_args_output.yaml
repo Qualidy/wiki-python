@@ -1,0 +1,24 @@
+title: "`*args`: Ausgabe vorhersagen"
+difficulty: 1
+question: |
+  Welche Ausgabe erzeugt der Code?
+
+  ```python
+  def show_items(*items):
+      print(type(items))
+      print(items)
+      print(len(items))
+
+
+  show_items("Laptop", "Maus", "Tastatur")
+  ```
+solution: |
+  Ausgabe:
+
+  ```text
+  <class 'tuple'>
+  ('Laptop', 'Maus', 'Tastatur')
+  3
+  ```
+
+  `*items` sammelt alle Positionsargumente in einem Tupel.

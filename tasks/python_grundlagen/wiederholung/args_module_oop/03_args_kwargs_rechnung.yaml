@@ -1,0 +1,31 @@
+title: "Flexible Rechnung mit `args` und `kwargs`"
+difficulty: 2
+question: |
+  Schreibe eine Funktion `calculate_total(*prices, **options)`.
+
+  Anforderungen:
+
+  - `prices` enthaelt beliebig viele Preise.
+  - `options` kann `discount` enthalten, z.B. `discount=0.1` fuer 10 Prozent.
+  - `options` kann `shipping` enthalten, z.B. `shipping=4.99`.
+  - Fehlen die Optionen, gelten `discount=0` und `shipping=0`.
+  - Rueckgabe ist der Gesamtpreis nach Rabatt plus Versand.
+
+  Beispiel:
+
+  ```python
+  print(calculate_total(10, 20, 30, discount=0.1, shipping=4.99))
+  ```
+solution: |
+  ```python
+  def calculate_total(*prices, **options):
+      discount = options.get("discount", 0)
+      shipping = options.get("shipping", 0)
+
+      subtotal = sum(prices)
+      discounted_total = subtotal * (1 - discount)
+      return discounted_total + shipping
+
+
+  print(calculate_total(10, 20, 30, discount=0.1, shipping=4.99))
+  ```

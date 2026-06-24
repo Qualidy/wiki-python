@@ -1,0 +1,36 @@
+title: "`platform`: Diagnose-Skript"
+difficulty: 2
+question: |
+  Schreibe ein kleines Diagnose-Skript mit dem Modul `platform`.
+
+  Anforderungen:
+
+  - importiere `platform`
+  - gib das Betriebssystem aus
+  - gib die Maschinenarchitektur aus
+  - gib die Python-Version aus
+  - gib die Python-Implementierung aus
+
+  Beispielausgabe:
+
+  ```text
+  System: Darwin
+  Machine: arm64
+  Python-Version: 3.12.11
+  Implementierung: CPython
+  ```
+
+  Die konkreten Werte duerfen je nach Rechner anders sein.
+solution: |
+  ```python
+  import platform
+
+
+  print("System:", platform.system())
+  print("Machine:", platform.machine())
+  print("Python-Version:", platform.python_version())
+  print("Implementierung:", platform.python_implementation())
+  ```
+
+  Die Ausgabe ist systemabhaengig. Wichtig ist, welche Funktion welche Art von
+  Information liefert.

@@ -1,0 +1,28 @@
+title: "Lernkarten-Session mit Zeitmessung"
+difficulty: 3
+question: |
+  Schreibe ein kleines Konsolenprogramm fuer eine kurze Lernkarten-Session.
+
+  Anforderungen:
+
+  - Es gibt eine Liste mit mehreren Wiederholungsfragen.
+  - Die Fragen sollen in zufaelliger Reihenfolge gestellt werden.
+  - Vor jeder neuen Frage soll eine kurze Pause entstehen.
+  - Am Ende soll angezeigt werden, wie lange die Session ungefaehr gedauert hat.
+
+  Beispielfragen koennen sein:
+
+  - "Erklaere `*args` in einem Satz."
+  - "Nenne eine Dunder Method."
+  - "Was liefert `platform.system()`?"
+
+  Recherchiere selbst, welche Standardmodule und Funktionen dafuer geeignet
+  sind. Es sollen keine externen Pakete installiert oder importiert werden.
+solution: |
+  Geeignete Standardmodule und Funktionen:
+
+  - `random.shuffle()` fuer eine zufaellige Reihenfolge der Fragen
+  - `time.sleep()` fuer die kurze Pause zwischen den Fragen
+  - `time.time()` oder `datetime.datetime.now()` fuer Start- und Endzeit
+
+  Sinnvolle Module: `random`, `time` oder alternativ `datetime`.

@@ -1,0 +1,30 @@
+title: "Support-Check fuer ein Python-Problem"
+difficulty: 3
+question: |
+  Ein Teilnehmer meldet: "Bei mir laeuft das Python-Skript nicht."
+
+  Schreibe ein kleines Support-Skript, das Informationen sammelt, die man fuer
+  eine erste Fehlersuche wirklich gebrauchen kann.
+
+  Das Skript soll ausgeben:
+
+  - Betriebssystem
+  - Rechnerarchitektur
+  - Python-Version
+  - aktuelles Arbeitsverzeichnis
+  - eine Liste der Dateien im aktuellen Arbeitsverzeichnis
+  - Datum und Uhrzeit, zu der der Support-Check ausgefuehrt wurde
+
+  Recherchiere selbst, welche Standardmodule und Funktionen dafuer geeignet
+  sind. Es sollen keine externen Pakete installiert oder importiert werden.
+solution: |
+  Geeignete Standardmodule und Funktionen:
+
+  - `platform.system()` fuer das Betriebssystem
+  - `platform.machine()` fuer die Rechnerarchitektur
+  - `platform.python_version()` fuer die Python-Version
+  - `os.getcwd()` fuer das aktuelle Arbeitsverzeichnis
+  - `os.listdir()` fuer die Dateien im aktuellen Arbeitsverzeichnis
+  - `datetime.datetime.now()` fuer Datum und Uhrzeit des Checks
+
+  Sinnvolle Module: `platform`, `os`, `datetime`.

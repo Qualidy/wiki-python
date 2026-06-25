@@ -1,0 +1,27 @@
+title: "Datei-Aufraeumhelfer als Trockenlauf"
+difficulty: 4
+question: |
+  Schreibe ein Programm, das beim Aufraeumen eines Projektordners hilft.
+
+  Das Programm soll:
+
+  - das aktuelle Arbeitsverzeichnis untersuchen
+  - alle Dateien anzeigen, die auf `.py`, `.md` oder `.ipynb` enden
+  - fuer jede gefundene Datei den Dateinamen und die Dateigroesse ausgeben
+  - die Dateien nach Groesse sortiert anzeigen
+  - nichts loeschen und nichts verschieben, nur anzeigen
+  - am Ende einen Zeitstempel fuer den Bericht ausgeben
+
+  Recherchiere selbst, welche Standardmodule und Funktionen dafuer geeignet
+  sind. Es sollen keine externen Pakete installiert oder importiert werden.
+solution: |
+  Geeignete Standardmodule und Funktionen:
+
+  - `os.getcwd()` fuer das aktuelle Arbeitsverzeichnis
+  - `os.listdir()` fuer die Dateien im Ordner
+  - `os.path.isfile()` zum Pruefen, ob ein Eintrag eine Datei ist
+  - `os.path.getsize()` fuer die Dateigroesse
+  - `str.endswith()` fuer die Dateiendungen, kein Modul noetig
+  - `datetime.datetime.now()` fuer den Zeitstempel
+
+  Sinnvolle Module: `os`, `datetime`.

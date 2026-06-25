@@ -306,3 +306,6 @@ print(datetime.date.today())
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/16_platform_diagnose.yaml") }}
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/17_platform_output_einordnen.yaml") }}
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/18_standardmodule_zuordnen.yaml") }}
+{{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/19_system_report_abstrakt.yaml") }}
+{{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/20_training_timer_abstrakt.yaml") }}
+{{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/21_diagnose_quiz_abstrakt.yaml") }}

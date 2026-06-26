@@ -110,6 +110,7 @@ sondern ein Schutz gegen versehentliches Ueberschreiben.
 
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/08_super_output.yaml") }}
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/09_super_reparieren.yaml") }}
+{{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/22_super_library_luecken.yaml") }}
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/10_dunder_book.yaml") }}
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/11_dunder_inventory.yaml") }}
 {{ task(file="tasks/python_grundlagen/wiederholung/args_module_oop/12_public_protected_private.yaml") }}

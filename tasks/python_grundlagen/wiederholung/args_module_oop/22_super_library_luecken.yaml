@@ -1,0 +1,121 @@
+title: "`super()` richtig verwenden: Ausleihe in der Bibliothek"
+difficulty: 3
+question: |
+  Vervollstaendige den Code an den Stellen `___`.
+
+  In einer Bibliothek gibt es allgemeine Medien (`LibraryItem`) und spezielle
+  Buecher (`Book`). Jedes Medium kann ausgeliehen werden. Ein Buch soll vor dem
+  Ausleihen noch eine eigene Meldung ausgeben und danach das allgemeine
+  Ausleihverhalten der Oberklasse verwenden.
+
+  Zusaetzlich verwaltet die Oberklasse eine fortlaufende Ausleihnummer. Diese
+  Nummer soll ueber eine Klassenmethode erzeugt werden.
+
+  Ziele:
+
+  - `Book` soll den Konstruktor von `LibraryItem` korrekt aufrufen.
+  - `Book.borrow()` soll eigenes Verhalten ergaenzen und danach `borrow()` aus
+    `LibraryItem` ausfuehren.
+  - Die neue Ausleihnummer soll ueber eine Klassenmethode erzeugt werden.
+  - Verwende `super()` nur fuer Methoden der Oberklasse, nicht um direkt ein
+    Klassenattribut zu veraendern.
+
+  ```python
+  class LibraryItem:
+      next_borrow_id = 1000
+
+      def __init__(self, title):
+          self.title = title
+          self.borrowed = False
+          self.borrow_id = None
+
+      def borrow(self):
+          print("Medium wird ausgeliehen")
+          self.borrowed = True
+          self.borrow_id = LibraryItem.create_borrow_id()
+
+      @classmethod
+      def create_borrow_id(cls):
+          current_id = cls.next_borrow_id
+          ___
+          return current_id
+
+
+  class Book(LibraryItem):
+      def __init__(self, title, author):
+          ___
+          self.author = author
+
+      def borrow(self):
+          print("Buchzustand wird vor der Ausleihe geprueft")
+          ___
+
+
+  book = Book("Clean Code", "Robert C. Martin")
+  book.borrow()
+  print(book.__dict__)
+  ```
+
+  Zusatzfrage:
+
+  Warum waere `self.borrow()` innerhalb von `Book.borrow()` falsch?
+
+  Erweiterung:
+
+  Ergaenze danach selbst neue Features:
+
+  - Medien sollen auch zurueckgegeben werden koennen.
+  - Ergaenze dafuer eine Methode `return_item()` in `LibraryItem`.
+  - `Book` soll `return_item()` ueberschreiben, zuerst eine eigene Meldung
+    ausgeben und danach die Methode der Oberklasse verwenden.
+  - Ergaenze ein Klassenattribut `items_in_storage`, das zaehlt, wie viele
+    Medien gerade im Lager sind.
+  - Der Lagerbestand soll beim Erstellen eines Mediums steigen.
+  - Der Lagerbestand soll beim Ausleihen sinken.
+  - Der Lagerbestand soll beim Zurueckgeben steigen.
+  - Veraendere den Lagerbestand ueber passende Klassenmethoden, nicht direkt
+    in der Unterklasse.
+solution: |
+  Moegliche Loesung:
+
+  ```python
+  class LibraryItem:
+      next_borrow_id = 1000
+
+      def __init__(self, title):
+          self.title = title
+          self.borrowed = False
+          self.borrow_id = None
+
+      def borrow(self):
+          print("Medium wird ausgeliehen")
+          self.borrowed = True
+          self.borrow_id = LibraryItem.create_borrow_id()
+
+      @classmethod
+      def create_borrow_id(cls):
+          current_id = cls.next_borrow_id
+          cls.next_borrow_id += 1
+          return current_id
+
+
+  class Book(LibraryItem):
+      def __init__(self, title, author):
+          super().__init__(title)
+          self.author = author
+
+      def borrow(self):
+          print("Buchzustand wird vor der Ausleihe geprueft")
+          super().borrow()
+  ```
+
+  Wichtige Stellen:
+
+  - `super().__init__(title)` ruft den Konstruktor von `LibraryItem` auf.
+  - `super().borrow()` ruft die ueberschriebene Methode der Oberklasse auf.
+  - `self.borrow()` innerhalb von `Book.borrow()` waere falsch, weil dadurch
+    wieder `Book.borrow()` aufgerufen wird. Das fuehrt zu endloser Rekursion.
+  - Das Klassenattribut `next_borrow_id` wird nicht direkt ueber `super()`
+    veraendert, sondern innerhalb der Klassenmethode `create_borrow_id()`.
+  - Fuer die Erweiterung sind z.B. Klassenmethoden wie `increase_storage()`,
+    `reduce_storage()` und `get_items_in_storage()` sinnvoll.

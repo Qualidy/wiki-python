@@ -1,7 +1,7 @@
 title: "Fakultät berechnen"
 difficulty: 3
 question: |
-  Man kann die Fakultät einer Zahl `n` mit der Formel folgenden Formel berechnen:
+  Man kann die Fakultät einer Zahl `n` mit folgender Formel berechnen:
 
       n! = 1, wenn n <= 1
       n! = n * (n-1)!, andernfalls

@@ -1,0 +1,22 @@
+title: "Quadratzahlen mit map()"
+difficulty: 2
+question: |
+  Verwende `map()` mit einer Lambda-Funktion, um aus der Liste `[1, 2, 3, 4, 5]` eine Liste
+  der Quadratzahlen zu erzeugen.
+
+  Erwartete Ausgabe:
+  ```
+  [1, 4, 9, 16, 25]
+  ```
+tip: |
+  `map()` gibt ein Map-Objekt zurück. Verwende `list()`, um es in eine Liste umzuwandeln.
+solution: |
+  ```python
+  zahlen = [1, 2, 3, 4, 5]
+  quadrate = list(map(lambda x: x ** 2, zahlen))
+  print(quadrate)
+  # [1, 4, 9, 16, 25]
+  ```
+
+  **Erklärung:** `map()` wendet die Lambda-Funktion auf jedes Element der Liste an.
+  Das Ergebnis ist ein Iterator, der mit `list()` in eine Liste umgewandelt wird.

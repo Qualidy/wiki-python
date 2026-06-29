@@ -1,0 +1,28 @@
+title: "Lambda vs. def — Was ist die Ausgabe?"
+difficulty: 1
+question: |
+  Sind die beiden folgenden Funktionen gleichwertig? Was gibt der Code aus?
+
+  ```python
+  def addiere_def(a, b):
+      return a + b
+
+  addiere_lambda = lambda a, b: a + b
+
+  print(addiere_def(3, 4))
+  print(addiere_lambda(3, 4))
+  print(type(addiere_def))
+  print(type(addiere_lambda))
+  ```
+solution: |
+  ```
+  7
+  7
+  <class 'function'>
+  <class 'function'>
+  ```
+
+  **Erklärung:** Beide Funktionen sind funktional gleichwertig — sie addieren zwei Zahlen.
+  Auch der Typ ist identisch: `function`. Der Unterschied liegt nur in der Schreibweise.
+  Lambda-Funktionen sind auf einen einzigen Ausdruck beschränkt und haben keinen eigenen Namen
+  (der Name `addiere_lambda` ist nur der Variablenname).

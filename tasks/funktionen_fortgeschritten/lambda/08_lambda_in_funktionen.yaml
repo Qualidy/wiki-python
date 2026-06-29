@@ -1,0 +1,33 @@
+title: "Lambda als Rückgabewert einer Funktion"
+difficulty: 3
+question: |
+  Was ist die Ausgabe des folgenden Codes? Erkläre, was hier passiert.
+
+  ```python
+  def multiplizierer(faktor):
+      return lambda x: x * faktor
+
+  verdoppeln = multiplizierer(2)
+  verdreifachen = multiplizierer(3)
+
+  print(verdoppeln(5))
+  print(verdreifachen(5))
+  print(multiplizierer(10)(7))
+  ```
+solution: |
+  ```
+  10
+  15
+  70
+  ```
+
+  **Erklärung:** Die Funktion `multiplizierer` gibt eine Lambda-Funktion zurück, die den übergebenen
+  `faktor` "einschließt" (Closure). Jeder Aufruf von `multiplizierer` erzeugt eine neue Funktion
+  mit einem festen Faktor:
+
+  - `verdoppeln = multiplizierer(2)` erzeugt `lambda x: x * 2`
+  - `verdreifachen = multiplizierer(3)` erzeugt `lambda x: x * 3`
+  - `multiplizierer(10)(7)` erzeugt `lambda x: x * 10` und ruft sie sofort mit `7` auf → `70`
+
+  Dieses Muster nennt man **Closure** — die Lambda-Funktion "erinnert sich" an den Wert von `faktor`
+  aus dem umgebenden Scope, auch nachdem `multiplizierer` bereits zurückgekehrt ist.

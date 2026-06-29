@@ -85,6 +85,7 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
+- [ :material-function-variant: Funktionen Fortgeschritten ](content/funktionen_fortgeschritten/rekursion/rekursion.md)
 - [ :material-generator-portable: Generatoren & Dekoratoren ](){ .disabled }
 
 </div>

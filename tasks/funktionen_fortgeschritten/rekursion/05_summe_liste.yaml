@@ -1,0 +1,26 @@
+title: "Summe einer Liste rekursiv"
+difficulty: 1
+question: |
+  Schreibe eine rekursive Funktion `summe(liste)`, die die Summe aller Elemente einer Liste berechnet.
+
+  **Hinweis:** Der Basisfall ist eine leere Liste (Summe = 0). Im rekursiven Fall addierst du das erste Element
+  zum Ergebnis des rekursiven Aufrufs mit dem Rest der Liste.
+
+  ```python
+  print(summe([1, 2, 3, 4, 5]))  # 15
+  print(summe([]))                # 0
+  print(summe([10]))              # 10
+  ```
+tip: |
+  Nutze Slicing (`liste[1:]`), um den Rest der Liste zu erhalten.
+solution: |
+  ```python
+  def summe(liste):
+      if len(liste) == 0:
+          return 0
+      return liste[0] + summe(liste[1:])
+
+  print(summe([1, 2, 3, 4, 5]))  # 15
+  print(summe([]))                # 0
+  print(summe([10]))              # 10
+  ```

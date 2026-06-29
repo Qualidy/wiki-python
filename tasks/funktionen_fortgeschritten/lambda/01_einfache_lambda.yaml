@@ -1,0 +1,18 @@
+title: "Einfache Lambda-Funktion"
+difficulty: 1
+question: |
+  Was ist die Ausgabe des folgenden Codes?
+
+  ```python
+  verdoppeln = lambda x: x * 2
+  print(verdoppeln(5))
+  print(verdoppeln("Ha"))
+  ```
+solution: |
+  ```
+  10
+  HaHa
+  ```
+
+  **Erklärung:** Die Lambda-Funktion `verdoppeln` nimmt ein Argument `x` und gibt `x * 2` zurück.
+  Bei `5` ergibt das `10` (Multiplikation), bei `"Ha"` ergibt das `"HaHa"` (String-Wiederholung).

@@ -1,0 +1,37 @@
+title: "map() und filter() kombiniert"
+difficulty: 3
+question: |
+  Gegeben ist eine Liste von Zahlen:
+
+  ```python
+  zahlen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  ```
+
+  Verwende `filter()` und `map()` zusammen mit Lambda-Funktionen, um:
+
+  1. Nur die **ungeraden** Zahlen herauszufiltern
+  2. Diese dann zu **quadrieren**
+
+  Erwartete Ausgabe:
+  ```
+  [1, 9, 25, 49, 81]
+  ```
+
+  Schreibe das in **einer einzigen Zeile** (ohne Zwischenvariable).
+tip: |
+  Du kannst das Ergebnis von `filter()` direkt als Eingabe für `map()` verwenden.
+solution: |
+  ```python
+  zahlen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  ergebnis = list(map(lambda x: x ** 2, filter(lambda x: x % 2 != 0, zahlen)))
+  print(ergebnis)
+  # [1, 9, 25, 49, 81]
+  ```
+
+  **Erklärung:** `filter()` gibt einen Iterator der ungeraden Zahlen zurück.
+  Dieser wird direkt an `map()` weitergegeben, das jede Zahl quadriert.
+
+  **Alternative mit List Comprehension** (oft lesbarer):
+  ```python
+  ergebnis = [x ** 2 for x in zahlen if x % 2 != 0]
+  ```

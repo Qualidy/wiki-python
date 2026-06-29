@@ -1,0 +1,37 @@
+title: "Sortieren nach Dictionary-Wert"
+difficulty: 2
+question: |
+  Gegeben ist eine Liste von Dictionaries mit Schülerdaten:
+
+  ```python
+  schueler = [
+      {"name": "Anna", "note": 2.3},
+      {"name": "Ben", "note": 1.7},
+      {"name": "Clara", "note": 1.0},
+      {"name": "David", "note": 3.0},
+  ]
+  ```
+
+  1. Sortiere die Liste nach der **Note** (beste Note zuerst) mit `sorted()` und einer Lambda-Funktion.
+  2. Sortiere die Liste nach dem **Namen** (alphabetisch).
+solution: |
+  ```python
+  schueler = [
+      {"name": "Anna", "note": 2.3},
+      {"name": "Ben", "note": 1.7},
+      {"name": "Clara", "note": 1.0},
+      {"name": "David", "note": 3.0},
+  ]
+
+  # 1. Nach Note sortieren
+  nach_note = sorted(schueler, key=lambda s: s["note"])
+  print(nach_note)
+  # [{'name': 'Clara', 'note': 1.0}, {'name': 'Ben', 'note': 1.7},
+  #  {'name': 'Anna', 'note': 2.3}, {'name': 'David', 'note': 3.0}]
+
+  # 2. Nach Name sortieren
+  nach_name = sorted(schueler, key=lambda s: s["name"])
+  print(nach_name)
+  # [{'name': 'Anna', 'note': 2.3}, {'name': 'Ben', 'note': 1.7},
+  #  {'name': 'Clara', 'note': 1.0}, {'name': 'David', 'note': 3.0}]
+  ```

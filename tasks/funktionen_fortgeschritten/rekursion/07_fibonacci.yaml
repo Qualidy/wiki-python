@@ -1,0 +1,36 @@
+title: "Fibonacci-Folge"
+difficulty: 2
+question: |
+  Die Fibonacci-Folge ist definiert als:
+
+      fib(0) = 0
+      fib(1) = 1
+      fib(n) = fib(n-1) + fib(n-2), für n > 1
+
+  Schreibe eine rekursive Funktion `fib(n)`, die die n-te Fibonacci-Zahl berechnet.
+
+  ```python
+  print(fib(0))   # 0
+  print(fib(1))   # 1
+  print(fib(6))   # 8
+  print(fib(10))  # 55
+  ```
+tip: |
+  Der Basisfall hat hier **zwei** Bedingungen: `n == 0` und `n == 1`.
+solution: |
+  ```python
+  def fib(n):
+      if n == 0:
+          return 0
+      if n == 1:
+          return 1
+      return fib(n - 1) + fib(n - 2)
+
+  print(fib(0))   # 0
+  print(fib(1))   # 1
+  print(fib(6))   # 8
+  print(fib(10))  # 55
+  ```
+
+  **Achtung:** Diese naive Implementierung hat eine exponentielle Laufzeit, da viele Werte mehrfach berechnet werden.
+  Für große `n` wird die Berechnung sehr langsam. In der Praxis würde man hier Memoization oder eine iterative Lösung verwenden.

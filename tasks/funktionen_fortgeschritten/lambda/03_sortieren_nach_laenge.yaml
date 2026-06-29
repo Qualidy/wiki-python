@@ -1,0 +1,25 @@
+title: "Sortieren nach Stringlänge"
+difficulty: 1
+question: |
+  Gegeben ist eine Liste von Wörtern:
+
+  ```python
+  woerter = ["Python", "ist", "eine", "Programmiersprache"]
+  ```
+
+  Sortiere die Liste nach der **Länge** der Wörter (kürzestes zuerst) mithilfe von `sorted()` und einer Lambda-Funktion.
+
+  Erwartete Ausgabe:
+  ```
+  ['ist', 'eine', 'Python', 'Programmiersprache']
+  ```
+solution: |
+  ```python
+  woerter = ["Python", "ist", "eine", "Programmiersprache"]
+  sortiert = sorted(woerter, key=lambda w: len(w))
+  print(sortiert)
+  # ['ist', 'eine', 'Python', 'Programmiersprache']
+  ```
+
+  **Erklärung:** Der `key`-Parameter von `sorted()` erwartet eine Funktion, die für jedes Element
+  einen Vergleichswert liefert. `lambda w: len(w)` gibt die Länge jedes Wortes zurück, danach wird sortiert.

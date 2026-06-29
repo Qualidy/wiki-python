@@ -1,0 +1,28 @@
+title: "String umkehren"
+difficulty: 2
+question: |
+  Schreibe eine rekursive Funktion `umkehren(text)`, die einen String umdreht.
+
+  ```python
+  print(umkehren("Hallo"))   # "ollaH"
+  print(umkehren("Python"))  # "nohtyP"
+  print(umkehren("a"))       # "a"
+  print(umkehren(""))        # ""
+  ```
+
+  **Hinweis:** Überlege, wie du das letzte Zeichen vor den Rest des umgekehrten Strings setzen kannst.
+solution: |
+  ```python
+  def umkehren(text):
+      if len(text) <= 1:
+          return text
+      return text[-1] + umkehren(text[:-1])
+
+  print(umkehren("Hallo"))   # "ollaH"
+  print(umkehren("Python"))  # "nohtyP"
+  print(umkehren("a"))       # "a"
+  print(umkehren(""))        # ""
+  ```
+
+  **Erklärung:** Im Basisfall (leerer String oder ein Zeichen) wird der String direkt zurückgegeben.
+  Im rekursiven Fall wird das letzte Zeichen vorne angehängt und der Rest des Strings rekursiv umgekehrt.

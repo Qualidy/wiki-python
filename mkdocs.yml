@@ -80,6 +80,10 @@ nav:
       - Quiz Komposition, Mixins & MRO: content/oop_vertiefung_teil2/quiz_komposition_mixins_mro.md
       - Quiz Wochenreview: content/oop_vertiefung_teil2/quiz_wochenreview.md
 
+  - Funktionen Fortgeschritten:
+      - Rekursion: content/funktionen_fortgeschritten/rekursion/rekursion.md
+      - Lambda: content/funktionen_fortgeschritten/lambda/lambda.md
+
   - Wiederholung:
       - Übersicht: content/wiederholung/index.md
       - Scope, Closure & Variablen: content/wiederholung/function_scopes_and_closure.md

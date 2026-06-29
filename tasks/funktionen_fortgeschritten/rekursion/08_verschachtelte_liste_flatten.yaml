@@ -1,0 +1,35 @@
+title: "Verschachtelte Liste flatten"
+difficulty: 3
+question: |
+  Schreibe eine rekursive Funktion `flatten(liste)`, die eine beliebig tief verschachtelte Liste
+  in eine flache Liste umwandelt.
+
+  ```python
+  print(flatten([1, [2, 3], [4, [5, 6]]]))       # [1, 2, 3, 4, 5, 6]
+  print(flatten([[1, [2]], [3, [4, [5]]]]))        # [1, 2, 3, 4, 5]
+  print(flatten([1, 2, 3]))                        # [1, 2, 3]
+  print(flatten([]))                               # []
+  ```
+
+  **Hinweis:** Prüfe für jedes Element, ob es eine Liste ist (`isinstance(element, list)`).
+  Wenn ja, rufe `flatten` rekursiv auf. Wenn nein, füge das Element direkt zur Ergebnisliste hinzu.
+solution: |
+  ```python
+  def flatten(liste):
+      ergebnis = []
+      for element in liste:
+          if isinstance(element, list):
+              ergebnis.extend(flatten(element))
+          else:
+              ergebnis.append(element)
+      return ergebnis
+
+  print(flatten([1, [2, 3], [4, [5, 6]]]))       # [1, 2, 3, 4, 5, 6]
+  print(flatten([[1, [2]], [3, [4, [5]]]]))        # [1, 2, 3, 4, 5]
+  print(flatten([1, 2, 3]))                        # [1, 2, 3]
+  print(flatten([]))                               # []
+  ```
+
+  **Erklärung:** Die Funktion geht jedes Element der Liste durch. Ist ein Element selbst eine Liste,
+  wird `flatten` rekursiv aufgerufen und das Ergebnis mit `extend` angefügt. Ist es keine Liste,
+  wird es direkt mit `append` hinzugefügt.

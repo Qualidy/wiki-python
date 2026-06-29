@@ -1,0 +1,50 @@
+title: "Zugriffskontrolle mit Dekorator"
+difficulty: 3
+question: |
+  Schreibe einen Dekorator `nur_admin`, der prüft, ob der erste Parameter
+  einer Funktion den Wert `"admin"` hat. Falls nicht, soll eine Fehlermeldung
+  ausgegeben und `None` zurückgegeben werden.
+
+  ```python
+  @nur_admin
+  def daten_loeschen(benutzer, datensatz):
+      print(f"{datensatz} wurde gelöscht!")
+      return True
+
+  daten_loeschen("admin", "Kundendaten")   # Kundendaten wurde gelöscht!
+  daten_loeschen("gast", "Kundendaten")    # Zugriff verweigert!
+  ```
+
+  Erwartete Ausgabe:
+  ```
+  Kundendaten wurde gelöscht!
+  Zugriff verweigert!
+  ```
+solution: |
+  ```python
+  from functools import wraps
+
+  def nur_admin(func):
+      @wraps(func)
+      def wrapper(benutzer, *args, **kwargs):
+          if benutzer != "admin":
+              print("Zugriff verweigert!")
+              return None
+          return func(benutzer, *args, **kwargs)
+      return wrapper
+
+  @nur_admin
+  def daten_loeschen(benutzer, datensatz):
+      print(f"{datensatz} wurde gelöscht!")
+      return True
+
+  daten_loeschen("admin", "Kundendaten")   # Kundendaten wurde gelöscht!
+  daten_loeschen("gast", "Kundendaten")    # Zugriff verweigert!
+  ```
+
+  **Erklärung:** Der Wrapper fängt den ersten Parameter (`benutzer`) ab und prüft,
+  ob er `"admin"` ist. Nur wenn ja, wird die Originalfunktion aufgerufen. Andernfalls
+  wird eine Fehlermeldung ausgegeben und `None` zurückgegeben.
+
+  Dieses Muster wird in der Praxis häufig für Autorisierung und Berechtigungsprüfungen
+  verwendet.

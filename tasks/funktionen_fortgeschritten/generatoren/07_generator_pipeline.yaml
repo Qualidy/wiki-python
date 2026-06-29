@@ -1,0 +1,44 @@
+title: "Generator-Pipeline"
+difficulty: 3
+question: |
+  Erstelle eine Pipeline aus drei Generator-Funktionen:
+
+  1. `erzeuge_zahlen(n)` — erzeugt Zahlen von 1 bis n
+  2. `quadriere(iterable)` — quadriert jeden Wert
+  3. `filtere_groesser_als(iterable, grenze)` — gibt nur Werte > grenze weiter
+
+  Verkette die Generatoren zu einer Pipeline und gib das Ergebnis für `n=10` und `grenze=20` aus.
+
+  Erwartete Ausgabe:
+  ```
+  [25, 36, 49, 64, 81, 100]
+  ```
+solution: |
+  ```python
+  def erzeuge_zahlen(n):
+      for i in range(1, n + 1):
+          yield i
+
+  def quadriere(iterable):
+      for x in iterable:
+          yield x ** 2
+
+  def filtere_groesser_als(iterable, grenze):
+      for x in iterable:
+          if x > grenze:
+              yield x
+
+  # Pipeline verketten
+  ergebnis = filtere_groesser_als(quadriere(erzeuge_zahlen(10)), 20)
+  print(list(ergebnis))
+  # [25, 36, 49, 64, 81, 100]
+  ```
+
+  **Erklärung:** Die Generatoren werden wie Rohre in einer Pipeline verkettet:
+
+  - `erzeuge_zahlen(10)` liefert: 1, 2, 3, ..., 10
+  - `quadriere(...)` quadriert jeden Wert: 1, 4, 9, ..., 100
+  - `filtere_groesser_als(..., 20)` gibt nur Werte > 20 weiter: 25, 36, ..., 100
+
+  Der Vorteil: Jeder Wert fließt **einzeln** durch die gesamte Pipeline.
+  Es wird **keine Zwischenliste** im Speicher gehalten.

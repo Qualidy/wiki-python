@@ -1,0 +1,35 @@
+title: "Funktion als Argument übergeben"
+difficulty: 1
+question: |
+  Was ist die Ausgabe des folgenden Codes?
+
+  ```python
+  def anwenden(func, wert):
+      return func(wert)
+
+  def verdoppeln(x):
+      return x * 2
+
+  def quadrieren(x):
+      return x ** 2
+
+  print(anwenden(verdoppeln, 5))
+  print(anwenden(quadrieren, 5))
+  print(anwenden(len, "Hallo"))
+  ```
+solution: |
+  ```
+  10
+  25
+  5
+  ```
+
+  **Erklärung:** Die Funktion `anwenden` nimmt eine **Funktion als Argument** entgegen und
+  ruft sie mit dem übergebenen Wert auf. Das ist möglich, weil Funktionen in Python
+  **First-Class Objects** sind — sie können wie jeder andere Wert gespeichert und übergeben werden.
+
+  - `anwenden(verdoppeln, 5)` → `verdoppeln(5)` → `10`
+  - `anwenden(quadrieren, 5)` → `quadrieren(5)` → `25`
+  - `anwenden(len, "Hallo")` → `len("Hallo")` → `5`
+
+  Dieses Konzept ist die Grundlage für Dekoratoren.

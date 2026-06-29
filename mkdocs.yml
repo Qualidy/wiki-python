@@ -83,6 +83,8 @@ nav:
   - Funktionen Fortgeschritten:
       - Rekursion: content/funktionen_fortgeschritten/rekursion/rekursion.md
       - Lambda: content/funktionen_fortgeschritten/lambda/lambda.md
+      - Generatoren: content/funktionen_fortgeschritten/generatoren/generatoren.md
+      - Dekoratoren: content/funktionen_fortgeschritten/dekoratoren/dekoratoren.md
 
   - Wiederholung:
       - Übersicht: content/wiederholung/index.md

@@ -1,0 +1,53 @@
+title: "Dekorator mit Parameter (@repeat(n=3))"
+difficulty: 3
+question: |
+  Schreibe einen Dekorator `repeat(n)`, der eine Funktion `n`-mal ausführt.
+
+  ```python
+  @repeat(n=3)
+  def sage_hallo():
+      print("Hallo!")
+
+  sage_hallo()
+  ```
+
+  Erwartete Ausgabe:
+  ```
+  Hallo!
+  Hallo!
+  Hallo!
+  ```
+
+  **Hinweis:** Dekoratoren mit Parametern benötigen **drei Verschachtelungsebenen**.
+solution: |
+  ```python
+  from functools import wraps
+
+  def repeat(n):
+      def dekorator(func):
+          @wraps(func)
+          def wrapper(*args, **kwargs):
+              ergebnis = None
+              for _ in range(n):
+                  ergebnis = func(*args, **kwargs)
+              return ergebnis
+          return wrapper
+      return dekorator
+
+  @repeat(n=3)
+  def sage_hallo():
+      print("Hallo!")
+
+  sage_hallo()
+  # Hallo!
+  # Hallo!
+  # Hallo!
+  ```
+
+  **Erklärung:** Drei Verschachtelungsebenen sind nötig:
+
+  1. `repeat(n=3)` wird aufgerufen → gibt `dekorator` zurück
+  2. `dekorator(sage_hallo)` wird aufgerufen → gibt `wrapper` zurück
+  3. `wrapper()` wird aufgerufen → führt `sage_hallo()` dreimal aus
+
+  Das ist äquivalent zu: `sage_hallo = repeat(n=3)(sage_hallo)`

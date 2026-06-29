@@ -1,0 +1,43 @@
+title: "Eigenes range() nachbauen"
+difficulty: 3
+question: |
+  Baue die eingebaute Funktion `range()` als Generator-Funktion `mein_range(start, stop, step=1)` nach.
+
+  Die Funktion soll sich wie `range()` verhalten:
+
+  ```python
+  print(list(mein_range(0, 10, 2)))   # [0, 2, 4, 6, 8]
+  print(list(mein_range(5, 0, -1)))   # [5, 4, 3, 2, 1]
+  print(list(mein_range(1, 5)))       # [1, 2, 3, 4]
+  ```
+
+  **Hinweis:** Berücksichtige sowohl positive als auch negative Schrittweiten.
+solution: |
+  ```python
+  def mein_range(start, stop, step=1):
+      if step == 0:
+          raise ValueError("step darf nicht 0 sein")
+
+      current = start
+      if step > 0:
+          while current < stop:
+              yield current
+              current += step
+      else:
+          while current > stop:
+              yield current
+              current += step
+
+  print(list(mein_range(0, 10, 2)))   # [0, 2, 4, 6, 8]
+  print(list(mein_range(5, 0, -1)))   # [5, 4, 3, 2, 1]
+  print(list(mein_range(1, 5)))       # [1, 2, 3, 4]
+  ```
+
+  **Erklärung:** Die Funktion unterscheidet zwischen positivem und negativem `step`:
+
+  - Bei positivem `step` wird gezählt, solange `current < stop`
+  - Bei negativem `step` wird gezählt, solange `current > stop`
+  - `step == 0` löst wie bei echtem `range()` einen `ValueError` aus
+
+  Im Gegensatz zum echten `range()` (das ein spezielles Objekt ist) erzeugt unsere
+  Version einen einfachen Generator.

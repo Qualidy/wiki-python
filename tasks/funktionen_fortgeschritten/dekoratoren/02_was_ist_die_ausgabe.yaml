@@ -1,0 +1,35 @@
+title: "Was ist die Ausgabe? (einfacher Dekorator)"
+difficulty: 1
+question: |
+  Was ist die Ausgabe des folgenden Codes?
+
+  ```python
+  def mein_dekorator(func):
+      def wrapper():
+          print("Vorher")
+          func()
+          print("Nachher")
+      return wrapper
+
+  @mein_dekorator
+  def sage_hallo():
+      print("Hallo!")
+
+  sage_hallo()
+  ```
+solution: |
+  ```
+  Vorher
+  Hallo!
+  Nachher
+  ```
+
+  **Erklärung:** Der Dekorator `@mein_dekorator` ersetzt `sage_hallo` durch die Funktion `wrapper`.
+
+  Beim Aufruf von `sage_hallo()` wird also tatsächlich `wrapper()` aufgerufen:
+
+  1. `print("Vorher")` → gibt "Vorher" aus
+  2. `func()` → ruft die **originale** `sage_hallo` auf → gibt "Hallo!" aus
+  3. `print("Nachher")` → gibt "Nachher" aus
+
+  Die `@`-Syntax ist gleichbedeutend mit: `sage_hallo = mein_dekorator(sage_hallo)`

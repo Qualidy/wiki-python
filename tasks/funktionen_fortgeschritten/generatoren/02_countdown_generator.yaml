@@ -1,0 +1,32 @@
+title: "Countdown-Generator"
+difficulty: 1
+question: |
+  Schreibe eine Generator-Funktion `countdown(n)`, die von `n` bis `1` herunterzählt.
+
+  ```python
+  for zahl in countdown(5):
+      print(zahl)
+  ```
+
+  Erwartete Ausgabe:
+  ```
+  5
+  4
+  3
+  2
+  1
+  ```
+solution: |
+  ```python
+  def countdown(n):
+      while n > 0:
+          yield n
+          n -= 1
+
+  for zahl in countdown(5):
+      print(zahl)
+  ```
+
+  **Erklärung:** Die Funktion verwendet `yield` in einer `while`-Schleife. Bei jedem `next()`-Aufruf
+  (intern durch die `for`-Schleife) wird der aktuelle Wert von `n` zurückgegeben und danach um 1
+  verringert. Sobald `n <= 0` ist, endet die Funktion und `StopIteration` wird ausgelöst.

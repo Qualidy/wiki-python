@@ -1,0 +1,31 @@
+title: "Generator-Erschöpfung — Was passiert?"
+difficulty: 2
+question: |
+  Was ist die Ausgabe des folgenden Codes? Erkläre, warum.
+
+  ```python
+  def zahlen():
+      yield 1
+      yield 2
+      yield 3
+
+  gen = zahlen()
+
+  print(sum(gen))
+  print(sum(gen))
+  print(list(gen))
+  ```
+solution: |
+  ```
+  6
+  0
+  []
+  ```
+
+  **Erklärung:** Ein Generator kann nur **einmal** durchlaufen werden.
+
+  - `sum(gen)` beim ersten Mal iteriert über alle Werte (1 + 2 + 3 = 6) und **erschöpft** den Generator.
+  - `sum(gen)` beim zweiten Mal findet keine Werte mehr → `sum()` über eine leere Sequenz ergibt `0`.
+  - `list(gen)` findet ebenfalls keine Werte mehr → leere Liste `[]`.
+
+  Um den Generator erneut zu verwenden, muss ein **neuer** Generator erstellt werden: `gen = zahlen()`.

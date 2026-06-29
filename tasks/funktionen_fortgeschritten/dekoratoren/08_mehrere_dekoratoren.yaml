@@ -1,0 +1,56 @@
+title: "Mehrere Dekoratoren stapeln"
+difficulty: 3
+question: |
+  Was ist die Ausgabe des folgenden Codes? Erkläre die Reihenfolge der Ausführung.
+
+  ```python
+  def sterne(func):
+      def wrapper(*args, **kwargs):
+          print("***")
+          ergebnis = func(*args, **kwargs)
+          print("***")
+          return ergebnis
+      return wrapper
+
+  def ausrufezeichen(func):
+      def wrapper(*args, **kwargs):
+          print("!!!")
+          ergebnis = func(*args, **kwargs)
+          print("!!!")
+          return ergebnis
+      return wrapper
+
+  @sterne
+  @ausrufezeichen
+  def sage(text):
+      print(text)
+
+  sage("Hallo")
+  ```
+solution: |
+  ```
+  ***
+  !!!
+  Hallo
+  !!!
+  ***
+  ```
+
+  **Erklärung:** Mehrere Dekoratoren werden **von unten nach oben** angewendet:
+
+  ```python
+  sage = sterne(ausrufezeichen(sage))
+  ```
+
+  1. Zuerst wird `ausrufezeichen(sage)` ausgeführt → `sage` wird mit `!!!` umhüllt
+  2. Dann wird `sterne(...)` auf das Ergebnis angewendet → alles wird mit `***` umhüllt
+
+  Beim Aufruf von `sage("Hallo")` wird der **äußerste** Wrapper (`sterne`) zuerst ausgeführt:
+
+  1. `sterne.wrapper` → `print("***")`
+  2. `ausrufezeichen.wrapper` → `print("!!!")`
+  3. Originales `sage` → `print("Hallo")`
+  4. `ausrufezeichen.wrapper` → `print("!!!")`
+  5. `sterne.wrapper` → `print("***")`
+
+  Die Dekoratoren bilden eine Art **Zwiebelschicht** um die Originalfunktion.

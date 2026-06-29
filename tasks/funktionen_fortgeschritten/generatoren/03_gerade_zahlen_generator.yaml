@@ -1,0 +1,29 @@
+title: "Gerade Zahlen Generator"
+difficulty: 1
+question: |
+  Schreibe eine Generator-Funktion `gerade_zahlen(n)`, die die ersten `n` geraden Zahlen
+  erzeugt (beginnend bei 2).
+
+  ```python
+  print(list(gerade_zahlen(5)))
+  ```
+
+  Erwartete Ausgabe:
+  ```
+  [2, 4, 6, 8, 10]
+  ```
+solution: |
+  ```python
+  def gerade_zahlen(n):
+      zahl = 2
+      for _ in range(n):
+          yield zahl
+          zahl += 2
+
+  print(list(gerade_zahlen(5)))
+  # [2, 4, 6, 8, 10]
+  ```
+
+  **Erklärung:** Der Generator hält den aktuellen Zustand (`zahl`) zwischen den `yield`-Aufrufen.
+  Bei jedem `next()` wird die aktuelle gerade Zahl zurückgegeben und `zahl` um 2 erhöht.
+  Nach `n` Durchläufen endet die `for`-Schleife und der Generator ist erschöpft.

@@ -1,0 +1,51 @@
+title: "functools.wraps — Warum ist das wichtig?"
+difficulty: 2
+question: |
+  Was ist die Ausgabe des folgenden Codes? Was ändert sich, wenn man
+  `@wraps(func)` hinzufügt?
+
+  ```python
+  def mein_dekorator(func):
+      def wrapper(*args, **kwargs):
+          return func(*args, **kwargs)
+      return wrapper
+
+  @mein_dekorator
+  def addiere(a, b):
+      """Addiert zwei Zahlen."""
+      return a + b
+
+  print(addiere.__name__)
+  print(addiere.__doc__)
+  ```
+solution: |
+  **Ohne `@wraps`:**
+  ```
+  wrapper
+  None
+  ```
+
+  **Mit `@wraps`:**
+  ```
+  addiere
+  Addiert zwei Zahlen.
+  ```
+
+  **Erklärung:** Ohne `@wraps(func)` wird `addiere` durch `wrapper` **ersetzt** —
+  und `wrapper` hat seinen eigenen `__name__` ("wrapper") und keinen Docstring (`None`).
+
+  Mit `@wraps(func)` werden die Metadaten der Originalfunktion (`__name__`, `__doc__`,
+  `__module__` etc.) auf den Wrapper kopiert:
+
+  ```python
+  from functools import wraps
+
+  def mein_dekorator(func):
+      @wraps(func)
+      def wrapper(*args, **kwargs):
+          return func(*args, **kwargs)
+      return wrapper
+  ```
+
+  Das ist besonders wichtig für Debugging, `help()` und Tools, die auf
+  Funktionsmetadaten zugreifen.

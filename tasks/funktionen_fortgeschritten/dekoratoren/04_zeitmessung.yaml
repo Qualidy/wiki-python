@@ -1,0 +1,53 @@
+title: "Zeitmessung mit Dekorator"
+difficulty: 2
+question: |
+  Schreibe einen Dekorator `zeitmessung`, der misst, wie lange eine Funktion
+  zur Ausführung braucht, und die Dauer in Sekunden ausgibt.
+
+  ```python
+  import time
+
+  @zeitmessung
+  def langsame_berechnung():
+      time.sleep(1)
+      return 42
+
+  ergebnis = langsame_berechnung()
+  print(f"Ergebnis: {ergebnis}")
+  ```
+
+  Erwartete Ausgabe (ungefähr):
+  ```
+  langsame_berechnung dauerte 1.0012 Sekunden
+  Ergebnis: 42
+  ```
+
+  **Hinweis:** Verwende `time.time()` für die Zeitmessung.
+solution: |
+  ```python
+  import time
+  from functools import wraps
+
+  def zeitmessung(func):
+      @wraps(func)
+      def wrapper(*args, **kwargs):
+          start = time.time()
+          ergebnis = func(*args, **kwargs)
+          dauer = time.time() - start
+          print(f"{func.__name__} dauerte {dauer:.4f} Sekunden")
+          return ergebnis
+      return wrapper
+
+  @zeitmessung
+  def langsame_berechnung():
+      time.sleep(1)
+      return 42
+
+  ergebnis = langsame_berechnung()
+  print(f"Ergebnis: {ergebnis}")
+  ```
+
+  **Erklärung:** Der Dekorator speichert die Startzeit vor dem Funktionsaufruf und
+  berechnet die Differenz danach. Wichtig ist, dass der `wrapper` den **Rückgabewert**
+  der Originalfunktion speichert und zurückgibt (`return ergebnis`), damit die
+  dekorierte Funktion weiterhin korrekt funktioniert.

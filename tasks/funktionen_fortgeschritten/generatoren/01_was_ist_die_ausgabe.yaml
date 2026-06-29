@@ -1,0 +1,26 @@
+title: "Was ist die Ausgabe? (yield-Grundlagen)"
+difficulty: 1
+question: |
+  Was ist die Ausgabe des folgenden Codes?
+
+  ```python
+  def mein_generator():
+      yield 1
+      yield 2
+      yield 3
+
+  gen = mein_generator()
+  print(next(gen))
+  print(next(gen))
+  ```
+solution: |
+  ```
+  1
+  2
+  ```
+
+  **Erklärung:** Die Generator-Funktion `mein_generator` enthält drei `yield`-Anweisungen.
+  Beim ersten `next(gen)` wird der Code bis zum ersten `yield` ausgeführt und `1` zurückgegeben.
+  Die Funktion wird **pausiert**. Beim zweiten `next(gen)` wird der Code ab dem ersten `yield`
+  fortgesetzt bis zum zweiten `yield` — und `2` zurückgegeben. Der dritte Wert `3` wird nie
+  abgefragt, weil kein weiterer `next()`-Aufruf erfolgt.

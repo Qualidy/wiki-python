@@ -1,0 +1,30 @@
+title: "Datei zeilenweise mit Generator"
+difficulty: 2
+question: |
+  Schreibe eine Generator-Funktion `lese_zeilen(dateipfad)`, die eine Textdatei
+  **zeilenweise** liest und jede Zeile (ohne Zeilenumbruch) per `yield` zurückgibt.
+
+  ```python
+  for zeile in lese_zeilen("beispiel.txt"):
+      print(zeile)
+  ```
+
+  Warum ist ein Generator hier besser als `datei.readlines()`?
+solution: |
+  ```python
+  def lese_zeilen(dateipfad):
+      with open(dateipfad, "r") as datei:
+          for zeile in datei:
+              yield zeile.rstrip("\n")
+
+  for zeile in lese_zeilen("beispiel.txt"):
+      print(zeile)
+  ```
+
+  **Erklärung:** Der Generator liest die Datei **zeilenweise** — es wird immer nur eine Zeile
+  gleichzeitig im Speicher gehalten. Bei `datei.readlines()` wird die **gesamte Datei** auf einmal
+  in den Speicher geladen, was bei großen Dateien (z.B. Logfiles mit Millionen Zeilen) zu
+  Speicherproblemen führen kann.
+
+  Zusätzlich kümmert sich `with open(...)` um das automatische Schließen der Datei,
+  und `rstrip("\n")` entfernt den Zeilenumbruch am Ende jeder Zeile.

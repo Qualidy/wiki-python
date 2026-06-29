@@ -1,0 +1,54 @@
+title: "Logging-Dekorator schreiben"
+difficulty: 2
+question: |
+  Schreibe einen Dekorator `log`, der bei jedem Funktionsaufruf den Funktionsnamen
+  und die übergebenen Argumente ausgibt.
+
+  ```python
+  @log
+  def addiere(a, b):
+      return a + b
+
+  @log
+  def begruessung(name):
+      return f"Hallo, {name}!"
+
+  addiere(3, 5)
+  begruessung("Anna")
+  ```
+
+  Erwartete Ausgabe:
+  ```
+  Aufruf: addiere(3, 5)
+  Aufruf: begruessung('Anna',)
+  ```
+
+  **Hinweis:** Verwende `*args` und `**kwargs`, damit der Dekorator mit beliebigen
+  Funktionen funktioniert.
+solution: |
+  ```python
+  from functools import wraps
+
+  def log(func):
+      @wraps(func)
+      def wrapper(*args, **kwargs):
+          print(f"Aufruf: {func.__name__}{args}")
+          return func(*args, **kwargs)
+      return wrapper
+
+  @log
+  def addiere(a, b):
+      return a + b
+
+  @log
+  def begruessung(name):
+      return f"Hallo, {name}!"
+
+  addiere(3, 5)       # Aufruf: addiere(3, 5)
+  begruessung("Anna") # Aufruf: begruessung('Anna',)
+  ```
+
+  **Erklärung:** Der `wrapper` fängt alle Argumente mit `*args` und `**kwargs` auf,
+  gibt den Funktionsnamen (`func.__name__`) und die Argumente aus, und leitet den
+  Aufruf an die Originalfunktion weiter. `@wraps(func)` sorgt dafür, dass die
+  Metadaten der Originalfunktion erhalten bleiben.

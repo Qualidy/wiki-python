@@ -1,0 +1,47 @@
+title: "Zitate und Autoren strukturiert extrahieren"
+difficulty: 2
+question: |
+  Schreibe eine Funktion `extract_quotes(url: str) -> list[dict]`, die alle Zitate von einer Seite von `quotes.toscrape.com` extrahiert.
+
+  Jedes Zitat soll als Dictionary mit folgenden Schlüsseln gespeichert werden:
+  - `"text"`: Der Zitattext (ohne die umgebenden Anführungszeichen `\u201c` und `\u201d`)
+  - `"author"`: Der Autorenname
+  - `"tags"`: Eine Liste der Tags
+
+  Teste die Funktion mit der Startseite und gib die ersten 3 Zitate formatiert aus.
+solution: |
+  ```python
+  import requests
+  from bs4 import BeautifulSoup
+
+  def extract_quotes(url: str) -> list[dict]:
+      response = requests.get(url)
+      response.raise_for_status()
+      soup = BeautifulSoup(response.text, "html.parser")
+
+      quotes = []
+      for div in soup.select("div.quote"):
+          text = div.select_one("span.text").text
+          # Anführungszeichen entfernen
+          text = text.strip("\u201c\u201d")
+          author = div.select_one("small.author").text
+          tags = [tag.text for tag in div.select("a.tag")]
+
+          quotes.append({
+              "text": text,
+              "author": author,
+              "tags": tags
+          })
+
+      return quotes
+
+  # Testen
+  zitate = extract_quotes("https://quotes.toscrape.com")
+  for i, zitat in enumerate(zitate[:3], 1):
+      print(f"\n--- Zitat {i} ---")
+      print(f"Text: {zitat['text'][:80]}...")
+      print(f"Autor: {zitat['author']}")
+      print(f"Tags: {', '.join(zitat['tags'])}")
+  ```
+tip: |
+  Jedes Zitat auf der Seite ist in einem `<div class="quote">` eingebettet. Iteriere über alle diese Divs und extrahiere die Einzelteile daraus.

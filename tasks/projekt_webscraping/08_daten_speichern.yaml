@@ -1,0 +1,58 @@
+title: "Ergebnisse in CSV und JSON speichern"
+difficulty: 3
+question: |
+  Erweitere deinen Scraper um zwei Funktionen zum Speichern der extrahierten Zitate:
+
+  1. `save_to_csv(quotes: list[dict], filename: str) -> None`
+     - Speichere die Zitate als CSV-Datei mit den Spalten: `text`, `author`, `tags`
+     - Die Tags sollen als kommaseparierter String gespeichert werden (z.B. `"life,love,inspiration"`)
+
+  2. `save_to_json(quotes: list[dict], filename: str) -> None`
+     - Speichere die Zitate als JSON-Datei
+     - Verwende Einrückung (`indent=2`) und `ensure_ascii=False` für korrekte Sonderzeichen
+
+  Teste beide Funktionen mit mindestens 10 Zitaten und überprüfe die erzeugten Dateien.
+solution: |
+  ```python
+  import csv
+  import json
+  import requests
+  from bs4 import BeautifulSoup
+
+  def extract_quotes(url: str) -> list[dict]:
+      response = requests.get(url)
+      response.raise_for_status()
+      soup = BeautifulSoup(response.text, "html.parser")
+
+      quotes = []
+      for div in soup.select("div.quote"):
+          text = div.select_one("span.text").text.strip("\u201c\u201d")
+          author = div.select_one("small.author").text
+          tags = [tag.text for tag in div.select("a.tag")]
+          quotes.append({"text": text, "author": author, "tags": tags})
+      return quotes
+
+  def save_to_csv(quotes: list[dict], filename: str) -> None:
+      with open(filename, "w", newline="", encoding="utf-8") as f:
+          writer = csv.writer(f)
+          writer.writerow(["text", "author", "tags"])
+          for quote in quotes:
+              writer.writerow([
+                  quote["text"],
+                  quote["author"],
+                  ",".join(quote["tags"])
+              ])
+      print(f"✅ {len(quotes)} Zitate in '{filename}' gespeichert")
+
+  def save_to_json(quotes: list[dict], filename: str) -> None:
+      with open(filename, "w", encoding="utf-8") as f:
+          json.dump(quotes, f, indent=2, ensure_ascii=False)
+      print(f"✅ {len(quotes)} Zitate in '{filename}' gespeichert")
+
+  # Zitate extrahieren und speichern
+  zitate = extract_quotes("https://quotes.toscrape.com")
+  save_to_csv(zitate, "zitate.csv")
+  save_to_json(zitate, "zitate.json")
+  ```
+tip: |
+  Verwende das `csv`-Modul mit `csv.writer` für CSV und `json.dump()` für JSON. Vergiss nicht `encoding="utf-8"` beim Öffnen der Dateien, da die Zitate Sonderzeichen enthalten können.

@@ -1,0 +1,29 @@
+title: "Erster GET-Request"
+difficulty: 1
+question: |
+  Schreibe ein Python-Skript, das einen GET-Request auf `https://quotes.toscrape.com` ausführt und den Statuscode sowie die ersten 500 Zeichen des HTML-Inhalts ausgibt.
+
+  **Hinweise:**
+  - Verwende die `requests`-Bibliothek
+  - Nutze `response.status_code` und `response.text`
+solution: |
+  ```python
+  import requests
+
+  response = requests.get("https://quotes.toscrape.com")
+
+  print(f"Statuscode: {response.status_code}")
+  print(f"Erste 500 Zeichen:\n{response.text[:500]}")
+  ```
+
+  **Erwartete Ausgabe:**
+  ```
+  Statuscode: 200
+  Erste 500 Zeichen:
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  ...
+  ```
+tip: |
+  Installiere zunächst die Bibliothek mit `pip install requests`, falls noch nicht geschehen.

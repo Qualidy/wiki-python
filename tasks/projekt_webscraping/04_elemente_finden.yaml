@@ -1,0 +1,34 @@
+title: "Elemente mit find() und find_all() finden"
+difficulty: 2
+question: |
+  Lade die Seite `https://quotes.toscrape.com` und extrahiere mit `find()` und `find_all()`:
+
+  1. Das erste Zitat auf der Seite (steht in einem `<span>` mit der Klasse `text`)
+  2. Alle Autorennamen (stehen in `<small>` mit der Klasse `author`)
+  3. Die Anzahl der Zitate auf der Seite
+
+  Gib die Ergebnisse formatiert aus.
+solution: |
+  ```python
+  import requests
+  from bs4 import BeautifulSoup
+
+  response = requests.get("https://quotes.toscrape.com")
+  soup = BeautifulSoup(response.text, "html.parser")
+
+  # 1. Erstes Zitat
+  erstes_zitat = soup.find("span", class_="text")
+  print(f"Erstes Zitat: {erstes_zitat.text}")
+
+  # 2. Alle Autoren
+  autoren = soup.find_all("small", class_="author")
+  print("\nAutoren auf dieser Seite:")
+  for autor in autoren:
+      print(f"  - {autor.text}")
+
+  # 3. Anzahl der Zitate
+  zitate = soup.find_all("span", class_="text")
+  print(f"\nAnzahl Zitate: {len(zitate)}")
+  ```
+tip: |
+  Bei `find()` und `find_all()` kannst du CSS-Klassen über den Parameter `class_` filtern (mit Unterstrich, weil `class` ein Python-Schlüsselwort ist).

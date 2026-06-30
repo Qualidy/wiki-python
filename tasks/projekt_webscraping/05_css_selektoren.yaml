@@ -1,0 +1,38 @@
+title: "Daten mit CSS-Selektoren extrahieren"
+difficulty: 2
+question: |
+  Verwende die `.select()`-Methode von BeautifulSoup, um folgende Daten von `https://quotes.toscrape.com` zu extrahieren:
+
+  1. Alle Zitat-Texte (CSS-Selektor: `span.text`)
+  2. Alle Tags/Schlagwörter (CSS-Selektor: `a.tag`)
+  3. Den Link zur nächsten Seite (CSS-Selektor: `li.next a`)
+
+  Gib die Ergebnisse aus und zeige den Unterschied zwischen `select()` und `select_one()`.
+solution: |
+  ```python
+  import requests
+  from bs4 import BeautifulSoup
+
+  response = requests.get("https://quotes.toscrape.com")
+  soup = BeautifulSoup(response.text, "html.parser")
+
+  # 1. Alle Zitate mit select()
+  zitate = soup.select("span.text")
+  print(f"Anzahl Zitate: {len(zitate)}")
+  for zitat in zitate[:3]:  # Nur erste 3
+      print(f"  {zitat.text[:60]}...")
+
+  # 2. Alle Tags
+  tags = soup.select("a.tag")
+  unique_tags = set(tag.text for tag in tags)
+  print(f"\nAnzahl Tags: {len(tags)} ({len(unique_tags)} unique)")
+  for tag in list(unique_tags)[:5]:
+      print(f"  #{tag}")
+
+  # 3. Link zur nächsten Seite mit select_one()
+  next_link = soup.select_one("li.next a")
+  if next_link:
+      print(f"\nNächste Seite: {next_link['href']}")
+  ```
+tip: |
+  `select()` gibt immer eine **Liste** zurück, auch wenn nur ein Element gefunden wird. `select_one()` gibt ein **einzelnes Element** oder `None` zurück.

@@ -1,0 +1,57 @@
+title: "Über mehrere Seiten scrapen (Pagination)"
+difficulty: 3
+question: |
+  Erweitere die Funktion aus der vorherigen Aufgabe: Schreibe eine Funktion `scrape_all_quotes(base_url: str) -> list[dict]`, die **alle** Zitate von **allen Seiten** von `quotes.toscrape.com` extrahiert.
+
+  Die Seite hat eine Pagination: Am Ende jeder Seite gibt es einen "Next →"-Link, der zur nächsten Seite führt. Die letzte Seite hat keinen solchen Link.
+
+  Anforderungen:
+  - Navigiere automatisch durch alle Seiten
+  - Sammle alle Zitate in einer Liste
+  - Gib nach jeder Seite eine Statusmeldung aus (z.B. `"Seite 3 geladen: 10 Zitate gefunden"`)
+  - Gib am Ende die Gesamtzahl der Zitate aus
+
+  **Hinweis:** Die Seite hat insgesamt 10 Seiten mit je 10 Zitaten (= 100 Zitate).
+solution: |
+  ```python
+  import requests
+  from bs4 import BeautifulSoup
+
+  def extract_quotes(soup: BeautifulSoup) -> list[dict]:
+      quotes = []
+      for div in soup.select("div.quote"):
+          text = div.select_one("span.text").text.strip("\u201c\u201d")
+          author = div.select_one("small.author").text
+          tags = [tag.text for tag in div.select("a.tag")]
+          quotes.append({"text": text, "author": author, "tags": tags})
+      return quotes
+
+  def scrape_all_quotes(base_url: str) -> list[dict]:
+      all_quotes = []
+      url = base_url
+      page = 1
+
+      while url:
+          response = requests.get(url)
+          response.raise_for_status()
+          soup = BeautifulSoup(response.text, "html.parser")
+
+          page_quotes = extract_quotes(soup)
+          all_quotes.extend(page_quotes)
+          print(f"Seite {page} geladen: {len(page_quotes)} Zitate gefunden")
+
+          next_link = soup.select_one("li.next a")
+          if next_link:
+              url = base_url + next_link["href"]
+          else:
+              url = None
+          page += 1
+
+      return all_quotes
+
+  # Alle Zitate scrapen
+  zitate = scrape_all_quotes("https://quotes.toscrape.com")
+  print(f"\nGesamt: {len(zitate)} Zitate gesammelt")
+  ```
+tip: |
+  Der "Next"-Link befindet sich in `<li class="next"><a href="/page/2/">...</a></li>`. Prüfe nach jeder Seite, ob ein solcher Link existiert. Wenn nicht, bist du auf der letzten Seite.

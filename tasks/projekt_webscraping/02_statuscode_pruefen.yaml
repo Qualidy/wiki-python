@@ -1,0 +1,36 @@
+title: "Statuscodes auswerten"
+difficulty: 1
+question: |
+  Schreibe eine Funktion `check_url(url: str) -> None`, die einen GET-Request auf die übergebene URL ausführt und folgendes ausgibt:
+
+  - Bei Statuscode `200`: `"✅ Seite erreichbar"`
+  - Bei Statuscode `404`: `"❌ Seite nicht gefunden"`
+  - Bei anderen Statuscodes: `"⚠️ Unerwarteter Statuscode: {code}"`
+  - Bei einem Verbindungsfehler: `"🚫 Verbindungsfehler: {fehlermeldung}"`
+
+  Teste die Funktion mit:
+  - `https://quotes.toscrape.com` (sollte 200 ergeben)
+  - `https://quotes.toscrape.com/nichtexistent` (sollte 404 ergeben)
+  - `https://nichtexistent.example.com` (sollte Verbindungsfehler ergeben)
+solution: |
+  ```python
+  import requests
+
+  def check_url(url: str) -> None:
+      try:
+          response = requests.get(url)
+          if response.status_code == 200:
+              print("✅ Seite erreichbar")
+          elif response.status_code == 404:
+              print("❌ Seite nicht gefunden")
+          else:
+              print(f"⚠️ Unerwarteter Statuscode: {response.status_code}")
+      except requests.exceptions.ConnectionError as e:
+          print(f"🚫 Verbindungsfehler: {e}")
+
+  check_url("https://quotes.toscrape.com")
+  check_url("https://quotes.toscrape.com/nichtexistent")
+  check_url("https://nichtexistent.example.com")
+  ```
+tip: |
+  Verwende `try/except` mit `requests.exceptions.ConnectionError`, um Netzwerkfehler abzufangen.

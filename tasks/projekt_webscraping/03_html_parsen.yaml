@@ -1,0 +1,30 @@
+title: "HTML mit BeautifulSoup parsen"
+difficulty: 1
+question: |
+  Lade die Seite `https://quotes.toscrape.com` herunter und erstelle ein BeautifulSoup-Objekt.
+
+  Gib dann folgende Informationen aus:
+  1. Den Titel der Seite (`<title>`-Tag)
+  2. Die Anzahl aller `<span>`-Tags auf der Seite
+  3. Den Text des ersten `<h1>`-Tags
+solution: |
+  ```python
+  import requests
+  from bs4 import BeautifulSoup
+
+  response = requests.get("https://quotes.toscrape.com")
+  soup = BeautifulSoup(response.text, "html.parser")
+
+  # 1. Titel der Seite
+  print(f"Titel: {soup.title.text}")
+
+  # 2. Anzahl aller <span>-Tags
+  spans = soup.find_all("span")
+  print(f"Anzahl <span>-Tags: {len(spans)}")
+
+  # 3. Text des ersten <h1>-Tags
+  h1 = soup.find("h1")
+  print(f"Erster <h1>: {h1.text}")
+  ```
+tip: |
+  Verwende `soup.title.text` für den Seitentitel und `soup.find_all("tag")` um alle Elemente eines bestimmten Tags zu finden.

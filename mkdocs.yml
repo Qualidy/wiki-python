@@ -97,6 +97,13 @@ nav:
       - Module und Imports: content/wiederholung/module_imports_wiederholung.md
       - Klassen, super() und Dunder Methods: content/wiederholung/klassen_oop_wiederholung.md
 
+  - Projekt Web Scraping:
+      - Übersicht: content/projekt_webscraping/index.md
+      - HTTP & Requests: content/projekt_webscraping/01_http_requests.md
+      - HTML Parsing mit BeautifulSoup: content/projekt_webscraping/02_html_parsing.md
+      - CSS-Selektoren: content/projekt_webscraping/03_css_selektoren.md
+      - Projektaufgabe - Zitat-Scraper: content/projekt_webscraping/04_projekt_scraper.md
+
 #  - Referenzmaterial:
 #      - Exkurs - Regex: content/referenzmaterial/regex/regex.md
 #      - Exkurs - Rekursion: content/referenzmaterial/recursion/recursion.md

@@ -1,6 +1,7 @@
 # `map()`, `filter()` und `lambda`
 
 ## Theorie
+- [Lambda, Map, Filter](../funktionen_fortgeschritten/lambda/lambda.md)
 
 `lambda` erzeugt eine kleine anonyme Funktion mit genau einem Ausdruck.
 

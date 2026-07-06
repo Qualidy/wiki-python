@@ -19,10 +19,10 @@ Consider the following code snippet:
 Which of the variables will contain False?
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>w</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>x</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>z</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>y</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">w</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">x</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">z</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">y</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -64,11 +64,11 @@ What is the expected output of the following code?
 <!-- page_17 -->
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>4</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>2</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>6</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>8</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">4</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">2</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">6</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">8</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -102,10 +102,10 @@ And in the end the result is the highest number.
 isalnum() checks if a string contains only letters and digits, and this is:
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>A method</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>A module</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>A function</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>A dataset</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">A method</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">A module</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">A function</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">A dataset</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -139,10 +139,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF6K.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>4</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>5</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>3</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">4</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">5</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">3</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -180,11 +180,11 @@ What will be the output of the following code snippet?
 <!-- page_20 -->
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>3</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>None</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>4</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">3</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">None</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">4</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -216,10 +216,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF6T.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>[ ‘Peter’, ‘Wellert’ ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>[ ‘Peter’, 404, 3.03, ‘Wellert’, 33.3 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>None of the above</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>[ 404, 3.03 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ ‘Peter’, ‘Wellert’ ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ ‘Peter’, 404, 3.03, ‘Wellert’, 33.3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">None of the above</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">[ 404, 3.03 ]</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -248,65 +248,18 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcF6W.jpg)
 
-1 | Hello
-
-2 | Hello
-
-3 | Hello
-
-1 | Hello
-
-2 | Hello
-
-<!-- page_22 -->
-
-C.
-
-1 | Hello
-
-2 | Hello
-
-3 | Hello
-
-4 | Hello
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="C">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | Hello<br>2 | Hello<br>3 | Hello</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | Hello<br>2 | Hello</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">An infinite loop.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | Hello<br>2 | Hello<br>3 | Hello<br>4 | Hello</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-What is the expected output of the following code?
-
-![](../../assets/pcap_exam/image_rsrcF6W.jpg)
-
-1 | Hello
-
-2 | Hello
-
-3 | Hello
-
-1 | Hello
-
-2 | Hello
-
-<!-- page_22 -->
-
-C.
-
-1 | Hello
-
-2 | Hello
-
-3 | Hello
-
-4 | Hello
 
 **Answer: C.**
 
@@ -335,10 +288,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF70.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>class</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>A number</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>name</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>A string ending with a long hexadecimal number.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">class</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">A number</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">name</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">A string ending with a long hexadecimal number.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -372,10 +325,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF73.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | True True</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | True False</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | False True</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | False False</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | True True</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | True False</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | False True</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | False False</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -419,10 +372,10 @@ What is the expected output of the following code if the user enters 2 and 4?
 <!-- page_27 -->
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>4</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>2</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>6</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>24</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">4</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">2</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">6</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">24</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -452,10 +405,10 @@ As always the input() function returns a string. Therefore string concatenation 
 The digraph written as #! is used to:
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>make a particular module entity a private one.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>tell a Unix or Unix-like OS how to execute the contents of a Python file.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>tell an MS Windows OS how to execute the contents of a Python file.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>create a docstring.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">make a particular module entity a private one.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">tell a Unix or Unix-like OS how to execute the contents of a Python file.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">tell an MS Windows OS how to execute the contents of a Python file.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">create a docstring.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -485,10 +438,10 @@ https://en.wikipedia.org/wiki/Shebang_(Unix)
 Which of the following statements are true? (Select two answers)
 
 <div class="pcap-options" data-answer="B,C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The first argument of the open() function is an integer value.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The input () function reads data from the stdin stream.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>There are three pre-opened file streams.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>The readlines () function returns a string.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The first argument of the open() function is an integer value.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The input () function reads data from the stdin stream.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">There are three pre-opened file streams.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The readlines () function returns a string.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -526,10 +479,10 @@ The function body is missing. What snippet would you insert in the line indicate
 ![](../../assets/pcap_exam/image_rsrcF7C.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>return ‘number’</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>print(number)</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>return number</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>print (‘number’)</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">return ‘number’</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">print(number)</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">return number</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">print (‘number’)</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -561,10 +514,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF7F.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>3</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>4</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">3</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">4</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -596,10 +549,10 @@ An operator able to check whether two values are not equal is coded as:
 <!-- page_32 -->
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>&lt;&gt;</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>not ==</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>=/=</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>! =</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">&lt;&gt;</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">not ==</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">=/=</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">! =</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -639,10 +592,10 @@ What will be the output of the following code snippet?
 ![](../../assets/pcap_exam/image_rsrcF7M.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>3</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>4</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">3</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">4</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -684,10 +637,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF7R.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>23</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>100</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>None of the above.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">23</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">100</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -721,10 +674,10 @@ What is the expected output of the following code?
 <!-- page_37 -->
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | True True</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | False True</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | False False</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | True False</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | True True</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | False True</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | False False</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | True False</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -760,10 +713,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF7X.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>****</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>*</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>**</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">****</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">*</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">**</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -805,10 +758,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF80.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2 1 2</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 2 2</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 1 2</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 2 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2 1 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 2 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 1 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 2 1</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -864,10 +817,10 @@ You can also assign the same value to multiple variables:
 Which module in Python supports regular expressions?
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>regex</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>re</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>None of the above</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>pyregex</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">regex</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">re</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">None of the above</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">pyregex</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -897,10 +850,10 @@ Nothing to explain here. You just have to remember the name of the module re
 The Exception class contains a property named args and it is a:
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>tuple</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>list</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>string</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>dictionary</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">tuple</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">list</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">string</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">dictionary</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -936,10 +889,10 @@ That leaves the tuple
 A PWG-lead repository, collecting open-source Python code, is called:
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>PWGR</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>PyCR</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>PyPI</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>PyRep</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">PWGR</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">PyCR</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">PyPI</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">PyRep</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -971,10 +924,10 @@ You want to check, whether the variable obj contains an object of the class A
 Which of the following statements can you use?
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>A.isinstance(obj)</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>obj.isinstance(A)</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>isinstance(A, obj)</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>isinstance(obj, A)</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">A.isinstance(obj)</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">obj.isinstance(A)</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">isinstance(A, obj)</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">isinstance(obj, A)</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1010,10 +963,10 @@ How many elements does the L list contain?
 <!-- page_45 -->
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>three</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>two</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>zero</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>one</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">three</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">two</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">zero</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">one</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1041,10 +994,10 @@ range(-1, -2) has no element and therefore the list L will be empty.
 Which of the following lines contain valid Python code? (Select two answers.)
 
 <div class="pcap-options" data-answer="B,D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | lambda(a,b): return a if a &lt; b else b</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | lambda a,b: a if a &lt; b else b</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | lambda a,b = a if a &lt; b else b</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | lambda a,b: True</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | lambda(a,b): return a if a &lt; b else b</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | lambda a,b: a if a &lt; b else b</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | lambda a,b = a if a &lt; b else b</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | lambda a,b: True</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1074,10 +1027,10 @@ Both wrong answers have invalid syntax.
 Knowing that a function named randint() resides in the module named random choose the proper way to import it:
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>from randint import random</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>import randint</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>from random import randint</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>import randint from random</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">from randint import random</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">import randint</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">from random import randint</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">import randint from random</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1113,10 +1066,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF8M.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>It outputs None</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The code is erroneous and will raise an exception.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>It outputs False</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>It outputs True</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">It outputs None</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code is erroneous and will raise an exception.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">It outputs False</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">It outputs True</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1148,10 +1101,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF8R.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>0.0</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>0.4</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>0.2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">0.0</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">0.4</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">0.2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1185,10 +1138,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF8U.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>[ 1, 4 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>[ 4, 3 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>[ 1, 3, 4 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>[ 1, 3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ 1, 4 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ 4, 3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">[ 1, 3, 4 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">[ 1, 3 ]</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1218,10 +1171,10 @@ A list is mutable. When you assign it to a different variable, you create a refe
 Which of the following commands can be used to read n characters from a file?
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>file.read(n)</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>n = file .read()</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>n = file.readline()</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>file.readline(n)</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">file.read(n)</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">n = file .read()</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">n = file.readline()</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">file.readline(n)</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1263,11 +1216,11 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF90.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>bcac</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>bca</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>bcbc</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>acac</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>bac</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">bcac</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">bca</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">bcbc</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">acac</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">bac</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1313,10 +1266,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF93.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>True</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>False</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">True</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">False</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1354,10 +1307,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF96.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The code is erroneous and cannot be run.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>2</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>4</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code is erroneous and cannot be run.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">2</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">4</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1389,10 +1342,10 @@ There are two e and two a and therefore the counter will be 4
 Which of the following variable names is illegal?
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>In</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>In_</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>In</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>IN</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">In</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">In_</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">In</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">IN</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1437,37 +1390,18 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcF9C.jpg)
 
-7777777
-
-The code is erroneous.
-
-49
-
-77
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="B">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">7777777</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">49</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">77</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-What is the expected output of the following code?
-
-![](../../assets/pcap_exam/image_rsrcF9C.jpg)
-
-7777777
-
-The code is erroneous.
-
-49
-
-77
 
 **Answer: B.**
 
@@ -1492,10 +1426,10 @@ What will be the output of the following code snippet?
 <!-- page_59 -->
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 2</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>2 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">2 2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1525,10 +1459,10 @@ In the end x and y changed their values.
 Which of the following statements are true about the __pycache__ directory/folder? (Select two answers.)
 
 <div class="pcap-options" data-answer="A,C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>It is created automatically.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>It has to be created manually by the module’s creator.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>It contains semi-compiled module code.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>It has to be created manually by the module’s user.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">It is created automatically.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">It has to be created manually by the module’s creator.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">It contains semi-compiled module code.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">It has to be created manually by the module’s user.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1568,10 +1502,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF9N.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The code will raise an AttributeError exception.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code will raise an AttributeError exception.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1609,11 +1543,11 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF9T.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>3 42</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>3 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>1 42</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">3 42</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">3 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">1 42</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1647,11 +1581,11 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcF9W.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>[ 3, 5, 20, 5, 25, 1, 3 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>[ 1, 3, 4, 5, 20, 5, 25 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>[ 1, 3, 3, 4, 5, 5, 20, 25 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>[ 3, 4, 5, 20, 5, 25, 1, 3 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>[ 3, 1, 25, 5, 20, 5, 4 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ 3, 5, 20, 5, 25, 1, 3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ 1, 3, 4, 5, 20, 5, 25 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">[ 1, 3, 3, 4, 5, 5, 20, 25 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">[ 3, 4, 5, 20, 5, 25, 1, 3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">[ 3, 1, 25, 5, 20, 5, 4 ]</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1687,11 +1621,11 @@ What is the expected output of the following code?
 <!-- page_65 -->
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>4 4</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 4</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>4 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">4 4</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 4</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">4 1</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1729,10 +1663,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFA3.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | 261</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | ( ‘list index out of range’ ,)</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | (‘ success’ ,)</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | 321</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | 261</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | ( ‘list index out of range’ ,)</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | (‘ success’ ,)</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | 321</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1762,10 +1696,10 @@ What will be the output of the following code snippet?
 ![](../../assets/pcap_exam/image_rsrcFA6.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>6/10</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>None of the above.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>0.6</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">6/10</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">None of the above.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">0.6</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1795,10 +1729,10 @@ The division operator does its normal job. And remember the division operator AL
 What is true about updating already installed Python packages?
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>It’s an automatic process which doesn’t require any user attention.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>It can be done only by uninstalling the package once again.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>It’s performed by the install command accompanied by the -U option.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>It can be done by reinstalling the package using the reinstall command.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">It’s an automatic process which doesn’t require any user attention.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">It can be done only by uninstalling the package once again.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">It’s performed by the install command accompanied by the -U option.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">It can be done by reinstalling the package using the reinstall command.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1830,10 +1764,10 @@ You can also use pip show package_name to see the version (and other information
 Select the true statements about the map() function. Choose two.
 
 <div class="pcap-options" data-answer="A,D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The map() function can accept more than two arguments.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The map() function can accept only two arguments.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>The first map() function argument can be a list.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>The second map() function argument can be a list.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The map() function can accept more than two arguments.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The map() function can accept only two arguments.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">The first map() function argument can be a list.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The second map() function argument can be a list.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1869,12 +1803,12 @@ What is the expected behavior of the following program?
 ![](../../assets/pcap_exam/image_rsrcFAC.jpg)
 
 <div class="pcap-options" data-answer="F">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The program will raise an exception handled by the first except block.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The program will cause a ZeroDivisionError exception and output the following message: Too bad...</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>The program will cause a ValueError exception and output a default error message.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>The program will cause a ZeroDivisionError exception and output a default error message.</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>The program will cause a ValueError exception and output the following message: Too bad...</span></label>
-<label class="pcap-option"><input type="checkbox" value="F"> <span class="pcap-option-letter">F.</span> <span>The program will cause a SyntaxError exception.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The program will raise an exception handled by the first except block.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The program will cause a ZeroDivisionError exception and output the following message: Too bad...</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">The program will cause a ValueError exception and output a default error message.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The program will cause a ZeroDivisionError exception and output a default error message.</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">The program will cause a ValueError exception and output the following message: Too bad...</span></label>
+<label class="pcap-option"><input type="checkbox" value="F"> <span class="pcap-option-letter">F.</span> <span class="pcap-option-text">The program will cause a SyntaxError exception.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1910,10 +1844,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFAF.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>I from B is 30</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>I from A is 0</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>I from A is 30</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>I from A is 20</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">I from B is 30</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">I from A is 0</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">I from A is 30</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">I from A is 20</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -1958,47 +1892,18 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcFAJ.jpg)
 
-1 | Name of the file: data.txt
-
-2 | Peter Wellert
-
-3 |
-
-4 | Hello everybody
-
-1 | Peter Wellert
-
-2 | Hello everybody
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="A">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | Name of the file: data.txt<br>2 | Peter Wellert<br>3 |<br>4 | Hello everybody</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | Peter Wellert<br>2 | Hello everybody</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | Peter Wellert Hello everybody</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-What is the expected output of the following code?
-
-<!-- page_74 -->
-
-![](../../assets/pcap_exam/image_rsrcFAJ.jpg)
-
-1 | Name of the file: data.txt
-
-2 | Peter Wellert
-
-3 |
-
-4 | Hello everybody
-
-1 | Peter Wellert
-
-2 | Hello everybody
 
 **Answer: A.**
 
@@ -2028,39 +1933,18 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcFAP.jpg)
 
-The code is erroneous,
-
-because the print method is called without an argument.
-
-The code is erroneous,
-
-because the constructor is called without an argument.
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="D">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The code is erroneous,<br>because the print method is called without an argument.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code is erroneous,<br>because the constructor is called without an argument.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">Nothing</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">Welcome</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-<!-- page_76 -->
-
-What is the expected output of the following code?
-
-![](../../assets/pcap_exam/image_rsrcFAP.jpg)
-
-The code is erroneous,
-
-because the print method is called without an argument.
-
-The code is erroneous,
-
-because the constructor is called without an argument.
 
 **Answer: D.**
 
@@ -2085,10 +1969,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFAT.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2019/Nov/27 11:27:22</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>2019/11/27 11:27:22</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>19/ November/27 11:27:22</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>19/11/27 11:27:22</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2019/Nov/27 11:27:22</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">2019/11/27 11:27:22</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">19/ November/27 11:27:22</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">19/11/27 11:27:22</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2122,11 +2006,11 @@ What would you insert instead ??? so that the program checks for even numbers?
 ![](../../assets/pcap_exam/image_rsrcFAW.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>x % 1 == 2</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>x % ‘even’ == True</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>x % x == 0</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>x % 2 == 0</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>x % 2 == 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">x % 1 == 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">x % ‘even’ == True</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">x % x == 0</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">x % 2 == 0</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">x % 2 == 1</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2158,10 +2042,10 @@ What will be the output of the following code snippet?
 ![](../../assets/pcap_exam/image_rsrcFAZ.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>[ 8, 9 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>[ 1, 2]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>[ 1, 2, 3 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>[ 1, 3, 5, 7, 9 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ 8, 9 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ 1, 2]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">[ 1, 2, 3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">[ 1, 3, 5, 7, 9 ]</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2195,10 +2079,10 @@ The third value (the step) is 2 therefore every second element gets taken.
 You need to find out if a hardware platform utilizes the x86 or armCPU. Which method from the module platform can you use? (Select two answers.)
 
 <div class="pcap-options" data-answer="B,C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | hardware()</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | platform()</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | processor()</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | node()</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | hardware()</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | platform()</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | processor()</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | node()</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2246,10 +2130,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFB4.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2278,49 +2162,18 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcFB7.jpg)
 
-1 | 0
-
-2 | 2
-
-3 | 4
-
-4 | 6
-
-5 | 8
-
-<!-- page_82 -->
-
-D.
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="B">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ 1, 3, 5, 7, 9 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ 0, 2, 4, 6, 8 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | 0<br>2 | 2<br>3 | 4<br>4 | 6<br>5 | 8</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-What is the expected output of the following code?
-
-![](../../assets/pcap_exam/image_rsrcFB7.jpg)
-
-1 | 0
-
-2 | 2
-
-3 | 4
-
-4 | 6
-
-5 | 8
-
-<!-- page_82 -->
-
-D.
 
 **Answer: B.**
 
@@ -2340,39 +2193,18 @@ This list comprehension will iterate through range(5) add each number to itself 
 
 Which of the following snippets outputs 123 to the screen?
 
-1 | tmp = list (“321”)
-
-2 | tmp.sort ()
-
-3 | print (‘ ‘ .join(tmp))
-
-1 | tmp = “321” .sort()
-
-2 | print(str(tmp) )
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="A,B">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | tmp = list (“321”)<br>2 | tmp.sort ()<br>3 | print (‘ ‘ .join(tmp))</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | print (‘ ‘.join (sorted(“ 321” ) ) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | print(sorted(“321” ) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | tmp = “321” .sort()<br>2 | print(str(tmp) )</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-Which of the following snippets outputs 123 to the screen?
-
-1 | tmp = list (“321”)
-
-2 | tmp.sort ()
-
-3 | print (‘ ‘ .join(tmp))
-
-1 | tmp = “321” .sort()
-
-2 | print(str(tmp) )
 
 **Answer:A, B.**
 
@@ -2393,11 +2225,11 @@ Topics:
 What is the default return value for a function that does not explicitly return any value?
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>void</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>int</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>public</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>None</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>Null</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">void</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">int</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">public</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">Null</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2429,10 +2261,10 @@ The same happens if there is no value after the keyword return
 A subclass is usually:
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>More general than its superclass.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>A twin of its superclass.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>More specialized than its superclass.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>None of the above</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">More general than its superclass.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">A twin of its superclass.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">More specialized than its superclass.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2463,45 +2295,18 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcFBG.jpg)
 
-1 | 23
-
-2 | 42
-
-<!-- page_86 -->
-
-B.
-
-1 | 42
-
-2 | 23
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="A">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | 23<br>2 | 42</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">23</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">42</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | 42<br>2 | 23</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-What is the expected output of the following code?
-
-![](../../assets/pcap_exam/image_rsrcFBG.jpg)
-
-1 | 23
-
-2 | 42
-
-<!-- page_86 -->
-
-B.
-
-1 | 42
-
-2 | 23
 
 **Answer: A.**
 
@@ -2524,10 +2329,10 @@ Select the true statements. Choose two.
 <!-- page_87 -->
 
 <div class="pcap-options" data-answer="B,D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The version function from the platform module returns a string with your Python version.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The version function from the platform module returns a string with your OS version.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>The processor function from the platform module returns an integer with the number of processes currently running in your OS.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>The system function from the platform module returns a string with your OS name.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The version function from the platform module returns a string with your Python version.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The version function from the platform module returns a string with your OS version.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">The processor function from the platform module returns an integer with the number of processes currently running in your OS.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The system function from the platform module returns a string with your OS name.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2555,10 +2360,10 @@ Yes, the system function returns a string with your OS name and the version func
 Entering the try: block implies that:
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>none of the instructions from this block will be executed.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>some of the instructions from this block may not be executed.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>all of the instructions from this block will be executed.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>the block will be omitted.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">none of the instructions from this block will be executed.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">some of the instructions from this block may not be executed.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">all of the instructions from this block will be executed.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">the block will be omitted.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2590,10 +2395,10 @@ You want to write a code snippet to read the total data from a text file and pri
 ![](../../assets/pcap_exam/image_rsrcFBR.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>data = file.load()</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>data = file.readline()</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>data = file.read()</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>data = file.readlines()</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">data = file.load()</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">data = file.readline()</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">data = file.read()</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">data = file.readlines()</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2625,10 +2430,10 @@ The readline() method only reads one line. The readlines() method also reads the
 Which of the following are valid Python string literals? (Select two answers.)
 
 <div class="pcap-options" data-answer="A,D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | “ “ “ The knights Who Say ‘ Ni! ‘ “ “ “</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | ‘All the king’s horses’</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | “\”</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | “king’s Cross Station”</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | “ “ “ The knights Who Say ‘ Ni! ‘ “ “ “</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | ‘All the king’s horses’</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | “\”</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | “king’s Cross Station”</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2660,10 +2465,10 @@ And a single quote can be used in a multi-line string delimited by triple double
 Which method is used to break the connection between the file handle and a physical file?
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>disconnect()</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>shutup()</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>lock()</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>close()</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">disconnect()</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">shutup()</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">lock()</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">close()</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2697,10 +2502,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFBY.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>[ 3 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>[ 2 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>[ 1 ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>[ ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ 3 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ 2 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">[ 1 ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">[ ]</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2732,10 +2537,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFC1.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1*1*1</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>x y z</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 1 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1*1*1</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">x y z</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 1 1</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2767,10 +2572,10 @@ What value will be assigned to the x variable?
 ![](../../assets/pcap_exam/image_rsrcFC4.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>True</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>False</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>0</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">True</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">False</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">0</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2808,10 +2613,10 @@ Consider the following file module.py.
 What will be the output, if you run it?
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>_module_</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>_main_</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>main</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>module</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">_module_</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">_main_</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">main</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">module</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2847,10 +2652,10 @@ What happens if you run the following code, assuming that the d directory alread
 ![](../../assets/pcap_exam/image_rsrcFCA.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>A DirectoryExistsError exception will be raised.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>Python will overwrite the existing directory.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>A FileExistsError exception will be raised.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>All of the above.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">A DirectoryExistsError exception will be raised.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">Python will overwrite the existing directory.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">A FileExistsError exception will be raised.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">All of the above.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2884,10 +2689,10 @@ https://docs.python.org/3/library/os.html#os.mkdir
 The value thirty point eleven times ten raised to the power of nine should be written as:
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>30.11E9.0</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>30E11.9</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>30.11E9</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>30.11*10^9</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">30.11E9.0</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">30E11.9</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">30.11E9</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">30.11*10^9</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2919,10 +2724,10 @@ What is the output of the following program if the user enters kangaroo at the f
 ![](../../assets/pcap_exam/image_rsrcFCF.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | Wrong value</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | Do not divide by zero!</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | 4.0</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | Error.Error.Error.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | Wrong value</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | Do not divide by zero!</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | 4.0</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | Error.Error.Error.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -2957,61 +2762,18 @@ Which of the following for loops would output the below number pattern?
 
 ![](../../assets/pcap_exam/image_rsrcFCJ.jpg)
 
-1 | for i in range(1, 6)
-
-2 | print(i, i, i, i, i )
-
-<!-- page_99 -->
-
-B.
-
-1 | for i in range(1, 6):
-
-2 | print(str(i) *5 )
-
-1 | for i in range(0, 5):
-
-2 | print(str(i) * 5)
-
-1 | for i in range(1, 5)
-
-2 | print(str(i) * 5)
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="B">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | for i in range(1, 6)<br>2 | print(i, i, i, i, i )</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | for i in range(1, 6):<br>2 | print(str(i) *5 )</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | for i in range(0, 5):<br>2 | print(str(i) * 5)</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | for i in range(1, 5)<br>2 | print(str(i) * 5)</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-Which of the following for loops would output the below number pattern?
-
-![](../../assets/pcap_exam/image_rsrcFCJ.jpg)
-
-1 | for i in range(1, 6)
-
-2 | print(i, i, i, i, i )
-
-<!-- page_99 -->
-
-B.
-
-1 | for i in range(1, 6):
-
-2 | print(str(i) *5 )
-
-1 | for i in range(0, 5):
-
-2 | print(str(i) * 5)
-
-1 | for i in range(1, 5)
-
-2 | print(str(i) * 5)
 
 **Answer: B.**
 
@@ -3048,10 +2810,10 @@ Assuming that the open() invocation has gone successfully, the following snippet
 ![](../../assets/pcap_exam/image_rsrcFCR.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>read the whole file at once.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>cause an exception.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>read the file line by line.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>read the file character by character.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">read the whole file at once.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">cause an exception.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">read the file line by line.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">read the file character by character.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3082,55 +2844,18 @@ Given the code below, indicate a method which will correctly provide the value o
 
 ![](../../assets/pcap_exam/image_rsrcFCU.jpg)
 
-1 | def get( ):
-
-2 | return rack
-
-1 | def get (self):
-
-2 | return self.rack
-
-1 | def get(self):
-
-2 | return rack
-
-1 | def get( ):
-
-2 | return self.rack
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="B">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | def get( ):<br>2 | return rack</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | def get (self):<br>2 | return self.rack</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | def get(self):<br>2 | return rack</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | def get( ):<br>2 | return self.rack</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-Given the code below, indicate a method which will correctly provide the value of the rack field?
-
-<!-- page_102 -->
-
-![](../../assets/pcap_exam/image_rsrcFCU.jpg)
-
-1 | def get( ):
-
-2 | return rack
-
-1 | def get (self):
-
-2 | return self.rack
-
-1 | def get(self):
-
-2 | return rack
-
-1 | def get( ):
-
-2 | return self.rack
 
 **Answer: B.**
 
@@ -3152,75 +2877,18 @@ The object method needs to have the object reference self as a parameter and the
 
 A function named f() is included in a module named m and the module is part of a package named p. Which of the following code snippets allows you to properly invoke the function? (Select two answers.)
 
-1 | from p.m import f
-
-2 |
-
-3 | f ( )
-
-1 | import p.m
-
-2 |
-
-3 | p.m.f( )
-
-1 | import p.m.f
-
-2 |
-
-3 | f( )
-
-<!-- page_104 -->
-
-D.
-
-1 | import p
-
-2 |
-
-3 | m.f( )
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="A,B">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | from p.m import f<br>2 |<br>3 | f ( )</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | import p.m<br>2 |<br>3 | p.m.f( )</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | import p.m.f<br>2 |<br>3 | f( )</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | import p<br>2 |<br>3 | m.f( )</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-A function named f() is included in a module named m and the module is part of a package named p. Which of the following code snippets allows you to properly invoke the function? (Select two answers.)
-
-1 | from p.m import f
-
-2 |
-
-3 | f ( )
-
-1 | import p.m
-
-2 |
-
-3 | p.m.f( )
-
-1 | import p.m.f
-
-2 |
-
-3 | f( )
-
-<!-- page_104 -->
-
-D.
-
-1 | import p
-
-2 |
-
-3 | m.f( )
 
 **Answer: A, B.**
 
@@ -3247,10 +2915,10 @@ You develop a Python application for your company. You have the following code.
 Which of the following expressions is equivalent to the expression in the function?
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>(a + b ) * ( c - d )</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>A + ( ( b * c ) - d )</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>None of the above</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>(a + (b * c ) ) - d</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">(a + b ) * ( c - d )</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">A + ( ( b * c ) - d )</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">None of the above</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">(a + (b * c ) ) - d</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3292,11 +2960,11 @@ What is the expected behavior of the following snippet?
 It will:
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>print 6</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>print 8</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>cause a runtime exception on Line 8</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>cause a runtime exception on Line 9</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>print 4</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">print 6</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">print 8</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">cause a runtime exception on Line 8</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">cause a runtime exception on Line 9</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">print 4</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3342,11 +3010,11 @@ What is the output of the following code snippet?
 <!-- page_108 -->
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 3</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>3 2</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>3 3</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>2 3</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 3</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">3 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">3 3</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">2 3</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3378,11 +3046,11 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFD8.jpg)
 
 <div class="pcap-options" data-answer="E">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>False</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>True</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">False</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">True</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3424,11 +3092,11 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFDB.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2 0</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>4 0</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>3 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>4 1</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>3 0</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2 0</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">4 0</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">3 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">4 1</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">3 0</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3464,10 +3132,10 @@ The method func() will be from the class B because the function from A with the 
 Which of the following expressions evaluates to True and raises no exception?
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | 10 != ‘1’ + ‘0’</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | ‘Al’ * 2 != 2 * ‘Al’</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | 9’ * 3 &gt; ‘9’ * 9</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | ‘9’ * 1 &lt; 1 * 2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | 10 != ‘1’ + ‘0’</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | ‘Al’ * 2 != 2 * ‘Al’</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | 9’ * 3 &gt; ‘9’ * 9</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | ‘9’ * 1 &lt; 1 * 2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3497,10 +3165,10 @@ What is the correct command to shuffle the following list?
 ![](../../assets/pcap_exam/image_rsrcFDG.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>shuffle(people)</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>people.shuffle( )</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>random,shuffle(people)</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>random.shuffleList(people)</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">shuffle(people)</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">people.shuffle( )</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">random,shuffle(people)</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">random.shuffleList(people)</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3532,10 +3200,10 @@ What is the expected behavior of the following snippet?
 ![](../../assets/pcap_exam/image_rsrcFDK.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>It outputs anonymous</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>It raises an exception.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>It outputs an empty line.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>It outputs Alpha</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">It outputs anonymous</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">It raises an exception.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">It outputs an empty line.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">It outputs Alpha</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3565,10 +3233,10 @@ Class A will override the get_ID() method of its superclass Team and therefore t
 Which of the following variables will Python consider to be private?
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | privatedata_</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | _privatedata</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | _privatedata_</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | private_data</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | privatedata_</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | _privatedata</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | _privatedata_</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | private_data</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3598,10 +3266,10 @@ If you want Python to treat your variable as private, you should start its name 
 The 0o prefix means that the number after it is denoted as:
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>binary</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>octal</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>decimal</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>hexadecimal</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">binary</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">octal</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">decimal</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">hexadecimal</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3633,10 +3301,10 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFDU.jpg)
 
 <div class="pcap-options" data-answer="B">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>The code is erroneous.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>None</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>2</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">The code is erroneous.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">None</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">2</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3674,11 +3342,11 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFDX.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>[ ‘ h ‘ , ‘ e ‘ , ‘ l ‘ , ‘ o ‘ ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>[ h, e, l, l ,o ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>[ ‘ h ‘ ‘ e’ ‘ l ‘ ‘ l ‘ ‘ o ‘ ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>None of the above.</span></label>
-<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span>hello</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ ‘ h ‘ , ‘ e ‘ , ‘ l ‘ , ‘ o ‘ ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ h, e, l, l ,o ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">[ ‘ h ‘ ‘ e’ ‘ l ‘ ‘ l ‘ ‘ o ‘ ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above.</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">hello</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3706,10 +3374,10 @@ A string is a sequence of characters and works very fine with the list() functio
 The system that allows you to diagnose input/output errors in Python is called:
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>1 | error_number</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>1 | error_string</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1 | errno</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>1 | errcode</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | error_number</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | error_string</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | errno</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | errcode</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3742,99 +3410,20 @@ The ABC organics company needs a simple program that their call center will use 
 
 What should you insert instead of XXX, YYY and ZZZ?
 
-1 | XXX - > float( input( ‘Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > printline( ‘ The average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format(average, ‘.2f’ ) )
-
-1 | XXX - > float(input( ‘Enter next rating (1-5) , -1 for done’ ) )
-
-<!-- page_121 -->
-
-2 | YYY - > print(‘ The average star rating for the new coffee is:
-
-3 | ZZZ - > format(average, ‘ .2d’ ) )
-
-1 | XXX - > float(input(‘Enter next rating (1-5), -1 for done’) )
-
-2 | YYY - > print(‘ the average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format(average, ‘.2f’ ) )
-
-1 | XXX - > input(input(‘ Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > print(‘ The average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format(average, ‘.2d’ ) )
-
-1 | XXX - > float(input(‘Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > output(‘ The average star rating for the new coffee is : ‘
-
-3 | ZZZ - > format(average, ‘.2d’) )
-
-1 | XXX - > print(input(‘ Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > print(‘ The average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format( average, ‘.2f’ ) )
-
-!!! warning "Hinweis"
-
-    Bei dieser Frage wurden die Antwortoptionen nicht sauber als Liste erkannt.
-
-
-
-<button type="button" class="pcap-reveal">Lösung anzeigen</button>
+<div class="pcap-options" data-answer="C">
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | XXX - &gt; float( input( ‘Enter next rating (1-5), -1 for done’ ) )<br>2 | YYY - &gt; printline( ‘ The average star rating for the new coffee is: ‘<br>3 | ZZZ - &gt; format(average, ‘.2f’ ) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | XXX - &gt; float(input( ‘Enter next rating (1-5) , -1 for done’ ) )<br>2 | YYY - &gt; print(‘ The average star rating for the new coffee is:<br>3 | ZZZ - &gt; format(average, ‘ .2d’ ) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | XXX - &gt; float(input(‘Enter next rating (1-5), -1 for done’) )<br>2 | YYY - &gt; print(‘ the average star rating for the new coffee is: ‘<br>3 | ZZZ - &gt; format(average, ‘.2f’ ) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | XXX - &gt; input(input(‘ Enter next rating (1-5), -1 for done’ ) )<br>2 | YYY - &gt; print(‘ The average star rating for the new coffee is: ‘<br>3 | ZZZ - &gt; format(average, ‘.2d’ ) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">1 | XXX - &gt; float(input(‘Enter next rating (1-5), -1 for done’ ) )<br>2 | YYY - &gt; output(‘ The average star rating for the new coffee is : ‘<br>3 | ZZZ - &gt; format(average, ‘.2d’) )</span></label>
+<label class="pcap-option"><input type="checkbox" value="F"> <span class="pcap-option-letter">F.</span> <span class="pcap-option-text">1 | XXX - &gt; print(input(‘ Enter next rating (1-5), -1 for done’ ) )<br>2 | YYY - &gt; print(‘ The average star rating for the new coffee is: ‘<br>3 | ZZZ - &gt; format( average, ‘.2f’ ) )</span></label>
+<button type="button" class="pcap-check">Antwort prüfen</button>
+<p class="pcap-feedback" aria-live="polite"></p>
+</div>
 
 <details class="pcap-solution" hidden markdown="1">
 
 <summary>Lösung und Erklärung</summary>
-
-The ABC organics company needs a simple program that their call center will use to enter survey data for a new coffee variety. The program must accept input and return the average rating based on a five-star scale. The output must be rounded to two decimal places. You need to complete the code to meet the requirements.
-
-![](../../assets/pcap_exam/image_rsrcFE1.jpg)
-
-What should you insert instead of XXX, YYY and ZZZ?
-
-1 | XXX - > float( input( ‘Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > printline( ‘ The average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format(average, ‘.2f’ ) )
-
-1 | XXX - > float(input( ‘Enter next rating (1-5) , -1 for done’ ) )
-
-<!-- page_121 -->
-
-2 | YYY - > print(‘ The average star rating for the new coffee is:
-
-3 | ZZZ - > format(average, ‘ .2d’ ) )
-
-1 | XXX - > float(input(‘Enter next rating (1-5), -1 for done’) )
-
-2 | YYY - > print(‘ the average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format(average, ‘.2f’ ) )
-
-1 | XXX - > input(input(‘ Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > print(‘ The average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format(average, ‘.2d’ ) )
-
-1 | XXX - > float(input(‘Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > output(‘ The average star rating for the new coffee is : ‘
-
-3 | ZZZ - > format(average, ‘.2d’) )
-
-1 | XXX - > print(input(‘ Enter next rating (1-5), -1 for done’ ) )
-
-2 | YYY - > print(‘ The average star rating for the new coffee is: ‘
-
-3 | ZZZ - > format( average, ‘.2f’ ) )
 
 **Answer: C.**
 
@@ -3865,10 +3454,10 @@ What is the expected output of the following code?
 <!-- page_123 -->
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>17</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>8</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>8.5</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>17.5</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">17</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">8</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">8.5</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">17.5</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3900,10 +3489,10 @@ The operators here come from three different groups:
 The part of your code where you think an exception may occur should be placed inside:
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>the try: branch</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>the except: branch</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>the exception: branch</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>None of the above</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">the try: branch</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">the except: branch</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">the exception: branch</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3935,10 +3524,10 @@ How many stars will the following code print to the monitor?
 ![](../../assets/pcap_exam/image_rsrcFE9.jpg)
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>one</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>three</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>zero</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>two</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">one</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">three</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">zero</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">two</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -3974,10 +3563,10 @@ i is 4 and therefore 4 <= 3 is False what ends the while loop.
 When a module is imported, its contents:
 
 <div class="pcap-options" data-answer="D">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>are executed depending on the contents.</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>are executed as many times as they are imported.</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>are ignored.</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>are executed once.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">are executed depending on the contents.</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">are executed as many times as they are imported.</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">are ignored.</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">are executed once.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -4009,10 +3598,10 @@ What is the expected output of the following code?
 <!-- page_127 -->
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2222222222</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>Syntax Error</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1024</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>4201</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2222222222</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">Syntax Error</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1024</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">4201</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>
@@ -4044,10 +3633,10 @@ How many stars will the following snippet print to the monitor?
 ![](../../assets/pcap_exam/image_rsrcFEH.jpg)
 
 <div class="pcap-options" data-answer="C">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span>2</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span>0</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span>1</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span>The snippet will enter an infinite loop.</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">2</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">0</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">The snippet will enter an infinite loop.</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>

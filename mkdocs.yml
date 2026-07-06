@@ -118,6 +118,8 @@ nav:
 
   - PCAP:
       - Überblick: content/pcap/index.md
+      - Testexam 1: content/pcap/testexam_1.md
+      - Testexam 2: content/pcap/testexam_2.md
 
 theme:
   name: material

@@ -96,7 +96,7 @@ hide:
 
 - [ :material-refresh: Wiederholung Woche 8 ](content/wiederholung_woche8/index.md)
 - [ :material-alpha-a-box: Prüfungsvorbereitung PCAP ](content/pcap/index.md)
-- [ :material-alpha-e-box: Prüfungsvorbereitung PCEP ](content/pcep/index.md)
+- [ :material-alpha-e-box: PCEP ](content/pcep/index.md)
 
 </div>
 </div>

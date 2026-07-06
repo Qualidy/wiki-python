@@ -107,14 +107,17 @@ nav:
   - Wiederholung Woche 8:
       - Übersicht: content/wiederholung_woche8/index.md
       - Scope und Closure: content/wiederholung_woche8/scope_closure.md
-      - bytearray: content/wiederholung_woche8/bytearray.md
       - map, filter und lambda: content/wiederholung_woche8/map_filter_lambda.md
+      - bytearray: content/wiederholung_woche8/bytearray.md
       - chr und ord: content/wiederholung_woche8/chr_ord.md
       - Listen, Slices und Sortieren: content/wiederholung_woche8/listen_slices_sortieren.md
       - super() in Klassen: content/wiederholung_woche8/super_init_methoden.md
       - Eigene Exceptions: content/wiederholung_woche8/eigene_exceptions.md
       - Generatoren: content/wiederholung_woche8/generatoren.md
       - Dateien lesen und schreiben: content/wiederholung_woche8/dateien.md
+
+  - PCEP:
+      - Überblick: content/pcep/index.md
 
   - PCAP:
       - Überblick: content/pcap/index.md

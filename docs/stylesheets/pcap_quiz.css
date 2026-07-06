@@ -1,0 +1,68 @@
+.pcap-options {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.pcap-option {
+  align-items: flex-start;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.55rem;
+  padding: 0.65rem 0.75rem;
+}
+
+.pcap-option:hover {
+  border-color: var(--md-accent-fg-color);
+}
+
+.pcap-option input {
+  margin-top: 0.25rem;
+}
+
+.pcap-option-letter {
+  font-weight: 700;
+  min-width: 1.5rem;
+}
+
+.pcap-check,
+.pcap-reveal {
+  background: var(--md-accent-fg-color);
+  border: 0;
+  border-radius: 0.35rem;
+  color: var(--md-accent-bg-color);
+  cursor: pointer;
+  font: inherit;
+  justify-self: start;
+  padding: 0.45rem 0.8rem;
+}
+
+.pcap-check:hover,
+.pcap-reveal:hover {
+  filter: brightness(0.95);
+}
+
+.pcap-feedback {
+  font-weight: 700;
+  margin: 0;
+}
+
+.pcap-feedback.is-correct {
+  color: #2e7d32;
+}
+
+.pcap-feedback.is-wrong {
+  color: #b3261e;
+}
+
+.pcap-solution {
+  border-left: 0.2rem solid var(--md-accent-fg-color);
+  margin: 1rem 0 2rem;
+  padding-left: 1rem;
+}
+
+.pcap-solution[hidden] {
+  display: none;
+}

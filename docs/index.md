@@ -77,7 +77,6 @@ hide:
 <div class="grid cards fancy" markdown>
 
 - [ :material-refresh: Wiederholung ](content/wiederholung/index.md)
-- [ :material-test-tube: Projekt 1 ](){ .disabled }
 
 </div>
 
@@ -87,6 +86,7 @@ hide:
 
 - [ :material-function-variant: Funktionen Fortgeschritten ](content/funktionen_fortgeschritten/rekursion/rekursion.md)
 - [ :material-generator-portable: Generatoren & Dekoratoren ](content/funktionen_fortgeschritten/generatoren/generatoren.md)
+- [ :material-web: Projekt Web Scraping ](content/projekt_webscraping/index.md)
 
 </div>
 
@@ -94,8 +94,8 @@ hide:
 
 <div class="grid cards fancy" markdown>
 
-- [ :material-alpha-e-box: Prüfungsvorbereitung PCEP ](){ .disabled }
-- [ :material-alpha-a-box: Prüfungsvorbereitung PCAP ](){ .disabled }
+- [ :material-refresh: Wiederholung Woche 8 ](content/wiederholung_woche8/index.md)
+- [ :material-alpha-a-box: Prüfungsvorbereitung PCAP ](content/pcap/index.md)
 
 </div>
 </div>

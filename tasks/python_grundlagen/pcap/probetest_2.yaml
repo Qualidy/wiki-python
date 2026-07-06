@@ -1,0 +1,212 @@
+title: "PCAP Probetest 2"
+description: "Zweiter Schwachstellen-Probetest mit kombinierten Codebeispielen."
+questions:
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      x = "global"
+
+      def outer():
+          x = "outer"
+          def inner():
+              nonlocal x
+              x = "inner"
+          inner()
+          return x
+
+      print(outer())
+      print(x)
+    answer: |
+      inner
+      global
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      values = [10, 20, 30, 40]
+      print(values[-3:-1])
+      print(values[::-1])
+    answer: |
+      [20, 30]
+      [40, 30, 20, 10]
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      words = ["aa", "b", "cccc"]
+      words.sort(key=len)
+      print(words)
+    answer: |
+      ['b', 'aa', 'cccc']
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      result = list(map(lambda x: x + 10, filter(lambda x: x > 1, [0, 1, 2, 3])))
+      print(result)
+    answer: |
+      [12, 13]
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      print(ord(chr(120)))
+    answer: |
+      120
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      data = bytearray([65, 66])
+      data.append(67)
+      print(data)
+      print(data[0])
+    answer: |
+      bytearray(b'ABC')
+      65
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      def numbers():
+          for i in range(3):
+              yield i
+
+      g = numbers()
+      print(list(g))
+      print(list(g))
+    answer: |
+      [0, 1, 2]
+      []
+    explanation: "Der Generator ist nach dem ersten list(g) verbraucht."
+  - type: single
+    prompt: "Welche Methode wird durch super().close() in einer Unterklasse typischerweise gesucht?"
+    answer: "next_mro"
+    options:
+      - label: "Die naechste passende Methode in der MRO."
+        value: "next_mro"
+      - label: "Immer eine Methode der Klasse object, egal was definiert wurde."
+        value: "object"
+      - label: "Immer dieselbe Methode der Unterklasse."
+        value: "same"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class Base:
+          def show(self):
+              print("Base")
+
+      class Child(Base):
+          def show(self):
+              print("Child")
+              super().show()
+
+      Child().show()
+    answer: |
+      Child
+      Base
+  - type: single
+    prompt: "Welche Aussage zu eigenen Exceptions ist am sinnvollsten?"
+    answer: "specific"
+    options:
+      - label: "Eigene Exceptions machen Fehlerfaelle ausdruecklicher."
+        value: "specific"
+      - label: "Eigene Exceptions duerfen nie von Exception erben."
+        value: "no_exception"
+      - label: "Eigene Exceptions verhindern alle Laufzeitfehler."
+        value: "prevent"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      class MyError(Exception):
+          pass
+
+      try:
+          raise MyError("problem")
+      except MyError as error:
+          print(type(error).__name__)
+    answer: |
+      MyError
+  - type: single
+    prompt: "Was ist der Vorteil von with open(...) as file?"
+    answer: "close"
+    options:
+      - label: "Die Datei wird automatisch geschlossen."
+        value: "close"
+      - label: "Die Datei wird nie geoeffnet."
+        value: "never"
+      - label: "Der Inhalt wird automatisch sortiert."
+        value: "sort"
+  - type: single
+    prompt: "Welcher Modus haengt Text an eine vorhandene Datei an?"
+    answer: "a"
+    options:
+      - label: "'a'"
+        value: "a"
+      - label: "'w'"
+        value: "w"
+      - label: "'r'"
+        value: "r"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      def make_power(exp):
+          def power(base):
+              return base ** exp
+          return power
+
+      square = make_power(2)
+      print(square(5))
+    answer: |
+      25
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      values = [3, 1, 2]
+      print(sorted(values))
+      print(values)
+    answer: |
+      [1, 2, 3]
+      [3, 1, 2]
+  - type: single
+    prompt: "Welche Aussage zu map() ist richtig?"
+    answer: "iterator"
+    options:
+      - label: "map() liefert einen Iterator."
+        value: "iterator"
+      - label: "map() veraendert die Originalliste immer."
+        value: "mutates"
+      - label: "map() funktioniert nur mit Strings."
+        value: "strings"
+  - type: single
+    prompt: "Welche Aussage zu filter() ist richtig?"
+    answer: "truthy"
+    options:
+      - label: "filter() behaelt Elemente, fuer die die Funktion truthy ist."
+        value: "truthy"
+      - label: "filter() sortiert Elemente."
+        value: "sort"
+      - label: "filter() wandelt immer in int um."
+        value: "int"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      print(list(filter(None, [0, 1, "", "x", [], [2]])))
+    answer: |
+      [1, 'x', [2]]
+  - type: single
+    prompt: "Warum ist bytearray(b'abc')[0] kein String?"
+    answer: "int"
+    options:
+      - label: "Ein einzelnes bytearray-Element ist ein int."
+        value: "int"
+      - label: "bytearray speichert nur floats."
+        value: "float"
+      - label: "b'abc' ist leer."
+        value: "empty"
+  - type: output
+    prompt: "Welche Ausgabe erzeugt der Code?"
+    code: |
+      try:
+          1 / 0
+      except ZeroDivisionError:
+          print("zero")
+      finally:
+          print("done")
+    answer: |
+      zero
+      done

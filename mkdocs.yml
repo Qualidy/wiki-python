@@ -104,44 +104,20 @@ nav:
       - CSS-Selektoren: content/projekt_webscraping/03_css_selektoren.md
       - Projektaufgabe - Zitat-Scraper: content/projekt_webscraping/04_projekt_scraper.md
 
-#  - Referenzmaterial:
-#      - Exkurs - Regex: content/referenzmaterial/regex/regex.md
-#      - Exkurs - Rekursion: content/referenzmaterial/recursion/recursion.md
-#      - Exkurs - Sortieralgorithmen: content/referenzmaterial/sorting_algorithms/sorting_algorithms.md
-#      - Bytecode: content/referenzmaterial/bytecode/bytecode.md
-#      - Bonusweek (Wordle):
-#          - Tag 1: content/referenzmaterial/bonusweek/tag_1.md
-#          - Tag 2: content/referenzmaterial/bonusweek/tag_2.md
-#          - Tag 3: content/referenzmaterial/bonusweek/tag_3.md
-#          - Tag 4: content/referenzmaterial/bonusweek/tag_4.md
-#          - Tag 5: content/referenzmaterial/bonusweek/tag_5.md
-#
-#  - Begriffssammlung:
-#      - Python Grundlagen: content/begriffe/begriffe_1.md
-#      - git: content/begriffe/begriffe_git.md
-#      - Clean Code: content/begriffe/begriffe_clean_code.md
-#      - SQL-Datenbanken: content/begriffe/begriffe_db1.md
-#      - Python und SQL: content/begriffe/begriffe_db_python.md
-#      - Web: content/begriffe/begriffe_web.md
-#      - Azure: content/begriffe/begriffe_azure.md
-#      - Docker: content/begriffe/begriffe_docker.md
-#      - NoSQL-Datenbanken: content/begriffe/begriffe_db2.md
-#      - Datenverarbeitung und -darstellung: content/begriffe/begriffe_data_science.md
-#      - Python Fortgeschritten: content/begriffe/begriffe_python_advanced.md
-#      - Robotik: content/begriffe/begriffe_robotik.md
-#  - Checklisten:
-#      - Python Grundlagen: content/checklists/checklist_1.md
-#      - git: content/checklists/checklist_git.md
-#      - Clean Code: content/checklists/checklist_clean_code.md
-#      - SQL-Datenbanken: content/checklists/checklist_db1.md
-#      - Python und SQL: content/checklists/checklist_db_python.md
-#      - Web: content/checklists/checklist_web.md
-#      - Azure: content/checklists/checklist_azure.md
-#      - Docker: content/checklists/checklist_docker.md
-#      - NoSQL-Datenbanken: content/checklists/checklist_db2.md
-#      - Datenverarbeitung und -darstellung: content/checklists/checklist_data_science.md
-#      - Python Fortgeschritten: content/checklists/checklist_python_advanced.md
-#      - Robotik: content/checklists/checklist_robotik.md
+  - Wiederholung Woche 8:
+      - Übersicht: content/wiederholung_woche8/index.md
+      - Scope und Closure: content/wiederholung_woche8/scope_closure.md
+      - bytearray: content/wiederholung_woche8/bytearray.md
+      - map, filter und lambda: content/wiederholung_woche8/map_filter_lambda.md
+      - chr und ord: content/wiederholung_woche8/chr_ord.md
+      - Listen, Slices und Sortieren: content/wiederholung_woche8/listen_slices_sortieren.md
+      - super() in Klassen: content/wiederholung_woche8/super_init_methoden.md
+      - Eigene Exceptions: content/wiederholung_woche8/eigene_exceptions.md
+      - Generatoren: content/wiederholung_woche8/generatoren.md
+      - Dateien lesen und schreiben: content/wiederholung_woche8/dateien.md
+
+  - PCAP:
+      - Überblick: content/pcap/index.md
 
 theme:
   name: material
@@ -190,9 +166,11 @@ extra_css:
   - stylesheets/video_admonition.css
   - stylesheets/python_tutor_admonition.css
   - stylesheets/mermaid.css
+  - stylesheets/pcap_quiz.css
 
 extra_javascript:
   - javascripts/mathjax.js
+  - javascripts/pcap_quiz.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:

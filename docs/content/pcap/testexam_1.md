@@ -3373,7 +3373,7 @@ A string is a sequence of characters and works very fine with the list() functio
 
 The system that allows you to diagnose input/output errors in Python is called:
 
-<div class="pcap-options" data-answer="D">
+<div class="pcap-options" data-answer="C">
 <label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | error_number</span></label>
 <label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | error_string</span></label>
 <label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | errno</span></label>
@@ -3386,7 +3386,7 @@ The system that allows you to diagnose input/output errors in Python is called:
 
 <summary>Lösung und Erklärung</summary>
 
-**Answer: D.**
+**Answer: C.**
 
 Explanation
 

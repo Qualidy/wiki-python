@@ -1242,9 +1242,9 @@ Which program will produce the following output:
 
 <div class="pcap-options" data-answer="D">
 <label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.week)</span></label>
-<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.week header (3) )</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.week header ( ) )</span></label>
-<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.week header(2 ))</span></label>
+<label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.weekheader(3))</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.weekheader( ))</span></label>
+<label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">1 | import calendar<br>2 | print (calendar.weekheader(2))</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>
 </div>

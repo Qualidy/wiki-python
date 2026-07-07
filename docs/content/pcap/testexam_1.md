@@ -3167,7 +3167,7 @@ What is the correct command to shuffle the following list?
 <div class="pcap-options" data-answer="C">
 <label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">shuffle(people)</span></label>
 <label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">people.shuffle( )</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">random,shuffle(people)</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">random.shuffle(people)</span></label>
 <label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">random.shuffleList(people)</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>
 <p class="pcap-feedback" aria-live="polite"></p>

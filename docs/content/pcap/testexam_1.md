@@ -3342,9 +3342,9 @@ What is the expected output of the following code?
 ![](../../assets/pcap_exam/image_rsrcFDX.jpg)
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">[ ‘ h ‘ , ‘ e ‘ , ‘ l ‘ , ‘ o ‘ ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">['h' ,'e' ,'l' ,'l' ,'o']</span></label>
 <label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">[ h, e, l, l ,o ]</span></label>
-<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">[ ‘ h ‘ ‘ e’ ‘ l ‘ ‘ l ‘ ‘ o ‘ ]</span></label>
+<label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">['h' 'e' 'l' 'l' 'o']</span></label>
 <label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above.</span></label>
 <label class="pcap-option"><input type="checkbox" value="E"> <span class="pcap-option-letter">E.</span> <span class="pcap-option-text">hello</span></label>
 <button type="button" class="pcap-check">Antwort prüfen</button>

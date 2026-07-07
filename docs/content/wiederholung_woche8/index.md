@@ -10,15 +10,10 @@ Diese Seite ist der eigene Wiederholungsbereich für diese Woche. Sie ist bewuss
 | `bytearray` | [`bytearray`](bytearray.md) | Theorie plus Aufgaben |
 | `map()`, `filter()`, `lambda` | [`map`, `filter`, `lambda`](map_filter_lambda.md) | Theorie plus Aufgaben |
 | `chr()` / `ord()` | [`chr` und `ord`](chr_ord.md) | Theorie plus Aufgaben |
+| Operatoren / Precedence | [Operatoren und Precedence](operatoren_precedence.md) | Theorie plus trickreiche Aufgaben |
+| Mutable / Immutable | [Mutable, Immutable und Referenzen](mutable_immutable_referenzen.md) | Theorie plus Quizfragen |
 | Listen: Slices, Sortieren | [Listen, Slices und Sortieren](listen_slices_sortieren.md) | Links zur Theorie plus Aufgaben |
 | `super()` in `__init__` und Methoden | [`super()` in Klassen](super_init_methoden.md) | Links zur Theorie plus Lückencode |
 | Eigene Exceptions | [Eigene Exceptions](eigene_exceptions.md) | Links zur Theorie plus Aufgaben |
 | Generatoren | [Generatoren](generatoren.md) | Links zur Theorie plus Aufgaben |
 | Dateien öffnen, lesen, schreiben | [Dateien lesen und schreiben](dateien.md) | Theorie plus Aufgaben |
-
-## Arbeitsmodus
-
-1. Erst die passende Themenseite lesen.
-2. Aufgaben zuerst ohne Ausführen lösen.
-3. Danach mit Python prüfen und Abweichungen notieren.
-4. Bei falschen Antworten die konkrete Regel dazuschreiben.

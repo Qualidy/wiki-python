@@ -110,6 +110,8 @@ nav:
       - map, filter und lambda: content/wiederholung_woche8/map_filter_lambda.md
       - bytearray: content/wiederholung_woche8/bytearray.md
       - chr und ord: content/wiederholung_woche8/chr_ord.md
+      - Operatoren und Precedence: content/wiederholung_woche8/operatoren_precedence.md
+      - Mutable, Immutable und Referenzen: content/wiederholung_woche8/mutable_immutable_referenzen.md
       - Listen, Slices und Sortieren: content/wiederholung_woche8/listen_slices_sortieren.md
       - super() in Klassen: content/wiederholung_woche8/super_init_methoden.md
       - Eigene Exceptions: content/wiederholung_woche8/eigene_exceptions.md

@@ -818,7 +818,7 @@ Left shift by one, a classic way to double values. Every value goes to the bit o
 The += operator, when applied to strings, performs:
 
 <div class="pcap-options" data-answer="A">
-<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">Concentration</span></label>
+<label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">Concatenation</span></label>
 <label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">Multiplication</span></label>
 <label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">Subtraction</span></label>
 <label class="pcap-option"><input type="checkbox" value="D"> <span class="pcap-option-letter">D.</span> <span class="pcap-option-text">None of the above.</span></label>

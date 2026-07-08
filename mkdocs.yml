@@ -112,6 +112,7 @@ nav:
       - chr und ord: content/wiederholung_woche8/chr_ord.md
       - Operatoren und Precedence: content/wiederholung_woche8/operatoren_precedence.md
       - Mutable, Immutable und Referenzen: content/wiederholung_woche8/mutable_immutable_referenzen.md
+      - Halftime-Quiz Woche 8: content/wiederholung_woche8/quiz_woche8.md
       - Listen, Slices und Sortieren: content/wiederholung_woche8/listen_slices_sortieren.md
       - super() in Klassen: content/wiederholung_woche8/super_init_methoden.md
       - Eigene Exceptions: content/wiederholung_woche8/eigene_exceptions.md

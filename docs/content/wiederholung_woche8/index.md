@@ -12,6 +12,7 @@ Diese Seite ist der eigene Wiederholungsbereich für diese Woche. Sie ist bewuss
 | `chr()` / `ord()` | [`chr` und `ord`](chr_ord.md) | Theorie plus Aufgaben |
 | Operatoren / Precedence | [Operatoren und Precedence](operatoren_precedence.md) | Theorie plus trickreiche Aufgaben |
 | Mutable / Immutable | [Mutable, Immutable und Referenzen](mutable_immutable_referenzen.md) | Theorie plus Quizfragen |
+| Wochenquiz | [Halftime Quiz: Woche 8](quiz_woche8.md) | Abfragen, Output-Fragen und Codelücken |
 | Listen: Slices, Sortieren | [Listen, Slices und Sortieren](listen_slices_sortieren.md) | Links zur Theorie plus Aufgaben |
 | `super()` in `__init__` und Methoden | [`super()` in Klassen](super_init_methoden.md) | Links zur Theorie plus Lückencode |
 | Eigene Exceptions | [Eigene Exceptions](eigene_exceptions.md) | Links zur Theorie plus Aufgaben |

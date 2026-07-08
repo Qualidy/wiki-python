@@ -2105,7 +2105,7 @@ What is the expected output of the following code?
 
 ![](../../assets/pcap_exam/image_rsrcFKM.jpg)
 
-<div class="pcap-options" data-answer="B">
+<div class="pcap-options" data-answer="A">
 <label class="pcap-option"><input type="checkbox" value="A"> <span class="pcap-option-letter">A.</span> <span class="pcap-option-text">1 | Hello<br>2 | WelcomeWelcomeWelcome</span></label>
 <label class="pcap-option"><input type="checkbox" value="B"> <span class="pcap-option-letter">B.</span> <span class="pcap-option-text">1 | Hello<br>2 | Welcome Welcome Welcome</span></label>
 <label class="pcap-option"><input type="checkbox" value="C"> <span class="pcap-option-letter">C.</span> <span class="pcap-option-text">1 | Hello<br>2 | Viewers</span></label>
@@ -2118,7 +2118,7 @@ What is the expected output of the following code?
 
 <summary>Lösung und Erklärung</summary>
 
-**Answer: B.**
+**Answer: A.**
 
 Explanation
 

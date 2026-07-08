@@ -93,12 +93,21 @@ def create_task(title="Aufgabe",
     return result
 
 
-def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
+def create_quiz(
+    title="Quiz",
+    questions=None,
+    description="",
+    collapsed=False,
+    exam_mode=False,
+    duration_minutes=None,
+    passing_score=None,
+):
     questions = questions or []
     quiz_id = f"quiz-{uuid.uuid4().hex}"
     escaped_title = html.escape(title)
     escaped_description = html.escape(description)
     open_attr = "" if collapsed else " open"
+    duration = int(duration_minutes) if duration_minutes else None
 
     result_parts = [
         f'<details class="question"{open_attr}>',
@@ -107,12 +116,36 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
     if description:
         result_parts.append(f'<p>{escaped_description}</p>')
 
-    result_parts.append(f'<form class="interactive-quiz" id="{quiz_id}">')
+    result_parts.append(
+        f'<form class="interactive-quiz" id="{quiz_id}" '
+        f'data-exam-mode="{str(bool(exam_mode)).lower()}"'
+        f'{f" data-duration-minutes=\"{duration}\"" if duration else ""}'
+        f'{f" data-passing-score=\"{passing_score}\"" if passing_score is not None else ""}>'
+    )
+    if exam_mode and duration:
+        result_parts.append(
+            '<div class="quiz-exam-bar">'
+            '<span class="quiz-timer" aria-live="polite">Zeit: --:--</span>'
+            '</div>'
+        )
+
+    def render_option_label(option, fallback):
+        label_text = str(option.get("label", fallback))
+        if option.get("code"):
+            match = re.match(r"^([A-Z]\.\s*)(.*)$", label_text, re.S)
+            if match:
+                prefix = html.escape(match.group(1))
+                body = html.escape(match.group(2)).replace("\n", "<br>")
+                return f'<span class="quiz-option-prefix">{prefix}</span><code>{body}</code>'
+            body = html.escape(label_text).replace("\n", "<br>")
+            return f'<code>{body}</code>'
+
+        return html.escape(label_text).replace("\n", "<br>")
 
     answers = []
     for index, question in enumerate(questions):
         q_type = question.get("type", "text")
-        prompt = html.escape(str(question.get("prompt", "")))
+        prompt = html.escape(str(question.get("prompt", ""))).replace("\n", "<br>")
         code = question.get("code")
         explanation = html.escape(str(question.get("explanation", "")))
         answer = question.get("answer")
@@ -133,12 +166,17 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
             result_parts.append(
                 f'<pre><code>{html.escape(str(code))}</code></pre>'
             )
+        post_prompt = question.get("post_prompt")
+        if post_prompt:
+            result_parts.append(
+                f'<p>{html.escape(str(post_prompt)).replace(chr(10), "<br>")}</p>'
+            )
 
         if q_type == "single":
             for option_index, option in enumerate(options):
                 option_id = f"{q_name}-{option_index}"
                 value = html.escape(str(option.get("value", option.get("label", ""))))
-                label = html.escape(str(option.get("label", value)))
+                label = render_option_label(option, value)
                 result_parts.append(
                     f'<label class="quiz-option" for="{option_id}">'
                     f'<input id="{option_id}" type="radio" name="{q_name}" value="{value}"> '
@@ -148,7 +186,7 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
             for option_index, option in enumerate(options):
                 option_id = f"{q_name}-{option_index}"
                 value = html.escape(str(option.get("value", option.get("label", ""))))
-                label = html.escape(str(option.get("label", value)))
+                label = render_option_label(option, value)
                 result_parts.append(
                     f'<label class="quiz-option" for="{option_id}">'
                     f'<input id="{option_id}" type="checkbox" name="{q_name}" value="{value}"> '
@@ -167,14 +205,16 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
                 f'placeholder="{placeholder}" autocomplete="off">'
             )
 
-        result_parts.append(
-            f'<button type="button" class="md-button quiz-check-one" '
-            f'data-question-index="{index}">Diese Frage prüfen</button>'
-        )
+        if not exam_mode:
+            result_parts.append(
+                f'<button type="button" class="md-button quiz-check-one" '
+                f'data-question-index="{index}">Diese Frage prüfen</button>'
+            )
         result_parts.append('<p class="quiz-feedback" aria-live="polite"></p>')
         result_parts.append('</div>')
 
-    result_parts.append('<button type="button" class="md-button md-button--primary quiz-check">Prüfen</button>')
+    check_label = "Test auswerten" if exam_mode else "Prüfen"
+    result_parts.append(f'<button type="button" class="md-button md-button--primary quiz-check">{check_label}</button>')
     result_parts.append('<button type="reset" class="md-button quiz-reset">Zurücksetzen</button>')
     result_parts.append('<p class="quiz-summary" aria-live="polite"></p>')
     result_parts.append('</form>')
@@ -189,9 +229,31 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
   padding: 0.6rem 0.8rem;
   background: var(--md-code-bg-color);
 }
+.quiz-exam-bar {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 3rem;
+  z-index: 2;
+}
+.quiz-timer {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  font-weight: 700;
+}
 .quiz-option {
   display: block;
   margin: 0.35rem 0;
+}
+.quiz-option-prefix {
+  display: inline-block;
+  min-width: 1.6rem;
+}
+.quiz-option code {
+  white-space: pre-wrap;
+  vertical-align: top;
 }
 .quiz-text-input {
   width: min(100%, 32rem);
@@ -231,6 +293,11 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
   const dataNode = document.getElementById("{quiz_id}-answers");
   if (!form || !dataNode) return;
   const answers = JSON.parse(decodeURIComponent(escape(atob(dataNode.textContent))));
+  const examMode = form.dataset.examMode === "true";
+  const durationMinutes = Number(form.dataset.durationMinutes || 0);
+  const passingScore = form.dataset.passingScore ? Number(form.dataset.passingScore) : null;
+  let finished = false;
+  let timerInterval = null;
 
   function normalize(value) {{
     return String(value ?? "").trim().toLowerCase().replace(/\\s+/g, " ");
@@ -242,7 +309,7 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
     return left.length === right.length && left.every((value, index) => value === right[index]);
   }}
 
-  function checkQuestion(index) {{
+  function checkQuestion(index, reveal = true) {{
     const question = answers[index];
     const name = "{quiz_id}-q" + index;
     const container = form.querySelectorAll(".quiz-question")[index];
@@ -261,15 +328,68 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
       correct = input && validAnswers.some(answer => normalize(input.value) === normalize(answer));
     }}
 
-    if (correct) {{
-      feedback.textContent = "Richtig.";
-      feedback.className = "quiz-feedback correct";
-    }} else {{
-      feedback.textContent = "Noch nicht richtig." + (question.explanation ? " " + question.explanation : "");
-      feedback.className = "quiz-feedback incorrect";
+    if (reveal) {{
+      if (correct) {{
+        feedback.textContent = "Richtig.";
+        feedback.className = "quiz-feedback correct";
+      }} else {{
+        feedback.textContent = "Nicht richtig." + (question.explanation ? " " + question.explanation : "");
+        feedback.className = "quiz-feedback incorrect";
+      }}
     }}
 
     return correct;
+  }}
+
+  function finishQuiz() {{
+    if (finished) return;
+    finished = true;
+    let score = 0;
+    let total = 0;
+
+    answers.forEach(function(question, index) {{
+      total += Number(question.points || 1);
+      if (checkQuestion(index, true)) {{
+        score += Number(question.points || 1);
+      }}
+    }});
+
+    let summary = "Ergebnis: " + score + " von " + total + " Punkten.";
+    if (passingScore !== null) {{
+      summary += score >= passingScore ? " Bestanden." : " Nicht bestanden.";
+    }}
+    form.querySelector(".quiz-summary").textContent = summary;
+    if (examMode) {{
+      form.querySelectorAll("input, textarea, button").forEach(node => {{
+        if (!node.classList.contains("quiz-reset")) node.disabled = true;
+      }});
+    }}
+  }}
+
+  function startTimer() {{
+    if (!examMode || !durationMinutes) return;
+    const timer = form.querySelector(".quiz-timer");
+    if (!timer) return;
+    if (timerInterval) clearInterval(timerInterval);
+    let remaining = durationMinutes * 60;
+    const render = function() {{
+      const minutes = Math.floor(remaining / 60);
+      const seconds = remaining % 60;
+      timer.textContent = "Zeit: " + String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+    }};
+    render();
+    timerInterval = setInterval(function() {{
+      if (finished) {{
+        clearInterval(timerInterval);
+        return;
+      }}
+      remaining -= 1;
+      render();
+      if (remaining <= 0) {{
+        clearInterval(timerInterval);
+        finishQuiz();
+      }}
+    }}, 1000);
   }}
 
   form.querySelectorAll(".quiz-check-one").forEach(button => {{
@@ -281,17 +401,7 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
   }});
 
   form.querySelector(".quiz-check").addEventListener("click", function() {{
-    let score = 0;
-    let total = 0;
-
-    answers.forEach(function(question, index) {{
-      total += Number(question.points || 1);
-      if (checkQuestion(index)) {{
-        score += Number(question.points || 1);
-      }}
-    }});
-
-    form.querySelector(".quiz-summary").textContent = "Ergebnis: " + score + " von " + total + " Punkten.";
+    finishQuiz();
   }});
 
   form.addEventListener("reset", function() {{
@@ -301,8 +411,14 @@ def create_quiz(title="Quiz", questions=None, description="", collapsed=False):
         node.className = "quiz-feedback";
       }});
       form.querySelector(".quiz-summary").textContent = "";
+      finished = false;
+      form.querySelectorAll("input, textarea, button").forEach(node => {{
+        node.disabled = false;
+      }});
+      startTimer();
     }}, 0);
   }});
+  startTimer();
 }})();
 </script>''')
     result_parts.append('</details>')

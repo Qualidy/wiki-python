@@ -1,0 +1,1233 @@
+{
+  "title": "PCAP Testexam 3 (PCAP-31-02)",
+  "description": "Pruefungssimulation mit 40 Fragen, 65 Minuten und Auswertung erst am Ende. Hinweis: Dieses Testexam bezieht sich auf die Vorgaengerversion PCAP-31-02.",
+  "exam_mode": true,
+  "duration_minutes": 65,
+  "passing_score": 28,
+  "questions": [
+    {
+      "prompt": "The following expression 2 ** 3 ** 2 ** 1 is:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. invalid",
+          "value": "A"
+        },
+        {
+          "label": "B. equal to 16",
+          "value": "B"
+        },
+        {
+          "label": "C. equal to 16.0",
+          "value": "C"
+        },
+        {
+          "label": "D. equal to 512",
+          "value": "D"
+        },
+        {
+          "label": "E. equal to 64",
+          "value": "E"
+        },
+        {
+          "label": "F. equal to 128.0",
+          "value": "F"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "If you want to build a string that reads: Peter's sister's name's \"Anna\" Which of the following literals would you use? (Select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. \"Peter's sister's name's \\\"Anna\\\"\"",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. 'Peter's sister's name's \\\"Anna\\\"'",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. \"Peter's sister's name's \"Anna\"\"",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. 'Peter's sister's name's \"Anna\"'",
+          "value": "D",
+          "code": true
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "Richtige Antwort(en): A, B."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "i = 250\nwhile len(str(i)) > 72:\n    i *= 2\nelse:\n    i //= 2\nprint(i)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 125",
+          "value": "A"
+        },
+        {
+          "label": "B. 250",
+          "value": "B"
+        },
+        {
+          "label": "C. 72",
+          "value": "C"
+        },
+        {
+          "label": "D. 500",
+          "value": "D"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What snippet would you insert in the line indicated below:",
+      "code": "n=0\nwhile n < 4:\n    n += 1\n    # insert your code here",
+      "post_prompt": "to print the following string to the monitor after the loop finishes its execution: 1234",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. print(n)",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. print(n, sep=\" \")",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. print(n, end=\" \")",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. print(n, \" \")",
+          "value": "D",
+          "code": true
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What is the value type returned after executing the following snippet?",
+      "code": "x=0\ny=2\nz = len(\"Python\")\nx=y>z\nprint(x)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. int",
+          "value": "A"
+        },
+        {
+          "label": "B. float",
+          "value": "B"
+        },
+        {
+          "label": "C. str",
+          "value": "C"
+        },
+        {
+          "label": "D. bool",
+          "value": "D"
+        },
+        {
+          "label": "E. NoneType",
+          "value": "E"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "What will the final value of the Val variable be when the following snippet finishes its execution?",
+      "code": "Val = 1\nVal2 = 0\nVal = Val ^ Val2\nVal2 = Val ^ Val2\nVal = Val ^ Val2",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 0",
+          "value": "A"
+        },
+        {
+          "label": "B. 1",
+          "value": "B"
+        },
+        {
+          "label": "C. 2",
+          "value": "C"
+        },
+        {
+          "label": "D. 4",
+          "value": "D"
+        },
+        {
+          "label": "E. The code is erroneous",
+          "value": "E"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "Which line can be used instead of the comment to cause the snippet to produce the following expected output? (Select all that apply) Code:",
+      "code": "z, y, x = 2, 1, 0\nx, z = z, y\ny=y-z\n# put line here\nprint(x, y, z)",
+      "post_prompt": "Expected output: 0, 1, 2",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. x, y, z = y, z, x",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. z, y, x = x, z, y",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. y, z, x = x, y, z",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. The code is erroneous",
+          "value": "D"
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "Richtige Antwort(en): A, B."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "a=0\nb = a ** 0\nif b < a + 1:\n    c=1\nelif b == 1:\n    c=2\nelse:\n    c=3\nprint(a + b + c)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 1",
+          "value": "A"
+        },
+        {
+          "label": "B. 2",
+          "value": "B"
+        },
+        {
+          "label": "C. 3",
+          "value": "C"
+        },
+        {
+          "label": "D. The code is erroneous",
+          "value": "D"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "How many stars (*) does the following snippet print?",
+      "code": "i = 10\nwhile i > 0 :\n    i -= 3\n    print(\"*\")\n    if i <= 3:\n        break\nelse:\n    print(\"*\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. three",
+          "value": "A"
+        },
+        {
+          "label": "B. two",
+          "value": "B"
+        },
+        {
+          "label": "C. one",
+          "value": "C"
+        },
+        {
+          "label": "D. The code is erroneous",
+          "value": "D"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "How many lines does each of the following code examples output when run separately?",
+      "code": "# Example 1\nfor i in range(1, 4, 2):\n    print(\"*\")\n# Example 2\nfor i in range(1, 4, 2):\n    print(\"*\", end=\"\")\n# Example 3\nfor i in range(1, 4, 2):\n    print(\"*\", end=\"**\")\n# Example 4\nfor i in range(1, 4, 2):\n    print(\"*\", end=\"**\")\nprint(\"***\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. Example 1: two, Example 2: one, Example 3: one, Example 4: one",
+          "value": "A"
+        },
+        {
+          "label": "B. Example 1: two, Example 2: one, Example 3: one, Example 4: two",
+          "value": "B"
+        },
+        {
+          "label": "C. Example 1: two, Example 2: one, Example 3: two, Example 4: three",
+          "value": "C"
+        },
+        {
+          "label": "D. Example 1: one, Example 2: one, Example 3: one, Example 4: two",
+          "value": "D"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "Which of the following statements are true? (Select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. UNICODE is the name of an operating system",
+          "value": "A"
+        },
+        {
+          "label": "B. UTF-8 is the name of a data transmission device",
+          "value": "B"
+        },
+        {
+          "label": "C. ASCII is an acronym for Automatic Systems of Computer Inner Interoperability",
+          "value": "C"
+        },
+        {
+          "label": "D. the Python Language Reference is the official reference manual that describes the syntax and semantics of the Python language",
+          "value": "D"
+        },
+        {
+          "label": "E. Python strings are immutable, which means they cannot be sliced",
+          "value": "E"
+        },
+        {
+          "label": "F. Python strings are mutable, which means they can be sliced",
+          "value": "F"
+        },
+        {
+          "label": "G. Lists and strings in Python can be sliced",
+          "value": "G"
+        }
+      ],
+      "answer": [
+        "D",
+        "G"
+      ],
+      "explanation": "Richtige Antwort(en): D, G."
+    },
+    {
+      "prompt": "What is the result of the following comparison?",
+      "code": "x = \"20\"\ny = \"30\"\nprint(x > y)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. True",
+          "value": "A"
+        },
+        {
+          "label": "B. False",
+          "value": "B"
+        },
+        {
+          "label": "C. None",
+          "value": "C"
+        },
+        {
+          "label": "D. The comparison causes a runtime exception/error",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "s = \"Hello, Python!\"\nprint(s[-14:15])",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. Hello, Python!",
+          "value": "A"
+        },
+        {
+          "label": "B. !nohtyP ,olleH",
+          "value": "B"
+        },
+        {
+          "label": "C. Hello, Python!Hello, Python!",
+          "value": "C"
+        },
+        {
+          "label": "D. !nohtyP ,olleH!nohtyP ,olleH",
+          "value": "D"
+        },
+        {
+          "label": "E. The program causes a runtime exception/error",
+          "value": "E"
+        },
+        {
+          "label": "F. The result cannot be predicted",
+          "value": "F"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "lst = [\"A\", \"B\", \"C\", 2, 4]\ndel lst[0:-2]\nprint(lst)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [2, 4]",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. ['C', 2, 4]",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. ['B', 'C', 2, 4]",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. ['A', 'B']",
+          "value": "D",
+          "code": true
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "dict = { 'a': 1, 'b': 2, 'c': 3 }\nfor item in dict:\n    print(item)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. a b c",
+          "value": "A"
+        },
+        {
+          "label": "B. 1 2 3",
+          "value": "B"
+        },
+        {
+          "label": "C. a:1 b:2 c:3",
+          "value": "C"
+        },
+        {
+          "label": "D. 0 1 2",
+          "value": "D"
+        },
+        {
+          "label": "E. The code is erroneous",
+          "value": "E"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "s = 'python'\nfor i in range(len(s)):\n    i = s[i].upper()\nprint(s, end=\"\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. PYTHON",
+          "value": "A"
+        },
+        {
+          "label": "B. Python",
+          "value": "B"
+        },
+        {
+          "label": "C. python",
+          "value": "C"
+        },
+        {
+          "label": "D. P Y T H O N",
+          "value": "D"
+        },
+        {
+          "label": "E. P y t h o n",
+          "value": "E"
+        },
+        {
+          "label": "F. The code will cause a runtime exception",
+          "value": "F"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "lst = [i // i for i in range(0,4)]\nsum = 0\nfor n in lst:\n    sum += n\nprint(sum)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 0",
+          "value": "A"
+        },
+        {
+          "label": "B. 3",
+          "value": "B"
+        },
+        {
+          "label": "C. 7",
+          "value": "C"
+        },
+        {
+          "label": "D. 11",
+          "value": "D"
+        },
+        {
+          "label": "E. The program will cause a runtime exception",
+          "value": "E"
+        }
+      ],
+      "answer": "E",
+      "explanation": "Richtige Antwort(en): E."
+    },
+    {
+      "prompt": "How many stars (*) will the following snippet send to the console?",
+      "code": "lst = [[c for c in range(r)] for r in range(3)]\nfor x in lst:\n    for y in x:\n        if y < 2:\n            print('*', end=\"\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. One",
+          "value": "A"
+        },
+        {
+          "label": "B. Two",
+          "value": "B"
+        },
+        {
+          "label": "C. Three",
+          "value": "C"
+        },
+        {
+          "label": "D. Four",
+          "value": "D"
+        },
+        {
+          "label": "E. The program will cause a runtime exception/error",
+          "value": "E"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What would you insert instead of ??? so that the program prints 1024 to the monitor? Code:",
+      "code": "lst = [2 ** x for x in range(0, 11)]\nprint(lst???)",
+      "post_prompt": "Expected output: 1024",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [0]",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. [1]",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. [-1]",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. [1024]",
+          "value": "D",
+          "code": true
+        },
+        {
+          "label": "E. [:]",
+          "value": "E",
+          "code": true
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What is the expected output of the following snippet?",
+      "code": "lst1 = \"12,34\"\nlst2 = lst1.split(',')\nprint(len(lst1) < len(lst2))",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. True",
+          "value": "A"
+        },
+        {
+          "label": "B. False",
+          "value": "B"
+        },
+        {
+          "label": "C. None",
+          "value": "C"
+        },
+        {
+          "label": "D. The program will cause a runtime exception/error",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the expected behavior of the following snippet?",
+      "code": "def fun(a, b=0, c=5, d=1):\n    return a ** b ** c\nprint(fun(b=2, a=2, c=3))",
+      "post_prompt": "It will:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. print 5",
+          "value": "A"
+        },
+        {
+          "label": "B. print 64",
+          "value": "B"
+        },
+        {
+          "label": "C. print 256",
+          "value": "C"
+        },
+        {
+          "label": "D. print 512",
+          "value": "D"
+        },
+        {
+          "label": "E. The code will cause a runtime exception/error",
+          "value": "E"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What is the expected behavior of the following snippet?",
+      "code": "x=5\nf = lambda x: 1 + 2\nprint(f(x))",
+      "post_prompt": "It will:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. print 5",
+          "value": "A"
+        },
+        {
+          "label": "B. print 8",
+          "value": "B"
+        },
+        {
+          "label": "C. print 3",
+          "value": "C"
+        },
+        {
+          "label": "D. The code will cause a runtime exception/error",
+          "value": "D"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What can we deduce from the following snippet? Select the true sentences. (select all that apply)",
+      "code": "from math import pi as xyz # line 01\nprint(pi)   # line 02",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. The program will print the mathematical constant pi = 3.141592..., to available precision",
+          "value": "A"
+        },
+        {
+          "label": "B. The program will cause a runtime exception/error",
+          "value": "B"
+        },
+        {
+          "label": "C. The program makes an alias for the name pi in the form of xyz",
+          "value": "C"
+        },
+        {
+          "label": "D. The original name pi will become inaccessible",
+          "value": "D"
+        },
+        {
+          "label": "E. Replacing line 02 with print(xyz) will cause the program to run without errors",
+          "value": "E"
+        }
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "explanation": "Richtige Antwort(en): B, C, D, E."
+    },
+    {
+      "prompt": "What is true about the __init__.py file? (Select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. It cannot be an empty file",
+          "value": "A"
+        },
+        {
+          "label": "B. It can execute an initialization code for a package",
+          "value": "B"
+        },
+        {
+          "label": "C. It is required to make Python treat a given directory as a Python package directory",
+          "value": "C"
+        },
+        {
+          "label": "D. It is required to make Python treat a given directory containing packages as a directory without packages",
+          "value": "D"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "explanation": "Richtige Antwort(en): B, C."
+    },
+    {
+      "prompt": "What is the expected behavior of the following code snippet?",
+      "code": "from random import randint\nfor i in range(10):\n    print(random(1, 5))",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. The program will generate a sequence of ten (pseudo)random integers from 1 to 5",
+          "value": "A"
+        },
+        {
+          "label": "B. The program will generate a sequence of ten (pseudo)random integers from 1 to 4",
+          "value": "B"
+        },
+        {
+          "label": "C. The program will generate a sequence of ten (pseudo)random numbers from 1 to 5",
+          "value": "C"
+        },
+        {
+          "label": "D. The program will generate a sequence of ten (pseudo)random numbers from 1 to 4",
+          "value": "D"
+        },
+        {
+          "label": "E. The result cannot be predicted",
+          "value": "E"
+        },
+        {
+          "label": "F. The program will cause a runtime exception/error",
+          "value": "F"
+        }
+      ],
+      "answer": "F",
+      "explanation": "Richtige Antwort(en): F."
+    },
+    {
+      "prompt": "What is the expected behavior of the following snippet?",
+      "code": "x = 1 # line 1\ndef a(x): # line 2\n    return 2 * x # line 3\nx = 2 + a(x) # line 4\nprint(a(x)) # line 5",
+      "post_prompt": "It will:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. print 8",
+          "value": "A"
+        },
+        {
+          "label": "B. print 4",
+          "value": "B"
+        },
+        {
+          "label": "C. print 6",
+          "value": "C"
+        },
+        {
+          "label": "D. cause a runtime exception on line 4",
+          "value": "D"
+        },
+        {
+          "label": "E. cause a runtime exception on line 5",
+          "value": "E"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the expected behavior of the following snippet?",
+      "code": "a = 'hello'   # line 1\ndef x(a,b):      # line 2\n    z = a[0]      # line 3\n    return z   # line 4\nprint(x(a))      # line 5",
+      "post_prompt": "It will:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. print hello",
+          "value": "A"
+        },
+        {
+          "label": "B. print h",
+          "value": "B"
+        },
+        {
+          "label": "C. print ello",
+          "value": "C"
+        },
+        {
+          "label": "D. cause a runtime exception on line 2",
+          "value": "D"
+        },
+        {
+          "label": "E. cause a runtime exception on line 3",
+          "value": "E"
+        },
+        {
+          "label": "F. cause a runtime exception on line 4",
+          "value": "F"
+        },
+        {
+          "label": "G. cause a runtime exception on line 5",
+          "value": "G"
+        }
+      ],
+      "answer": "G",
+      "explanation": "Richtige Antwort(en): G."
+    },
+    {
+      "prompt": "What is the expected behavior of the following snippet?",
+      "code": "s = 'SPAM'\ndef f(x):\n    return s + 'MAPS'\nprint(f(s))",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. It will print: SPAM",
+          "value": "A"
+        },
+        {
+          "label": "B. It will print: MAPS",
+          "value": "B"
+        },
+        {
+          "label": "C. It will print: None",
+          "value": "C"
+        },
+        {
+          "label": "D. It will print: SPAMMAPS",
+          "value": "D"
+        },
+        {
+          "label": "E. It will print: SPAM MAPS",
+          "value": "E"
+        },
+        {
+          "label": "F. It will cause a runtime exception/error",
+          "value": "F"
+        },
+        {
+          "label": "G. It will print an empty line",
+          "value": "G"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "Select the true statements: (select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. Positional arguments are also called keyword arguments",
+          "value": "A"
+        },
+        {
+          "label": "B. The order of arguments matters when they are passed positionally",
+          "value": "B"
+        },
+        {
+          "label": "C. The order of arguments matters when they are passed by their name",
+          "value": "C"
+        },
+        {
+          "label": "D. A function can be called with a mix of positional and keyword arguments",
+          "value": "D"
+        }
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "explanation": "Richtige Antwort(en): B, D."
+    },
+    {
+      "prompt": "What is the expected behavior of the following snippet?",
+      "code": "def gen():\n    lst = range(5)\n    for i in lst:\n        yield i*i\nfor i in gen():\n    print(i, end=\"\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. It will print: <generator object gen at (some hex digits)>",
+          "value": "A"
+        },
+        {
+          "label": "B. It will print: 014916",
+          "value": "B"
+        },
+        {
+          "label": "C. It will print: 0 1 4 9 16",
+          "value": "C"
+        },
+        {
+          "label": "D. It will cause a runtime exception/error",
+          "value": "D"
+        },
+        {
+          "label": "E. It will print an empty line",
+          "value": "E"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "Select the true statements: (select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. The class keyword marks the beginning of the class definition",
+          "value": "A"
+        },
+        {
+          "label": "B. An object cannot contain any references to other objects",
+          "value": "B"
+        },
+        {
+          "label": "C. A class may define an object",
+          "value": "C"
+        },
+        {
+          "label": "D. A constructor is used to instantiate an object",
+          "value": "D"
+        },
+        {
+          "label": "E. An object variable is a variable that is stored separately in every object",
+          "value": "E"
+        }
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "Richtige Antwort(en): A, C, D."
+    },
+    {
+      "prompt": "Select the true statements: (select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. Inheritance means passing attributes and methods from a superclass to a subclass",
+          "value": "A"
+        },
+        {
+          "label": "B. is subclass (class1, class2) is an example of a function that returns true if class2 is a subclass of class1",
+          "value": "B"
+        },
+        {
+          "label": "C. Multiple inheritance means that a class has more than one superclass",
+          "value": "C"
+        },
+        {
+          "label": "D. Polymorphism is the situation in which a subclass is able to modify its superclass behavior",
+          "value": "D"
+        },
+        {
+          "label": "E. A single inheritance is always more difficult to maintain than a multiple inheritance",
+          "value": "E"
+        }
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "Richtige Antwort(en): A, C, D."
+    },
+    {
+      "prompt": "Select the true statements: (select all that apply)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. A class definition may have any number of constructors, but their names must be unique",
+          "value": "A"
+        },
+        {
+          "label": "B. It is not possible to safely check if an object has a certain attribute",
+          "value": "B"
+        },
+        {
+          "label": "C. A class constructor cannot return a value",
+          "value": "C"
+        },
+        {
+          "label": "D. __bases__ is a tuple filled with the names of all the direct super classes",
+          "value": "D"
+        },
+        {
+          "label": "E. is subclass (c1, c2) is a function that checks if c1 is an object derived from class c2",
+          "value": "E"
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "Richtige Antwort(en): C, D."
+    },
+    {
+      "prompt": "What will happen when you run each of the following code snippets?",
+      "code": "# Example 1\nx=1\ny=0\nz = x%y\nprint(z)\n# Example 2\nx=1\ny=0\nz = x/y\nprint(z)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. A ZeroDivisionError exception will be raised in Example 1,\nwhile Example 2 will print 0 to the screen",
+          "value": "A"
+        },
+        {
+          "label": "B. A ZeroDivisionError exception will be raised in Example 2,\nwhile Example 1 will print 0 to the screen",
+          "value": "B"
+        },
+        {
+          "label": "C. A ZeroDivisionError exception will be raised in Example 1 and Example 2",
+          "value": "C"
+        },
+        {
+          "label": "D. A ValueError exception will be raised in Example 1, and a ZeroDivisionError exception will be raised in Example 2",
+          "value": "D"
+        },
+        {
+          "label": "E. A ValueError exception will be raised in Example 2, and a ZeroDivisionError exception will be raised in Example 1",
+          "value": "E"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What is the expected output of the following code?",
+      "code": "x=0\ntry:\n    print(x)\n    print(1 / x)\nexcept ZeroDivisionError:\n    print(\"ERROR MESSAGE\")\nfinally:\n    print(x + 1)\nprint(x + 2)",
+      "post_prompt": "The program will print the following to the screen:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 1 2",
+          "value": "A"
+        },
+        {
+          "label": "B. ERROR MESSAGE 1 2",
+          "value": "B"
+        },
+        {
+          "label": "C. 0 2",
+          "value": "C"
+        },
+        {
+          "label": "D. 0 ERROR MESSAGE 1 2",
+          "value": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "The following class hierarchy is given. What is the expected output of the code?",
+      "code": "class A:\n    def a(self):\n        print(\"A\", end=\"\")\nclass B(A):\n    def a(self):\n        print(\"B\", end=\"\")\nclass C(B):\n    def b(self):\n        print(\"B\", end=\"\")\na = A()\nb = B()\nc = C()\na.a()\nb.a()\nc.b()",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. AB",
+          "value": "A"
+        },
+        {
+          "label": "B. ABB",
+          "value": "B"
+        },
+        {
+          "label": "C. BA",
+          "value": "C"
+        },
+        {
+          "label": "D. BBA",
+          "value": "D"
+        },
+        {
+          "label": "E. AAA",
+          "value": "E"
+        },
+        {
+          "label": "F. BBB",
+          "value": "F"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "If the following snippet is executed and the exception is raised",
+      "code": "try:\n    print(\"Hello\")\n    raise Exception\n    print(1/0)\nexcept Exception as e:\n    print(e)",
+      "post_prompt": "we will see:",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. two identical non-empty lines",
+          "value": "A"
+        },
+        {
+          "label": "B. two different non-empty lines",
+          "value": "B"
+        },
+        {
+          "label": "C. two empty lines",
+          "value": "C"
+        },
+        {
+          "label": "D. one non-empty line and one empty line",
+          "value": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "Is there any difference in the error messages displayed once the two newly defined exceptions Critical Error have been raised separately?",
+      "code": "# Example 1\nclass CriticalError(Exception):\n    def __init__(self, message='ERROR MESSAGE A'):\n        Exception.__init__(self, message)\nraise CriticalError\nraise CriticalError(\"ERROR MESSAGE B\")\n# Example 2\nclass CriticalError(Exception):\n    def __init__(self, message='ERROR MESSAGE A'):\n        Exception.__init__(self, message)\nraise CriticalError(\"ERROR MESSAGE B\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. No, both errors raised will display the same message:\nERROR MESSAGE A",
+          "value": "A"
+        },
+        {
+          "label": "B. No, both errors raised will display the same message:\nERROR MESSAGE B",
+          "value": "B"
+        },
+        {
+          "label": "C. No, both errors raised will display no message",
+          "value": "C"
+        },
+        {
+          "label": "D. Yes, the first error raised will display the message ERROR\nMESSAGE A, while the second ERROR MESSAGE B",
+          "value": "D"
+        },
+        {
+          "label": "E. Yes, the first error raised will display no message, while the\nsecond ERROR MESSAGE B",
+          "value": "E"
+        },
+        {
+          "label": "F. Yes, the first error raised will\ndisplay no message, while the second ERROR MESSAGE A",
+          "value": "F"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "You want to access the test.txt file and retrieve each line in it. Which option will you use? (Select all that apply)",
+      "code": "file = open(test.txt)\n# insert code here\nfile.close()",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. print(file.readlines())",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. print(readlines(file))",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. print(file.readlines(:)",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. for l in file: print(l)",
+          "value": "D",
+          "code": true
+        },
+        {
+          "label": "E. print(file.lines())",
+          "value": "E",
+          "code": true
+        },
+        {
+          "label": "F. print(file.read())",
+          "value": "F",
+          "code": true
+        },
+        {
+          "label": "G. print(read.file(test.txt))",
+          "value": "G",
+          "code": true
+        }
+      ],
+      "answer": [
+        "A",
+        "D",
+        "F"
+      ],
+      "explanation": "Richtige Antwort(en): A, D, F."
+    },
+    {
+      "prompt": "The following code snippet when run",
+      "code": "f = open(\"file.txt\", \"w\")\nf.close()",
+      "post_prompt": "will (select all that apply):",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. open the file file.txt in write mode",
+          "value": "A"
+        },
+        {
+          "label": "B. delete the file contents if the file file.txt already exists",
+          "value": "B"
+        },
+        {
+          "label": "C. leave the file contents unchanged if the file file.txt already exists",
+          "value": "C"
+        },
+        {
+          "label": "D. create the file file.txt if it does not exist",
+          "value": "D"
+        },
+        {
+          "label": "E. raise the FileNotFoundError exception if the file does not\nexist",
+          "value": "E"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "Richtige Antwort(en): A, B, D."
+    }
+  ]
+}

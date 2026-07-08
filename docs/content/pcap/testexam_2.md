@@ -1,4 +1,4 @@
-# Testexam 2
+# Testfragen 2
 
 Kreuze die passende Antwort an. Die Lösung und Erklärung wird erst nach dem Prüfen angezeigt.
 

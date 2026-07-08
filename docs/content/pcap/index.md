@@ -25,6 +25,13 @@ auf der offiziellen Python-Institute-Seite geprueft werden:
     ausgewertet wird. Nicht nur Punkte zaehlen, sondern jede falsche Antwort
     einem Thema zuordnen.
 
+## Testexamen
+
+- [Testfragen 1](testexam_1.md)
+- [Testfragen 2](testexam_2.md)
+- [Testexam 3 (PCAP-31-02)](testexam_3.md): basiert auf der Vorgaengerversion `PCAP-31-02`
+- [Testexam 4 (PCAP-31-03)](testexam_4.md)
+
 ## Überblick
 
 - PCAP ist eine Associate-Zertifizierung des Python Institute.

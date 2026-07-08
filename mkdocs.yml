@@ -124,8 +124,10 @@ nav:
 
   - PCAP:
       - Überblick: content/pcap/index.md
-      - Testexam 1: content/pcap/testexam_1.md
-      - Testexam 2: content/pcap/testexam_2.md
+      - Testfragen 1: content/pcap/testexam_1.md
+      - Testfragen 2: content/pcap/testexam_2.md
+      - Testexam 3 (PCAP-31-02): content/pcap/testexam_3.md
+      - Testexam 4 (PCAP-31-03): content/pcap/testexam_4.md
 
 theme:
   name: material

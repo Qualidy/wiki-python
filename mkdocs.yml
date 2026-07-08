@@ -3,6 +3,8 @@ site_name: Python Wiki
 nav:
   - Übersicht: index.md
 
+  - Begriffsübersicht: content/begriffe/index.md
+
   - Python Grundlagen:
       - Einführung: content/python_grundlagen/python_grundlagen/python_grundlagen.md
       - Der Debugger: content/python_grundlagen/debugging/debugging.md

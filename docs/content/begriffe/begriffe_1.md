@@ -294,7 +294,7 @@
 |------------|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | `unittest` | Ein integriertes Testframework-Modul in Python                                                                   | [Referenz](https://docs.python.org/3/library/unittest.html)                            |
 
-[Liste mit Methoden der Klasse Testcase](../lehrplan/python_grundlagen/oop/unittests/unittests.md#methoden-der-klasse-testcase)
+[Liste mit Methoden der Klasse Testcase](../oop_grundlagen/unittests/unittests.md#methoden-der-klasse-testcase)
 
 # Vererbung
 
@@ -548,5 +548,4 @@
 [//]: # (| Lambda-Funktionen  | Anonyme Funktionen, erstellt mit dem `lambda`-Schlüsselwort.                             | [Referenz]&#40;https://docs.python.org/3/reference/expressions.html#lambda&#41;                |)
 
 [//]: # (| `in`              | Schlüsselwort, um zu überprüfen, ob ein Element in eine Tupel ist.                          | `1 in &#40;3,2,1&#41; # True`                                                                   |)
-
 

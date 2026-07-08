@@ -1,6 +1,6 @@
 # Module und Pakete
 
-In Python ermöglichen Module und Pakete die Organisation von Code in wiederverwendbare Einheiten, um die Lesbarkeit zu verbessern
+In Python ermöglichen [Module](../../python_grundlagen/module/module.md) und Pakete die Organisation von Code in wiederverwendbare Einheiten, um die Lesbarkeit zu verbessern
 und die Codeverwaltung zu optimieren.
 
 ## Pakete

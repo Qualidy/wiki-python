@@ -14,7 +14,7 @@ Am Ende der Woche soll jeder ein Repository mit Lösungen zu allen Aufgaben habe
 
 ### Konzepte des Zweiten Tages
 - [Klassen](../../oop_grundlagen/define_classes/define_classes.md)
-- [Vererbung](../../vererbung_polymorphismus/vererbung/vererbung.md)
+- [Vererbung](../../oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung.md)
 - [Git](https://python-wiki.de/lehrplan/git/git.html)
 - [Docstring](../../funktionen_vertiefung/docstring/docstring.md)
 - [Unittests](../../oop_grundlagen/unittests/unittests.md)

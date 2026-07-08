@@ -1,7 +1,7 @@
 title: "Türen auf in unserem Casino"
 difficulty: 1
 question: |
-  Unsere Casino-module aus [Module](../module/module.md) sollen jetzt in ein eigenes erstes Paket umgewandelt werden. Hierzu erstellen wir einen Ordner `my_casino` und füge alle bisher erstellten Dateien
+  Unsere Casino-Module aus [Module](../../python_grundlagen/module/module.md) sollen jetzt in ein eigenes erstes Paket umgewandelt werden. Hierzu erstellen wir einen Ordner `my_casino` und füge alle bisher erstellten Dateien
   darin ein.
 
   Zusätzlich erstellen wir eine Datei `__init__.py` ohne Inhalt.

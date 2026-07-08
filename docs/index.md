@@ -6,6 +6,12 @@ hide:
 
 # Python Kurs
 
+<div class="grid cards fancy" markdown>
+
+- [ :material-format-list-bulleted-type: Begriffsübersicht ](content/begriffe/index.md)
+
+</div>
+
 <div class="grid" markdown>
 <div markdown>
 

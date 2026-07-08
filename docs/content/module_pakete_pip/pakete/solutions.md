@@ -26,4 +26,4 @@ def play_game(rounds=5, money=10):
     print("Leider alles verzockt")
 ```
 
-[🔽Download Full Package](my_casino.zip)
+[🔽Download Full Package](../../python_grundlagen/module/my_casino.zip)

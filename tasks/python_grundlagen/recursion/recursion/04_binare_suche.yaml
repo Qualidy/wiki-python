@@ -24,7 +24,7 @@ question: |
       B --"m < e"--> D["Nehme die <br/>rechte Teilliste"] --> A
       B --"m == e"--> T(["return True"])
   ```
-  ![](binary_sort_example.PNG)
+  ![](../../python_grundlagen/functions/binary_sort_example.PNG)
 solution: |
   ```python
   def binary_search(my_list, element):

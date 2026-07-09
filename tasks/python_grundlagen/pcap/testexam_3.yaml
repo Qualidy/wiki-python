@@ -63,10 +63,9 @@
         }
       ],
       "answer": [
-        "A",
-        "B"
+        "A"
       ],
-      "explanation": "Richtige Antwort(en): A, B."
+      "explanation": "Richtige Antwort(en): A"
     },
     {
       "prompt": "What is the expected output of the following snippet?",
@@ -110,7 +109,7 @@
           "code": true
         },
         {
-          "label": "C. print(n, end=\" \")",
+          "label": "C. print(n, end=\"\")",
           "value": "C",
           "code": true
         },
@@ -124,7 +123,7 @@
       "explanation": "Richtige Antwort(en): C."
     },
     {
-      "prompt": "What is the value type returned after executing the following snippet?",
+      "prompt": "What is the value type of x after executing the following snippet?",
       "code": "x=0\ny=2\nz = len(\"Python\")\nx=y>z\nprint(x)",
       "type": "single",
       "options": [

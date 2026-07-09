@@ -34,6 +34,7 @@ Lokal Webseite ausführen:
 mkdocs serve
 ```
 
+
 ## Webseite veröffentlichen (einmalig)
 
 Gehe in Github auf ":octicons-gear-16: Settings".

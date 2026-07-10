@@ -120,16 +120,27 @@ nav:
       - Eigene Exceptions: content/wiederholung_woche8/eigene_exceptions.md
       - Generatoren: content/wiederholung_woche8/generatoren.md
       - Dateien lesen und schreiben: content/wiederholung_woche8/dateien.md
+      - PCAP-Standardmodule: content/wiederholung_woche8/standardmodule_pcap.md
+      - Strings und Escape-Fallen: content/wiederholung_woche8/string_escape_fallen.md
+      - OOP Introspection und Name Mangling: content/wiederholung_woche8/oop_introspection_name_mangling.md
+      - Exception-Fallen: content/wiederholung_woche8/exceptions_fallen.md
 
   - PCEP:
       - Überblick: content/pcep/index.md
 
   - PCAP:
       - Überblick: content/pcap/index.md
+      - Kompendium Modules and Packages: content/pcap/kompendium_module_packages.md
+      - Kompendium Exceptions: content/pcap/kompendium_exceptions.md
+      - Kompendium Strings: content/pcap/kompendium_strings.md
+      - Kompendium OOP: content/pcap/kompendium_oop.md
+      - Kompendium Miscellaneous: content/pcap/kompendium_misc.md
       - Testfragen 1: content/pcap/testexam_1.md
       - Testfragen 2: content/pcap/testexam_2.md
       - Testexam 3 (PCAP-31-02): content/pcap/testexam_3.md
       - Testexam 4 (PCAP-31-03): content/pcap/testexam_4.md
+      - Testexam 5 (PCAP-31-03): content/pcap/testexam_5.md
+      - Testexam 6 (PCAP-31-03): content/pcap/testexam_6.md
 
 theme:
   name: material

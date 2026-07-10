@@ -1,6 +1,6 @@
 {
   "title": "PCAP Testexam 4 (PCAP-31-03)",
-  "description": "Pruefungssimulation mit 40 Fragen, 65 Minuten und Auswertung erst am Ende.",
+  "description": "Pruefungssimulation mit 40 Fragen, 65 Minuten und PCAP-31-03 Gewichtung: 6 Module, 5 Exceptions, 8 Strings, 12 OOP, 9 Miscellaneous.",
   "exam_mode": true,
   "duration_minutes": 65,
   "passing_score": 28,
@@ -36,7 +36,7 @@
     },
     {
       "prompt": "How do you call the function ham() saved as spam.py below?",
-      "code": "def ham():\n    print(\"Hello World\")",
+      "code": "def ham():\n   print(\"Hello World\")",
       "type": "multiple",
       "options": [
         {
@@ -73,8 +73,7 @@
     },
     {
       "prompt": "Given the following package layout",
-      "code": "package/\n  subpackage1/\n    __init__.py\n    moduleX.py\n    moduleY.py\n  subpackage2/\n    moduleZ.py\n  moduleA.py",
-      "post_prompt": "Select all option(s) containing valid relative imports called from __init__.py",
+      "code": "package/\n   subpackage1/\n     __init__.py\n     moduleX.py\n     moduleY.py\n   subpackage2/\n     moduleZ.py\n   moduleA.py\nSelect all option(s) containing valid relative imports called from __init__.py",
       "type": "multiple",
       "options": [
         {
@@ -203,7 +202,8 @@
         },
         {
           "label": "C. A list of names of class attributes",
-          "value": "C"
+          "value": "C",
+          "code": true
         },
         {
           "label": "D. A list of names of object attributes",
@@ -211,7 +211,8 @@
         },
         {
           "label": "E. A list of names of the base class attributes",
-          "value": "E"
+          "value": "E",
+          "code": true
         }
       ],
       "answer": [
@@ -223,836 +224,8 @@
       "explanation": "Richtige Antwort(en): B, C, D, E."
     },
     {
-      "prompt": "Select all valid option(s) about sys.path",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. sys.path is a string that specifies the path where Python is installed",
-          "value": "A"
-        },
-        {
-          "label": "B. sys.path is a string that specifies the path of the compiled Python bytecode",
-          "value": "B"
-        },
-        {
-          "label": "C. sys.path is a list of strings that specifies the search path for modules",
-          "value": "C"
-        },
-        {
-          "label": "D. A program is free to modify sys.path for its own purpose.",
-          "value": "D"
-        }
-      ],
-      "answer": [
-        "C",
-        "D"
-      ],
-      "explanation": "Richtige Antwort(en): C, D."
-    },
-    {
       "prompt": "What is the output of the following code?",
-      "code": ">>> math.ceil(-1.1)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. -1",
-          "value": "A"
-        },
-        {
-          "label": "B. -1.0",
-          "value": "B"
-        },
-        {
-          "label": "C. -2",
-          "value": "C"
-        },
-        {
-          "label": "D. -2.0",
-          "value": "D"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Richtige Antwort(en): A."
-    },
-    {
-      "prompt": "What is the output of the following code?",
-      "code": ">>> math.floor(-1.1)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. -1",
-          "value": "A"
-        },
-        {
-          "label": "B. -1.0",
-          "value": "B"
-        },
-        {
-          "label": "C. -2",
-          "value": "C"
-        },
-        {
-          "label": "D. -2.0",
-          "value": "D"
-        }
-      ],
-      "answer": "C",
-      "explanation": "Richtige Antwort(en): C."
-    },
-    {
-      "prompt": "What is the output of the following code?",
-      "code": ">>> math.factorial(3)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. 6",
-          "value": "A"
-        },
-        {
-          "label": "B. 6.0",
-          "value": "B"
-        },
-        {
-          "label": "C. TypeError: type float doesn't define __factorial__ method",
-          "value": "C"
-        },
-        {
-          "label": "D. TypeError: factorial() takes 2 arguments",
-          "value": "D"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Richtige Antwort(en): A."
-    },
-    {
-      "prompt": "What is the output of the following code?",
-      "code": ">>> math.factorial(-3.0)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. -6",
-          "value": "A"
-        },
-        {
-          "label": "B. -6.0",
-          "value": "B"
-        },
-        {
-          "label": "C. TypeError: type float doesn't define __factorial__ method",
-          "value": "C"
-        },
-        {
-          "label": "D. ValueError: factorial() not defined for negative values",
-          "value": "D"
-        }
-      ],
-      "answer": "D",
-      "explanation": "Richtige Antwort(en): D."
-    },
-    {
-      "prompt": "What is the output of the following code?",
-      "code": ">>> math.hypot(2)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. 3.6055512754639896",
-          "value": "A"
-        },
-        {
-          "label": "B. 2.0",
-          "value": "B"
-        },
-        {
-          "label": "C. TypeError: type int doesn't define __hypot__ method",
-          "value": "C"
-        },
-        {
-          "label": "D. TypeError: hypot() takes 2 arguments",
-          "value": "D"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "What is the output of the following code?",
-      "code": ">>> math.sqrt(1)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. 0.5",
-          "value": "A"
-        },
-        {
-          "label": "B. 1",
-          "value": "B"
-        },
-        {
-          "label": "C. 1.0",
-          "value": "C"
-        },
-        {
-          "label": "D. TypeError: type int doesn't define __sqrt__ method",
-          "value": "D"
-        }
-      ],
-      "answer": "C",
-      "explanation": "Richtige Antwort(en): C."
-    },
-    {
-      "prompt": "Select all option(s) which returns a random floating number between 0 and 1?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. math.random()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. math.random(1.0)",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. random.random()",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. random.random(1.0)",
-          "value": "D",
-          "code": true
-        }
-      ],
-      "answer": [
-        "C"
-      ],
-      "explanation": "Richtige Antwort(en): C."
-    },
-    {
-      "prompt": "Select all option(s) which returns a random number between 0 and 100?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. random.random(100)",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. random.random(0, 100)",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. random.random()*100",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. random.random(100.0)",
-          "value": "D",
-          "code": true
-        }
-      ],
-      "answer": [
-        "C"
-      ],
-      "explanation": "Richtige Antwort(en): C."
-    },
-    {
-      "prompt": "What can be the possible output of the following code?",
-      "code": "random.seed(10, 2)\nprint(random.random())",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. 3.6055512754639896",
-          "value": "A"
-        },
-        {
-          "label": "B. 0.5714025946899135",
-          "value": "B"
-        },
-        {
-          "label": "C. AttributeError: module 'random' has no attribute 'seed'",
-          "value": "C"
-        },
-        {
-          "label": "D. TypeError: seed() takes 1 argument",
-          "value": "D"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the choice() and/or choices() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. random.choice(\"spam\", \"ham\", \"eggs\")",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. random.choice([\"spam\", \"ham\", \"eggs\"])",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. random.choice({\"spam\", \"ham\", \"eggs\"})",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. random.choices([\"spam\", \"ham\", \"eggs\"])",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. random.choices([\"spam\", \"ham\", \"eggs\"], weights = [10, 1, 1], k = 14)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B",
-        "D",
-        "E"
-      ],
-      "explanation": "Richtige Antwort(en): B, D, E."
-    },
-    {
-      "prompt": "What can be the possible output of the following code?",
-      "code": ">>> random.sample([\"spam\", \"ham\", \"eggs\"], k = 1)",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. spam",
-          "value": "A"
-        },
-        {
-          "label": "B. [spam]",
-          "value": "B"
-        },
-        {
-          "label": "C. TypeError: sample() got an unexpected keyword argument 'k'",
-          "value": "C"
-        },
-        {
-          "label": "D. TypeError: sample() takes 1 argument",
-          "value": "D"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the platform() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.platform()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.platform()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.platform(aliased=0, terse=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.platform(alias=0, version=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.platform(aliased=0, terse=0)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B",
-        "E"
-      ],
-      "explanation": "Richtige Antwort(en): B, E."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the machine() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.machine()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.machine()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.machine(aliased=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.machine(terse=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.machine(None)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B"
-      ],
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the processor() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.processor()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.processor()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.processor(aliased=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.processor(terse=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.platform(None)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B"
-      ],
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the system() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.system()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.system()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.system(aliased=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.system(terse=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.system(None)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B"
-      ],
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all valid option(s) about system() function",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system() returns the OS hosting Python",
-          "value": "A"
-        },
-        {
-          "label": "B. system() returns the execution environment of Python",
-          "value": "B"
-        },
-        {
-          "label": "C. Possible return values are Linux, Darwin, Java, Windows or an empty string if it can't be determined.",
-          "value": "C"
-        },
-        {
-          "label": "D. Possible return values are CPython, IronPython, Jython, PyPy.",
-          "value": "D"
-        }
-      ],
-      "answer": [
-        "A",
-        "C"
-      ],
-      "explanation": "Richtige Antwort(en): A, C."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the version() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.version()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.version()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.version(aliased=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.version(terse=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.version(None)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B"
-      ],
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "What is the datatype of the return value of the function platform.version()?",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. int",
-          "value": "A"
-        },
-        {
-          "label": "B. float",
-          "value": "B"
-        },
-        {
-          "label": "C. str",
-          "value": "C"
-        },
-        {
-          "label": "D. array",
-          "value": "D"
-        }
-      ],
-      "answer": "C",
-      "explanation": "Richtige Antwort(en): C."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the python_implementation() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.python_implementation()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.python_implementation()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.python_implementation(aliased=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.python_implementation(terse=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.python_implementation(None)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B"
-      ],
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all option(s) about the python_implementation() that is TRUE?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. python_implementation() returns the OS hosting Python",
-          "value": "A"
-        },
-        {
-          "label": "B. python_implementation() returns the execution environment of Python",
-          "value": "B"
-        },
-        {
-          "label": "C. Possible return values are Linux, Darwin, Java, Windows or an empty string if it can't be determined.",
-          "value": "C"
-        },
-        {
-          "label": "D. Possible return values are CPython, IronPython, Jython, PyPy.",
-          "value": "D"
-        }
-      ],
-      "answer": [
-        "B",
-        "D"
-      ],
-      "explanation": "Richtige Antwort(en): B, D."
-    },
-    {
-      "prompt": "Select all option(s) to properly call the python_version_tuple() function?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. system.python_version_tuple()",
-          "value": "A",
-          "code": true
-        },
-        {
-          "label": "B. platform.python_version_tuple()",
-          "value": "B",
-          "code": true
-        },
-        {
-          "label": "C. system.python_version_tuple(aliased=0)",
-          "value": "C",
-          "code": true
-        },
-        {
-          "label": "D. platform.python_version_tuple(terse=0)",
-          "value": "D",
-          "code": true
-        },
-        {
-          "label": "E. platform.python_version_tuple(None)",
-          "value": "E",
-          "code": true
-        }
-      ],
-      "answer": [
-        "B"
-      ],
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Which of the statements below is valid?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. Python is interpreted therefore it never compiles the py files.",
-          "value": "A"
-        },
-        {
-          "label": "B. Python is interpreted however it compiles the py file into pyc file.",
-          "value": "B"
-        },
-        {
-          "label": "C. Compiled Python files is stored inside the __pyc__ folder",
-          "value": "C"
-        },
-        {
-          "label": "D. Compiled Python files is stored inside the __pycache__ folder",
-          "value": "D"
-        },
-        {
-          "label": "E. Compiled Python files is stored inside the __cache__ folder",
-          "value": "E"
-        }
-      ],
-      "answer": [
-        "B",
-        "D"
-      ],
-      "explanation": "Richtige Antwort(en): B, D."
-    },
-    {
-      "prompt": "The extension of a compiled bytecode of the Python source file is",
-      "type": "single",
-      "options": [
-        {
-          "label": "A. .py",
-          "value": "A"
-        },
-        {
-          "label": "B. .pyc",
-          "value": "B"
-        },
-        {
-          "label": "C. .__pycache__",
-          "value": "C"
-        },
-        {
-          "label": "D. Python is an interpreted language hence it does not compile the source file",
-          "value": "D"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Richtige Antwort(en): B."
-    },
-    {
-      "prompt": "Select all valid option(s) about __name__",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. The __name__ is a built-in constant and can't be modified",
-          "value": "A"
-        },
-        {
-          "label": "B. The __name__ is a built-in variable and can be modified",
-          "value": "B"
-        },
-        {
-          "label": "C. The __name__ by default is None and must be set",
-          "value": "C"
-        },
-        {
-          "label": "D. If the source is the main program, the interpreter sets __name__ to \"__main__\"",
-          "value": "D"
-        },
-        {
-          "label": "E. If the file is imported from another module, __name__ will be set with the module's name.",
-          "value": "E"
-        }
-      ],
-      "answer": [
-        "B",
-        "D",
-        "E"
-      ],
-      "explanation": "Richtige Antwort(en): B, D, E."
-    },
-    {
-      "prompt": "How should you write the variable spam to inform a module user that it should not be accessed directly?",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. spam since all variables in modules are considered private",
-          "value": "A"
-        },
-        {
-          "label": "B. _spam",
-          "value": "B"
-        },
-        {
-          "label": "C. __spam",
-          "value": "C"
-        },
-        {
-          "label": "D. SPAM",
-          "value": "D"
-        }
-      ],
-      "answer": [
-        "B",
-        "C"
-      ],
-      "explanation": "Richtige Antwort(en): B, C."
-    },
-    {
-      "prompt": "Select all valid option(s) about __init__.py",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. __init__.py is contained in regular packages",
-          "value": "A"
-        },
-        {
-          "label": "B. __init__.py is contained in namespace packages",
-          "value": "B"
-        },
-        {
-          "label": "C. __init__.py is automatically executed when the regular package is imported.",
-          "value": "C"
-        },
-        {
-          "label": "D. __init__.py is automatically executed when the namespace package is imported",
-          "value": "D"
-        }
-      ],
-      "answer": [
-        "A",
-        "C"
-      ],
-      "explanation": "Richtige Antwort(en): A, C."
-    },
-    {
-      "prompt": "What directories are searched by the interpreter for spam.py given the code below?",
-      "code": "import spam\nprint(spam.ham)\nprint(spam.eggs)",
-      "type": "multiple",
-      "options": [
-        {
-          "label": "A. Directory where spam.py was run",
-          "value": "A"
-        },
-        {
-          "label": "B. Current directory if the interpreter is run interactively",
-          "value": "B"
-        },
-        {
-          "label": "C. List of directories contained in PATH environment variable",
-          "value": "C"
-        },
-        {
-          "label": "D. List of directories contained in PYTHONPATH environment variable",
-          "value": "D"
-        },
-        {
-          "label": "E. Python installation-dependent directories configured during installation",
-          "value": "E"
-        },
-        {
-          "label": "F. List of directories in sys.path",
-          "value": "F"
-        }
-      ],
-      "answer": [
-        "A",
-        "B",
-        "D",
-        "E",
-        "F"
-      ],
-      "explanation": "Richtige Antwort(en): A, B, D, E, F."
-    },
-    {
-      "prompt": "What is the output of the following code?",
-      "code": "try:\n    abcd\n    efgh\nexcept:\n    pass",
+      "code": "try:\n   abcd\n   efgh\nexcept:\n   pass",
       "type": "single",
       "options": [
         {
@@ -1069,7 +242,8 @@
         },
         {
           "label": "D. Add () on Line 2 and 3 to fix the syntax error",
-          "value": "D"
+          "value": "D",
+          "code": true
         }
       ],
       "answer": "A",
@@ -1102,7 +276,7 @@
     },
     {
       "prompt": "What is the output of the following code?",
-      "code": "try:\n    raise ValueError\nexcept TypeError, ValueError:\n    raise",
+      "code": "try:\n   raise ValueError\nexcept TypeError, ValueError:\n   raise",
       "type": "single",
       "options": [
         {
@@ -1118,16 +292,16 @@
           "value": "C"
         },
         {
-          "label": "D. SyntaxError: invalid syntax",
+          "label": "D. SyntaxError: multiple exception types must be parenthesized",
           "value": "D"
         }
       ],
       "answer": "D",
-      "explanation": "Richtige Antwort(en): D."
+      "explanation": "Richtige Antwort(en): D. In Python 3 muessen mehrere Exception-Typen als Tupel geschrieben werden, z.B. except (TypeError, ValueError):."
     },
     {
       "prompt": "What will happen if spam.py is run?",
-      "code": "# spam.py\ntry:\n    print(x)\nexcept:\n    print(\"An exception occurred\")",
+      "code": "# spam.py\ntry:\n   print(x)\nexcept:\n   print(\"An exception occurred\")",
       "type": "single",
       "options": [
         {
@@ -1176,44 +350,814 @@
       "explanation": "Richtige Antwort(en): A."
     },
     {
-      "prompt": "Which option(s) will print ELSE given the following code?",
-      "code": "try:\n    <<< INSERT CODE HERE >>>\nexcept ZeroDivisionError:\n    print('ZeroDivisionError')\nexcept TypeError:\n    print('TypeError')\nelse:\n    print('ELSE')",
+      "prompt": "Select all valid option(s) below about string",
       "type": "multiple",
       "options": [
         {
-          "label": "A. raise Exception",
-          "value": "A",
-          "code": true
+          "label": "A. string.ascii_letters is a concatenation of ascii_lowercase and ascii_uppercase",
+          "value": "A"
         },
         {
-          "label": "B. raise ZeroDivisionError",
+          "label": "B. string.ascii_letters is a concatenation of ascii_lowercase, ascii_uppercase and digits",
+          "value": "B"
+        },
+        {
+          "label": "C. string.ascii_letters are all printable characters found in the keyboard",
+          "value": "C"
+        },
+        {
+          "label": "D. string.ascii_lowercase contains 'abcdefghijklmnopqrstuvwxyz'",
+          "value": "D"
+        },
+        {
+          "label": "E. string.ascii_uppercase contains 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'",
+          "value": "E"
+        }
+      ],
+      "answer": [
+        "A",
+        "D",
+        "E"
+      ],
+      "explanation": "Richtige Antwort(en): A, D, E."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "print(\"\\\\\\\\\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. Syntax Error",
+          "value": "A"
+        },
+        {
+          "label": "B. \\\\\\\\",
+          "value": "B"
+        },
+        {
+          "label": "C. \\\\\\",
+          "value": "C"
+        },
+        {
+          "label": "D. \\\\",
+          "value": "D"
+        },
+        {
+          "label": "E. \\",
+          "value": "E"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "print(\"\\\\\\\\\\\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. Syntax Error",
+          "value": "A"
+        },
+        {
+          "label": "B. \\\\\\\\\\",
+          "value": "B"
+        },
+        {
+          "label": "C. \\\\\\\\",
+          "value": "C"
+        },
+        {
+          "label": "D. \\\\\\",
+          "value": "D"
+        },
+        {
+          "label": "E. \\\\",
+          "value": "E"
+        },
+        {
+          "label": "F. \\",
+          "value": "F"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "print(\"C:\\Program Files\\Microsoft\\Windows NT\", end=\"\")\nprint(\"\\\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. Syntax Error",
+          "value": "A"
+        },
+        {
+          "label": "B. C:\\Program Files\\Microsoft\\Windows NT\\",
+          "value": "B"
+        },
+        {
+          "label": "C. Replace escaped characters with \"?\" e.g. C:?rogram Files?icrosoft? indows NT?",
+          "value": "C"
+        },
+        {
+          "label": "D. Ignore escaped characters e.g. C: rogram Filesicrosoftindows NT",
+          "value": "D"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "print(\"\\\\//\\\\//\", len(\"\\\\//\\\\//\"))",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. \\\\//\\\\// 8",
+          "value": "A"
+        },
+        {
+          "label": "B. \\//\\// 8",
+          "value": "B"
+        },
+        {
+          "label": "C. \\//\\// 6",
+          "value": "C"
+        },
+        {
+          "label": "D. //// 4",
+          "value": "D"
+        },
+        {
+          "label": "E. Syntax Error",
+          "value": "E"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What will be printed in the following code?",
+      "code": "spam = \"\"\"\"\"\"\nham = \"\"\"\n\"\"\"\nprint(spam, ham)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. Syntax Error",
+          "value": "A"
+        },
+        {
+          "label": "B. Two empty strings",
+          "value": "B"
+        },
+        {
+          "label": "C. An empty string and a new line character",
+          "value": "C"
+        },
+        {
+          "label": "D. Two new line character",
+          "value": "D"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Richtige Antwort(en): C."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "spam = chr('a')\nham = ord(spam)\nprint(spam, ham)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 97 a",
+          "value": "A"
+        },
+        {
+          "label": "B. TypeError: 'str' object cannot be interpreted as an integer",
           "value": "B",
           "code": true
         },
         {
-          "label": "C. raise TypeError",
+          "label": "C. TypeError: chr() takes exactly two arguments (1 given)",
           "value": "C",
           "code": true
         },
         {
-          "label": "D. raise",
+          "label": "D. TypeError: ord() takes exactly two arguments (1 given)",
           "value": "D",
           "code": true
         },
         {
-          "label": "E. pass",
-          "value": "E",
+          "label": "E. Syntax Error",
+          "value": "E"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B. chr() erwartet einen Integer-Codepoint; chr('a') wirft in aktuellem Python einen TypeError."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "\"spam\"\n\"ham\"\n\"eggs\"\nprint(\"Hello World\")",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. spam ham eggs Hello World",
+          "value": "A"
+        },
+        {
+          "label": "B. Hello World",
+          "value": "B"
+        },
+        {
+          "label": "C. SyntaxError: invalid syntax",
+          "value": "C"
+        },
+        {
+          "label": "D. NameError: name 'spam' is not defined",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "Which of the option(s) is valid given the code below?",
+      "code": "class Spam:\n    ''' This is class Spam '''\n    pass",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. The code compiles but will not output anything",
+          "value": "A"
+        },
+        {
+          "label": "B. This is class Spam will be printed",
+          "value": "B",
           "code": true
         },
         {
-          "label": "F. replace <<< INSERT CODE HERE >>> with blank",
-          "value": "F"
+          "label": "C. SyntaxError: invalid syntax",
+          "value": "C"
+        },
+        {
+          "label": "D. The file should be saved as Spam.py",
+          "value": "D"
         }
       ],
       "answer": [
-        "E"
+        "A"
       ],
-      "explanation": "Richtige Antwort(en): E."
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "def spam():\n   class Ham:\n      def eggs(self):\n        print('Hello World')\n   return Ham()\nspam().eggs()",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. No output",
+          "value": "A"
+        },
+        {
+          "label": "B. Hello World",
+          "value": "B"
+        },
+        {
+          "label": "C. SyntaxError: invalid syntax",
+          "value": "C"
+        },
+        {
+          "label": "D. AttributeError: spam() has no attribute 'eggs'",
+          "value": "D",
+          "code": true
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "def spam():\n   h = Ham()\n   h.eggs()\n   class Ham:\n      def eggs(self):\n        print('Hello World')\n   return\nspam()",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. No output",
+          "value": "A"
+        },
+        {
+          "label": "B. Hello World",
+          "value": "B"
+        },
+        {
+          "label": "C. SyntaxError: invalid syntax",
+          "value": "C"
+        },
+        {
+          "label": "D. UnboundLocalError: cannot access local variable 'Ham' where it is not associated with a value",
+          "value": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D. Weil Ham innerhalb der Funktion zugewiesen wird, gilt der Name lokal; vor Ausfuehrung der class-Anweisung ist er noch nicht gebunden."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "class Foo:\n    bar = 'spam'\nf1 = Foo()\nf2 = Foo()\nf2.bar = 'ham'\nFoo.bar = 'eggs'\nprint(f1.bar, f2.bar, Foo.bar)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. spam ham eggs",
+          "value": "A"
+        },
+        {
+          "label": "B. eggs ham eggs",
+          "value": "B"
+        },
+        {
+          "label": "C. eggs eggs eggs",
+          "value": "C"
+        },
+        {
+          "label": "D. AttributeError: type object 'Foo' has no attribute 'bar'",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "class Spam:\n    HAM = 1\n    def __init__(self, v=2):\n      self.v = v + Spam.HAM\n      Spam.HAM += 1\na = Spam()\nb = Spam(3)\nprint(a.v, b.v)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. TypeError: __init__() missing 1 required positional argument: 'v'",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. 33",
+          "value": "B"
+        },
+        {
+          "label": "C. 34",
+          "value": "C"
+        },
+        {
+          "label": "D. 3 5",
+          "value": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "class Ham:\n    def __init__(self):\n      self.v1 = 1\nclass Spam(Ham):\n    def __init__(self):\n      self.v2 = 2\ns = Spam()\nprint(s.v1,s.v2)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 02",
+          "value": "A"
+        },
+        {
+          "label": "B. 12",
+          "value": "B"
+        },
+        {
+          "label": "C. Invalid Syntax",
+          "value": "C"
+        },
+        {
+          "label": "D. AttributeError: 'Spam' object has no attribute 'v1'",
+          "value": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "class Ham:\n    v=1\n    def v0(self):\n      return self.v\nclass Spam(Ham):\n    v=2\ns = Spam()\nh = Ham()\nprint(s.v0(), h.v0())",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 11",
+          "value": "A"
+        },
+        {
+          "label": "B. 2 1",
+          "value": "B"
+        },
+        {
+          "label": "C. 22",
+          "value": "C"
+        },
+        {
+          "label": "D. AttributeError: 'Spam' object has no attribute 'v0'",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> def foo(self, p):\n...  print('Hello',p)\n>>> class Spam:\n...  bar = foo\n>>> s = Spam()\n>>> s.bar('World')",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. No output",
+          "value": "A"
+        },
+        {
+          "label": "B. Hello World",
+          "value": "B"
+        },
+        {
+          "label": "C. SyntaxError: invalid syntax",
+          "value": "C"
+        },
+        {
+          "label": "D. NameError: name 'foo' is not defined",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "1 class Spam:\n2     def __init__(self, v):\n3         self.ham = v\n4         self.__ham = self.ham + 1\n5 s = Spam(100)\n6 print(s.ham, s.__ham)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 100 101",
+          "value": "A"
+        },
+        {
+          "label": "B. Error in Line 3",
+          "value": "B"
+        },
+        {
+          "label": "C. Error in Line 4",
+          "value": "C"
+        },
+        {
+          "label": "D. Error in Line 5",
+          "value": "D"
+        },
+        {
+          "label": "E. AttributeError: 'Spam' object has no attribute '__ham'",
+          "value": "E"
+        }
+      ],
+      "answer": "E",
+      "explanation": "Richtige Antwort(en): E. self.__ham wird per Name Mangling als _Spam__ham gespeichert. Der Zugriff s.__ham sucht ein anderes Attribut und scheitert in Zeile 6."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "class A:\n    def spam(self):\n      return 'A.spam'\n    def ham(self):\n      return self.spam()\nclass B:\n    def spam(self):\n      return 'B.spam'\nclass C(B, A):\n    pass\nc = C()\nprint(c.spam(), c.ham())",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. TypeError: Cannot create a consistent method resolution",
+          "value": "A"
+        },
+        {
+          "label": "B. B.spam B.spam",
+          "value": "B"
+        },
+        {
+          "label": "C. B.spam A.spam",
+          "value": "C"
+        },
+        {
+          "label": "D. A.spam A.spam",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "class Spam:\n    def foo(self):\n      print('Super Spam')\nclass Ham:\n    def foo(self):\n      print('Super Ham')\nclass Eggs(Spam, Ham):\n    def foo(self):\n      super().foo()\ne = Eggs()\ne.foo()",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. No output",
+          "value": "A"
+        },
+        {
+          "label": "B. Super Spam",
+          "value": "B"
+        },
+        {
+          "label": "C. Super Ham",
+          "value": "C"
+        },
+        {
+          "label": "D. Super Spam Super Ham",
+          "value": "D"
+        },
+        {
+          "label": "E. Super Ham Super Spam",
+          "value": "E"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "Which option(s) are valid replacements for the marked section below.",
+      "code": "class Bar:\n    def __init__(self):\n      self.x = 1\nclass Foo(Bar):\n    def __init__(self):\n      <<< INSERT CODE HERE >>>\n      self.y = 2\nf = Foo()\nprint(f.x,f.y)",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. Blank. Code will work without replacement",
+          "value": "A"
+        },
+        {
+          "label": "B. super(Foo, self).__init__()",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. Bar.__init__ (self)",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. None. All results in AttributeError: 'Foo' object has no attribute 'x'",
+          "value": "D"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "explanation": "Richtige Antwort(en): B, C. Bar.__init__(self) ruft den Konstruktor direkt auf; super(Foo, self).__init__() ruft ihn ueber die MRO auf."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> [[c for c in range(r)] for r in range(3) if r != 0]",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [[0], [0, 1]]",
+          "value": "A"
+        },
+        {
+          "label": "B. [[1], [1, 2]]",
+          "value": "B"
+        },
+        {
+          "label": "C. [[0], [1]]",
+          "value": "C"
+        },
+        {
+          "label": "D. [[1], [2]]",
+          "value": "D"
+        },
+        {
+          "label": "E. SyntaxError: invalid syntax",
+          "value": "E"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> [_ for _ in range(10) if not _%2 ]",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [0, 2, 4, 6, 8]",
+          "value": "A"
+        },
+        {
+          "label": "B. [2, 4, 6, 8, 10]",
+          "value": "B"
+        },
+        {
+          "label": "C. [1, 3, 5, 7, 9]",
+          "value": "C"
+        },
+        {
+          "label": "D. [0, 1, 3, 4, 5, 6, 7, 8, 9]",
+          "value": "D"
+        },
+        {
+          "label": "E. SyntaxError: invalid syntax",
+          "value": "E"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> [False for i in range(3)]",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. []",
+          "value": "A"
+        },
+        {
+          "label": "B. [False]",
+          "value": "B"
+        },
+        {
+          "label": "C. [0, 1, 2]",
+          "value": "C"
+        },
+        {
+          "label": "D. [False, False, False]",
+          "value": "D"
+        },
+        {
+          "label": "E. SyntaxError: invalid syntax",
+          "value": "E"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> [i for i in range(1)][-1]",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. SyntaxError: invalid syntax",
+          "value": "A"
+        },
+        {
+          "label": "B. []",
+          "value": "B"
+        },
+        {
+          "label": "C. [0]",
+          "value": "C"
+        },
+        {
+          "label": "D. 0",
+          "value": "D"
+        },
+        {
+          "label": "E. None",
+          "value": "E"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> len([[c for c in range(r)] for r in range(3)])",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. 2",
+          "value": "A"
+        },
+        {
+          "label": "B. 3",
+          "value": "B"
+        },
+        {
+          "label": "C. TypeError: len() takes exactly one argument (2 given)",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. SyntaxError: invalid syntax",
+          "value": "D"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Richtige Antwort(en): B."
+    },
+    {
+      "prompt": "Which option will produce a non-empty list?",
+      "type": "multiple",
+      "options": [
+        {
+          "label": "A. lst = [i for i in range(1, 5)]",
+          "value": "A",
+          "code": true
+        },
+        {
+          "label": "B. lst = [i for i in range(5, 1)]",
+          "value": "B",
+          "code": true
+        },
+        {
+          "label": "C. lst = [i for i in range(-1, -5)]",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. lst = [i for i in range(-5, -1)]",
+          "value": "D",
+          "code": true
+        },
+        {
+          "label": "E. lst = [i for i in range(0, -5)]",
+          "value": "E",
+          "code": true
+        }
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "explanation": "Richtige Antwort(en): A, D."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "spam = [x * x for x in range(5)]\ndel spam[spam[2]]\nprint(spam)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [0, 1, 4, 9]",
+          "value": "A"
+        },
+        {
+          "label": "B. IndexError: list index out of range",
+          "value": "B"
+        },
+        {
+          "label": "C. TypeError: range() takes exactly 2 arguments (1 given)",
+          "value": "C",
+          "code": true
+        },
+        {
+          "label": "D. SyntaxError: invalid syntax",
+          "value": "D"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": "x = [_ for _ in range(10)]\ndel x[0:-2]\nprint(x)",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [8, 9]",
+          "value": "A"
+        },
+        {
+          "label": "B. [9, 8]",
+          "value": "B"
+        },
+        {
+          "label": "C. [0, 1, 2, 3, 4, 5, 6, 7]",
+          "value": "C"
+        },
+        {
+          "label": "D. [7, 6, 5, 4, 3, 2, 1, 0]",
+          "value": "D"
+        },
+        {
+          "label": "E. [2, 3, 4, 5, 6, 7, 8, 9]",
+          "value": "E"
+        },
+        {
+          "label": "F. [9, 8, 7, 6, 5, 4, 3, 2]",
+          "value": "F"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Richtige Antwort(en): A."
+    },
+    {
+      "prompt": "What is the output of the following code?",
+      "code": ">>> [i // i for i in range(0,3)]",
+      "type": "single",
+      "options": [
+        {
+          "label": "A. [0, 1, 1]",
+          "value": "A"
+        },
+        {
+          "label": "B. [1, 1]",
+          "value": "B"
+        },
+        {
+          "label": "C. [0, 1, 2]",
+          "value": "C"
+        },
+        {
+          "label": "D. ZeroDivisionError: integer division or modulo by zero",
+          "value": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Richtige Antwort(en): D."
     }
   ]
 }

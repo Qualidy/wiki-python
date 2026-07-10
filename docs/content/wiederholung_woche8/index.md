@@ -18,3 +18,7 @@ Diese Seite ist der eigene Wiederholungsbereich für diese Woche. Sie ist bewuss
 | Eigene Exceptions | [Eigene Exceptions](eigene_exceptions.md) | Links zur Theorie plus Aufgaben |
 | Generatoren | [Generatoren](generatoren.md) | Links zur Theorie plus Aufgaben |
 | Dateien öffnen, lesen, schreiben | [Dateien lesen und schreiben](dateien.md) | Theorie plus Aufgaben |
+| PCAP-Standardmodule | [`math`, `random`, `platform`](standardmodule_pcap.md) | Theorie plus Prüfungsfallen |
+| Strings / Escape-Sequenzen | [Strings und Escape-Fallen](string_escape_fallen.md) | Theorie plus Output-Fragen |
+| OOP Introspection / Name Mangling | [OOP: Name Mangling und Introspection](oop_introspection_name_mangling.md) | Theorie plus Prüfungsfallen |
+| Exception-Fallen | [Exception-Fallen für PCAP](exceptions_fallen.md) | Theorie plus Output-Fragen |

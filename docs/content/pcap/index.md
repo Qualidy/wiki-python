@@ -30,7 +30,9 @@ auf der offiziellen Python-Institute-Seite geprueft werden:
 - [Testfragen 1](testexam_1.md)
 - [Testfragen 2](testexam_2.md)
 - [Testexam 3 (PCAP-31-02)](testexam_3.md): basiert auf der Vorgaengerversion `PCAP-31-02`
-- [Testexam 4 (PCAP-31-03)](testexam_4.md)
+- [Testexam 4 (PCAP-31-03)](testexam_4.md): gewichtete Pruefungssimulation
+- [Testexam 5 (PCAP-31-03)](testexam_5.md): gewichtete Pruefungssimulation
+- [Testexam 6 (PCAP-31-03)](testexam_6.md): gewichtete Pruefungssimulation
 
 ## Überblick
 
@@ -54,6 +56,14 @@ The test candidate who has passed the PCAP-31-0x exam demonstrates the following
 - sufficient skills to create and develop her/his own programming portfolio
 - the potential to use Python in everyday life applications including DIY activities
 
+## PCAP-Kompendium
+
+- [Modules and Packages](kompendium_module_packages.md)
+- [Exceptions](kompendium_exceptions.md)
+- [Strings](kompendium_strings.md)
+- [Object-Oriented Programming](kompendium_oop.md)
+- [Miscellaneous](kompendium_misc.md)
+
 ## Domains Covered
 
 ### Section 1: Modules and Packages (12%)
@@ -68,6 +78,7 @@ Objectives covered by the block (6 exam items)
     - [Pip und Venv](../module_pakete_pip/pip_venv/pip_venv.md)
     - [Module und Imports Wiederholung](../wiederholung/module_imports_wiederholung.md)
     - [Wiederholung Woche 8: Module, Imports und Standardmodule](../wiederholung/module_imports_wiederholung.md#weitere-pcap-relevante-standardmodule)
+    - [PCAP-Standardmodule](../wiederholung_woche8/standardmodule_pcap.md)
 
 - import variants: `import`, `from import`, `import as`, `import *`
 - advanced qualifying for nested modules
@@ -79,6 +90,7 @@ Objectives covered by the block (6 exam items)
 !!! info "Relevante Skriptstellen"
     - [Mathematische Operationen](../python_grundlagen/math_operations/math_operations.md)
     - [Operatoren und Precedence](../wiederholung_woche8/operatoren_precedence.md)
+    - [PCAP-Standardmodule](../wiederholung_woche8/standardmodule_pcap.md#math)
 
 - functions: `ceil()`, `floor()`, `trunc()`, `factorial()`, `hypot()`, `sqrt()`
 
@@ -88,6 +100,7 @@ Objectives covered by the block (6 exam items)
     - [Imports Einführung](../python_grundlagen/module/module.md)
     - [Pakete](../module_pakete_pip/pakete/pakete.md)
     - [Module und Imports Wiederholung](../wiederholung/module_imports_wiederholung.md)
+    - [PCAP-Standardmodule](../wiederholung_woche8/standardmodule_pcap.md#random)
 
 - functions: `random()`, `seed()`, `choice()`, `sample()`
 
@@ -97,6 +110,7 @@ Objectives covered by the block (6 exam items)
     - [Imports Einführung](../python_grundlagen/module/module.md)
     - [Pakete](../module_pakete_pip/pakete/pakete.md)
     - [Module und Imports Wiederholung](../wiederholung/module_imports_wiederholung.md)
+    - [PCAP-Standardmodule](../wiederholung_woche8/standardmodule_pcap.md#platform)
 
 - functions: `platform()`, `machine()`, `processor()`, `system()`, `version()`, `python_implementation()`, `python_version_tuple()`
 
@@ -127,6 +141,7 @@ Objectives covered by the block (5 exam items)
     - [Exceptions Vertiefung](../exceptions/index.md)
     - [Exceptions Wiederholung](../wiederholung/exceptions.md)
     - [Eigene Exceptions](../wiederholung_woche8/eigene_exceptions.md)
+    - [Exception-Fallen für PCAP](../wiederholung_woche8/exceptions_fallen.md)
 
 - `except`, `except`-`except`, `except`-`else`, `except (e1, e2)`
 - the hierarchy of exceptions
@@ -142,6 +157,7 @@ Objectives covered by the block (5 exam items)
     - [Exceptions Vertiefung](../exceptions/index.md)
     - [Exceptions Wiederholung](../wiederholung/exceptions.md)
     - [Eigene Exceptions](../wiederholung_woche8/eigene_exceptions.md)
+    - [Exception-Fallen für PCAP](../wiederholung_woche8/exceptions_fallen.md)
 
 - self-defined exceptions
 - defining and using self-defined exceptions
@@ -155,6 +171,7 @@ Objectives covered by the block (8 exam items)
 !!! info "Relevante Skriptstellen"
     - [Strings](../python_grundlagen/strings/strings.md)
     - [chr und ord](../wiederholung_woche8/chr_ord.md)
+    - [Strings und Escape-Fallen](../wiederholung_woche8/string_escape_fallen.md)
 
 - encoding standards: ASCII, UNICODE, UTF-8, code points, escape sequences
 
@@ -164,6 +181,7 @@ Objectives covered by the block (8 exam items)
     - [Strings](../python_grundlagen/strings/strings.md)
     - [chr und ord](../wiederholung_woche8/chr_ord.md)
     - [Mutable, Immutable und Referenzen](../wiederholung_woche8/mutable_immutable_referenzen.md)
+    - [Strings und Escape-Fallen](../wiederholung_woche8/string_escape_fallen.md)
 
 - functions: `ord()`, `chr()`
 - indexing, slicing, immutability
@@ -202,6 +220,7 @@ Objectives covered by the block (12 exam items)
     - [Getter & Setter](../oop_vertiefung/getter_setter/getter_setter.md)
     - [Klassen, super() und Dunder Methods](../wiederholung/klassen_oop_wiederholung.md)
     - [Mutable, Immutable und Referenzen](../wiederholung_woche8/mutable_immutable_referenzen.md)
+    - [OOP: Name Mangling und Introspection](../wiederholung_woche8/oop_introspection_name_mangling.md)
 
 - instance vs. class variables: declarations and initializations
 - the `__dict__` property: objects vs. classes
@@ -226,6 +245,7 @@ Objectives covered by the block (12 exam items)
     - [OOP Wiederholung](../oop_vertiefung_teil2/oop_wiederholung.md)
     - [Quiz Polymorphismus & Introspection](../oop_vertiefung_teil2/quiz_polymorphismus_introspection.md)
     - [Quiz Wochenreview](../oop_vertiefung_teil2/quiz_wochenreview.md)
+    - [OOP: Name Mangling und Introspection](../wiederholung_woche8/oop_introspection_name_mangling.md)
 
 - introspection and the `hasattr()` function: objects vs. classes
 - properties: `__name__`, `__module__`, `__bases__`
@@ -239,6 +259,7 @@ Objectives covered by the block (12 exam items)
     - [Mehrfachvererbung, MRO & Diamond](../oop_vertiefung_teil2/mro_diamond.md)
     - [Klassen, super() und Dunder Methods](../wiederholung/klassen_oop_wiederholung.md)
     - [super() in Klassen](../wiederholung_woche8/super_init_methoden.md)
+    - [OOP: Name Mangling und Introspection](../wiederholung_woche8/oop_introspection_name_mangling.md)
     - [Quiz Komposition, Mixins & MRO](../oop_vertiefung_teil2/quiz_komposition_mixins_mro.md)
 
 - single and multiple inheritance

@@ -129,6 +129,16 @@ def create_quiz(
             '</div>'
         )
 
+    def render_inline_code(text):
+        parts = re.split(r"(`[^`]*`)", str(text))
+        rendered = []
+        for part in parts:
+            if len(part) >= 2 and part.startswith("`") and part.endswith("`"):
+                rendered.append(f'<code>{html.escape(part[1:-1])}</code>')
+            else:
+                rendered.append(html.escape(part).replace("\n", "<br>"))
+        return "".join(rendered)
+
     def render_option_label(option, fallback):
         label_text = str(option.get("label", fallback))
         if option.get("code"):
@@ -140,7 +150,7 @@ def create_quiz(
             body = html.escape(label_text).replace("\n", "<br>")
             return f'<code>{body}</code>'
 
-        return html.escape(label_text).replace("\n", "<br>")
+        return render_inline_code(label_text)
 
     answers = []
     for index, question in enumerate(questions):

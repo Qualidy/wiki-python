@@ -34,6 +34,14 @@ auf der offiziellen Python-Institute-Seite geprueft werden:
 - [Testexam 5 (PCAP-31-03)](testexam_5.md): gewichtete Pruefungssimulation
 - [Testexam 6 (PCAP-31-03)](testexam_6.md): gewichtete Pruefungssimulation
 
+## Kompendium
+
+- [Modules and Packages](kompendium_module_packages.md)
+- [Exceptions](kompendium_exceptions.md)
+- [Strings](kompendium_strings.md)
+- [Object-Oriented Programming](kompendium_oop.md)
+- [Miscellaneous](kompendium_misc.md)
+
 ## Überblick
 
 - PCAP ist eine Associate-Zertifizierung des Python Institute.

@@ -1,0 +1,3910 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../quiz_polymorphismus_introspection/">
+      
+      
+        <link rel="next" href="../quiz_wochenreview/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Quiz Komposition, Mixins & MRO - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/pcap_quiz.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-komposition-mixins-mro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz Komposition, Mixins & MRO
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../begriffe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Begriffsübersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vererbung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/magic_methods/magic_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Magic Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/protected_private/protected_private/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protected & Private
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/getter_setter/getter_setter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getter & Setter (@property)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/class_static_methods/class_static_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class- & Staticmethod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exceptions Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Exceptions Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module, Pakete & pip
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Module, Pakete & pip
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exceptions/pip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pip und Venv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Vertiefung Teil 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Vertiefung Teil 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown_dokumentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projekt dokumentieren mit Markdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OOP Wiederholung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polymorphismus_introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Polymorphismus & Introspection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komposition_mixins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Komposition, Vererbung & Mixins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mro_diamond/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mehrfachvererbung, MRO & Diamond
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projekt_ticket_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projekt Ticket-System Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../streamlit_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streamlit Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz_oop_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz OOP Grundlagen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz_oop_english_vocab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz OOP English Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz_polymorphismus_introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Polymorphismus & Introspection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Komposition, Mixins & MRO
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz_wochenreview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Wochenreview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Fortgeschritten
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Fortgeschritten
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/rekursion/rekursion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rekursion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/lambda/lambda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/generatoren/generatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/dekoratoren/dekoratoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dekoratoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wiederholung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Wiederholung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/function_scopes_and_closure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope, Closure & Variablen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/set_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/list_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/comprehension_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/args_kwargs_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args und Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/module_imports_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module und Imports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/klassen_oop_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen, super() und Dunder Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Web Scraping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Web Scraping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/01_http_requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP & Requests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/02_html_parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML Parsing mit BeautifulSoup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/03_css_selektoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS-Selektoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/04_projekt_scraper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projektaufgabe - Zitat-Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wiederholung Woche 8
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Wiederholung Woche 8
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/scope_closure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope und Closure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/map_filter_lambda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    map, filter und lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/bytearray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    bytearray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/chr_ord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    chr und ord
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/operatoren_precedence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operatoren und Precedence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/mutable_immutable_referenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mutable, Immutable und Referenzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/quiz_woche8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Halftime-Quiz Woche 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/listen_slices_sortieren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen, Slices und Sortieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/super_init_methoden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    super() in Klassen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/eigene_exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eigene Exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/generatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/dateien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateien lesen und schreiben
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/standardmodule_pcap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCAP-Standardmodule
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/string_escape_fallen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings und Escape-Fallen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/oop_introspection_name_mangling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OOP Introspection und Name Mangling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/exceptions_fallen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception-Fallen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PCEP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            PCEP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PCAP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            PCAP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/kompendium_module_packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Modules and Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/kompendium_exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/kompendium_strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/kompendium_oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium OOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/kompendium_misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Miscellaneous
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/testexam_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testfragen 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/testexam_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testfragen 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/testexam_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 3 (PCAP-31-02)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/testexam_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 4 (PCAP-31-03)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/testexam_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 5 (PCAP-31-03)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcap/testexam_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 6 (PCAP-31-03)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quiz-komposition-mixins-mro">Quiz: Komposition, Mixins &amp; MRO<a class="headerlink" href="#quiz-komposition-mixins-mro" title="Permanent link">&para;</a></h1>
+<p>Dieses Quiz wiederholt Komposition, Vererbung, Mixins und MRO.</p>
+<details class="question" open>
+<summary>Quiz: Komposition, Mixins &amp; MRO</summary>
+<p>Prüfe zuerst die Modellierungsentscheidung, dann die MRO.</p>
+<form class="interactive-quiz" id="quiz-dea105c8ea824679b03fcf3df0a307b6" data-exam-mode="false">
+<div class="quiz-question">
+<p><strong>1. Ein Auto hat einen Motor. Welche Beziehung passt besser?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q0-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q0-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q0" value="composition"> Komposition</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q0-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q0-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q0" value="inheritance"> Vererbung</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="0">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>2. Ein AdminUser ist ein User. Welche Beziehung passt besser?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q1-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q1-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q1" value="composition"> Komposition</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q1-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q1-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q1" value="inheritance"> Vererbung</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="1">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>3. Was ist ein Mixin meistens?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q2-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q2-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q2" value="ability"> Eine kleine Zusatzfähigkeit für Klassen</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q2-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q2-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q2" value="base"> Immer die wichtigste Basisklasse</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q2-2"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q2-2" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q2" value="replacement"> Ein Ersatz für jede Komposition</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="2">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>4. Welche Methode/Property zeigt die Method Resolution Order einer Klasse? Schreibe den Ausdruck für die Klasse Report.</strong></p>
+<input class="quiz-text-input" type="text" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q3" placeholder="Antwort eingeben" autocomplete="off">
+<button type="button" class="md-button quiz-check-one" data-question-index="3">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>5. Was bedeutet super() bei Mehrfachvererbung genauer?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q4-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q4-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q4" value="alphabet"> Immer die erste Klasse im Alphabet</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q4-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q4-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q4" value="object"> Immer object</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q4-2"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q4-2" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q4" value="next_mro"> Nächster Eintrag in der MRO</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="4">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>6. Welche Ausgabe entsteht bei class Duck(CanSwim, CanFly), wenn beide move() haben und CanSwim.move() &#x27;swim&#x27; zurückgibt?</strong></p>
+<input class="quiz-text-input" type="text" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q5" placeholder="Antwort eingeben" autocomplete="off">
+<button type="button" class="md-button quiz-check-one" data-question-index="5">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>7. Ein Course enthält Student-Objekte. Welche Beziehung passt besser?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q6-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q6-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q6" value="inheritance"> Vererbung</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q6-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q6-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q6" value="composition"> Komposition</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="6">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>8. Ein ElectricCar ist ein Car. Welche Beziehung passt besser?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q7-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q7-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q7" value="composition"> Komposition</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q7-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q7-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q7" value="inheritance"> Vererbung</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="7">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>9. Welche Aussagen zu Mixins sind sinnvoll?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-0" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q8" value="database"> Mixins müssen immer Datenbanken öffnen.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-1" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q8" value="suffix"> Mixin-Namen enden oft auf Mixin.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-2"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-2" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q8" value="ability"> Mixins ergänzen häufig eine Fähigkeit.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-3"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q8-3" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q8" value="small"> Mixins sollten eher klein bleiben.</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="8">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>10. Welche Ausgabe entsteht bei class Duck(CanFly, CanSwim), wenn CanFly.move() &#x27;fly&#x27; zurückgibt?</strong></p>
+<input class="quiz-text-input" type="text" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q9" placeholder="Antwort eingeben" autocomplete="off">
+<button type="button" class="md-button quiz-check-one" data-question-index="9">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>11. Was ist das Diamond Problem?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q10-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q10-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q10" value="shared_parent"> Zwei Oberklassen erben von derselben Basisklasse.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q10-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q10-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q10" value="none"> Eine Klasse hat gar keine Oberklasse.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q10-2"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q10-2" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q10" value="params"> Eine Methode hat zu viele Parameter.</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="10">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>12. Welcher Eintrag steht am Ende fast jeder MRO?</strong></p>
+<input class="quiz-text-input" type="text" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q11" placeholder="Antwort eingeben" autocomplete="off">
+<button type="button" class="md-button quiz-check-one" data-question-index="11">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>13. Welche Schritte helfen beim Lösen einer MRO-Aufgabe?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-0" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q12" value="alphabet"> Alphabetisch sortieren</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-1" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q12" value="left_to_right"> Methode von links nach rechts suchen</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-2"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-2" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q12" value="super_next"> super() als nächsten MRO-Eintrag verstehen</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-3"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q12-3" type="checkbox" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q12" value="write_mro"> MRO aufschreiben</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="12">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>14. Was ist ein Warnsignal gegen Vererbung?</strong></p>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q13-0"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q13-0" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q13" value="only_reuse"> Vererbung wird nur genutzt, um Code zu sparen.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q13-1"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q13-1" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q13" value="is_a"> Eine echte ist-ein-Beziehung liegt vor.</label>
+<label class="quiz-option" for="quiz-dea105c8ea824679b03fcf3df0a307b6-q13-2"><input id="quiz-dea105c8ea824679b03fcf3df0a307b6-q13-2" type="radio" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q13" value="specializes"> Eine Unterklasse spezialisiert eine Oberklasse.</label>
+<button type="button" class="md-button quiz-check-one" data-question-index="13">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>15. Welche Methode wird in einem InfoMixin oft genutzt, um Attribute auszugeben?</strong></p>
+<input class="quiz-text-input" type="text" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q14" placeholder="Antwort eingeben" autocomplete="off">
+<button type="button" class="md-button quiz-check-one" data-question-index="14">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>16. Welche Ausgabe erzeugt der Code?</strong></p>
+<pre><code>class CanSwim:
+    def move(self):
+        return &quot;swim&quot;
+
+class CanFly:
+    def move(self):
+        return &quot;fly&quot;
+
+class Duck(CanFly, CanSwim):
+    pass
+
+print(Duck().move())
+</code></pre>
+<textarea class="quiz-text-input quiz-output-input" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q15" placeholder="Expected Output eingeben" rows="4"></textarea>
+<button type="button" class="md-button quiz-check-one" data-question-index="15">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>17. Welche Ausgabe erzeugt der Code?</strong></p>
+<pre><code>class Parent:
+    def setup(self):
+        print(&quot;Parent&quot;)
+
+class Left(Parent):
+    def setup(self):
+        print(&quot;Left&quot;)
+        super().setup()
+
+class Right(Parent):
+    def setup(self):
+        print(&quot;Right&quot;)
+        super().setup()
+
+class Child(Left, Right):
+    def setup(self):
+        print(&quot;Child&quot;)
+        super().setup()
+
+Child().setup()
+</code></pre>
+<textarea class="quiz-text-input quiz-output-input" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q16" placeholder="Expected Output eingeben" rows="4"></textarea>
+<button type="button" class="md-button quiz-check-one" data-question-index="16">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>18. Welche Ausgabe erzeugt der Code?</strong></p>
+<pre><code>class InfoMixin:
+    def info(self):
+        return self.__dict__
+
+class Book(InfoMixin):
+    def __init__(self, title):
+        self.title = title
+
+print(Book(&quot;Python&quot;).info())
+</code></pre>
+<textarea class="quiz-text-input quiz-output-input" name="quiz-dea105c8ea824679b03fcf3df0a307b6-q17" placeholder="Expected Output eingeben" rows="4"></textarea>
+<button type="button" class="md-button quiz-check-one" data-question-index="17">Diese Frage prüfen</button>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<button type="button" class="md-button md-button--primary quiz-check">Prüfen</button>
+<button type="reset" class="md-button quiz-reset">Zurücksetzen</button>
+<p class="quiz-summary" aria-live="polite"></p>
+</form>
+<style>
+.interactive-quiz {
+  display: grid;
+  gap: 1rem;
+}
+.quiz-question {
+  border-left: 0.2rem solid var(--md-accent-fg-color);
+  padding: 0.6rem 0.8rem;
+  background: var(--md-code-bg-color);
+}
+.quiz-exam-bar {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 3rem;
+  z-index: 2;
+}
+.quiz-timer {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  font-weight: 700;
+}
+.quiz-option {
+  display: block;
+  margin: 0.35rem 0;
+}
+.quiz-option-prefix {
+  display: inline-block;
+  min-width: 1.6rem;
+}
+.quiz-option code {
+  white-space: pre-wrap;
+  vertical-align: top;
+}
+.quiz-text-input {
+  width: min(100%, 32rem);
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.quiz-output-input {
+  font-family: var(--md-code-font-family);
+  min-height: 6rem;
+}
+.quiz-check-one {
+  margin-top: 0.55rem;
+}
+.quiz-feedback {
+  margin: 0.45rem 0 0;
+  font-weight: 600;
+}
+.quiz-feedback.correct {
+  color: #2e7d32;
+}
+.quiz-feedback.incorrect {
+  color: #c62828;
+}
+.quiz-summary {
+  font-weight: 700;
+}
+</style>
+<script type="application/json" id="quiz-dea105c8ea824679b03fcf3df0a307b6-answers">W3sidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogImNvbXBvc2l0aW9uIiwgImV4cGxhbmF0aW9uIjogIiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiaW5oZXJpdGFuY2UiLCAiZXhwbGFuYXRpb24iOiAiIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJhYmlsaXR5IiwgImV4cGxhbmF0aW9uIjogIiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInRleHQiLCAiYW5zd2VyIjogIlJlcG9ydC5fX21yb19fIiwgImV4cGxhbmF0aW9uIjogIkRpZSBNUk8gaXN0IMO8YmVyIENsYXNzLl9fbXJvX18gc2ljaHRiYXIuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJuZXh0X21ybyIsICJleHBsYW5hdGlvbiI6ICIiLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJ0ZXh0IiwgImFuc3dlciI6ICJzd2ltIiwgImV4cGxhbmF0aW9uIjogIkNhblN3aW0gc3RlaHQgaW0gS2xhc3NlbmtvcGYgenVlcnN0LiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiY29tcG9zaXRpb24iLCAiZXhwbGFuYXRpb24iOiAiIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJpbmhlcml0YW5jZSIsICJleHBsYW5hdGlvbiI6ICIiLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJtdWx0aXBsZSIsICJhbnN3ZXIiOiBbInNtYWxsIiwgInN1ZmZpeCIsICJhYmlsaXR5Il0sICJleHBsYW5hdGlvbiI6ICIiLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJ0ZXh0IiwgImFuc3dlciI6ICJmbHkiLCAiZXhwbGFuYXRpb24iOiAiIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJzaGFyZWRfcGFyZW50IiwgImV4cGxhbmF0aW9uIjogIiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInRleHQiLCAiYW5zd2VyIjogIm9iamVjdCIsICJleHBsYW5hdGlvbiI6ICJGYXN0IGFsbGUgS2xhc3NlbiBlcmJlbiBhbSBFbmRlIHZvbiBvYmplY3QuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJ3cml0ZV9tcm8iLCAibGVmdF90b19yaWdodCIsICJzdXBlcl9uZXh0Il0sICJleHBsYW5hdGlvbiI6ICIiLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIm9ubHlfcmV1c2UiLCAiZXhwbGFuYXRpb24iOiAiIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAidGV4dCIsICJhbnN3ZXIiOiAiX19kaWN0X18iLCAiZXhwbGFuYXRpb24iOiAib2JqLl9fZGljdF9fIHplaWd0IGRpZSBJbnN0YW56YXR0cmlidXRlLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogIm91dHB1dCIsICJhbnN3ZXIiOiAiZmx5IiwgImV4cGxhbmF0aW9uIjogIkNhbkZseSBzdGVodCBpbiBkZXIgTVJPIHZvciBDYW5Td2ltLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogIm91dHB1dCIsICJhbnN3ZXIiOiAiQ2hpbGRcbkxlZnRcblJpZ2h0XG5QYXJlbnRcbiIsICJleHBsYW5hdGlvbiI6ICJzdXBlcigpIGZvbGd0IGRlciBNUk86IENoaWxkIC0mZ3Q7IExlZnQgLSZndDsgUmlnaHQgLSZndDsgUGFyZW50LiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogIm91dHB1dCIsICJhbnN3ZXIiOiAieyd0aXRsZSc6ICdQeXRob24nfSIsICJleHBsYW5hdGlvbiI6ICJEYXMgTWl4aW4gc3RlbGx0IGluZm8oKSBiZXJlaXQsIEJvb2sgbGllZmVydCBkaWUgSW5zdGFuemF0dHJpYnV0ZS4iLCAicG9pbnRzIjogMX1d</script>
+<script>
+(function() {
+  const form = document.getElementById("quiz-dea105c8ea824679b03fcf3df0a307b6");
+  const dataNode = document.getElementById("quiz-dea105c8ea824679b03fcf3df0a307b6-answers");
+  if (!form || !dataNode) return;
+  const answers = JSON.parse(decodeURIComponent(escape(atob(dataNode.textContent))));
+  const examMode = form.dataset.examMode === "true";
+  const durationMinutes = Number(form.dataset.durationMinutes || 0);
+  const passingScore = form.dataset.passingScore ? Number(form.dataset.passingScore) : null;
+  let finished = false;
+  let timerInterval = null;
+
+  function normalize(value) {
+    return String(value ?? "").trim().toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function arraysEqual(a, b) {
+    const left = [...a].map(normalize).sort();
+    const right = [...b].map(normalize).sort();
+    return left.length === right.length && left.every((value, index) => value === right[index]);
+  }
+
+  function checkQuestion(index, reveal = true) {
+    const question = answers[index];
+    const name = "quiz-dea105c8ea824679b03fcf3df0a307b6-q" + index;
+    const container = form.querySelectorAll(".quiz-question")[index];
+    const feedback = container.querySelector(".quiz-feedback");
+
+    let correct = false;
+    if (question.type === "single") {
+      const selected = form.querySelector('input[name="' + name + '"]:checked');
+      correct = selected && normalize(selected.value) === normalize(question.answer);
+    } else if (question.type === "multiple") {
+      const selected = Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map(input => input.value);
+      correct = arraysEqual(selected, Array.isArray(question.answer) ? question.answer : [question.answer]);
+    } else {
+      const input = form.querySelector('[name="' + name + '"]');
+      const validAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
+      correct = input && validAnswers.some(answer => normalize(input.value) === normalize(answer));
+    }
+
+    if (reveal) {
+      if (correct) {
+        feedback.textContent = "Richtig.";
+        feedback.className = "quiz-feedback correct";
+      } else {
+        feedback.textContent = "Nicht richtig." + (question.explanation ? " " + question.explanation : "");
+        feedback.className = "quiz-feedback incorrect";
+      }
+    }
+
+    return correct;
+  }
+
+  function finishQuiz() {
+    if (finished) return;
+    finished = true;
+    let score = 0;
+    let total = 0;
+
+    answers.forEach(function(question, index) {
+      total += Number(question.points || 1);
+      if (checkQuestion(index, true)) {
+        score += Number(question.points || 1);
+      }
+    });
+
+    let summary = "Ergebnis: " + score + " von " + total + " Punkten.";
+    if (passingScore !== null) {
+      summary += score >= passingScore ? " Bestanden." : " Nicht bestanden.";
+    }
+    form.querySelector(".quiz-summary").textContent = summary;
+    if (examMode) {
+      form.querySelectorAll("input, textarea, button").forEach(node => {
+        if (!node.classList.contains("quiz-reset")) node.disabled = true;
+      });
+    }
+  }
+
+  function startTimer() {
+    if (!examMode || !durationMinutes) return;
+    const timer = form.querySelector(".quiz-timer");
+    if (!timer) return;
+    if (timerInterval) clearInterval(timerInterval);
+    let remaining = durationMinutes * 60;
+    const render = function() {
+      const minutes = Math.floor(remaining / 60);
+      const seconds = remaining % 60;
+      timer.textContent = "Zeit: " + String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+    };
+    render();
+    timerInterval = setInterval(function() {
+      if (finished) {
+        clearInterval(timerInterval);
+        return;
+      }
+      remaining -= 1;
+      render();
+      if (remaining <= 0) {
+        clearInterval(timerInterval);
+        finishQuiz();
+      }
+    }, 1000);
+  }
+
+  form.querySelectorAll(".quiz-check-one").forEach(button => {
+    button.addEventListener("click", function() {
+      const index = Number(button.dataset.questionIndex);
+      checkQuestion(index);
+      form.querySelector(".quiz-summary").textContent = "";
+    });
+  });
+
+  form.querySelector(".quiz-check").addEventListener("click", function() {
+    finishQuiz();
+  });
+
+  form.addEventListener("reset", function() {
+    setTimeout(function() {
+      form.querySelectorAll(".quiz-feedback").forEach(node => {
+        node.textContent = "";
+        node.className = "quiz-feedback";
+      });
+      form.querySelector(".quiz-summary").textContent = "";
+      finished = false;
+      form.querySelectorAll("input, textarea, button").forEach(node => {
+        node.disabled = false;
+      });
+      startTimer();
+    }, 0);
+  });
+  startTimer();
+})();
+</script>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../quiz_polymorphismus_introspection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quiz Polymorphismus &amp; Introspection">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Quiz Polymorphismus & Introspection
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../quiz_wochenreview/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz Wochenreview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz Wochenreview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/pcap_quiz.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

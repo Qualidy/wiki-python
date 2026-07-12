@@ -1,0 +1,4252 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../testexam_5/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Testexam 6 (PCAP-31-03) - Python Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/pcap_quiz.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#testexam-6-pcap-31-03" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Python Wiki" class="md-header__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Testexam 6 (PCAP-31-03)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Python Wiki" class="md-nav__button md-logo" aria-label="Python Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Python Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../begriffe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Begriffsübersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/python_grundlagen/python_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/debugging/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Der Debugger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/variables_types/variablen_datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variable Datentypen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/math_operations/math_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mathematische Operationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/strings/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/if_elif_else/if_elif_else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verzweigungen (if/elif/else)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/loops/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schleifen (while, for)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/input_output/input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ein- und Ausgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/module/module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Imports (Einführung)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Woche 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Woche 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/aufgabe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_quiz/git_cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen & Fehlerbehandlung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen & Fehlerbehandlung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fehlerbehandlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/functions/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/type_hints/type_hints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Type Hints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_grundlagen/try_except/try_except/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try-Except
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datenstrukturen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Datenstrukturen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/lists/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/tupel/tupel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tupel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/sets/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/dictionaries/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionaries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/booleans/booleans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Booleans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datenstrukturen/zip/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Comprehensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../comprehensions/list_comp/list_comp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/scopes/scopes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scopes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/args_kwargs/args_kwargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args & Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_vertiefung/docstring/docstring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docstring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dateien & Dateisystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Dateien & Dateisystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dateien_dateisystem/dateioperationen/dateioperationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateioperationen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/define_classes/define_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen definieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/attributes/attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/methods/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_grundlagen/unittests/unittests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unittest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/vererbung_polymorphismus/vererbung/vererbung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vererbung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/magic_methods/magic_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Magic Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/protected_private/protected_private/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protected & Private
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/getter_setter/getter_setter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getter & Setter (@property)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung/class_static_methods/class_static_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class- & Staticmethod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exceptions Vertiefung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Exceptions Vertiefung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Module, Pakete & pip
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Module, Pakete & pip
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exceptions/pip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pip und Venv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OOP Vertiefung Teil 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            OOP Vertiefung Teil 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/markdown_dokumentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projekt dokumentieren mit Markdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/oop_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OOP Wiederholung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/polymorphismus_introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Polymorphismus & Introspection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/komposition_mixins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Komposition, Vererbung & Mixins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/mro_diamond/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mehrfachvererbung, MRO & Diamond
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/projekt_ticket_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projekt Ticket-System Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/streamlit_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streamlit Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/quiz_oop_grundlagen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz OOP Grundlagen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/quiz_oop_english_vocab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz OOP English Vocabulary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/quiz_polymorphismus_introspection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Polymorphismus & Introspection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/quiz_komposition_mixins_mro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Komposition, Mixins & MRO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop_vertiefung_teil2/quiz_wochenreview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Wochenreview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funktionen Fortgeschritten
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen Fortgeschritten
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/rekursion/rekursion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rekursion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/lambda/lambda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/generatoren/generatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funktionen_fortgeschritten/dekoratoren/dekoratoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dekoratoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wiederholung
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Wiederholung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/function_scopes_and_closure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope, Closure & Variablen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/set_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/list_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/comprehension_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/args_kwargs_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Args und Kwargs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/module_imports_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Module und Imports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung/klassen_oop_wiederholung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Klassen, super() und Dunder Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projekt Web Scraping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Projekt Web Scraping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/01_http_requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP & Requests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/02_html_parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML Parsing mit BeautifulSoup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/03_css_selektoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS-Selektoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projekt_webscraping/04_projekt_scraper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projektaufgabe - Zitat-Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wiederholung Woche 8
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Wiederholung Woche 8
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/scope_closure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope und Closure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/map_filter_lambda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    map, filter und lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/bytearray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    bytearray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/chr_ord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    chr und ord
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/operatoren_precedence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operatoren und Precedence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/mutable_immutable_referenzen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mutable, Immutable und Referenzen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/quiz_woche8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Halftime-Quiz Woche 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/listen_slices_sortieren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Listen, Slices und Sortieren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/super_init_methoden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    super() in Klassen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/eigene_exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eigene Exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/generatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/dateien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dateien lesen und schreiben
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/standardmodule_pcap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCAP-Standardmodule
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/string_escape_fallen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Strings und Escape-Fallen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/oop_introspection_name_mangling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OOP Introspection und Name Mangling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiederholung_woche8/exceptions_fallen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception-Fallen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PCEP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            PCEP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pcep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PCAP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            PCAP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kompendium_module_packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Modules and Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kompendium_exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kompendium_strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Strings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kompendium_oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium OOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kompendium_misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kompendium Miscellaneous
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexam_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testfragen 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexam_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testfragen 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexam_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 3 (PCAP-31-02)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexam_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 4 (PCAP-31-03)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testexam_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 5 (PCAP-31-03)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testexam 6 (PCAP-31-03)
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="testexam-6-pcap-31-03">Testexam 6 (PCAP-31-03)<a class="headerlink" href="#testexam-6-pcap-31-03" title="Permanent link">&para;</a></h1>
+<p>Dieses Testexam dient als Pruefungssimulation fuer <code>PCAP-31-03</code> und ist nach der offiziellen Gewichtung zusammengestellt.</p>
+<p>Verteilung der 40 Fragen:</p>
+<ul>
+<li>6 Fragen: Modules and Packages</li>
+<li>5 Fragen: Exceptions</li>
+<li>8 Fragen: Strings</li>
+<li>12 Fragen: Object-Oriented Programming</li>
+<li>9 Fragen: Miscellaneous</li>
+</ul>
+<p>Empfehlung:</p>
+<ul>
+<li>65 Minuten</li>
+<li>ohne Hilfen</li>
+<li>Auswertung erst am Ende</li>
+</ul>
+<details class="question" open>
+<summary>PCAP Testexam 6 (PCAP-31-03)</summary>
+<p>Pruefungssimulation mit 40 Fragen, 65 Minuten und PCAP-31-03 Gewichtung: 6 Module, 5 Exceptions, 8 Strings, 12 OOP, 9 Miscellaneous.</p>
+<form class="interactive-quiz" id="quiz-0a56229c7cf442d19480fcfb385870eb" data-exam-mode="true" data-duration-minutes="65" data-passing-score="28">
+<div class="quiz-exam-bar"><span class="quiz-timer" aria-live="polite">Zeit: --:--</span></div>
+<div class="quiz-question">
+<p><strong>1. Select all valid parameters to function dir()</strong></p>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q0-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q0-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q0" value="A"> A. No parameter</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q0-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q0-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q0" value="B"> B. Object</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q0-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q0-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q0" value="C"> C. 0</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q0-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q0-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q0" value="D"> D. None</label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>2. What can be the possible output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; import random
+&gt;&gt;&gt; random.sample([&quot;spam&quot;, &quot;ham&quot;, &quot;eggs&quot;], k=1)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q1-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q1-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q1" value="A"> A. <code>spam</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q1-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q1-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q1" value="B"> B. A one-item list, e.g. <code>[&#x27;spam&#x27;]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q1-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q1-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q1" value="C"> C. <code>TypeError: sample() got an unexpected keyword argument &#x27;k&#x27;</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q1-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q1-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q1" value="D"> D. <code>TypeError: sample() takes 1 argument</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>3. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; import math
+&gt;&gt;&gt; math.factorial(-3)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q2-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q2-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q2" value="A"> A. <code>-6</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q2-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q2-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q2" value="B"> B. <code>-6.0</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q2-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q2-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q2" value="C"> C. <code>TypeError: &#x27;float&#x27; object cannot be interpreted as an integer</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q2-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q2-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q2" value="D"> D. <code>ValueError: factorial() not defined for negative values</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>4. Select all valid option(s) about the result of dir()</strong></p>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q3-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q3-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q3" value="A"> A. A list of filenames inside the directory</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q3-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q3-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q3" value="B"> B. A list of the module&#x27;s attribute</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q3-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q3-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q3" value="C"> C. A list of names of class attributes</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q3-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q3-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q3" value="D"> D. A list of names of object attributes</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q3-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q3-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q3" value="E"> E. A list of names of the base class attributes</label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>5. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; import math
+&gt;&gt;&gt; math.floor(-1.1)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q4-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q4-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q4" value="A"> A. <code>-1</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q4-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q4-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q4" value="B"> B. <code>-1.0</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q4-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q4-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q4" value="C"> C. <code>-2</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q4-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q4-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q4" value="D"> D. <code>-2.0</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>6. Select all option(s) which returns a random floating number between 0 and 1?</strong></p>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q5-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q5-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q5" value="A"> <span class="quiz-option-prefix">A. </span><code>math.random()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q5-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q5-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q5" value="B"> <span class="quiz-option-prefix">B. </span><code>math.random(1.0)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q5-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q5-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q5" value="C"> <span class="quiz-option-prefix">C. </span><code>random.random()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q5-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q5-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q5" value="D"> <span class="quiz-option-prefix">D. </span><code>random.random(1.0)</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>7. What is the output of the following code?</strong></p>
+<pre><code>try:
+   raise ValueError
+except TypeError, ValueError:
+   raise</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q6-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q6-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q6" value="A"> A. <code>No output</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q6-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q6-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q6" value="B"> B. <code>TypeError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q6-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q6-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q6" value="C"> C. <code>ValueError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q6-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q6-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q6" value="D"> D. <code>SyntaxError: multiple exception types must be parenthesized</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>8. Which option(s) will print ELSE given the following code?</strong></p>
+<pre><code>try:
+    &lt;&lt;&lt; INSERT CODE HERE &gt;&gt;&gt;
+except ZeroDivisionError:
+    print(&#x27;ZeroDivisionError&#x27;)
+except TypeError:
+    print(&#x27;TypeError&#x27;)
+else:
+    print(&#x27;ELSE&#x27;)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q7-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q7-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q7" value="A"> <span class="quiz-option-prefix">A. </span><code>raise Exception</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q7-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q7-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q7" value="B"> <span class="quiz-option-prefix">B. </span><code>raise ZeroDivisionError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q7-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q7-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q7" value="C"> <span class="quiz-option-prefix">C. </span><code>raise TypeError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q7-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q7-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q7" value="D"> <span class="quiz-option-prefix">D. </span><code>raise</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q7-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q7-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q7" value="E"> <span class="quiz-option-prefix">E. </span><code>pass</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q7-5"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q7-5" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q7" value="F"> F. leave the marker blank</label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>9. Select which option will call the __init__ method of Exception based on the code below.</strong></p>
+<pre><code>class SpamException(Exception):
+    def __init__(self, message):
+      &lt;&lt;&lt; INSERT CODE HERE &gt;&gt;&gt;
+      self.message = message
+raise SpamException(&quot;Spam&quot;)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q8-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q8-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q8" value="A"> <span class="quiz-option-prefix">A. </span><code>super().__init__(message)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q8-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q8-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q8" value="B"> <span class="quiz-option-prefix">B. </span><code>Exception.__init__(self, message)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q8-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q8-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q8" value="C"> <span class="quiz-option-prefix">C. </span><code>super(SpamException, self).__init__(message)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q8-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q8-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q8" value="D"> <span class="quiz-option-prefix">D. </span><code>super.__init__(message)</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>10. What is the output of the following code?</strong></p>
+<pre><code>class E(Exception):
+    def __init__(self, message):
+      self.message = message
+    def __str__(self):
+      return &quot;Surprise&quot;
+try:
+    raise Exception(&quot;Stop&quot;)
+except E as e:
+    print(e)
+else:
+    print(&quot;Goodbye&quot;)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q9-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q9-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q9" value="A"> A. <code>Unhandled Exception: Stop</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q9-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q9-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q9" value="B"> B. <code>Surprise</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q9-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q9-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q9" value="C"> C. <code>Stop</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q9-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q9-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q9" value="D"> D. <code>Goodbye</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>11. Which option(s) are valid replacements for the marker in the given code?</strong></p>
+<pre><code>&gt;&gt;&gt; try:
+...     x = 1/0
+... except &lt;&lt;&lt; INSERT CODE HERE &gt;&gt;&gt;:
+...     pass</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="A"> <span class="quiz-option-prefix">A. </span><code>BaseException</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="B"> <span class="quiz-option-prefix">B. </span><code>Exception</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="C"> <span class="quiz-option-prefix">C. </span><code>MathError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="D"> <span class="quiz-option-prefix">D. </span><code>ArithmeticException</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="E"> <span class="quiz-option-prefix">E. </span><code>ArithmeticError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-5"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-5" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="F"> <span class="quiz-option-prefix">F. </span><code>DivisionZeroError</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q10-6"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q10-6" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q10" value="G"> <span class="quiz-option-prefix">G. </span><code>ZeroDivisionError</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>12. Which option will return True given the following code?</strong></p>
+<pre><code>spam = &#x27;FuBar&#x27;
+ham = spam[:]</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q11-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q11-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q11" value="A"> <span class="quiz-option-prefix">A. </span><code>spam == ham</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q11-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q11-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q11" value="B"> <span class="quiz-option-prefix">B. </span><code>id(spam) == id(ham)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q11-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q11-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q11" value="C"> <span class="quiz-option-prefix">C. </span><code>spam.startswith(ham)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q11-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q11-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q11" value="D"> <span class="quiz-option-prefix">D. </span><code>spam.endswith(ham)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q11-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q11-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q11" value="E"> <span class="quiz-option-prefix">E. </span><code>spam.equals(ham)</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>13. What is the output of the following code?</strong></p>
+<pre><code>foo = [
+   &#x27;Spam&#x27;,
+    &#x27;Ham&#x27;
+    &#x27;Eggs&#x27;
+]
+print(foo)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q12-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q12-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q12" value="A"> A. <code>[&#x27;Spam&#x27;, &#x27;Ham&#x27;, &#x27;Eggs&#x27;]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q12-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q12-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q12" value="B"> B. <code>[&#x27;Spam&#x27;, &#x27;HamEggs&#x27;]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q12-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q12-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q12" value="C"> C. <code>[&#x27;Spam&#x27;]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q12-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q12-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q12" value="D"> D. <code>SyntaxError: invalid syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>14. What is the output of the following code?</strong></p>
+<pre><code>s = &#x27;0123456789&#x27;
+print(s[::2], s[:-2:2], s[2::2])</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q13-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q13-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q13" value="A"> A. <code>01 89 23</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q13-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q13-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q13" value="B"> B. <code>01 01 23</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q13-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q13-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q13" value="C"> C. <code>02468 0246 2468</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q13-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q13-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q13" value="D"> D. <code>02468 8 0</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q13-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q13-4" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q13" value="E"> E. <code>SyntaxError: invalid syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>15. What is the output of the following code?</strong></p>
+<pre><code>print(&quot;C:\Program Files\Microsoft\Windows NT&quot;, end=&quot;&quot;)
+print(&quot;\&quot;)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q14-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q14-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q14" value="A"> A. <code>Syntax Error</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q14-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q14-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q14" value="B"> B. <code>C:\Program Files\Microsoft\Windows NT\</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q14-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q14-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q14" value="C"> C. Replace escaped characters with &quot;?&quot; e.g. C:?rogram Files?icrosoft? indows NT?</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q14-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q14-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q14" value="D"> D. Ignore escaped characters e.g. C: rogram Filesicrosoftindows NT</label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>16. What is the output of the following code?</strong></p>
+<pre><code>print(&quot;\\\\\&quot;)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q15-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q15-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q15" value="A"> A. <code>Syntax Error</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q15-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q15-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q15" value="B"> B. <code>\\\\\</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q15-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q15-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q15" value="C"> C. <code>\\\\</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q15-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q15-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q15" value="D"> D. <code>\\\</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q15-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q15-4" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q15" value="E"> E. <code>\\</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q15-5"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q15-5" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q15" value="F"> F. <code>\</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>17. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; 2 * &#x27;DUN-&#x27; + &#x27;DUUUUN!!!&#x27;</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q16-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q16-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q16" value="A"> A. <code>SyntaxError: invalid syntax</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q16-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q16-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q16" value="B"> B. <code>DUN-DUN-DUUUUN!!!</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q16-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q16-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q16" value="C"> C. <code>2</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q16-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q16-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q16" value="D"> D. <code>TypeError: unsupported operand type(s) for * &#x27;int&#x27; and &#x27;str&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>18. Which option will return a different result given the code below?</strong></p>
+<pre><code>s = &#x27;Python&#x27;</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q17-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q17-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q17" value="A"> <span class="quiz-option-prefix">A. </span><code>print(s[0] + s[-1])</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q17-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q17-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q17" value="B"> <span class="quiz-option-prefix">B. </span><code>print(s[::5])</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q17-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q17-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q17" value="C"> <span class="quiz-option-prefix">C. </span><code>print(s[::-5])</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q17-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q17-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q17" value="D"> <span class="quiz-option-prefix">D. </span><code>print(s[::-1][::-5])</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>19. Select all valid option(s) below about string</strong></p>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q18-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q18-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q18" value="A"> A. string.ascii_letters is a concatenation of ascii_lowercase and ascii_uppercase</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q18-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q18-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q18" value="B"> B. string.ascii_letters is a concatenation of ascii_lowercase, ascii_uppercase and digits</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q18-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q18-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q18" value="C"> C. string.ascii_letters are all printable characters found in the keyboard</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q18-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q18-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q18" value="D"> D. string.ascii_lowercase contains &#x27;abcdefghijklmnopqrstuvwxyz&#x27;</label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q18-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q18-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q18" value="E"> E. string.ascii_uppercase contains &#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#x27;</label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>20. What is the output of the following code?</strong></p>
+<pre><code>class Ham:
+    def __init__(self):
+      self.v1 = 1
+class Spam(Ham):
+    def __init__(self):
+      self.v2 = 2
+s = Spam()
+print(s.v1,s.v2)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q19-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q19-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q19" value="A"> A. <code>02</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q19-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q19-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q19" value="B"> B. <code>12</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q19-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q19-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q19" value="C"> C. <code>Invalid Syntax</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q19-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q19-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q19" value="D"> D. <code>AttributeError: &#x27;Spam&#x27; object has no attribute &#x27;v1&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>21. What is the output of the following code?</strong></p>
+<pre><code>class Ham:
+    v=1
+    def v0(self):
+      return self.v
+class Spam(Ham):
+    v=2
+s = Spam()
+h = Ham()
+print(s.v0(), h.v0())</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q20-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q20-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q20" value="A"> A. <code>11</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q20-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q20-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q20" value="B"> B. <code>2 1</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q20-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q20-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q20" value="C"> C. <code>22</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q20-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q20-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q20" value="D"> D. <code>AttributeError: &#x27;Spam&#x27; object has no attribute &#x27;v0&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>22. Which of the option(s) below are valid given the following code?</strong></p>
+<pre><code>class Spam:
+    __ham, ham = &#x27;__ham&#x27;, &#x27;ham&#x27;
+    def __eggs(self):
+      pass
+    eggs = __eggs
+s = Spam()
+&lt;&lt;&lt; INSERT CODE HERE &gt;&gt;&gt;</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q21-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q21-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q21" value="A"> <span class="quiz-option-prefix">A. </span><code>print(__module__)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q21-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q21-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q21" value="B"> <span class="quiz-option-prefix">B. </span><code>print(Spam.__module__)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q21-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q21-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q21" value="C"> <span class="quiz-option-prefix">C. </span><code>print(s._Spam__eggs.__module__)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q21-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q21-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q21" value="D"> <span class="quiz-option-prefix">D. </span><code>print(s.eggs.__module__)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q21-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q21-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q21" value="E"> <span class="quiz-option-prefix">E. </span><code>print(s.__module__)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q21-5"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q21-5" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q21" value="F"> <span class="quiz-option-prefix">F. </span><code>print(s.ham.__module__)</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>23. What is the output of the following code?</strong></p>
+<pre><code>class A:
+    def spam(self):
+      return &#x27;A.spam&#x27;
+    def ham(self):
+      return self.spam()
+class B:
+    def spam(self):
+      return &#x27;B.spam&#x27;
+class C(B, A):
+    pass
+c = C()
+print(c.spam(), c.ham())</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q22-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q22-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q22" value="A"> A. <code>TypeError: Cannot create a consistent method resolution</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q22-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q22-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q22" value="B"> B. <code>B.spam B.spam</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q22-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q22-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q22" value="C"> C. <code>B.spam A.spam</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q22-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q22-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q22" value="D"> D. <code>A.spam A.spam</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>24. What is the output of the following code?</strong></p>
+<pre><code>class Foo:
+    bar = &#x27;spam&#x27;
+f1 = Foo()
+f2 = Foo()
+f2.bar = &#x27;ham&#x27;
+Foo.bar = &#x27;eggs&#x27;
+print(f1.bar, f2.bar, Foo.bar)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q23-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q23-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q23" value="A"> A. <code>spam ham eggs</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q23-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q23-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q23" value="B"> B. <code>eggs ham eggs</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q23-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q23-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q23" value="C"> C. <code>eggs eggs eggs</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q23-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q23-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q23" value="D"> D. <code>AttributeError: type object &#x27;Foo&#x27; has no attribute &#x27;bar&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>25. What is the output of the following code?</strong></p>
+<pre><code>class Ham:
+    def __init__(self):
+      print(type(self).__name__ + &#x27;.__init__()&#x27;, end=&#x27; &#x27;)
+      self.update()
+    def update(self):
+      print(type(self).__name__ + &#x27;.update()&#x27;, end=&#x27; &#x27;)
+    def update(self, param):
+      print(type(self).__name__ + &#x27;.update(param)&#x27;, end=&#x27; &#x27;)
+Ham()</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q24-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q24-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q24" value="A"> A. <code>Ham.__init__() Ham.update()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q24-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q24-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q24" value="B"> B. <code>Ham.__init__() Ham.update(param)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q24-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q24-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q24" value="C"> C. <code>SyntaxError: invalid syntax</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q24-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q24-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q24" value="D"> D. <code>TypeError: Ham.update() missing 1 required positional argument: &#x27;param&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>26. Which of the option(s) below are valid calls given the code below?</strong></p>
+<pre><code>&gt;&gt;&gt; class Spam:
+... __ham = 0
+... def __eggs(self):
+...    __ham = 100
+...    return __ham
+... eggs = __eggs
+&gt;&gt;&gt; s = Spam()
+&lt;&lt;&lt; INSERT CODE HERE &gt;&gt;&gt;</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q25-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q25-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q25" value="A"> <span class="quiz-option-prefix">A. </span><code>&gt;&gt;&gt; s.eggs()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q25-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q25-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q25" value="B"> <span class="quiz-option-prefix">B. </span><code>&gt;&gt;&gt; s.__eggs()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q25-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q25-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q25" value="C"> <span class="quiz-option-prefix">C. </span><code>&gt;&gt;&gt; s._Spam__eggs()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q25-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q25-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q25" value="D"> <span class="quiz-option-prefix">D. </span><code>&gt;&gt;&gt; s.__ham</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q25-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q25-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q25" value="E"> <span class="quiz-option-prefix">E. </span><code>&gt;&gt;&gt; s._Spam__ham</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>27. What is the output of the following code?</strong></p>
+<pre><code>class A(object): pass
+class C(A,A): pass</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q26-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q26-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q26" value="A"> A. <code>No output</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q26-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q26-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q26" value="B"> B. <code>SyntaxError: invalid syntax</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q26-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q26-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q26" value="C"> C. <code>TypeError: duplicate base class A</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q26-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q26-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q26" value="D"> D. <code>NameError: name &#x27;object&#x27; is not defined</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>28. What is the output of the following code?</strong></p>
+<pre><code>class Ham:
+    def __init__(self):
+      print(type(self).__name__ + &#x27;.__init__()&#x27;, end=&#x27; &#x27;)
+      self.__update()
+    def update(self):
+      print(type(self).__name__ + &#x27;.update()&#x27;, end=&#x27; &#x27;)
+    __update = update
+class Spam(Ham):
+    def update(self, param):
+      print(type(self).__name__ + &#x27;.update(param)&#x27;, end=&#x27; &#x27;)
+Ham()
+Spam()</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q27-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q27-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q27" value="A"> A. <code>Ham.__init__() Ham.update() Ham.__init__() Ham.update()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q27-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q27-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q27" value="B"> B. <code>Ham.__init__() Ham.update() Spam.__init__() Spam.update()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q27-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q27-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q27" value="C"> C. <code>Ham.__init__() Ham.update() Spam.__init__() Spam.update(param)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q27-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q27-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q27" value="D"> D. <code>TypeError: update() missing 1 required positional argument: &#x27;param&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>29. What is the output of the following code?</strong></p>
+<pre><code>class MyClass:
+    FOO = 100
+    def __init__(self):
+      self.bar = []
+    def add(self, p):
+      self.bar.append(p)
+d, e = MyClass(), MyClass()
+d.add(&#x27;spam&#x27;)
+e.add(&#x27;ham&#x27;)
+e.FOO = 200
+MyClass.FOO = 300
+print(d.bar, d.FOO, e.bar, e.FOO)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q28-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q28-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q28" value="A"> A. <code>[&#x27;spam&#x27;] 300 [&#x27;ham&#x27;] 300</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q28-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q28-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q28" value="B"> B. <code>[&#x27;spam&#x27;] 300 [&#x27;ham&#x27;] 200</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q28-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q28-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q28" value="C"> C. <code>[&#x27;spam&#x27;] 100 [&#x27;ham&#x27;] 200</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q28-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q28-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q28" value="D"> D. <code>[&#x27;spam&#x27;] 100 [&#x27;ham&#x27;] 300</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>30. Select the choices to invoke the constructor of Spam and assign the instance to s</strong></p>
+<pre><code>class Spam:
+    def __init__(self, v=0):
+      self.ham = v + 1</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q29-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q29-0" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q29" value="A"> <span class="quiz-option-prefix">A. </span><code>s = Spam()</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q29-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q29-1" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q29" value="B"> <span class="quiz-option-prefix">B. </span><code>s = Spam(10)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q29-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q29-2" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q29" value="C"> <span class="quiz-option-prefix">C. </span><code>s = Spam(s, 10)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q29-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q29-3" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q29" value="D"> <span class="quiz-option-prefix">D. </span><code>s = Spam.__init__(s)</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q29-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q29-4" type="checkbox" name="quiz-0a56229c7cf442d19480fcfb385870eb-q29" value="E"> E. <code>AttributeError: &#x27;Spam&#x27; object has no attribute &#x27;ham&#x27;</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>31. What is the output of the following code?</strong></p>
+<pre><code>class Spam:
+    HAM = 1
+    def __init__(self, v=2):
+      self.v = v + Spam.HAM
+      Spam.HAM += 1
+a = Spam()
+b = Spam(3)
+print(a.v, b.v)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q30-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q30-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q30" value="A"> A. <code>TypeError: __init__() missing 1 required positional argument: &#x27;v&#x27;</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q30-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q30-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q30" value="B"> B. <code>33</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q30-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q30-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q30" value="C"> C. <code>34</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q30-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q30-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q30" value="D"> D. <code>3 5</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>32. How many stars will the following code print?</strong></p>
+<pre><code>l = [[i for i in range(2)] for i in range(2)]
+for i in range(2):
+    if l[0][i] % l[1][i] == 0:
+        print(&#x27;*&#x27;)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q31-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q31-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q31" value="A"> A. <code>0</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q31-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q31-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q31" value="B"> B. <code>1</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q31-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q31-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q31" value="C"> C. <code>2</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q31-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q31-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q31" value="D"> D. <code>4</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>33. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; list(map(lambda x: x+10, [1, 2, 3]))</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q32-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q32-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q32" value="A"> A. <code>[11, 12, 13]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q32-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q32-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q32" value="B"> B. <code>[11, 12, 13, 1, 2, 3]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q32-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q32-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q32" value="C"> C. <code>[[11, 12, 13],[1, 2, 3]]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q32-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q32-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q32" value="D"> D. <code>[{11:1},{12:2},{13:3}]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q32-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q32-4" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q32" value="E"> E. <code>[{11:[1, 2, 3]},{12:[1, 2, 3]},{13:[1, 2, 3]}]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q32-5"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q32-5" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q32" value="F"> F. <code>Invalid Syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>34. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; [[c for c in range(r)] for r in range(3) if r != 0]</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q33-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q33-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q33" value="A"> A. <code>[[0], [0, 1]]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q33-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q33-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q33" value="B"> B. <code>[[1], [1, 2]]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q33-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q33-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q33" value="C"> C. <code>[[0], [1]]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q33-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q33-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q33" value="D"> D. <code>[[1], [2]]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q33-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q33-4" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q33" value="E"> E. <code>SyntaxError: invalid syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>35. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; a, b = 10, 20
+&gt;&gt;&gt; (lambda: b, lambda: a)[a &lt; b]()</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q34-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q34-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q34" value="A"> A. <code>10</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q34-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q34-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q34" value="B"> B. <code>20</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q34-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q34-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q34" value="C"> C. <code>TypeError: tuple indices must be integers or slices</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q34-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q34-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q34" value="D"> D. <code>Invalid Syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>36. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; [i // i for i in range(0,3)]</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q35-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q35-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q35" value="A"> A. <code>[0, 1, 1]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q35-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q35-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q35" value="B"> B. <code>[1, 1]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q35-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q35-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q35" value="C"> C. <code>[0, 1, 2]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q35-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q35-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q35" value="D"> D. <code>ZeroDivisionError: integer division or modulo by zero</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>37. What is the output of the following code?</strong></p>
+<pre><code>x = &#x27;x&#x27;
+def main():
+    y = &#x27;y&#x27;
+    def spam():
+       print(x, y, z)
+       return
+    spam()
+z = &#x27;z&#x27;
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q36-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q36-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q36" value="A"> A. <code>No output</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q36-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q36-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q36" value="B"> B. <code>x y z</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q36-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q36-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q36" value="C"> C. <code>NameError: name &#x27;z&#x27; is not defined</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q36-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q36-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q36" value="D"> D. <code>SyntaxError: invalid syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>38. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; [2 ** x for x in range(5)]</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q37-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q37-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q37" value="A"> A. <code>[0, 2, 4, 6, 8]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q37-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q37-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q37" value="B"> B. <code>[1, 2, 4, 8, 16]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q37-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q37-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q37" value="C"> C. <code>[2, 4, 6, 8, 10]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q37-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q37-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q37" value="D"> D. <code>SyntaxError: invalid syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>39. What is the output of the following code?</strong></p>
+<pre><code>&gt;&gt;&gt; [_ for _ in range(10) if not _%2 ]</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q38-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q38-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q38" value="A"> A. <code>[0, 2, 4, 6, 8]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q38-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q38-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q38" value="B"> B. <code>[2, 4, 6, 8, 10]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q38-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q38-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q38" value="C"> C. <code>[1, 3, 5, 7, 9]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q38-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q38-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q38" value="D"> D. <code>[0, 1, 3, 4, 5, 6, 7, 8, 9]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q38-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q38-4" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q38" value="E"> E. <code>SyntaxError: invalid syntax</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<div class="quiz-question">
+<p><strong>40. What is the output of the following code?</strong></p>
+<pre><code>x = [_ for _ in range(10)]
+del x[0:-2]
+print(x)</code></pre>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q39-0"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q39-0" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q39" value="A"> A. <code>[8, 9]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q39-1"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q39-1" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q39" value="B"> B. <code>[9, 8]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q39-2"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q39-2" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q39" value="C"> C. <code>[0, 1, 2, 3, 4, 5, 6, 7]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q39-3"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q39-3" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q39" value="D"> D. <code>[7, 6, 5, 4, 3, 2, 1, 0]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q39-4"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q39-4" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q39" value="E"> E. <code>[2, 3, 4, 5, 6, 7, 8, 9]</code></label>
+<label class="quiz-option" for="quiz-0a56229c7cf442d19480fcfb385870eb-q39-5"><input id="quiz-0a56229c7cf442d19480fcfb385870eb-q39-5" type="radio" name="quiz-0a56229c7cf442d19480fcfb385870eb-q39" value="F"> F. <code>[9, 8, 7, 6, 5, 4, 3, 2]</code></label>
+<p class="quiz-feedback" aria-live="polite"></p>
+</div>
+<button type="button" class="md-button md-button--primary quiz-check">Test auswerten</button>
+<button type="reset" class="md-button quiz-reset">Zurücksetzen</button>
+<p class="quiz-summary" aria-live="polite"></p>
+</form>
+<style>
+.interactive-quiz {
+  display: grid;
+  gap: 1rem;
+}
+.quiz-question {
+  border-left: 0.2rem solid var(--md-accent-fg-color);
+  padding: 0.6rem 0.8rem;
+  background: var(--md-code-bg-color);
+}
+.quiz-exam-bar {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 3rem;
+  z-index: 2;
+}
+.quiz-timer {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  font-weight: 700;
+}
+.quiz-option {
+  display: block;
+  margin: 0.35rem 0;
+}
+.quiz-option-prefix {
+  display: inline-block;
+  min-width: 1.6rem;
+}
+.quiz-option code {
+  white-space: pre-wrap;
+  vertical-align: top;
+}
+.quiz-text-input {
+  width: min(100%, 32rem);
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.quiz-output-input {
+  font-family: var(--md-code-font-family);
+  min-height: 6rem;
+}
+.quiz-check-one {
+  margin-top: 0.55rem;
+}
+.quiz-feedback {
+  margin: 0.45rem 0 0;
+  font-weight: 600;
+}
+.quiz-feedback.correct {
+  color: #2e7d32;
+}
+.quiz-feedback.incorrect {
+  color: #c62828;
+}
+.quiz-summary {
+  font-weight: 700;
+}
+</style>
+<script type="application/json" id="quiz-0a56229c7cf442d19480fcfb385870eb-answers">W3sidHlwZSI6ICJtdWx0aXBsZSIsICJhbnN3ZXIiOiBbIkEiLCAiQiIsICJDIiwgIkQiXSwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBBLCBCLCBDLCBELiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQiIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQi4gcmFuZG9tLnNhbXBsZSguLi4sIGs9MSkgbGllZmVydCBlaW5lIExpc3RlIG1pdCBlaW5lbSB6dWZhZWxsaWdlbiBFbGVtZW50LiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiRCIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogRC4gTmVnYXRpdmUgSW50ZWdlci1XZXJ0ZSBzaW5kIGZ1ZXIgbWF0aC5mYWN0b3JpYWwoKSBuaWNodCBkZWZpbmllcnQuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJCIiwgIkMiLCAiRCIsICJFIl0sICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQiwgQywgRCwgRS4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkMiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEMuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJDIl0sICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQy4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkQiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEQuIEluIFB5dGhvbiAzIG11ZXNzZW4gbWVocmVyZSBFeGNlcHRpb24tVHlwZW4gYWxzIFR1cGVsIGdlc2NocmllYmVuIHdlcmRlbiwgei5CLiBleGNlcHQgKFR5cGVFcnJvciwgVmFsdWVFcnJvcik6LiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogIm11bHRpcGxlIiwgImFuc3dlciI6IFsiRSJdLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEUuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJBIiwgIkIiLCAiQyJdLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEEsIEIsIEMuIEFsbGUgZHJlaSBWYXJpYW50ZW4gcnVmZW4gRXhjZXB0aW9uLl9faW5pdF9fIGZ1ZXIgZGllc2UgVW50ZXJrbGFzc2Uga29ycmVrdCBhdWY7IHN1cGVyLl9faW5pdF9fKG1lc3NhZ2UpIGlzdCBrZWluIGtvcnJla3RlciBzdXBlcigpLUF1ZnJ1Zi4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkEiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEEuIEVzIHdpcmQgZWluZSBub3JtYWxlIEV4Y2VwdGlvbiBnZXdvcmZlbiwgYWJlciBudXIgRSBhYmdlZmFuZ2VuOyBkZXNoYWxiIGJsZWlidCBFeGNlcHRpb24oJnF1b3Q7U3RvcCZxdW90OykgdW5iZWhhbmRlbHQuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJBIiwgIkIiLCAiRSIsICJHIl0sICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQSwgQiwgRSwgRy4gWmVyb0RpdmlzaW9uRXJyb3IgaXN0IGVpbmUgQXJpdGhtZXRpY0Vycm9yLCBFeGNlcHRpb24gdW5kIEJhc2VFeGNlcHRpb24uIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJBIiwgIkIiLCAiQyIsICJEIl0sICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQSwgQiwgQywgRC4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkIiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEIuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJDIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBDLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQSIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQS4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkEiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEEuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJCIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBCLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQyIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQy4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJtdWx0aXBsZSIsICJhbnN3ZXIiOiBbIkEiLCAiRCIsICJFIl0sICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQSwgRCwgRS4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkQiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEQuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJCIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBCLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogIm11bHRpcGxlIiwgImFuc3dlciI6IFsiQiIsICJDIiwgIkQiLCAiRSJdLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEIsIEMsIEQsIEUuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJCIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBCLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQiIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQi4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkQiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEQuIERpZSB6d2VpdGUgdXBkYXRlLURlZmluaXRpb24gdWViZXJzY2hyZWlidCBkaWUgZXJzdGUuIHNlbGYudXBkYXRlKCkgcnVmdCBkZXNoYWxiIHVwZGF0ZShzZWxmLCBwYXJhbSkgb2huZSBwYXJhbSBhdWYuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJBIiwgIkMiLCAiRSJdLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEEsIEMsIEUuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJDIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBDLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQiIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQi4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkIiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEIuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAibXVsdGlwbGUiLCAiYW5zd2VyIjogWyJBIiwgIkIiXSwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBBLCBCLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiRCIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogRC4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkEiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEEuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJBIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBBLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQSIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQS4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkEiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEEuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJEIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBELiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQiIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQi4iLCAicG9pbnRzIjogMX0sIHsidHlwZSI6ICJzaW5nbGUiLCAiYW5zd2VyIjogIkIiLCAiZXhwbGFuYXRpb24iOiAiUmljaHRpZ2UgQW50d29ydChlbik6IEIuIiwgInBvaW50cyI6IDF9LCB7InR5cGUiOiAic2luZ2xlIiwgImFuc3dlciI6ICJBIiwgImV4cGxhbmF0aW9uIjogIlJpY2h0aWdlIEFudHdvcnQoZW4pOiBBLiIsICJwb2ludHMiOiAxfSwgeyJ0eXBlIjogInNpbmdsZSIsICJhbnN3ZXIiOiAiQSIsICJleHBsYW5hdGlvbiI6ICJSaWNodGlnZSBBbnR3b3J0KGVuKTogQS4iLCAicG9pbnRzIjogMX1d</script>
+<script>
+(function() {
+  const form = document.getElementById("quiz-0a56229c7cf442d19480fcfb385870eb");
+  const dataNode = document.getElementById("quiz-0a56229c7cf442d19480fcfb385870eb-answers");
+  if (!form || !dataNode) return;
+  const answers = JSON.parse(decodeURIComponent(escape(atob(dataNode.textContent))));
+  const examMode = form.dataset.examMode === "true";
+  const durationMinutes = Number(form.dataset.durationMinutes || 0);
+  const passingScore = form.dataset.passingScore ? Number(form.dataset.passingScore) : null;
+  let finished = false;
+  let timerInterval = null;
+
+  function normalize(value) {
+    return String(value ?? "").trim().toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function arraysEqual(a, b) {
+    const left = [...a].map(normalize).sort();
+    const right = [...b].map(normalize).sort();
+    return left.length === right.length && left.every((value, index) => value === right[index]);
+  }
+
+  function checkQuestion(index, reveal = true) {
+    const question = answers[index];
+    const name = "quiz-0a56229c7cf442d19480fcfb385870eb-q" + index;
+    const container = form.querySelectorAll(".quiz-question")[index];
+    const feedback = container.querySelector(".quiz-feedback");
+
+    let correct = false;
+    if (question.type === "single") {
+      const selected = form.querySelector('input[name="' + name + '"]:checked');
+      correct = selected && normalize(selected.value) === normalize(question.answer);
+    } else if (question.type === "multiple") {
+      const selected = Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map(input => input.value);
+      correct = arraysEqual(selected, Array.isArray(question.answer) ? question.answer : [question.answer]);
+    } else {
+      const input = form.querySelector('[name="' + name + '"]');
+      const validAnswers = Array.isArray(question.answer) ? question.answer : [question.answer];
+      correct = input && validAnswers.some(answer => normalize(input.value) === normalize(answer));
+    }
+
+    if (reveal) {
+      if (correct) {
+        feedback.textContent = "Richtig.";
+        feedback.className = "quiz-feedback correct";
+      } else {
+        feedback.textContent = "Nicht richtig." + (question.explanation ? " " + question.explanation : "");
+        feedback.className = "quiz-feedback incorrect";
+      }
+    }
+
+    return correct;
+  }
+
+  function finishQuiz() {
+    if (finished) return;
+    finished = true;
+    let score = 0;
+    let total = 0;
+
+    answers.forEach(function(question, index) {
+      total += Number(question.points || 1);
+      if (checkQuestion(index, true)) {
+        score += Number(question.points || 1);
+      }
+    });
+
+    let summary = "Ergebnis: " + score + " von " + total + " Punkten.";
+    if (passingScore !== null) {
+      summary += score >= passingScore ? " Bestanden." : " Nicht bestanden.";
+    }
+    form.querySelector(".quiz-summary").textContent = summary;
+    if (examMode) {
+      form.querySelectorAll("input, textarea, button").forEach(node => {
+        if (!node.classList.contains("quiz-reset")) node.disabled = true;
+      });
+    }
+  }
+
+  function startTimer() {
+    if (!examMode || !durationMinutes) return;
+    const timer = form.querySelector(".quiz-timer");
+    if (!timer) return;
+    if (timerInterval) clearInterval(timerInterval);
+    let remaining = durationMinutes * 60;
+    const render = function() {
+      const minutes = Math.floor(remaining / 60);
+      const seconds = remaining % 60;
+      timer.textContent = "Zeit: " + String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+    };
+    render();
+    timerInterval = setInterval(function() {
+      if (finished) {
+        clearInterval(timerInterval);
+        return;
+      }
+      remaining -= 1;
+      render();
+      if (remaining <= 0) {
+        clearInterval(timerInterval);
+        finishQuiz();
+      }
+    }, 1000);
+  }
+
+  form.querySelectorAll(".quiz-check-one").forEach(button => {
+    button.addEventListener("click", function() {
+      const index = Number(button.dataset.questionIndex);
+      checkQuestion(index);
+      form.querySelector(".quiz-summary").textContent = "";
+    });
+  });
+
+  form.querySelector(".quiz-check").addEventListener("click", function() {
+    finishQuiz();
+  });
+
+  form.addEventListener("reset", function() {
+    setTimeout(function() {
+      form.querySelectorAll(".quiz-feedback").forEach(node => {
+        node.textContent = "";
+        node.className = "quiz-feedback";
+      });
+      form.querySelector(".quiz-summary").textContent = "";
+      finished = false;
+      form.querySelectorAll("input, textarea, button").forEach(node => {
+        node.disabled = false;
+      });
+      startTimer();
+    }, 0);
+  });
+  startTimer();
+})();
+</script>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../testexam_5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Testexam 5 (PCAP-31-03)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Testexam 5 (PCAP-31-03)
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.kununu.com/de/qualidy" target="_blank" rel="noopener" title="www.kununu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M311 86.3c12.3-12.7 12-32.9-.7-45.2s-32.9-12-45.2.7C143.4 167.2 76.4 236.3 64 249V64c0-17.7-14.3-32-32-32S0 46.3 0 64v384c0 17.7 14.3 32 32 32s32-14.3 32-32V341l64.7-66.7 133 192c10.1 14.5 30 18.1 44.5 8.1s18.1-30 8.1-44.5L174.1 227.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.google.com/search?sca_esv=7e6ba2047fcb60f3&uds=AMwkrPtyB8MsmozA4Lwzqy2G2HCu-abqzc6moOG48q3gP5dtjTRzC2Ws0eSwcyLXDfZNuYCrZ7ByIreHLG9th3vKLekPoVeey0tumAbet4cVLQRLzdRFhUbOGbnyp3xo1V0hzzaNmkCN&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdJcL-lW6E-2aJA5azZLTKkIOrZ2j2aWwoBkVbdEJ0o0GPcQhs%3D&q=Qualidy+GmbH+Rezensionen&sa=X&ved=2ahUKEwibsbnSgcmFAxXNQvEDHaVYCiAQ3PALegQIRxAF" target="_blank" rel="noopener" title="www.google.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/pcap_quiz.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

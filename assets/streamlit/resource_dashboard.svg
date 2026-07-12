@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680" role="img" aria-label="Mock screenshot of a Streamlit course resource dashboard">
+  <rect width="1100" height="680" fill="#f7f8fb"/>
+  <rect x="0" y="0" width="250" height="680" fill="#eef2f7"/>
+  <text x="32" y="54" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#243142">Filters</text>
+  <text x="32" y="104" font-family="Arial, sans-serif" font-size="16" fill="#405062">Status</text>
+  <circle cx="42" cy="140" r="8" fill="#ff4b4b"/>
+  <text x="62" y="146" font-family="Arial, sans-serif" font-size="15" fill="#243142">all</text>
+  <circle cx="42" cy="178" r="8" fill="#ffffff" stroke="#9aa7b4" stroke-width="2"/>
+  <text x="62" y="184" font-family="Arial, sans-serif" font-size="15" fill="#243142">planned</text>
+  <circle cx="42" cy="216" r="8" fill="#ffffff" stroke="#9aa7b4" stroke-width="2"/>
+  <text x="62" y="222" font-family="Arial, sans-serif" font-size="15" fill="#243142">in progress</text>
+  <circle cx="42" cy="254" r="8" fill="#ffffff" stroke="#9aa7b4" stroke-width="2"/>
+  <text x="62" y="260" font-family="Arial, sans-serif" font-size="15" fill="#243142">done</text>
+  <text x="300" y="62" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17202a">Course Resource Tracker</text>
+  <text x="302" y="92" font-family="Arial, sans-serif" font-size="16" fill="#687789">Streamlit demo for a small OOP backend</text>
+  <rect x="300" y="125" width="220" height="90" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <rect x="540" y="125" width="220" height="90" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <rect x="780" y="125" width="220" height="90" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="322" y="158" font-family="Arial, sans-serif" font-size="15" fill="#657184">Total resources</text>
+  <text x="322" y="195" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17202a">3</text>
+  <text x="562" y="158" font-family="Arial, sans-serif" font-size="15" fill="#657184">Planned</text>
+  <text x="562" y="195" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17202a">2</text>
+  <text x="802" y="158" font-family="Arial, sans-serif" font-size="15" fill="#657184">Done</text>
+  <text x="802" y="195" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17202a">0</text>
+  <text x="300" y="270" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#17202a">Resources</text>
+  <rect x="300" y="295" width="760" height="210" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <rect x="300" y="295" width="760" height="46" rx="8" fill="#243142"/>
+  <text x="326" y="324" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">ID</text>
+  <text x="408" y="324" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Title</text>
+  <text x="650" y="324" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Type</text>
+  <text x="760" y="324" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Difficulty</text>
+  <text x="890" y="324" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Status</text>
+  <text x="1000" y="324" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Created</text>
+  <text x="326" y="378" font-family="Arial, sans-serif" font-size="14" fill="#243142">1</text>
+  <text x="408" y="378" font-family="Arial, sans-serif" font-size="14" fill="#243142">OOP vocabulary checklist</text>
+  <text x="650" y="378" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">worksheet</text>
+  <text x="760" y="378" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">easy</text>
+  <text x="890" y="378" font-family="Arial, sans-serif" font-size="14" fill="#243142">planned</text>
+  <text x="1000" y="378" font-family="Arial, sans-serif" font-size="14" fill="#687789">09:30</text>
+  <line x1="300" y1="405" x2="1060" y2="405" stroke="#e5e9f0"/>
+  <text x="326" y="438" font-family="Arial, sans-serif" font-size="14" fill="#243142">2</text>
+  <text x="408" y="438" font-family="Arial, sans-serif" font-size="14" fill="#243142">MRO diamond practice</text>
+  <text x="650" y="438" font-family="Arial, sans-serif" font-size="14" fill="#6a1b9a">exercise</text>
+  <text x="760" y="438" font-family="Arial, sans-serif" font-size="14" fill="#c62828">hard</text>
+  <text x="890" y="438" font-family="Arial, sans-serif" font-size="14" fill="#243142">in progress</text>
+  <text x="1000" y="438" font-family="Arial, sans-serif" font-size="14" fill="#687789">09:31</text>
+  <line x1="300" y1="465" x2="1060" y2="465" stroke="#e5e9f0"/>
+  <text x="326" y="498" font-family="Arial, sans-serif" font-size="14" fill="#243142">3</text>
+  <text x="408" y="498" font-family="Arial, sans-serif" font-size="14" fill="#243142">Streamlit frontend intro</text>
+  <text x="650" y="498" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">demo</text>
+  <text x="760" y="498" font-family="Arial, sans-serif" font-size="14" fill="#ef6c00">medium</text>
+  <text x="890" y="498" font-family="Arial, sans-serif" font-size="14" fill="#243142">planned</text>
+  <text x="1000" y="498" font-family="Arial, sans-serif" font-size="14" fill="#687789">09:32</text>
+  <rect x="300" y="535" width="360" height="100" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="326" y="570" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17202a">Add resource</text>
+  <rect x="326" y="590" width="145" height="30" rx="5" fill="#ffffff" stroke="#b8c1cc"/>
+  <text x="340" y="610" font-family="Arial, sans-serif" font-size="13" fill="#687789">Title</text>
+  <rect x="490" y="590" width="145" height="30" rx="5" fill="#ff4b4b"/>
+  <text x="522" y="610" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Add resource</text>
+  <rect x="700" y="535" width="360" height="100" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="726" y="570" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17202a">Update status</text>
+  <rect x="726" y="590" width="145" height="30" rx="5" fill="#ffffff" stroke="#b8c1cc"/>
+  <text x="740" y="610" font-family="Arial, sans-serif" font-size="13" fill="#243142">#2: MRO...</text>
+  <rect x="890" y="590" width="145" height="30" rx="5" fill="#ff4b4b"/>
+  <text x="923" y="610" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Update</text>
+</svg>

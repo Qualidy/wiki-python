@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680" role="img" aria-label="Mock screenshot of a Streamlit course resource form">
+  <rect width="1100" height="680" fill="#f7f8fb"/>
+  <text x="80" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17202a">Add resource</text>
+  <rect x="80" y="110" width="940" height="500" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="120" y="158" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#243142">Title</text>
+  <rect x="120" y="178" width="860" height="48" rx="6" fill="#ffffff" stroke="#b8c1cc"/>
+  <text x="140" y="208" font-family="Arial, sans-serif" font-size="15" fill="#6d7a88">Streamlit frontend intro</text>
+  <text x="120" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#243142">Type</text>
+  <rect x="120" y="292" width="320" height="48" rx="6" fill="#ffffff" stroke="#b8c1cc"/>
+  <text x="140" y="322" font-family="Arial, sans-serif" font-size="15" fill="#243142">demo</text>
+  <path d="M410 310 l9 9 l9 -9" fill="none" stroke="#6d7a88" stroke-width="2"/>
+  <text x="120" y="386" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#243142">Difficulty</text>
+  <rect x="120" y="408" width="320" height="48" rx="6" fill="#ffffff" stroke="#b8c1cc"/>
+  <text x="140" y="438" font-family="Arial, sans-serif" font-size="15" fill="#243142">medium</text>
+  <path d="M410 426 l9 9 l9 -9" fill="none" stroke="#6d7a88" stroke-width="2"/>
+  <rect x="815" y="508" width="165" height="48" rx="6" fill="#ff4b4b"/>
+  <text x="852" y="538" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Add resource</text>
+  <rect x="120" y="578" width="860" height="1" fill="#e5e9f0"/>
+  <text x="120" y="620" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">Resource #4 added.</text>
+</svg>

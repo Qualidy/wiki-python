@@ -1,0 +1,2 @@
+from docs.lehrplan.python_grundlagen.sorting_algorithms.sorting_visualizer.visualizer import add_frame, plot_animation, create_color_list
+

@@ -19,7 +19,8 @@ except ValueError:
 
 ## Mehrere Exception-Typen
 
-In Python 3 müssen mehrere Typen als Tupel geschrieben werden.
+In Python 3. müssen mehrere Typen als Tupel geschrieben werden.
+Ab 3.14 ist es auch ohne Klammern möglich!
 
 ```python
 try:
